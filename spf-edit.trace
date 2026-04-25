@@ -1,0 +1,575 @@
+2026-04-24T08:14:30.683256952Z [INFO] spf-edit starting: file="DESIGN.md" format=Variable browse=false
+2026-04-24T08:14:30.683344457Z [INFO] FileBuffer::open "DESIGN.md" format=Variable browse=false
+2026-04-24T08:14:30.683391538Z [INFO] read_file: "DESIGN.md" format=Variable
+2026-04-24T08:14:30.688970251Z [DEBUG] (1)   file size: 6720 bytes
+2026-04-24T08:14:30.689335471Z [INFO]   loaded 153 lines, line_ending=Lf
+2026-04-24T08:14:30.689475118Z [INFO] Editor::run — entering event loop, 153 lines in buffer
+2026-04-24T08:14:30.689519973Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:30.689978846Z [TRACE] (1) [/home/peter/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.0/src/poll.rs:576] registering event source with poller: token=Token(0), interests=READABLE
+2026-04-24T08:14:30.690085164Z [TRACE] (1) [/home/peter/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mio-1.2.0/src/poll.rs:576] registering event source with poller: token=Token(1), interests=READABLE
+2026-04-24T08:14:36.549517009Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:36.549614204Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:36.759532591Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:36.759630969Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:36.933175146Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:36.933275556Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:37.104564455Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:37.104666332Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:37.292455502Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:37.292601345Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:37.464779888Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:37.464852427Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:37.697807085Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:37.697886338Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:38.08777863Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:38.08785494Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:38.587470993Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:38.587607656Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:38.617929869Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:38.618085298Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:38.647210003Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:38.647354015Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:38.677487152Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:38.677621975Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:38.707793446Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:38.707877927Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:38.73794056Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:38.738030144Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:38.769348698Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:38.769479366Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:38.828162906Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:38.828342127Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:38.829542055Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:38.829646457Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:38.858025785Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:38.858132902Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:38.900302446Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:38.900472706Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:38.917714035Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:38.917816663Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:38.947939054Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:38.948115613Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:38.978293619Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:38.978390472Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:39.007936286Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.008078833Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:39.038267066Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.038423086Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:39.06757087Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.067687207Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:39.099564135Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.099724005Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:39.131206028Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.131303708Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:39.165048394Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.165150938Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:39.188534706Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.188637422Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:39.217957232Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.218074653Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:39.248643862Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.248801819Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:39.277971753Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.278069303Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:39.30875732Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.308881014Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:39.338176686Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.338293639Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:39.36744478Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.367539508Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:39.398953134Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.39908851Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:39.433183034Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.433287135Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:39.466784408Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.466880754Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:39.490089388Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.490227607Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:39.518257188Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.51834824Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:39.547551774Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.547649395Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:39.577844317Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.577945497Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=0 h_offset=0 size=138x44
+2026-04-24T08:14:39.608204176Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.608302945Z [TRACE] (1) [src/screen.rs:356] scroll_down: 0 -> 1 (by 1, max=152)
+2026-04-24T08:14:39.608343286Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=1 h_offset=0 size=138x44
+2026-04-24T08:14:39.637482597Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.637575278Z [TRACE] (1) [src/screen.rs:356] scroll_down: 1 -> 2 (by 1, max=152)
+2026-04-24T08:14:39.637615587Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=2 h_offset=0 size=138x44
+2026-04-24T08:14:39.66791394Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.668006199Z [TRACE] (1) [src/screen.rs:356] scroll_down: 2 -> 3 (by 1, max=152)
+2026-04-24T08:14:39.668060489Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=3 h_offset=0 size=138x44
+2026-04-24T08:14:39.698180054Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.698274709Z [TRACE] (1) [src/screen.rs:356] scroll_down: 3 -> 4 (by 1, max=152)
+2026-04-24T08:14:39.698318594Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=4 h_offset=0 size=138x44
+2026-04-24T08:14:39.731248853Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.731340852Z [TRACE] (1) [src/screen.rs:356] scroll_down: 4 -> 5 (by 1, max=152)
+2026-04-24T08:14:39.731383301Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=5 h_offset=0 size=138x44
+2026-04-24T08:14:39.76428754Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.764371411Z [TRACE] (1) [src/screen.rs:356] scroll_down: 5 -> 6 (by 1, max=152)
+2026-04-24T08:14:39.764410885Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=6 h_offset=0 size=138x44
+2026-04-24T08:14:39.787666849Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.7877609Z [TRACE] (1) [src/screen.rs:356] scroll_down: 6 -> 7 (by 1, max=152)
+2026-04-24T08:14:39.787805099Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=7 h_offset=0 size=138x44
+2026-04-24T08:14:39.81809188Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.818202399Z [TRACE] (1) [src/screen.rs:356] scroll_down: 7 -> 8 (by 1, max=152)
+2026-04-24T08:14:39.818247611Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=8 h_offset=0 size=138x44
+2026-04-24T08:14:39.848429164Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.848522914Z [TRACE] (1) [src/screen.rs:356] scroll_down: 8 -> 9 (by 1, max=152)
+2026-04-24T08:14:39.848563111Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=9 h_offset=0 size=138x44
+2026-04-24T08:14:39.877720321Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.877819825Z [TRACE] (1) [src/screen.rs:356] scroll_down: 9 -> 10 (by 1, max=152)
+2026-04-24T08:14:39.87786143Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=10 h_offset=0 size=138x44
+2026-04-24T08:14:39.908079112Z [TRACE] (1) [src/input.rs:89] key=Down mods=KeyModifiers(0x0) -> CursorDown
+2026-04-24T08:14:39.908218348Z [TRACE] (1) [src/screen.rs:356] scroll_down: 10 -> 11 (by 1, max=152)
+2026-04-24T08:14:39.908300008Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:40.247501529Z [TRACE] (1) [src/input.rs:89] key=Up mods=KeyModifiers(0x0) -> CursorUp
+2026-04-24T08:14:40.247612118Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:40.734812662Z [TRACE] (1) [src/input.rs:89] key=Up mods=KeyModifiers(0x0) -> CursorUp
+2026-04-24T08:14:40.734894861Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:41.1622141Z [TRACE] (1) [src/input.rs:89] key=Up mods=KeyModifiers(0x0) -> CursorUp
+2026-04-24T08:14:41.162286179Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:41.560289392Z [TRACE] (1) [src/input.rs:89] key=Up mods=KeyModifiers(0x0) -> CursorUp
+2026-04-24T08:14:41.560416792Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:41.874954385Z [TRACE] (1) [src/input.rs:89] key=Up mods=KeyModifiers(0x0) -> CursorUp
+2026-04-24T08:14:41.875033708Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:42.138060617Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:42.637745365Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:42.667920848Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:42.698289562Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:42.727568704Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:42.757879037Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:42.788288457Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:42.817474159Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:42.847808777Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:42.878015927Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:42.908124637Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:42.937573415Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:42.968464785Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:42.997817331Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.0281637Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.057482903Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.088378504Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.117519487Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.147861775Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.17822542Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.207480249Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.237809016Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.268086575Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.297382039Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.32770645Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.358061696Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.387517171Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.417996021Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.448276494Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.477456122Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.507594207Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.53780307Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.567944472Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.600477442Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.62792128Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.658308393Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.687811244Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.7183652Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.7478257Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.778176429Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.807687201Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.837920392Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.868100364Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.897303044Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.927705729Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.958203092Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:43.987580596Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:44.017966378Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:44.048395395Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:44.077945777Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:44.108350617Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:44.137782825Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:44.499847955Z [TRACE] (1) [src/input.rs:89] key=End mods=KeyModifiers(0x0) -> CursorEnd
+2026-04-24T08:14:45.309539633Z [TRACE] (1) [src/input.rs:89] key=Up mods=KeyModifiers(0x0) -> CursorUp
+2026-04-24T08:14:45.309631438Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:46.022630195Z [TRACE] (1) [src/input.rs:89] key=End mods=KeyModifiers(0x0) -> CursorEnd
+2026-04-24T08:14:46.479911524Z [TRACE] (1) [src/input.rs:89] key=End mods=KeyModifiers(0x0) -> CursorEnd
+2026-04-24T08:14:46.944927169Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:47.147948379Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:47.357150153Z [TRACE] (1) [src/input.rs:89] key=Right mods=KeyModifiers(0x0) -> CursorRight
+2026-04-24T08:14:47.672948655Z [TRACE] (1) [src/input.rs:89] key=Left mods=KeyModifiers(0x0) -> CursorLeft
+2026-04-24T08:14:48.17260588Z [TRACE] (1) [src/input.rs:89] key=Left mods=KeyModifiers(0x0) -> CursorLeft
+2026-04-24T08:14:48.20291313Z [TRACE] (1) [src/input.rs:89] key=Left mods=KeyModifiers(0x0) -> CursorLeft
+2026-04-24T08:14:48.233049523Z [TRACE] (1) [src/input.rs:89] key=Left mods=KeyModifiers(0x0) -> CursorLeft
+2026-04-24T08:14:48.26238051Z [TRACE] (1) [src/input.rs:89] key=Left mods=KeyModifiers(0x0) -> CursorLeft
+2026-04-24T08:14:48.293162648Z [TRACE] (1) [src/input.rs:89] key=Left mods=KeyModifiers(0x0) -> CursorLeft
+2026-04-24T08:14:48.322441365Z [TRACE] (1) [src/input.rs:89] key=Left mods=KeyModifiers(0x0) -> CursorLeft
+2026-04-24T08:14:48.352751719Z [TRACE] (1) [src/input.rs:89] key=Left mods=KeyModifiers(0x0) -> CursorLeft
+2026-04-24T08:14:48.383041806Z [TRACE] (1) [src/input.rs:89] key=Left mods=KeyModifiers(0x0) -> CursorLeft
+2026-04-24T08:14:48.412706305Z [TRACE] (1) [src/input.rs:89] key=Left mods=KeyModifiers(0x0) -> CursorLeft
+2026-04-24T08:14:48.442866808Z [TRACE] (1) [src/input.rs:89] key=Left mods=KeyModifiers(0x0) -> CursorLeft
+2026-04-24T08:14:48.472053819Z [TRACE] (1) [src/input.rs:89] key=Left mods=KeyModifiers(0x0) -> CursorLeft
+2026-04-24T08:14:48.502343948Z [TRACE] (1) [src/input.rs:89] key=Left mods=KeyModifiers(0x0) -> CursorLeft
+2026-04-24T08:14:48.53286315Z [TRACE] (1) [src/input.rs:89] key=Left mods=KeyModifiers(0x0) -> CursorLeft
+2026-04-24T08:14:48.563365632Z [TRACE] (1) [src/input.rs:89] key=Left mods=KeyModifiers(0x0) -> CursorLeft
+2026-04-24T08:14:48.592696965Z [TRACE] (1) [src/input.rs:89] key=Left mods=KeyModifiers(0x0) -> CursorLeft
+2026-04-24T08:14:48.623114008Z [TRACE] (1) [src/input.rs:89] key=Left mods=KeyModifiers(0x0) -> CursorLeft
+2026-04-24T08:14:48.652388462Z [TRACE] (1) [src/input.rs:89] key=Left mods=KeyModifiers(0x0) -> CursorLeft
+2026-04-24T08:14:48.682772929Z [TRACE] (1) [src/input.rs:89] key=Left mods=KeyModifiers(0x0) -> CursorLeft
+2026-04-24T08:14:48.712935071Z [TRACE] (1) [src/input.rs:89] key=Left mods=KeyModifiers(0x0) -> CursorLeft
+2026-04-24T08:14:48.742111814Z [TRACE] (1) [src/input.rs:89] key=Left mods=KeyModifiers(0x0) -> CursorLeft
+2026-04-24T08:14:48.772544622Z [TRACE] (1) [src/input.rs:89] key=Left mods=KeyModifiers(0x0) -> CursorLeft
+2026-04-24T08:14:48.802748577Z [TRACE] (1) [src/input.rs:89] key=Left mods=KeyModifiers(0x0) -> CursorLeft
+2026-04-24T08:14:48.833039882Z [TRACE] (1) [src/input.rs:89] key=Left mods=KeyModifiers(0x0) -> CursorLeft
+2026-04-24T08:14:48.862762829Z [TRACE] (1) [src/input.rs:89] key=Left mods=KeyModifiers(0x0) -> CursorLeft
+2026-04-24T08:14:48.893051424Z [TRACE] (1) [src/input.rs:89] key=Left mods=KeyModifiers(0x0) -> CursorLeft
+2026-04-24T08:14:50.172632291Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:50.172726777Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:51.009749771Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:51.009850895Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:51.474969312Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:51.47507747Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:51.89557344Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:51.895745258Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:52.270872991Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:52.270969323Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:52.660715162Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:52.660863546Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:52.982822716Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:52.98292223Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:53.290911163Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:53.291024716Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:53.612527834Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:53.612652594Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:53.966062897Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:53.966161372Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:54.465432315Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:54.465595296Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:54.495901618Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:54.496052052Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:54.536338311Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:54.53643604Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:54.555619359Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:54.555725615Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:54.586215503Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:54.586333059Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:54.615414749Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:54.615513429Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:54.645690423Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:54.645831685Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:54.67627775Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:54.676411949Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:54.705590929Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:54.705739716Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:54.73584654Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:54.735995566Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:54.766956839Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:54.767050331Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:54.801087849Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:54.801188288Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:54.826547326Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:54.826720005Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:54.855829661Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:54.855957564Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:54.886293412Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:54.886456358Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:54.915896773Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:54.916067612Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:54.94627932Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:54.946450596Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:54.975733644Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:54.975846967Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.006246653Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.006348987Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.035494109Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.035608592Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.068607203Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.068702625Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.101312041Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.101405991Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.132344188Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.132433416Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.155780437Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.155858964Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.186227061Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.186321905Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.215665621Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.215762523Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.246038692Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.24619907Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.275378773Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.27553168Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.305797425Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.305947884Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.336081306Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.336235616Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.368867972Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.369021405Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.401506233Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.401665596Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.43335315Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.433479583Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.455794973Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.455912403Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.486116052Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.486216229Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.515416934Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.515507084Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.564461566Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.564565997Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.575956841Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.576096619Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.606395207Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.606548127Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.635796461Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.635892626Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.668780498Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.668874362Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.696132712Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.696262679Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.726680248Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.726824881Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.762462737Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.762600202Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.79403222Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.794168214Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.815484619Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.815581302Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.845839206Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.84598645Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.876357187Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.876487958Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.905789226Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.905881733Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.936197257Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.936333635Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.965562964Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.965711033Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:55.995994796Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:55.996164942Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:56.027394876Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:56.027503202Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:56.470779569Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:56.470867726Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:56.680829926Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:56.680927847Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:56.87747107Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:56.877571984Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:57.13634395Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:57.136452436Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:57.370834259Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:57.370934448Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:57.572592143Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:57.572693889Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:57.821071265Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:57.82116334Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:58.1596634Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:58.159824259Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:14:58.570993266Z [TRACE] (1) [src/input.rs:89] key=BackTab mods=KeyModifiers(SHIFT) -> BackTab
+2026-04-24T08:14:58.571092781Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:00.295965457Z [TRACE] (1) [src/input.rs:89] key=Char('q') mods=KeyModifiers(0x0) -> InsertChar('q')
+2026-04-24T08:15:00.296115301Z [TRACE] (1) [src/editor.rs:125] Action: InsertChar('q') focus=CommandLine col=0
+2026-04-24T08:15:00.296183357Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:00.482751729Z [TRACE] (1) [src/input.rs:89] key=Char('u') mods=KeyModifiers(0x0) -> InsertChar('u')
+2026-04-24T08:15:00.482919073Z [TRACE] (1) [src/editor.rs:125] Action: InsertChar('u') focus=CommandLine col=0
+2026-04-24T08:15:00.483005017Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:00.611144022Z [TRACE] (1) [src/input.rs:89] key=Char('i') mods=KeyModifiers(0x0) -> InsertChar('i')
+2026-04-24T08:15:00.611259011Z [TRACE] (1) [src/editor.rs:125] Action: InsertChar('i') focus=CommandLine col=0
+2026-04-24T08:15:00.611311602Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:00.677952771Z [TRACE] (1) [src/input.rs:89] key=Char('t') mods=KeyModifiers(0x0) -> InsertChar('t')
+2026-04-24T08:15:00.678051303Z [TRACE] (1) [src/editor.rs:125] Action: InsertChar('t') focus=CommandLine col=0
+2026-04-24T08:15:00.67810069Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:00.888277651Z [TRACE] (1) [src/input.rs:89] key=Enter mods=KeyModifiers(0x0) -> Enter
+2026-04-24T08:15:00.898979819Z [DEBUG] (1) Action: Enter — flushing edits and processing commands
+2026-04-24T08:15:00.899062385Z [DEBUG] (1) Enter: flushing 0 edited lines, 0 prefix edits
+2026-04-24T08:15:00.899123168Z [DEBUG] (1) Enter: executing line commands
+2026-04-24T08:15:00.899184357Z [DEBUG] (1) execute_line_commands: scanning 153 lines for prefix cmds
+2026-04-24T08:15:00.899257982Z [DEBUG] (1)   no line commands to execute
+2026-04-24T08:15:00.899316226Z [INFO] Primary command: "quit"
+2026-04-24T08:15:00.89937848Z [WARN] Command parse error: Unknown command: QUIT
+2026-04-24T08:15:00.899429413Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:01.705253803Z [TRACE] (1) [src/input.rs:89] key=Char('Q') mods=KeyModifiers(SHIFT) -> InsertChar('Q')
+2026-04-24T08:15:01.705353067Z [TRACE] (1) [src/editor.rs:125] Action: InsertChar('Q') focus=CommandLine col=0
+2026-04-24T08:15:01.705408584Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:01.86233369Z [TRACE] (1) [src/input.rs:89] key=Char('U') mods=KeyModifiers(SHIFT) -> InsertChar('U')
+2026-04-24T08:15:01.862427148Z [TRACE] (1) [src/editor.rs:125] Action: InsertChar('U') focus=CommandLine col=0
+2026-04-24T08:15:01.862470791Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:01.967714444Z [TRACE] (1) [src/input.rs:89] key=Char('I') mods=KeyModifiers(SHIFT) -> InsertChar('I')
+2026-04-24T08:15:01.967843295Z [TRACE] (1) [src/editor.rs:125] Action: InsertChar('I') focus=CommandLine col=0
+2026-04-24T08:15:01.967936405Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:02.096980063Z [TRACE] (1) [src/input.rs:89] key=Char('T') mods=KeyModifiers(SHIFT) -> InsertChar('T')
+2026-04-24T08:15:02.097159243Z [TRACE] (1) [src/editor.rs:125] Action: InsertChar('T') focus=CommandLine col=0
+2026-04-24T08:15:02.097316344Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:02.478105757Z [TRACE] (1) [src/input.rs:89] key=Enter mods=KeyModifiers(0x0) -> Enter
+2026-04-24T08:15:02.478286068Z [DEBUG] (1) Action: Enter — flushing edits and processing commands
+2026-04-24T08:15:02.478360588Z [DEBUG] (1) Enter: flushing 0 edited lines, 0 prefix edits
+2026-04-24T08:15:02.478428222Z [DEBUG] (1) Enter: executing line commands
+2026-04-24T08:15:02.47848538Z [DEBUG] (1) execute_line_commands: scanning 153 lines for prefix cmds
+2026-04-24T08:15:02.478557531Z [DEBUG] (1)   no line commands to execute
+2026-04-24T08:15:02.478618605Z [INFO] Primary command: "QUIT"
+2026-04-24T08:15:02.478699351Z [WARN] Command parse error: Unknown command: QUIT
+2026-04-24T08:15:02.478753548Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:03.348406852Z [TRACE] (1) [src/input.rs:89] key=Char('E') mods=KeyModifiers(SHIFT) -> InsertChar('E')
+2026-04-24T08:15:03.348576671Z [TRACE] (1) [src/editor.rs:125] Action: InsertChar('E') focus=CommandLine col=0
+2026-04-24T08:15:03.348719618Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:03.535667533Z [TRACE] (1) [src/input.rs:89] key=Char('X') mods=KeyModifiers(SHIFT) -> InsertChar('X')
+2026-04-24T08:15:03.535836526Z [TRACE] (1) [src/editor.rs:125] Action: InsertChar('X') focus=CommandLine col=0
+2026-04-24T08:15:03.535933998Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:03.678393988Z [TRACE] (1) [src/input.rs:89] key=Char('I') mods=KeyModifiers(SHIFT) -> InsertChar('I')
+2026-04-24T08:15:03.678640535Z [TRACE] (1) [src/editor.rs:125] Action: InsertChar('I') focus=CommandLine col=0
+2026-04-24T08:15:03.678807718Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:03.795401468Z [TRACE] (1) [src/input.rs:89] key=Char('T') mods=KeyModifiers(SHIFT) -> InsertChar('T')
+2026-04-24T08:15:03.795660211Z [TRACE] (1) [src/editor.rs:125] Action: InsertChar('T') focus=CommandLine col=0
+2026-04-24T08:15:03.795835181Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:04.09466286Z [TRACE] (1) [src/input.rs:89] key=Enter mods=KeyModifiers(0x0) -> Enter
+2026-04-24T08:15:04.094826996Z [DEBUG] (1) Action: Enter — flushing edits and processing commands
+2026-04-24T08:15:04.094889657Z [DEBUG] (1) Enter: flushing 0 edited lines, 0 prefix edits
+2026-04-24T08:15:04.094957555Z [DEBUG] (1) Enter: executing line commands
+2026-04-24T08:15:04.095017732Z [DEBUG] (1) execute_line_commands: scanning 153 lines for prefix cmds
+2026-04-24T08:15:04.095097583Z [DEBUG] (1)   no line commands to execute
+2026-04-24T08:15:04.095162584Z [INFO] Primary command: "EXIT"
+2026-04-24T08:15:04.095227062Z [WARN] Command parse error: Unknown command: EXIT
+2026-04-24T08:15:04.095283707Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:04.945967564Z [TRACE] (1) [src/input.rs:89] key=Enter mods=KeyModifiers(0x0) -> Enter
+2026-04-24T08:15:04.9461318Z [DEBUG] (1) Action: Enter — flushing edits and processing commands
+2026-04-24T08:15:04.946200091Z [DEBUG] (1) Enter: flushing 0 edited lines, 0 prefix edits
+2026-04-24T08:15:04.946274872Z [DEBUG] (1) Enter: executing line commands
+2026-04-24T08:15:04.946339474Z [DEBUG] (1) execute_line_commands: scanning 153 lines for prefix cmds
+2026-04-24T08:15:04.946426267Z [DEBUG] (1)   no line commands to execute
+2026-04-24T08:15:04.946506527Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:05.126320977Z [TRACE] (1) [src/input.rs:89] key=Enter mods=KeyModifiers(0x0) -> Enter
+2026-04-24T08:15:05.126506966Z [DEBUG] (1) Action: Enter — flushing edits and processing commands
+2026-04-24T08:15:05.126573594Z [DEBUG] (1) Enter: flushing 0 edited lines, 0 prefix edits
+2026-04-24T08:15:05.126671086Z [DEBUG] (1) Enter: executing line commands
+2026-04-24T08:15:05.126739873Z [DEBUG] (1) execute_line_commands: scanning 153 lines for prefix cmds
+2026-04-24T08:15:05.126825421Z [DEBUG] (1)   no line commands to execute
+2026-04-24T08:15:05.126907269Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:05.306687258Z [TRACE] (1) [src/input.rs:89] key=Enter mods=KeyModifiers(0x0) -> Enter
+2026-04-24T08:15:05.306800184Z [DEBUG] (1) Action: Enter — flushing edits and processing commands
+2026-04-24T08:15:05.306843142Z [DEBUG] (1) Enter: flushing 0 edited lines, 0 prefix edits
+2026-04-24T08:15:05.306886242Z [DEBUG] (1) Enter: executing line commands
+2026-04-24T08:15:05.30692507Z [DEBUG] (1) execute_line_commands: scanning 153 lines for prefix cmds
+2026-04-24T08:15:05.306978384Z [DEBUG] (1)   no line commands to execute
+2026-04-24T08:15:05.307025161Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:06.259180267Z [TRACE] (1) [src/input.rs:89] key=Enter mods=KeyModifiers(0x0) -> Enter
+2026-04-24T08:15:06.259336881Z [DEBUG] (1) Action: Enter — flushing edits and processing commands
+2026-04-24T08:15:06.259404682Z [DEBUG] (1) Enter: flushing 0 edited lines, 0 prefix edits
+2026-04-24T08:15:06.259480381Z [DEBUG] (1) Enter: executing line commands
+2026-04-24T08:15:06.259544211Z [DEBUG] (1) execute_line_commands: scanning 153 lines for prefix cmds
+2026-04-24T08:15:06.259628621Z [DEBUG] (1)   no line commands to execute
+2026-04-24T08:15:06.259702605Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:06.776638711Z [TRACE] (1) [src/input.rs:89] key=Enter mods=KeyModifiers(0x0) -> Enter
+2026-04-24T08:15:06.776815533Z [DEBUG] (1) Action: Enter — flushing edits and processing commands
+2026-04-24T08:15:06.77689353Z [DEBUG] (1) Enter: flushing 0 edited lines, 0 prefix edits
+2026-04-24T08:15:06.776980361Z [DEBUG] (1) Enter: executing line commands
+2026-04-24T08:15:06.777055844Z [DEBUG] (1) execute_line_commands: scanning 153 lines for prefix cmds
+2026-04-24T08:15:06.777151368Z [DEBUG] (1)   no line commands to execute
+2026-04-24T08:15:06.777237092Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:07.435820338Z [TRACE] (1) [src/input.rs:89] key=Char('e') mods=KeyModifiers(0x0) -> InsertChar('e')
+2026-04-24T08:15:07.435986664Z [TRACE] (1) [src/editor.rs:125] Action: InsertChar('e') focus=CommandLine col=0
+2026-04-24T08:15:07.436098743Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:07.682644272Z [TRACE] (1) [src/input.rs:89] key=Char('x') mods=KeyModifiers(0x0) -> InsertChar('x')
+2026-04-24T08:15:07.682776643Z [TRACE] (1) [src/editor.rs:125] Action: InsertChar('x') focus=CommandLine col=0
+2026-04-24T08:15:07.682858123Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:08.110736919Z [TRACE] (1) [src/input.rs:89] key=Char('i') mods=KeyModifiers(0x0) -> InsertChar('i')
+2026-04-24T08:15:08.110908353Z [TRACE] (1) [src/editor.rs:125] Action: InsertChar('i') focus=CommandLine col=0
+2026-04-24T08:15:08.110998341Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:08.238789013Z [TRACE] (1) [src/input.rs:89] key=Char('t') mods=KeyModifiers(0x0) -> InsertChar('t')
+2026-04-24T08:15:08.239007713Z [TRACE] (1) [src/editor.rs:125] Action: InsertChar('t') focus=CommandLine col=0
+2026-04-24T08:15:08.239120704Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:09.101326693Z [TRACE] (1) [src/input.rs:89] key=Enter mods=KeyModifiers(0x0) -> Enter
+2026-04-24T08:15:09.101504261Z [DEBUG] (1) Action: Enter — flushing edits and processing commands
+2026-04-24T08:15:09.101577995Z [DEBUG] (1) Enter: flushing 0 edited lines, 0 prefix edits
+2026-04-24T08:15:09.101659511Z [DEBUG] (1) Enter: executing line commands
+2026-04-24T08:15:09.101729415Z [DEBUG] (1) execute_line_commands: scanning 153 lines for prefix cmds
+2026-04-24T08:15:09.101818422Z [DEBUG] (1)   no line commands to execute
+2026-04-24T08:15:09.101896675Z [INFO] Primary command: "exit"
+2026-04-24T08:15:09.101972054Z [WARN] Command parse error: Unknown command: EXIT
+2026-04-24T08:15:09.102039931Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:09.686096662Z [TRACE] (1) [src/input.rs:89] key=Enter mods=KeyModifiers(0x0) -> Enter
+2026-04-24T08:15:09.686254741Z [DEBUG] (1) Action: Enter — flushing edits and processing commands
+2026-04-24T08:15:09.686328624Z [DEBUG] (1) Enter: flushing 0 edited lines, 0 prefix edits
+2026-04-24T08:15:09.686406591Z [DEBUG] (1) Enter: executing line commands
+2026-04-24T08:15:09.686474803Z [DEBUG] (1) execute_line_commands: scanning 153 lines for prefix cmds
+2026-04-24T08:15:09.68655913Z [DEBUG] (1)   no line commands to execute
+2026-04-24T08:15:09.686641371Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:09.873231727Z [TRACE] (1) [src/input.rs:89] key=Enter mods=KeyModifiers(0x0) -> Enter
+2026-04-24T08:15:09.873391125Z [DEBUG] (1) Action: Enter — flushing edits and processing commands
+2026-04-24T08:15:09.873472927Z [DEBUG] (1) Enter: flushing 0 edited lines, 0 prefix edits
+2026-04-24T08:15:09.873558647Z [DEBUG] (1) Enter: executing line commands
+2026-04-24T08:15:09.873637591Z [DEBUG] (1) execute_line_commands: scanning 153 lines for prefix cmds
+2026-04-24T08:15:09.873735344Z [DEBUG] (1)   no line commands to execute
+2026-04-24T08:15:09.873821432Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:10.061225358Z [TRACE] (1) [src/input.rs:89] key=Enter mods=KeyModifiers(0x0) -> Enter
+2026-04-24T08:15:10.061334732Z [DEBUG] (1) Action: Enter — flushing edits and processing commands
+2026-04-24T08:15:10.061373699Z [DEBUG] (1) Enter: flushing 0 edited lines, 0 prefix edits
+2026-04-24T08:15:10.06141565Z [DEBUG] (1) Enter: executing line commands
+2026-04-24T08:15:10.061451909Z [DEBUG] (1) execute_line_commands: scanning 153 lines for prefix cmds
+2026-04-24T08:15:10.061500874Z [DEBUG] (1)   no line commands to execute
+2026-04-24T08:15:10.061546056Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:11.170953793Z [TRACE] (1) [src/input.rs:89] key=Char('c') mods=KeyModifiers(CONTROL) -> InsertChar('c')
+2026-04-24T08:15:11.17110806Z [TRACE] (1) [src/editor.rs:125] Action: InsertChar('c') focus=CommandLine col=0
+2026-04-24T08:15:11.17117478Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:12.228242462Z [TRACE] (1) [src/input.rs:89] key=Backspace mods=KeyModifiers(0x0) -> Backspace
+2026-04-24T08:15:12.228418554Z [TRACE] (1) [src/editor.rs:137] Action: Backspace focus=CommandLine
+2026-04-24T08:15:12.228506556Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:12.356096934Z [TRACE] (1) [src/input.rs:89] key=Backspace mods=KeyModifiers(0x0) -> Backspace
+2026-04-24T08:15:12.35626829Z [TRACE] (1) [src/editor.rs:137] Action: Backspace focus=CommandLine
+2026-04-24T08:15:12.356360403Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:21.029554141Z [TRACE] (1) [src/input.rs:89] key=Char('.') mods=KeyModifiers(0x0) -> InsertChar('.')
+2026-04-24T08:15:21.029791755Z [TRACE] (1) [src/editor.rs:125] Action: InsertChar('.') focus=CommandLine col=0
+2026-04-24T08:15:21.029899912Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:21.926160022Z [TRACE] (1) [src/input.rs:89] key=Backspace mods=KeyModifiers(0x0) -> Backspace
+2026-04-24T08:15:21.926285928Z [TRACE] (1) [src/editor.rs:137] Action: Backspace focus=CommandLine
+2026-04-24T08:15:21.926339306Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:22.383910674Z [TRACE] (1) [src/input.rs:89] key=Char('x') mods=KeyModifiers(0x0) -> InsertChar('x')
+2026-04-24T08:15:22.384114412Z [TRACE] (1) [src/editor.rs:125] Action: InsertChar('x') focus=CommandLine col=0
+2026-04-24T08:15:22.384220894Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:22.59773824Z [TRACE] (1) [src/input.rs:89] key=Enter mods=KeyModifiers(0x0) -> Enter
+2026-04-24T08:15:22.597903084Z [DEBUG] (1) Action: Enter — flushing edits and processing commands
+2026-04-24T08:15:22.597972255Z [DEBUG] (1) Enter: flushing 0 edited lines, 0 prefix edits
+2026-04-24T08:15:22.598047405Z [DEBUG] (1) Enter: executing line commands
+2026-04-24T08:15:22.598111966Z [DEBUG] (1) execute_line_commands: scanning 153 lines for prefix cmds
+2026-04-24T08:15:22.598191281Z [DEBUG] (1)   no line commands to execute
+2026-04-24T08:15:22.598258295Z [INFO] Primary command: "x"
+2026-04-24T08:15:22.598327448Z [WARN] Command parse error: Unknown command: X
+2026-04-24T08:15:22.598394733Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:25.151477882Z [TRACE] (1) [src/input.rs:89] key=Char('q') mods=KeyModifiers(0x0) -> InsertChar('q')
+2026-04-24T08:15:25.151626713Z [TRACE] (1) [src/editor.rs:125] Action: InsertChar('q') focus=CommandLine col=0
+2026-04-24T08:15:25.151707781Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:25.278953929Z [TRACE] (1) [src/input.rs:89] key=Char('u') mods=KeyModifiers(0x0) -> InsertChar('u')
+2026-04-24T08:15:25.279151595Z [TRACE] (1) [src/editor.rs:125] Action: InsertChar('u') focus=CommandLine col=0
+2026-04-24T08:15:25.279256973Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:25.384241995Z [TRACE] (1) [src/input.rs:89] key=Char('i') mods=KeyModifiers(0x0) -> InsertChar('i')
+2026-04-24T08:15:25.384367464Z [TRACE] (1) [src/editor.rs:125] Action: InsertChar('i') focus=CommandLine col=0
+2026-04-24T08:15:25.384420059Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:25.52928933Z [TRACE] (1) [src/input.rs:89] key=Char('t') mods=KeyModifiers(0x0) -> InsertChar('t')
+2026-04-24T08:15:25.529398782Z [TRACE] (1) [src/editor.rs:125] Action: InsertChar('t') focus=CommandLine col=0
+2026-04-24T08:15:25.529448617Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:25.68387462Z [TRACE] (1) [src/input.rs:89] key=Enter mods=KeyModifiers(0x0) -> Enter
+2026-04-24T08:15:25.683980338Z [DEBUG] (1) Action: Enter — flushing edits and processing commands
+2026-04-24T08:15:25.684028776Z [DEBUG] (1) Enter: flushing 0 edited lines, 0 prefix edits
+2026-04-24T08:15:25.684097546Z [DEBUG] (1) Enter: executing line commands
+2026-04-24T08:15:25.684133021Z [DEBUG] (1) execute_line_commands: scanning 153 lines for prefix cmds
+2026-04-24T08:15:25.684178912Z [DEBUG] (1)   no line commands to execute
+2026-04-24T08:15:25.684218121Z [INFO] Primary command: "quit"
+2026-04-24T08:15:25.684257121Z [WARN] Command parse error: Unknown command: QUIT
+2026-04-24T08:15:25.684291305Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:26.59915778Z [TRACE] (1) [src/input.rs:89] key=Char('e') mods=KeyModifiers(0x0) -> InsertChar('e')
+2026-04-24T08:15:26.599282631Z [TRACE] (1) [src/editor.rs:125] Action: InsertChar('e') focus=CommandLine col=0
+2026-04-24T08:15:26.599335234Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:26.809438594Z [TRACE] (1) [src/input.rs:89] key=Char('x') mods=KeyModifiers(0x0) -> InsertChar('x')
+2026-04-24T08:15:26.809571257Z [TRACE] (1) [src/editor.rs:125] Action: InsertChar('x') focus=CommandLine col=0
+2026-04-24T08:15:26.809626592Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:26.935971824Z [TRACE] (1) [src/input.rs:89] key=Char('i') mods=KeyModifiers(0x0) -> InsertChar('i')
+2026-04-24T08:15:26.936150104Z [TRACE] (1) [src/editor.rs:125] Action: InsertChar('i') focus=CommandLine col=0
+2026-04-24T08:15:26.936215767Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:27.101250482Z [TRACE] (1) [src/input.rs:89] key=Char('t') mods=KeyModifiers(0x0) -> InsertChar('t')
+2026-04-24T08:15:27.101437378Z [TRACE] (1) [src/editor.rs:125] Action: InsertChar('t') focus=CommandLine col=0
+2026-04-24T08:15:27.101535334Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
+2026-04-24T08:15:27.370970211Z [TRACE] (1) [src/input.rs:89] key=Enter mods=KeyModifiers(0x0) -> Enter
+2026-04-24T08:15:27.371070089Z [DEBUG] (1) Action: Enter — flushing edits and processing commands
+2026-04-24T08:15:27.371103345Z [DEBUG] (1) Enter: flushing 0 edited lines, 0 prefix edits
+2026-04-24T08:15:27.371139886Z [DEBUG] (1) Enter: executing line commands
+2026-04-24T08:15:27.371171382Z [DEBUG] (1) execute_line_commands: scanning 153 lines for prefix cmds
+2026-04-24T08:15:27.371215085Z [DEBUG] (1)   no line commands to execute
+2026-04-24T08:15:27.371250881Z [INFO] Primary command: "exit"
+2026-04-24T08:15:27.37128646Z [WARN] Command parse error: Unknown command: EXIT
+2026-04-24T08:15:27.371319047Z [TRACE] (1) [src/screen.rs:108] draw_full: top_line=11 h_offset=0 size=138x44
