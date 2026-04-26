@@ -4,16 +4,16 @@
 
 ```
 ┌─────────────────────────────────────────────────┐
-│                    main.rs                       │
-│  CLI args → Terminal setup → Event loop → Exit   │
+│                    main.rs                      │
+│  CLI args → Terminal setup → Event loop → Exit  │
 └──────────────────────┬──────────────────────────┘
                        │
                        ▼
 ┌─────────────────────────────────────────────────┐
-│                  editor.rs                       │
-│  Editor struct: coordinates all components       │
-│  Owns: FileBuffer, Screen, InputHandler          │
-│  Orchestrates: input → command → buffer → render │
+│                  editor.rs                      │
+│  Editor struct: coordinates all components      │
+│  Owns: FileBuffer, Screen, InputHandler         │
+│  Orchestrates: input → command → buffer → render│
 └───┬──────────┬──────────┬──────────┬────────────┘
     │          │          │          │
     ▼          ▼          ▼          ▼

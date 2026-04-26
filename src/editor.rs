@@ -61,7 +61,8 @@ pub struct Editor {
 
     // Cursor tracking
     pub cursor_line_index: usize, // Buffer line index cursor is on
-    pub cursor_col: usize,        // Column within the current field
+    pub cursor_col: usize,
+    needs_full_redraw: bool, // Column within the current field
 }
 
 impl Editor {
@@ -75,7 +76,7 @@ impl Editor {
             last_find: None,
             command_history: VecDeque::with_capacity(COMMAND_HISTORY_SIZE),
             history_index: None,
-
+            needs_full_redraw: true,
             cursor_line_index: 1, // First data line (after TopOfData)
             cursor_col: 0,
         })
@@ -116,29 +117,24 @@ impl Editor {
 
                 // self.screen.draw_char(stdout, self.cursor_col as u16, self.cursor_line_index as u16, c).unwrap();
                 self.handle_char(c);
-                self.redraw(stdout)?;
             }
 
             EditorAction::DeleteChar => {
                 trace!("Action: DeleteChar focus={:?}", self.input.focus);
                 self.handle_delete();
-                self.redraw(stdout)?;
             }
 
             EditorAction::Backspace => {
                 trace!("Action: Backspace focus={:?}", self.input.focus);
                 self.handle_backspace();
-                self.redraw(stdout)?;
             }
 
             EditorAction::CursorUp => {
                 self.move_cursor_up();
-                self.redraw(stdout)?;
             }
 
             EditorAction::CursorDown => {
                 self.move_cursor_down();
-                self.redraw(stdout)?;
             }
 
             EditorAction::CursorLeft => {
@@ -163,18 +159,15 @@ impl Editor {
 
             EditorAction::Tab => {
                 self.cycle_focus_forward();
-                self.redraw(stdout)?;
             }
 
             EditorAction::BackTab => {
                 self.cycle_focus_backward();
-                self.redraw(stdout)?;
             }
 
             EditorAction::Enter => {
                 debug!("Action: Enter — processing commands");
                 self.handle_enter();
-                self.redraw(stdout)?;
             }
 
             EditorAction::ToggleInsertMode => {
@@ -201,7 +194,7 @@ impl Editor {
                 debug!("Action: ScrollUp by {lines}");
                 self.screen.scroll_up(lines);
                 self.clamp_cursor();
-                self.redraw(stdout)?;
+                self.needs_full_redraw = true;
             }
 
             EditorAction::FnScrollDown => {
@@ -211,28 +204,28 @@ impl Editor {
                 debug!("Action: ScrollDown by {lines}");
                 self.screen.scroll_down(lines, max);
                 self.clamp_cursor();
-                self.redraw(stdout)?;
+                self.needs_full_redraw = true;
             }
 
             EditorAction::FnScrollLeft => {
                 self.screen.scroll_left(self.screen.data_width());
-                self.redraw(stdout)?;
+                self.needs_full_redraw = true;
             }
 
             EditorAction::FnScrollRight => {
                 self.screen.scroll_right(self.screen.data_width());
-                self.redraw(stdout)?;
+                self.needs_full_redraw = true;
             }
 
             EditorAction::FnRetrieve => {
                 self.retrieve_command();
-                self.redraw(stdout)?;
             }
 
             EditorAction::Resize(w, h) => {
                 info!("Terminal resized to {w}x{h}");
                 self.screen.resize(w, h);
                 self.clamp_cursor();
+                self.needs_full_redraw = true;
                 self.screen.draw_full(stdout, &self.buffer)?;
                 self.position_cursor(stdout)?;
             }
@@ -243,7 +236,7 @@ impl Editor {
             }
         }
 
-        Ok(())
+        self.redraw(stdout)
     }
 
     // --- Character handling ---
@@ -335,7 +328,8 @@ impl Editor {
 
                 let actual_col = self.screen.horizontal_offset + self.cursor_col;
 
-                let mut data = self.buffer
+                let mut data = self
+                    .buffer
                     .lines
                     .get(line_index)
                     .map(|l| l.data.clone())
@@ -390,14 +384,17 @@ impl Editor {
             FieldFocus::DataArea { screen_row } => {
                 let line_index = self.screen.screen_row_to_line(screen_row);
                 let actual_col = self.screen.horizontal_offset + self.cursor_col;
-                let mut data = self.buffer
+                let mut data = self
+                    .buffer
                     .lines
                     .get(line_index)
                     .map(|l| l.data.clone())
                     .unwrap_or_default();
                 if actual_col < data.len() {
-                    data.remove(actual_col);
-                    self.buffer.update_line_data(line_index, data);
+                    let mut chars = data.chars().collect::<Vec<char>>();
+                    chars.remove(actual_col);
+                    self.buffer
+                        .update_line_data(line_index, chars.into_iter().collect());
                 }
             }
         }
@@ -441,14 +438,17 @@ impl Editor {
                     self.cursor_col -= 1;
                     let line_index = self.screen.screen_row_to_line(screen_row);
                     let actual_col = self.screen.horizontal_offset + self.cursor_col;
-                    let mut data = self.buffer
+                    let mut data = self
+                        .buffer
                         .lines
                         .get(line_index)
                         .map(|l| l.data.clone())
                         .unwrap_or_default();
                     if actual_col < data.len() {
-                        data.remove(actual_col);
-                        self.buffer.update_line_data(line_index, data);
+                        let mut chars = data.chars().collect::<Vec<char>>();
+                        chars.remove(actual_col);
+                        self.buffer
+                            .update_line_data(line_index, chars.into_iter().collect());
                     }
                 }
             }
@@ -956,8 +956,18 @@ impl Editor {
     // --- Drawing ---
 
     fn redraw<W: Write>(&mut self, stdout: &mut W) -> io::Result<()> {
-        self.screen.draw_full(stdout, &self.buffer)?;
-        self.position_cursor(stdout)?;
+        debug!("redrawing screen (full redraw: {})", self.needs_full_redraw);
+        // self.screen.draw_full(stdout, &self.buffer)?;
+        let (col, row) = self.calculate_cursor_position();
+        trace!("Positioning cursor for focus: {col} {row}");
+        if self.needs_full_redraw {
+            self.screen.draw_full(stdout, &self.buffer)?;
+            self.needs_full_redraw = false;
+        } else {
+            self.redraw_line(stdout, row as usize)?;
+        }
+        queue!(stdout, MoveTo(col, row))?;
+        stdout.flush()?;
         Ok(())
     }
 
@@ -966,7 +976,16 @@ impl Editor {
     }
 
     fn position_cursor<W: Write>(&self, stdout: &mut W) -> io::Result<()> {
-        let (col, row) = match self.input.focus {
+        let (col, row) = self.calculate_cursor_position();
+        trace!("Positioning cursor for focus: {col} {row}");
+        queue!(stdout, MoveTo(col, row))?;
+        stdout.flush()?;
+        Ok(())
+    }
+
+    fn calculate_cursor_position(&self) -> (u16, u16) {
+        let f = self.input.focus;
+        let (col, row) = match f {
             FieldFocus::CommandLine => (
                 self.screen.command_input_col() + self.screen.command_cursor_pos as u16,
                 1,
@@ -986,9 +1005,6 @@ impl Editor {
                 screen_row,
             ),
         };
-
-        queue!(stdout, MoveTo(col, row))?;
-        stdout.flush()?;
-        Ok(())
+        (col, row)
     }
 }

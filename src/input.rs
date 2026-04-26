@@ -23,7 +23,7 @@
 //!   partially typed prefix command without pressing Enter first.
 //!   TODO: consider Esc as "reset current field" instead.
 
-use crossterm::event::{Event, KeyCode, KeyEvent, KeyModifiers};
+use crossterm::event::{Event, KeyCode, KeyEvent, KeyEventKind, KeyModifiers};
 use tracing::trace;
 
 use crate::types::{FieldFocus, InputMode};
@@ -55,7 +55,7 @@ pub enum EditorAction {
     /// Toggle insert/overtype mode.
     ToggleInsertMode,
     /// Function key commands.
-    FnEnd,         // F3
+    FnEnd, // F3
     FnRFind,       // F5
     FnScrollUp,    // F7
     FnScrollDown,  // F8
@@ -81,12 +81,15 @@ impl InputHandler {
         }
     }
 
-    /// Translate a crossterm event into an EditorAction.
+    // Translate a crossterm event into an EditorAction.
     pub fn handle_event(&self, event: Event) -> EditorAction {
         match event {
-            Event::Key(key) => {
+            Event::Key(key) if key.kind == KeyEventKind::Press => {
                 let action = self.handle_key(key);
-                trace!("key={:?} mods={:?} -> {:?}", key.code, key.modifiers, action);
+                trace!(
+                    "key={:?} mods={:?} -> {:?}",
+                    key.code, key.modifiers, action
+                );
                 action
             }
             Event::Resize(w, h) => EditorAction::Resize(w, h),
@@ -114,6 +117,8 @@ impl InputHandler {
             KeyCode::Tab => EditorAction::Tab,
             KeyCode::BackTab => EditorAction::BackTab,
             KeyCode::Insert => EditorAction::ToggleInsertMode,
+            KeyCode::PageDown => EditorAction::FnScrollDown,
+            KeyCode::PageUp => EditorAction::FnScrollUp,
             KeyCode::F(3) => EditorAction::FnEnd,
             KeyCode::F(5) => EditorAction::FnRFind,
             KeyCode::F(7) => EditorAction::FnScrollUp,

@@ -368,6 +368,7 @@ impl Screen {
         let old = self.top_line_index;
         self.top_line_index = self.top_line_index.saturating_sub(lines);
         trace!("scroll_up: {} -> {} (by {lines})", old, self.top_line_index);
+    self.needs_full_redraw = true;
     }
 
     pub fn scroll_down(&mut self, lines: usize, max_index: usize) {
@@ -381,26 +382,31 @@ impl Screen {
 
     pub fn scroll_left(&mut self, cols: usize) {
         self.horizontal_offset = self.horizontal_offset.saturating_sub(cols);
+        self.needs_full_redraw = true;
     }
 
     pub fn scroll_right(&mut self, cols: usize) {
         self.horizontal_offset += cols;
+        self.needs_full_redraw = true;
     }
 
     pub fn scroll_to_line(&mut self, line_index: usize, max_index: usize) {
         self.top_line_index = line_index.min(max_index);
+        self.needs_full_redraw = true;
     }
 
     /// Ensure a line index is visible on screen. Returns true if scrolling occurred.
     pub fn ensure_visible(&mut self, line_index: usize, max_index: usize) -> bool {
         if line_index < self.top_line_index {
             self.top_line_index = line_index;
+            self.needs_full_redraw = true;
             return true;
         }
         let bottom = self.top_line_index + self.data_rows();
         if line_index >= bottom {
             self.top_line_index = line_index.saturating_sub(self.data_rows() / 2);
             self.top_line_index = self.top_line_index.min(max_index);
+            self.needs_full_redraw = true;
             return true;
         }
         false
