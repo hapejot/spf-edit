@@ -1,0 +1,10 @@
+[package]
+name = "panel-runtime"
+version = "0.1.0"
+edition = "2021"
+description = "Panel display runtime for SPF-Edit panels"
+
+[dependencies]
+crossterm = "0.28"
+panel-model = { path = "../panel-model" }
+serde_json = "1"

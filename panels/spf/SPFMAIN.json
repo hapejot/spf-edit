@@ -1,0 +1,109 @@
+{
+  "id": "SPFMAIN",
+  "title": {
+    "text": "PRIMARY OPTION MENU"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "   0  SETTINGS   - Set processing options"
+      },
+      {
+        "type": "text",
+        "content": "   1  EDIT       - Edit a file"
+      },
+      {
+        "type": "text",
+        "content": "   2  BROWSE     - Browse a file (read-only)"
+      },
+      {
+        "type": "text",
+        "content": "   3  UTILITIES  - Utility functions"
+      },
+      {
+        "type": "text",
+        "content": "   T  TUTORIAL   - Tutorial information"
+      },
+      {
+        "type": "text",
+        "content": "   X  EXIT       - Exit SPF"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": " File name  . . ."
+          },
+          {
+            "type": "input",
+            "variable": "ZFILE",
+            "width": 60
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": " Initial macro  ."
+          },
+          {
+            "type": "input",
+            "variable": "ZIMAC",
+            "width": 40
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "divider",
+        "style": "single"
+      },
+      {
+        "type": "text",
+        "content": " Enter option number or command on the command line, then press Enter."
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "SPFHELP"
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": [
+        { "value": "0", "action": { "type": "panel", "target": "SPFSETS" } },
+        { "value": "1", "action": { "type": "ctc", "command": "EDIT" } },
+        { "value": "2", "action": { "type": "ctc", "command": "BROWSE" } },
+        { "value": "3", "action": { "type": "panel", "target": "SPFUTIL" } },
+        { "value": "T", "action": { "type": "panel", "target": "SPFTUT" } },
+        { "value": "X", "action": { "type": "up" } },
+        { "value": "",  "action": { "type": "blank" } }
+      ],
+      "default_error": "Invalid option"
+    }
+  },
+  "metadata": {
+    "source_file": "SPFMAIN.json",
+    "category": "spf"
+  }
+}

@@ -1,0 +1,15 @@
+[package]
+name = "spf"
+version = "0.1.0"
+edition = "2021"
+description = "SPF launcher - ISPF-style main menu for spf-edit"
+
+[[bin]]
+name = "spf"
+path = "src/main.rs"
+
+[dependencies]
+crossterm = "0.28"
+panel-model = { path = "../panel-model" }
+panel-runtime = { path = "../panel-runtime" }
+serde_json = "1"

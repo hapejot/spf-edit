@@ -1,5 +1,5 @@
 [workspace]
-members = [".", "panel-model", "pan2json"]
+members = [".", "panel-model", "panel-runtime", "pan2json", "spf"]
 
 [package]
 name = "spf-edit"
@@ -18,3 +18,4 @@ tracing-subscriber = { version = "0.3.23", features = ["env-filter"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 panel-model = { path = "panel-model" }
+panel-runtime = { path = "panel-runtime" }

@@ -328,6 +328,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "panel-runtime"
+version = "0.1.0"
+dependencies = [
+ "crossterm",
+ "panel-model",
+ "serde_json",
+]
+
+[[package]]
 name = "parking_lot"
 version = "0.12.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -538,12 +547,23 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "67b1b7a3b5fe4f1376887184045fcf45c69e92af734b7aaddc05fb777b6fbd03"
 
 [[package]]
+name = "spf"
+version = "0.1.0"
+dependencies = [
+ "crossterm",
+ "panel-model",
+ "panel-runtime",
+ "serde_json",
+]
+
+[[package]]
 name = "spf-edit"
 version = "0.1.0"
 dependencies = [
  "crossterm",
  "log",
  "panel-model",
+ "panel-runtime",
  "serde",
  "serde_json",
  "simplelog",

@@ -1,0 +1,116 @@
+{
+  "id": "SPFTUT",
+  "title": {
+    "text": "TUTORIAL"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "box",
+        "style": "double",
+        "rows": [
+          { "type": "text", "content": "  Welcome to SPF-Edit Tutorial" },
+          { "type": "blank" },
+          { "type": "text", "content": "  SPF-Edit is a terminal-based ISPF-style editor." },
+          { "type": "text", "content": "  It provides line editing with prefix commands," },
+          { "type": "text", "content": "  primary commands, and a familiar ISPF layout." }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Getting started:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "  1. From the main menu, enter a file name and select option 1 (EDIT)."
+      },
+      {
+        "type": "text",
+        "content": "  2. Use prefix commands (I, D, C, M, R) in the line number area."
+      },
+      {
+        "type": "text",
+        "content": "  3. Type primary commands (FIND, SAVE, END) on the command line."
+      },
+      {
+        "type": "text",
+        "content": "  4. Press F3 or type END to save and exit."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Key bindings:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "  F3  / Esc     - End (save and exit)"
+      },
+      {
+        "type": "text",
+        "content": "  F5            - Repeat last FIND"
+      },
+      {
+        "type": "text",
+        "content": "  F7  / PgUp    - Scroll up"
+      },
+      {
+        "type": "text",
+        "content": "  F8  / PgDn    - Scroll down"
+      },
+      {
+        "type": "text",
+        "content": "  F10           - Scroll left"
+      },
+      {
+        "type": "text",
+        "content": "  F11           - Scroll right"
+      },
+      {
+        "type": "text",
+        "content": "  F12           - Retrieve command history"
+      },
+      {
+        "type": "text",
+        "content": "  Tab           - Cycle between fields"
+      },
+      {
+        "type": "text",
+        "content": "  Ctrl+Q        - Force quit"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "divider",
+        "style": "single"
+      },
+      {
+        "type": "text",
+        "content": " Press F3 to return to the main menu."
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "SPFTUT.json",
+    "category": "spf"
+  }
+}

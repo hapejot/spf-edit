@@ -6,9 +6,9 @@
 use std::io::{self, Write};
 use std::path::Path;
 
-use super::engine::{PanelEngine, PanelResult};
-use super::loader::PanelLoader;
-use super::vars::VarPool;
+use crate::engine::{PanelEngine, PanelResult};
+use crate::loader::PanelLoader;
+use crate::vars::VarPool;
 
 /// Manages panel display with a navigation stack.
 pub struct PanelManager {
@@ -23,6 +23,11 @@ impl PanelManager {
         let vars = VarPool::new();
 
         Ok(PanelManager { loader, vars })
+    }
+
+    /// Get a reference to the variable pool (for reading variables after display).
+    pub fn vars(&self) -> &VarPool {
+        &self.vars
     }
 
     /// Get a mutable reference to the variable pool (for pre-setting variables).

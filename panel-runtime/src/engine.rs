@@ -7,14 +7,14 @@ use std::io::{self, Write};
 
 use crossterm::{
     cursor::MoveTo,
-    event::{self, Event, KeyCode, KeyEvent, KeyModifiers},
+    event::{self, Event, KeyCode, KeyEvent, KeyEventKind, KeyModifiers},
     queue,
     terminal,
 };
 
 use panel_model::*;
-use super::renderer::{FieldInfo, PanelRenderer};
-use super::vars::VarPool;
+use crate::renderer::{FieldInfo, PanelRenderer};
+use crate::vars::VarPool;
 
 /// Result of running a panel's engine loop.
 #[derive(Debug, Clone)]
@@ -87,7 +87,7 @@ impl PanelEngine {
             error_msg = None; // Clear error on any key
 
             match evt {
-                Event::Key(key_event) => {
+                Event::Key(key_event) if key_event.kind == KeyEventKind::Press => {
                     match Self::handle_key(
                         key_event,
                         &mut command_text,
@@ -98,10 +98,13 @@ impl PanelEngine {
                     ) {
                         KeyAction::Continue => {}
                         KeyAction::Enter => {
-                            // Collect all field values into vars
+                            // Store command text in var pool for TRANS navigation.
+                            // Non-command field values are already up-to-date in
+                            // vars (typed in real-time via handle_key), so we only
+                            // need to sync the command field.
                             for f in &fields {
-                                if !f.is_command {
-                                    vars.set(&f.variable, &f.value);
+                                if f.is_command {
+                                    vars.set(&f.variable, command_text.trim());
                                 }
                             }
 

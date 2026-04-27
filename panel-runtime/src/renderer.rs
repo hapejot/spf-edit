@@ -14,7 +14,7 @@ use crossterm::{
 };
 
 use panel_model::*;
-use super::vars::VarPool;
+use crate::vars::VarPool;
 
 // ─── Colors for panel display ───────────────────────────────────────────────
 

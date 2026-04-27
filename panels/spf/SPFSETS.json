@@ -1,0 +1,123 @@
+{
+  "id": "SPFSETS",
+  "title": {
+    "text": "SETTINGS"
+  },
+  "type": "form",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Processing options:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          { "type": "text", "content": "  Tab size  . . . . . ." },
+          { "type": "input", "variable": "ZTABS", "width": 4 }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          { "type": "text", "content": "  Nulls mode  . . . . ." },
+          { "type": "input", "variable": "ZNULLS", "width": 1 },
+          { "type": "text", "content": "(Y or N)" }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          { "type": "text", "content": "  Caps mode . . . . . ." },
+          { "type": "input", "variable": "ZCAPS", "width": 1 },
+          { "type": "text", "content": "(Y or N)" }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          { "type": "text", "content": "  Number mode . . . . ." },
+          { "type": "input", "variable": "ZNUMS", "width": 1 },
+          { "type": "text", "content": "(Y or N)" }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Display options:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          { "type": "text", "content": "  Default scroll  . . ." },
+          { "type": "input", "variable": "ZSCROLL", "width": 8 },
+          { "type": "text", "content": "(PAGE, HALF, CSR, DATA)" }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "divider",
+        "style": "single"
+      },
+      {
+        "type": "text",
+        "content": " Press Enter to save settings, F3 to cancel."
+      }
+    ]
+  },
+  "init": {
+    "assignments": {
+      "ZTABS": "8",
+      "ZNULLS": "N",
+      "ZCAPS": "N",
+      "ZNUMS": "Y",
+      "ZSCROLL": "PAGE"
+    }
+  },
+  "proc_section": {
+    "validations": [
+      {
+        "field": "ZTABS",
+        "rules": [
+          { "type": "numeric", "range": { "min": 1, "max": 16 } }
+        ]
+      },
+      {
+        "field": "ZNULLS",
+        "rules": [ { "type": "boolean" } ]
+      },
+      {
+        "field": "ZCAPS",
+        "rules": [ { "type": "boolean" } ]
+      },
+      {
+        "field": "ZNUMS",
+        "rules": [ { "type": "boolean" } ]
+      }
+    ],
+    "assignments": {
+      "ZSEL": "UP"
+    }
+  },
+  "metadata": {
+    "source_file": "SPFSETS.json",
+    "category": "spf"
+  }
+}
