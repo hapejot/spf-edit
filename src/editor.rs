@@ -202,9 +202,9 @@ impl Editor {
                 let lines = amount.resolve(self.screen.data_rows(), self.cursor_screen_row());
                 let max = self.buffer.line_count().saturating_sub(1);
                 debug!("Action: ScrollDown by {lines}");
+                self.needs_full_redraw = true;
                 self.screen.scroll_down(lines, max);
                 self.clamp_cursor();
-                self.needs_full_redraw = true;
             }
 
             EditorAction::FnScrollLeft => {
@@ -745,6 +745,7 @@ impl Editor {
                 msg_type: MessageType::Error,
             });
         }
+        self.needs_full_redraw = true; // Line cmd results may change line types and prefixes, so do a full redraw
 
         // 3. Parse and execute primary command
         let cmd_text = self.screen.command_line.trim().to_string();
@@ -878,6 +879,7 @@ impl Editor {
         if result.toggle_cols {
             self.screen.cols_visible = !self.screen.cols_visible;
             // Insert or remove COLS ruler line after TopOfData
+            self.needs_full_redraw = true;
             if self.screen.cols_visible {
                 self.buffer.lines.insert(1, Line::cols_ruler());
             } else {
@@ -960,7 +962,7 @@ impl Editor {
         // self.screen.draw_full(stdout, &self.buffer)?;
         let (col, row) = self.calculate_cursor_position();
         trace!("Positioning cursor for focus: {col} {row}");
-        if self.needs_full_redraw {
+        if self.needs_full_redraw || self.screen.needs_full_redraw {
             self.screen.draw_full(stdout, &self.buffer)?;
             self.needs_full_redraw = false;
         } else {

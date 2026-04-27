@@ -157,13 +157,13 @@ Focus cycling is handled by Tab (forward) and Shift+Tab (backward). See [02-curs
 
 ## Status
 
-| Aspect | State |
-|--------|-------|
-| Title line | **Implemented** — mode, filename, modified, message, column range |
-| Command line | **Implemented** — command input + scroll field |
-| Prefix area | **Implemented** — line numbers, sentinels, COLS ruler, messages, pending/error display |
-| Data area | **Implemented** — horizontal scrolling, Unicode width support |
-| Color scheme | **Implemented** — hardcoded ISPF colors |
-| Field focus | **Implemented** — 4 field types with Tab cycling |
-| Status bar | **Not started** |
-| Partial redraw | **Partial** — flag exists but most actions trigger full redraw |
+| Aspect         | State                                                                                  |
+| -------------- | -------------------------------------------------------------------------------------- |
+| Title line     | **Implemented** — mode, filename, modified, message, column range                      |
+| Command line   | **Implemented** — command input + scroll field                                         |
+| Prefix area    | **Implemented** — line numbers, sentinels, COLS ruler, messages, pending/error display |
+| Data area      | **Implemented** — horizontal scrolling, Unicode width support                          |
+| Color scheme   | **Implemented** — hardcoded ISPF colors                                                |
+| Field focus    | **Implemented** — 4 field types with Tab cycling                                       |
+| Status bar     | **Not started**                                                                        |
+| Partial redraw | **Partial** — flag exists but most actions trigger full redraw                         |

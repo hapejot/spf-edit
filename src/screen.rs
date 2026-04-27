@@ -368,12 +368,13 @@ impl Screen {
         let old = self.top_line_index;
         self.top_line_index = self.top_line_index.saturating_sub(lines);
         trace!("scroll_up: {} -> {} (by {lines})", old, self.top_line_index);
-    self.needs_full_redraw = true;
+        self.needs_full_redraw = true;
     }
 
     pub fn scroll_down(&mut self, lines: usize, max_index: usize) {
         let old = self.top_line_index;
         self.top_line_index = (self.top_line_index + lines).min(max_index);
+        self.needs_full_redraw = true;
         trace!(
             "scroll_down: {} -> {} (by {lines}, max={max_index})",
             old, self.top_line_index

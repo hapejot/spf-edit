@@ -23,12 +23,12 @@
 //!   correct SPF behavior, but the editor doesn't visually distinguish
 //!   "pending from last Enter" vs "just typed" yet.
 
-use tracing::{debug, warn};
+use tracing::{debug, info, warn};
 
 use crate::buffer::FileBuffer;
 use crate::line::LineFlags;
 use crate::line_store::LineStore;
-use crate::prefix::{parse_prefix_command, ParsedLineCmd, PrefixParseResult};
+use crate::prefix::{ParsedLineCmd, PrefixParseResult, parse_prefix_command};
 
 /// A pending line command with its buffer line index.
 #[derive(Debug, Clone)]
@@ -51,10 +51,7 @@ pub fn collect_line_commands(buffer: &FileBuffer) -> Vec<PendingLineCmd> {
             if let Some(ref prefix_text) = line.prefix_cmd {
                 match parse_prefix_command(prefix_text) {
                     PrefixParseResult::Command(cmd) => {
-                        commands.push(PendingLineCmd {
-                            cmd,
-                            line_index: i,
-                        });
+                        commands.push(PendingLineCmd { cmd, line_index: i });
                     }
                     PrefixParseResult::Error(msg) => {
                         commands.push(PendingLineCmd {
@@ -78,17 +75,17 @@ pub fn execute_line_commands(buffer: &mut FileBuffer) -> LineCmdResult {
     // Collect commands from prefix areas
     let mut cmds = Vec::new();
     let mut parse_errors = Vec::new();
-    debug!("execute_line_commands: scanning {} lines for prefix cmds", buffer.lines.len());
+    debug!(
+        "execute_line_commands: scanning {} lines for prefix cmds",
+        buffer.lines.len()
+    );
 
     for i in 0..buffer.lines.len() {
         if let Some(line) = buffer.lines.get(i) {
             if let Some(ref prefix_text) = line.prefix_cmd {
                 match parse_prefix_command(prefix_text) {
                     PrefixParseResult::Command(cmd) => {
-                        cmds.push(PendingLineCmd {
-                            cmd,
-                            line_index: i,
-                        });
+                        cmds.push(PendingLineCmd { cmd, line_index: i });
                     }
                     PrefixParseResult::Error(msg) => {
                         parse_errors.push((i, msg));
@@ -131,7 +128,10 @@ pub fn execute_line_commands(buffer: &mut FileBuffer) -> LineCmdResult {
     // Block tracking
     let mut block_starts: Vec<PendingLineCmd> = Vec::new();
 
+    let mut processed_lines = vec![];
+
     for cmd in cmds {
+        processed_lines.push(cmd.line_index);
         match &cmd.cmd {
             ParsedLineCmd::Insert(_) => inserts.push(cmd),
             ParsedLineCmd::Delete(_) => deletes.push(cmd),
@@ -220,9 +220,10 @@ pub fn execute_line_commands(buffer: &mut FileBuffer) -> LineCmdResult {
             }
             ParsedLineCmd::RepeatBlockStart(_n) => block_starts.push(cmd),
             ParsedLineCmd::RepeatBlockEnd => {
-                if let Some(start_pos) = block_starts.iter().rposition(|s| {
-                    matches!(s.cmd, ParsedLineCmd::RepeatBlockStart(_))
-                }) {
+                if let Some(start_pos) = block_starts
+                    .iter()
+                    .rposition(|s| matches!(s.cmd, ParsedLineCmd::RepeatBlockStart(_)))
+                {
                     let start = block_starts.remove(start_pos);
                     let count = match start.cmd {
                         ParsedLineCmd::RepeatBlockStart(n) => n,
@@ -272,8 +273,15 @@ pub fn execute_line_commands(buffer: &mut FileBuffer) -> LineCmdResult {
 
     // --- Execute commands ---
     // Order: labels first, then deletes (high to low), then moves, then copies, then repeats, then inserts
-    debug!("  executing: {} labels, {} deletes, {} moves, {} copies, {} repeats, {} inserts",
-           labels.len(), deletes.len(), move_sources.len(), copy_sources.len(), repeats.len(), inserts.len());
+    debug!(
+        "  executing: {} labels, {} deletes, {} moves, {} copies, {} repeats, {} inserts",
+        labels.len(),
+        deletes.len(),
+        move_sources.len(),
+        copy_sources.len(),
+        repeats.len(),
+        inserts.len()
+    );
 
     // Labels
     for cmd in &labels {
@@ -370,6 +378,7 @@ pub fn execute_line_commands(buffer: &mut FileBuffer) -> LineCmdResult {
 
     // Inserts — process from bottom to top to preserve indices
     inserts.sort_by(|a, b| b.line_index.cmp(&a.line_index));
+    info!("Processing {} inserts", inserts.len());
     for cmd in &inserts {
         if let ParsedLineCmd::Insert(count) = cmd.cmd {
             buffer.insert_lines_after(cmd.line_index, count);
@@ -377,11 +386,11 @@ pub fn execute_line_commands(buffer: &mut FileBuffer) -> LineCmdResult {
     }
 
     // Clear all processed prefix commands
-    for i in 0..buffer.lines.len() {
+    info!("Clearing prefix commands from all lines");
+    for i in processed_lines {
         if let Some(line) = buffer.lines.get_mut(i) {
-            if !line.flags.contains(LineFlags::PENDING_CMD) {
-                line.clear_prefix_cmd();
-            }
+            info!("Clearing prefix cmd from line {i}");
+            line.clear_prefix_cmd();
         }
     }
 
