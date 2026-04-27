@@ -1,0 +1,122 @@
+{
+  "id": "S2R3Z008",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "UTILITY FUNCTIONS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "F - SAVED LISTS"
+      },
+      {
+        "type": "text",
+        "content": "When you use the SAVELIST primary command to save a select list,"
+      },
+      {
+        "type": "text",
+        "content": "the saved list is preserved under a symbolic name. This panel"
+      },
+      {
+        "type": "text",
+        "content": "displays a select list of those names. When you select an entry,"
+      },
+      {
+        "type": "text",
+        "content": "it displays the selected list."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "G - FILE CONVERSION"
+      },
+      {
+        "type": "text",
+        "content": "Enables conversion of files from one profile type to another."
+      },
+      {
+        "type": "text",
+        "content": "For example, allows you to take an EBCDIC encoded VRECGEN file,"
+      },
+      {
+        "type": "text",
+        "content": "and convert it to a CRLF data delimted ASCII file.  By default,"
+      },
+      {
+        "type": "text",
+        "content": "conversion occurs as determined by the files extension, which"
+      },
+      {
+        "type": "text",
+        "content": "corresponds to file profile of the same name."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "H - MOST RECENT EDITS"
+      },
+      {
+        "type": "text",
+        "content": "A selection list that displays the most recently edited files, in"
+      },
+      {
+        "type": "text",
+        "content": "order of last modification.  This list may be accessed from"
+      },
+      {
+        "type": "text",
+        "content": "anywhere in SPF/PC via the REDIT primary command.  Browsed files"
+      },
+      {
+        "type": "text",
+        "content": "are not added to this list.  The number of files displayed on this"
+      },
+      {
+        "type": "text",
+        "content": "list is configured from the RECENT EDIT DEPTH field on Panel 0.5."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R3Z008.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

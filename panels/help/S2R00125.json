@@ -1,0 +1,110 @@
+{
+  "id": "S2R00125",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SPF/PC COMMAND - BACK",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Use this command to execute an operating system command or program"
+      },
+      {
+        "type": "text",
+        "content": "without clearing the screen."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "BACK [operating-system-command | program-name]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "When you issue the command, SPF/PC turns control over to operating"
+      },
+      {
+        "type": "text",
+        "content": "system, execution of the command or program you specified."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "BACK is similar to the TSO, DOS, and OS/2 commands, except that"
+      },
+      {
+        "type": "text",
+        "content": "it does not clear the screen, and does not require a key to be"
+      },
+      {
+        "type": "text",
+        "content": "pressed when the system command is completed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R00125.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "id": "S2P05106",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "TERMINAL CHARACTERISTICS PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PERSISTENT INSERT+- Specifies whether to reset the Insert mode after"
+      },
+      {
+        "type": "text",
+        "content": "executing a command.  If set to Y, Insert remains set after command"
+      },
+      {
+        "type": "text",
+        "content": "execution.  If N, Insert is reset everytime an enter key is pressed"
+      },
+      {
+        "type": "text",
+        "content": "or a command is executed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SCROLL INDICATORS+- Specifies whether to display the \u0018 and \u0019 table"
+      },
+      {
+        "type": "text",
+        "content": "scroll indicators when there are table records off the screen."
+      },
+      {
+        "type": "text",
+        "content": "If Y, display the indicators.  N specifies no display."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "MOUSE CURSOR+- Specifies whether to display the mouse cursor.  If"
+      },
+      {
+        "type": "text",
+        "content": "Y, then the mouse cursor is always displayed as a inverted block"
+      },
+      {
+        "type": "text",
+        "content": "of text on the screen.  If N, then no cursor is displayed, and"
+      },
+      {
+        "type": "text",
+        "content": "mouse functions are disabled."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "DISPLAY TIME/DATE+- Specifies whether to display the time and/or date"
+      },
+      {
+        "type": "text",
+        "content": "on the status line at the bottom of the screen.  Enter B for both"
+      },
+      {
+        "type": "text",
+        "content": "time and date, T for just time, D for just date, or N to disable"
+      },
+      {
+        "type": "text",
+        "content": "the time/date display completely."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05106.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

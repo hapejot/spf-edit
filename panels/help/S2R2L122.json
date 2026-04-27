@@ -1,0 +1,114 @@
+{
+  "id": "S2R2L122",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - >",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "The number may be specified on either or both lines, but the largest"
+      },
+      {
+        "type": "text",
+        "content": "value is always used if a conflict exists.  The default shift is two"
+      },
+      {
+        "type": "text",
+        "content": "columns.  Shifting occurs within column boundaries."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Non-blank characters are never deleted or truncated. If a shift is"
+      },
+      {
+        "type": "text",
+        "content": "requested that would move data beyond the current bounds, the data"
+      },
+      {
+        "type": "text",
+        "content": "is moved only to the current bounds."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "How data shift right works:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "i)   Scanning starts in the left boundary column."
+      },
+      {
+        "type": "text",
+        "content": "ii)  The first blank character is found."
+      },
+      {
+        "type": "text",
+        "content": "iii) The next non-blank character is found."
+      },
+      {
+        "type": "text",
+        "content": "iv)  The next double blank characters are found."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Data from step 3 to 4 is shifted right one column. One of the two"
+      },
+      {
+        "type": "text",
+        "content": "blank characters found in step 4 is deleted. The above steps are"
+      },
+      {
+        "type": "text",
+        "content": "repeated as to satisfy the shift request."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2L122.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

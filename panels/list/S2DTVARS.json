@@ -1,0 +1,78 @@
+{
+  "id": "S2DTVARS",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "VARIABLE DISPLAY",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "list",
+  "attributes": {
+    "#": {
+      "type": "OUTPUT",
+      "intensity": "low"
+    },
+    "^": {
+      "type": "INPUT",
+      "intensity": "high",
+      "caps": false,
+      "scroll": true,
+      "justification": "left"
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD",
+        "scroll": {
+          "variable": "SCROLL"
+        }
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NAME      POOL VALUE"
+      },
+      {
+        "type": "divider",
+        "style": "single"
+      }
+    ]
+  },
+  "model": {
+    "selection_field": {
+      "variable": "Z",
+      "width": 1
+    },
+    "columns": [
+      {
+        "variable": "VARNAME",
+        "attribute": "#",
+        "width": 10
+      },
+      {
+        "variable": "Z",
+        "attribute": "#"
+      },
+      {
+        "variable": "VARVALUE",
+        "attribute": "^"
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2RT0000",
+    "zvars": [
+      "SCROLL",
+      "SEL",
+      "VARPOOL"
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DTVARS.PAN",
+    "category": "list",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

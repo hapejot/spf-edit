@@ -1,0 +1,78 @@
+{
+  "id": "S2MCFORE",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "USER APPLICATION COPY",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "menu",
+  "attributes": {
+    "~": {
+      "type": "OUTPUT",
+      "intensity": "low"
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "EXISTING USER APPLICATION NAME :"
+          },
+          {
+            "type": "output",
+            "variable": "UAPPNAME",
+            "attribute": "~"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "NEW APPLICATION NAME"
+          },
+          {
+            "type": "input",
+            "variable": "DESTNAME",
+            "width": 8,
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      }
+    ]
+  },
+  "proc_section": {
+    "validations": [
+      {
+        "field": "DESTNAME",
+        "rules": [
+          {
+            "type": "non_blank"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2MCFORE.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

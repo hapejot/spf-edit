@@ -1,0 +1,113 @@
+{
+  "id": "S2P05K20",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "ASSIGNING VALUES TO KEYS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "ASSIGNING VALUES TO KEYS"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "When a key assignment table is displayed, the name of the key"
+      },
+      {
+        "type": "text",
+        "content": "is listed on the left and the assigned key contents are listed"
+      },
+      {
+        "type": "text",
+        "content": "on the right.  For example, the CTRL key assignments:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NAME             VALUE"
+      },
+      {
+        "type": "text",
+        "content": "Ctrl A+          x'01'"
+      },
+      {
+        "type": "text",
+        "content": "Ctrl B+          x'02'"
+      },
+      {
+        "type": "text",
+        "content": "Ctrl C+          x'03'"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The name information is a non-modifyable label applied to the"
+      },
+      {
+        "type": "text",
+        "content": "associated key.  In this case, it represents the key combinations"
+      },
+      {
+        "type": "text",
+        "content": "of holding down the \"Ctrl\" key and pressing 'A', 'B', or 'C'."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC translates the typed key into the value displayed on the"
+      },
+      {
+        "type": "text",
+        "content": "right.  In the above example, \"Ctrl-A\" gets mapped to the data"
+      },
+      {
+        "type": "text",
+        "content": "character Hex-01."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05K20.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "SEDITPAN",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT &ZSPFHEAD"
+  },
+  "type": "edit",
+  "attributes": {
+    "^": {
+      "type": "INPUT",
+      "intensity": "high",
+      "caps": false,
+      "scroll": true,
+      "justification": "left"
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD",
+        "scroll": {
+          "variable": "SCROLL"
+        }
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2R20000",
+    "zvars": [
+      "SCROLL"
+    ]
+  },
+  "metadata": {
+    "source_file": "SEDITPAN.PAN",
+    "category": "edit",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

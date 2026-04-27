@@ -1,0 +1,293 @@
+{
+  "id": "S2MPRIM",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "PRIMARY OPTION PANEL",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "menu",
+  "attributes": {
+    "#": {
+      "type": "OUTPUT",
+      "intensity": "high"
+    },
+    "^": {
+      "type": "PROT",
+      "intensity": "high",
+      "attn": true
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "^   0 +SPF/PC PARMS - Specify terminal and user parameters   USERID   -"
+          },
+          {
+            "type": "output",
+            "variable": "ZUSER",
+            "attribute": "#"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "^   1 +BROWSE       - Display source data or output listings TIME     -"
+          },
+          {
+            "type": "output",
+            "variable": "ZTIME",
+            "attribute": "#"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "^   2 +EDIT         - Create or change source data           OPER SYS -"
+          },
+          {
+            "type": "output",
+            "variable": "ZOS",
+            "attribute": "#"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "^   3 +UTILITIES    - Perform utility functions"
+      },
+      {
+        "type": "text",
+        "content": "^   4 +FOREGROUND   - Invoke user applications in foreground"
+      },
+      {
+        "type": "text",
+        "content": "^   5 +ENVIRONMENT  - Display information about system configuration"
+      },
+      {
+        "type": "text",
+        "content": "^   6 +COMMAND      - Execute system command"
+      },
+      {
+        "type": "text",
+        "content": "^   7 +DIALOG TEST  - Perform dialog testing"
+      },
+      {
+        "type": "text",
+        "content": "^   C +CHANGES      - Changes from last version"
+      },
+      {
+        "type": "text",
+        "content": "^   T +TUTORIAL     - Display information about SPF/PC"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "^   S +SAMPLES      - Sample panels and programs"
+          },
+          {
+            "type": "text",
+            "content": "���+"
+          },
+          {
+            "type": "text",
+            "content": "����"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "^   X +EXIT         - Terminate SPF/PC"
+          },
+          {
+            "type": "text",
+            "content": "����+"
+          },
+          {
+            "type": "text",
+            "content": "������"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "����+"
+          },
+          {
+            "type": "text",
+            "content": "����"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Enter"
+          },
+          {
+            "type": "output",
+            "variable": "END",
+            "attribute": "^"
+          },
+          {
+            "type": "text",
+            "content": "+command to terminate SPF/PC."
+          },
+          {
+            "type": "text",
+            "content": "�� ��+"
+          },
+          {
+            "type": "text",
+            "content": "��"
+          },
+          {
+            "type": "text",
+            "content": "��"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "��������+"
+          },
+          {
+            "type": "text",
+            "content": "��"
+          },
+          {
+            "type": "text",
+            "content": "��"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "VERSION"
+          },
+          {
+            "type": "output",
+            "variable": "Z"
+          },
+          {
+            "type": "text",
+            "content": "+(C) COPYRIGHT"
+          },
+          {
+            "type": "text",
+            "content": "��"
+          },
+          {
+            "type": "text",
+            "content": "��+"
+          },
+          {
+            "type": "text",
+            "content": "������"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "COMMAND TECHNOLOGY CORP 1984, 1994"
+          },
+          {
+            "type": "text",
+            "content": "��+"
+          },
+          {
+            "type": "text",
+            "content": "��+"
+          },
+          {
+            "type": "text",
+            "content": "����"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "+"
+          },
+          {
+            "type": "text",
+            "content": "+"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2R00000",
+    "zvars": [
+      "ZVERSION"
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": [
+        {
+          "value": "&ZCMD",
+          "action": {
+            "type": "panel",
+            "target": "."
+          }
+        },
+        {
+          "value": "'",
+          "action": {
+            "type": "blank"
+          }
+        }
+      ],
+      "default_error": "ISPF102"
+    }
+  },
+  "metadata": {
+    "source_file": "S2MPRIM.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

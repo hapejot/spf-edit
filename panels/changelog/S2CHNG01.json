@@ -1,0 +1,94 @@
+{
+  "id": "S2CHNG01",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "MODIFIABLE PANELS",
+    "version_var": "ZSHRTVER",
+    "prefix": "CHANGES"
+  },
+  "type": "changelog",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You can now modify existing SPF/PC panels to customize operations"
+      },
+      {
+        "type": "text",
+        "content": "to suit local conditions. You can also extend SPF/PC by adding new"
+      },
+      {
+        "type": "text",
+        "content": "functions to the primary option panel along with their respective"
+      },
+      {
+        "type": "text",
+        "content": "panel trees."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC faithfully emulates ISPF Dialog Services Panel Definition"
+      },
+      {
+        "type": "text",
+        "content": "Language. We support the ISPF process model and most major services"
+      },
+      {
+        "type": "text",
+        "content": "so in many cases you will be able to download your mainframe panels"
+      },
+      {
+        "type": "text",
+        "content": "and run them without modification."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For further details see:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC User Guide and Reference,"
+      },
+      {
+        "type": "text",
+        "content": "Panel Definition ............... Page 8-1"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC Command Reference"
+      },
+      {
+        "type": "text",
+        "content": "ISPEXEC Dialog Services ........ Page 3-1"
+      }
+    ]
+  },
+  "proc_section": {
+    "assignments": {
+      "ZSEL": "UP"
+    }
+  },
+  "metadata": {
+    "source_file": "S2CHNG01.PAN",
+    "category": "changelog"
+  }
+}

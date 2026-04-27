@@ -1,0 +1,120 @@
+{
+  "id": "S2R3X00E",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE LIST LINE COMMAND - E",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Use this command to select a file from a file list to EDIT."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "E"
+      },
+      {
+        "type": "text",
+        "content": "EE"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "Type a 'E' next to the file you want to EDIT.  This command, by"
+      },
+      {
+        "type": "text",
+        "content": "default, may be use only from 3.4 or 3.X select lists.  The EXTENDED"
+      },
+      {
+        "type": "text",
+        "content": "LINE COMMANDS field of panel 0.5 may be toggled to allow this"
+      },
+      {
+        "type": "text",
+        "content": "command from any file list."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If you select a subdirectory with E, another file list is created"
+      },
+      {
+        "type": "text",
+        "content": "and any file selected from it is edited."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "NAME        SIZE    DATE    TIME"
+      },
+      {
+        "type": "text",
+        "content": "E  FOO.DOC    12433  01-25-91 10:56a"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R3X00E.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

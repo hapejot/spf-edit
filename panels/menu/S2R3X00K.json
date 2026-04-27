@@ -1,0 +1,120 @@
+{
+  "id": "S2R3X00K",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE LIST LINE COMMAND - E",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Use this command to select a file from a file list to EDIT."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "K"
+      },
+      {
+        "type": "text",
+        "content": "KK"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "Type a 'K' next to the file you want to CONVERT.  Convert presents a"
+      },
+      {
+        "type": "text",
+        "content": "panel with INPUT and OUTPUT file sections. The INPUT section is primed"
+      },
+      {
+        "type": "text",
+        "content": "with the file which you identified for conversion. You can also specify"
+      },
+      {
+        "type": "text",
+        "content": "the input file profile name. The OUTPUT section allows you to specify"
+      },
+      {
+        "type": "text",
+        "content": "the output file name, the output file profile name, and the maximum"
+      },
+      {
+        "type": "text",
+        "content": "output record length."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "NAME   EXT    SIZE     DATE     TIME    ATTRS"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "K  MM26   SRC    5123   01-25-91  10:56a   A..."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R3X00K.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

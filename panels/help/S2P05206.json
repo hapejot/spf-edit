@@ -1,0 +1,99 @@
+{
+  "id": "S2P05206",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "PRINTER SETUP PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SETUP STRING: BEFORE+- This field contains control information to be"
+      },
+      {
+        "type": "text",
+        "content": "sent to the printer prior to the first page."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "AFTER +- This string is sent to the printer after the"
+      },
+      {
+        "type": "text",
+        "content": "job has finished printing.  The information may be entered in one of three ways:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- Type the literal characters directly in."
+      },
+      {
+        "type": "text",
+        "content": "- Type the characters in symbolic decimal form:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\\nnn    (back-slash followed by three decimal digits)"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Three digits are required, use leading 0`s if necessary.  To"
+      },
+      {
+        "type": "text",
+        "content": "enter the back-slash character as a data character, enter"
+      },
+      {
+        "type": "text",
+        "content": "two back-slashes (\\\\)."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- The name of an external file containing the printer setup string"
+      },
+      {
+        "type": "text",
+        "content": "in the form:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\\ffile-name  (back-slash-f followed by the file name)"
+      },
+      {
+        "type": "blank"
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05206.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

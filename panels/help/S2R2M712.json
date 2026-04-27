@@ -1,0 +1,112 @@
+{
+  "id": "S2R2M712",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - DEFINE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC does not support the direct invocation of programs and thus"
+      },
+      {
+        "type": "text",
+        "content": "the ISPF MACRO PGM parameter is not supported."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- ALIAS When name and ALIAS name2 are both specified, name is an"
+      },
+      {
+        "type": "text",
+        "content": "alias of name2."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- NOP Specifies that name is a NOP (no operation).  Any aliases"
+      },
+      {
+        "type": "text",
+        "content": "are also set to NOP."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- RESET Specifies that name be reset, that is, restored to its"
+      },
+      {
+        "type": "text",
+        "content": "default state. For example if name were previously NOPed, it"
+      },
+      {
+        "type": "text",
+        "content": "would be returned to operational status."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- DISABLED Specifies that name be disabled. Disablement is"
+      },
+      {
+        "type": "text",
+        "content": "identical to NOP except that the state can not be reversed"
+      },
+      {
+        "type": "text",
+        "content": "with the RESET option. You must exit to the Primary Option"
+      },
+      {
+        "type": "text",
+        "content": "Menu to restore the disabled macro to operational status."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2M712.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

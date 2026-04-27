@@ -1,0 +1,116 @@
+{
+  "id": "S2P05K31",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "KEY CATEGORIES",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The MOUSE category allows assignments of the different mouse"
+      },
+      {
+        "type": "text",
+        "content": "events that may occur:  Left/Right click and Double Click."
+      },
+      {
+        "type": "text",
+        "content": "Though any SPF command may be assigned to a mouse event,"
+      },
+      {
+        "type": "text",
+        "content": "(including END), the terminal functions [CURSOR-MOUSE] and"
+      },
+      {
+        "type": "text",
+        "content": "[CURSOR-MOUSE-SELECT] are the most appropriate."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Finally, the CUSTOM category lists just keys that are"
+      },
+      {
+        "type": "text",
+        "content": "customly assigned to your keyboard.  As some keyboards"
+      },
+      {
+        "type": "text",
+        "content": "have keys that are non-standard, these special keys"
+      },
+      {
+        "type": "text",
+        "content": "may be named and have SPF command and functions assigned to"
+      },
+      {
+        "type": "text",
+        "content": "them, just like any other key.  See CUSTOM KEY ASSIGNMENT"
+      },
+      {
+        "type": "text",
+        "content": "for more details."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2P05K31.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

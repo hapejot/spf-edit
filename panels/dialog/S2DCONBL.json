@@ -1,0 +1,83 @@
+{
+  "id": "S2DCONBL",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "CONFIRM BLOCK DELETE",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "dialog",
+  "attributes": {
+    "^": {
+      "type": "PROT",
+      "intensity": "high",
+      "attn": true
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "INSTRUCTIONS:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Press"
+          },
+          {
+            "type": "output",
+            "variable": "ENTER",
+            "attribute": "^"
+          },
+          {
+            "type": "text",
+            "content": "+key to delete"
+          },
+          {
+            "type": "text",
+            "content": "ALL+items in the block."
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Enter"
+          },
+          {
+            "type": "output",
+            "variable": "END",
+            "attribute": "^"
+          },
+          {
+            "type": "text",
+            "content": "+command to"
+          },
+          {
+            "type": "text",
+            "content": "CANCEL+block delete."
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DCONBL.PAN",
+    "category": "dialog",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

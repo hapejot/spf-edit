@@ -1,0 +1,119 @@
+{
+  "id": "S2PTF160",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "TERMINAL FUNCTION - [NEWLINE]",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Jump the cursor to the next modifiable field down the screen."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "[NEWLINE]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "Jumps the cursor down one row, and then to the first unprotected"
+      },
+      {
+        "type": "text",
+        "content": "field.  In the editor, in moves you to the line command of the"
+      },
+      {
+        "type": "text",
+        "content": "next line of the screen."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If at the bottom of the screen, cursor is jumped back to the"
+      },
+      {
+        "type": "text",
+        "content": "first field on the screen."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "See Also:"
+      },
+      {
+        "type": "text",
+        "content": "[BACKTAB]"
+      },
+      {
+        "type": "text",
+        "content": "[ENTER-SPFPC]"
+      },
+      {
+        "type": "text",
+        "content": "[TAB]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2PTF160.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

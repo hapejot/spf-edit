@@ -1,0 +1,104 @@
+{
+  "id": "S2DDTS83",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "&ZTITLE",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "list",
+  "attributes": {
+    "^": {
+      "type": "INPUT",
+      "intensity": "high",
+      "caps": false,
+      "scroll": true,
+      "justification": "left"
+    },
+    "#": {
+      "type": "OUTPUT",
+      "intensity": "low"
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD",
+        "scroll": {
+          "variable": "SCROLL"
+        }
+      },
+      {
+        "type": "output",
+        "variable": "ZCURDIR"
+      },
+      {
+        "type": "text",
+        "content": "NAME     EXT    SIZE      DATE     TIME  ATTRS  PATH"
+      },
+      {
+        "type": "divider",
+        "style": "single"
+      }
+    ]
+  },
+  "model": {
+    "selection_field": {
+      "variable": "Z",
+      "width": 1
+    },
+    "columns": [
+      {
+        "variable": "Z",
+        "attribute": "#",
+        "width": 8
+      },
+      {
+        "variable": "Z",
+        "attribute": "#",
+        "width": 4
+      },
+      {
+        "variable": "CSIZE",
+        "attribute": "#",
+        "width": 9
+      },
+      {
+        "variable": "CDATE",
+        "attribute": "#",
+        "width": 9
+      },
+      {
+        "variable": "CTIME",
+        "attribute": "#",
+        "width": 7
+      },
+      {
+        "variable": "Z",
+        "attribute": "#",
+        "width": 5
+      },
+      {
+        "variable": "NAMEPATH",
+        "attribute": "#"
+      }
+    ]
+  },
+  "init": {
+    "zvars": [
+      "SCROLL",
+      "SEL",
+      "NAMEBASE",
+      "NAMEEXT",
+      "CATTRIB"
+    ],
+    "assignments": {
+      "ZTDMARK": "        &ZDTFILES    &ZDTBYTES BYTES USED -- END OF FILE SELECTION LIST"
+    }
+  },
+  "metadata": {
+    "source_file": "S2DDTS83.PAN",
+    "category": "list",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

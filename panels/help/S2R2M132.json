@@ -1,0 +1,107 @@
+{
+  "id": "S2R2M132",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - LOCATE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If the command contains any parameters other than line number or"
+      },
+      {
+        "type": "text",
+        "content": "label, SPF/PC assumes that it is the second format."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The operands NEXT, PREV, FIRST and LAST are used to control the"
+      },
+      {
+        "type": "text",
+        "content": "direction of search:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- NEXT start at the cursor line and search forward"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- PREV start at the cursor line and search backward"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- FIRST start at the front of the file and search forward"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- LAST start at the end of the file and search backward"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2M132.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

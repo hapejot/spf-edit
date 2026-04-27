@@ -1,0 +1,109 @@
+{
+  "id": "S2P05423",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "DISPLAY CHARACTERISTICS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To modify the region surrounding the screen on most video adapters:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\"Screen Border\""
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The Dialog Manager panels are displayed using the following display"
+      },
+      {
+        "type": "text",
+        "content": "characteristics:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\"Protected Normal,\" \"Protected High,\" \"Unprotected Normal,\" and"
+      },
+      {
+        "type": "text",
+        "content": "\"Unprotected High\""
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The attributes of the Status Line and the Split Line are denoted by:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\"Status Line\" and \"Panel Split Separator\""
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Help and Error messages attributes are defined by:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\"Short/Long Message\" and \"Short/Long Message with alarm\""
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05423.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

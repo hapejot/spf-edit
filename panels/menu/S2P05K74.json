@@ -1,0 +1,117 @@
+{
+  "id": "S2P05K74",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "KEYBOARD MACROS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Panel 0.M displays a list of previously defined keyboard macros."
+      },
+      {
+        "type": "text",
+        "content": "This list cannot be edited.  Entries can only be deleted or"
+      },
+      {
+        "type": "text",
+        "content": "assigned to an additional key."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To delete an entry, use the 'D' line command next to the macro"
+      },
+      {
+        "type": "text",
+        "content": "entry that you want to eliminate."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To assign an existing macro to a new key, use the 'K' line command."
+      },
+      {
+        "type": "text",
+        "content": "It will bring up the same key assignment panel that you would"
+      },
+      {
+        "type": "text",
+        "content": "see at the end of recording a macro."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If you have created a key macro that you want to execute from"
+      },
+      {
+        "type": "text",
+        "content": "the DOS or OS/2 command prompt, execute SPF/PC with a \"/K\""
+      },
+      {
+        "type": "text",
+        "content": "parameter, which tells SPF/PC to immediately start executing"
+      },
+      {
+        "type": "text",
+        "content": "the key macro from the primary option panel."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2P05K74.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

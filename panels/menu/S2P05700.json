@@ -1,0 +1,112 @@
+{
+  "id": "S2P05700",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "PROFILE DEFINITION PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "0.7 - PROFILE DEFINITION PANEL"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "File Profiles enable you to change the configuration for a"
+      },
+      {
+        "type": "text",
+        "content": "specific set of files.  These controls are, by default, associated"
+      },
+      {
+        "type": "text",
+        "content": "to a file by its extension."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 +- Display greater detail on the Profile Definitions Panel"
+      },
+      {
+        "type": "text",
+        "content": "2 +- Creating new profiles"
+      },
+      {
+        "type": "text",
+        "content": "3 +- Changing the Default Profile"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2P05700.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "id": "S2R2M314",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - NUMBER",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If all lines have valid numbers in ascending sequence, edit assumes"
+      },
+      {
+        "type": "text",
+        "content": "the data is numbered and turns number mode on. Otherwise, edit turns"
+      },
+      {
+        "type": "text",
+        "content": "number mode off. If the initial setting of the number mode differs"
+      },
+      {
+        "type": "text",
+        "content": "from the previous setting in the profile, a message is displayed"
+      },
+      {
+        "type": "text",
+        "content": "indicating that edit has changed the mode."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "Turn on STD numbering:"
+      },
+      {
+        "type": "text",
+        "content": "NUMBER"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Turn on COBOL numbering and cause sequence numbers to be visible:"
+      },
+      {
+        "type": "text",
+        "content": "NUMBER COBOL DISPLAY"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Turn on STD numbering:"
+      },
+      {
+        "type": "text",
+        "content": "NUMBER STD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Turn on STD and COBOL numbering:"
+      },
+      {
+        "type": "text",
+        "content": "NUMBER STD COBOL"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2M314.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

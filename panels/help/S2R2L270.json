@@ -1,0 +1,113 @@
+{
+  "id": "S2R2L270",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - I",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Inserts one or more temporary blank lines into the file."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "I[number]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "If I is entered without a number, one line is inserted."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If I is entered with a number, the number of lines specified are inserted"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If characters or spaces are entered on the inserted line, and if the"
+      },
+      {
+        "type": "text",
+        "content": "cursor is still in the data portion of the last (or only) inserted"
+      },
+      {
+        "type": "text",
+        "content": "line when ENTER is pressed, another new line is automatically"
+      },
+      {
+        "type": "text",
+        "content": "inserted following that line. This allows multiple lines to be"
+      },
+      {
+        "type": "text",
+        "content": "entered in a `continuous insert` mode."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If you want to retain inserted blank lines you must type at least on"
+      },
+      {
+        "type": "text",
+        "content": "character (or blank) on them."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2L270.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "id": "S2R3I000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SUPERC PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "3.I SUPERC"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SUPERC allows the ability to compare files line by line or byte by byte,"
+      },
+      {
+        "type": "text",
+        "content": "create change reports and to direct the change reports to a variety of"
+      },
+      {
+        "type": "text",
+        "content": "destinations."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NEW FILE+-        The most recent version of the file to be compared."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "OLD FILE+-        The original version of the file to be compared."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COMPARE TYPE+-    The type of comparison to make."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "LISTING TYPE+-    The form of the output listing of the report."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "OUTPUT+-          Where the report is to be sent."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PROCESS OPTIONS+- Special processing operations for the compare."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COMPARE COLUMNS+- The range of columns applicable to the comparison."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R3I000.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

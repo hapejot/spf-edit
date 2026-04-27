@@ -1,0 +1,183 @@
+{
+  "id": "S2R01110",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SELECTION PANELS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Selection panels present a list of codes which may be entered in the"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND/OPTION field and selected by pressing the ENTER key.  The code"
+      },
+      {
+        "type": "text",
+        "content": "is normally a single digit or a single letter.  Allowable codes are"
+      },
+      {
+        "type": "text",
+        "content": "listed in high intensity on each selection panel.  SPF/PC commands may"
+      },
+      {
+        "type": "text",
+        "content": "also be entered in the COMMAND/OPTION field."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Note: If the code"
+          },
+          {
+            "type": "text",
+            "content": "blank+is listed, leave the COMMAND/OPTION field blank and"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "press ENTER to select that option (do not type the characters \"blank\")."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "┌"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "The example at the right   │"
+          },
+          {
+            "type": "text",
+            "content": "SPF/PC(1) PRIMARY OPTION PANEL"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "shows the selection of     │"
+          },
+          {
+            "type": "text",
+            "content": "OPTION +2"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "option 2 from the          │"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "primary option panel.      │"
+          },
+          {
+            "type": "text",
+            "content": "0 + SPF/PC PARMS  Specify terminal and user p"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "│"
+          },
+          {
+            "type": "text",
+            "content": "1 + BROWSE        Display source data or outp"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "│"
+          },
+          {
+            "type": "text",
+            "content": "2 + EDIT          Create or change source dat"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "│"
+          },
+          {
+            "type": "text",
+            "content": "3 + UTILITIES     Perform utility functions"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R01110.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

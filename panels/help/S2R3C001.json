@@ -1,0 +1,111 @@
+{
+  "id": "S2R3C001",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "TEXT SEARCH PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "TEXT SEARCH PANEL"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This panel allows you to search for files containing a specific text"
+      },
+      {
+        "type": "text",
+        "content": "string, at one or more levels, from a specific path origin.  The"
+      },
+      {
+        "type": "text",
+        "content": "resulting select list contains all files at all levels that contain"
+      },
+      {
+        "type": "text",
+        "content": "the specified text string."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Individual fields are explained below:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SYSTEM CUR DIR"
+      },
+      {
+        "type": "text",
+        "content": "Identifies the current directory. This field only applies when"
+      },
+      {
+        "type": "text",
+        "content": "the path specification does not proceed from the root directory."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PATH"
+      },
+      {
+        "type": "text",
+        "content": "Specifies the origin for the search and optionally constrains"
+      },
+      {
+        "type": "text",
+        "content": "conformant files to a particular file extension."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R3C001.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

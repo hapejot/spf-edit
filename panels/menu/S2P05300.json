@@ -1,0 +1,115 @@
+{
+  "id": "S2P05300",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "PFKEY DEFINITION PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "0.3 - PFKEY DEFINITION PANELS"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This panel displays the current settings of the PF keys and allows"
+      },
+      {
+        "type": "text",
+        "content": "you to change them.  You change a PF key definition by typing over"
+      },
+      {
+        "type": "text",
+        "content": "the current definition."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PF keys may be defined as any SPF/PC primary or line command. This"
+      },
+      {
+        "type": "text",
+        "content": "enables the user to assign frequently used repetative commands like"
+      },
+      {
+        "type": "text",
+        "content": "\":i\", line insert, to a PF key for later recall with a single"
+      },
+      {
+        "type": "text",
+        "content": "keystroke."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 +- Display greater detail on PFKey Definition Panel"
+      },
+      {
+        "type": "text",
+        "content": "2 +- Describe definition of the entire keyboard"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2P05300.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

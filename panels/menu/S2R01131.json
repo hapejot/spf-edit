@@ -1,0 +1,115 @@
+{
+  "id": "S2R01131",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE SELECTION LISTS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Scrolling in file selection lists is done the same way for all SPF/PC"
+      },
+      {
+        "type": "text",
+        "content": "functions."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To scroll down by the scroll amount, enter a  DOWN command."
+      },
+      {
+        "type": "text",
+        "content": "To scroll   up by the scroll amount, enter an   UP command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The file selection list is never wider than 80 characters, so the LEFT"
+      },
+      {
+        "type": "text",
+        "content": "and RIGHT scroll commands are disabled when a file list is displayed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The scroll amount field at the top of the display may be changed as"
+      },
+      {
+        "type": "text",
+        "content": "described in the tutorial section on scrolling.  An additional method of"
+      },
+      {
+        "type": "text",
+        "content": "scrolling is to use the LOCATE command, which is described in a following"
+      },
+      {
+        "type": "text",
+        "content": "tutorial page."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R01131.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "id": "S2R2M134",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - LOCATE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The next optional parameter specifies a particular line type to be"
+      },
+      {
+        "type": "text",
+        "content": "located:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- LABEL (or LAB) search for a line with a label"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- COMMAND (or COM) search for a line with a pending line command"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- ERROR (or ERR) search for a line with an error flag (==ERR>)"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- CHANGE (or CHG) search for a line with a change flag (==CHG>)"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- SPECIAL (or SPE) search for a line marked with"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "=PROF>, =MASK>, =TABS>, =BNDS>, ==MSG>, or =NOTE=."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- EXCLUDED (or X) search for an excluded line"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2M134.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "id": "S2R01142",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE LIST SEARCH COMMAND",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Enter SEARCH without an argument to get the SEARCH criterion panel,"
+      },
+      {
+        "type": "text",
+        "content": "which enables performing searches on multiple strings simultaneously."
+      },
+      {
+        "type": "text",
+        "content": "From this panel, you may specify whether Capital-Sensitivity is"
+      },
+      {
+        "type": "text",
+        "content": "to be used as well."
+      },
+      {
+        "type": "text",
+        "content": "╔"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "The example to the right     ║"
+          },
+          {
+            "type": "text",
+            "content": "COMMAND"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "performs a text search for   ║"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "4 strings, and will include  ║    ASIS"
+          },
+          {
+            "type": "text",
+            "content": "+feline"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "any file in which a match    ║    ASIS"
+          },
+          {
+            "type": "text",
+            "content": "+cat"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "for any string is found.     ║"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "║    CAPS"
+          },
+          {
+            "type": "text",
+            "content": "+canine"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Therefore, if \"feline\" or    ║    CAPS"
+          },
+          {
+            "type": "text",
+            "content": "+dog"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "\"cat\" is found in a file,"
+      },
+      {
+        "type": "text",
+        "content": "matching exactly, or \"canine\" or \"dog\" is found, in upper or lower case,"
+      },
+      {
+        "type": "text",
+        "content": "then the file is included in the search list.  Each of the included files"
+      },
+      {
+        "type": "text",
+        "content": "gets displayed in another file list and may be selected from normally."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R01142.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

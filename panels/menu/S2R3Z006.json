@@ -1,0 +1,120 @@
+{
+  "id": "S2R3Z006",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "UTILITY FUNCTIONS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "D - COMPLEX SEARCH"
+      },
+      {
+        "type": "text",
+        "content": "Complex search is provided for the power user who is already"
+      },
+      {
+        "type": "text",
+        "content": "familiar with the basic directory, file, and text search"
+      },
+      {
+        "type": "text",
+        "content": "methods.  It combines the capabilities of 3.A, 3.B, and 3.C in a"
+      },
+      {
+        "type": "text",
+        "content": "single panel.  The result of the search is a select list of"
+      },
+      {
+        "type": "text",
+        "content": "files and/or directories that meet the complex search criteria."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "E - DRIVE SEARCH"
+      },
+      {
+        "type": "text",
+        "content": "Drive search lets you take a drive oriented approach to your"
+      },
+      {
+        "type": "text",
+        "content": "search.  It presents a select list from which you can select one"
+      },
+      {
+        "type": "text",
+        "content": "or more drives to search. The cross drive search can be"
+      },
+      {
+        "type": "text",
+        "content": "particularly useful when you are in a networked environment that"
+      },
+      {
+        "type": "text",
+        "content": "gives you visibility to many logical drives. You can do a single"
+      },
+      {
+        "type": "text",
+        "content": "or multilevel search for directories, files, or both.  The"
+      },
+      {
+        "type": "text",
+        "content": "result of the search is a select list of files and/or"
+      },
+      {
+        "type": "text",
+        "content": "directories that meet the drive search criteria."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R3Z006.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

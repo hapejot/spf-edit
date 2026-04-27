@@ -1,0 +1,86 @@
+{
+  "id": "S2DCPYD",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "COPY DIRECTORY",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CURRENT DIRECTORY:"
+          },
+          {
+            "type": "output",
+            "variable": "ZcurDir"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SOURCE DIRECTORY:"
+          },
+          {
+            "type": "output",
+            "variable": "fpath"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "TARGET DIRECTORY:"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "NAME"
+          },
+          {
+            "type": "input",
+            "variable": "ToName",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NOTE:"
+      },
+      {
+        "type": "text",
+        "content": "THIS WILL COPY ALL FILES AND SUB-DIRECTORIES."
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DCPYD.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

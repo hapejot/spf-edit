@@ -1,0 +1,113 @@
+{
+  "id": "S2P05604",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE LIST OPTIONS PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "EXTENDED LINE COMMANDS+ Indicate whether you want the extended line command"
+      },
+      {
+        "type": "text",
+        "content": "set to be available in all select lists."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Y+- Make all extended line commands available in all select lists."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "N+- Extended line commands are only available in 3.x select lists."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "DEFAULT DIRECTORY SEQUENCE+ Specifies the sort sequence for select lists:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "*+- Files are presented in the same order as they are maintained"
+      },
+      {
+        "type": "text",
+        "content": "in the system directory. Same as operating system DIR"
+      },
+      {
+        "type": "text",
+        "content": "command."
+      },
+      {
+        "type": "text",
+        "content": "N+- Sort files by NAME.  This option produces ISPF/PDF like"
+      },
+      {
+        "type": "text",
+        "content": "select lists."
+      },
+      {
+        "type": "text",
+        "content": "E+- Sort files by EXT."
+      },
+      {
+        "type": "text",
+        "content": "S+- Sort files by SIZE."
+      },
+      {
+        "type": "text",
+        "content": "D+- Sort files by DATE.  (TIME field is also sorted)"
+      },
+      {
+        "type": "text",
+        "content": "T+- Sort files by TIME, in descending time order."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05604.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

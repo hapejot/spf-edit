@@ -1,0 +1,106 @@
+{
+  "id": "S2P05422",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "DISPLAY CHARACTERISTICS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Both Foreground and Background colors are entered for each"
+      },
+      {
+        "type": "text",
+        "content": "characteristic numerically, as corresponding to the color palette"
+      },
+      {
+        "type": "text",
+        "content": "at the top of the table."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To change the Split Line to be \"Light Blue\" on \"Black\", move the"
+      },
+      {
+        "type": "text",
+        "content": "cursor to the \"Panel Split Separator\" row.  Note that the numbers"
+      },
+      {
+        "type": "text",
+        "content": "corresponding to the desired colors are 11 and 0, and change the"
+      },
+      {
+        "type": "text",
+        "content": "FOREGROUND column to 11, and BACKGROUND column to 0."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05422.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

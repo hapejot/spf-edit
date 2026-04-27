@@ -1,0 +1,115 @@
+{
+  "id": "S2R3G000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE CONVERSION PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "FILE CONVERSION"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "File conversion allows files to be copied from one file format"
+      },
+      {
+        "type": "text",
+        "content": "to another, as determined by the SOURCE and DESTINATION profile"
+      },
+      {
+        "type": "text",
+        "content": "types.  During file conversion, a file is read in based upon"
+      },
+      {
+        "type": "text",
+        "content": "its SOURCE PROFILE characteristics, and is written out based"
+      },
+      {
+        "type": "text",
+        "content": "upon its DESTINATION PROFILE characteristics."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If no PROFILE is specified, either SOURCE or DESTINATION, then"
+      },
+      {
+        "type": "text",
+        "content": "the profile characteristics are determined by the profile that"
+      },
+      {
+        "type": "text",
+        "content": "corresponds to the file's extension."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1+- For greater detail on the FILE CONVERSION function"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R3G000.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

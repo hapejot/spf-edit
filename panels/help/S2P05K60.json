@@ -1,0 +1,109 @@
+{
+  "id": "S2P05K60",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "CUSTOM KEY ASSIGNMENT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CUSTOM KEY ASSIGNMENT"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Custom keys may be assigned for non-standard keyboards that"
+      },
+      {
+        "type": "text",
+        "content": "return readable scancodes back the the PC's BIOS.  For example,"
+      },
+      {
+        "type": "text",
+        "content": "some 3270 based keyboards, which have over 120 keys, have many"
+      },
+      {
+        "type": "text",
+        "content": "keys that return scancodes that do not get interpreted as"
+      },
+      {
+        "type": "text",
+        "content": "legitimate keycodes."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Custom key definition takes place in three parts:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- Defining which key to customize"
+      },
+      {
+        "type": "text",
+        "content": "- Assigning a label to that key"
+      },
+      {
+        "type": "text",
+        "content": "- Assigning the SPF/PC value to that key"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05K60.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "id": "S2P0570A",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "PROFILE DEFINITION PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "DATA SHIFT ON CHANGE+- Indicate whether the CHANGE command should follow"
+      },
+      {
+        "type": "text",
+        "content": "the ISPF DATA SHIFT rules."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Y+ CHANGE should follow the ISPF DATA SHIFT rules."
+      },
+      {
+        "type": "text",
+        "content": "N+ CHANGE should not follow the ISPF DATA SHIFT rules."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "LINE TERMINATOR+ This item only applies to data-delimited files.  If you"
+      },
+      {
+        "type": "text",
+        "content": "open a data-delimited file, SPF/PC will read through the file until it"
+      },
+      {
+        "type": "text",
+        "content": "reaches the characters specified in this field, which indicate the end"
+      },
+      {
+        "type": "text",
+        "content": "of a record.  The options available for the record terminator are:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CR+- On input, end records on CR (Carriage Return, x'0D'). On"
+      },
+      {
+        "type": "text",
+        "content": "output, write CR at the end of each record."
+      },
+      {
+        "type": "text",
+        "content": "LF+- On input, end records on LF (Line Feed, x`0A`). On output,"
+      },
+      {
+        "type": "text",
+        "content": "write LF at end of record."
+      },
+      {
+        "type": "text",
+        "content": "CRLF+- On input, end records on CR + LF. On output, write CR + LF"
+      },
+      {
+        "type": "text",
+        "content": "at end of each record. This is the standard PC DOS ASCII file"
+      },
+      {
+        "type": "text",
+        "content": "format. It is also the SPF/PC default."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P0570A.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

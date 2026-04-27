@@ -1,0 +1,115 @@
+{
+  "id": "S2R01700",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SPF/PC GENERATED LISTINGS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC can print screen images, listings of an entire file, or listings"
+      },
+      {
+        "type": "text",
+        "content": "of a selected range of lines from a file."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The output device for all listings is determined by the settings"
+      },
+      {
+        "type": "text",
+        "content": "of the Printer Characteristics (option 0.2)."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following topics will be presented only if selected by number:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 + Print commands"
+      },
+      {
+        "type": "text",
+        "content": "2 + Printer characteristics"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2P00004"
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R01700.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "id": "S2R2A000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "EDIT allows you to create new files and modify existing files.  You may"
+      },
+      {
+        "type": "text",
+        "content": "overtype any data being displayed on the screen.  When the data does not"
+      },
+      {
+        "type": "text",
+        "content": "fit within one screen, EDIT permits you to scroll up, down, left, and right"
+      },
+      {
+        "type": "text",
+        "content": "as required."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "EDIT commands fall are described as:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PRIMARY COMMANDS+- are entered in the COMMAND area of line 2."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "LINE COMMANDS+   - are entered by overtyping the line numbers which"
+      },
+      {
+        "type": "text",
+        "content": "appear at the left-hand side of the screen."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2A000.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

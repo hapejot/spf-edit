@@ -1,0 +1,122 @@
+{
+  "id": "S2R00100",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SPF/PC UNIVERSAL COMMANDS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following commands are available from any SPF/PC panel."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 + +&&         +- Keeps commands displayed after they are executed"
+      },
+      {
+        "type": "text",
+        "content": "2 +  =           - Jumps directly to the selected panel"
+      },
+      {
+        "type": "text",
+        "content": "3 +  BACK        - Runs a system command without clearing screen"
+      },
+      {
+        "type": "text",
+        "content": "4 +  BROWSE      - Browses a file"
+      },
+      {
+        "type": "text",
+        "content": "5 +  COLOR       - Display the color scheme selection panel"
+      },
+      {
+        "type": "text",
+        "content": "6 +  CURSOR      - Moves cursor to the command field"
+      },
+      {
+        "type": "text",
+        "content": "7 +  DOWN        - Scrolls towards the bottom of data"
+      },
+      {
+        "type": "text",
+        "content": "8 +  EDIT        - Edits a file"
+      },
+      {
+        "type": "text",
+        "content": "9 +  END         - Returns to the previous panel"
+      },
+      {
+        "type": "text",
+        "content": "10 +  FSPLIT      - Creates a second full screen task"
+      },
+      {
+        "type": "text",
+        "content": "11 +  HELP        - Invokes the HELP feature"
+      },
+      {
+        "type": "text",
+        "content": "12 +  KEYBOARD    - Display keyboard configuration panels."
+      },
+      {
+        "type": "text",
+        "content": "13 +  KEYS        - Displays the PF key definitions"
+      },
+      {
+        "type": "text",
+        "content": "14 +  LEFT        - Scrolls toward the left edge of the data"
+      },
+      {
+        "type": "text",
+        "content": "15 +  LPRINT      - Changes the logical printer assignment"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For more information on a specific command, please select by number."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to list more commands)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R00100.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

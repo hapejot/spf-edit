@@ -1,0 +1,113 @@
+{
+  "id": "S2R17600",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "BROWSE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The HEX command is used to turn HEX mode on or off.  If HEX mode is on,"
+      },
+      {
+        "type": "text",
+        "content": "data is displayed in hex format underneath the standard ASCII format."
+      },
+      {
+        "type": "text",
+        "content": "The two lines of hex data are in vertical format, the first four bits of"
+      },
+      {
+        "type": "text",
+        "content": "each byte displayed above the last four bits."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "A separator line is displayed between each group of three lines to make"
+      },
+      {
+        "type": "text",
+        "content": "the display easier to read."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND  hex     +         turns on HEX mode"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND  hex off +         turns off HEX mode"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to the previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R17600.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

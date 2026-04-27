@@ -1,0 +1,111 @@
+{
+  "id": "S2R3I00A",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SUPERC PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "STD+- This option causes the last eight characters of each fixed"
+      },
+      {
+        "type": "text",
+        "content": "length record to be ignored. In assembly language and some"
+      },
+      {
+        "type": "text",
+        "content": "control type source files these columns are reserved for"
+      },
+      {
+        "type": "text",
+        "content": "sequence numbers. This option is only valid for COMPARE TYPE ="
+      },
+      {
+        "type": "text",
+        "content": "LINE."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COMPARE COLUMNS"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This field specifies the range of columns to which the comparison"
+      },
+      {
+        "type": "text",
+        "content": "applies."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "START+- The first column to which the comparison applies. Columns prior"
+      },
+      {
+        "type": "text",
+        "content": "to the start column are ignored."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "END+- The last column to which the comparison applies. Columns after"
+      },
+      {
+        "type": "text",
+        "content": "the end column are ignored."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R3I00A.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "id": "S2CHNG19",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "OPTIONAL COBOL SOURCE ANALYST",
+    "version_var": "ZSHRTVER",
+    "prefix": "CHANGES"
+  },
+  "type": "changelog",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You can now conveniently analyze COBOL source from within SPF/PC"
+      },
+      {
+        "type": "text",
+        "content": "with optional COBOL Source Analyst. With CSA you can:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "* reduce compiles by using instant syntax checking"
+      },
+      {
+        "type": "text",
+        "content": "* debug faster with auto navigation of logic paths"
+      },
+      {
+        "type": "text",
+        "content": "* automatically expand copybooks"
+      },
+      {
+        "type": "text",
+        "content": "* colorize source by COBOL language elements"
+      },
+      {
+        "type": "text",
+        "content": "* outline Data Division and Procedure Division"
+      },
+      {
+        "type": "text",
+        "content": "* display read, write, or all references to a variable"
+      },
+      {
+        "type": "text",
+        "content": "* safely rename variables"
+      },
+      {
+        "type": "text",
+        "content": "* display PERFORMs of a specific paragraph"
+      },
+      {
+        "type": "text",
+        "content": "* automatically format untidy code segments"
+      },
+      {
+        "type": "text",
+        "content": "* print reference copies of selected views"
+      },
+      {
+        "type": "text",
+        "content": "* and much more ..."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "box",
+        "style": "announcement",
+        "rows": [
+          {
+            "type": "text",
+            "content": "Shipping now. Call (800) 336-3320 for info and prices"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "assignments": {
+      "ZSEL": "UP"
+    }
+  },
+  "metadata": {
+    "source_file": "S2CHNG19.PAN",
+    "category": "changelog"
+  }
+}

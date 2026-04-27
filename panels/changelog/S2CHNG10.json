@@ -1,0 +1,109 @@
+{
+  "id": "S2CHNG10",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SCROLLABLE INPUT FIELDS",
+    "version_var": "ZSHRTVER",
+    "prefix": "CHANGES"
+  },
+  "type": "changelog",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC's Dialog Manager supports scrolling input fields, allowing"
+      },
+      {
+        "type": "text",
+        "content": "long streams of input to be accepted.  Scrolling fields accept a"
+      },
+      {
+        "type": "text",
+        "content": "maximum of 1024 characters of data.  If the input data exceeds the"
+      },
+      {
+        "type": "text",
+        "content": "width of the input field, it scrolls left as neccessary to fit."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Scrolling fields display left and right arrow symbols to indicate"
+      },
+      {
+        "type": "text",
+        "content": "that non-displayed text exists.  The SCROLL INDICATORS field on"
+      },
+      {
+        "type": "text",
+        "content": "Panel 0.1 may be changed to disable this behavior."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "By default, all primary command fields are scrollable, enabling the"
+      },
+      {
+        "type": "text",
+        "content": "entry of very long primary command stacks.  Also, all path/file"
+      },
+      {
+        "type": "text",
+        "content": "specification fields are scrollable."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Scrolling input fields are defined in panel definitions using the"
+      },
+      {
+        "type": "text",
+        "content": "field attribute \"$\"."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For further details see:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC User Guide and Reference,"
+      },
+      {
+        "type": "text",
+        "content": "Entry Field ...................Page 5-7"
+      },
+      {
+        "type": "text",
+        "content": "Attribute Section .............Page 8-6"
+      }
+    ]
+  },
+  "proc_section": {
+    "assignments": {
+      "ZSEL": "UP"
+    }
+  },
+  "metadata": {
+    "source_file": "S2CHNG10.PAN",
+    "category": "changelog"
+  }
+}

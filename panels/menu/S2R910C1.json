@@ -1,0 +1,122 @@
+{
+  "id": "S2R910C1",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "HELP PANEL INDEX - `C`",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Select from the following help panels by number:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 +- C Line Command in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "2 +- CANCEL in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "3 +- CAPS in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "4 +- CC Line Command in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "5 +- CHANGE in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "6 +- CHARSET in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "7 +- CMDNOCLR"
+      },
+      {
+        "type": "text",
+        "content": "8 +- CMS"
+      },
+      {
+        "type": "text",
+        "content": "9 +- COLS Line Command in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "10 +- COLOR"
+      },
+      {
+        "type": "text",
+        "content": "11 +- COLORMAP in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "12 +- COLUMNS COMMAND in BROWSE"
+      },
+      {
+        "type": "text",
+        "content": "13 +- COMMAND OPTION"
+      },
+      {
+        "type": "text",
+        "content": "14 +- COMMANDS AND PF KEYS"
+      },
+      {
+        "type": "text",
+        "content": "15 +- COMPARE in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "16 +- COMPLEX SEARCH PANEL"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R910C1.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "id": "S2R00190",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SPF/PC COMMAND - HELP",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Same as PF1 key.  Use this command to display help panels.  The"
+      },
+      {
+        "type": "text",
+        "content": "panel displayed depends on the current context."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "HELP"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "This command works one of three ways:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Long Message:+ If you request HELP immediately after SPF/PC displays"
+      },
+      {
+        "type": "text",
+        "content": "a short message, SPF/PC assumes you are asking for more"
+      },
+      {
+        "type": "text",
+        "content": "information about that message.  It displays additional"
+      },
+      {
+        "type": "text",
+        "content": "information in the long message area."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R00190.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

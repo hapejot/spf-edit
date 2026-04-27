@@ -1,0 +1,120 @@
+{
+  "id": "S2R30000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "UTILITIES",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The utility options are listed below.  To select a utility, enter its"
+      },
+      {
+        "type": "text",
+        "content": "number on the utility selection panel (primary option 3)."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following topics may be selected by number:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "0 + UTILITY OVERVIEW   Brief overview of each of the utility options"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "3 + MOVE/COPY UTILITY  Move or copy members or files"
+      },
+      {
+        "type": "text",
+        "content": "4 + FILE LIST UTILITY  Display or print file list information"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "A + DIRECTORY SEARCH   Build list of directories"
+      },
+      {
+        "type": "text",
+        "content": "B + FILE SEARCH        Build list of files by name pattern"
+      },
+      {
+        "type": "text",
+        "content": "C + TEXT SEARCH        Build list of files by text search"
+      },
+      {
+        "type": "text",
+        "content": "D + COMPLEX SEARCH     Build list of from multiple search criteria"
+      },
+      {
+        "type": "text",
+        "content": "E + DRIVE SEARCH       Build list of from drive list"
+      },
+      {
+        "type": "text",
+        "content": "F + SAVED LISTS        Display list of saved lists"
+      },
+      {
+        "type": "text",
+        "content": "G + FILE CONVERSION    Convert files between file formats"
+      },
+      {
+        "type": "text",
+        "content": "H + MOST RECENT EDITS  Most recently edited files"
+      },
+      {
+        "type": "text",
+        "content": "I + SUPERC             Perform file comparisons"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R30000.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

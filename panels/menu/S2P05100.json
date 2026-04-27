@@ -1,0 +1,122 @@
+{
+  "id": "S2P05100",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "0.1 TERMINAL CHARACTERISTICS PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This panel displays basic characteristics of your keyboard and display"
+      },
+      {
+        "type": "text",
+        "content": "and allows modification of some. Individual fields are explained below:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NUMBER OF PF KEYS+- The number of programmable PFKeys available."
+      },
+      {
+        "type": "text",
+        "content": "INPUT FIELD PAD+- SPF/PC always acts as if the field is null padded."
+      },
+      {
+        "type": "text",
+        "content": "USER ID+- The user ID that SPF/PC displays on the Primary Option Panel."
+      },
+      {
+        "type": "text",
+        "content": "COMMAND DELIMITER+- The character used to separate stacked commands."
+      },
+      {
+        "type": "text",
+        "content": "SCREEN LINES+- The number of lines output is displayed on."
+      },
+      {
+        "type": "text",
+        "content": "TYPEMATIC RATE+- Specifies the typematic repeat rate."
+      },
+      {
+        "type": "text",
+        "content": "TYPEMATIC DELAY+- Specifies the typematic delay."
+      },
+      {
+        "type": "text",
+        "content": "OVERTYPE CURSOR SIZE+- The vertical size of the cursor in overtype mode."
+      },
+      {
+        "type": "text",
+        "content": "INSERT CURSOR SIZE+- The vertical size of the cursor in insert mode."
+      },
+      {
+        "type": "text",
+        "content": "PERSISTENT INSERT+- Specifies whether insert mode is reset after Enter."
+      },
+      {
+        "type": "text",
+        "content": "SCROLL INDICATORS+- Specifies whether to display table arrow indicators."
+      },
+      {
+        "type": "text",
+        "content": "MOUSE CURSOR+- Specifies whether mouse is to be used or not."
+      },
+      {
+        "type": "text",
+        "content": "DISPLAY TIME/DATE+- Whether time and/or date is displayed on status line"
+      },
+      {
+        "type": "text",
+        "content": "MAXIMUM CONCURRENT TASKS- The max number of SPLITS/FSPLIT possible"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 + Display greater detail on the Terminal Characteristics Panel"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2P05100.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "id": "S2R2B000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "EDIT FILE FORMATS"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You can edit any supported SPF/PC file type.  These are"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "basically either"
+          },
+          {
+            "type": "text",
+            "content": "data delimited+and"
+          },
+          {
+            "type": "text",
+            "content": "length delimited,+ though"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "other formats are supported.  To read more about supported"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC file types, select the topic below."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following topic will be presented only if selected by number:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1+- File characteristics"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to the previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2B000.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "id": "S2PTF120",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "TERMINAL FUNCTION - [ENTER-3270]",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Perform Enter key processing on the current panel."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "[ENTER-3270]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "Enter key processing executes all active primary and line"
+      },
+      {
+        "type": "text",
+        "content": "commands, executes a panel, and positions the cursor."
+      },
+      {
+        "type": "text",
+        "content": "Under [ENTER-3270], enter key processing positions the cursor"
+      },
+      {
+        "type": "text",
+        "content": "in a manner similar to the Enter key on a 3270 emulator"
+      },
+      {
+        "type": "text",
+        "content": "terminal."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "By default, [ENTER-3270] is assigned to Right-Ctrl, Ctrl-Enter,"
+      },
+      {
+        "type": "text",
+        "content": "and the Enter-Extended key."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "See Also:"
+      },
+      {
+        "type": "text",
+        "content": "[ENTER-SPFPC]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2PTF120.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

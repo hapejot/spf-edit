@@ -1,0 +1,119 @@
+{
+  "id": "S2R3X00X",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE LIST LINE COMMAND - X",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Use this command to exclude an entry from a filelist."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "X"
+      },
+      {
+        "type": "text",
+        "content": "XX"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "Use the X command to exclude files from a file list.  Excluded files"
+      },
+      {
+        "type": "text",
+        "content": "are simply removed from the list - they are not deleted permanently."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The XX block form of the command may be used to exclude adjacent"
+      },
+      {
+        "type": "text",
+        "content": "files."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "NAME        SIZE    DATE    TIME"
+      },
+      {
+        "type": "text",
+        "content": "X  FOO.BAK    12401  01-23-91 10:56a"
+      },
+      {
+        "type": "text",
+        "content": "FOO.DOC    12433  01-25-91 10:56a"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R3X00X.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

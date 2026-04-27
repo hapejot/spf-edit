@@ -1,0 +1,113 @@
+{
+  "id": "S2R2M216",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - FIND",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Find the next occurrence of string `ABC` between columns 1 and 20:"
+      },
+      {
+        "type": "text",
+        "content": "FIND ABC 1 20"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Find next occurrence of string `one of a kind`:"
+      },
+      {
+        "type": "text",
+        "content": "FIND `one of a kind`"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Find the last occurrence of string `ABC`:"
+      },
+      {
+        "type": "text",
+        "content": "FIND ABC LAST"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Count all occurrences of `ABC`:"
+      },
+      {
+        "type": "text",
+        "content": "FIND ABC ALL"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Find the next occurrence of string `ABC` in excluded lines:"
+      },
+      {
+        "type": "text",
+        "content": "FIND ABC X"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Find the next occurrence of string `ABC` in non-excluded lines:"
+      },
+      {
+        "type": "text",
+        "content": "FIND ABC NX"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Find the first occurrence of string `ABC` from the start of the file:"
+      },
+      {
+        "type": "text",
+        "content": "FIND ABC FIRST"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2M216.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

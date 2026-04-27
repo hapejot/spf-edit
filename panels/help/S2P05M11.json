@@ -1,0 +1,112 @@
+{
+  "id": "S2P05M11",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "KEYBOARD REMAPPING",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "These panels are used to map any key on your keyboard to perform"
+      },
+      {
+        "type": "text",
+        "content": "one of the following tasks:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC COMMAND+   - Any primary or line command (ie: HELP)"
+      },
+      {
+        "type": "text",
+        "content": "maybe assigned to keys similar to PFKeys"
+      },
+      {
+        "type": "text",
+        "content": "assignments."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "TERMINAL FUNCTION+- Any terminal function (ie: [CURSOR-DOWN])"
+      },
+      {
+        "type": "text",
+        "content": "may be assigned."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "DATA CHARACTER+   - Keys may represent data characters (ie:"
+      },
+      {
+        "type": "text",
+        "content": "Ctrl-E may be assigned to \"�\")"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "DATA STRING+      - Entire strings can be assigned (ie: \"ABCD\")"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "KEYBOARD MACROS+  - Macros may record any combination of the"
+      },
+      {
+        "type": "text",
+        "content": "above types, and play them back in a similar"
+      },
+      {
+        "type": "text",
+        "content": "context."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05M11.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

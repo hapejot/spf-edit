@@ -1,0 +1,114 @@
+{
+  "id": "S2P05708",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "PROFILE DEFINITION PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "BACKUP ON SAVE+- Indicate whether a backup copy (.BAK) of the file you"
+      },
+      {
+        "type": "text",
+        "content": "are editing should be created when you SAVE it."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Y+ Create .BAK file on SAVE (or END)."
+      },
+      {
+        "type": "text",
+        "content": "N+ Do not create .BAK file on SAVE (or END)."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "OVERWRITE ORIGINAL+- Specifies whether on SAVE or END the file is to be"
+      },
+      {
+        "type": "text",
+        "content": "directly overwritten in place or written to a temp file which is"
+      },
+      {
+        "type": "text",
+        "content": "subsequently renamed.  The former choice uses less disk space, the"
+      },
+      {
+        "type": "text",
+        "content": "latter choice is safer."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Y+ Overwrite the file in place. The amount of disk space needed                                     al"
+      },
+      {
+        "type": "text",
+        "content": "to save a file in this manner is equal to its size."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "N+ Create a new temporary file, then delete the origional file"
+      },
+      {
+        "type": "text",
+        "content": "(unless backup is on), then rename the temp file to the"
+      },
+      {
+        "type": "text",
+        "content": "origional file name. The amount of disk space needed to save"
+      },
+      {
+        "type": "text",
+        "content": "the file in this manner is double its size. This method is"
+      },
+      {
+        "type": "text",
+        "content": "safer but does require more space."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05708.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

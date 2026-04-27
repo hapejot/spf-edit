@@ -1,0 +1,111 @@
+{
+  "id": "S2R2M210",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - FIND",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Searches a file for a string, word or characters."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "FIND str1 [range][NEXT ][CHARS ][X ][col1[col2]]"
+      },
+      {
+        "type": "text",
+        "content": "F                [ALL  ][PREFIX][NX]"
+      },
+      {
+        "type": "text",
+        "content": "[FIRST][SUFFIX]"
+      },
+      {
+        "type": "text",
+        "content": "[LAST ][WORD  ]"
+      },
+      {
+        "type": "text",
+        "content": "[PREV ]"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "FIND command parameters are free form and may be entered in any"
+      },
+      {
+        "type": "text",
+        "content": "order. The only exception is that col2 (if entered) must follow"
+      },
+      {
+        "type": "text",
+        "content": "col1. The str1 parm is required; all others are optional."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2M210.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

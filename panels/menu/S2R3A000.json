@@ -1,0 +1,119 @@
+{
+  "id": "S2R3A000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "DIRECTORY SEARCH PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "3.A - DIRECTORY SEARCH PANEL"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This panel allows you to search for directory type files, at one or"
+      },
+      {
+        "type": "text",
+        "content": "more levels, from a specific path origin.  The resulting select list"
+      },
+      {
+        "type": "text",
+        "content": "contains all directories at all requested levels that meet the"
+      },
+      {
+        "type": "text",
+        "content": "directory file specification criteria."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The panel fields are defined as follows:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SYSTEM CUR DIR+- Identifies the current directory. This field only"
+      },
+      {
+        "type": "text",
+        "content": "applies when the path specification does not proceed from the"
+      },
+      {
+        "type": "text",
+        "content": "root directory."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PATH+- Specifies the origin for the search and optionally constrains"
+      },
+      {
+        "type": "text",
+        "content": "conformant files to a particular file extension."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SEARCH SUBDIRECTORIES+- This field lets you specify whether the"
+      },
+      {
+        "type": "text",
+        "content": "search should be limited to the first level of the specified path"
+      },
+      {
+        "type": "text",
+        "content": "or to all levels (via recursive search)."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R3A000.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

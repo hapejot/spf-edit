@@ -1,0 +1,118 @@
+{
+  "id": "S2R2M218",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - FIND",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Find the next occurrence of word `pages` between the lines labeled"
+      },
+      {
+        "type": "text",
+        "content": ".start and .end:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "FIND pages word .start .end"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This search starts at the current cursor position and scans forward."
+      },
+      {
+        "type": "text",
+        "content": "This search is also delimited by the range, .start to .end. You must"
+      },
+      {
+        "type": "text",
+        "content": "be conscious of both of these facts, as well as the current cursor"
+      },
+      {
+        "type": "text",
+        "content": "location, in order to predict precisely how this command will work."
+      },
+      {
+        "type": "text",
+        "content": "Confusion results when the cursor resides between the two labels. In"
+      },
+      {
+        "type": "text",
+        "content": "that case, searching does not start at the first label.  Instead, it"
+      },
+      {
+        "type": "text",
+        "content": "starts at the current cursor location."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This example finds the first hyphen (-) in columns 1 to 5 between"
+      },
+      {
+        "type": "text",
+        "content": "lines labeled .E and .S, but only in those lines that are excluded."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "FIND FIRST `-` 1 5 .E .S X"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2M218.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

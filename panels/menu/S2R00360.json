@@ -1,0 +1,121 @@
+{
+  "id": "S2R00360",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - SPLIT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Initially assigned to the PF2 key.  Use this command to split"
+      },
+      {
+        "type": "text",
+        "content": "the screen into two display areas and start a second SPF/PC"
+      },
+      {
+        "type": "text",
+        "content": "task. You can also use this command to convert from full-split"
+      },
+      {
+        "type": "text",
+        "content": "mode to standard-split mode."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "SPLIT"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "Issuing SPLIT does one of two things:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- If only one task has been started, SPF/PC saves the current"
+      },
+      {
+        "type": "text",
+        "content": "panel, splits the screen at the current cursor position,"
+      },
+      {
+        "type": "text",
+        "content": "starts a second task, and makes it the active session."
+      },
+      {
+        "type": "text",
+        "content": "- If a second session has been started, SPF/PC splits the"
+      },
+      {
+        "type": "text",
+        "content": "screen at the current cursor position, and swaps to the other"
+      },
+      {
+        "type": "text",
+        "content": "session."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To swap back to the first session, enter the SWAP command (PF9)."
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R00360.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "id": "S2P05602",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE LIST OPTIONS PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CLEAR LISTS+ Indicate whether you want ISPF style audit trail of file"
+      },
+      {
+        "type": "text",
+        "content": "actions in select lists or not:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Y+- Present standard ISPF file action indicators in select"
+      },
+      {
+        "type": "text",
+        "content": "lists. For example, a deleted file is marked `*** DELETED`"
+      },
+      {
+        "type": "text",
+        "content": "N+- Do not present standard ISPF file action indicators in"
+      },
+      {
+        "type": "text",
+        "content": "select lists.  For example, a deleted file simply drops out"
+      },
+      {
+        "type": "text",
+        "content": "of the list."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CONFIRM DELETE OF FILES+ Indicate whether you want a delete"
+      },
+      {
+        "type": "text",
+        "content": "confirmation panel presented any time you delete a file from a"
+      },
+      {
+        "type": "text",
+        "content": "select list:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Y+- Present a delete confirmation panel before deleting a file."
+      },
+      {
+        "type": "text",
+        "content": "N+- Do not present a delete confirmation panel before deleting a"
+      },
+      {
+        "type": "text",
+        "content": "file."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05602.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

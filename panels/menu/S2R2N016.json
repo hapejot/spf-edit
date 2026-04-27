@@ -1,0 +1,114 @@
+{
+  "id": "S2R2N016",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "GENERAL COMMAND - SWAP",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  If you are in SPLITV mode,"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- If the second task occupies less than ten columns of the screen,"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC swaps the position and columns counts of the sessions."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- If the second task occupies more than ten columns of the screen,"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC activates the second task and moves the cursor to it,"
+      },
+      {
+        "type": "text",
+        "content": "without changing the split point."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  If you are in MVSPLIT mode, the split is at the midpoint,SPF/PC"
+      },
+      {
+        "type": "text",
+        "content": "activates the second task and moves the cursor to it, without"
+      },
+      {
+        "type": "text",
+        "content": "changing the split point."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2N016.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

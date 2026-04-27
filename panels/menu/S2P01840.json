@@ -1,0 +1,120 @@
+{
+  "id": "S2P01840",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "ERASE EOF KEY",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SPF/PC uses"
+          },
+          {
+            "type": "text",
+            "content": "Ctrl-Del+as the EOF (erase to end of field) key."
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The EOF key can be used whenever the cursor is in an unprotected"
+      },
+      {
+        "type": "text",
+        "content": "field.  It erases from the cursor location to the end of the field,"
+      },
+      {
+        "type": "text",
+        "content": "replacing all characters with blanks."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Using keyboard remapping (Panel 0.K), you may reassign the"
+      },
+      {
+        "type": "text",
+        "content": "EOF function other PFKeys or Ctrl/Alt key combinations."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to the previous panel)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2P01840.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "id": "S2R17416",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FIND STRINGS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "A character string is used to find a search argument when you wish to be"
+      },
+      {
+        "type": "text",
+        "content": "case sensitive.  Character strings may be used to override the system"
+      },
+      {
+        "type": "text",
+        "content": "option FIND/CHANGE SEARCH TYPE setting of T.  A character string is a"
+      },
+      {
+        "type": "text",
+        "content": "quoted string that is preceded or followed by the letter C."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If the system option FIND/CHANGE SEARCH TYPE is set to C, then all"
+      },
+      {
+        "type": "text",
+        "content": "searches are case sensitive by default."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Example"
+          },
+          {
+            "type": "text",
+            "content": "find c'CTC'     +  find the characters \"CTC\""
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "In the example above, the string \"CTC\" will be found , but \"ctc\","
+      },
+      {
+        "type": "text",
+        "content": "\"cTc\", and other variations will not be found."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R17416.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

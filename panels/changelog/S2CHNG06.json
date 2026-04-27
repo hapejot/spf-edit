@@ -1,0 +1,96 @@
+{
+  "id": "S2CHNG06",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "ENHANCED FILE SELECTION LISTS",
+    "version_var": "ZSHRTVER",
+    "prefix": "CHANGES"
+  },
+  "type": "changelog",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The ATTR column has been added to display file attributes."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The file name and extension are always displayed on the left."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If the list contains files from a single directory, no path is"
+      },
+      {
+        "type": "text",
+        "content": "displayed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If the list contains files from more than one directory, the path"
+      },
+      {
+        "type": "text",
+        "content": "is displayed on the right."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The new FILE LIST OPTIONS Panel 0.6, provides configurability for"
+      },
+      {
+        "type": "text",
+        "content": "list displays."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For further details see:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC User Guide and Reference,"
+      },
+      {
+        "type": "text",
+        "content": "Working With Select Lists ........ Page 6-7"
+      },
+      {
+        "type": "text",
+        "content": "File List Options ................ Page 9-23"
+      }
+    ]
+  },
+  "proc_section": {
+    "assignments": {
+      "ZSEL": "UP"
+    }
+  },
+  "metadata": {
+    "source_file": "S2CHNG06.PAN",
+    "category": "changelog"
+  }
+}

@@ -36,6 +36,7 @@ mod input;
 mod line;
 mod line_cmd;
 mod line_store;
+mod panel;
 mod prefix;
 mod screen;
 mod types;

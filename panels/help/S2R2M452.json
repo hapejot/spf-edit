@@ -1,0 +1,115 @@
+{
+  "id": "S2R2M452",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - BOUNDS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If the BOUNDS command is entered without operands, the boundaries"
+      },
+      {
+        "type": "text",
+        "content": "are set to their default columns. If numbering is set to COBOL, the"
+      },
+      {
+        "type": "text",
+        "content": "default left bound is column 7. In all other cases, the default left"
+      },
+      {
+        "type": "text",
+        "content": "bound is column 1. If numbering is set to STD, the default right"
+      },
+      {
+        "type": "text",
+        "content": "bound is 72. In all other cases, the default right bound is equal to"
+      },
+      {
+        "type": "text",
+        "content": "the maximum record length."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Column boundaries are used to limit the scope of:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- Left and right line shift commands."
+      },
+      {
+        "type": "text",
+        "content": "- Left and right line scroll commands."
+      },
+      {
+        "type": "text",
+        "content": "- FIND, CHANGE, and EXCLUDE commands."
+      },
+      {
+        "type": "text",
+        "content": "- SORT command."
+      },
+      {
+        "type": "text",
+        "content": "- TE, TS, and TF line commands."
+      },
+      {
+        "type": "text",
+        "content": "- O, OO line command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "BOUNDS allows scrolling to the bounds extents. A left scroll will"
+      },
+      {
+        "type": "text",
+        "content": "stop at the left bound, a right scroll will stop at the right bound."
+      },
+      {
+        "type": "text",
+        "content": "An additional scroll request will cause scrolling beyond the bounds."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2M452.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "id": "S2R2M812",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - DELETE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Examples"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To delete all lines that contain a non-ASCII character:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "RESET X             (make all lines visible)"
+      },
+      {
+        "type": "text",
+        "content": "EXCLUDE ALL P'.'    (exclude lines with non-ASCII)"
+      },
+      {
+        "type": "text",
+        "content": "DELETE ALL X        (delete all excluded lines)"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To delete all lines between lines labeled `.B` and `.E`:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "DELETE ALL .B .E"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2M812.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

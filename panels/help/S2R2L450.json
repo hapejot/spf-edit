@@ -1,0 +1,112 @@
+{
+  "id": "S2R2L450",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - TS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Splits a line of text at the cursor location."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "TS[number]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "Position the cursor where the line is to be split and press Enter."
+      },
+      {
+        "type": "text",
+        "content": "If a number is not specified, only one blank line will appear"
+      },
+      {
+        "type": "text",
+        "content": "between the split line segments."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If number is specified, that number of blank lines will be inserted"
+      },
+      {
+        "type": "text",
+        "content": "between the split line segments."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The text split command operates within the current bounds and leaves"
+      },
+      {
+        "type": "text",
+        "content": "data outside the bounds unchanged."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If the cursor is outside the bounds, the request is ignored."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2L450.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

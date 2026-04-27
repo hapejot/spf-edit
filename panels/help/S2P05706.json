@@ -1,0 +1,115 @@
+{
+  "id": "S2P05706",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "PROFILE DEFINITION PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For length-delimited output files, records of maximum length are"
+      },
+      {
+        "type": "text",
+        "content": "written directly to disk `as is` without delimiters. No CR/LF or EOF"
+      },
+      {
+        "type": "text",
+        "content": "characters are written."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CHARACTER SET+ Specify the character set for this file type.  Each data"
+      },
+      {
+        "type": "text",
+        "content": "character is represented by a single byte of data with a decimal"
+      },
+      {
+        "type": "text",
+        "content": "value in the range of 0 to 255. The ASCII character set is used in"
+      },
+      {
+        "type": "text",
+        "content": "most non-IBM large computer systems and virtually all small computer"
+      },
+      {
+        "type": "text",
+        "content": "systems.  The EBCDIC character set is used in all IBM S/370 systems."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "A+- Files of this type contain ASCII data characters."
+      },
+      {
+        "type": "text",
+        "content": "E+- Files of this type contain EBCDIC data characters."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SAVE ON COUNT+ Specifies whether a file being edited should be saved"
+      },
+      {
+        "type": "text",
+        "content": "after ENTER has been pressed a specific number of times.  If 0 is"
+      },
+      {
+        "type": "text",
+        "content": "specified, the file is not saved until an END or SAVE command is"
+      },
+      {
+        "type": "text",
+        "content": "processed.  If a non-zero value is specified, the edit file is saved"
+      },
+      {
+        "type": "text",
+        "content": "when ENTER has been pressed the specified number of times.  The"
+      },
+      {
+        "type": "text",
+        "content": "default is 0."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05706.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

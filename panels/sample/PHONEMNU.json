@@ -1,0 +1,143 @@
+{
+  "id": "PHONEMNU",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SAMPLE PHONE LIST",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "sample",
+  "attributes": {
+    "~": {
+      "type": "OUTPUT",
+      "intensity": "low"
+    },
+    "^": {
+      "type": "PROT",
+      "intensity": "high",
+      "attn": true
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD",
+        "scroll": {
+          "variable": "SCROLL"
+        }
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Sample PHONE List Application"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following primary commands are valid to manipulate the phone"
+      },
+      {
+        "type": "text",
+        "content": "list.  Enter any of the following commands to:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "^         ADD    + Add a new phone list entry."
+      },
+      {
+        "type": "text",
+        "content": "^         FIND   + Find a phone list entry."
+      },
+      {
+        "type": "text",
+        "content": "^         SORT   + Sort by specific column."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following line commands are valid for each specific phone list"
+      },
+      {
+        "type": "text",
+        "content": "entry.  Select an entry with:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "inline_group",
+        "fields": [
+          {
+            "type": "text",
+            "content": "E+ Edit Entry   D+ Delete Entry C+ Copy Entry"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "LAST, FIRST       COMPANY           CITY           WORK         HOME"
+      },
+      {
+        "type": "divider",
+        "style": "single"
+      }
+    ]
+  },
+  "model": {
+    "selection_field": {
+      "variable": "Z",
+      "width": 1
+    },
+    "columns": [
+      {
+        "variable": "LNAME"
+      },
+      {
+        "variable": "FNAME",
+        "width": 8
+      },
+      {
+        "variable": "COMPANY",
+        "attribute": "~",
+        "width": 17
+      },
+      {
+        "variable": "CITY",
+        "attribute": "~",
+        "width": 14
+      },
+      {
+        "variable": "PHONEW",
+        "attribute": "~",
+        "width": 12
+      },
+      {
+        "variable": "PHONEH",
+        "attribute": "~"
+      }
+    ]
+  },
+  "init": {
+    "zvars": [
+      "SCROLL",
+      "SEL"
+    ]
+  },
+  "metadata": {
+    "source_file": "PHONEMNU.PAN",
+    "category": "sample",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

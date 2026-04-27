@@ -1,0 +1,118 @@
+{
+  "id": "S2R17400",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FIND COMMAND",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The FIND command is used to find and scroll to the next occurrence of a"
+      },
+      {
+        "type": "text",
+        "content": "character string in the data being browsed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND  find xxx     +         finds the next \"xxx\""
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The cursor will be placed at the beginning of the string.  The file will"
+      },
+      {
+        "type": "text",
+        "content": "be scrolled to the line and column containing the string, if necessary."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following topics may be selected by number:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 + Specifying the search string"
+      },
+      {
+        "type": "text",
+        "content": "2 + Limiting the search to specified columns"
+      },
+      {
+        "type": "text",
+        "content": "3 + Optional parameters that control direction of search"
+      },
+      {
+        "type": "text",
+        "content": "4 + Optional parameters to limit the strings to be found"
+      },
+      {
+        "type": "text",
+        "content": "5 + Using the RFIND command"
+      },
+      {
+        "type": "text",
+        "content": "6 + Error and information messages"
+      },
+      {
+        "type": "text",
+        "content": "7 + Syntax rules when using optional parameters"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R17400.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

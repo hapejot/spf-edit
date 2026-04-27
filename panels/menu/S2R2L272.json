@@ -1,0 +1,122 @@
+{
+  "id": "S2R2L272",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - I",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If no characters (or blank) are entered on an inserted line, it is"
+      },
+      {
+        "type": "text",
+        "content": "deleted when ENTER is pressed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "000010 *  This is a dBASE III program"
+      },
+      {
+        "type": "text",
+        "content": "000011   DO CASE"
+      },
+      {
+        "type": "text",
+        "content": "I 0012       CASE action = `Q`"
+      },
+      {
+        "type": "text",
+        "content": "000013           RETURN"
+      },
+      {
+        "type": "text",
+        "content": "000014       CASE action = `1`"
+      },
+      {
+        "type": "text",
+        "content": "000015           CLEAR"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Results"
+      },
+      {
+        "type": "text",
+        "content": "000010 *  This is a dBASE III program"
+      },
+      {
+        "type": "text",
+        "content": "000011   DO CASE"
+      },
+      {
+        "type": "text",
+        "content": "000012       CASE action = `Q`"
+      },
+      {
+        "type": "text",
+        "content": "``````"
+      },
+      {
+        "type": "text",
+        "content": "000014           RETURN"
+      },
+      {
+        "type": "text",
+        "content": "000015         CASE action = `1`"
+      },
+      {
+        "type": "text",
+        "content": "000016           CLEAR"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2L272.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

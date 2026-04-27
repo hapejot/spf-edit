@@ -1,0 +1,115 @@
+{
+  "id": "S2R910I1",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "HELP PANEL INDEX - `I`, `J`, `K`",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Select from the following help panels by number:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 +- I Line Command in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "2 +- IMACRO in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "3 +- INCLUDE COMMAND in FILE SELECTION LISTS"
+      },
+      {
+        "type": "text",
+        "content": "4 +- INSERT COMMAND in FILE SELECTION LISTS"
+      },
+      {
+        "type": "text",
+        "content": "5 +- INTRODUCTION"
+      },
+      {
+        "type": "text",
+        "content": "6 +- INTRODUCTION for BROWSE"
+      },
+      {
+        "type": "text",
+        "content": "7 +- INTRODUCTION for EDIT"
+      },
+      {
+        "type": "text",
+        "content": "8 +- JUMP COMMAND, `=`"
+      },
+      {
+        "type": "text",
+        "content": "9 +- KEYS"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R910I1.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

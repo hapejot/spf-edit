@@ -16,10 +16,10 @@ Copy and Move line commands transfer lines from a source location to a destinati
 
 ### MOVE — M / MM
 
-| Form | Effect |
-|------|--------|
-| `M` | Mark a single line as move source |
-| `M`*n* | Mark *n* consecutive lines as move source |
+| Form          | Effect                                        |
+| ------------- | --------------------------------------------- |
+| `M`           | Mark a single line as move source             |
+| `M`*n*        | Mark *n* consecutive lines as move source     |
 | `MM` ... `MM` | Mark a block of lines as move source (paired) |
 
 **Difference:** Copy duplicates lines to the destination. Move removes them from the source and places them at the destination.
@@ -28,22 +28,22 @@ Copy and Move line commands transfer lines from a source location to a destinati
 
 ### AFTER — A
 
-| Form | Effect |
-|------|--------|
-| `A` | Insert copied/moved lines after this line |
+| Form   | Effect                                                          |
+| ------ | --------------------------------------------------------------- |
+| `A`    | Insert copied/moved lines after this line                       |
 | `A`*n* | Insert *n* copies of the source after this line (repeat factor) |
 
 ### BEFORE — B
 
-| Form | Effect |
-|------|--------|
-| `B` | Insert copied/moved lines before this line |
+| Form   | Effect                                           |
+| ------ | ------------------------------------------------ |
+| `B`    | Insert copied/moved lines before this line       |
 | `B`*n* | Insert *n* copies of the source before this line |
 
 ### AFTER BLOCK — AA (future)
 
-| Form | Effect |
-|------|--------|
+| Form          | Effect                                                                      |
+| ------------- | --------------------------------------------------------------------------- |
 | `AA` ... `AA` | Interspersed after: insert source after every *n* lines within the AA range |
 
 With a numeric suffix: `AA3` means insert source block after every 3 lines within the destination range.

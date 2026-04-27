@@ -1,0 +1,136 @@
+{
+  "id": "S2R33000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "MOVE/COPY UTILITY PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "3.3 - MOVE/COPY UTILITY PANEL"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "OPTIONS+ Select one of the actions in the OPTION field:"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "-"
+          },
+          {
+            "type": "text",
+            "content": "M + Moves files from one directory to another."
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "-"
+          },
+          {
+            "type": "text",
+            "content": "C + Copies files from one directory to another."
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "FROM FILE+- Used to specify the file(s) you want to move or copy."
+      },
+      {
+        "type": "text",
+        "content": "The SYSTEM FILE SPECIFICATION overrides this field."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "TO FILE+- Used to specify the destination for files you are moving"
+      },
+      {
+        "type": "text",
+        "content": "or copying.  The SYSTEM FILE SPECIFICATION overrides this field."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SYSTEM CURRENT DIRECTORY+- Displays the current directory.  This"
+      },
+      {
+        "type": "text",
+        "content": "field applies to the SYSTEM FILE SPECIFICATION only."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "FILE SPECIFICATION FROM/TO+- If you prefer operating system command"
+      },
+      {
+        "type": "text",
+        "content": "line syntax, use these fields instead of the FROM FILE / TO FILE"
+      },
+      {
+        "type": "text",
+        "content": "fields."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R33000.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

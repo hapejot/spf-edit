@@ -1,0 +1,111 @@
+{
+  "id": "S2P05402",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "DISPLAY CHARACTERISTICS PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The names and functions of color zones on this panel are"
+      },
+      {
+        "type": "text",
+        "content": "similar to the mainframe based ISPF/PDF and 3270-type"
+      },
+      {
+        "type": "text",
+        "content": "terminals.  They are defined below:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PROTECTED NORMAL+- Protected areas are used to display characters"
+      },
+      {
+        "type": "text",
+        "content": "that identify panel and display information.  The `normal,`"
+      },
+      {
+        "type": "text",
+        "content": "or low-intensity protected areas are used for such items as"
+      },
+      {
+        "type": "text",
+        "content": "the names of display and input fields, and system-generated"
+      },
+      {
+        "type": "text",
+        "content": "values in display-only fields."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PROTECTED HIGH+- The `HIGH,` or high-intensity protected areas are"
+      },
+      {
+        "type": "text",
+        "content": "used for items that define the panel format: the panel"
+      },
+      {
+        "type": "text",
+        "content": "title, the command line, SPF/PC messages, and the arrows"
+      },
+      {
+        "type": "text",
+        "content": "that mark input and display fields."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05402.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

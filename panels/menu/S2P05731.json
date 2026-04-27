@@ -1,0 +1,114 @@
+{
+  "id": "S2P05731",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "CHANGING THE DEFAULT PROFILE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CHANGING THE DEFAULT PROFILE"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Anytime a new profile is created, its configurations is brought"
+      },
+      {
+        "type": "text",
+        "content": "over from the DEFAULT profile.  The DEFAULT profile is just like"
+      },
+      {
+        "type": "text",
+        "content": "any other, and may be modified in a similar fashion."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To change the DEFAULT profile values, go to Panel 0.7, and select"
+      },
+      {
+        "type": "text",
+        "content": "the DEFAULT profile from the selection list that is displayed with"
+      },
+      {
+        "type": "text",
+        "content": "the 'S' line command.  The subsequent Profile Definition panels"
+      },
+      {
+        "type": "text",
+        "content": "will display the values of the current DEFAULT profile, and"
+      },
+      {
+        "type": "text",
+        "content": "may be changed as desired."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2P05731.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

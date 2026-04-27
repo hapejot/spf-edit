@@ -1,0 +1,117 @@
+{
+  "id": "S2R2M22A",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - CHANGE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To change the first occurrence of string 'ABC' to 'DEF' commencing"
+      },
+      {
+        "type": "text",
+        "content": "the search at the start of the file:"
+      },
+      {
+        "type": "text",
+        "content": "CHANGE abc def first"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To change all occurrences of string 'ABC' to 'XYZ':"
+      },
+      {
+        "type": "text",
+        "content": "CHANGE ABC XYZ ALL"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To change string 'ABC' to 'XYZ' only in excluded lines:"
+      },
+      {
+        "type": "text",
+        "content": "CHANGE ABC XYZ X"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To change string 'ABC' to 'XYZ' only in non-excluded lines:"
+      },
+      {
+        "type": "text",
+        "content": "CHANGE ABC XYZ NX"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To change all blanks to hyphens in columns 1"
+      },
+      {
+        "type": "text",
+        "content": "to 5, between lines labeled .B and .E, but only in excluded lines:"
+      },
+      {
+        "type": "text",
+        "content": "CHG ALL ' ' '-' 1 5 .B .E X"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2M22A.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

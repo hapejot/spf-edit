@@ -1,0 +1,117 @@
+{
+  "id": "S2R2M440",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - TABS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Enables or disables logical and hardware tabs.  Defines the logical"
+      },
+      {
+        "type": "text",
+        "content": "tab character.  All tab stops are defined with the TABS line"
+      },
+      {
+        "type": "text",
+        "content": "command.  See TABS for details."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "TABS  [ON ] [tab-character]"
+      },
+      {
+        "type": "text",
+        "content": "TAB   [OFF]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "Set tabs ON to enable logical and hardware tabs.  Set tabs OFF to"
+      },
+      {
+        "type": "text",
+        "content": "disable logical and hardware tabs.  Software tabs are always ON and"
+      },
+      {
+        "type": "text",
+        "content": "do not interact with the TABS primary command.  The tab character is"
+      },
+      {
+        "type": "text",
+        "content": "used for logical tabs only."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2M440.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

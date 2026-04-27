@@ -1,0 +1,118 @@
+{
+  "id": "S2R2M826",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - SORT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Sort full records, non-excluded lines only, in ascending order:"
+      },
+      {
+        "type": "text",
+        "content": "BOUNDS"
+      },
+      {
+        "type": "text",
+        "content": "SORT A NX"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Sort partial record, columns 30 to 45, in ascending order:"
+      },
+      {
+        "type": "text",
+        "content": "BOUNDS 30 45"
+      },
+      {
+        "type": "text",
+        "content": "SORT"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "columns 1 - 29, and 46 to end of record are not re-ordered."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Sort full records in descending order:"
+      },
+      {
+        "type": "text",
+        "content": "SORT D"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Sort full records, column 5 to right bound, in ascending order:"
+      },
+      {
+        "type": "text",
+        "content": "SORT 5"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Sort full records, column 5 to right bound, in descending order:"
+      },
+      {
+        "type": "text",
+        "content": "SORT 5 D"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2M826.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "id": "S2P05425",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "DISPLAY CHARACTERISTICS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Notes:+The Background color corresponding to \"Screen Border\" may"
+      },
+      {
+        "type": "text",
+        "content": "not be modified, since no characters are displayed on the border."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Windows users may choose to not change their Screen Border as the"
+      },
+      {
+        "type": "text",
+        "content": "results are unpredictable when displayed inside a Window."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Also, color changes do not take affect on both sides of a split"
+      },
+      {
+        "type": "text",
+        "content": "until a SWAP command is performed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "On some video adapters, the colors corresponding to 8 through 15"
+      },
+      {
+        "type": "text",
+        "content": "may cause flashing on the screen.  If flashing results, use the"
+      },
+      {
+        "type": "text",
+        "content": "solid colors from 0 to 7."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05425.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

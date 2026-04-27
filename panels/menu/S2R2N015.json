@@ -1,0 +1,117 @@
+{
+  "id": "S2R2N015",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "GENERAL COMMAND - VSPLIT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Use this command to split the screen vertically into two complete"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC sessions. The split point is determined by the cursor position."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "VSPLIT"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "Issuing VSPLIT does one of two things:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1. If only one session has been started, SPF/PC saves the current"
+      },
+      {
+        "type": "text",
+        "content": "session, splits the screen vertically at the cursor position,"
+      },
+      {
+        "type": "text",
+        "content": "starts a second session, and makes it the active session."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "2. If the second session has been started, SPF/PC splits the screen"
+      },
+      {
+        "type": "text",
+        "content": "vertically at the cursor position, and swaps to the other session."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2N015.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

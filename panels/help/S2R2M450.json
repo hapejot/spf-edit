@@ -1,0 +1,111 @@
+{
+  "id": "S2R2M450",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - BOUNDS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Sets the left and right column boundaries and saves them in the Edit"
+      },
+      {
+        "type": "text",
+        "content": "Profile."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "BOUNDS [left-column  right-column]"
+      },
+      {
+        "type": "text",
+        "content": "BNDS"
+      },
+      {
+        "type": "text",
+        "content": "BND"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "Left-column identifies the left column boundary and right-column"
+      },
+      {
+        "type": "text",
+        "content": "identifies the right column boundary. The same column cannot be"
+      },
+      {
+        "type": "text",
+        "content": "specified for both boundaries. Either column may be specified as an"
+      },
+      {
+        "type": "text",
+        "content": "asterisk (*); the existing column boundary is used."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2M450.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

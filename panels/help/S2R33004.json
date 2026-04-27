@@ -1,0 +1,109 @@
+{
+  "id": "S2R33004",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "MOVE/COPY UTILITY PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "C+- Copies files from one directory to another.  Files within"
+      },
+      {
+        "type": "text",
+        "content": "the FROM directory are copied.  Subdirectories within the FROM"
+      },
+      {
+        "type": "text",
+        "content": "directory are not copied."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "FROM FILE"
+      },
+      {
+        "type": "text",
+        "content": "Use these fields to specify the file(s) you want to move or"
+      },
+      {
+        "type": "text",
+        "content": "copy.  The SYSTEM FILE SPECIFICATION overrides this field."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "TO FILE"
+      },
+      {
+        "type": "text",
+        "content": "Use these fields to specify the destination for files you are"
+      },
+      {
+        "type": "text",
+        "content": "moving or copying.  The SYSTEM FILE SPECIFICATION overrides this"
+      },
+      {
+        "type": "text",
+        "content": "field."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R33004.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

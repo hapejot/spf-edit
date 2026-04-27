@@ -1,0 +1,115 @@
+{
+  "id": "S2R00380",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - UP",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Initially assigned to the PF7 and PgUp keys.  Use this command to"
+      },
+      {
+        "type": "text",
+        "content": "move toward the top of a file display or select list."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "UP [PAGE]"
+      },
+      {
+        "type": "text",
+        "content": "[HALF]"
+      },
+      {
+        "type": "text",
+        "content": "[CSR ]"
+      },
+      {
+        "type": "text",
+        "content": "[DATA]"
+      },
+      {
+        "type": "text",
+        "content": "[MAX ]"
+      },
+      {
+        "type": "text",
+        "content": "[nnnn]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "There are three ways to specify how much SPF/PC moves when you issue"
+      },
+      {
+        "type": "text",
+        "content": "the command:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- Issue the command without a scroll amount.  In this case the SCROLL"
+      },
+      {
+        "type": "text",
+        "content": "field determines the amount scrolled.  The SCROLL field is in the"
+      },
+      {
+        "type": "text",
+        "content": "upper right corner of the screen."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R00380.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

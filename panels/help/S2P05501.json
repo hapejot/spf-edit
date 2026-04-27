@@ -1,0 +1,109 @@
+{
+  "id": "S2P05501",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDITOR OPTIONS PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SOUND ALARM+ Indicate whether you want the alarm (beep) to sound when"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC issues an error message:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Y+- SPF/PC will beep when it issues an error message."
+      },
+      {
+        "type": "text",
+        "content": "N+- SPF/PC will not beep when it issues an error message."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "VERTICAL SCROLL WITH CURSOR+ Indicate whether you want your cursor to"
+      },
+      {
+        "type": "text",
+        "content": "cause vertical scrolling:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Y+- SPF/PC will scroll up or down by one when the cursor reaches"
+      },
+      {
+        "type": "text",
+        "content": "the top or bottom of the screen."
+      },
+      {
+        "type": "text",
+        "content": "N+- The cursor will wrap to the opposite edge when it reaches"
+      },
+      {
+        "type": "text",
+        "content": "the top or bottom of the screen."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05501.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

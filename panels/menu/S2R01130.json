@@ -1,0 +1,116 @@
+{
+  "id": "S2R01130",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE SELECTION LISTS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "A file selection list is a list of files in a directory.  It is"
+      },
+      {
+        "type": "text",
+        "content": "displayed when a file name containing a wildcard character (* or ?) is"
+      },
+      {
+        "type": "text",
+        "content": "entered on an Entry panel for Browse, Edit, or File Utilities."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To exit from a file selection list, enter the END command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following topics may be selected by number:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 + SCROLLING                  View information off screen"
+      },
+      {
+        "type": "text",
+        "content": "2 + LOCATE COMMAND             Quickly jump to a specific filename"
+      },
+      {
+        "type": "text",
+        "content": "3 + SELECT COMMAND             Select a file to operate on"
+      },
+      {
+        "type": "text",
+        "content": "4 + SINGLE FILE SELECTION      Picking a specific file to work on"
+      },
+      {
+        "type": "text",
+        "content": "5 + MULTIPLE FILE SELECTION    Performing many operations simultaneously"
+      },
+      {
+        "type": "text",
+        "content": "6 + SEARCH PRIMARY COMMAND     Show only files that contain a subset"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R01130.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

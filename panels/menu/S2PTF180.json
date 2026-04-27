@@ -1,0 +1,122 @@
+{
+  "id": "S2PTF180",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "TERMINAL FUNCTION - [SCROLL [nnn]]",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "On screens where it is appropriate, scroll the screen left/"
+      },
+      {
+        "type": "text",
+        "content": "up/down/right nnn rows/columns."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "[SCROLL-LEFT  [nnn]]"
+      },
+      {
+        "type": "text",
+        "content": "-RIGHT"
+      },
+      {
+        "type": "text",
+        "content": "-UP"
+      },
+      {
+        "type": "text",
+        "content": "-DOWN"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "In the editor and in file selection lists, scrolls the screen"
+      },
+      {
+        "type": "text",
+        "content": "up, down, left, and right the value displayed in the SCROLL"
+      },
+      {
+        "type": "text",
+        "content": "field to the right of the primary command line.  If [nnn]"
+      },
+      {
+        "type": "text",
+        "content": "is specified, scroll the screen <nnn> rows or columns."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If the SCROLL field contains: PAGE, scroll one screen worth;"
+      },
+      {
+        "type": "text",
+        "content": "HALF, scroll a half screen; CSR, scroll to whereever the cursor"
+      },
+      {
+        "type": "text",
+        "content": "is positioned; ###, scroll <###> rows/columns; MAX, scroll"
+      },
+      {
+        "type": "text",
+        "content": "to the exteme of the list/file."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2PTF180.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

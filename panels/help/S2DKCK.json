@@ -1,0 +1,90 @@
+{
+  "id": "S2DKCK",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "CUSTOM KEY DEFINITION",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PRESS THE CUSTOM KEY TO BE DEFINED.+IF SPF RECOGNIZES THE KEY, THE"
+      },
+      {
+        "type": "text",
+        "content": "NAME WILL BE DISPLAYED BELOW. OTHERWISE \"CUSTOM-#####\" WILL BE"
+      },
+      {
+        "type": "text",
+        "content": "ASSIGNED."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "KEY NAME:"
+          },
+          {
+            "type": "output",
+            "variable": "KEYNAME"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "+PRESS"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+TO ACCEPT THE KEY NAME."
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NOTE:+CUSTOM KEY DEFINITION SHOULD BE USED TO DEFINE KEYS NOT"
+      },
+      {
+        "type": "text",
+        "content": "SPECIFIED IN STANDARD MAPPING PANELS. IF SPF/PC BEEPS WHEN THE KEY"
+      },
+      {
+        "type": "text",
+        "content": "IS PRESSED, THE KEY MUST BE MODIFIED IN ONE OF THE STANDARD PANELS."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": ")disp"
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DKCK.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

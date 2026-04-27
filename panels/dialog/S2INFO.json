@@ -1,0 +1,194 @@
+{
+  "id": "S2INFO",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SYSTEM ENVIRONMENT",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "dialog",
+  "attributes": {
+    "^": {
+      "type": "PROT",
+      "intensity": "high",
+      "attn": true
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "zcmd"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "OPERATING SYSTEM           : +"
+          },
+          {
+            "type": "output",
+            "variable": "OSVER"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "VIDEO ADAPTER              : +"
+          },
+          {
+            "type": "output",
+            "variable": "VAdapter"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "VIDEO DIMENSIONS           : +"
+          },
+          {
+            "type": "output",
+            "variable": "ZPHYMAXW"
+          },
+          {
+            "type": "text",
+            "content": "x"
+          },
+          {
+            "type": "output",
+            "variable": "ZPHYMAXD"
+          },
+          {
+            "type": "text",
+            "content": "Cols/Rows"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "VIDEO ADAPTER MODE ID      : +"
+          },
+          {
+            "type": "output",
+            "variable": "VAdMode"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "EXECUTABLE FILE PATH       : +"
+          },
+          {
+            "type": "output",
+            "variable": "ZEXEPATH"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "STARTUP PATH               : +"
+          },
+          {
+            "type": "output",
+            "variable": "ZSTRTPTH"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PROFILE SEARCH PATH        : +"
+          },
+          {
+            "type": "output",
+            "variable": "ZSPFPATH"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CURRENT SYSTEM DIRECTORY   : +"
+          },
+          {
+            "type": "output",
+            "variable": "ZCURDIR"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "MOUSE STATUS               : +"
+          },
+          {
+            "type": "output",
+            "variable": "MouStat"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Enter"
+          },
+          {
+            "type": "output",
+            "variable": "END",
+            "attribute": "^"
+          },
+          {
+            "type": "text",
+            "content": "+command to return to primary option panel."
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2INFO.PAN",
+    "category": "dialog",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

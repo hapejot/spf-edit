@@ -1,0 +1,139 @@
+{
+  "id": "S2R2L000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "EDIT LINE COMMANDS"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Line commands are edit commands entered directly on the line that they"
+      },
+      {
+        "type": "text",
+        "content": "will affect, by overtyping the sequence number at the left-hand side of"
+      },
+      {
+        "type": "text",
+        "content": "the screen."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "In the example to the right, two      ╔"
+      },
+      {
+        "type": "text",
+        "content": "line commands have been entered.      ║ EDIT  C:\\TEST\\SAMPLE.SRC"
+      },
+      {
+        "type": "text",
+        "content": "║ COMMAND"
+      },
+      {
+        "type": "text",
+        "content": "A D (delete) command has been         ║ 000700      IF FLAG = 1 THEN"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "entered on line 800,"
+          },
+          {
+            "type": "text",
+            "content": "+║"
+          },
+          {
+            "type": "text",
+            "content": "d+0800        NUL = WRITEPROG()"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "║ 000900      ELSE"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "while an R (repeat) command is"
+          },
+          {
+            "type": "text",
+            "content": "+║"
+          },
+          {
+            "type": "text",
+            "content": "r+1000        FLAG = FLAG + 1"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "on line 1000.                         ║ 001100      END"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Like all SPF/PC commands, these commands are executed when the ENTER"
+      },
+      {
+        "type": "text",
+        "content": "key is pressed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue to next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2L000.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

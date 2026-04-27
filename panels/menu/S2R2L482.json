@@ -1,0 +1,155 @@
+{
+  "id": "S2R2L482",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - X",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "000010 /*  This is a C program    */"
+      },
+      {
+        "type": "text",
+        "content": "000011 main() {"
+      },
+      {
+        "type": "text",
+        "content": "X 0012   int  sum,x,x;"
+      },
+      {
+        "type": "text",
+        "content": "000013   x = 20; y = 30;"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "000014   printf(`The difference of"
+          },
+          {
+            "type": "text",
+            "content": "d and"
+          },
+          {
+            "type": "text",
+            "content": "d ="
+          },
+          {
+            "type": "text",
+            "content": "d`,"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "000015        x, y, x - y);"
+      },
+      {
+        "type": "text",
+        "content": "000016 }"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Results"
+      },
+      {
+        "type": "text",
+        "content": "000010 /*  This is a C program    */"
+      },
+      {
+        "type": "text",
+        "content": "000011 main() {"
+      },
+      {
+        "type": "text",
+        "content": "- - -  - - - - - - - 00001 LINE(S) NOT DISPLAYED"
+      },
+      {
+        "type": "text",
+        "content": "000013   x = 20; y = 30;"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "000014   printf(`The difference of"
+          },
+          {
+            "type": "text",
+            "content": "d and"
+          },
+          {
+            "type": "text",
+            "content": "d ="
+          },
+          {
+            "type": "text",
+            "content": "d`,"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "000015        x, y, x - y);"
+      },
+      {
+        "type": "text",
+        "content": "000016 }"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2L482.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

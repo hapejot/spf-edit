@@ -1,0 +1,239 @@
+{
+  "id": "S2DOPATH",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SEARCH PATH LISTINGS",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "dialog",
+  "attributes": {
+    "^": {
+      "type": "INPUT",
+      "intensity": "high",
+      "caps": false,
+      "scroll": true,
+      "justification": "left"
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "Zcmd"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "DEFAULT SEARCH PATH: (from SPF4PATH or SPFPATH"
+          },
+          {
+            "type": "output",
+            "variable": "ZOS"
+          },
+          {
+            "type": "text",
+            "content": "environment variable)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "&"
+          },
+          {
+            "type": "output",
+            "variable": "ZSPFPATH"
+          },
+          {
+            "type": "text",
+            "content": "+:"
+          },
+          {
+            "type": "output",
+            "variable": "ZSPFPATH"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "EXECUTABLE PATH:     (where SPFPC executable is located)"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "&"
+          },
+          {
+            "type": "output",
+            "variable": "ZEXEPATH"
+          },
+          {
+            "type": "text",
+            "content": "+:"
+          },
+          {
+            "type": "output",
+            "variable": "ZEXEPATH"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "GENERAL PROFILE, TABLE, AND KEYBOARD SEARCH PATH:"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PRESET   :"
+          },
+          {
+            "type": "output",
+            "variable": "ZEXEPATH"
+          },
+          {
+            "type": "text",
+            "content": ".PROFILES"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CUSTOM"
+          },
+          {
+            "type": "input",
+            "variable": "ZPRFPATH",
+            "attribute": "^",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "MACRO AND COMMAND PROCEDURE SEARCH PATH:"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PRESET   :"
+          },
+          {
+            "type": "output",
+            "variable": "ZEXEPATH"
+          },
+          {
+            "type": "text",
+            "content": ".REXX"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CUSTOM"
+          },
+          {
+            "type": "input",
+            "variable": "ZMACPATH",
+            "attribute": "^",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PANEL AND MESSAGE SEARCH PATH:"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PRESET   :"
+          },
+          {
+            "type": "output",
+            "variable": "ZEXEPATH"
+          },
+          {
+            "type": "text",
+            "content": ".PAN;"
+          },
+          {
+            "type": "output",
+            "variable": "ZEXEPATH"
+          },
+          {
+            "type": "text",
+            "content": ".PAN\\CHANGE;"
+          },
+          {
+            "type": "output",
+            "variable": "ZEXEPATH"
+          },
+          {
+            "type": "text",
+            "content": ".PAN\\HELP"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CUSTOM"
+          },
+          {
+            "type": "input",
+            "variable": "ZPANPATH",
+            "attribute": "^",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2P05800"
+  },
+  "metadata": {
+    "source_file": "S2DOPATH.PAN",
+    "category": "dialog",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

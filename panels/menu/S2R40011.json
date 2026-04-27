@@ -1,0 +1,129 @@
+{
+  "id": "S2R40011",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FOREGROUND PANEL MODIFICATION",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PROGRAM+- Specify the complete path and program name to be executed"
+      },
+      {
+        "type": "text",
+        "content": "when this option is selected.  It is advisable to include the"
+      },
+      {
+        "type": "text",
+        "content": "file extension, in order to differentiate CMD files from EXE"
+      },
+      {
+        "type": "text",
+        "content": "files, etc."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PARMS+- The PARMS field may be used to control operation of the"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "specified program.  The &"
+          },
+          {
+            "type": "output",
+            "variable": "ZDSN"
+          },
+          {
+            "type": "text",
+            "content": "system variable contains the"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "name of the last file edited.  It may be used, say, to pass"
+      },
+      {
+        "type": "text",
+        "content": "a source-file name to a compiler."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "WORKING DIRECTORY+- This optional item allows you to temporarily"
+      },
+      {
+        "type": "text",
+        "content": "change the current directory while executing the program"
+      },
+      {
+        "type": "text",
+        "content": "specified."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R40011.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

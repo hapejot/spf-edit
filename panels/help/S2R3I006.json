@@ -1,0 +1,113 @@
+{
+  "id": "S2R3I006",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SUPERC PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CHANGE+- This form provides the same data as the DELTA form with the"
+      },
+      {
+        "type": "text",
+        "content": "addition of up to ten matching lines before and after each"
+      },
+      {
+        "type": "text",
+        "content": "differences section."
+      },
+      {
+        "type": "text",
+        "content": "LONG+- Lists the entire new file with all differences noted and a                                      ai"
+      },
+      {
+        "type": "text",
+        "content": "summary section. This is the most detailed level of reporting"
+      },
+      {
+        "type": "text",
+        "content": "available."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "OUTPUT"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This specifies the report is to be sent."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "BROWSE+- The report is placed in a temporary file SUPERC.TMP and BROWSE"
+      },
+      {
+        "type": "text",
+        "content": "in invoked on that file. When you exit from BROWSE the temporary"
+      },
+      {
+        "type": "text",
+        "content": "file is deleted."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PRINTER+- The report is sent to the current logical printer. See Print"
+      },
+      {
+        "type": "text",
+        "content": "Setup Option 0.2 for details on selecting and setting up logical"
+      },
+      {
+        "type": "text",
+        "content": "printers."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R3I006.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

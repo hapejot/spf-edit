@@ -1,0 +1,649 @@
+{
+  "id": "S2DOKY12",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "PFKEY DEFINITIONS ─ &Pgroup1 KEYS",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "dialog",
+  "attributes": {
+    "#": {
+      "type": "INPUT",
+      "intensity": "high",
+      "caps": false,
+      "justification": "left"
+    },
+    "=": {
+      "type": "INPUT",
+      "intensity": "high",
+      "caps": false,
+      "scroll": true,
+      "justification": "left"
+    },
+    "^": {
+      "type": "PROT",
+      "intensity": "high",
+      "attn": true
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "NUMBER OF PF KEYS:"
+          },
+          {
+            "type": "output",
+            "variable": "Zkeys"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "output",
+            "variable": "P1"
+          },
+          {
+            "type": "text",
+            "content": "+"
+          },
+          {
+            "type": "output",
+            "variable": "PGR3"
+          },
+          {
+            "type": "text",
+            "content": "F1"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "attribute": "=",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "output",
+            "variable": "P2"
+          },
+          {
+            "type": "text",
+            "content": "+"
+          },
+          {
+            "type": "output",
+            "variable": "PGR3"
+          },
+          {
+            "type": "text",
+            "content": "F2"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "attribute": "=",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "output",
+            "variable": "P3"
+          },
+          {
+            "type": "text",
+            "content": "+"
+          },
+          {
+            "type": "output",
+            "variable": "PGR3"
+          },
+          {
+            "type": "text",
+            "content": "F3"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "attribute": "=",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "output",
+            "variable": "P4"
+          },
+          {
+            "type": "text",
+            "content": "+"
+          },
+          {
+            "type": "output",
+            "variable": "PGR3"
+          },
+          {
+            "type": "text",
+            "content": "F4"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "attribute": "=",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "output",
+            "variable": "P5"
+          },
+          {
+            "type": "text",
+            "content": "+"
+          },
+          {
+            "type": "output",
+            "variable": "PGR3"
+          },
+          {
+            "type": "text",
+            "content": "F5"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "attribute": "=",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "output",
+            "variable": "P6"
+          },
+          {
+            "type": "text",
+            "content": "+"
+          },
+          {
+            "type": "output",
+            "variable": "PGR3"
+          },
+          {
+            "type": "text",
+            "content": "F6"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "attribute": "=",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "output",
+            "variable": "P7"
+          },
+          {
+            "type": "text",
+            "content": "+"
+          },
+          {
+            "type": "output",
+            "variable": "PGR3"
+          },
+          {
+            "type": "text",
+            "content": "F7"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "attribute": "=",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "output",
+            "variable": "P8"
+          },
+          {
+            "type": "text",
+            "content": "+"
+          },
+          {
+            "type": "output",
+            "variable": "PGR3"
+          },
+          {
+            "type": "text",
+            "content": "F8"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "attribute": "=",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "output",
+            "variable": "P9"
+          },
+          {
+            "type": "text",
+            "content": "+"
+          },
+          {
+            "type": "output",
+            "variable": "PGR3"
+          },
+          {
+            "type": "text",
+            "content": "F9"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "attribute": "=",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "output",
+            "variable": "P10"
+          },
+          {
+            "type": "text",
+            "content": "+"
+          },
+          {
+            "type": "output",
+            "variable": "PGR3"
+          },
+          {
+            "type": "text",
+            "content": "F10"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "attribute": "=",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "output",
+            "variable": "P11"
+          },
+          {
+            "type": "text",
+            "content": "+"
+          },
+          {
+            "type": "output",
+            "variable": "PGR3"
+          },
+          {
+            "type": "text",
+            "content": "F11"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "attribute": "=",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "output",
+            "variable": "P12"
+          },
+          {
+            "type": "text",
+            "content": "+"
+          },
+          {
+            "type": "output",
+            "variable": "PGR3"
+          },
+          {
+            "type": "text",
+            "content": "F12"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "attribute": "=",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "output",
+            "variable": "P1"
+          },
+          {
+            "type": "text",
+            "content": "LABEL"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "attribute": "#",
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+"
+          },
+          {
+            "type": "output",
+            "variable": "P2"
+          },
+          {
+            "type": "text",
+            "content": "LABEL"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "attribute": "#",
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+"
+          },
+          {
+            "type": "output",
+            "variable": "P3"
+          },
+          {
+            "type": "text",
+            "content": "LABEL"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "attribute": "#",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "output",
+            "variable": "P4"
+          },
+          {
+            "type": "text",
+            "content": "LABEL"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "attribute": "#",
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+"
+          },
+          {
+            "type": "output",
+            "variable": "P5"
+          },
+          {
+            "type": "text",
+            "content": "LABEL"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "attribute": "#",
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+"
+          },
+          {
+            "type": "output",
+            "variable": "P6"
+          },
+          {
+            "type": "text",
+            "content": "LABEL"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "attribute": "#",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "output",
+            "variable": "P7"
+          },
+          {
+            "type": "text",
+            "content": "LABEL"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "attribute": "#",
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+"
+          },
+          {
+            "type": "output",
+            "variable": "P8"
+          },
+          {
+            "type": "text",
+            "content": "LABEL"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "attribute": "#",
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+"
+          },
+          {
+            "type": "output",
+            "variable": "P9"
+          },
+          {
+            "type": "text",
+            "content": "LABEL"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "attribute": "#",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "output",
+            "variable": "P10"
+          },
+          {
+            "type": "text",
+            "content": "LABEL"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "attribute": "#",
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+"
+          },
+          {
+            "type": "output",
+            "variable": "P11"
+          },
+          {
+            "type": "text",
+            "content": "LABEL"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "attribute": "#",
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+"
+          },
+          {
+            "type": "output",
+            "variable": "P12"
+          },
+          {
+            "type": "text",
+            "content": "LABEL"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "attribute": "#",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Press"
+          },
+          {
+            "type": "output",
+            "variable": "ENTER",
+            "attribute": "^"
+          },
+          {
+            "type": "text",
+            "content": "+key to display"
+          },
+          {
+            "type": "output",
+            "variable": "Pgroup2"
+          },
+          {
+            "type": "text",
+            "content": "keys. +Enter"
+          },
+          {
+            "type": "output",
+            "variable": "END",
+            "attribute": "^"
+          },
+          {
+            "type": "text",
+            "content": "+command to exit."
+          }
+        ]
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2P05300"
+  },
+  "metadata": {
+    "source_file": "S2DOKY12.PAN",
+    "category": "dialog",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

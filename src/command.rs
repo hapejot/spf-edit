@@ -64,6 +64,8 @@ pub enum PrimaryCommand {
     Number(OnOff),
     Nulls(OnOff),
     Caps(OnOff),
+    /// Display a panel by ID.
+    Panel(String),
 }
 
 /// Result of executing a command.
@@ -78,6 +80,8 @@ pub struct CommandResult {
     pub scroll_left: Option<usize>,
     pub scroll_right: Option<usize>,
     pub toggle_cols: bool,
+    /// Panel to display (if set, editor should invoke panel manager).
+    pub show_panel: Option<String>,
 }
 
 impl CommandResult {
@@ -93,6 +97,7 @@ impl CommandResult {
             scroll_left: None,
             scroll_right: None,
             toggle_cols: false,
+            show_panel: None,
         }
     }
 
@@ -186,6 +191,12 @@ pub fn parse_command(input: &str) -> Result<PrimaryCommand, String> {
     }
     if verb == "CAPS" {
         return parse_onoff_command(args, "CAPS").map(PrimaryCommand::Caps);
+    }
+    if matches_cmd(&verb, "PANEL", 3) {
+        if args.is_empty() {
+            return Err("PANEL requires a panel name".to_string());
+        }
+        return Ok(PrimaryCommand::Panel(args.to_uppercase()));
     }
 
     Err(format!("Unknown command: {verb}"))
@@ -540,6 +551,12 @@ pub fn execute_command(
             buffer.caps_mode = matches!(onoff, OnOff::On);
             let msg = if buffer.caps_mode { "CAPS ON" } else { "CAPS OFF" };
             CommandResult::info(msg)
+        }
+
+        PrimaryCommand::Panel(panel_id) => {
+            let mut r = CommandResult::none();
+            r.show_panel = Some(panel_id.clone());
+            r
         }
     }
 }

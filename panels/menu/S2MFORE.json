@@ -1,0 +1,129 @@
+{
+  "id": "S2MFORE",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FOREGROUND SELECTION PANEL",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "menu",
+  "attributes": {
+    "~": {
+      "type": "OUTPUT",
+      "intensity": "low"
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "zcmd",
+        "scroll": {
+          "variable": "SCROLL"
+        }
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CURRENT DIR:"
+          },
+          {
+            "type": "output",
+            "variable": "ZcurDir",
+            "attribute": "~"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "ZDSN:"
+          },
+          {
+            "type": "output",
+            "variable": "ZDSN",
+            "attribute": "~"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following line commands are valid for the list below:"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "S+- Select"
+          },
+          {
+            "type": "text",
+            "content": "E+- Edit"
+          },
+          {
+            "type": "text",
+            "content": "D+- Delete"
+          },
+          {
+            "type": "text",
+            "content": "C+- Copy"
+          },
+          {
+            "type": "text",
+            "content": "R+- Rename"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NAME      APPLICATION DESCRIPTION"
+      },
+      {
+        "type": "divider",
+        "style": "single"
+      }
+    ]
+  },
+  "model": {
+    "selection_field": {
+      "variable": "Z",
+      "width": 1
+    },
+    "columns": [
+      {
+        "variable": "UAPPNAME",
+        "attribute": "~",
+        "width": 11
+      },
+      {
+        "variable": "UAPPDESC",
+        "attribute": "~"
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2R40000",
+    "zvars": [
+      "SCROLL",
+      "SEL"
+    ]
+  },
+  "metadata": {
+    "source_file": "S2MFORE.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "id": "S2P05701",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "PROFILE DEFINITION PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PROFILE DEFINITION PANEL"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following fields allow you to define input and output formats"
+      },
+      {
+        "type": "text",
+        "content": "for files with extensions that match the profile name."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PROFILE NAME+- The name of the profile.  This name must match an"
+      },
+      {
+        "type": "text",
+        "content": "existing file extension if it is to be applied automatically when a"
+      },
+      {
+        "type": "text",
+        "content": "file of that type is loaded.  Names that do not exactly match a"
+      },
+      {
+        "type": "text",
+        "content": "particular file extension may be applied by filling in the PROFILE"
+      },
+      {
+        "type": "text",
+        "content": "field of the EDIT ENTRY PANEL.  For reference, FAT file systems"
+      },
+      {
+        "type": "text",
+        "content": "limit file extensions to three characters; HPFS file systems have no"
+      },
+      {
+        "type": "text",
+        "content": "restriction on file extension length."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "RECORD FORMAT+ This field indicates the input record format."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "D (DATA-DELIMITED)+- This is the standard file format.  It is"
+      },
+      {
+        "type": "text",
+        "content": "also the SPF/PC default. The input file will be read and parsed"
+      },
+      {
+        "type": "text",
+        "content": "into logical records at CR/LF (or other specified) record"
+      },
+      {
+        "type": "text",
+        "content": "terminator boundaries."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05701.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

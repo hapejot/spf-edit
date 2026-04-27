@@ -1,0 +1,114 @@
+{
+  "id": "S2R2M610",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - CREATE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Creates a new file using all or part of the file being edited."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "CREATE [filename] [range]"
+      },
+      {
+        "type": "text",
+        "content": "CRE"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "If filename is specified, the file is created in the same drive and"
+      },
+      {
+        "type": "text",
+        "content": "subdirectory as the current file.  If filename is not specified, a"
+      },
+      {
+        "type": "text",
+        "content": "file-specification menu is presented. On this menu, you can specify"
+      },
+      {
+        "type": "text",
+        "content": "any drive and subdirectory."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If the menu is presented, the file to be created is specified in"
+      },
+      {
+        "type": "text",
+        "content": "either SPF/PC FILE DEFINITION or FILE NAME. See FILENAMES for an"
+      },
+      {
+        "type": "text",
+        "content": "explanation of how this is done."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Using wild-card characters (`*` and `?`) in the file specification"
+      },
+      {
+        "type": "text",
+        "content": "is not valid."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2M610.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

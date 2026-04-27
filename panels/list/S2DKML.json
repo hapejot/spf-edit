@@ -1,0 +1,90 @@
+{
+  "id": "S2DKML",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "KEYBOARD MACROS",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "list",
+  "attributes": {
+    "#": {
+      "type": "OUTPUT",
+      "intensity": "low"
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD",
+        "scroll": {
+          "variable": "SCROLL"
+        }
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following line commands are valid for the list below:"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "K+- Assign to key"
+          },
+          {
+            "type": "text",
+            "content": "D+- Delete key macro"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "MACRO NAME   SIZE  DESCRIPTION"
+      },
+      {
+        "type": "divider",
+        "style": "single"
+      }
+    ]
+  },
+  "model": {
+    "selection_field": {
+      "variable": "Z",
+      "width": 1
+    },
+    "columns": [
+      {
+        "variable": "MACNAME",
+        "attribute": "#"
+      },
+      {
+        "variable": "MACSIZE",
+        "attribute": "#"
+      },
+      {
+        "variable": "MACDESC",
+        "attribute": "#",
+        "width": 54
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2P05M00",
+    "zvars": [
+      "SCROLL",
+      "SEL"
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DKML.PAN",
+    "category": "list",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

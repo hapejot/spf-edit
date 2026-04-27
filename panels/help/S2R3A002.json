@@ -1,0 +1,116 @@
+{
+  "id": "S2R3A002",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "DIRECTORY SEARCH PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PATH"
+      },
+      {
+        "type": "text",
+        "content": "Specifies the origin for the search and optionally constrains"
+      },
+      {
+        "type": "text",
+        "content": "conformant files to a particular file extension."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SEARCH SUBDIRECTORIES"
+      },
+      {
+        "type": "text",
+        "content": "This field lets you specify whether the search should be limited"
+      },
+      {
+        "type": "text",
+        "content": "to the first level of the specified path or to all levels (via"
+      },
+      {
+        "type": "text",
+        "content": "recursive search).  For example, a directory structure like:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF             (super directory for SPF project)"
+      },
+      {
+        "type": "text",
+        "content": "+- DOC         (super directory for documentation)"
+      },
+      {
+        "type": "text",
+        "content": "|   +- TEXT    (directory for text files)"
+      },
+      {
+        "type": "text",
+        "content": "|   +- SCREENS (directory for raw images)"
+      },
+      {
+        "type": "text",
+        "content": "|   +- CHARTS  (directory for annotated images)"
+      },
+      {
+        "type": "text",
+        "content": "|"
+      },
+      {
+        "type": "text",
+        "content": "+- SRC         (super directory for program source files)"
+      },
+      {
+        "type": "text",
+        "content": "+- EDIT    (directory for editor source files)"
+      },
+      {
+        "type": "text",
+        "content": "+- DM      (directory for dialog manager source files)"
+      },
+      {
+        "type": "text",
+        "content": "+- TOOLS   (directory for tools source files)"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R3A002.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "id": "S2P01422",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SCROLL AMOUNT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For scrolling purposes, a \"page\" is the amount of data currently visible"
+      },
+      {
+        "type": "text",
+        "content": "on the logical screen.  In split screen mode, for example, a BROWSE"
+      },
+      {
+        "type": "text",
+        "content": "display might have 12 lines by 80 columns of scrollable data.  In this"
+      },
+      {
+        "type": "text",
+        "content": "case, a scroll amount of HALF would scroll up or down by 6 lines, or"
+      },
+      {
+        "type": "text",
+        "content": "left or right by 40 columns."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You can temporarily override the scroll amount, without changing the"
+      },
+      {
+        "type": "text",
+        "content": "scroll amount field, in either of two ways:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Enter an amount as part of the scroll command, e.g:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND  down 5+   (and press ENTER key)"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Type a scroll amount in the COMMAND/OPTION field, and then press a"
+      },
+      {
+        "type": "text",
+        "content": "scroll PF key rather than pressing ENTER, e.g.:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND  5+       (and press DOWN PF key)"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2P01422.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

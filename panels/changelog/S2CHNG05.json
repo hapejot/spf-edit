@@ -1,0 +1,105 @@
+{
+  "id": "S2CHNG05",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "NEW SPLIT MODES",
+    "version_var": "ZSHRTVER",
+    "prefix": "CHANGES"
+  },
+  "type": "changelog",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPLIT"
+      },
+      {
+        "type": "text",
+        "content": "Works as before (same as mainframe)."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPLITV"
+      },
+      {
+        "type": "text",
+        "content": "Splits the screen vertically at the mid-point regardless of the"
+      },
+      {
+        "type": "text",
+        "content": "current cursor position (same as mainframe)."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "FSPLIT"
+      },
+      {
+        "type": "text",
+        "content": "Now offers unlimited full screen sessions. Each session is a"
+      },
+      {
+        "type": "text",
+        "content": "complete copy of SPF/PC and can itself be further split either"
+      },
+      {
+        "type": "text",
+        "content": "horizontally or vertically."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "VSPLIT"
+      },
+      {
+        "type": "text",
+        "content": "Splits the screen vertically at the current cursor position.  A"
+      },
+      {
+        "type": "text",
+        "content": "minimum of 10 columns of width per session is maintained."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For further details see:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC User Guide and Reference,"
+      },
+      {
+        "type": "text",
+        "content": "...................... Pages 5-16, 5-40, 5-53, 5-54, 5-58"
+      }
+    ]
+  },
+  "proc_section": {
+    "assignments": {
+      "ZSEL": "UP"
+    }
+  },
+  "metadata": {
+    "source_file": "S2CHNG05.PAN",
+    "category": "changelog"
+  }
+}

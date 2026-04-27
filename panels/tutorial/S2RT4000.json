@@ -1,0 +1,110 @@
+{
+  "id": "S2RT4000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "DIALOG TEST",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "tutorial",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "TESTING TABLES"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "In the normal course of dialog development, tables are created,"
+      },
+      {
+        "type": "text",
+        "content": "modified and and displayed in panels. To display or alter a table,"
+      },
+      {
+        "type": "text",
+        "content": "select Dialog Test Option 3."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Table Test presents a select list of all disk-based tables. Tables"
+      },
+      {
+        "type": "text",
+        "content": "which are created with the NOWRITE option are not displayed in the select list."
+      },
+      {
+        "type": "text",
+        "content": "With Table Test you can:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  Edit a table using the 'E' line command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  Copy the table using the 'C' line command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  Delete the table using the 'D' line command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  Rename the table using the 'R' line command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2RT4000.PAN",
+    "category": "tutorial",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

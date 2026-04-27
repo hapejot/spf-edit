@@ -1,0 +1,122 @@
+{
+  "id": "S2PTF060",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "TERMINAL FUNCTION - [CURSOR-MOUSE-SELECT]",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Positions the cursor where the mouse pointer is currently located,"
+      },
+      {
+        "type": "text",
+        "content": "and performs a \"Select\" function.  Performs Enter key processing."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "[CURSOR-MOUSE-SELECT]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "A \"Select\" is an overloaded function which performs differently"
+      },
+      {
+        "type": "text",
+        "content": "in different parts of SPF/PC.  When [CURSOR-MOUSE-SELECT] is"
+      },
+      {
+        "type": "text",
+        "content": "pressed from a Dialog Manager menu, the menu option that the"
+      },
+      {
+        "type": "text",
+        "content": "pointer is on top of is selected, if pressed in a selection"
+      },
+      {
+        "type": "text",
+        "content": "list, then an 'S' verb is applied to the table row, and if"
+      },
+      {
+        "type": "text",
+        "content": "pressed within the editor, then Enter key processing occurs."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This function typically is assigned to a mouse button, by default"
+      },
+      {
+        "type": "text",
+        "content": "a Left-Button Double Click."
+      },
+      {
+        "type": "text",
+        "content": "See Also"
+      },
+      {
+        "type": "text",
+        "content": "[CURSOR-MOUSE]"
+      },
+      {
+        "type": "text",
+        "content": "[CURSOR-SELECT]"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2PTF060.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

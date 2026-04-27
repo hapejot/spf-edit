@@ -1,0 +1,115 @@
+{
+  "id": "S2P05401",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "DISPLAY CHARACTERISTICS PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "0.4 - DISPLAY CHARACTERISTICS PANEL"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Use this panel to set background and character colors on SPF/PC"
+      },
+      {
+        "type": "text",
+        "content": "menus and panels.  The colors you select are used on all menus"
+      },
+      {
+        "type": "text",
+        "content": "and panels."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "On a monochrome monitor this feature can control the location"
+      },
+      {
+        "type": "text",
+        "content": "of normal and highlighted text. On gray-scale monitors it can"
+      },
+      {
+        "type": "text",
+        "content": "control the level of gray assigned to different types of text."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC menus and panels are divided into four color zones, plus"
+      },
+      {
+        "type": "text",
+        "content": "a background color.  A color zone is determined by the context"
+      },
+      {
+        "type": "text",
+        "content": "of the text in the zone, not by its location on the screen."
+      },
+      {
+        "type": "text",
+        "content": "All text and symbols with the same context are displayed in the"
+      },
+      {
+        "type": "text",
+        "content": "same color."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You can assign any color/intensity combination to any zone as"
+      },
+      {
+        "type": "text",
+        "content": "long as all zones differ from the BACKGROUND zone.  Assigning a"
+      },
+      {
+        "type": "text",
+        "content": "text color the same as the BACKGROUND color would make the text"
+      },
+      {
+        "type": "text",
+        "content": "invisible (e.g. black on black)."
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05401.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

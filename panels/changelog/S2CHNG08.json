@@ -1,0 +1,77 @@
+{
+  "id": "S2CHNG08",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "PRINT SETUP ENHANCEMENTS",
+    "version_var": "ZSHRTVER",
+    "prefix": "CHANGES"
+  },
+  "type": "changelog",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Print Setup Options Panel 0.2 has been enhanced to provide the"
+      },
+      {
+        "type": "text",
+        "content": "following new features:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "* page width now specifiable"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "* right margin now specifiable"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "* header/footer alignment now specifiable"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For further details see:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC User Guide and Reference,"
+      },
+      {
+        "type": "text",
+        "content": "Printer Characteristics ......... Page 9-6"
+      }
+    ]
+  },
+  "proc_section": {
+    "assignments": {
+      "ZSEL": "UP"
+    }
+  },
+  "metadata": {
+    "source_file": "S2CHNG08.PAN",
+    "category": "changelog"
+  }
+}

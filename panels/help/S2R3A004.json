@@ -1,0 +1,106 @@
+{
+  "id": "S2R3A004",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "DIRECTORY SEARCH PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "In the example directory structure, if you specified,"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PATH ===> \\SPF"
+      },
+      {
+        "type": "text",
+        "content": "SEARCH SUBDIRECTORIES ===> N"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "you would get a select list of the directories from the first"
+      },
+      {
+        "type": "text",
+        "content": "level only:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "DOC                     <dir>"
+      },
+      {
+        "type": "text",
+        "content": "SRC                     <dir>"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R3A004.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

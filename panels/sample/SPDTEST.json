@@ -1,0 +1,96 @@
+{
+  "id": "SPDTEST",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "DIALOG TEST FACILITY",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "sample",
+  "attributes": {
+    "^": {
+      "type": "PROT",
+      "intensity": "high",
+      "attn": true
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "Zcmd"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "^   1 +FUNCTIONS    -  Invoke dialog functions/selection panels"
+      },
+      {
+        "type": "text",
+        "content": "^   2 +PANELS       -  Display panels"
+      },
+      {
+        "type": "text",
+        "content": "^   3 +VARIABLES    -  Display/Set variable information"
+      },
+      {
+        "type": "text",
+        "content": "^   4 +TABLES       -  View tables information"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Enter"
+          },
+          {
+            "type": "output",
+            "variable": "END",
+            "attribute": "^"
+          },
+          {
+            "type": "text",
+            "content": "+command to terminate dialog testing."
+          }
+        ]
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2RT0000",
+    "assignments": {
+      "ZPRIM": "Y\"         /* RETURN command from subpanels stops here */"
+    }
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": [
+        {
+          "value": "&ZCMD",
+          "action": {
+            "type": "panel",
+            "target": "."
+          }
+        },
+        {
+          "value": "'",
+          "action": {
+            "type": "blank"
+          }
+        }
+      ],
+      "default_error": "ISPF102"
+    }
+  },
+  "metadata": {
+    "source_file": "SPDTEST.PAN",
+    "category": "sample",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "id": "S2R910L1",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "HELP PANEL INDEX - `L`",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Select from the following help panels by number:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 +- L Line Command in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "2 +- LABELS in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "3 +- LC Line Command in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "4 +- LCC Line Command in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "5 +- LCOMMAND in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "6 +- LEFT"
+      },
+      {
+        "type": "text",
+        "content": "7 +- LEVEL in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "8 +- LINE COMMANDS for EDIT"
+      },
+      {
+        "type": "text",
+        "content": "9 +- LOCATE COMMAND in BROWSE"
+      },
+      {
+        "type": "text",
+        "content": "10 +- LOCATE COMMAND in FILE SELECTION LISTS"
+      },
+      {
+        "type": "text",
+        "content": "11 +- LOCATE in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "12 +- LPRINT"
+      },
+      {
+        "type": "text",
+        "content": "13 +- LRECL in EDIT"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R910L1.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "id": "S2R2N308",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE SELECTION LIST",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  SIZE    Sort by file size (bytes)."
+      },
+      {
+        "type": "text",
+        "content": "\u0007  DATE    Sort by modification date (mm-dd-yy)."
+      },
+      {
+        "type": "text",
+        "content": "\u0007  TIME    Sort by modification time (hh:mm[a|p])."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "A number of keywords from the mainframe environments are accepted as"
+      },
+      {
+        "type": "text",
+        "content": "synonyms for SPF/PC keywords:"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  BYTES = SIZE"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  TRACKS = SIZE"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  CREATED = DATE"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  REFERRED = DATE"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  DIRECTORY = FNAME"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  ORIGINAL = FNAME"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  BASE = NAME"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  FNAME = NAME"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Sorting the select list before issuing a LOCATE will usually make the"
+      },
+      {
+        "type": "text",
+        "content": "locate more efficient."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2N308.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

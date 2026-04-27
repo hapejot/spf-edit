@@ -1,0 +1,135 @@
+{
+  "id": "S2R17444",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FIND WORD PARAMETER",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You use the WORD optional parameter of the FIND COMMAND to specify that"
+      },
+      {
+        "type": "text",
+        "content": "the search argument must be a separate word."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "A word is defined as being preceded and followed by a nonalphameric"
+      },
+      {
+        "type": "text",
+        "content": "character."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND  find ctc word              +scans for the word \"ctc\"."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Only those occurrences of the character string \"ctc\" that are a word and"
+      },
+      {
+        "type": "text",
+        "content": "that are within the specified (or default) columns will be considered a"
+      },
+      {
+        "type": "text",
+        "content": "match.  The \"word\" parameter could be used, for example, to find all"
+      },
+      {
+        "type": "text",
+        "content": "words \"at\", without finding all occurrences of the character string \"at\"."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "In the list below, the intensified strings would be found and the non"
+      },
+      {
+        "type": "text",
+        "content": "intensified strings would be ignored if the word \"at\" were requested in"
+      },
+      {
+        "type": "text",
+        "content": "a FIND command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "\"WORD  AT\""
+          },
+          {
+            "type": "text",
+            "content": "AT+ ATLANTIC  BAT  BATS"
+          },
+          {
+            "type": "text",
+            "content": "'AT'+"
+          },
+          {
+            "type": "text",
+            "content": "=AT!+ (ATM)  (MAT)"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to the previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R17444.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

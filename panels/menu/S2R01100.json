@@ -1,0 +1,127 @@
+{
+  "id": "S2R01100",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "DISPLAY FORMATS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC may be used in either a full screen or a windowed session."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "The top three lines of most panels are called"
+          },
+          {
+            "type": "text",
+            "content": "header lines,+and are the"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "same in all panels.  The remainder of the panel may contain data for"
+      },
+      {
+        "type": "text",
+        "content": "editing or browsing, a list of options, or input fields and prompts."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following topics may be selected by number:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 + Header lines"
+      },
+      {
+        "type": "text",
+        "content": "2 + Selection panels"
+      },
+      {
+        "type": "text",
+        "content": "3 + Data entry panels"
+      },
+      {
+        "type": "text",
+        "content": "4 + Scrollable data display"
+      },
+      {
+        "type": "text",
+        "content": "5 + Status line"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2P00004"
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R01100.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

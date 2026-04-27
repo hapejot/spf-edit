@@ -1,0 +1,114 @@
+{
+  "id": "S2P05K73",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "KEYBOARD MACROS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To stop recording, hit Alt M again.   The KEY ASSIGNMENT panel"
+      },
+      {
+        "type": "text",
+        "content": "is displayed, allowing you to define which key you would like this"
+      },
+      {
+        "type": "text",
+        "content": "keyboard macro to be envoked from.  Hit Alt-P."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Now, anytime you hit Alt-P, the PERFORM block will be built at"
+      },
+      {
+        "type": "text",
+        "content": "the cursor position inside the editor."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NOTE:"
+      },
+      {
+        "type": "text",
+        "content": "Keyboard macros only work properly when they are executed in"
+      },
+      {
+        "type": "text",
+        "content": "a context similar to when they were originally recorded.  What"
+      },
+      {
+        "type": "text",
+        "content": "this means is that if you were to execute the above PERFORM"
+      },
+      {
+        "type": "text",
+        "content": "block macro from outside the editor, it would execute, but not"
+      },
+      {
+        "type": "text",
+        "content": "make any sense."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If you are creating a key macro that types a primary command"
+      },
+      {
+        "type": "text",
+        "content": "in the primary command field, you may want to hit the Home"
+      },
+      {
+        "type": "text",
+        "content": "key at the beginning of the macro, to ensure that the cursor"
+      },
+      {
+        "type": "text",
+        "content": "is positioned where you expect it to be at playback."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05K73.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

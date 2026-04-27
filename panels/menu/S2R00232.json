@@ -1,0 +1,112 @@
+{
+  "id": "S2R00232",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SPF/PC COMMAND - OS2/DOS/TSO/CMS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "To display the current directory:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "DOS DIR"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To change the current directory:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "OS2 CD directory-name"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To invoke Lotus 1-2-3:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "TSO 123"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R00232.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

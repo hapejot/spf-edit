@@ -1,0 +1,114 @@
+{
+  "id": "S2R2L360",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - O",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Overlays data in one or more lines with the data from one or more"
+      },
+      {
+        "type": "text",
+        "content": "lines."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "O[number]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "The line(s) specified by C, Cn, CC (copy), or M, Mn, MM (move),"
+      },
+      {
+        "type": "text",
+        "content": "overlay the line(s) containing the O (overlay) command.  Only one"
+      },
+      {
+        "type": "text",
+        "content": "line is overlaid unless a number is specified."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Only those characters that are within the current BOUNDS participate"
+      },
+      {
+        "type": "text",
+        "content": "in the overlay operation. See the BOUNDS line command, BNDS."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The number of source and receiving lines need not be the same.  If"
+      },
+      {
+        "type": "text",
+        "content": "there are more receiving lines, the sources lines are repeated until"
+      },
+      {
+        "type": "text",
+        "content": "the receiving lines are used up. If there are more source lines, the"
+      },
+      {
+        "type": "text",
+        "content": "extra source lines are ignored."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2L360.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

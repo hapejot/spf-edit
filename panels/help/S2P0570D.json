@@ -1,0 +1,113 @@
+{
+  "id": "S2P0570D",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "PROFILE DEFINITION PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PAD RIGHT W/BLANKS+ This field specifies whether data-delimited"
+      },
+      {
+        "type": "text",
+        "content": "records, which are normally stripped of trailing blanks, should be"
+      },
+      {
+        "type": "text",
+        "content": "padded with blanks to the maximum record length.  One of the"
+      },
+      {
+        "type": "text",
+        "content": "examples (Fixed-length Files From Other Systems) in the following"
+      },
+      {
+        "type": "text",
+        "content": "section makes use of this option."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NULL PROTECTED+- Specifies whether characters in the range of decimal"
+      },
+      {
+        "type": "text",
+        "content": "0 (x'00') to decimal 31 (x'1F') are protected by the null character"
+      },
+      {
+        "type": "text",
+        "content": "(x'00'). (This is a unique data form used in the Micro Focus Workbench"
+      },
+      {
+        "type": "text",
+        "content": "environment.)"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Y+ On input, if a null character is processed, ignore it and process"
+      },
+      {
+        "type": "text",
+        "content": "the character that follows it as a data character regardless of"
+      },
+      {
+        "type": "text",
+        "content": "its value."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "N+ Process characters \"as is\". All characters below decimal 32 are"
+      },
+      {
+        "type": "text",
+        "content": "non-data characters and may have side effects."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P0570D.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

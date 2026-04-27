@@ -1,0 +1,111 @@
+{
+  "id": "S2R2M112",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - PROFILE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Save and lock the profile.  All current modes and options are saved"
+      },
+      {
+        "type": "text",
+        "content": "and marked so that they can not be overwritten. Each time that an"
+      },
+      {
+        "type": "text",
+        "content": "edit session is begun, the locked profile is re-called exactly as it"
+      },
+      {
+        "type": "text",
+        "content": "was when it was locked. Changes made during a new edit session"
+      },
+      {
+        "type": "text",
+        "content": "affect only the current edit session, and not subsequent sessions."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Unlock the current edit profile so that it can be changed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2M112.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

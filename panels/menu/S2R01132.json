@@ -1,0 +1,139 @@
+{
+  "id": "S2R01132",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE SELECTION LIST",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "The LOCATE command (which can be entered as"
+          },
+          {
+            "type": "text",
+            "content": "LOC+or"
+          },
+          {
+            "type": "text",
+            "content": "L+) scrolls to the"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "file that you specify.  If the specified name is not in the list, the"
+      },
+      {
+        "type": "text",
+        "content": "data is scrolled to the file name that precedes the specified name (in"
+      },
+      {
+        "type": "text",
+        "content": "alphabetic sequence)."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "╔"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "The example to the right     ║"
+          },
+          {
+            "type": "text",
+            "content": "COMMAND  loc ct"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "shows how to request a       ║   FILENAME         SIZE      DATE     TIME"
+      },
+      {
+        "type": "text",
+        "content": "direct scroll to file        ║   SOURCE           <DIR>    1-01-80  12:01a"
+      },
+      {
+        "type": "text",
+        "content": "\"CTEST1.DAT\" in the          ║   APPTEST.FIL       5872    7-11-90   3:30p"
+      },
+      {
+        "type": "text",
+        "content": "selection list.              ║   BETAZOID.NCC    102376   11-05-89   9:52a"
+      },
+      {
+        "type": "text",
+        "content": "║   CTEST1.DAT        7200    5-30-91  10:07a"
+      },
+      {
+        "type": "text",
+        "content": "║   CTEST2.DAT       12548    5-30-91   4:36p"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R01132.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

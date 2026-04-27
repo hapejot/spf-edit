@@ -1,0 +1,120 @@
+{
+  "id": "S2R2M001",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMANDS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Available EDIT primary commands include:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "15 + DEFINE     Assign/disable aliases for commands and macros"
+      },
+      {
+        "type": "text",
+        "content": "16 + DELETE     Delete a group of lines"
+      },
+      {
+        "type": "text",
+        "content": "17 + END        Ends the EDIT session; returns to the prior menu"
+      },
+      {
+        "type": "text",
+        "content": "18 + ERRORFILE  Insert compiler errors as message lines"
+      },
+      {
+        "type": "text",
+        "content": "19 + EXCLUDE    Exclude lines from viewing"
+      },
+      {
+        "type": "text",
+        "content": "20 + FIND       Find a string of data"
+      },
+      {
+        "type": "text",
+        "content": "21 + HEX        Turn HEX display on or off"
+      },
+      {
+        "type": "text",
+        "content": "22 + IMACRO     Sets the initial macro name in the EDIT profile"
+      },
+      {
+        "type": "text",
+        "content": "23 + LCOMMAND   Line command switch"
+      },
+      {
+        "type": "text",
+        "content": "24 + LEVEL      Set/reset modification level"
+      },
+      {
+        "type": "text",
+        "content": "25 + LOCATE     Locate a given line"
+      },
+      {
+        "type": "text",
+        "content": "26 + LRECL      Logical Record Length"
+      },
+      {
+        "type": "text",
+        "content": "27 + MOVE       Move a file into the current file"
+      },
+      {
+        "type": "text",
+        "content": "28 + NUMBER     Turn numbering mode on or off"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for more commands)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2M001.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

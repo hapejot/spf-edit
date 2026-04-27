@@ -1,0 +1,87 @@
+{
+  "id": "S2CHNG18",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "NEW PRIMARY COMMANDS",
+    "version_var": "ZSHRTVER",
+    "prefix": "CHANGES"
+  },
+  "type": "changelog",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Command    Class      Function             (Page 1 of 2)"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CHARSET    Edit/Brow  Set char set to EBCDIC or ASCII"
+      },
+      {
+        "type": "text",
+        "content": "CMDNOCLR   General    Execute system command in background"
+      },
+      {
+        "type": "text",
+        "content": "COLORMAP   Edit/Brow  Set language colorization map"
+      },
+      {
+        "type": "text",
+        "content": "COMPARE    Edit/Brow  SUPERC compare edit file to external file"
+      },
+      {
+        "type": "text",
+        "content": "CRETRIEVE  General    1st press goto primcmd, 2nd press retrieve"
+      },
+      {
+        "type": "text",
+        "content": "LCOMMAND   Edit/Brow  Turn line command field on/off"
+      },
+      {
+        "type": "text",
+        "content": "LRECL      Edit/Brow  Set logical record length"
+      },
+      {
+        "type": "text",
+        "content": "PANELID    General    Set display of panel id on/off"
+      },
+      {
+        "type": "text",
+        "content": "PFSHOW     General    Set display of PF keys on/off"
+      },
+      {
+        "type": "text",
+        "content": "RECOVERY   Edit/Brow  Set UNDO recording on/off"
+      },
+      {
+        "type": "text",
+        "content": "REDO       Edit/Brow  Redo last undone file alteration"
+      },
+      {
+        "type": "text",
+        "content": "SAVECOUNT  Edit/Brow  Set save on count value"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Press 3270-ENTER to see more new commands ..."
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2CHNG18.PAN",
+    "category": "changelog"
+  }
+}

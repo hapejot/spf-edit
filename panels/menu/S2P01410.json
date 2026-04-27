@@ -1,0 +1,112 @@
+{
+  "id": "S2P01410",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SCROLL COMMANDS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The scroll commands and default PF key assignments are:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "UP   + (PF7)   to scroll towards the top of the data"
+      },
+      {
+        "type": "text",
+        "content": "DOWN + (PF8)   to scroll towards the bottom of the data"
+      },
+      {
+        "type": "text",
+        "content": "LEFT + (PF10)  to scroll towards the first column of the data"
+      },
+      {
+        "type": "text",
+        "content": "RIGHT+ (PF11)  to scroll towards the last column of the data"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If an invalid value is specified when a scroll command is issued, an"
+      },
+      {
+        "type": "text",
+        "content": "error message is displayed and no scrolling will occur."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to the previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2P01410.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

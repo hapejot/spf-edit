@@ -1,0 +1,99 @@
+{
+  "id": "S2CHNG03",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "PROGRAM SOURCE COLORIZATION",
+    "version_var": "ZSHRTVER",
+    "prefix": "CHANGES"
+  },
+  "type": "changelog",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC now colorizes program syntax in the editor.  Language"
+      },
+      {
+        "type": "text",
+        "content": "keywords are broken into different categories and colorized in"
+      },
+      {
+        "type": "text",
+        "content": "distinctive colors.  Colorization may be enabled via the COLORMAP"
+      },
+      {
+        "type": "text",
+        "content": "command.  For example, to colorize syntax for a COBOL file,"
+      },
+      {
+        "type": "text",
+        "content": "issue the \"COLORMAP COBOL\" command while editing some code."
+      },
+      {
+        "type": "text",
+        "content": "We distribute color files for COBOL, C, and REXX.  You can modify"
+      },
+      {
+        "type": "text",
+        "content": "our files and/or create new files to support other languages."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Colorization files group like syntax together.  In the default"
+      },
+      {
+        "type": "text",
+        "content": "files we group by logical keywords, control flow keywords,"
+      },
+      {
+        "type": "text",
+        "content": "comments, and quoted strings.  Once catagorized, specific colors"
+      },
+      {
+        "type": "text",
+        "content": "may be assigned for each group in the 0.3 Color Scheme definition"
+      },
+      {
+        "type": "text",
+        "content": "panel."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For further details see:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC User Guide and Reference,"
+      },
+      {
+        "type": "text",
+        "content": "Program Source Colorization ......... Page 7-1"
+      }
+    ]
+  },
+  "proc_section": {
+    "assignments": {
+      "ZSEL": "UP"
+    }
+  },
+  "metadata": {
+    "source_file": "S2CHNG03.PAN",
+    "category": "changelog"
+  }
+}

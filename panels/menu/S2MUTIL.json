@@ -1,0 +1,103 @@
+{
+  "id": "S2MUTIL",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "UTILITY SELECTION MENU",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "menu",
+  "attributes": {
+    "^": {
+      "type": "PROT",
+      "intensity": "high",
+      "attn": true
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "Zcmd"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "^   3 +MOVE/COPY         -  Move or copy files"
+      },
+      {
+        "type": "text",
+        "content": "^   4 +FILE LIST         -  Display file names for selection"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "^   A +DIRECTORY SEARCH  -  Build list of directories"
+      },
+      {
+        "type": "text",
+        "content": "^   B +FILE SEARCH       -  Build list of files by name pattern"
+      },
+      {
+        "type": "text",
+        "content": "^   C +TEXT SEARCH       -  Build list of files by text search"
+      },
+      {
+        "type": "text",
+        "content": "^   D +COMPLEX SEARCH    -  Build list of files from multiple search criteria"
+      },
+      {
+        "type": "text",
+        "content": "^   E +DRIVE SEARCH      -  Build list of files from drive list"
+      },
+      {
+        "type": "text",
+        "content": "^   F +SAVED LISTS       -  Display list of saved lists"
+      },
+      {
+        "type": "text",
+        "content": "^   G +FILE CONVERSION   -  Convert file between file formats"
+      },
+      {
+        "type": "text",
+        "content": "^   H +MOST RECENT EDITS -  Most recently edited files"
+      },
+      {
+        "type": "text",
+        "content": "^   I +SUPERC            -  Perform file comparisons"
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2R30000"
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": [
+        {
+          "value": "&ZCMD",
+          "action": {
+            "type": "panel",
+            "target": "."
+          }
+        },
+        {
+          "value": "'",
+          "action": {
+            "type": "blank"
+          }
+        }
+      ],
+      "default_error": "ISPF102"
+    }
+  },
+  "metadata": {
+    "source_file": "S2MUTIL.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

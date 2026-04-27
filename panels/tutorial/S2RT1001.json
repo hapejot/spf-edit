@@ -1,0 +1,106 @@
+{
+  "id": "S2RT1001",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "DIALOG TEST",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "tutorial",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CTC+- Specifies the name of an internal CTC function to be executed"
+      },
+      {
+        "type": "text",
+        "content": "via select service."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PARM+- Specifies any parameters that are to be passed to the"
+      },
+      {
+        "type": "text",
+        "content": "CTC function upon execution."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Using Function Test you can verify that all aspects of a menu or"
+      },
+      {
+        "type": "text",
+        "content": "selected function and its child panels are operating properly"
+      },
+      {
+        "type": "text",
+        "content": "before deploying into production."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2RT1001.PAN",
+    "category": "tutorial",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

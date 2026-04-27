@@ -1,0 +1,111 @@
+{
+  "id": "S2R3D002",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "COMPLEX SEARCH PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Individual fields are explained below:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SYSTEM CUR DIR"
+      },
+      {
+        "type": "text",
+        "content": "Identifies the current directory. This field only applies when"
+      },
+      {
+        "type": "text",
+        "content": "the path specification does not proceed from the root directory."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "FILE TYPES TO DISPLAY"
+      },
+      {
+        "type": "text",
+        "content": "Specifies the types of files that are to be displayed.  You can"
+      },
+      {
+        "type": "text",
+        "content": "specify `D` for directories only, `F` for files only, or `B` for"
+      },
+      {
+        "type": "text",
+        "content": "both files and directories."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SEARCH SUBDIRECTORIES"
+      },
+      {
+        "type": "text",
+        "content": "This field lets you specify whether the search should be limited"
+      },
+      {
+        "type": "text",
+        "content": "to the first level of the specified path or to all levels (via"
+      },
+      {
+        "type": "text",
+        "content": "recursive search)."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R3D002.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

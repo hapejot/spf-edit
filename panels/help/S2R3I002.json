@@ -1,0 +1,112 @@
+{
+  "id": "S2R3I002",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SUPERC PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "OLD FILE:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NAME+- This is required. Specifies the origional (older) version of"
+      },
+      {
+        "type": "text",
+        "content": "the files to be compared. It can also contain wildcards"
+      },
+      {
+        "type": "text",
+        "content": "(* or ?)."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PROFILE+- This is optional. Specifies the profile name for reading"
+      },
+      {
+        "type": "text",
+        "content": "the old file. If this is not specified, the profile is"
+      },
+      {
+        "type": "text",
+        "content": "determined by the file type. If COMPARE TYPE = BYTE, the"
+      },
+      {
+        "type": "text",
+        "content": "profile is ignored."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COMPARE TYPE"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This specifies the type of comparison to make."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "FILE+- This is the fastest compare available. It does not report"
+      },
+      {
+        "type": "text",
+        "content": "specific differences but simply if the files are different"
+      },
+      {
+        "type": "text",
+        "content": "(forces LISTING TYPE = OVSUM)."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R3I002.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

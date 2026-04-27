@@ -1,0 +1,105 @@
+{
+  "id": "S2DSLDIR",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SUPER LIST: DIRECTORIES",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "form",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SYSTEM CUR DIR:"
+          },
+          {
+            "type": "output",
+            "variable": "ZCURDIR"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PATH"
+          },
+          {
+            "type": "input",
+            "variable": "ZPATH0",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SEARCH SUBDIRECTORIES"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+ (Y- List files in subdirectories,"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "N- Only in specified directory)"
+      },
+      {
+        "type": "blank"
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2R3A000",
+    "zvars": [
+      "ZLSTSDIR"
+    ]
+  },
+  "proc_section": {
+    "validations": [
+      {
+        "field": "ZLSTSDIR",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DSLDIR.PAN",
+    "category": "form",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

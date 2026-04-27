@@ -1,0 +1,119 @@
+{
+  "id": "S2R2M250",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - PASTE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "To retrieve the current contents of the cut buffer."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "PASTE"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "For PASTE to function, you must mark the destination for the paste"
+      },
+      {
+        "type": "text",
+        "content": "block with the `A` or `B` line command.  The cut buffer contents are"
+      },
+      {
+        "type": "text",
+        "content": "not altered by paste so you may do multiple pastes of the same cut"
+      },
+      {
+        "type": "text",
+        "content": "buffer data."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "In OS/2, the Presentation Manager Clipboard is used as the cut"
+      },
+      {
+        "type": "text",
+        "content": "buffer.  In DOS, SPF/PC uses a private cut buffer."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "To retrieve the block of lines in the cut buffer:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PASTE"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2M250.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

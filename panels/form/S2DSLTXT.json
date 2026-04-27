@@ -1,0 +1,163 @@
+{
+  "id": "S2DSLTXT",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SUPER LIST: TEXT SEARCH",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "form",
+  "attributes": {
+    "^": {
+      "type": "INPUT",
+      "intensity": "high",
+      "caps": false,
+      "scroll": true,
+      "justification": "asis"
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "zcmd"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SYSTEM CUR DIR:"
+          },
+          {
+            "type": "output",
+            "variable": "ZCURDIR"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PATH"
+          },
+          {
+            "type": "input",
+            "variable": "ZPATH0",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SEARCH SUBDIRECTORIES"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+ (Y- Search files in subdirectories,"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "N- Only in specified directory)"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "TEXT"
+          },
+          {
+            "type": "input",
+            "variable": "ZSRCH0",
+            "attribute": "^",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CASE SENSE"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+            (Y- Case Sensitive, N- Either case)"
+          }
+        ]
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2R3C000",
+    "zvars": [
+      "ZLSTSDIR",
+      "ZCASE0"
+    ]
+  },
+  "proc_section": {
+    "validations": [
+      {
+        "field": "ZLSTSDIR",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "ZCASE0",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DSLTXT.PAN",
+    "category": "form",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

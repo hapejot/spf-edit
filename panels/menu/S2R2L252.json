@@ -1,0 +1,118 @@
+{
+  "id": "S2R2L252",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - DD",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "000021     IF  X-T-CT"
+      },
+      {
+        "type": "text",
+        "content": "000022         SET TEMP-INDEX TO X-T-CT"
+      },
+      {
+        "type": "text",
+        "content": "DD 023         SET X-T-CT UP BY 1"
+      },
+      {
+        "type": "text",
+        "content": "000024     ELSE"
+      },
+      {
+        "type": "text",
+        "content": "000025         PERFORM NNNN-DT-TO-VS-01"
+      },
+      {
+        "type": "text",
+        "content": "000026         MOVE 1 TO DSUB"
+      },
+      {
+        "type": "text",
+        "content": "DD 027         MOVE DATFLD-BC (DSUB) TO WCCOL"
+      },
+      {
+        "type": "text",
+        "content": "000028     END-IF."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Results"
+      },
+      {
+        "type": "text",
+        "content": "000021     IF  X-T-CT"
+      },
+      {
+        "type": "text",
+        "content": "000022         SET TEMP-INDEX TO X-T-CT"
+      },
+      {
+        "type": "text",
+        "content": "000023     END-IF."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2L252.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

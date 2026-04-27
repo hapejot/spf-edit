@@ -1,0 +1,118 @@
+{
+  "id": "S2R3A006",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "DIRECTORY SEARCH PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Alternatively, if you specified,"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PATH ===> \\SPF"
+      },
+      {
+        "type": "text",
+        "content": "SEARCH SUBDIRECTORIES ===> Y"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "you would get a select list of the directories from all first"
+      },
+      {
+        "type": "text",
+        "content": "levels:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "C:\\SPF\\DOC              <dir>"
+      },
+      {
+        "type": "text",
+        "content": "C:\\SPF\\DOC\\CHARTS       <dir>"
+      },
+      {
+        "type": "text",
+        "content": "C:\\SPF\\DOC\\SCREENS      <dir>"
+      },
+      {
+        "type": "text",
+        "content": "C:\\SPF\\DOC\\TEXT         <dir>"
+      },
+      {
+        "type": "text",
+        "content": "C:\\SPF\\SRC              <dir>"
+      },
+      {
+        "type": "text",
+        "content": "C:\\SPF\\SRC\\DM           <dir>"
+      },
+      {
+        "type": "text",
+        "content": "C:\\SPF\\SRC\\EDIT         <dir>"
+      },
+      {
+        "type": "text",
+        "content": "C:\\SPF\\SRC\\TOOLS        <dir>"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R3A006.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

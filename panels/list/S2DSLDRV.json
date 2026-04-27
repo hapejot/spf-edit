@@ -1,0 +1,180 @@
+{
+  "id": "S2DSLDRV",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SUPER LIST: DRIVE SEARCH",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "list",
+  "attributes": {
+    "~": {
+      "type": "OUTPUT",
+      "intensity": "low"
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD",
+        "scroll": {
+          "variable": "SCROLL"
+        }
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "FILE TYPES TO DISPLAY"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "(D- Directories, F- Files, B- Both)"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SEARCH SUBDIRECTORIES"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "(Y- List entries in subdirectories,"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "N- List only root directory)"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following line commands are valid for the list below:"
+      },
+      {
+        "type": "text",
+        "content": "S+- Select"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "DRIVE    FSYS     LABEL          CAPACITY   ALLOCATED    AVAILABLE"
+      },
+      {
+        "type": "divider",
+        "style": "single"
+      }
+    ]
+  },
+  "model": {
+    "selection_field": {
+      "variable": "Z",
+      "width": 1
+    },
+    "columns": [
+      {
+        "variable": "Z",
+        "attribute": "~",
+        "width": 6
+      },
+      {
+        "variable": "DRVFSN",
+        "attribute": "~",
+        "width": 8
+      },
+      {
+        "variable": "DRVLABEL",
+        "attribute": "~",
+        "width": 13
+      },
+      {
+        "variable": "DRVSIZE",
+        "attribute": "~",
+        "width": 11
+      },
+      {
+        "variable": "DRVUSED",
+        "attribute": "~",
+        "width": 12
+      },
+      {
+        "variable": "DRVAVAIL",
+        "attribute": "~",
+        "width": 10
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2R3E000",
+    "zvars": [
+      "SCROLL",
+      "ZLSTDMN",
+      "ZLSTSDIR",
+      "DRVSEL",
+      "DRVNAME"
+    ]
+  },
+  "proc_section": {
+    "validations": [
+      {
+        "field": "ZLSTDMN",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "list",
+            "values": [
+              "D",
+              "F",
+              "B"
+            ]
+          }
+        ]
+      },
+      {
+        "field": "ZLSTSDIR",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DSLDRV.PAN",
+    "category": "list",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

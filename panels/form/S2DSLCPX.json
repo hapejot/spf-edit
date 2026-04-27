@@ -1,0 +1,346 @@
+{
+  "id": "S2DSLCPX",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SUPER LIST: COMPLEX SEARCH",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "form",
+  "attributes": {
+    "^": {
+      "type": "INPUT",
+      "intensity": "high",
+      "caps": false,
+      "scroll": true,
+      "justification": "asis"
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SYSTEM CUR DIR:"
+          },
+          {
+            "type": "output",
+            "variable": "ZCURDIR"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "FILE TYPES TO DISPLAY"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+ (D- Directories, F- Files, B- Both)"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SEARCH SUBDIRECTORIES"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+ (Y- List files in subdirectories,"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "N- Only files in the specified dir)"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PATH"
+          },
+          {
+            "type": "input",
+            "variable": "ZPATH0",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PATH"
+          },
+          {
+            "type": "input",
+            "variable": "ZPATH1",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PATH"
+          },
+          {
+            "type": "input",
+            "variable": "ZPATH2",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PATH"
+          },
+          {
+            "type": "input",
+            "variable": "ZPATH3",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "TEXT"
+          },
+          {
+            "type": "input",
+            "variable": "ZSRCH0",
+            "attribute": "^",
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+CASE SENSE"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "TEXT"
+          },
+          {
+            "type": "input",
+            "variable": "ZSRCH1",
+            "attribute": "^",
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+CASE SENSE"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "TEXT"
+          },
+          {
+            "type": "input",
+            "variable": "ZSRCH2",
+            "attribute": "^",
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+CASE SENSE"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "TEXT"
+          },
+          {
+            "type": "input",
+            "variable": "ZSRCH3",
+            "attribute": "^",
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+CASE SENSE"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2R3D000",
+    "zvars": [
+      "ZLSTDMN",
+      "ZLSTSDIR",
+      "ZCASE0",
+      "ZCASE1",
+      "ZCASE2",
+      "ZCASE3"
+    ]
+  },
+  "proc_section": {
+    "validations": [
+      {
+        "field": "ZLSTDMN",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "list",
+            "values": [
+              "D",
+              "F",
+              "B"
+            ]
+          }
+        ]
+      },
+      {
+        "field": "ZLSTSDIR",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "ZCASE0",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "ZCASE1",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "ZCASE2",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "ZCASE3",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DSLCPX.PAN",
+    "category": "form",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "id": "S2P05204",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "PRINTER SETUP PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "DEVICE OR FILE NAME+- The output destination.  This may be any logical"
+      },
+      {
+        "type": "text",
+        "content": "device recognized by your system or a file name.  Typical logical"
+      },
+      {
+        "type": "text",
+        "content": "device names are PRN, LPT1, LPT2, COM1, COM2, NUL."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If the printed output is sent to a file, and the file already"
+      },
+      {
+        "type": "text",
+        "content": "exists, the output is appended."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "FORM FEED: INITIAL+- Specifies whether an initial form feed is sent to"
+      },
+      {
+        "type": "text",
+        "content": "the printer prior to page one. This is normally not needed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "FINAL+- Specifies whether an final form feed is sent to the"
+      },
+      {
+        "type": "text",
+        "content": "printer after the last page. This is normally not needed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "INTER+- Specifies whether a form feed is to be sent to"
+      },
+      {
+        "type": "text",
+        "content": "the printer between each page."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05204.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

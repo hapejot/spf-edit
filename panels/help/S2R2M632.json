@@ -1,0 +1,112 @@
+{
+  "id": "S2R2M632",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - COPY",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "A Select List menu is presented if you specify wild-card characters"
+      },
+      {
+        "type": "text",
+        "content": "(`*` or `?`). In the select list you can select a file to copy by"
+      },
+      {
+        "type": "text",
+        "content": "placing an S to the left of the file name or press P3; to cancel the"
+      },
+      {
+        "type": "text",
+        "content": "request."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "There are two ways to specify where the copied text is to be"
+      },
+      {
+        "type": "text",
+        "content": "inserted. First, a edit line command can be used to mark the"
+      },
+      {
+        "type": "text",
+        "content": "appropriate line with A (after) or B (before). Second, an option can"
+      },
+      {
+        "type": "text",
+        "content": "be given as part of the COPY command to place the records AFTER or"
+      },
+      {
+        "type": "text",
+        "content": "BEFORE a line that has been previously labeled."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If a range of line numbers is not specified, the entire file is"
+      },
+      {
+        "type": "text",
+        "content": "copied."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CUT and PASTE primary commands can also be used to move or copy"
+      },
+      {
+        "type": "text",
+        "content": "lines between files. See CUT and PASTE for details."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2M632.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

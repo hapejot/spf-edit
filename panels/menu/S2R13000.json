@@ -1,0 +1,116 @@
+{
+  "id": "S2R13000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "BROWSE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If you specify a file name which contains a wildcard character (* or ?),"
+      },
+      {
+        "type": "text",
+        "content": "a file selection list is displayed.  You may scroll through the list via"
+      },
+      {
+        "type": "text",
+        "content": "the UP and DOWN scroll commands or via the LOCATE command, and you may"
+      },
+      {
+        "type": "text",
+        "content": "select one file at a time via the SELECT primary command, or the S line"
+      },
+      {
+        "type": "text",
+        "content": "command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To return to the entry panel from the file list, enter the END command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For more information on the following topics, select:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 + File list  Scrolling"
+      },
+      {
+        "type": "text",
+        "content": "2 + File list  Locate"
+      },
+      {
+        "type": "text",
+        "content": "3 + File list  Select"
+      },
+      {
+        "type": "text",
+        "content": "4 + File list  S line command"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R13000.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

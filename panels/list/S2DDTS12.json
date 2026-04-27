@@ -1,0 +1,69 @@
+{
+  "id": "S2DDTS12",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "&ZTITLE",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "list",
+  "attributes": {
+    "#": {
+      "type": "OUTPUT",
+      "intensity": "high"
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD",
+        "scroll": {
+          "variable": "SCROLL"
+        }
+      },
+      {
+        "type": "output",
+        "variable": "ZCURDIR"
+      },
+      {
+        "type": "text",
+        "content": "NAME                                                           SIZE"
+      },
+      {
+        "type": "divider",
+        "style": "single"
+      }
+    ]
+  },
+  "model": {
+    "selection_field": {
+      "variable": "Z",
+      "width": 1
+    },
+    "columns": [
+      {
+        "variable": "NAMESHRT",
+        "attribute": "#",
+        "width": 60
+      },
+      {
+        "variable": "CSIZE",
+        "attribute": "#"
+      }
+    ]
+  },
+  "init": {
+    "zvars": [
+      "SCROLL",
+      "SEL"
+    ],
+    "assignments": {
+      "ZTDMARK": "        &ZDTFILES  &ZDTBYTES BYTES USED -- END OF FILE SELECTION LIST"
+    }
+  },
+  "metadata": {
+    "source_file": "S2DDTS12.PAN",
+    "category": "list",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

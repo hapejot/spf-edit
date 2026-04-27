@@ -1,0 +1,117 @@
+{
+  "id": "S2R2N223",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - UNDO",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If ON is specified, UNDO support is activated."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If OFF is specified, UNDO support is de-activated."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "When setting UNDO ON or OFF, the state is kept in a file profile"
+      },
+      {
+        "type": "text",
+        "content": "variable associated with the file type of the file being edited. SPF/PC"
+      },
+      {
+        "type": "text",
+        "content": "also supports a global variable which can be used to override the file"
+      },
+      {
+        "type": "text",
+        "content": "profile setting for all file types. You can set the global UNDO state"
+      },
+      {
+        "type": "text",
+        "content": "in Options panel 0.5."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If CLEAR is specified, the UNDO recording ares is cleared and a new"
+      },
+      {
+        "type": "text",
+        "content": "UNDO journal is started."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The default amount of memory available for UNDO recording is 100k bytes."
+      },
+      {
+        "type": "text",
+        "content": "You can set this value in the Edit Options panel 0.5."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Also see REDO."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2N223.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

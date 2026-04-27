@@ -1,0 +1,121 @@
+{
+  "id": "S2R2L362",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - O",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Any blank characters in the receiving lines are overlaid with"
+      },
+      {
+        "type": "text",
+        "content": "corresponding characters from the source lines."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "A move request is changed to a copy if characters cannot be overlaid"
+      },
+      {
+        "type": "text",
+        "content": "or if there are more source lines than receiving lines. An error"
+      },
+      {
+        "type": "text",
+        "content": "message is generated."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "M 0029                         /*                  */"
+      },
+      {
+        "type": "text",
+        "content": "000030 ZEROS:"
+      },
+      {
+        "type": "text",
+        "content": "O2 031  IF WORK = 0 THEN"
+      },
+      {
+        "type": "text",
+        "content": "000032      SALES = 0;"
+      },
+      {
+        "type": "text",
+        "content": "000033      CUSTOMER = ``;"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Results"
+      },
+      {
+        "type": "text",
+        "content": "000029 ZEROS:"
+      },
+      {
+        "type": "text",
+        "content": "000030  IF WORK = 0 THEN       /*                  */"
+      },
+      {
+        "type": "text",
+        "content": "000031      SALES = 0;         /*                  */"
+      },
+      {
+        "type": "text",
+        "content": "000032      CUSTOMER = ``;     /*                  */"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2L362.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

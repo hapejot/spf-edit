@@ -1,0 +1,112 @@
+{
+  "id": "S2P05K50",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "LIST OF MOUSE FUNCTIONS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "LIST OF MOUSE FUNCTIONS"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Any command, macro, data, or key macro may be assigned to a"
+      },
+      {
+        "type": "text",
+        "content": "Mouse event; however, only 2 functions are specific only to"
+      },
+      {
+        "type": "text",
+        "content": "the mouse:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 +- [CURSOR-MOUSE]"
+      },
+      {
+        "type": "text",
+        "content": "2 +- [CURSOR-MOUSE-SELECT]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For specific information, select category by number."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2P05K50.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,5017 @@
+{
+  "total_panels": 699,
+  "categories": {
+    "browse": 4,
+    "edit": 3,
+    "tutorial": 9,
+    "dialog": 23,
+    "changelog": 24,
+    "form": 29,
+    "list": 46,
+    "menu": 343,
+    "sample": 4,
+    "help": 214
+  },
+  "panels": [
+    {
+      "id": "PHONEMNU",
+      "category": "sample",
+      "type": "sample",
+      "source_file": "PHONEMNU.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "PHONEMOD",
+      "category": "sample",
+      "type": "sample",
+      "source_file": "PHONEMOD.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2CH18P2",
+      "category": "changelog",
+      "type": "changelog",
+      "source_file": "S2CH18P2.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2CHNG00",
+      "category": "changelog",
+      "type": "changelog",
+      "source_file": "S2CHNG00.PAN",
+      "nav_targets": [
+        "S2CHNG01",
+        "S2CHNG02",
+        "S2CHNG03",
+        "S2CHNG04",
+        "S2CHNG05",
+        "S2CHNG06",
+        "S2CHNG07",
+        "S2CHNG08",
+        "S2CHNG09",
+        "S2CHNG10",
+        "S2CHNG11",
+        "S2CHNG12",
+        "S2CHNG13",
+        "S2CHNG14",
+        "S2CHNG15",
+        "S2CHNG16",
+        "S2CHNG17",
+        "S2CHNG18, S2CH18P2",
+        "S2CHNG19",
+        "S2CHNG20",
+        "S2CHNG21",
+        "S2CHNG22"
+      ],
+      "has_warnings": false
+    },
+    {
+      "id": "S2CHNG01",
+      "category": "changelog",
+      "type": "changelog",
+      "source_file": "S2CHNG01.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2CHNG02",
+      "category": "changelog",
+      "type": "changelog",
+      "source_file": "S2CHNG02.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2CHNG03",
+      "category": "changelog",
+      "type": "changelog",
+      "source_file": "S2CHNG03.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2CHNG04",
+      "category": "changelog",
+      "type": "changelog",
+      "source_file": "S2CHNG04.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2CHNG05",
+      "category": "changelog",
+      "type": "changelog",
+      "source_file": "S2CHNG05.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2CHNG06",
+      "category": "changelog",
+      "type": "changelog",
+      "source_file": "S2CHNG06.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2CHNG07",
+      "category": "changelog",
+      "type": "changelog",
+      "source_file": "S2CHNG07.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2CHNG08",
+      "category": "changelog",
+      "type": "changelog",
+      "source_file": "S2CHNG08.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2CHNG09",
+      "category": "changelog",
+      "type": "changelog",
+      "source_file": "S2CHNG09.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2CHNG10",
+      "category": "changelog",
+      "type": "changelog",
+      "source_file": "S2CHNG10.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2CHNG11",
+      "category": "changelog",
+      "type": "changelog",
+      "source_file": "S2CHNG11.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2CHNG12",
+      "category": "changelog",
+      "type": "changelog",
+      "source_file": "S2CHNG12.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2CHNG13",
+      "category": "changelog",
+      "type": "changelog",
+      "source_file": "S2CHNG13.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2CHNG14",
+      "category": "changelog",
+      "type": "changelog",
+      "source_file": "S2CHNG14.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2CHNG15",
+      "category": "changelog",
+      "type": "changelog",
+      "source_file": "S2CHNG15.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2CHNG16",
+      "category": "changelog",
+      "type": "changelog",
+      "source_file": "S2CHNG16.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2CHNG17",
+      "category": "changelog",
+      "type": "changelog",
+      "source_file": "S2CHNG17.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2CHNG18",
+      "category": "changelog",
+      "type": "changelog",
+      "source_file": "S2CHNG18.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2CHNG19",
+      "category": "changelog",
+      "type": "changelog",
+      "source_file": "S2CHNG19.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2CHNG20",
+      "category": "changelog",
+      "type": "changelog",
+      "source_file": "S2CHNG20.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2CHNG21",
+      "category": "changelog",
+      "type": "changelog",
+      "source_file": "S2CHNG21.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2CHNG22",
+      "category": "changelog",
+      "type": "changelog",
+      "source_file": "S2CHNG22.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DBROW",
+      "category": "browse",
+      "type": "browse",
+      "source_file": "S2DBROW.PAN",
+      "help_panel": "S2R10000",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DBROWV",
+      "category": "browse",
+      "type": "browse",
+      "source_file": "S2DBROWV.PAN",
+      "help_panel": "S2R10000",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DCCLR",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DCCLR.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DCKBL",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DCKBL.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DCMD",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DCMD.PAN",
+      "help_panel": "S2R60010",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DCMPEN",
+      "category": "dialog",
+      "type": "dialog",
+      "source_file": "S2DCMPEN.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DCOLOR",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DCOLOR.PAN",
+      "help_panel": "S2P05400",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DCONBL",
+      "category": "dialog",
+      "type": "dialog",
+      "source_file": "S2DCONBL.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DCONF",
+      "category": "dialog",
+      "type": "dialog",
+      "source_file": "S2DCONF.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DCOPY",
+      "category": "dialog",
+      "type": "dialog",
+      "source_file": "S2DCOPY.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DCPRN",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DCPRN.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DCPROF",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DCPROF.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DCPYD",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2DCPYD.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DCPYF",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2DCPYF.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DCRCM",
+      "category": "dialog",
+      "type": "dialog",
+      "source_file": "S2DCRCM.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DCVTF",
+      "category": "dialog",
+      "type": "dialog",
+      "source_file": "S2DCVTF.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDATTR",
+      "category": "dialog",
+      "type": "dialog",
+      "source_file": "S2DDATTR.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTN00",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTN00.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTN01",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTN01.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTN02",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTN02.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTN03",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTN03.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTN04",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTN04.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTN05",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTN05.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTN06",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTN06.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTN07",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTN07.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTN08",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTN08.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTN09",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTN09.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTN10",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTN10.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTN11",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTN11.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTN12",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTN12.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTN13",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTN13.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTN14",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTN14.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTN15",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTN15.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTN83",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTN83.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTS00",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTS00.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTS01",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTS01.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTS02",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTS02.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTS03",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTS03.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTS04",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTS04.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTS05",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTS05.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTS06",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTS06.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTS07",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTS07.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTS08",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTS08.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTS09",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTS09.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTS10",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTS10.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTS11",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTS11.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTS12",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTS12.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTS13",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTS13.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTS14",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTS14.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTS15",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTS15.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DDTS83",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DDTS83.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DEDIT",
+      "category": "edit",
+      "type": "edit",
+      "source_file": "S2DEDIT.PAN",
+      "help_panel": "S2R20000",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DEDITV",
+      "category": "edit",
+      "type": "edit",
+      "source_file": "S2DEDITV.PAN",
+      "help_panel": "S2R20000",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DFATTR",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DFATTR.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DISDIR",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DISDIR.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DKBE",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DKBE.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DKBE2",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DKBE2.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DKBL",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DKBL.PAN",
+      "help_panel": "S2P05K00",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DKCE",
+      "category": "dialog",
+      "type": "dialog",
+      "source_file": "S2DKCE.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DKCK",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2DKCK.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DKMK",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2DKMK.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DKML",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DKML.PAN",
+      "help_panel": "S2P05M00",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DKMN",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DKMN.PAN",
+      "has_warnings": true
+    },
+    {
+      "id": "S2DMBRL",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DMBRL.PAN",
+      "help_panel": "S2R34000",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DMBRLV",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DMBRLV.PAN",
+      "help_panel": "S2R34000",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DMCERR",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2DMCERR.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DMOVD",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2DMOVD.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DMOVE",
+      "category": "dialog",
+      "type": "dialog",
+      "source_file": "S2DMOVE.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DMOVF",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2DMOVF.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DOCSA",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DOCSA.PAN",
+      "help_panel": "S2P05L00",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DOCU",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2DOCU.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DODSPL",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DODSPL.PAN",
+      "has_warnings": true
+    },
+    {
+      "id": "S2DOEDOP",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DOEDOP.PAN",
+      "help_panel": "S2P05500",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DOFLOP",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DOFLOP.PAN",
+      "help_panel": "S2P05600",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DOKY10",
+      "category": "dialog",
+      "type": "dialog",
+      "source_file": "S2DOKY10.PAN",
+      "help_panel": "S2P05300",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DOKY12",
+      "category": "dialog",
+      "type": "dialog",
+      "source_file": "S2DOKY12.PAN",
+      "help_panel": "S2P05300",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DOPATH",
+      "category": "dialog",
+      "type": "dialog",
+      "source_file": "S2DOPATH.PAN",
+      "help_panel": "S2P05800",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DOPRN",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DOPRN.PAN",
+      "has_warnings": true
+    },
+    {
+      "id": "S2DOPROD",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DOPROD.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DOPROF",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DOPROF.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DOPROL",
+      "category": "dialog",
+      "type": "dialog",
+      "source_file": "S2DOPROL.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DOPROM",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DOPROM.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DOPROV",
+      "category": "dialog",
+      "type": "dialog",
+      "source_file": "S2DOPROV.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DOTERM",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DOTERM.PAN",
+      "help_panel": "S2P05100",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DPLIST",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DPLIST.PAN",
+      "help_panel": "S2P05700",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DPRN",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DPRN.PAN",
+      "help_panel": "S2P05200",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DRCLR",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DRCLR.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DRENF",
+      "category": "dialog",
+      "type": "dialog",
+      "source_file": "S2DRENF.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DRKBL",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DRKBL.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DRMDIR",
+      "category": "dialog",
+      "type": "dialog",
+      "source_file": "S2DRMDIR.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DRPRN",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DRPRN.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DRPROF",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DRPROF.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DSAM00",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2DSAM00.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DSAMPL",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2DSAMPL.PAN",
+      "help_panel": "S2DSAM00",
+      "nav_targets": [
+        "."
+      ],
+      "has_warnings": false
+    },
+    {
+      "id": "S2DSLCPX",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DSLCPX.PAN",
+      "help_panel": "S2R3D000",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DSLCVT",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DSLCVT.PAN",
+      "help_panel": "S2R3G000",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DSLDIR",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DSLDIR.PAN",
+      "help_panel": "S2R3A000",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DSLDRV",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DSLDRV.PAN",
+      "help_panel": "S2R3E000",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DSLFIL",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DSLFIL.PAN",
+      "help_panel": "S2R3B000",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DSLLST",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DSLLST.PAN",
+      "help_panel": "S2R3F000",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DSLLSV",
+      "category": "dialog",
+      "type": "dialog",
+      "source_file": "S2DSLLSV.PAN",
+      "help_panel": "S2R3F000",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DSLTXT",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DSLTXT.PAN",
+      "help_panel": "S2R3C000",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DSPC",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DSPC.PAN",
+      "help_panel": "S2R3I000",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DSRCH",
+      "category": "dialog",
+      "type": "dialog",
+      "source_file": "S2DSRCH.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DTPANS",
+      "category": "form",
+      "type": "form",
+      "source_file": "S2DTPANS.PAN",
+      "help_panel": "S2RT0000",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DTSELS",
+      "category": "dialog",
+      "type": "dialog",
+      "source_file": "S2DTSELS.PAN",
+      "help_panel": "S2RT0000",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DTTBLS",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DTTBLS.PAN",
+      "help_panel": "S2RT0000",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DTVARS",
+      "category": "list",
+      "type": "list",
+      "source_file": "S2DTVARS.PAN",
+      "help_panel": "S2RT0000",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DUMOVE",
+      "category": "dialog",
+      "type": "dialog",
+      "source_file": "S2DUMOVE.PAN",
+      "help_panel": "S2R33000",
+      "has_warnings": false
+    },
+    {
+      "id": "S2DUMOVV",
+      "category": "dialog",
+      "type": "dialog",
+      "source_file": "S2DUMOVV.PAN",
+      "help_panel": "S2R33000",
+      "has_warnings": false
+    },
+    {
+      "id": "S2INFO",
+      "category": "dialog",
+      "type": "dialog",
+      "source_file": "S2INFO.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2INFO2",
+      "category": "dialog",
+      "type": "dialog",
+      "source_file": "S2INFO2.PAN",
+      "help_panel": "S2P00004",
+      "has_warnings": false
+    },
+    {
+      "id": "S2MCFORE",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2MCFORE.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2MEFORE",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2MEFORE.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2MFORE",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2MFORE.PAN",
+      "help_panel": "S2R40000",
+      "has_warnings": false
+    },
+    {
+      "id": "S2MKOPTS",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2MKOPTS.PAN",
+      "help_panel": "S2R00000",
+      "nav_targets": [
+        "."
+      ],
+      "has_warnings": false
+    },
+    {
+      "id": "S2MOPTSC",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2MOPTSC.PAN",
+      "help_panel": "S2P05C00",
+      "nav_targets": [
+        "."
+      ],
+      "has_warnings": false
+    },
+    {
+      "id": "S2MPRIM",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2MPRIM.PAN",
+      "help_panel": "S2R00000",
+      "nav_targets": [
+        "."
+      ],
+      "has_warnings": false
+    },
+    {
+      "id": "S2MRFORE",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2MRFORE.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2MUERR",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2MUERR.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2MUTIL",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2MUTIL.PAN",
+      "help_panel": "S2R30000",
+      "nav_targets": [
+        "."
+      ],
+      "has_warnings": false
+    },
+    {
+      "id": "S2P00004",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P00004.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P01105",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P01105.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P01106",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P01106.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P01300",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P01300.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P01301",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P01301.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P01303",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P01303.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P01304",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P01304.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P01410",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P01410.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P01420",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P01420.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P01421",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P01421.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P01422",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P01422.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P01500",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P01500.PAN",
+      "help_panel": "S2P00004",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P01510",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P01510.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P01800",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P01800.PAN",
+      "help_panel": "S2P00004",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P01820",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P01820.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P01840",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P01840.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05100",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05100.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05101",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05101.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05102",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05102.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05104",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05104.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05106",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05106.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05108",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05108.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05200",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05200.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05201",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05201.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05202",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05202.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05204",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05204.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05206",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05206.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05208",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05208.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P0520A",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P0520A.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05300",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05300.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05301",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05301.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05302",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05302.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05304",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05304.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05400",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05400.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05401",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05401.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05402",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05402.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05411",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05411.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05421",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05421.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05422",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05422.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05423",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05423.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05424",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05424.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05425",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05425.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05500",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05500.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05501",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05501.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05502",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05502.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05504",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05504.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05506",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05506.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05508",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05508.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P0550A",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P0550A.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05600",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05600.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05602",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05602.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05604",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05604.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05606",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05606.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05608",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05608.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05700",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05700.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05701",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05701.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05702",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05702.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05704",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05704.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05706",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05706.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05708",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05708.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P0570A",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P0570A.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P0570B",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P0570B.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P0570C",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P0570C.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P0570D",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P0570D.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05721",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05721.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05731",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05731.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05800",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05800.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05802",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05802.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05804",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05804.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05C00",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05C00.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K00",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05K00.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K10",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05K10.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K11",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05K11.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K12",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05K12.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K20",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05K20.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K21",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05K21.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K22",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05K22.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K23",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05K23.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K24",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05K24.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K25",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05K25.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K26",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05K26.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K30",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05K30.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K31",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05K31.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K40",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05K40.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K41",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05K41.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K50",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05K50.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K60",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05K60.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K61",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05K61.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K62",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05K62.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K63",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05K63.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K64",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05K64.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K65",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05K65.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K66",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05K66.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K70",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05K70.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K71",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05K71.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K72",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05K72.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K73",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05K73.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05K74",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05K74.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05L00",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05L00.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05M00",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05M00.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05M11",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05M11.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05M20",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05M20.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05M30",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05M30.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05M31",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05M31.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05M32",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05M32.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05M33",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05M33.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05M40",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05M40.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05M50",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05M50.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05M51",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2P05M51.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05M52",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05M52.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P05M60",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P05M60.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2P90100",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2P90100.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2PTF010",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2PTF010.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2PTF020",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2PTF020.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2PTF030",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2PTF030.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2PTF040",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2PTF040.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2PTF050",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2PTF050.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2PTF060",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2PTF060.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2PTF070",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2PTF070.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2PTF080",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2PTF080.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2PTF090",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2PTF090.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2PTF100",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2PTF100.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2PTF110",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2PTF110.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2PTF120",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2PTF120.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2PTF130",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2PTF130.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2PTF140",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2PTF140.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2PTF150",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2PTF150.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2PTF160",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2PTF160.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2PTF170",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2PTF170.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2PTF180",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2PTF180.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2PTF190",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2PTF190.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2PTF200",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2PTF200.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2PTF210",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2PTF210.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00000.PAN",
+      "nav_targets": [
+        "."
+      ],
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00001",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R00001.PAN",
+      "help_panel": "S2P00004",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00002",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R00002.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00100",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00100.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00101",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00101.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00110",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00110.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00120",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00120.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00125",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R00125.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00130",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00130.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00140",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00140.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00150",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R00150.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00152",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00152.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R0015Z",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R0015Z.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00160",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00160.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00170",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00170.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00180",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00180.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00190",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R00190.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00192",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00192.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00200",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00200.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00205",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00205.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00210",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R00210.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00212",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00212.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00220",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00220.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00230",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00230.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00232",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00232.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00240",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00240.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00250",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00250.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00310",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00310.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00320",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00320.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00330",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00330.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00340",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R00340.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00342",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00342.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00350",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00350.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00360",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00360.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00370",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R00370.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00372",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00372.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00380",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R00380.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00382",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00382.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R00390",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R00390.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R01000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R01000.PAN",
+      "help_panel": "S2P00004",
+      "nav_targets": [
+        "."
+      ],
+      "has_warnings": true
+    },
+    {
+      "id": "S2R01100",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R01100.PAN",
+      "help_panel": "S2P00004",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R01110",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R01110.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R01120",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R01120.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R01125",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R01125.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R01126",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R01126.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R01127",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R01127.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R01130",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R01130.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R01131",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R01131.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R01132",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R01132.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R01133",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R01133.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R01134",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R01134.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R01135",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R01135.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R01136",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R01136.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R01137",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R01137.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R01140",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R01140.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R01142",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R01142.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R01200",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R01200.PAN",
+      "help_panel": "S2P00004",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R01202",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R01202.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R01230",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R01230.PAN",
+      "help_panel": "S2P00004",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R01400",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R01400.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R01700",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R01700.PAN",
+      "help_panel": "S2P00004",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R10000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R10000.PAN",
+      "nav_targets": [
+        "."
+      ],
+      "has_warnings": false
+    },
+    {
+      "id": "S2R10001",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R10001.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R10002",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R10002.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R11000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R11000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R12000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R12000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R13000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R13000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R14000",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R14000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R14001",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R14001.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R15000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R15000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R17000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17100",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R17100.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17200",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R17200.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17300",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R17300.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17400",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R17400.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17410",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R17410.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17411",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R17411.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17412",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R17412.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17413",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R17413.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17414",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R17414.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17415",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R17415.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17416",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R17416.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17420",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R17420.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17430",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R17430.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17431",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R17431.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17432",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R17432.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17433",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R17433.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17434",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R17434.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17435",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R17435.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17440",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R17440.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17441",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R17441.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17442",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R17442.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17443",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R17443.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17444",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R17444.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17445",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R17445.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17446",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R17446.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17447",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R17447.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17600",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R17600.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R17700",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R17700.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R20000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R20000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2A000",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2A000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2A001",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2A001.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2B000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2B000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2C000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2C000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2C002",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2C002.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2C100",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2C100.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2C200",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2C200.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2E000",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2E000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2E001",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2E001.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L000",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L001",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L001.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L002",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L002.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L003",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L003.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L100",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L100.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L102",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L102.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L104",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L104.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L110",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L110.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L112",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L112.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L120",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L120.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L122",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L122.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L124",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L124.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L130",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L130.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L132",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L132.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L140",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L140.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L142",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L142.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L150",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L150.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L152",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L152.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L160",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L160.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L162",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L162.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L170",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L170.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L172",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L172.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L180",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L180.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L182",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L182.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L190",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L190.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L192",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L192.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L200",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L200.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L202",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L202.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L204",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L204.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L210",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L210.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L212",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L212.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L220",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L220.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L222",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L222.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L230",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L230.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L232",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L232.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L240",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L240.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L242",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L242.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L250",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L250.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L252",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L252.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L260",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L260.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L262",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L262.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L270",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L270.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L272",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L272.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L280",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L280.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L282",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L282.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L290",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L290.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L292",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L292.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L300",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L300.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L302",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L302.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L310",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L310.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L312",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L312.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L320",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L320.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L322",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L322.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L330",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L330.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L332",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L332.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L340",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L340.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L350",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L350.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L360",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L360.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L362",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L362.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L370",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L370.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L372",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L372.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L380",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L380.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L382",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L382.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L390",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L390.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L392",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L392.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L400",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L400.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L402",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L402.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L410",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L410.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L412",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L412.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L414",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L414.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L416",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L416.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L418",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L418.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L420",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L420.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L430",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L430.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L432",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L432.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L440",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L440.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L450",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L450.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L452",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L452.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L460",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L460.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L462",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L462.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L470",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L470.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L472",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L472.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L480",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L480.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L482",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L482.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L490",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L490.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L492",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L492.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L500",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2L500.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2L502",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2L502.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M001",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M001.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M002",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M002.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M003",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M003.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M110",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M110.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M112",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M112.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M120",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M120.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M122",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M122.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M130",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M130.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M132",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M132.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M134",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M134.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M136",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M136.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M140",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M140.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M142",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M142.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M150",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M150.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M160",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M160.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M170",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M170.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M180",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M180.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M190",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M190.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M192",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M192.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M200",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M200.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M210",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M210.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M212",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M212.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M214",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M214.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M216",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M216.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M218",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M218.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M220",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M220.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M222",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M222.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M224",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M224.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M226",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M226.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M228",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M228.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M22A",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M22A.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M240",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M240.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M242",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M242.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M244",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M244.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M246",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M246.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M250",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M250.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M310",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M310.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M312",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M312.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M314",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M314.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M320",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M320.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M330",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M330.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M410",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M410.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M420",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M420.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M440",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M440.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M450",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M450.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M452",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M452.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M454",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M454.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M510",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M510.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M520",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M520.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M530",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M530.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M540",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M540.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M610",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M610.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M612",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M612.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M620",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M620.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M630",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M630.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M632",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M632.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M634",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M634.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M640",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M640.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M710",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M710.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M712",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M712.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M714",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M714.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M720",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M720.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M730",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M730.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M810",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M810.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M812",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M812.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M820",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M820.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M822",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M822.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M824",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2M824.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2M826",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2M826.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N001",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N001.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N002",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N002.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N003",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N003.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N004",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N004.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N005",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N005.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N006",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N006.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N007",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N007.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N008",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N008.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N009",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N009.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N010",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N010.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N011",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N011.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N012",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N012.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N013",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N013.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N014",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2N014.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N015",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N015.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N016",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N016.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N101",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N101.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N201",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N201.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N202",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N202.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N203",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N203.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N204",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N204.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N205",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N205.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N206",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N206.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N207",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N207.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N208",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N208.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N209",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N209.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N210",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N210.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N211",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N211.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N212",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N212.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N213",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2N213.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N214",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N214.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N215",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N215.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N216",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N216.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N217",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N217.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N218",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N218.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N219",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N219.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N220",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2N220.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N221",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2N221.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N222",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N222.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N223",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N223.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N301",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N301.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N302",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N302.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N303",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N303.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N304",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N304.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N305",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N305.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N306",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N306.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N307",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R2N307.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R2N308",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R2N308.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R30000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R30000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R33000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R33000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R33001",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R33001.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R33002",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R33002.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R33004",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R33004.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R33006",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R33006.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R34000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R34000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R34001",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R34001.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R34002",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R34002.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R34004",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R34004.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R34006",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R34006.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3A000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3A000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3A001",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R3A001.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3A002",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R3A002.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3A004",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R3A004.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3A006",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3A006.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3B000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3B000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3B001",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R3B001.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3B002",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3B002.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3C000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3C000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3C001",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R3C001.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3C002",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3C002.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3D000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3D000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3D001",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R3D001.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3D002",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R3D002.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3D004",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3D004.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3E000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3E000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3E001",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R3E001.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3E002",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3E002.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3F000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3F000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3G000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3G000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3G001",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R3G001.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3G002",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R3G002.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3G003",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R3G003.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3H000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3H000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3I000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3I000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3I001",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R3I001.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3I002",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R3I002.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3I004",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R3I004.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3I006",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R3I006.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3I008",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R3I008.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3I00A",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R3I00A.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3X000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3X000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3X00B",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3X00B.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3X00C",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3X00C.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3X00D",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3X00D.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3X00E",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3X00E.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3X00G",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3X00G.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3X00I",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3X00I.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3X00K",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3X00K.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3X00M",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3X00M.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3X00P",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3X00P.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3X00R",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3X00R.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3X00S",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3X00S.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3X00T",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3X00T.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3X00U",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3X00U.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3X00X",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3X00X.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3Z000",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R3Z000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3Z002",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R3Z002.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3Z004",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R3Z004.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3Z006",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3Z006.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3Z008",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3Z008.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R3Z00A",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R3Z00A.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R40000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R40000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R40010",
+      "category": "help",
+      "type": "help",
+      "source_file": "S2R40010.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R40011",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R40011.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R50000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R50000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R60010",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R60010.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R91000",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R91000.PAN",
+      "nav_targets": [
+        "."
+      ],
+      "has_warnings": false
+    },
+    {
+      "id": "S2R910A1",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R910A1.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R910C1",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R910C1.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R910C2",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R910C2.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R910D1",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R910D1.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R910E1",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R910E1.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R910F1",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R910F1.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R910F2",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R910F2.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R910G1",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R910G1.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R910I1",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R910I1.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R910L1",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R910L1.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R910M1",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R910M1.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R910O1",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R910O1.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R910Q1",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R910Q1.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R910S1",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R910S1.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R910S2",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R910S2.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R910S3",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R910S3.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R910T1",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R910T1.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R910U1",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R910U1.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R910X1",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R910X1.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2R91DOT",
+      "category": "menu",
+      "type": "menu",
+      "source_file": "S2R91DOT.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2RT0000",
+      "category": "tutorial",
+      "type": "tutorial",
+      "source_file": "S2RT0000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2RT1000",
+      "category": "tutorial",
+      "type": "tutorial",
+      "source_file": "S2RT1000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2RT1001",
+      "category": "tutorial",
+      "type": "tutorial",
+      "source_file": "S2RT1001.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2RT2000",
+      "category": "tutorial",
+      "type": "tutorial",
+      "source_file": "S2RT2000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2RT2001",
+      "category": "tutorial",
+      "type": "tutorial",
+      "source_file": "S2RT2001.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2RT3000",
+      "category": "tutorial",
+      "type": "tutorial",
+      "source_file": "S2RT3000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2RT3001",
+      "category": "tutorial",
+      "type": "tutorial",
+      "source_file": "S2RT3001.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2RT4000",
+      "category": "tutorial",
+      "type": "tutorial",
+      "source_file": "S2RT4000.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2RT4001",
+      "category": "tutorial",
+      "type": "tutorial",
+      "source_file": "S2RT4001.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "S2SCBROW",
+      "category": "browse",
+      "type": "browse",
+      "source_file": "S2SCBROW.PAN",
+      "help_panel": "S2R10000",
+      "has_warnings": false
+    },
+    {
+      "id": "SAMPHELP",
+      "category": "sample",
+      "type": "sample",
+      "source_file": "SAMPHELP.PAN",
+      "has_warnings": false
+    },
+    {
+      "id": "SBROWPAN",
+      "category": "browse",
+      "type": "browse",
+      "source_file": "SBROWPAN.PAN",
+      "help_panel": "S2R10000",
+      "has_warnings": false
+    },
+    {
+      "id": "SEDITPAN",
+      "category": "edit",
+      "type": "edit",
+      "source_file": "SEDITPAN.PAN",
+      "help_panel": "S2R20000",
+      "has_warnings": false
+    },
+    {
+      "id": "SPDTEST",
+      "category": "sample",
+      "type": "sample",
+      "source_file": "SPDTEST.PAN",
+      "help_panel": "S2RT0000",
+      "nav_targets": [
+        "."
+      ],
+      "has_warnings": false
+    }
+  ]
+}

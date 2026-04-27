@@ -1,0 +1,209 @@
+{
+  "id": "S2DSPC",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SUPERC FILE COMPARISON UTILITY",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "form",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SYSTEM CUR DIR:"
+          },
+          {
+            "type": "output",
+            "variable": "ZCURDIR"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "inline_group",
+        "fields": [
+          {
+            "type": "text",
+            "content": "+NEW FILE: NAME    _SPCNFILE"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PROFILE"
+          },
+          {
+            "type": "input",
+            "variable": "SPCNPROF",
+            "width": 8,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+    (Blank defaults to file extension)"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "inline_group",
+        "fields": [
+          {
+            "type": "text",
+            "content": "+OLD FILE: NAME    _SPCOFILE"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PROFILE"
+          },
+          {
+            "type": "input",
+            "variable": "SPCOPROF",
+            "width": 8,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+    (Blank defaults to file extension)"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "COMPARE TYPE"
+          },
+          {
+            "type": "input",
+            "variable": "SPCCOMPT",
+            "width": 14,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+ (FILE/LINE/BYTE)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "LISTING TYPE"
+          },
+          {
+            "type": "input",
+            "variable": "SPCLISTT",
+            "width": 14,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+ (OVSUM/DELTA/CHANGE/LONG)"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "OUTPUT (BROWSE/PRINTER/filename):"
+      },
+      {
+        "type": "inline_group",
+        "fields": [
+          {
+            "type": "text",
+            "content": "_SPCOUTPT"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PROCESS OPTIONS (ANYC | COBOL | STD):"
+      },
+      {
+        "type": "inline_group",
+        "fields": [
+          {
+            "type": "text",
+            "content": "_SPCPROPT"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "COMPARE COLUMNS:  START"
+          },
+          {
+            "type": "input",
+            "variable": "SPCSTCOL",
+            "width": 13,
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "END"
+          },
+          {
+            "type": "input",
+            "variable": "SPCEDCOL",
+            "width": 13,
+            "field_connector": true
+          }
+        ]
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2R3I000"
+  },
+  "metadata": {
+    "source_file": "S2DSPC.PAN",
+    "category": "form",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

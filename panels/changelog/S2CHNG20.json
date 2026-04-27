@@ -1,0 +1,51 @@
+{
+  "id": "S2CHNG20",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "OPTIONAL XDB INTERFACE",
+    "version_var": "ZSHRTVER",
+    "prefix": "CHANGES"
+  },
+  "type": "changelog",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This feature emulates the \"DB2 Interactive\" primary option of ISPF"
+      },
+      {
+        "type": "text",
+        "content": "and works in conjunction with XDB, the PC based DB/2."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "box",
+        "style": "announcement",
+        "rows": [
+          {
+            "type": "text",
+            "content": "Shipping 4th Quarter, 1994. Call (800) 336-3320 for info"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "assignments": {
+      "ZSEL": "UP"
+    }
+  },
+  "metadata": {
+    "source_file": "S2CHNG20.PAN",
+    "category": "changelog"
+  }
+}

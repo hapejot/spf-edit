@@ -1,0 +1,120 @@
+{
+  "id": "S2P05C00",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SPF/PC PARAMETER OPTIONS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC CONFIGURATION PANELS"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This panel is used to select from the different configuration"
+      },
+      {
+        "type": "text",
+        "content": "panels available in SPF/PC. For more information on specific"
+      },
+      {
+        "type": "text",
+        "content": "capabilities, select panel by number:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 + TERMINAL       - Specify terminal characteristics"
+      },
+      {
+        "type": "text",
+        "content": "2 + PRINTER        - Specify printer characteristics"
+      },
+      {
+        "type": "text",
+        "content": "3 + PF KEYS        - Specify Program Function Key Values"
+      },
+      {
+        "type": "text",
+        "content": "4 + DISPLAY        - Specify screen display attributes"
+      },
+      {
+        "type": "text",
+        "content": "5 + EDITOR OPTIONS - Specify SPF/PC Editor Options"
+      },
+      {
+        "type": "text",
+        "content": "6 + FILE LIST OPTS - Specify SPF/PC File List Options"
+      },
+      {
+        "type": "text",
+        "content": "7 + PROFILES       - Display, change or delete profiles"
+      },
+      {
+        "type": "text",
+        "content": "8 + PATHS          - Specify SPF/PC file search paths"
+      },
+      {
+        "type": "text",
+        "content": "K + KEYBOARD       - Keyboard remapping"
+      },
+      {
+        "type": "text",
+        "content": "M + MACROS         - Keyboard macros"
+      },
+      {
+        "type": "text",
+        "content": "L + LANGUAGES      - COBOL Source Analyst parameters"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2P05C00.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "id": "S2R2L162",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - )",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "=COLS> ----|----1----|----2----|----3----|----4----|--"
+      },
+      {
+        "type": "text",
+        "content": "=BNDS> <                                           >"
+      },
+      {
+        "type": "text",
+        "content": ")4 001 Old King Cole was a merry old soul"
+      },
+      {
+        "type": "text",
+        "content": "000002 and a merry old soul was he. He called"
+      },
+      {
+        "type": "text",
+        "content": "000003 for his cap and he called for his bowl"
+      },
+      {
+        "type": "text",
+        "content": "000004 and he called for his fiddlers three."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Results"
+      },
+      {
+        "type": "text",
+        "content": "=COLS> ----|----1----|----2----|----3----|----4----|--"
+      },
+      {
+        "type": "text",
+        "content": "=BNDS> <                                           >"
+      },
+      {
+        "type": "text",
+        "content": "000001     Old King Cole was a merry old soul"
+      },
+      {
+        "type": "text",
+        "content": "000002 and a merry old soul was he. He called"
+      },
+      {
+        "type": "text",
+        "content": "000003 for his cap and he called for his bowl"
+      },
+      {
+        "type": "text",
+        "content": "000004 and he called for his fiddlers three."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2L162.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "S2CHNG14",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT READ-ONLY FILES",
+    "version_var": "ZSHRTVER",
+    "prefix": "CHANGES"
+  },
+  "type": "changelog",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The new version of SPF/PC can open files marked with the READ- ONLY"
+      },
+      {
+        "type": "text",
+        "content": "flag, as well as files opened non-exclusively by other users.  Once"
+      },
+      {
+        "type": "text",
+        "content": "opened, the Read-Only files may not be saved.  However, sections of"
+      },
+      {
+        "type": "text",
+        "content": "the file may be written out to other files using the CREATE/REPLACE"
+      },
+      {
+        "type": "text",
+        "content": "commands; also portions may be CUT to the DOS and OS/2 Clipboards."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To enable Read-Only file editing, set the EDIT READ-ONLY FILES flag"
+      },
+      {
+        "type": "text",
+        "content": "on Panel 0.5 to Y."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For further details see:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC User Guide and Reference,"
+      },
+      {
+        "type": "text",
+        "content": "Editor Options .................... Page 9-20"
+      }
+    ]
+  },
+  "proc_section": {
+    "assignments": {
+      "ZSEL": "UP"
+    }
+  },
+  "metadata": {
+    "source_file": "S2CHNG14.PAN",
+    "category": "changelog"
+  }
+}

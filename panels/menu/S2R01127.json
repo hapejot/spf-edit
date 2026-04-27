@@ -1,0 +1,156 @@
+{
+  "id": "S2R01127",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "STATUS LINE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The last line of all SPF/PC panels is reserved for status information, as"
+      },
+      {
+        "type": "text",
+        "content": "shown below:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "│"
+          },
+          {
+            "type": "text",
+            "content": "\u001b\f +         Mon Nov 18 10:43a"
+          },
+          {
+            "type": "text",
+            "content": "\u0018A+  RR"
+          },
+          {
+            "type": "text",
+            "content": "^ RECORDING+ R 1 C 1 │"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "└┘"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The symbols are:"
+      },
+      {
+        "type": "text",
+        "content": "-\f-+- Input inhibited, e.g., to prevent overtyping a protected field."
+      },
+      {
+        "type": "text",
+        "content": "\u0018 +- Shift key is depressed."
+      },
+      {
+        "type": "text",
+        "content": "DATE/TIME +-Date and time information may be displayed (0.1 Panel)"
+      },
+      {
+        "type": "text",
+        "content": "A +- Caps Lock on."
+      },
+      {
+        "type": "text",
+        "content": "^ +- Insert mode is active."
+      },
+      {
+        "type": "text",
+        "content": "RR+- Line command RR is active on current line (LCOMMAND OFF mode)"
+      },
+      {
+        "type": "text",
+        "content": "RECORDING +- Keyboard macro recording is active."
+      },
+      {
+        "type": "text",
+        "content": "R 1 C 1   +- Row and Col indicators in EDIT and BROWSE"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "When SPF/PC is processing a command, the"
+          },
+          {
+            "type": "text",
+            "content": "X SYSTEM+message is displayed"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "on the status line.  During processing, all input is disabled.  When a"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "kayboard macro is being recorded, the"
+          },
+          {
+            "type": "text",
+            "content": "MACRO RECORD+message is displayed."
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R01127.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

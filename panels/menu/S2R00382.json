@@ -1,0 +1,117 @@
+{
+  "id": "S2R00382",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - UP",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- Issue the command with a scroll amount.  Type the command and the"
+      },
+      {
+        "type": "text",
+        "content": "amount, or type the amount and press the appropriate PF key."
+      },
+      {
+        "type": "text",
+        "content": "- Change the SCROLL field and execute step 1."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Scroll amounts can be abbreviated. For example, P for PAGE, M for"
+      },
+      {
+        "type": "text",
+        "content": "MAX, etc"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "To move up by amount specified in SCROLL field:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PF7"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To move up eight lines:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "UP 8"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Also, move up eight lines:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Type 8 in command field, then press PF7."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R00382.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

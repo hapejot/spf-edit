@@ -1,0 +1,82 @@
+{
+  "id": "S2CHNG17",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "NEW SPFPC COMMAND PARAMETERS",
+    "version_var": "ZSHRTVER",
+    "prefix": "CHANGES"
+  },
+  "type": "changelog",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The SPFPC command has the following new parameters:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "/S  Specifies the name of a dialog function to be used in place"
+      },
+      {
+        "type": "text",
+        "content": "of the primary option panel. It can be specified in the"
+      },
+      {
+        "type": "text",
+        "content": "following forms:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "/SPANEL(panel-ID)"
+      },
+      {
+        "type": "text",
+        "content": "/SCMD(REXX-procedure-name)"
+      },
+      {
+        "type": "text",
+        "content": "/SCTC(Internal-function-name)"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For further details see:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC User Guide and Reference,"
+      },
+      {
+        "type": "text",
+        "content": "Start-up Parameters .................. Page 2-15"
+      }
+    ]
+  },
+  "proc_section": {
+    "assignments": {
+      "ZSEL": "UP"
+    }
+  },
+  "metadata": {
+    "source_file": "S2CHNG17.PAN",
+    "category": "changelog"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "id": "S2R14001",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "BROWSE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "attributes": {
+    "^": {
+      "type": "PROT",
+      "intensity": "high",
+      "mouse": true
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The five display screen areas shown on the previous panel are:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1   TITLE  Shows the path and file being browsed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "2   LINE/COLS/MESSAGES  Normally shows the line number of the top"
+      },
+      {
+        "type": "text",
+        "content": "line being displayed, and the columns being displayed.  This"
+      },
+      {
+        "type": "text",
+        "content": "area is also used for short error or information messages,"
+      },
+      {
+        "type": "text",
+        "content": "which overlay the LINE/COLS information."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "3   COMMAND  BROWSE commands, such as FIND, are entered here."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "4   SCROLL AMOUNT  Where the current scroll amount is displayed."
+      },
+      {
+        "type": "text",
+        "content": "You can change the amount by overtyping this field."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "5   DATA AREA  Fills up the remainder of the display screen."
+      },
+      {
+        "type": "text",
+        "content": "You may not type in this area."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R14001.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

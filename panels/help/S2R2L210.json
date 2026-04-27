@@ -1,0 +1,113 @@
+{
+  "id": "S2R2L210",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - C",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Copies one or more lines to another location within the current"
+      },
+      {
+        "type": "text",
+        "content": "file.  It is also used with CREATE/REPLACE/CUT primary commands to"
+      },
+      {
+        "type": "text",
+        "content": "copy lines between files."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "C[number]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "This command leaves the original lines in place, and makes a"
+      },
+      {
+        "type": "text",
+        "content": "duplicate at the new location.  Type B or A on the line where the"
+      },
+      {
+        "type": "text",
+        "content": "copied line is to be placed and a C on the line to be copied."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "A number may follow the C to indicate that more than one line is to"
+      },
+      {
+        "type": "text",
+        "content": "be copied. This has the same effect as the Block Copy command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To see how lines may be copied between files see CUT on CUT and"
+      },
+      {
+        "type": "text",
+        "content": "PASTE on PASTE."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2L210.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

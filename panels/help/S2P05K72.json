@@ -1,0 +1,114 @@
+{
+  "id": "S2P05K72",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "KEYBOARD MACROS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Hit END, which is typically assigned to F3, will put you back into"
+      },
+      {
+        "type": "text",
+        "content": "the edit session in the exact state you were in when you hit Alt-M."
+      },
+      {
+        "type": "text",
+        "content": "Note that the status bar displays RECORDING."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Every key you type now is recorded as a keyboard event -- if you"
+      },
+      {
+        "type": "text",
+        "content": "type a character, that data is recorded into the macro - if you"
+      },
+      {
+        "type": "text",
+        "content": "hit a terminal function key like PgUp, then the terminal function"
+      },
+      {
+        "type": "text",
+        "content": "is recorded."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To record the PERFORM block, start typing it in as you would"
+      },
+      {
+        "type": "text",
+        "content": "add it to a normal COBOL source file - Hit Newline, Up Arrow,"
+      },
+      {
+        "type": "text",
+        "content": "'I' line command, Enter, type \"PERFORM UNTIL\", hit Enter,"
+      },
+      {
+        "type": "text",
+        "content": "type \"END-PERFORM\" on the newly inserted line, hit Up Arrow,"
+      },
+      {
+        "type": "text",
+        "content": "and then the End key."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "What you should end up with should look like this:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PERFORM UNTIL _"
+      },
+      {
+        "type": "text",
+        "content": "END-PERFORM"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05K72.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

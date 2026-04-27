@@ -1,0 +1,215 @@
+{
+  "id": "PHONEMOD",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "&PHONEVRB PHONE LIST ENTRY",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "sample",
+  "attributes": {
+    "~": {
+      "type": "INPUT",
+      "intensity": "high",
+      "caps": false
+    },
+    "_": {
+      "type": "INPUT",
+      "intensity": "high",
+      "caps": true
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "inline_group",
+        "fields": [
+          {
+            "type": "text",
+            "content": "FIRST   ~FNAME"
+          }
+        ]
+      },
+      {
+        "type": "inline_group",
+        "fields": [
+          {
+            "type": "text",
+            "content": "LAST    ~LNAME"
+          }
+        ]
+      },
+      {
+        "type": "inline_group",
+        "fields": [
+          {
+            "type": "text",
+            "content": "COMPANY ~COMPANY"
+          }
+        ]
+      },
+      {
+        "type": "inline_group",
+        "fields": [
+          {
+            "type": "text",
+            "content": "ADDRESS ~ADDR"
+          }
+        ]
+      },
+      {
+        "type": "inline_group",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CITY    ~CITY"
+          },
+          {
+            "type": "text",
+            "content": "STATE _Z ZIP _ZIP"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "WORK PH"
+          },
+          {
+            "type": "input",
+            "variable": "PHONEW",
+            "attribute": "~",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "HOME PH"
+          },
+          {
+            "type": "input",
+            "variable": "PHONEH",
+            "attribute": "~",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "FAX PH"
+          },
+          {
+            "type": "input",
+            "variable": "PHONEF",
+            "attribute": "~",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Enter phone list information and"
+          },
+          {
+            "type": "text",
+            "content": "END+to save."
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Enter"
+          },
+          {
+            "type": "text",
+            "content": "CANCEL+to exit without saving."
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      }
+    ]
+  },
+  "init": {
+    "zvars": [
+      "STATE"
+    ]
+  },
+  "proc_section": {
+    "validations": [
+      {
+        "field": "FNAME",
+        "rules": [
+          {
+            "type": "non_blank"
+          }
+        ]
+      },
+      {
+        "field": "LNAME",
+        "rules": [
+          {
+            "type": "non_blank"
+          }
+        ]
+      },
+      {
+        "field": "PHONEW",
+        "rules": [
+          {
+            "type": "picture",
+            "format": "999-999-9999"
+          }
+        ]
+      },
+      {
+        "field": "PHONEH",
+        "rules": [
+          {
+            "type": "picture",
+            "format": "999-999-9999"
+          }
+        ]
+      },
+      {
+        "field": "PHONEF",
+        "rules": [
+          {
+            "type": "picture",
+            "format": "999-999-9999"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "PHONEMOD.PAN",
+    "category": "sample",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

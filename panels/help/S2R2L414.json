@@ -1,0 +1,112 @@
+{
+  "id": "S2R2L414",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - TABS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "With this hardware tab definition and starting with the cursor in"
+      },
+      {
+        "type": "text",
+        "content": "the line command field, the cursor will be positioned to columns 1,"
+      },
+      {
+        "type": "text",
+        "content": "10, 20, and 30 as the Tab; is repeatedly depressed.  You can enter"
+      },
+      {
+        "type": "text",
+        "content": "data at any point after positioning the cursor with TAB."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The next example shows how logical tabs would be used to position"
+      },
+      {
+        "type": "text",
+        "content": "data in place of using TAB to do the positioning."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Enter primary command `TABS ON \\` to turn tabs ON and define the"
+      },
+      {
+        "type": "text",
+        "content": "logical tab character as backslash (\\).  With the same hardware tab"
+      },
+      {
+        "type": "text",
+        "content": "definition from the above example, enter the `I` line command on"
+      },
+      {
+        "type": "text",
+        "content": "line 000031.  When the empty null line is presented key in `\\aaa"
+      },
+      {
+        "type": "text",
+        "content": "\\bbb \\ccc` starting at column 1.  Press ENTER. The editor will"
+      },
+      {
+        "type": "text",
+        "content": "position the three data strings one position to the right of the"
+      },
+      {
+        "type": "text",
+        "content": "respective hardware tab stops."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2L414.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

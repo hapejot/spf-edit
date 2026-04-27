@@ -1,0 +1,110 @@
+{
+  "id": "S2P01300",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "COMMANDS AND PF KEYS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC commands are provided for commonly used functions. You may enter a"
+      },
+      {
+        "type": "text",
+        "content": "command in the following ways:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "By typing the command in the COMMAND/OPTION field and then pressing"
+      },
+      {
+        "type": "text",
+        "content": "the ENTER key."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "By pressing a program function (PF) key that has been assigned the"
+      },
+      {
+        "type": "text",
+        "content": "command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Use of PF keys for command entry is strongly recommended to save time and to"
+      },
+      {
+        "type": "text",
+        "content": "reduce typing errors.  There are default PF key definitions for many of the"
+      },
+      {
+        "type": "text",
+        "content": "frequently used system commands.  You may change the PF key definitions via"
+      },
+      {
+        "type": "text",
+        "content": "option 0.3 or via the KEYS command.  Your key definitions are automatically"
+      },
+      {
+        "type": "text",
+        "content": "saved in your user profile."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P01300.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

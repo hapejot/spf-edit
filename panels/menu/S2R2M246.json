@@ -1,0 +1,119 @@
+{
+  "id": "S2R2M246",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - EXCLUDE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Once lines are excluded, they can be returned to view (not excluded)"
+      },
+      {
+        "type": "text",
+        "content": "in one of 4 ways:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- The RESET command makes all excluded lines visible."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- The FIND command makes excluded lines containing the find"
+      },
+      {
+        "type": "text",
+        "content": "string visible."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- The `S` (Show) line command makes lines visible based on their"
+      },
+      {
+        "type": "text",
+        "content": "indentation level. (See S.)"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- The FIRST and LAST line commands make one or more excluded"
+      },
+      {
+        "type": "text",
+        "content": "lines (at beginning or end of a block of excluded lines)"
+      },
+      {
+        "type": "text",
+        "content": "visible."
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "This example excludes all ELSE strings in columns 1 to 4 between"
+      },
+      {
+        "type": "text",
+        "content": "lines labeled .E and .S:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "EXC ALL ELSE 1 4 .E .S"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2M246.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

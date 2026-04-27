@@ -1,0 +1,120 @@
+{
+  "id": "S2R2M530",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - STATS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "The STATS command will generate statistics (level stamping) when"
+      },
+      {
+        "type": "text",
+        "content": "standard numbering is on."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "STATS  [ON ]"
+      },
+      {
+        "type": "text",
+        "content": "[OFF]"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "When STATS is on and line numbering is standard (STD), columns 79"
+      },
+      {
+        "type": "text",
+        "content": "and 80 contain a level number."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Each time that SPF/PC starts editing such a file, it finds the"
+      },
+      {
+        "type": "text",
+        "content": "largest level number and adds one to it. Unless this number is"
+      },
+      {
+        "type": "text",
+        "content": "overridden by a LEVEL command, it places this new number in the"
+      },
+      {
+        "type": "text",
+        "content": "level number field of any record that is changed or inserted."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "By using this, you can tell which records have been updated and"
+      },
+      {
+        "type": "text",
+        "content": "relatively when the update took place."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2M530.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

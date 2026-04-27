@@ -1,0 +1,116 @@
+{
+  "id": "S2R2M220",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - CHANGE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Searches the file for a character string then replaces it with"
+      },
+      {
+        "type": "text",
+        "content": "another character string."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "CHANGE str1 str2 [range][NEXT ][CHARS ][X ][col1[col2]]"
+      },
+      {
+        "type": "text",
+        "content": "CHG                     [ALL  ][PREFIX][NX]"
+      },
+      {
+        "type": "text",
+        "content": "C                       [FIRST][SUFFIX]"
+      },
+      {
+        "type": "text",
+        "content": "[LAST ][WORD  ]"
+      },
+      {
+        "type": "text",
+        "content": "[PREV ]"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "Generally CHANGE is entered with only the two required parameters:"
+      },
+      {
+        "type": "text",
+        "content": "str1 and str2. In this case, SPF/PC searches for the next instance of"
+      },
+      {
+        "type": "text",
+        "content": "str1 starting at the current cursor location. When str1 is found it"
+      },
+      {
+        "type": "text",
+        "content": "is replaced with str2.  SPF/PC searches for str1 within the current"
+      },
+      {
+        "type": "text",
+        "content": "BOUNDS. (See BOUNDS for more on this.)"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You can press PF6 to repeat the change on the next occurrence of"
+      },
+      {
+        "type": "text",
+        "content": "str1."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2M220.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "id": "S2PTF210",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "TERMINAL FUNCTION - [WORD-LEFT/RIGHT]",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Jump the cursor left/right to the beginning/end of the next/previous"
+      },
+      {
+        "type": "text",
+        "content": "word, where words are delimited by spaces."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "[WORD-LEFT]"
+      },
+      {
+        "type": "text",
+        "content": "[WORD-RIGHT]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "[WORD-RIGHT] jumps the cursor to the beginning of the next word,"
+      },
+      {
+        "type": "text",
+        "content": "where the seperation between words is determined by a space."
+      },
+      {
+        "type": "text",
+        "content": "[WORD-LEFT] jumps the cursor either to the beginning of the"
+      },
+      {
+        "type": "text",
+        "content": "current word, or to the beginning of the previous word. depending"
+      },
+      {
+        "type": "text",
+        "content": "on the location within the current word."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "In the editor, will scroll the screen to the left and right if"
+      },
+      {
+        "type": "text",
+        "content": "appropriate."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2PTF210.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

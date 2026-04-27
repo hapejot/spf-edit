@@ -1,0 +1,156 @@
+{
+  "id": "S2R17412",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FIND STRINGS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "To specify a search argument of hexadecimal digits you use a"
+          },
+          {
+            "type": "text",
+            "content": "hex string."
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "A hex string is a quoted string that is either preceded or followed by"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "the letter"
+          },
+          {
+            "type": "text",
+            "content": "X."
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Only hexadecimal digits (09, AF) are valid in a hex string, and there"
+      },
+      {
+        "type": "text",
+        "content": "must be an even number of digits."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Examples:"
+          },
+          {
+            "type": "text",
+            "content": "find x'00'  +"
+          },
+          {
+            "type": "text",
+            "content": "f 'ffff'x"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "f x\"c1c2\"   +"
+          },
+          {
+            "type": "text",
+            "content": "find \"0D0A\"x"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If you enter an invalid hex string, an error message will be displayed."
+      },
+      {
+        "type": "text",
+        "content": "Examples of invalid hex strings are:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "find x'0c2h'     + not all hexadecimal digits"
+      },
+      {
+        "type": "text",
+        "content": "find x'123'      + odd number of hex digits"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R17412.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

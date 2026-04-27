@@ -1,0 +1,117 @@
+{
+  "id": "S2R17435",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FIND ALL PARAMETER",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You use the ALL parameter of the FIND command to get a count of the"
+      },
+      {
+        "type": "text",
+        "content": "specified search argument, and to locate the first occurrence of the"
+      },
+      {
+        "type": "text",
+        "content": "character string."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND  find ctc all               +scans for all \"ctc\""
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "A search for all of the occurrences of the string \"ctc\" will be made,"
+      },
+      {
+        "type": "text",
+        "content": "starting at the beginning of the file and continuing to the end of file."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If the string is found one or more times, the cursor is placed at the"
+      },
+      {
+        "type": "text",
+        "content": "beginning of the first occurrence of the string.  A message is displayed"
+      },
+      {
+        "type": "text",
+        "content": "indicating the number of times that the string was found.  If the RFIND"
+      },
+      {
+        "type": "text",
+        "content": "PF key is pressed, the search continues as a FIND NEXT."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If no occurences of the search argument are found in the file, a message"
+      },
+      {
+        "type": "text",
+        "content": "to that effect is displayed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to the previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R17435.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

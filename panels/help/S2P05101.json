@@ -1,0 +1,113 @@
+{
+  "id": "S2P05101",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "TERMINAL CHARACTERISTICS PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "0.1 - TERMINAL CHARACTERISTICS PANEL"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This panel displays basic characteristics of your keyboard and"
+      },
+      {
+        "type": "text",
+        "content": "display and allows you alter some of them. This information tells"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC how you want to handle the display and keyboard."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC obtains much of the information it needs from the operating"
+      },
+      {
+        "type": "text",
+        "content": "system. Some entry fields on the panel prompt you for additional"
+      },
+      {
+        "type": "text",
+        "content": "information.  For example, you identify the character you want to"
+      },
+      {
+        "type": "text",
+        "content": "use as a command delimiter when issuing a string of commands."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NUMBER OF PF KEYS+- This field is for display only.  If you have an IBM"
+      },
+      {
+        "type": "text",
+        "content": "Enhanced Keyboard, 48 PF keys are available.  If you have an"
+      },
+      {
+        "type": "text",
+        "content": "AT-style keyboard, 40 PF keys are available."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "INPUT FIELD PAD+- This is field is for display only.  It reminds you"
+      },
+      {
+        "type": "text",
+        "content": "that SPF/PC always acts as if the field is null padded. (This is"
+      },
+      {
+        "type": "text",
+        "content": "equivalent to using ISPF/PDF in nulls on mode.)"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05101.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

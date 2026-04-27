@@ -1,0 +1,119 @@
+{
+  "id": "S2P0520A",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "PRINTER SETUP PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "HEADER:  PARTS  +- Specifies which document attributes are to printed as"
+      },
+      {
+        "type": "text",
+        "content": "a part of the page dump. The page header is printed below the top"
+      },
+      {
+        "type": "text",
+        "content": "margin and above the body text. The header elements are name, time,"
+      },
+      {
+        "type": "text",
+        "content": "date, and page number."
+      },
+      {
+        "type": "text",
+        "content": "ALIGN  +- Align header either to the left margin, right margin,"
+      },
+      {
+        "type": "text",
+        "content": "centered, or spread across the entire width."
+      },
+      {
+        "type": "text",
+        "content": "SPACE  +- The number of spaces used for the header between it"
+      },
+      {
+        "type": "text",
+        "content": "and the body text."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "FOOTER:  PARTS  +- Same as header but the page footer is printed below the"
+      },
+      {
+        "type": "text",
+        "content": "body text and footer space."
+      },
+      {
+        "type": "text",
+        "content": "ALIGN  +- Same as header but alignment is applied only to the"
+      },
+      {
+        "type": "text",
+        "content": "right margin, centered, or spread across the entire width."
+      },
+      {
+        "type": "text",
+        "content": "footer text."
+      },
+      {
+        "type": "text",
+        "content": "SPACE  +- The number of blank lines to print immediately above"
+      },
+      {
+        "type": "text",
+        "content": "above the page footer."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "assignments": {
+      "ZSEL": "UP"
+    }
+  },
+  "metadata": {
+    "source_file": "S2P0520A.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

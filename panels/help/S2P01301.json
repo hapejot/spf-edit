@@ -1,0 +1,111 @@
+{
+  "id": "S2P01301",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "COMMANDS AND PF KEYS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You may type information into the COMMAND/OPTION field prior to pressing"
+      },
+      {
+        "type": "text",
+        "content": "a PF key.  The PF key definition is concatenated ahead of whatever you"
+      },
+      {
+        "type": "text",
+        "content": "typed into the COMMAND/OPTION field to form the complete command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example.  Suppose you define PF12 as an EDIT CHANGE ALL command with"
+      },
+      {
+        "type": "text",
+        "content": "no explicit character strings, as follows:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PF12  change all"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Then, in EDIT, you type the following in the command field and press"
+      },
+      {
+        "type": "text",
+        "content": "PF12 rather than the ENTER key:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND  tct ctc"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The result is exactly the same as if you had typed the following in"
+      },
+      {
+        "type": "text",
+        "content": "the command field and pressed the ENTER key:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND  change all tct ctc"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P01301.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

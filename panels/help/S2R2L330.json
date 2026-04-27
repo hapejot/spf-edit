@@ -1,0 +1,114 @@
+{
+  "id": "S2R2L330",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - MASK",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Allows a user to define a mask to be used in building a new line."
+      },
+      {
+        "type": "text",
+        "content": "The mask is applied to lines inserted with the Insert (I) line"
+      },
+      {
+        "type": "text",
+        "content": "command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "MASK"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "A typical use of Mask would be to pre-load comment delimiters in all"
+      },
+      {
+        "type": "text",
+        "content": "new lines. This would eliminate extra keying."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Until a new line is modified, it is still considered temporary and"
+      },
+      {
+        "type": "text",
+        "content": "will be deleted regardless of the data in the mask. If you wish to"
+      },
+      {
+        "type": "text",
+        "content": "retain an empty mask line, you must enter at least one blank or"
+      },
+      {
+        "type": "text",
+        "content": "space on it."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "A mask remains in effect (even if it is not displayed) until it is"
+      },
+      {
+        "type": "text",
+        "content": "changed. It is used the next time an edit session is begun."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2L330.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

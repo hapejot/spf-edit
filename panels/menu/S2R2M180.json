@@ -1,0 +1,119 @@
+{
+  "id": "S2R2M180",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - END",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Terminates the edit session and returns you to the prior menu."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "END"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "Normally you would use END to exit and save any changes you have"
+      },
+      {
+        "type": "text",
+        "content": "made to the edited file. Saving is conditioned by the AUTOSAVE"
+      },
+      {
+        "type": "text",
+        "content": "profile variable which is manipulated by the AUTOSAVE primary"
+      },
+      {
+        "type": "text",
+        "content": "command. If you do not want to save changes made in this edit"
+      },
+      {
+        "type": "text",
+        "content": "session, use the CANCEL primary command in place of END. The default"
+      },
+      {
+        "type": "text",
+        "content": "key mapping places the END command on PF3."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "To end the current edit session and save changes:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "END"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2M180.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

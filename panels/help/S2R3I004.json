@@ -1,0 +1,112 @@
+{
+  "id": "S2R3I004",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SUPERC PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "LINE+- This is the most intelligent of the compares. It reports                                        as"
+      },
+      {
+        "type": "text",
+        "content": "inserts and deletes on a line by line basis."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "BYTE+- This is most useful in comparing binary or non-record oriented"
+      },
+      {
+        "type": "text",
+        "content": "files. The files are compared byte by byte and the report"
+      },
+      {
+        "type": "text",
+        "content": "provides differences in a hexidecimal dump format with a"
+      },
+      {
+        "type": "text",
+        "content": "summary. When BYTE is specified, the PROFILE fields are ignored."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "LISTING TYPE"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This specifies the form for the output listing of the report."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "OVSUM+- This form provides an overall summary of differences without a"
+      },
+      {
+        "type": "text",
+        "content": "detail level report. When COMPARE TYPE = FILE is set, OVSUM is"
+      },
+      {
+        "type": "text",
+        "content": "the only allowable choice."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "DELTA+- This form provides differences only in the detail level of the"
+      },
+      {
+        "type": "text",
+        "content": "report followed by a summary."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R3I004.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

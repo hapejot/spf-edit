@@ -1,0 +1,148 @@
+{
+  "id": "S2DPRN",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "PRINTER SELECTION LIST",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "list",
+  "attributes": {
+    "~": {
+      "type": "OUTPUT",
+      "intensity": "low"
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD",
+        "scroll": {
+          "variable": "SCROLL"
+        }
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "ACTIVE PRINTER :"
+          },
+          {
+            "type": "output",
+            "variable": "ZPRNNAME",
+            "attribute": "~"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "DESCRIPTION :"
+          },
+          {
+            "type": "output",
+            "variable": "ZPRNDESC",
+            "attribute": "~"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "DEVICE :"
+          },
+          {
+            "type": "output",
+            "variable": "ZPRNDEV",
+            "attribute": "~"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following line commands are valid for the list below:"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "S+- Select"
+          },
+          {
+            "type": "text",
+            "content": "E+- Edit"
+          },
+          {
+            "type": "text",
+            "content": "D+- Delete"
+          },
+          {
+            "type": "text",
+            "content": "C+- Copy"
+          },
+          {
+            "type": "text",
+            "content": "R+- Rename"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NAME     DEVICE            PRINTER DESCRIPTION"
+      },
+      {
+        "type": "divider",
+        "style": "single"
+      }
+    ]
+  },
+  "model": {
+    "selection_field": {
+      "variable": "Z",
+      "width": 1
+    },
+    "columns": [
+      {
+        "variable": "PRNNAME",
+        "attribute": "~",
+        "width": 9
+      },
+      {
+        "variable": "PRNDEV",
+        "attribute": "~",
+        "width": 17
+      },
+      {
+        "variable": "PRNDESC",
+        "attribute": "~"
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2P05200",
+    "zvars": [
+      "SCROLL",
+      "SEL"
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DPRN.PAN",
+    "category": "list",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

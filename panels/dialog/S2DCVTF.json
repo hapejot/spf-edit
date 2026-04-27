@@ -1,0 +1,160 @@
+{
+  "id": "S2DCVTF",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "CONVERT FILE",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "dialog",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CURRENT DIR:"
+          },
+          {
+            "type": "output",
+            "variable": "ZcurDir"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SOURCE FILE:"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "NAME         :"
+          },
+          {
+            "type": "output",
+            "variable": "FrName"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PROFILE"
+          },
+          {
+            "type": "input",
+            "variable": "FrProf",
+            "width": 8,
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "DESTINATION FILE:"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "NAME"
+          },
+          {
+            "type": "input",
+            "variable": "VToName",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PROFILE"
+          },
+          {
+            "type": "input",
+            "variable": "VToProf",
+            "width": 8,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+  (Leave blank to use profile based upon"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "extension)"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "MAX LRECL"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 5,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+     (1 - 64000)"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NOTE:+  Unless otherwise specififed, file conversion in SPF/PC"
+      },
+      {
+        "type": "text",
+        "content": "strictly follows the Record Lengths specified in the"
+      },
+      {
+        "type": "text",
+        "content": "Destination File Profile, truncating and padding records"
+      },
+      {
+        "type": "text",
+        "content": "if necessary."
+      }
+    ]
+  },
+  "init": {
+    "zvars": [
+      "VToRecl"
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DCVTF.PAN",
+    "category": "dialog",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

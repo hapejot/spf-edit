@@ -1,0 +1,118 @@
+{
+  "id": "S2PTF150",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "TERMINAL FUNCTION - [KEY-MACRO-RECORD]",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Start/end a keyboard macro recording.  Does not perform Enter"
+      },
+      {
+        "type": "text",
+        "content": "key processing, though alternative panels are displayed"
+      },
+      {
+        "type": "text",
+        "content": "during Macro name definition and key assignment."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "[KEY-MACRO-RECORD]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "Starts the keyboard macro recording phase, which enables you"
+      },
+      {
+        "type": "text",
+        "content": "to record repetitive keyboard events into a replayable \"macro\"."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "While keyboard macro recording is active, a \"RECORDING\" message"
+      },
+      {
+        "type": "text",
+        "content": "is displayed on the status line."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "See Also:"
+      },
+      {
+        "type": "text",
+        "content": "[KEY-MACRO <name>]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2PTF150.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "id": "S2P05M60",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "THE DIFFERENCE BETWEEN KEYBOARD AND EDIT MACROS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Although they sound similar, keyboard and edit macros are quite"
+      },
+      {
+        "type": "text",
+        "content": "different.  Keyboard macros a recorded strings of keyboard"
+      },
+      {
+        "type": "text",
+        "content": "events, while edit macros are REXX programs that can evaluate"
+      },
+      {
+        "type": "text",
+        "content": "the contents of a document and process it accordingly."
+      },
+      {
+        "type": "text",
+        "content": "There are many tasks that can be performed by both keyboard and"
+      },
+      {
+        "type": "text",
+        "content": "edit macros."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Edit macros can perform logical analysis, loops, data retrieval,"
+      },
+      {
+        "type": "text",
+        "content": "string manipulation, etc.  However, since edit macros are more"
+      },
+      {
+        "type": "text",
+        "content": "powerful, they are also more difficult to create than a keyboard"
+      },
+      {
+        "type": "text",
+        "content": "macro.  An edit macro is a small program written in REXX that"
+      },
+      {
+        "type": "text",
+        "content": "must comply to the rules regarding REXX syntax, and must"
+      },
+      {
+        "type": "text",
+        "content": "call SPF/PC's ISREDIT API to get information about the document"
+      },
+      {
+        "type": "text",
+        "content": "in an edit session."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Keyboard macros are great for performing small, repetative tasks,"
+      },
+      {
+        "type": "text",
+        "content": "such as inserting text into a document, or entering a filename"
+      },
+      {
+        "type": "text",
+        "content": "onto a Dialog Manager panel.  Unlike edit macros, keyboard macros"
+      },
+      {
+        "type": "text",
+        "content": "may be executed from any panel, not just from within edit."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2P05M60.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

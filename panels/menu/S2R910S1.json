@@ -1,0 +1,122 @@
+{
+  "id": "S2R910S1",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "HELP PANEL INDEX - `S`",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Select from the following help panels by number:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 +- S LINE COMMAND in FILE SELECTION LISTS"
+      },
+      {
+        "type": "text",
+        "content": "2 +- S Line Command in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "3 +- SAVE in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "4 +- SAVECOUNT in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "5 +- SAVELIST in FILE SELECTION LISTS"
+      },
+      {
+        "type": "text",
+        "content": "6 +- SAVED LISTS PANEL"
+      },
+      {
+        "type": "text",
+        "content": "7 +- SCOPY in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "8 +- SCREATE in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "9 +- SCREEN"
+      },
+      {
+        "type": "text",
+        "content": "10 +- SCROLL AMOUNT"
+      },
+      {
+        "type": "text",
+        "content": "11 +- SCROLL COMMANDS"
+      },
+      {
+        "type": "text",
+        "content": "12 +- SCROLLABLE DATA DISPLAY"
+      },
+      {
+        "type": "text",
+        "content": "13 +- SCROLLING"
+      },
+      {
+        "type": "text",
+        "content": "14 +- SCROLLING in BROWSE"
+      },
+      {
+        "type": "text",
+        "content": "15 +- SCROLLING in FILE SELECTION LISTS"
+      },
+      {
+        "type": "text",
+        "content": "16 +- SCUT in EDIT"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R910S1.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

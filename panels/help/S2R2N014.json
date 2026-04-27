@@ -1,0 +1,113 @@
+{
+  "id": "S2R2N014",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "GENERAL COMMAND - SWAP",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Same as PF 9 key. Use this command to move among split screen sessions."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "SWAP"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "Sessions are activated according to the rules listed below:"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  If you are in FSPLIT mode, SPF/PC activates the next session"
+      },
+      {
+        "type": "text",
+        "content": "in the ring and swaps it into view."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  If you are in SPLIT mode,"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- If the second task occupies less than five lines of the screen,"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC swaps the position and line counts of the sessions."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- If the second task occupies more than five lines of the screen,"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC activates the second task and moves the cursor to it,"
+      },
+      {
+        "type": "text",
+        "content": "without changing the split point."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2N014.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

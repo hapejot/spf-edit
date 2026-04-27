@@ -1,0 +1,116 @@
+{
+  "id": "S2P05M33",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "HOW TO RECORD A KEY MACRO",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Finally, we should have the following text on the screen.  We"
+      },
+      {
+        "type": "text",
+        "content": "probably want to position the cursor at the beginning of the"
+      },
+      {
+        "type": "text",
+        "content": "comment box as follows:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "/*-----------------------*/"
+      },
+      {
+        "type": "text",
+        "content": "/*                      */"
+      },
+      {
+        "type": "text",
+        "content": "/*-----------------------*/"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The comment box has now been recorded.  To terminate the"
+      },
+      {
+        "type": "text",
+        "content": "macro recording, hit [KEY-MACRO-RECORD] key (Alt-M) again."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This second invocation of [KEY-MACRO-RECORD] brings up a panel to"
+      },
+      {
+        "type": "text",
+        "content": "assign this newly created macro to.  To assign the macro to the"
+      },
+      {
+        "type": "text",
+        "content": "Alt-B key, simply press Alt-B - the macro is bound automatically."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2P05M33.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

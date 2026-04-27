@@ -1,0 +1,740 @@
+{
+  "id": "S2DOPRN",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "LOGICAL PRINTER DEFINITION",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "form",
+  "attributes": {
+    "~": {
+      "type": "OUTPUT",
+      "intensity": "low"
+    },
+    "^": {
+      "type": "INPUT",
+      "intensity": "high",
+      "caps": false,
+      "scroll": true,
+      "justification": "left"
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "LOGICAL PRINTER NAME      :"
+          },
+          {
+            "type": "output",
+            "variable": "PRNNAME",
+            "attribute": "~"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PRINTER DESCRIPTION"
+          },
+          {
+            "type": "input",
+            "variable": "PRNDESC",
+            "attribute": "^",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "DEVICE OR FILE NAME"
+          },
+          {
+            "type": "input",
+            "variable": "PRNDEV",
+            "width": 49,
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "(PRN, LPTn, COMn, NUL, filename)"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "FORM FEED:    INITIAL"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+   (Y- Form feed before printing)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "FINAL"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+   (Y- Form feed after printing)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "INTER"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+   (Y- Form feed between pages)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SETUP STRING: BEFORE"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "attribute": "^",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "AFTER"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "attribute": "^",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PAGE:         COLS"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 3,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+ (Maximum columns in line)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "LINES"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 3,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+ (Maximum lines on page)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "MARGINS:      TOP"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 3,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+ (Blank lines at top of page)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "BOTTOM"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 3,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+ (Blank lines at bottom of page)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "LEFT"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 3,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+ (Number of columns for left margin)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "RIGHT"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 3,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+ (Number of columns for right margin)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "HEADER:       PARTS"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 4,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+(N-name, T-time, D-date, P-page number)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "ALIGN"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+   (L-left, C-center, R-Right, S-spread)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SPACE"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 3,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+ (Blank lines after header)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "FOOTER:       PARTS"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 4,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+(N-name, T-time, D-date, P-page number)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "ALIGN"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+   (L-left, C-center, R-Right, S-spread)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SPACE"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 3,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+ (Blank lines before footer)"
+          }
+        ]
+      }
+    ]
+  },
+  "init": {
+    "zvars": [
+      "PRNIFF",
+      "PRNFFF",
+      "PRNPFF",
+      "PRNSET",
+      "PRNRES",
+      "PPPGCOLS",
+      "PPPGLINE",
+      "PPTPMARG",
+      "PPBTMARG",
+      "PPLTMARG",
+      "PPRTMARG",
+      "PPHEAD",
+      "PPHALL",
+      "PPHDSP",
+      "PPFOOT",
+      "PPFALL",
+      "PPFTSP"
+    ]
+  },
+  "proc_section": {
+    "validations": [
+      {
+        "field": "PRNDEV",
+        "rules": [
+          {
+            "type": "non_blank"
+          }
+        ]
+      },
+      {
+        "field": "PRNIFF",
+        "rules": [
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "PRNFFF",
+        "rules": [
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "PPPGLINE",
+        "rules": [
+          {
+            "type": "numeric",
+            "range": {
+              "min": 0,
+              "max": 999
+            }
+          }
+        ]
+      },
+      {
+        "field": "PRNPFF",
+        "rules": [
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "PPPGCOLS",
+        "rules": [
+          {
+            "type": "numeric",
+            "range": {
+              "min": 0,
+              "max": 999
+            }
+          }
+        ]
+      },
+      {
+        "field": "PPTPMARG",
+        "rules": [
+          {
+            "type": "numeric",
+            "range": {
+              "min": 0,
+              "max": 999
+            }
+          }
+        ]
+      },
+      {
+        "field": "PPBTMARG",
+        "rules": [
+          {
+            "type": "numeric",
+            "range": {
+              "min": 0,
+              "max": 999
+            }
+          }
+        ]
+      },
+      {
+        "field": "PPLTMARG",
+        "rules": [
+          {
+            "type": "numeric",
+            "range": {
+              "min": 0,
+              "max": 999
+            }
+          }
+        ]
+      },
+      {
+        "field": "PPRTMARG",
+        "rules": [
+          {
+            "type": "numeric",
+            "range": {
+              "min": 0,
+              "max": 999
+            }
+          }
+        ]
+      },
+      {
+        "field": "PPHEAD",
+        "rules": []
+      },
+      {
+        "field": "PPHALL",
+        "rules": [
+          {
+            "type": "list",
+            "values": [
+              "L",
+              "C",
+              "R",
+              "S"
+            ]
+          }
+        ]
+      },
+      {
+        "field": "PPHDSP",
+        "rules": [
+          {
+            "type": "numeric",
+            "range": {
+              "min": 0,
+              "max": 999
+            }
+          }
+        ]
+      },
+      {
+        "field": "PPFOOT",
+        "rules": []
+      },
+      {
+        "field": "PPFALL",
+        "rules": [
+          {
+            "type": "list",
+            "values": [
+              "L",
+              "C",
+              "R",
+              "S"
+            ]
+          }
+        ]
+      },
+      {
+        "field": "PPFTSP",
+        "rules": [
+          {
+            "type": "numeric",
+            "range": {
+              "min": 0,
+              "max": 999
+            }
+          }
+        ]
+      },
+      {
+        "field": "PRNPFF",
+        "rules": [
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "PPPGCOLS",
+        "rules": [
+          {
+            "type": "numeric",
+            "range": {
+              "min": 0,
+              "max": 999
+            }
+          }
+        ]
+      },
+      {
+        "field": "PPTPMARG",
+        "rules": [
+          {
+            "type": "numeric",
+            "range": {
+              "min": 0,
+              "max": 999
+            }
+          }
+        ]
+      },
+      {
+        "field": "PPBTMARG",
+        "rules": [
+          {
+            "type": "numeric",
+            "range": {
+              "min": 0,
+              "max": 999
+            }
+          }
+        ]
+      },
+      {
+        "field": "PPLTMARG",
+        "rules": [
+          {
+            "type": "numeric",
+            "range": {
+              "min": 0,
+              "max": 999
+            }
+          }
+        ]
+      },
+      {
+        "field": "PPRTMARG",
+        "rules": [
+          {
+            "type": "numeric",
+            "range": {
+              "min": 0,
+              "max": 999
+            }
+          }
+        ]
+      },
+      {
+        "field": "PPHEAD",
+        "rules": []
+      },
+      {
+        "field": "PPHALL",
+        "rules": [
+          {
+            "type": "list",
+            "values": [
+              "L",
+              "C",
+              "R",
+              "S"
+            ]
+          }
+        ]
+      },
+      {
+        "field": "PPHDSP",
+        "rules": [
+          {
+            "type": "numeric",
+            "range": {
+              "min": 0,
+              "max": 999
+            }
+          }
+        ]
+      },
+      {
+        "field": "PPPGCOLS",
+        "rules": [
+          {
+            "type": "non_blank"
+          }
+        ]
+      },
+      {
+        "field": "PPFOOT",
+        "rules": []
+      },
+      {
+        "field": "PPFALL",
+        "rules": [
+          {
+            "type": "list",
+            "values": [
+              "L",
+              "C",
+              "R",
+              "S"
+            ]
+          }
+        ]
+      },
+      {
+        "field": "PPFTSP",
+        "rules": [
+          {
+            "type": "numeric",
+            "range": {
+              "min": 0,
+              "max": 999
+            }
+          }
+        ]
+      },
+      {
+        "field": "PPPGCOLS",
+        "rules": [
+          {
+            "type": "non_blank"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DOPRN.PAN",
+    "category": "form",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved.",
+    "parse_warnings": [
+      "Unparsed PROC line: IF ( &PPPGLINE == '' )",
+      "Unparsed PROC line: ELSE",
+      "Unparsed PROC line: IF ( &PPHALL = 'C', 'R', 'S' )",
+      "Unparsed PROC line: IF ( &PPFALL = 'C', 'R', 'S' )"
+    ]
+  }
+}

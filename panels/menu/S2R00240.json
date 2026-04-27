@@ -1,0 +1,119 @@
+{
+  "id": "S2R00240",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SPF/PC COMMAND - PRINT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Use this command to print the current screen, or part or all of the"
+      },
+      {
+        "type": "text",
+        "content": "current file."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "PRINT [ALL ]"
+      },
+      {
+        "type": "text",
+        "content": "PRI   [PART]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "The printout is sent to the file or device specified in panel 0.2,"
+      },
+      {
+        "type": "text",
+        "content": "PRINTER SETUP."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If no parameter is specified, a print screen is performed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For EDIT or BROWSE, if ALL is specified, the entire file contents"
+      },
+      {
+        "type": "text",
+        "content": "are printed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For EDIT, if PART is specified, the block of lines identified by CC"
+      },
+      {
+        "type": "text",
+        "content": "is printed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R00240.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

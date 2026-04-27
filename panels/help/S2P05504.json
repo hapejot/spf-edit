@@ -1,0 +1,115 @@
+{
+  "id": "S2P05504",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDITOR OPTIONS PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "When loading data delimited records from normal DOS text files, EDIT"
+      },
+      {
+        "type": "text",
+        "content": "examines the length of each variable length record. If it is the"
+      },
+      {
+        "type": "text",
+        "content": "longest record read, the maximum record length allowed is"
+      },
+      {
+        "type": "text",
+        "content": "automatically increased up to the limit set here by MAX RECORD LENGTH."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "RECENT EDIT DEPTH+  This field allows you to configure the number"
+      },
+      {
+        "type": "text",
+        "content": "of files that will be added to your Recent Edit list (Panel 3.H)."
+      },
+      {
+        "type": "text",
+        "content": "By default, this value is 16, since that is the number of files"
+      },
+      {
+        "type": "text",
+        "content": "that can be displayed on a selection list on a 25 line screen."
+      },
+      {
+        "type": "text",
+        "content": "However, this number may be changed from 1 to 99."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SYNTAX COLORIZATION+  Specifies whether program source should be colorized"
+      },
+      {
+        "type": "text",
+        "content": "or not. This is a global setting. In addition to enabling colorization"
+      },
+      {
+        "type": "text",
+        "content": "here, it is also necessary to bind a large colorization language file"
+      },
+      {
+        "type": "text",
+        "content": "(.CLR) to a particular file type and set a color scheme which define"
+      },
+      {
+        "type": "text",
+        "content": "which colors apply to the different classes of language elements. See"
+      },
+      {
+        "type": "text",
+        "content": "\"Program Source Colorization\" on page 7-1 for a full description of"
+      },
+      {
+        "type": "text",
+        "content": "program source colorization."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05504.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

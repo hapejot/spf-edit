@@ -1,0 +1,138 @@
+{
+  "id": "S2R01202",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SPF/PC FILE NAMES",
+    "version_var": "ZSHRTVER",
+    "prefix": "\\HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SYSTEM FILE SPECIFICATION+is an alternate means of entering a complete"
+      },
+      {
+        "type": "text",
+        "content": "file specification.  If used, this field takes precedence"
+      },
+      {
+        "type": "text",
+        "content": "over the upper part of the panel (DRIVE, PATH, etc.).  Also"
+      },
+      {
+        "type": "text",
+        "content": "note that if the FILE SPECIFICATION does not start with a"
+      },
+      {
+        "type": "text",
+        "content": "DRIVE letter, the pathname specified is considered relative"
+      },
+      {
+        "type": "text",
+        "content": "to the SYSTEM CUR DIR field."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Examples:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "║ SYSTEM CUR DIR:"
+          },
+          {
+            "type": "text",
+            "content": "C:\\DATA +        ║ SYSTEM CUR DIR:"
+          },
+          {
+            "type": "text",
+            "content": "C:\\DATA"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "║                                   ║"
+      },
+      {
+        "type": "text",
+        "content": "║ SYSTEM FILE SPECIFICATION:        ║ SYSTEM FILE SPECIFICATION:"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "║"
+          },
+          {
+            "type": "text",
+            "content": "+N:\\APP\\COBOL\\MYFILE.COB      ║"
+          },
+          {
+            "type": "text",
+            "content": "+COBOL\\MYFILE.COB"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Entering the above panel will       Entering the above panel will"
+      },
+      {
+        "type": "text",
+        "content": "edit N:\\APP\\COBOL\\MYFIL.COB.        edit C:\\DATA\\COBOL\\MYFIL.COB."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R01202.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

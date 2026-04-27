@@ -1,0 +1,119 @@
+{
+  "id": "S2P05K40",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "INDEX OF TERMINAL FUNCTIONS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "INDEX OF TERMINAL FUNCTIONS"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following terminal functions may be assigned to any key."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 +- [BACKTAB]"
+      },
+      {
+        "type": "text",
+        "content": "2 +- [BACKSPACE-BLANK]"
+      },
+      {
+        "type": "text",
+        "content": "3 +- [BACKSPACE]"
+      },
+      {
+        "type": "text",
+        "content": "4 +- [CURSOR-SELECT]"
+      },
+      {
+        "type": "text",
+        "content": "5 +- [CURSOR-MOUSE]"
+      },
+      {
+        "type": "text",
+        "content": "6 +- [CURSOR-MOUSE-SELECT]"
+      },
+      {
+        "type": "text",
+        "content": "7 +- [CURSOR-UP/DOWN/LEFT/RIGHT nnn]"
+      },
+      {
+        "type": "text",
+        "content": "8 +- [CURSOR]"
+      },
+      {
+        "type": "text",
+        "content": "9 +- [DEL-CHAR]"
+      },
+      {
+        "type": "text",
+        "content": "10+- [DEL-END-OF-DATA]"
+      },
+      {
+        "type": "text",
+        "content": "11+- [END-OF-DATA]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For specific information, select category by number."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for more functions)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2P05K40.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "id": "S2DSRCH",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE LIST SEARCH UTILITY",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "dialog",
+  "attributes": {
+    "^": {
+      "type": "INPUT",
+      "intensity": "high",
+      "caps": false,
+      "scroll": true,
+      "justification": "asis"
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "zcmd"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Enter one or more search arguments:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "ASIS"
+          },
+          {
+            "type": "input",
+            "variable": "ARG0",
+            "attribute": "^",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "ASIS"
+          },
+          {
+            "type": "input",
+            "variable": "ARG1",
+            "attribute": "^",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "ASIS"
+          },
+          {
+            "type": "input",
+            "variable": "ARG2",
+            "attribute": "^",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "ASIS"
+          },
+          {
+            "type": "input",
+            "variable": "ARG3",
+            "attribute": "^",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CAPS"
+          },
+          {
+            "type": "input",
+            "variable": "ARG4",
+            "attribute": "^",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CAPS"
+          },
+          {
+            "type": "input",
+            "variable": "ARG5",
+            "attribute": "^",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CAPS"
+          },
+          {
+            "type": "input",
+            "variable": "ARG6",
+            "attribute": "^",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CAPS"
+          },
+          {
+            "type": "input",
+            "variable": "ARG7",
+            "attribute": "^",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Membership in the inclusion set is determined by a match on ANY string"
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DSRCH.PAN",
+    "category": "dialog",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

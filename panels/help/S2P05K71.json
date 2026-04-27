@@ -1,0 +1,113 @@
+{
+  "id": "S2P05K71",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "KEYBOARD MACROS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To record this into a macro, go into a piece of COBOL source code,"
+      },
+      {
+        "type": "text",
+        "content": "position the cursor in a place where this style block would be"
+      },
+      {
+        "type": "text",
+        "content": "appropriate, and hit Alt-M.  Alt-M, by default, is assigned to the"
+      },
+      {
+        "type": "text",
+        "content": "[MACRO-RECORD] terminal function; you may reassign [MACRO-RECORD]"
+      },
+      {
+        "type": "text",
+        "content": "to be any key."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "When you hit Alt-M, the INTERACTIVE MACRO RECORDER panel is displayed:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "MACRO NAME       ===>"
+      },
+      {
+        "type": "text",
+        "content": "MACRO DESCRIPTION ==>"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The MACRO NAME is used to identify the macro when we need to"
+      },
+      {
+        "type": "text",
+        "content": "assign it to a key.  Fill in an appropriate name for this macro;"
+      },
+      {
+        "type": "text",
+        "content": "for the example, we will use PERFORM."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "MACRO DESCRIPTION is an option comment field."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "MACRO NAME       ===> PERFORM"
+      },
+      {
+        "type": "text",
+        "content": "MACRO DESCRIPTION ==> Insert a PERFORM template into COBOL"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05K71.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

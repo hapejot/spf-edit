@@ -1,0 +1,120 @@
+{
+  "id": "S2R910D1",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "HELP PANEL INDEX - `D`",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Select from the following help panels by number:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 +- D Line Command in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "2 +- DATA ENTRY PANELS"
+      },
+      {
+        "type": "text",
+        "content": "3 +- DATA in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "4 +- DD Line Command in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "5 +- DEFINE in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "6 +- DELETE in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "7 +- DIRECTORY SEARCH PANEL"
+      },
+      {
+        "type": "text",
+        "content": "8 +- DISPLAY in BROWSE"
+      },
+      {
+        "type": "text",
+        "content": "9 +- DISPLAY CHARACTERISTICS PANEL"
+      },
+      {
+        "type": "text",
+        "content": "10 +- DISPLAY FORMATS"
+      },
+      {
+        "type": "text",
+        "content": "11 +- DISPLAY SCREEN FORMAT in BROWSE"
+      },
+      {
+        "type": "text",
+        "content": "12 +- DOS"
+      },
+      {
+        "type": "text",
+        "content": "13 +- DOWN"
+      },
+      {
+        "type": "text",
+        "content": "14 +- DRIVE SEARCH PANEL"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R910D1.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "S2DMOVF",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "MOVE FILE",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CURRENT DIR:"
+          },
+          {
+            "type": "output",
+            "variable": "ZcurDir"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SOURCE FILE:"
+          },
+          {
+            "type": "output",
+            "variable": "fpath"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "TARGET FILE:"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "NAME"
+          },
+          {
+            "type": "input",
+            "variable": "TONAME",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DMOVF.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

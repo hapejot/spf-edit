@@ -1,0 +1,109 @@
+{
+  "id": "S2DODSPL",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "DISPLAY CHARACTERISTICS",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "list",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD",
+        "scroll": {
+          "variable": "SCROLL"
+        }
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "NAME:~CLRNAME"
+          },
+          {
+            "type": "text",
+            "content": "DESCRIPTION:�CLRDESC"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "!    @    #    ^    �    [    ]    {    }    =    |    \\    \u001c    ?    >    <"
+      },
+      {
+        "type": "text",
+        "content": "0    1    2    3    4    5    6    7    8    9   10   11   12   13   14   15"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "FIELD DESCRIPTION            FOREGROUND BACKGROUND"
+      },
+      {
+        "type": "divider",
+        "style": "single"
+      }
+    ]
+  },
+  "model": {
+    "selection_field": {
+      "variable": "Z",
+      "width": 1
+    },
+    "columns": []
+  },
+  "init": {
+    "zvars": [
+      "SCROLL",
+      "ATTRFORE",
+      "ATTRBACK"
+    ]
+  },
+  "proc_section": {
+    "validations": [
+      {
+        "field": "ATTRFORE",
+        "rules": [
+          {
+            "type": "non_blank"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DODSPL.PAN",
+    "category": "list",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved.",
+    "parse_warnings": [
+      "Unparsed ATTR line: \"~\"  TYPE(OUTPUT) INTENS(LOW)",
+      "Unparsed ATTR line: \"!\"  TYPE(OUTPUT) COLOR(BLACK,  BLACK )",
+      "Unparsed ATTR line: \"@\"  TYPE(OUTPUT) COLOR(BLUE ,  BLUE  )",
+      "Unparsed ATTR line: \"#\"  TYPE(OUTPUT) COLOR(GREEN,  GREEN )",
+      "Unparsed ATTR line: \"^\"  TYPE(OUTPUT) COLOR(CYAN,   CYAN  )",
+      "Unparsed ATTR line: \"�\"  TYPE(OUTPUT) COLOR(RED,    RED   )",
+      "Unparsed ATTR line: \"[\"  TYPE(OUTPUT) COLOR(VIOLET, VIOLET)",
+      "Unparsed ATTR line: \"]\"  TYPE(OUTPUT) COLOR(BROWN,  BROWN )",
+      "Unparsed ATTR line: \"{\"  TYPE(OUTPUT) COLOR(WHITE,  WHITE )",
+      "Unparsed ATTR line: \"}\"  TYPE(OUTPUT) COLOR(8, 8)",
+      "Unparsed ATTR line: \"=\"  TYPE(OUTPUT) COLOR(9, 9)",
+      "Unparsed ATTR line: \"|\"  TYPE(OUTPUT) COLOR(10,10)",
+      "Unparsed ATTR line: \"\\\"  TYPE(OUTPUT) COLOR(11,11)",
+      "Unparsed ATTR line: \"\u001c\"  TYPE(OUTPUT) COLOR(12,12)",
+      "Unparsed ATTR line: \"?\"  TYPE(OUTPUT) COLOR(13,13)",
+      "Unparsed ATTR line: \">\"  TYPE(OUTPUT) COLOR(14,14)",
+      "Unparsed ATTR line: \"<\"  TYPE(OUTPUT) COLOR(15,15)",
+      "Unparsed ATTR line: \"�\"  TYPE(INPUT) SCROLL(OFF) CAPS(OFF) JUST(LEFT) INTENS(HIGH)"
+    ]
+  }
+}

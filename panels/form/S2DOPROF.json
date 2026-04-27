@@ -1,0 +1,358 @@
+{
+  "id": "S2DOPROF",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE PROFILE DEFINITION",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "form",
+  "attributes": {
+    "^": {
+      "type": "PROT",
+      "intensity": "high",
+      "attn": true
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PROFILE NAME               :"
+          },
+          {
+            "type": "output",
+            "variable": "ProfName"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "RECORD FORMAT"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+    (D- Data delimited, L- Length Delimited"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "M- MF Var Len Rec Seqential, V- VRECGEN)"
+      },
+      {
+        "type": "text",
+        "content": "//"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "MAX RECORD LENGTH"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 5,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+(1.."
+          },
+          {
+            "type": "output",
+            "variable": "ZMAXLREC"
+          },
+          {
+            "type": "text",
+            "content": ")"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CHARACTER SET"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+    (A- ASCII, E- EBCDIC)"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SAVE ON COUNT"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 5,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+(0- none, n- number of enters before save)"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "BACKUP ON SAVE"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+    (Y- Rename original to *.BAK, N- No Backup)"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "OVERWRITE ORIGINAL"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+    (N- Write to temp first, Y- Write in place)"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "DATA SHIFT ON CHANGE"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+    (Y- Use ISPF Data Shift, N- No Shift)"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Page"
+          },
+          {
+            "type": "text",
+            "content": "1+of"
+          },
+          {
+            "type": "text",
+            "content": "2+  Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to go to Page 2, or"
+          },
+          {
+            "type": "output",
+            "variable": "END",
+            "attribute": "^"
+          },
+          {
+            "type": "text",
+            "content": "+to exit."
+          }
+        ]
+      }
+    ]
+  },
+  "init": {
+    "zvars": [
+      "PPRECFRM",
+      "PPMAXREC",
+      "PPEBCDIC",
+      "PPSAVCNT",
+      "PBAKFILE",
+      "PPOVRFIL",
+      "PPDATASH"
+    ]
+  },
+  "proc_section": {
+    "validations": [
+      {
+        "field": "PPRECFRM",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "list",
+            "values": [
+              "D",
+              "L",
+              "M",
+              "V"
+            ]
+          }
+        ]
+      },
+      {
+        "field": "PPMAXREC",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "numeric",
+            "range": {
+              "min": 1,
+              "max": "ZMAXLREC"
+            }
+          }
+        ]
+      },
+      {
+        "field": "PPEBCDIC",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "list",
+            "values": [
+              "A",
+              "E"
+            ]
+          }
+        ]
+      },
+      {
+        "field": "PPSAVCNT",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "numeric",
+            "range": {
+              "min": 0,
+              "max": 99999
+            }
+          }
+        ]
+      },
+      {
+        "field": "PBAKFILE",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "PPOVRFIL",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "PPDATASH",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DOPROF.PAN",
+    "category": "form",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

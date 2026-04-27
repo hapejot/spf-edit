@@ -1,0 +1,119 @@
+{
+  "id": "S2R910E1",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "HELP PANEL INDEX - `E`",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Select from the following help panels by number:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 +- EDIT"
+      },
+      {
+        "type": "text",
+        "content": "2 +- EDIT DISPLAY SCREEN FORMAT"
+      },
+      {
+        "type": "text",
+        "content": "3 +- EDIT PRIMARY COMMANDS"
+      },
+      {
+        "type": "text",
+        "content": "4 +- END"
+      },
+      {
+        "type": "text",
+        "content": "5 +- END in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "6 +- ENTRY PANEL in BROWSE"
+      },
+      {
+        "type": "text",
+        "content": "7 +- ENTRY PANEL in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "8 +- EDITOR OPTIONS PANEL"
+      },
+      {
+        "type": "text",
+        "content": "9 +- EOF"
+      },
+      {
+        "type": "text",
+        "content": "10 +- ERASE EOF KEY"
+      },
+      {
+        "type": "text",
+        "content": "11 +- ERRORFILE in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "12 +- EXCLUDE in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "13 +- EXCLUDE COMMAND in FILE SELECTION LISTS"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R910E1.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

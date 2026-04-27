@@ -1,0 +1,112 @@
+{
+  "id": "S2R3A001",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "DIRECTORY SEARCH PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "DIRECTORY SEARCH PANEL"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This panel allows you to search for directory type files, at one or"
+      },
+      {
+        "type": "text",
+        "content": "more levels, from a specific path origin.  The resulting select list"
+      },
+      {
+        "type": "text",
+        "content": "contains all directories at all requested levels that meet the"
+      },
+      {
+        "type": "text",
+        "content": "directory file specification criteria."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Individual fields are explained below:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SYSTEM CUR DIR"
+      },
+      {
+        "type": "text",
+        "content": "Identifies the current directory. This field only applies when"
+      },
+      {
+        "type": "text",
+        "content": "the path specification does not proceed from the root directory."
+      },
+      {
+        "type": "text",
+        "content": "For example, if you specified `C:\\FOO` the search for `FOO`"
+      },
+      {
+        "type": "text",
+        "content": "would begin in the root directory of drive `C`.  If you"
+      },
+      {
+        "type": "text",
+        "content": "specified simply `FOO` the search for `FOO` would begin in the"
+      },
+      {
+        "type": "text",
+        "content": "current directory."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R3A001.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

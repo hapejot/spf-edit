@@ -1,0 +1,116 @@
+{
+  "id": "S2R910F2",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "HELP PANEL INDEX - `F`",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Select from the following help panels by number:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "17 +- FIND LAST PARAMETER"
+      },
+      {
+        "type": "text",
+        "content": "18 +- FIND MESSAGES"
+      },
+      {
+        "type": "text",
+        "content": "19 +- FIND NEXT PARAMETER"
+      },
+      {
+        "type": "text",
+        "content": "20 +- FIND PARAMETERS"
+      },
+      {
+        "type": "text",
+        "content": "21 +- FIND PREFIX PARAMETER"
+      },
+      {
+        "type": "text",
+        "content": "22 +- FIND PREV PARAMETER"
+      },
+      {
+        "type": "text",
+        "content": "23 +- FIND STRINGS"
+      },
+      {
+        "type": "text",
+        "content": "24 +- FIND SUFFIX PARAMETER"
+      },
+      {
+        "type": "text",
+        "content": "25 +- FIND WORD PARAMETER"
+      },
+      {
+        "type": "text",
+        "content": "26 +- FIND in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "27 +- FOREGROUND PANEL MODIFICATION"
+      },
+      {
+        "type": "text",
+        "content": "28 +- FOREGROUND PROCESSING OPTION"
+      },
+      {
+        "type": "text",
+        "content": "29 +- FSPLIT"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R910F2.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

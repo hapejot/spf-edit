@@ -1,0 +1,120 @@
+{
+  "id": "S2R2L420",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - TE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Opens space for text entry.  This mode is generally used for"
+      },
+      {
+        "type": "text",
+        "content": "entering text for publishing applications"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "TE"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "When text entry mode is begun, line numbers disappear.  You may type"
+      },
+      {
+        "type": "text",
+        "content": "without worry about reaching line end. The cursor will skip from the"
+      },
+      {
+        "type": "text",
+        "content": "end of one line to the starting position of the next line"
+      },
+      {
+        "type": "text",
+        "content": "automatically.  You can type continuously.  When the text reaches"
+      },
+      {
+        "type": "text",
+        "content": "the right edge of the data area it is folded to the next line.  To"
+      },
+      {
+        "type": "text",
+        "content": "exit text entry, press ENTER."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "At the end of a page, a new page is automatically displayed"
+      },
+      {
+        "type": "text",
+        "content": "and word wrap occurs."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Tabs are still functional during text entry."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2L420.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

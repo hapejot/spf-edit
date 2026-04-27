@@ -1,0 +1,88 @@
+{
+  "id": "S2DKMN",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "INTERACTIVE MACRO RECORDER",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "form",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "MACRO NAME"
+          },
+          {
+            "type": "input",
+            "variable": "MACNAME",
+            "width": 8,
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "MACRO DESCRIPTION"
+          },
+          {
+            "type": "input",
+            "variable": "MACDESC",
+            "width": 53,
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PRESS^END+TO COMPLETE THE DEFINITION AND BEGIN MACRO RECORDING."
+      },
+      {
+        "type": "text",
+        "content": "ENTER^CANCEL+TO ABORT MACRO."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": ")DISP"
+      }
+    ]
+  },
+  "proc_section": {
+    "validations": [
+      {
+        "field": "MACNAME",
+        "rules": [
+          {
+            "type": "non_blank"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DKMN.PAN",
+    "category": "form",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved.",
+    "parse_warnings": [
+      "Unparsed ATTR line: \"^\" TYPE(PROT) INTENS(HIGH) ATTN(ON)"
+    ]
+  }
+}

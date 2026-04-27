@@ -1,0 +1,117 @@
+{
+  "id": "S2R00330",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SPF/PC COMMAND - RETURN",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Initially assigned to the PF4 key.  Use this command to return"
+      },
+      {
+        "type": "text",
+        "content": "directly to the PRIMARY OPTION PANEL."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "RETURN"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "Issuing this command is the same as issuing multiple END commands to"
+      },
+      {
+        "type": "text",
+        "content": "reach the PRIMARY OPTION PANEL."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If you are in edit, and AUTOSAVE is on, the file is saved as if END"
+      },
+      {
+        "type": "text",
+        "content": "had been issued."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If you are in a recursive EDIT or BROWSE command, RETURN returns"
+      },
+      {
+        "type": "text",
+        "content": "you back to only the last session."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to the previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R00330.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

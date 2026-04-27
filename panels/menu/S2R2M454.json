@@ -1,0 +1,114 @@
+{
+  "id": "S2R2M454",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - BOUNDS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Bounds may also be changed by displaying the boundary definition"
+      },
+      {
+        "type": "text",
+        "content": "line with the BNDS line command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The bounds are automatically adjusted to exclude the sequence-number"
+      },
+      {
+        "type": "text",
+        "content": "fields whenever NUMBER is turned on."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "To reset bounds to defaults:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "BOUNDS"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To set the left boundary to 1 and the right boundary to 72:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "BOUNDS 1 72"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2M454.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

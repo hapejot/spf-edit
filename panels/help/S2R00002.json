@@ -1,0 +1,189 @@
+{
+  "id": "S2R00002",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "INTRODUCTION",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SPF/PC VERSION"
+          },
+          {
+            "type": "output",
+            "variable": "ZSHRTVER"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "GENERAL HELP AND TUTORIAL SYSTEM"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following functions may be used while using the Tutorial:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "┌��┐"
+      },
+      {
+        "type": "text",
+        "content": "│ Command │ Default │                                                 │"
+      },
+      {
+        "type": "text",
+        "content": "│    or   │  PF key │                                                 │"
+      },
+      {
+        "type": "text",
+        "content": "│ Key Name│ Assigned│ Function performed                              │"
+      },
+      {
+        "type": "text",
+        "content": "����"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "│"
+          },
+          {
+            "type": "text",
+            "content": "HELP+   │"
+          },
+          {
+            "type": "text",
+            "content": "F1+   │ Displays brief Tutorial help.                   │"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "│"
+          },
+          {
+            "type": "text",
+            "content": "END+    │"
+          },
+          {
+            "type": "text",
+            "content": "F3+   │ End tutorial -- return to Primary Option panel. │"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "│"
+          },
+          {
+            "type": "text",
+            "content": "UP+     │"
+          },
+          {
+            "type": "text",
+            "content": "F7+   │ Return to higher-level panel (same as SKIP).    │"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "│"
+          },
+          {
+            "type": "text",
+            "content": "SKIP+   │  none   │ Skip remainder of topic--return to higher level.│"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "│"
+          },
+          {
+            "type": "text",
+            "content": "TOC+    │  none   │ Display Table of Contents.                      │"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "│"
+          },
+          {
+            "type": "text",
+            "content": "INDEX+  │  none   │ Display Index.                                  │"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "└��┘"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R00002.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "id": "S2DMBRLV",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE LIST UTILITY",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "form",
+  "attributes": {
+    "^": {
+      "type": "INPUT",
+      "intensity": "high",
+      "caps": false,
+      "scroll": true,
+      "justification": "left"
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PROJECT FILE:"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "DRIVE"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 2,
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PATH"
+          },
+          {
+            "type": "input",
+            "variable": "ZFPATH1",
+            "attribute": "^",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PATH"
+          },
+          {
+            "type": "input",
+            "variable": "ZFPATH2",
+            "attribute": "^",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PATH"
+          },
+          {
+            "type": "input",
+            "variable": "ZFPATH3",
+            "attribute": "^",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "NAME"
+          },
+          {
+            "type": "input",
+            "variable": "ZFNAME",
+            "attribute": "^",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "(Blank or pattern for file selection list)"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SYSTEM CUR DIR:"
+          },
+          {
+            "type": "output",
+            "variable": "ZCURDIR"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SYSTEM FILE SPECIFICATION:"
+      },
+      {
+        "type": "input",
+        "variable": "ZFSPEC",
+        "attribute": "^",
+        "field_connector": true
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CONFIRM DELETE REQUEST"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+  (Y or N)"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "*+The following line commands will be available when the list is displayed"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "B+- Browse"
+          },
+          {
+            "type": "text",
+            "content": "E+- Edit"
+          },
+          {
+            "type": "text",
+            "content": "P+- Print"
+          },
+          {
+            "type": "text",
+            "content": "R+- Rename"
+          },
+          {
+            "type": "text",
+            "content": "D+- Delete"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "M+- Move"
+          },
+          {
+            "type": "text",
+            "content": "C+- Copy"
+          },
+          {
+            "type": "text",
+            "content": "G+- Go"
+          },
+          {
+            "type": "text",
+            "content": "I+- Information"
+          },
+          {
+            "type": "text",
+            "content": "K+- Convert"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "X+- Exclude"
+          },
+          {
+            "type": "text",
+            "content": "T+- Sub Tree"
+          },
+          {
+            "type": "text",
+            "content": "U+- User Cmd"
+          }
+        ]
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2R34000",
+    "zvars": [
+      "ZFDRIVE",
+      "ZCONFIRM"
+    ]
+  },
+  "proc_section": {
+    "validations": [
+      {
+        "field": "ZFDRIVE",
+        "rules": [
+          {
+            "type": "picture",
+            "format": "A:"
+          }
+        ]
+      },
+      {
+        "field": "ZCONFIRM",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DMBRLV.PAN",
+    "category": "form",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

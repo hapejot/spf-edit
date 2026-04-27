@@ -1,0 +1,313 @@
+{
+  "id": "S2DOTERM",
+  "title": null,
+  "type": "form",
+  "attributes": {
+    "!": {
+      "type": "INPUT",
+      "intensity": "high",
+      "caps": false
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "\\"
+          },
+          {
+            "type": "output",
+            "variable": "ZPRODTSK"
+          },
+          {
+            "type": "text",
+            "content": "// TERMINAL CHARACTERISTICS // V"
+          },
+          {
+            "type": "output",
+            "variable": "ZSHRTVER"
+          }
+        ]
+      },
+      {
+        "type": "inline_group",
+        "fields": [
+          {
+            "type": "text",
+            "content": "\\COMMAND ^Zcmd"
+          },
+          {
+            "type": "text",
+            "content": "\\"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "INPUT FIELD PAD               : N    (N - Nulls)"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "USER ID                   \\"
+          },
+          {
+            "type": "input",
+            "variable": "ZUSER",
+            "attribute": "!",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "COMMAND DELIMITER         \\~Z+   (Command stacking delimiter)"
+      },
+      {
+        "type": "text",
+        "content": "SCREEN LINES              \\~Zsf+ (specify number, 0- default)"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "TYPEMATIC RATE            \\~Z +  (1- MIN, 10- MAX, 0- default)"
+      },
+      {
+        "type": "text",
+        "content": "TYPEMATIC DELAY           \\~Z+   (1- MAX,  4- MIN, 0- default)"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "OVERTYPE CURSOR SIZE      \\~Z  + ("
+          },
+          {
+            "type": "text",
+            "content": "of MAX, 0- default)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "INSERT CURSOR SIZE        \\~Z  + ("
+          },
+          {
+            "type": "text",
+            "content": "of MAX, 0- default)"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "PERSISTENT INSERT         \\~Z+   (Y- Insert mode persists after Enter,"
+      },
+      {
+        "type": "text",
+        "content": "N- Reset Insert on Enter)"
+      },
+      {
+        "type": "text",
+        "content": "SCROLL INDICATORS         \\~Z+   (Y- Display arrows on scrollable tables,"
+      },
+      {
+        "type": "text",
+        "content": "N- No indicators)"
+      },
+      {
+        "type": "text",
+        "content": "MOUSE CURSOR              \\~Z+   (Y- Enable mouse, N- Disable mouse)"
+      },
+      {
+        "type": "text",
+        "content": "DISPLAY TIME/DATE         \\~Z+   (B- Both, T- Time, D- Date, N- Neither)"
+      },
+      {
+        "type": "text",
+        "content": "MAXIMUM CONCURRENT TASKS  \\~Z  + (1- MIN, 999-MAX)"
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2P05100",
+    "zvars": [
+      "ZDEL",
+      "ZKEYRATE",
+      "ZDELAY",
+      "ZCSROVR",
+      "ZCSRINS",
+      "ZPERSINS",
+      "ZARROWS",
+      "ZMOUSE",
+      "ZTIMEDIS",
+      "ZMAXTASK"
+    ]
+  },
+  "proc_section": {
+    "validations": [
+      {
+        "field": "ZDEL",
+        "rules": [
+          {
+            "type": "non_blank"
+          }
+        ]
+      },
+      {
+        "field": "ZSF",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "numeric"
+          }
+        ]
+      },
+      {
+        "field": "ZKEYRATE",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "numeric",
+            "range": {
+              "min": 0,
+              "max": 10
+            }
+          }
+        ]
+      },
+      {
+        "field": "ZDELAY",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "numeric",
+            "range": {
+              "min": 0,
+              "max": 4
+            }
+          }
+        ]
+      },
+      {
+        "field": "ZCSROVR",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "numeric",
+            "range": {
+              "min": 0,
+              "max": 100
+            }
+          }
+        ]
+      },
+      {
+        "field": "ZCSRINS",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "numeric",
+            "range": {
+              "min": 0,
+              "max": 100
+            }
+          }
+        ]
+      },
+      {
+        "field": "ZPERSINS",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "ZARROWS",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "ZMOUSE",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "ZTIMEDIS",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "list",
+            "values": [
+              "B",
+              "T",
+              "D",
+              "N"
+            ]
+          }
+        ]
+      },
+      {
+        "field": "ZMAXTASK",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "numeric",
+            "range": {
+              "min": 1,
+              "max": 999
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DOTERM.PAN",
+    "category": "form",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "id": "S2R17420",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FIND BOUNDARIES",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You can restrict the search of the FIND command to a range of columns"
+      },
+      {
+        "type": "text",
+        "content": "by specifying a first and last column number when you enter the FIND"
+      },
+      {
+        "type": "text",
+        "content": "command.  Only those search arguments that lie completely within the"
+      },
+      {
+        "type": "text",
+        "content": "specified columns will be found.  In effect, this option sets temporary"
+      },
+      {
+        "type": "text",
+        "content": "bounds just for the duration of the FIND command.  When column numbers"
+      },
+      {
+        "type": "text",
+        "content": "are specified in a FIND, they override existing bounds settings."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND  find ctc 5 15        +    find \"ctc\" within cols 515"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Usage notes:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If a single column is specified, only the character strings that start"
+      },
+      {
+        "type": "text",
+        "content": "in that column will be found."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If columns are not specified, the bounds region is used."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If the second column specified is larger than the record size, the"
+      },
+      {
+        "type": "text",
+        "content": "record size is used."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R17420.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

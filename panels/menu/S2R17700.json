@@ -1,0 +1,119 @@
+{
+  "id": "S2R17700",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "BROWSE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The BROWSE command opens a nested browse session, thereby allowing you"
+      },
+      {
+        "type": "text",
+        "content": "to browse another file without having to terminate your current browse"
+      },
+      {
+        "type": "text",
+        "content": "session. When the nested browse session is terminated, the current"
+      },
+      {
+        "type": "text",
+        "content": "session resumes."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You may invoke a nested browse session from within browse by entering the"
+      },
+      {
+        "type": "text",
+        "content": "BROWSE+line command.  The format of this command is:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "BROWSE <path\\filename>"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For example:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND  browse xyz     + causes browse to be entered recursively"
+      },
+      {
+        "type": "text",
+        "content": "and file \"xyz\" in the current directory"
+      },
+      {
+        "type": "text",
+        "content": "to be displayed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND  browse         + causes browse to be entered recursively"
+      },
+      {
+        "type": "text",
+        "content": "and the BrowseEntry panel to be"
+      },
+      {
+        "type": "text",
+        "content": "displayed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R17700.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

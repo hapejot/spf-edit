@@ -1,0 +1,112 @@
+{
+  "id": "S2P05K11",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SELECTING KEYBOARD SCHEMES",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For example, when an 'E' is used to edit the \"DEFAULT\" scheme,"
+      },
+      {
+        "type": "text",
+        "content": "the DEFAULT scheme's assignments are made active and then"
+      },
+      {
+        "type": "text",
+        "content": "the key assignment menu for the DEFAULT scheme is displayed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If an 'S' is used to select \"DEFAULT\", then the key assignments"
+      },
+      {
+        "type": "text",
+        "content": "are made active; the key assignment menu does not get displayed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Undesired keyboard schemes may be deleted by using the 'D'"
+      },
+      {
+        "type": "text",
+        "content": "line command next to the scheme to be deleted."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "New keyboard schemes may be created by issuing the 'E <new>'"
+      },
+      {
+        "type": "text",
+        "content": "primary command on the keyboard scheme selection list, where"
+      },
+      {
+        "type": "text",
+        "content": "<new> is replaced by the name of the scheme to create.  For"
+      },
+      {
+        "type": "text",
+        "content": "example, to create a scheme named \"TEST\", issue the command:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "E TEST"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "on the primary command line."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05K11.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "id": "S2R2L416",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - TABS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "=COLS> ----|----1----|----2----|----3----|----4"
+      },
+      {
+        "type": "text",
+        "content": "=TABS>         *         *         *"
+      },
+      {
+        "type": "text",
+        "content": "000031 /* EXAMPLE SHOWS USE OF LOGICAL TABS */"
+      },
+      {
+        "type": "text",
+        "content": "`````` \\aaa \\bbb \\ccc"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Results"
+      },
+      {
+        "type": "text",
+        "content": "=COLS> ----|----1----|----2----|----3----|----4"
+      },
+      {
+        "type": "text",
+        "content": "=TABS>         *         *         *"
+      },
+      {
+        "type": "text",
+        "content": "000031 /* EXAMPLE SHOWS USE OF LOGICAL TABS */"
+      },
+      {
+        "type": "text",
+        "content": "000032          aaa       bbb       ccc"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2L416.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "id": "S2P05606",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE LIST OPTIONS PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Note:+ All sort sequences except `*` present subdirectories"
+      },
+      {
+        "type": "text",
+        "content": "together at the top of the list."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Note:+ You can also sort the select list with the SORT primary"
+      },
+      {
+        "type": "text",
+        "content": "command. See page 6-22 for more information."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SHOW HIDDEN/SYSTEM FILES+  By default, SPF/PC displays files marked"
+      },
+      {
+        "type": "text",
+        "content": "with Hidden and System attributes in its file selection lists."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Y+- Show Hidden and System files in selection lists"
+      },
+      {
+        "type": "text",
+        "content": "N+- Never show Hidden files"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SORT DIRS TO TOP+  In directory lists you can have both files and sub-"
+      },
+      {
+        "type": "text",
+        "content": "directories. Specifies whether sub-directories should be displayed"
+      },
+      {
+        "type": "text",
+        "content": "along with files sorted to the top of the list or in the natural"
+      },
+      {
+        "type": "text",
+        "content": "order they fall within their parent directory."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Y+- Display all directories together at the top of the list."
+      },
+      {
+        "type": "text",
+        "content": "N+- Display directories in the order they naturally occur."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05606.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

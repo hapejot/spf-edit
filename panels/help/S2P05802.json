@@ -1,0 +1,112 @@
+{
+  "id": "S2P05802",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "PATHS PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "DEFAULT SEARCH PATH+  Displays the value set in the SPFPATH environment"
+      },
+      {
+        "type": "text",
+        "content": "variable. If SPFPATH is not present, it displays the same value as"
+      },
+      {
+        "type": "text",
+        "content": "that shown in EXECUTABLE PATH."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "EXECUTABLE PATH+  Displays the path where SPF/PC.EXE file was found."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "GENERAL PROFILE, TABLE, AND KEYBOARD SEARCH PATH+  This is the directory"
+      },
+      {
+        "type": "text",
+        "content": "(or directories) in which all profile and table based options are"
+      },
+      {
+        "type": "text",
+        "content": "found (and altered). When storing a new profile (or option), the data"
+      },
+      {
+        "type": "text",
+        "content": "is always stored in the first directory in the path."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "MACRO AND COMMAND PROCEDURE SEARCH PATH+  This is the directory (or"
+      },
+      {
+        "type": "text",
+        "content": "directories) where all ISREDIT macros and ISPEXEC procedures are"
+      },
+      {
+        "type": "text",
+        "content": "stored."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PANEL AND MESSAGE SEARCH PATH+  This is the directory (or directories)"
+      },
+      {
+        "type": "text",
+        "content": "where all panel and message definition files are stored."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05802.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

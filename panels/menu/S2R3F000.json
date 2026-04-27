@@ -1,0 +1,117 @@
+{
+  "id": "S2R3F000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SAVED LISTS PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SAVED LISTS PANEL"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This function displays a select list of saved lists.  In practical"
+      },
+      {
+        "type": "text",
+        "content": "terms a saved list is a select list that you have decided to save"
+      },
+      {
+        "type": "text",
+        "content": "under a symbolic name."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "A typical application of saved lists is to keep track and act upon"
+      },
+      {
+        "type": "text",
+        "content": "groups of related files. For example a programmer might be working"
+      },
+      {
+        "type": "text",
+        "content": "on ten related source files out of a larger set. By creating and"
+      },
+      {
+        "type": "text",
+        "content": "then saving a list of these files, he can repeatedly access them"
+      },
+      {
+        "type": "text",
+        "content": "without regard to the larger file set. When the activity related to"
+      },
+      {
+        "type": "text",
+        "content": "a particular list is complete, the list is deleted.  One simple way"
+      },
+      {
+        "type": "text",
+        "content": "to think about saved lists is as micro-projects."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Use the SAVELIST primary command to save a list."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R3F000.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

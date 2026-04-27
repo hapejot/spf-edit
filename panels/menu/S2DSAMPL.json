@@ -1,0 +1,98 @@
+{
+  "id": "S2DSAMPL",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SAMPLE PROGRAMS/PANELS",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "menu",
+  "attributes": {
+    "^": {
+      "type": "PROT",
+      "intensity": "high",
+      "attn": true
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The options below are samples of customized panel definitions"
+      },
+      {
+        "type": "text",
+        "content": "using SPF/PC Version 4.0's ISPEXEC interface."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "^   1 +PHONES    -  Sample phone number table application"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Enter"
+          },
+          {
+            "type": "output",
+            "variable": "END",
+            "attribute": "^"
+          },
+          {
+            "type": "text",
+            "content": "+command to return to the primary option panel."
+          }
+        ]
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2DSAM00"
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": [
+        {
+          "value": "&ZCMD",
+          "action": {
+            "type": "panel",
+            "target": "."
+          }
+        },
+        {
+          "value": "'",
+          "action": {
+            "type": "blank"
+          }
+        }
+      ],
+      "default_error": "ISPF102"
+    }
+  },
+  "metadata": {
+    "source_file": "S2DSAMPL.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

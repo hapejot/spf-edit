@@ -1,0 +1,114 @@
+{
+  "id": "S2R2M222",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - CHANGE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "text",
+        "content": "The most common parameter used is ALL which replaces all occurrences"
+      },
+      {
+        "type": "text",
+        "content": "of str1 rather than just the next one."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The remaining optional parameters are not used as frequently."
+      },
+      {
+        "type": "text",
+        "content": "Together they provide a very flexible and powerful extension to the"
+      },
+      {
+        "type": "text",
+        "content": "basic search and replace capability."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CHANGE has common parameters with FIND and EXCLUDE; these parameters"
+      },
+      {
+        "type": "text",
+        "content": "are fully documented once at the beginning of this chapter. So, if"
+      },
+      {
+        "type": "text",
+        "content": "you want to:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- specify character strings containing blanks or quotes, see"
+      },
+      {
+        "type": "text",
+        "content": "DELIMITED STRINGS."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- do case sensitive/insensitive searches, see SIMPLE STRINGS,"
+      },
+      {
+        "type": "text",
+        "content": "DELIMITED STRINGS, and CHARACTER STRINGS."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- find and replace hexadecimal strings, see HEX STRINGS."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- find or replace a string that you just specified in a previous"
+      },
+      {
+        "type": "text",
+        "content": "FIND, CHANGE, EXCLUDE command, see ASTERISK STRINGS."
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2M222.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

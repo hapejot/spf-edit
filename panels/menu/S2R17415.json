@@ -1,0 +1,156 @@
+{
+  "id": "S2R17415",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FIND STRINGS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "A"
+          },
+          {
+            "type": "text",
+            "content": "text string+is used to find a character string regardless of whether its"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "alphabetic characters are"
+          },
+          {
+            "type": "text",
+            "content": "upper or lower+case.  Text strings may be used"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "to override the system option FIND/CHANGE SEARCH TYPE setting of \"C\"."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "A text string is a quoted string that is preceded or followed by the"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "letter"
+          },
+          {
+            "type": "text",
+            "content": "T.+  All alphabetic characters within a text string are treated"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "as if they were upper case and all alphabetic characters in the data"
+      },
+      {
+        "type": "text",
+        "content": "that is being searched are treated as if they were upper case."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If the system option FIND/CHANGE SEARCH TYPE is set to \"T\", then searches"
+      },
+      {
+        "type": "text",
+        "content": "ignore case by default.  In this event, \"T\" need not be used in each FIND"
+      },
+      {
+        "type": "text",
+        "content": "command, and \"C\" can be employed to override the default and cause the"
+      },
+      {
+        "type": "text",
+        "content": "search to be case sensitive."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Example"
+          },
+          {
+            "type": "text",
+            "content": "find t'ctc'        + find the text \"ctc\" or \"CTC\""
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "In the example above, the string \"ctc\" could be entered in either upper"
+      },
+      {
+        "type": "text",
+        "content": "or lower case, and the FIND command would locate an upper case \"CTC\", a"
+      },
+      {
+        "type": "text",
+        "content": "lower case \"ctc\", or any combination: \"cTc\", \"ctC\", etcetera."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R17415.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

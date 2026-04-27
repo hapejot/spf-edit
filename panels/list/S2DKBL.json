@@ -1,0 +1,120 @@
+{
+  "id": "S2DKBL",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "KEYBOARD MAPPING SCHEMES",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "list",
+  "attributes": {
+    "~": {
+      "type": "OUTPUT",
+      "intensity": "low"
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD",
+        "scroll": {
+          "variable": "SCROLL"
+        }
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "ACTIVE MAPPING:"
+          },
+          {
+            "type": "output",
+            "variable": "ZKBNAME",
+            "attribute": "~"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following line commands are valid for the list below:"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "S+- Select"
+          },
+          {
+            "type": "text",
+            "content": "E+- Edit"
+          },
+          {
+            "type": "text",
+            "content": "D+- Delete"
+          },
+          {
+            "type": "text",
+            "content": "C+- Copy"
+          },
+          {
+            "type": "text",
+            "content": "R+- Rename"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "KEYBOARDS   DESCRIPTIONS                       PATH"
+      },
+      {
+        "type": "divider",
+        "style": "single"
+      }
+    ]
+  },
+  "model": {
+    "selection_field": {
+      "variable": "Z",
+      "width": 1
+    },
+    "columns": [
+      {
+        "variable": "NAMEBASE",
+        "attribute": "~",
+        "width": 10
+      },
+      {
+        "variable": "DESCRIPT",
+        "attribute": "~",
+        "width": 35
+      },
+      {
+        "variable": "NAMEPATH",
+        "attribute": "~"
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2P05K00",
+    "zvars": [
+      "SCROLL",
+      "SEL"
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DKBL.PAN",
+    "category": "list",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

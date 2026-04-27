@@ -1,0 +1,112 @@
+{
+  "id": "S2P05K24",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "ASSIGNING VALUES TO KEYS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "REXX edit macros maybe assigned to keys as well, in the same"
+      },
+      {
+        "type": "text",
+        "content": "manner as assigning primary commands.  For example, to assign"
+      },
+      {
+        "type": "text",
+        "content": "the LCENTER REXX edit macro to the Ctrl-C key, change the value"
+      },
+      {
+        "type": "text",
+        "content": "to LCENTER."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To assign a key to a character string, enclose the assigned"
+      },
+      {
+        "type": "text",
+        "content": "value in quotes.  For example, to assign the character string"
+      },
+      {
+        "type": "text",
+        "content": "PICTURE \"??\" to the Ctrl-P key, make the following change:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NAME             VALUE"
+      },
+      {
+        "type": "text",
+        "content": "Ctrl P+          'PICTURE \"??\"'"
+      },
+      {
+        "type": "text",
+        "content": "Ctrl Q+          x'11'"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Once assigned, anytime the Ctrl-P key is pressed, the data"
+      },
+      {
+        "type": "text",
+        "content": "string PICTURE \"??\" is entered instead as if it were typed"
+      },
+      {
+        "type": "text",
+        "content": "from the keyboard."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05K24.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

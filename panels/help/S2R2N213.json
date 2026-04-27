@@ -1,0 +1,127 @@
+{
+  "id": "S2R2N213",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - SORT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Performs two kinds of sorting:"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  sorts full records"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  sorts individual columns of data without affecting the remainder"
+      },
+      {
+        "type": "text",
+        "content": "of the record."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SORT [ range ] [ X  ] [ sort-field_1 ... sort"
+          },
+          {
+            "type": "input",
+            "variable": "field_n",
+            "width": 8
+          },
+          {
+            "type": "text",
+            "content": "]"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "[ NX ]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "If you specify a range, only the lines within that range will be"
+      },
+      {
+        "type": "text",
+        "content": "sorted. To do this, label the first and last lines. Then use these"
+      },
+      {
+        "type": "text",
+        "content": "labels in a range specification. See \"Range Search\" on page 1-6 for"
+      },
+      {
+        "type": "text",
+        "content": "information on how to specify labels."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Sort can also be limited to excluded (X) or non-excluded (NX) lines."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2N213.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "id": "S2R2M714",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - DEFINE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Examples"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To define that QQ is an alias for the CANCEL primary command:"
+      },
+      {
+        "type": "text",
+        "content": "DEFINE QQ ALIAS CANCEL"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To restore the CANCEL primary command to its original status:"
+      },
+      {
+        "type": "text",
+        "content": "DEFINE CANCEL RESET"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To define that the MOVE primary command is to have no operation (NOP):"
+      },
+      {
+        "type": "text",
+        "content": "DEFINE MOVE NOP"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To define that the MOVE primary command is to have no operation (NOP):"
+      },
+      {
+        "type": "text",
+        "content": "DEFINE MOVE NOP"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To define that the COPY primary command is to be disabled (like NOP):"
+      },
+      {
+        "type": "text",
+        "content": "DEFINE COPY DISABLED"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2M714.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "id": "S2R2M242",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - EXCLUDE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Of all of the possible combinations of parameters, the following two"
+      },
+      {
+        "type": "text",
+        "content": "are most frequently:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "`EXCLUDE str1 ALL` excludes all lines that match str1.  It is often"
+      },
+      {
+        "type": "text",
+        "content": "followed with a CHANGE ... NX command to change non-excluded lines"
+      },
+      {
+        "type": "text",
+        "content": "only.  Or the inverse, a CHANGE ... X command to change excluded"
+      },
+      {
+        "type": "text",
+        "content": "lines only."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "EXCLUDE ALL excludes all lines from view.  This is usually followed"
+      },
+      {
+        "type": "text",
+        "content": "by a FIND command which makes only a subset of lines visible.  After"
+      },
+      {
+        "type": "text",
+        "content": "the subset lines are visually verified, a CHANGE ... NX is used to"
+      },
+      {
+        "type": "text",
+        "content": "change them.  Although the rest of the optional parameters are not"
+      },
+      {
+        "type": "text",
+        "content": "used as frequently, they provide a very powerful search capability."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "EXCLUDE has common parameters with CHANGE and FIND; these parameters"
+      },
+      {
+        "type": "text",
+        "content": "are fully documented once at the beginning of this chapter. So, if"
+      },
+      {
+        "type": "text",
+        "content": "you want to:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- specify character strings containing blanks or quotes, see"
+      },
+      {
+        "type": "text",
+        "content": "DELIMITED STRINGS."
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2M242.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

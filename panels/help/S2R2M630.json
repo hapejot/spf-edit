@@ -1,0 +1,112 @@
+{
+  "id": "S2R2M630",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - COPY",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Copies a file from disk into the file being edited."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "COPY [filename] [BEFORE label] [range]"
+      },
+      {
+        "type": "text",
+        "content": "[AFTER  label]"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "If filename is specified, the file is copied from the same drive"
+      },
+      {
+        "type": "text",
+        "content": "and subdirectory as the current file."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If filename is not specified, a file-specification menu is"
+      },
+      {
+        "type": "text",
+        "content": "presented.  On this menu, you can specify any drive and"
+      },
+      {
+        "type": "text",
+        "content": "subdirectory."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If the file-specification menu is presented, the file to be copied"
+      },
+      {
+        "type": "text",
+        "content": "is specified in either SPF/PC FILE DEFINITION or FILE NAME."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2M630.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

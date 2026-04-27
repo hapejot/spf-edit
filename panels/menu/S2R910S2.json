@@ -1,0 +1,122 @@
+{
+  "id": "S2R910S2",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "HELP PANEL INDEX - `S`",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Select from the following help panels by number:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "17 +- SDELETE in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "18 +- SEARCH COMMAND in FILE SELECTION LISTS"
+      },
+      {
+        "type": "text",
+        "content": "19 +- SELECT COMMAND in FILE SELECTION LISTS"
+      },
+      {
+        "type": "text",
+        "content": "20 +- SELECTING MORE THAN ONE FILE FROM A FILELIST"
+      },
+      {
+        "type": "text",
+        "content": "21 +- SELECTION PANELS"
+      },
+      {
+        "type": "text",
+        "content": "22 +- SORT in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "23 +- SORT in FILE SELECTION LISTS"
+      },
+      {
+        "type": "text",
+        "content": "24 +- SPASTE in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "25 +- SPECIAL KEYS"
+      },
+      {
+        "type": "text",
+        "content": "26 +- SPF/PC FILE NAMES"
+      },
+      {
+        "type": "text",
+        "content": "27 +- SPF/PC GENERATED LISTINGS"
+      },
+      {
+        "type": "text",
+        "content": "28 +- SPF/PC PARAMETER OPTIONS"
+      },
+      {
+        "type": "text",
+        "content": "29 +- SPF/PC PRINT"
+      },
+      {
+        "type": "text",
+        "content": "30 +- SPF/PC TERMINATION"
+      },
+      {
+        "type": "text",
+        "content": "31 +- SPF/PC TUTORIAL"
+      },
+      {
+        "type": "text",
+        "content": "32 +- SPF/PC UNIVERSAL COMMANDS"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R910S2.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

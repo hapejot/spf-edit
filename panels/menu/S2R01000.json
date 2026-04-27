@@ -1,0 +1,133 @@
+{
+  "id": "S2R01000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "GENERAL INFORMATION",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The screens presented by SPF/PC are called \"panels\". SPF/PC panels"
+      },
+      {
+        "type": "text",
+        "content": "allow you to enter commands, set operating characteristics, and"
+      },
+      {
+        "type": "text",
+        "content": "define PFkey settings to simplify common operations."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following topics may be selected by number:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 + Panel display formats"
+      },
+      {
+        "type": "text",
+        "content": "2 + Universal commands"
+      },
+      {
+        "type": "text",
+        "content": "3 + File name specification"
+      },
+      {
+        "type": "text",
+        "content": "4 + Directory lists"
+      },
+      {
+        "type": "text",
+        "content": "5 + File characteristics"
+      },
+      {
+        "type": "text",
+        "content": "6 + Scrolling"
+      },
+      {
+        "type": "text",
+        "content": "7 + Split screen mode"
+      },
+      {
+        "type": "text",
+        "content": "8 + Printer output"
+      },
+      {
+        "type": "text",
+        "content": "9 + Terminal operation"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2P00004"
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": [
+        {
+          "value": "&ZCMD",
+          "action": {
+            "type": "panel",
+            "target": "."
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "source_file": "S2R01000.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved.",
+    "parse_warnings": [
+      "Unparsed PROC line: 9,\"PANEL(S2P01800)\"",
+      "Unparsed PROC line: ' ',' ' )"
+    ]
+  }
+}

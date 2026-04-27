@@ -1,0 +1,113 @@
+{
+  "id": "S2R2L480",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - X",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Excludes one or more lines from view."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "X[number]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "This command may be specified with or without a number."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If number is specified, the next consecutive number of lines will be"
+      },
+      {
+        "type": "text",
+        "content": "excluded from view."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This command is helpful when trying to view two groups of lines"
+      },
+      {
+        "type": "text",
+        "content": "which are far apart in a file. The lines in between can be excluded"
+      },
+      {
+        "type": "text",
+        "content": "from the display but are not deleted from the file."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The exclude command is often used in conjunction with the FIND and"
+      },
+      {
+        "type": "text",
+        "content": "CHANGE primary commands to limit the scope of a search.  Use the"
+      },
+      {
+        "type": "text",
+        "content": "RESET primary command redisplay all excluded lines."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2L480.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

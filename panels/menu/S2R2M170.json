@@ -1,0 +1,119 @@
+{
+  "id": "S2R2M170",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - DATA",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Use this command to insert data at the current cursor position."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "DATA string"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "Normally the DATA command and its associated text is assigned to a"
+      },
+      {
+        "type": "text",
+        "content": "function key. The data is inserted (or overtyped) at the current"
+      },
+      {
+        "type": "text",
+        "content": "cursor position just as if you had typed it in through the keyboard."
+      },
+      {
+        "type": "text",
+        "content": "This is particularly convenient when you want to repeatedly insert"
+      },
+      {
+        "type": "text",
+        "content": "some text throughout a document or program source."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "Use KEYS to assign the paragraph markup tag to PF1.  Then press PF1"
+      },
+      {
+        "type": "text",
+        "content": "whenever you want to insert the paragraph markup in a document."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PF1 ===> DATA <p>"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2M170.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

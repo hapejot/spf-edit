@@ -1,0 +1,118 @@
+{
+  "id": "S2R3C000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "TEXT SEARCH PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "3.C - TEXT SEARCH PANEL"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This panel allows you to search for files containing a specific text"
+      },
+      {
+        "type": "text",
+        "content": "string, at one or more levels, from a specific path origin.  The"
+      },
+      {
+        "type": "text",
+        "content": "resulting select list contains all files at all levels that contain"
+      },
+      {
+        "type": "text",
+        "content": "the specified text string."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SYSTEM CUR DIR+- Identifies the current directory."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PATH+- Specifies the origin for the search and optionally constrains"
+      },
+      {
+        "type": "text",
+        "content": "conformant files to a particular file extension."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SEARCH SUBDIRECTORIES+- Specifies whether the search should be limited"
+      },
+      {
+        "type": "text",
+        "content": "to the first level of the specified path or to all levels."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "TEXT+- Specifies the text string to look for."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CASE SENSE+- Specifies whether the TEXT string search should be for an"
+      },
+      {
+        "type": "text",
+        "content": "exact match, or for a match on upper and lower case characters."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R3C000.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

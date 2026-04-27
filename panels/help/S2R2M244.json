@@ -1,0 +1,112 @@
+{
+  "id": "S2R2M244",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - EXCLUDE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "text",
+        "content": "- do case sensitive/insensitive searches, see SIMPLE STRINGS,"
+      },
+      {
+        "type": "text",
+        "content": "DELIMITED STRINGS, and CHARACTER STRINGS."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- search for hexadecimal strings, see HEX STRINGS."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- exclude a line containing string that you just specified in a"
+      },
+      {
+        "type": "text",
+        "content": "previous FIND, CHANGE, EXCLUDE command, see ASTERISK STRINGS."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- match strings dependent on its location within a word, see"
+      },
+      {
+        "type": "text",
+        "content": "STRING MATCHING PARMS."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- change the direction of searching, see DIR SEARCH."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- restrict searching to a range of lines, see RANGE SEARCH."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- affect searching by whether lines are currently `excluded` or"
+      },
+      {
+        "type": "text",
+        "content": "not, see SEARCH EXCLUDED."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- cause searching in columns other than that currently specified"
+      },
+      {
+        "type": "text",
+        "content": "in the BOUNDS command, see COLUMN SEARCH."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2M244.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "id": "S2R2N202",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - COLORMAP",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Binds a program colorization control file to a particular file type."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "COLORMAP  name | NONE"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "To activate program colorization for the current file type, specify"
+      },
+      {
+        "type": "text",
+        "content": "the name of the program colorization file (no extension). To de-"
+      },
+      {
+        "type": "text",
+        "content": "activate program colorization for the current file type, specify NONE."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "It is necessary to enable program source colorization globally via Edit"
+      },
+      {
+        "type": "text",
+        "content": "Option panel 0.5 before any colorization will be performed even when a"
+      },
+      {
+        "type": "text",
+        "content": "COLORMAP has been set."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Conversely, you can disable all program source colorization via Edit"
+      },
+      {
+        "type": "text",
+        "content": "Options panel 0.5."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2N202.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

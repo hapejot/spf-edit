@@ -1,0 +1,120 @@
+{
+  "id": "S2R2L382",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - R",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "R 0001 100 REM THIS IS A BASIC PROGRAM"
+      },
+      {
+        "type": "text",
+        "content": "000002 110 FOR X = 1 TO 100"
+      },
+      {
+        "type": "text",
+        "content": "000003 120 PRINT `THE NUMBER IS `"
+      },
+      {
+        "type": "text",
+        "content": "000004 130 PRINT X"
+      },
+      {
+        "type": "text",
+        "content": "000005 140 Y = 1"
+      },
+      {
+        "type": "text",
+        "content": "000006 150 NEXT X"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Results"
+      },
+      {
+        "type": "text",
+        "content": "000001 100 REM THIS IS A BASIC PROGRAM"
+      },
+      {
+        "type": "text",
+        "content": "000002 100 REM THIS IS A BASIC PROGRAM"
+      },
+      {
+        "type": "text",
+        "content": "000003 110 FOR X = 1 TO 100"
+      },
+      {
+        "type": "text",
+        "content": "000004 120 PRINT `THE NUMBER IS `"
+      },
+      {
+        "type": "text",
+        "content": "000005 130 PRINT X"
+      },
+      {
+        "type": "text",
+        "content": "000006 140 Y = 1"
+      },
+      {
+        "type": "text",
+        "content": "000007 150 NEXT X"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2L382.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

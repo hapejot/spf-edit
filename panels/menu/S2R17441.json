@@ -1,0 +1,122 @@
+{
+  "id": "S2R17441",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FIND CHARS PARAMETER",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CHARS+is the default search mode for the FIND command.  It means that"
+      },
+      {
+        "type": "text",
+        "content": "the specified string is to be considered \"as is\", out of context."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND  find ctc chars           + scans for the chars \"ctc\""
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Any occurrence of the character string 'ctc' within the specified"
+      },
+      {
+        "type": "text",
+        "content": "columns will be considered a match."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "In the list below, all occurrences of the character string \"at\" would be"
+      },
+      {
+        "type": "text",
+        "content": "found."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CHARS AT"
+          },
+          {
+            "type": "text",
+            "content": "AT   ATLANTIC  BAT  BATS  'AT'  =AT!   (ATM)"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to the previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R17441.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

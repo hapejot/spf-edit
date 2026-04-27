@@ -1,0 +1,120 @@
+{
+  "id": "S2PTF020",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "TERMINAL FUNCTION - [BACKSPACE-BLANK]",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Replaces the character one space to the left with a blank,"
+      },
+      {
+        "type": "text",
+        "content": "and moves the cursor to the left without shifting data."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "[BACKSPACE-BLANK]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "This function is a \"no-shift destructive\" backspace, meaning"
+      },
+      {
+        "type": "text",
+        "content": "that it clears the character to the left of the cursor,"
+      },
+      {
+        "type": "text",
+        "content": "performs the backspace function, and does not shift the data"
+      },
+      {
+        "type": "text",
+        "content": "to the right of the cursor left."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This is the same as the <-/Blank Backspace option of SPF/PC"
+      },
+      {
+        "type": "text",
+        "content": "Version 2.1."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "See also:"
+      },
+      {
+        "type": "text",
+        "content": "[BACKSPACE]"
+      },
+      {
+        "type": "text",
+        "content": "[CURSOR-LEFT]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2PTF020.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

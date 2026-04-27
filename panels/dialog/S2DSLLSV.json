@@ -1,0 +1,110 @@
+{
+  "id": "S2DSLLSV",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SAVE LIST",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "dialog",
+  "attributes": {
+    "^": {
+      "type": "PROT",
+      "intensity": "high",
+      "attn": true
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "zcmd"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "LIST NAME"
+          },
+          {
+            "type": "input",
+            "variable": "lname",
+            "width": 8,
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "DESCRIPTION"
+          },
+          {
+            "type": "input",
+            "variable": "ldesc",
+            "width": 58,
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Press"
+          },
+          {
+            "type": "output",
+            "variable": "ENTER",
+            "attribute": "^"
+          },
+          {
+            "type": "text",
+            "content": "+key to save the list."
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Enter"
+          },
+          {
+            "type": "output",
+            "variable": "END",
+            "attribute": "^"
+          },
+          {
+            "type": "text",
+            "content": "+command to cancel."
+          }
+        ]
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2R3F000"
+  },
+  "metadata": {
+    "source_file": "S2DSLLSV.PAN",
+    "category": "dialog",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

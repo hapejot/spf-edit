@@ -1,0 +1,120 @@
+{
+  "id": "S2PTF130",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "TERMINAL FUNCTION - [ENTER-SPFPC]",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Performs either Newline or Enter key processing, depending on"
+      },
+      {
+        "type": "text",
+        "content": "the state of the current panel/edit session."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "[ENTER-SPFPC]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "[ENTER-SPFPC] is intended to be similar to the Enter key of"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC 2.1.  A key assigned to [ENTER-SPFPC] typically will"
+      },
+      {
+        "type": "text",
+        "content": "perform the Newline function (moving down to the next field)."
+      },
+      {
+        "type": "text",
+        "content": "However, it will perform Enter key processing when:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- It is on the last field of a Dialog Manager panel"
+      },
+      {
+        "type": "text",
+        "content": "- Something has been typed in the Primary Command line"
+      },
+      {
+        "type": "text",
+        "content": "- Something has changed inside the editor"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "See Also:"
+      },
+      {
+        "type": "text",
+        "content": "[ENTER-3270]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2PTF130.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

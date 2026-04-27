@@ -1,0 +1,118 @@
+{
+  "id": "S2R2M003",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMANDS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Available EDIT primary commands include:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "43 + SDELETE    Delete current selection"
+      },
+      {
+        "type": "text",
+        "content": "44 + SORT       Sorts records or columns"
+      },
+      {
+        "type": "text",
+        "content": "45 + SPASTE     Paste contents of clipboard to cursor position"
+      },
+      {
+        "type": "text",
+        "content": "46 + SREPLACE   Replace external file with contents of selection"
+      },
+      {
+        "type": "text",
+        "content": "47 + STATS      Turn stats on or off"
+      },
+      {
+        "type": "text",
+        "content": "48 + STOLOWER   Convert to lowercase"
+      },
+      {
+        "type": "text",
+        "content": "49 + STOUPPER   Convert to uppercase"
+      },
+      {
+        "type": "text",
+        "content": "50 + SXCLUDE    Exclude selected lines"
+      },
+      {
+        "type": "text",
+        "content": "51 + TABS       Turn tabs on or off"
+      },
+      {
+        "type": "text",
+        "content": "52 + UNDO       Undo alterations"
+      },
+      {
+        "type": "text",
+        "content": "53 + UNNUM      Reset numbers to blanks"
+      },
+      {
+        "type": "text",
+        "content": "54 + XMACRO     Sets the exit macro name in the EDIT profile"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2M003.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

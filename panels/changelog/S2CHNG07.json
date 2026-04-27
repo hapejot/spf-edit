@@ -1,0 +1,108 @@
+{
+  "id": "S2CHNG07",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EXTENDED FILE SPECIFICATION",
+    "version_var": "ZSHRTVER",
+    "prefix": "CHANGES"
+  },
+  "type": "changelog",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You can now specify multiple paths and multiple types in a single"
+      },
+      {
+        "type": "text",
+        "content": "file specification. For example:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\\cobol\\v1\\src\\*.cob;\\cobol\\v2\\src\\*.cob"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You can specify a set of directories from which a particular type"
+      },
+      {
+        "type": "text",
+        "content": "of files is to be accessed. For example:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "[\\cobol\\v1\\src;\\cobol\\v2\\src]*.cob *.cpy"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You can specify an environment variable as part of a file name."
+      },
+      {
+        "type": "text",
+        "content": "For example, in AUTOEXEC.BAT:  set cobsrc=\\cobol\\v1\\src  Then,"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "cobsrc"
+          },
+          {
+            "type": "text",
+            "content": "\\*.cob"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For further details see:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC User Guide and Reference,"
+      },
+      {
+        "type": "text",
+        "content": "Special File Specifications ......... Page 5-8"
+      }
+    ]
+  },
+  "proc_section": {
+    "assignments": {
+      "ZSEL": "UP"
+    }
+  },
+  "metadata": {
+    "source_file": "S2CHNG07.PAN",
+    "category": "changelog"
+  }
+}

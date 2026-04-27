@@ -1,0 +1,271 @@
+{
+  "id": "S2CHNG00",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "CHANGES IN VERSION &ZSHRTVER",
+    "version_var": "ZSHRTVER",
+    "prefix": "CHANGES"
+  },
+  "type": "changelog",
+  "attributes": {
+    "^": {
+      "type": "PROT",
+      "intensity": "high",
+      "mouse": true
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "The following are enhancements SPF/PC Version"
+          },
+          {
+            "type": "output",
+            "variable": "ZSHRTVER"
+          },
+          {
+            "type": "text",
+            "content": "."
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "For specific information, enter the desired number and press 3270-ENTER."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "^  1 + Modifiable Panels                ^ 12 + 132 Column Support"
+      },
+      {
+        "type": "text",
+        "content": "^  2 + UNDO/REDO                        ^ 13 + 64000 Byte Record Support"
+      },
+      {
+        "type": "text",
+        "content": "^  3 + Program Source Colorization      ^ 14 + Edit Read-only Files"
+      },
+      {
+        "type": "text",
+        "content": "^  4 + SUPERC File Comparison           ^ 15 + Enhanced CUT and PASTE"
+      },
+      {
+        "type": "text",
+        "content": "^  5 + New SPLIT Modes                  ^ 16 + 32 Bit Executables"
+      },
+      {
+        "type": "text",
+        "content": "^  6 + Enhanced File Selection Lists    ^ 17 + New SPFPC Command Parameters"
+      },
+      {
+        "type": "text",
+        "content": "^  7 + Extended File Specifications     ^ 18 + New Primary Commands"
+      },
+      {
+        "type": "text",
+        "content": "^  8 + Print Setup Enhancements         ^ 19 + Optional COBOL Source Analyst"
+      },
+      {
+        "type": "text",
+        "content": "^  9 + PFSHOW Support                   ^ 20 + Optional XDB Interface"
+      },
+      {
+        "type": "text",
+        "content": "^ 10 + Scrollable Input Fields          ^ 21 + Optional MVS Access"
+      },
+      {
+        "type": "text",
+        "content": "^ 11 + Full Mouse Support               ^ 22 + Optional Micro Focus Shell"
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": [
+        {
+          "value": "1",
+          "action": {
+            "type": "panel",
+            "target": "S2CHNG01"
+          }
+        },
+        {
+          "value": "2",
+          "action": {
+            "type": "panel",
+            "target": "S2CHNG02"
+          }
+        },
+        {
+          "value": "3",
+          "action": {
+            "type": "panel",
+            "target": "S2CHNG03"
+          }
+        },
+        {
+          "value": "4",
+          "action": {
+            "type": "panel",
+            "target": "S2CHNG04"
+          }
+        },
+        {
+          "value": "5",
+          "action": {
+            "type": "panel",
+            "target": "S2CHNG05"
+          }
+        },
+        {
+          "value": "6",
+          "action": {
+            "type": "panel",
+            "target": "S2CHNG06"
+          }
+        },
+        {
+          "value": "7",
+          "action": {
+            "type": "panel",
+            "target": "S2CHNG07"
+          }
+        },
+        {
+          "value": "8",
+          "action": {
+            "type": "panel",
+            "target": "S2CHNG08"
+          }
+        },
+        {
+          "value": "9",
+          "action": {
+            "type": "panel",
+            "target": "S2CHNG09"
+          }
+        },
+        {
+          "value": "10",
+          "action": {
+            "type": "panel",
+            "target": "S2CHNG10"
+          }
+        },
+        {
+          "value": "11",
+          "action": {
+            "type": "panel",
+            "target": "S2CHNG11"
+          }
+        },
+        {
+          "value": "12",
+          "action": {
+            "type": "panel",
+            "target": "S2CHNG12"
+          }
+        },
+        {
+          "value": "13",
+          "action": {
+            "type": "panel",
+            "target": "S2CHNG13"
+          }
+        },
+        {
+          "value": "14",
+          "action": {
+            "type": "panel",
+            "target": "S2CHNG14"
+          }
+        },
+        {
+          "value": "15",
+          "action": {
+            "type": "panel",
+            "target": "S2CHNG15"
+          }
+        },
+        {
+          "value": "16",
+          "action": {
+            "type": "panel",
+            "target": "S2CHNG16"
+          }
+        },
+        {
+          "value": "17",
+          "action": {
+            "type": "panel",
+            "target": "S2CHNG17"
+          }
+        },
+        {
+          "value": "18",
+          "action": {
+            "type": "list",
+            "targets": [
+              "S2CHNG18",
+              "S2CH18P2"
+            ]
+          }
+        },
+        {
+          "value": "19",
+          "action": {
+            "type": "panel",
+            "target": "S2CHNG19"
+          }
+        },
+        {
+          "value": "20",
+          "action": {
+            "type": "panel",
+            "target": "S2CHNG20"
+          }
+        },
+        {
+          "value": "21",
+          "action": {
+            "type": "panel",
+            "target": "S2CHNG21"
+          }
+        },
+        {
+          "value": "22",
+          "action": {
+            "type": "panel",
+            "target": "S2CHNG22"
+          }
+        },
+        {
+          "value": "'",
+          "action": {
+            "type": "blank"
+          }
+        }
+      ],
+      "default_error": "ISPF102"
+    }
+  },
+  "metadata": {
+    "source_file": "S2CHNG00.PAN",
+    "category": "changelog"
+  }
+}

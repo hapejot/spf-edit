@@ -1,0 +1,88 @@
+{
+  "id": "S2DCONF",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "CONFIRM DELETE",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "dialog",
+  "attributes": {
+    "^": {
+      "type": "PROT",
+      "intensity": "high",
+      "attn": true
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "FILE:"
+          },
+          {
+            "type": "output",
+            "variable": "fpath"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "INSTRUCTIONS:"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Press"
+          },
+          {
+            "type": "output",
+            "variable": "ENTER",
+            "attribute": "^"
+          },
+          {
+            "type": "text",
+            "content": "+key to confirm delete request."
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Enter"
+          },
+          {
+            "type": "output",
+            "variable": "END",
+            "attribute": "^"
+          },
+          {
+            "type": "text",
+            "content": "+command to cancel delete request."
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DCONF.PAN",
+    "category": "dialog",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "id": "S2P05K61",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "CUSTOM KEY ASSIGNMENT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "When you bring up the custom key table, it appears as follows:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NAME                    VALUE"
+      },
+      {
+        "type": "text",
+        "content": "Big-Enter               [ENTER-3270]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The NAME field of the table represents the labels of previously"
+      },
+      {
+        "type": "text",
+        "content": "defined custom keys, whereas the VALUE field is for the SPF"
+      },
+      {
+        "type": "text",
+        "content": "command assigned to that key."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "To define a new custom key, type the"
+          },
+          {
+            "type": "text",
+            "content": "NEW+primary command, and"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "hit ENTER.  A panel will come up displaying:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CUSTOM KEY DEFINITION"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PRESS THE KEY TO BE DEFINED+ IF SPF/PC RECOGNIZES THE KEY, ITS"
+      },
+      {
+        "type": "text",
+        "content": "LABEL WILL BE DISPLAYED BELOW; OTHERWISE, A LABEL SIMILAR TO"
+      },
+      {
+        "type": "text",
+        "content": "CUSTOM-##### WILL BE DISPLAYED"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "KEY NAME:   << NONE >>"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05K61.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

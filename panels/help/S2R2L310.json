@@ -1,0 +1,114 @@
+{
+  "id": "S2R2L310",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - M",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Moves one or more lines to another location within the same file."
+      },
+      {
+        "type": "text",
+        "content": "It is also used with CREATE/REPLACE/CUT primary commands to move"
+      },
+      {
+        "type": "text",
+        "content": "lines between files."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "M[number]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "This command deletes the original lines and moves them to a new"
+      },
+      {
+        "type": "text",
+        "content": "location."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Type B or A on a line to indicate where the moved line is to be"
+      },
+      {
+        "type": "text",
+        "content": "placed.  Type an M on the line to be moved. The line marked with M"
+      },
+      {
+        "type": "text",
+        "content": "will be moved and placed before (B) or after (A) the designated"
+      },
+      {
+        "type": "text",
+        "content": "line."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "A number may follow the M to indicate that more than one line is to"
+      },
+      {
+        "type": "text",
+        "content": "be moved. This has the same effect as the Block Move command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2L310.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

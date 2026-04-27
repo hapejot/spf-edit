@@ -1,0 +1,120 @@
+{
+  "id": "S2R2N207",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - REDO",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Specifies that one or more EDIT operations which were undone should"
+      },
+      {
+        "type": "text",
+        "content": "be re-done. This is the opposite of UNDO."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "REDO [ nnn | ALL ]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "In the normal use of EDIT you will make numerous changes to a file."
+      },
+      {
+        "type": "text",
+        "content": "When UNDO processing is on, each change is recorded in a journal which"
+      },
+      {
+        "type": "text",
+        "content": "may subsequently be used to undo a change. Having undone a change, you"
+      },
+      {
+        "type": "text",
+        "content": "may want to redo it. This is when the REDO command comes into play."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For each UNDO with no intervening changes, you can apply REDO. If no"
+      },
+      {
+        "type": "text",
+        "content": "parameters are specified, only the last posted UNDO is redone."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If a number is specified, REDO is applied to the specific number of"
+      },
+      {
+        "type": "text",
+        "content": "posted UNDOs. In the event that the posted number of UNDOs is smaller"
+      },
+      {
+        "type": "text",
+        "content": "than the specified number, only the posted UNDOs are redone."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2N207.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

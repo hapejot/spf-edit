@@ -1,0 +1,112 @@
+{
+  "id": "S2P05K63",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "CUSTOM KEY ASSIGNMENT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "After hitting Enter, the EDIT KEY DEFINITION panel is displayed,"
+      },
+      {
+        "type": "text",
+        "content": "which allows you to change the label and value of the key.  For"
+      },
+      {
+        "type": "text",
+        "content": "example, after hitting Ctrl-Numeric 5 and hitting Enter, the"
+      },
+      {
+        "type": "text",
+        "content": "following panel is displayed:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "KEY NAME  ==> Ctrl CUSTOM-00143"
+      },
+      {
+        "type": "text",
+        "content": "KEY VALUE ==>"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "On this panel, KEY NAME represents the \"label\" that is will"
+      },
+      {
+        "type": "text",
+        "content": "identify this key from the other custom keys.  The label is"
+      },
+      {
+        "type": "text",
+        "content": "purely informational field, and its contents can contain"
+      },
+      {
+        "type": "text",
+        "content": "anything that will help you identify the key later.  Typically,"
+      },
+      {
+        "type": "text",
+        "content": "you would want the label to correspond to whatever is printed"
+      },
+      {
+        "type": "text",
+        "content": "on the key.  For that reason, we change the label to:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "KEY NAME  ==> Ctrl Numeric-5"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05K63.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

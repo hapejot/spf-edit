@@ -1,0 +1,192 @@
+{
+  "id": "S2DCRCM",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT ─% &PMODE  %",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "dialog",
+  "attributes": {
+    "^": {
+      "type": "PROT",
+      "intensity": "high",
+      "attn": true
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PROJECT FILE:"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "DRIVE"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 2,
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PATH"
+          },
+          {
+            "type": "input",
+            "variable": "CFPATH1",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PATH"
+          },
+          {
+            "type": "input",
+            "variable": "CFPATH2",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PATH"
+          },
+          {
+            "type": "input",
+            "variable": "CFPATH3",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "NAME"
+          },
+          {
+            "type": "input",
+            "variable": "CFNAME",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "(Blank or pattern for file selection list)"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SYSTEM CUR DIR:"
+          },
+          {
+            "type": "output",
+            "variable": "ZCURDIR"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SYSTEM FILE SPECIFICATION:"
+      },
+      {
+        "type": "input",
+        "variable": "CFSPEC",
+        "field_connector": true
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PROFILE"
+          },
+          {
+            "type": "input",
+            "variable": "CPROFILE",
+            "width": 8,
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Press"
+          },
+          {
+            "type": "output",
+            "variable": "ENTER",
+            "attribute": "^"
+          },
+          {
+            "type": "text",
+            "content": "+key to move or enter"
+          },
+          {
+            "type": "output",
+            "variable": "END",
+            "attribute": "^"
+          },
+          {
+            "type": "text",
+            "content": "+command to cancel move."
+          }
+        ]
+      }
+    ]
+  },
+  "init": {
+    "zvars": [
+      "CFDRIVE"
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DCRCM.PAN",
+    "category": "dialog",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "id": "S2P05M00",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "KEYBOARD MACROS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "KEYBOARD MACROS"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Keyboard macros are recording of keyboard events (ie: data keys,"
+      },
+      {
+        "type": "text",
+        "content": "terminal functions, and primary commands) sequentially ordered"
+      },
+      {
+        "type": "text",
+        "content": "for later playback to repetatively perform a specific action."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Key macros are typically assigned to specific keys, and are"
+      },
+      {
+        "type": "text",
+        "content": "invoked whenever the key is pressed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For details, select from the following by number:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 +- General Description"
+      },
+      {
+        "type": "text",
+        "content": "2 +- What is 0.M used for"
+      },
+      {
+        "type": "text",
+        "content": "3 +- How to Record a Macro"
+      },
+      {
+        "type": "text",
+        "content": "4 +- How to Playback a Macro"
+      },
+      {
+        "type": "text",
+        "content": "5 +- How to Assign a recorded Macro to a key"
+      },
+      {
+        "type": "text",
+        "content": "6 +- The difference between key and REXX macros"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2P05M00.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

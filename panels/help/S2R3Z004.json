@@ -1,0 +1,115 @@
+{
+  "id": "S2R3Z004",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "UTILITY FUNCTIONS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Super Lists A - E provide significant extensions to the basic 3.4"
+      },
+      {
+        "type": "text",
+        "content": "functional set."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "A - DIRECTORY SEARCH"
+      },
+      {
+        "type": "text",
+        "content": "If you are interested exclusively in directories, use this panel"
+      },
+      {
+        "type": "text",
+        "content": "to do a single or multilevel search for directories.  The result"
+      },
+      {
+        "type": "text",
+        "content": "of the search is a select list of directories that meet the"
+      },
+      {
+        "type": "text",
+        "content": "search criteria."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "B - FILE SEARCH"
+      },
+      {
+        "type": "text",
+        "content": "If you are interested exclusively in files, use this panel to do"
+      },
+      {
+        "type": "text",
+        "content": "a single or multilevel search for files.  The result of the"
+      },
+      {
+        "type": "text",
+        "content": "search is a select list of files that meet the search criteria."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "C - TEXT SEARCH"
+      },
+      {
+        "type": "text",
+        "content": "If you want to search for a specific text string in one or more"
+      },
+      {
+        "type": "text",
+        "content": "files, use this panel to do a single or multilevel text search."
+      },
+      {
+        "type": "text",
+        "content": "The result of the search is a select list of files that contain"
+      },
+      {
+        "type": "text",
+        "content": "the specified text string."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R3Z004.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

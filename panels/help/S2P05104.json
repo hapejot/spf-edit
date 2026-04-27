@@ -1,0 +1,113 @@
+{
+  "id": "S2P05104",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "TERMINAL CHARACTERISTICS PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "TYPEMATIC RATE+- Specifies the typematic repeat rate.  Specify a value"
+      },
+      {
+        "type": "text",
+        "content": "between 1 and 10, where 1 is the minimum rate, and 10 is the maximum"
+      },
+      {
+        "type": "text",
+        "content": "rate.  If 0 is specified, the typematic rate in not changed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "TYPEMATIC DELAY+- Specifies the typematic delay.  Specify a value"
+      },
+      {
+        "type": "text",
+        "content": "between 1 and 4, where 1 is the maximum delay, and 4 is the minimum"
+      },
+      {
+        "type": "text",
+        "content": "delay.  If 0 is specified, the typematic delay in not changed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "OVERTYPE CURSOR SIZE+- Specifies the vertical size of the cursor in"
+      },
+      {
+        "type": "text",
+        "content": "overtype mode as a percentage of the maximum possible size. Specify"
+      },
+      {
+        "type": "text",
+        "content": "a number in the range of 1 to 100.  If 0 is specified, the overtype"
+      },
+      {
+        "type": "text",
+        "content": "cursor size in not changed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "INSERT CURSOR SIZE+- Specifies the vertical size of the cursor in"
+      },
+      {
+        "type": "text",
+        "content": "insert mode as a percentage of the maximum possible size. Specify a"
+      },
+      {
+        "type": "text",
+        "content": "number in the range of 1 to 100.  If 0 is specified, the insert"
+      },
+      {
+        "type": "text",
+        "content": "cursor size in not changed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05104.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

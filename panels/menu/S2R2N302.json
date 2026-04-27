@@ -1,0 +1,118 @@
+{
+  "id": "S2R2N302",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE SELECTION LIST",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "This is a primary command. Use this command to EXCLUDE a specific group"
+      },
+      {
+        "type": "text",
+        "content": "of files from the current select list."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "EXCLUDE file-spec"
+      },
+      {
+        "type": "text",
+        "content": "EXC     [ file-spec2 ]"
+      },
+      {
+        "type": "text",
+        "content": "EX      [ file-spec...]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "Standard system wild card characters are accepted."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Individual files or blocks of files can be excluded using the X or XX"
+      },
+      {
+        "type": "text",
+        "content": "line commands respectively."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You can specify multiple file specifications. This will create a select"
+      },
+      {
+        "type": "text",
+        "content": "list of all matching files."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2N302.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

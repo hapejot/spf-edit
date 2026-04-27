@@ -1,0 +1,116 @@
+{
+  "id": "S2R3G002",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE CONVERSION PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Wildcards may be used to bring a selection list of files that may"
+      },
+      {
+        "type": "text",
+        "content": "be converted one by one.  If a selection list is used, then the"
+      },
+      {
+        "type": "text",
+        "content": "destination file information is asked for again before the"
+      },
+      {
+        "type": "text",
+        "content": "conversion occurs."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SOURCE PROFILE"
+      },
+      {
+        "type": "text",
+        "content": "Used to specify a profile other than the default.  If none is"
+      },
+      {
+        "type": "text",
+        "content": "specified, than the file is loaded as based upon the file's"
+      },
+      {
+        "type": "text",
+        "content": "extension.  If a profile is specified and file list is"
+      },
+      {
+        "type": "text",
+        "content": "generated, then all files that are selected for conversion"
+      },
+      {
+        "type": "text",
+        "content": "use the specified SOURCE PROFILE."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "DESTINATION FILE:"
+      },
+      {
+        "type": "text",
+        "content": "NAME+- Specifies the name of the file to convert the SOURCE"
+      },
+      {
+        "type": "text",
+        "content": "file to.  If a full pathname is not specified, then the file"
+      },
+      {
+        "type": "text",
+        "content": "is written to the directory specfied in the CURRENT DIR field."
+      },
+      {
+        "type": "text",
+        "content": "If a selection list is displayed for files to convert, then"
+      },
+      {
+        "type": "text",
+        "content": "the DESTINATION FILE information on this panel is ignored and"
+      },
+      {
+        "type": "text",
+        "content": "replaced by the info specified during each individual conversion."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R3G002.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

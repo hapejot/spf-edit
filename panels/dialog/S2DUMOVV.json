@@ -1,0 +1,251 @@
+{
+  "id": "S2DUMOVV",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "MOVE/COPY UTILITY",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "dialog",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "M+- move file/directory"
+          },
+          {
+            "type": "text",
+            "content": "C+- copy file/directory"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "FROM FILE:"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "DRIVE"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 2,
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PATH"
+          },
+          {
+            "type": "input",
+            "variable": "ZFPATH1",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PATH"
+          },
+          {
+            "type": "input",
+            "variable": "ZFPATH2",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PATH"
+          },
+          {
+            "type": "input",
+            "variable": "ZFPATH3",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "NAME"
+          },
+          {
+            "type": "input",
+            "variable": "ZFNAME",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "(blank or '*.*' for all files, or pattern for multiple files)"
+      },
+      {
+        "type": "text",
+        "content": "TO FILE:"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "DRIVE"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 2,
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PATH"
+          },
+          {
+            "type": "input",
+            "variable": "PFPATH1",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PATH"
+          },
+          {
+            "type": "input",
+            "variable": "PFPATH2",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PATH"
+          },
+          {
+            "type": "input",
+            "variable": "PFPATH3",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "NAME"
+          },
+          {
+            "type": "input",
+            "variable": "PFNAME",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "(blank or '*.*' for same name, or pattern for name change)"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SYSTEM CUR DIR:"
+          },
+          {
+            "type": "output",
+            "variable": "ZCURDIR"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "SYSTEM FILE SPECIFICATION:"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "FROM"
+          },
+          {
+            "type": "input",
+            "variable": "ZFSPEC",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "TO"
+          },
+          {
+            "type": "input",
+            "variable": "PFSPEC",
+            "field_connector": true
+          }
+        ]
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2R33000",
+    "zvars": [
+      "ZFDRIVE",
+      "PFDRIVE"
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DUMOVV.PAN",
+    "category": "dialog",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

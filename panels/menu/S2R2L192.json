@@ -1,0 +1,123 @@
+{
+  "id": "S2R2L192",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - B",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "000020 *   This is a part of a dBASE III program"
+      },
+      {
+        "type": "text",
+        "content": "000021 CLEAR"
+      },
+      {
+        "type": "text",
+        "content": "000022 @ 4,15       SAY `List By:`"
+      },
+      {
+        "type": "text",
+        "content": "000023 @ ROW()-3,20 SAY ` 1 - People names`"
+      },
+      {
+        "type": "text",
+        "content": "B 0024 @ ROW()-2,20 SAY ` 2 - Organization names`"
+      },
+      {
+        "type": "text",
+        "content": "M 0025 @ ROW()-2,20 SAY ` 3 - Serial number`"
+      },
+      {
+        "type": "text",
+        "content": "000026 @ ROW()-2,20 SAY ` Q - Return to previous menu`"
+      },
+      {
+        "type": "text",
+        "content": "000027 @ ROW()-3,15 SAY `Press your selection ` ;"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Results"
+      },
+      {
+        "type": "text",
+        "content": "000020 *   This is a part of a dBASE III program"
+      },
+      {
+        "type": "text",
+        "content": "000021 CLEAR"
+      },
+      {
+        "type": "text",
+        "content": "000022 @ 4,15       SAY `List By:`"
+      },
+      {
+        "type": "text",
+        "content": "000023 @ ROW()-3,20 SAY ` 1 - People names`"
+      },
+      {
+        "type": "text",
+        "content": "000024 @ ROW()-2,20 SAY ` 3 - Serial number`"
+      },
+      {
+        "type": "text",
+        "content": "000025 @ ROW()-2,20 SAY ` 2 - Organization names`"
+      },
+      {
+        "type": "text",
+        "content": "000026 @ ROW()-2,20 SAY ` Q - Return to previous menu`"
+      },
+      {
+        "type": "text",
+        "content": "000027 @ ROW()-3,15 SAY `Press your selection ` ;"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2L192.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

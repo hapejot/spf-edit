@@ -1,0 +1,83 @@
+{
+  "id": "S2CHNG15",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "ENHANCED CUT AND PASTE",
+    "version_var": "ZSHRTVER",
+    "prefix": "CHANGES"
+  },
+  "type": "changelog",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CUT has been enhanced to allow appending to the DOS or OS/2"
+      },
+      {
+        "type": "text",
+        "content": "clipboards; to append, use the CUT APPEND command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Alternative PASTE modes are now available to place text at the"
+      },
+      {
+        "type": "text",
+        "content": "current cursor position.  Use the SPASTE command for to place text"
+      },
+      {
+        "type": "text",
+        "content": "at the current cursor position."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For further details see:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC Command Reference,"
+      },
+      {
+        "type": "text",
+        "content": "CUT ............................ Page 1-30"
+      },
+      {
+        "type": "text",
+        "content": "PASTE .......................... Page 1-52"
+      },
+      {
+        "type": "text",
+        "content": "SCUT ........................... Page 1-66"
+      },
+      {
+        "type": "text",
+        "content": "SPASTE ......................... Page 1-71"
+      }
+    ]
+  },
+  "proc_section": {
+    "assignments": {
+      "ZSEL": "UP"
+    }
+  },
+  "metadata": {
+    "source_file": "S2CHNG15.PAN",
+    "category": "changelog"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "id": "S2R20000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "EDIT allows you to create new files or change data in existing files."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Records are displayed in full-screen mode, and, if necessary, can be"
+      },
+      {
+        "type": "text",
+        "content": "scrolled forward, backward, left, or right."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following topics may be selected by number:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "0 + General introduction"
+      },
+      {
+        "type": "text",
+        "content": "1 + Primary Commands"
+      },
+      {
+        "type": "text",
+        "content": "2 + Line Commands"
+      },
+      {
+        "type": "text",
+        "content": "3 + Types of files"
+      },
+      {
+        "type": "text",
+        "content": "4 + EDIT Entry panel"
+      },
+      {
+        "type": "text",
+        "content": "5 + File selection list"
+      },
+      {
+        "type": "text",
+        "content": "6 + Display screen format"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "INDEX+ Index of all SPF/PC features"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R20000.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

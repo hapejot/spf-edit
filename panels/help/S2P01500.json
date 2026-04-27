@@ -1,0 +1,111 @@
+{
+  "id": "S2P01500",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SPLIT SCREEN",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "There may be times when you want to perform another SPF/PC function without"
+      },
+      {
+        "type": "text",
+        "content": "terminating the current function.  SPF/PC provides the ability to split the"
+      },
+      {
+        "type": "text",
+        "content": "display screen into two logical screens that operate independently from"
+      },
+      {
+        "type": "text",
+        "content": "each other, as though they were separate sessions."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "In split screen mode, only one of the split screens is considered active"
+      },
+      {
+        "type": "text",
+        "content": "at any point in time.  Any interrupt, such as using ENTER or a PF key,"
+      },
+      {
+        "type": "text",
+        "content": "is interpreted as having meaning for the active logical screen.  The current"
+      },
+      {
+        "type": "text",
+        "content": "location of the cursor identifies which of the logical screens is active."
+      },
+      {
+        "type": "text",
+        "content": "To switch from one logical screen to another, use the SWAP command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2P00004"
+  },
+  "metadata": {
+    "source_file": "S2P01500.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

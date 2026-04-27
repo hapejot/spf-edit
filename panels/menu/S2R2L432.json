@@ -1,0 +1,117 @@
+{
+  "id": "S2R2L432",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - TF",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Text flow restructures a paragraph by removing trailing blanks. It"
+      },
+      {
+        "type": "text",
+        "content": "does not remove leading or embedded blanks. For this reason, it is"
+      },
+      {
+        "type": "text",
+        "content": "important to delete words within a line by using the Del-key rather"
+      },
+      {
+        "type": "text",
+        "content": "than by typing over words with blanks."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Because of this, the first line indent in a paragraph is preserved"
+      },
+      {
+        "type": "text",
+        "content": "with Text Flow."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If number is specified, it is used as a temporary right bound."
+      },
+      {
+        "type": "text",
+        "content": "Paragraph text is flowed to the extent of this new temporary bound."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If the temporary right bound is outside of the current bounds, it is"
+      },
+      {
+        "type": "text",
+        "content": "ignored and the current bounds are used."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If a word is too large to fit within the current bounds, an error"
+      },
+      {
+        "type": "text",
+        "content": "message is presented."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2L432.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

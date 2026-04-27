@@ -1,0 +1,128 @@
+{
+  "id": "S2R50000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SPF/PC PRINT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PRINTING IN SPF/PC"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "There are 4 ways to print from SPF/PC. All rely on the LOGICAL"
+      },
+      {
+        "type": "text",
+        "content": "PRINTER DEFINITION on Panel 0.2 to determine the output device."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "-"
+          },
+          {
+            "type": "text",
+            "content": "PRINT+- This command with no parameters may be entered on any"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC panel to print the panel.  This command provides the"
+      },
+      {
+        "type": "text",
+        "content": "\"Print Screen\" function."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PRINT ALL+- This command may be entered in a BROWSE or EDIT"
+      },
+      {
+        "type": "text",
+        "content": "session to print the entire data set being viewed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PRINT PART+- This command may be entered in an EDIT session to"
+      },
+      {
+        "type": "text",
+        "content": "print the lines marked by a \"copy block\" (CC ... CC) or a"
+      },
+      {
+        "type": "text",
+        "content": "single-line \"copy\"."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "P+- Line command from within a filelist will print the file."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "FF+-Form Feed command sends a formfeed character to the"
+      },
+      {
+        "type": "text",
+        "content": "selected printer."
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R50000.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

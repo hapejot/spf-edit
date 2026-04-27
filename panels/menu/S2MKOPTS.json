@@ -1,0 +1,126 @@
+{
+  "id": "S2MKOPTS",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "KEYBOARD MAPPING OPTIONS",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "menu",
+  "attributes": {
+    "#": {
+      "type": "INPUT",
+      "intensity": "high",
+      "caps": false,
+      "justification": "left"
+    },
+    "^": {
+      "type": "PROT",
+      "intensity": "high",
+      "attn": true
+    },
+    "~": {
+      "type": "OUTPUT",
+      "intensity": "low"
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "ACTIVE MAPPING         :"
+          },
+          {
+            "type": "output",
+            "variable": "ZKBNAME",
+            "attribute": "~"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "MAPPING DESCRIPTION"
+          },
+          {
+            "type": "input",
+            "variable": "ZKBDESC",
+            "attribute": "#",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "^   1 +FUNCTION   - Programmable function key definitions. (eg. F10)"
+      },
+      {
+        "type": "text",
+        "content": "^   2 +ALT        - Combination keys using Alt."
+      },
+      {
+        "type": "text",
+        "content": "^   3 +CTRL       - Combination keys using Ctrl."
+      },
+      {
+        "type": "text",
+        "content": "^   4 +SHIFT      - Combination keys using Shift."
+      },
+      {
+        "type": "text",
+        "content": "^   5 +EXTENDED   - Definitions for non-shift key combinations."
+      },
+      {
+        "type": "text",
+        "content": "^   6 +MOUSE      - Mouse pointing device definitions."
+      },
+      {
+        "type": "text",
+        "content": "^   7 +CUSTOM     - Definitions for unusual keys."
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2R00000"
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": [
+        {
+          "value": "&ZCMD",
+          "action": {
+            "type": "panel",
+            "target": "."
+          }
+        },
+        {
+          "value": "'",
+          "action": {
+            "type": "blank"
+          }
+        }
+      ],
+      "default_error": "ISPF102"
+    }
+  },
+  "metadata": {
+    "source_file": "S2MKOPTS.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

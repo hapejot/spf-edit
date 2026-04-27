@@ -1,0 +1,79 @@
+{
+  "id": "S2DDTN08",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "&ZTITLE",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "list",
+  "attributes": {
+    "#": {
+      "type": "OUTPUT",
+      "intensity": "high"
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD",
+        "scroll": {
+          "variable": "SCROLL"
+        }
+      },
+      {
+        "type": "output",
+        "variable": "ZCURDIR"
+      },
+      {
+        "type": "text",
+        "content": "NAME                                           SIZE      DATE     TIME"
+      },
+      {
+        "type": "divider",
+        "style": "single"
+      }
+    ]
+  },
+  "model": {
+    "selection_field": {
+      "variable": "Z",
+      "width": 1
+    },
+    "columns": [
+      {
+        "variable": "NAMESHRT",
+        "attribute": "#",
+        "width": 44
+      },
+      {
+        "variable": "CSIZE",
+        "attribute": "#",
+        "width": 9
+      },
+      {
+        "variable": "CDATE",
+        "attribute": "#",
+        "width": 9
+      },
+      {
+        "variable": "CTIME",
+        "attribute": "#"
+      }
+    ]
+  },
+  "init": {
+    "zvars": [
+      "SCROLL",
+      "SEL"
+    ],
+    "assignments": {
+      "ZTDMARK": "        &ZDTFILES  &ZDTBYTES BYTES USED -- END OF FILE SELECTION LIST"
+    }
+  },
+  "metadata": {
+    "source_file": "S2DDTN08.PAN",
+    "category": "list",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

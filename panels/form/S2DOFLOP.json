@@ -1,0 +1,244 @@
+{
+  "id": "S2DOFLOP",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE SELECTION LIST OPTIONS",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "form",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CLEAR LISTS"
+          },
+          {
+            "type": "text",
+            "content": "~Z+ (Y- Remove files from selection lists"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "N- Mark as deleted/moved)"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CONFIRM DELETE OF FILES"
+          },
+          {
+            "type": "text",
+            "content": "~Z+ (Y- Force confirmation of files,"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "N- Delete without confirmation)"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "EXTENDED LINE COMMANDS"
+          },
+          {
+            "type": "text",
+            "content": "~Z+ (Y- Extended commands on any file list,"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "N- Only on 3.X lists)"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "DEFAULT DIRECTORY SEQUENCE"
+          },
+          {
+            "type": "text",
+            "content": "~Z+ (*- Sys, N- Name, E- Ext, S- Size, D- Date)"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SHOW HIDDEN/SYSTEM FILES"
+          },
+          {
+            "type": "text",
+            "content": "~Z+ (Y- Show all files, N- Hide hidden files)"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SORT DIRS TO TOP OF LISTS"
+          },
+          {
+            "type": "text",
+            "content": "~Z+ (Y- Dirs on top, N- Dirs mixed in)"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PATHS LISTED HORIZONTALLY"
+          },
+          {
+            "type": "text",
+            "content": "~Z+ (Y- Paths listed across row,"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "N- Listed down in a column)"
+      },
+      {
+        "type": "blank"
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2P05600",
+    "zvars": [
+      "ZCLRLIST",
+      "ZCONFIRM",
+      "ZXLCMD",
+      "ZODIRSEQ",
+      "ZHIDFILE",
+      "ZDIRSORT",
+      "ZHRZPATH"
+    ]
+  },
+  "proc_section": {
+    "validations": [
+      {
+        "field": "ZCLRLIST",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "ZCONFIRM",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "ZXLCMD",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "ZODIRSEQ",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "list",
+            "values": [
+              "*",
+              "N",
+              "E",
+              "S",
+              "D"
+            ]
+          }
+        ]
+      },
+      {
+        "field": "ZHIDFILE",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "ZDIRSORT",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "ZHRZPATH",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DOFLOP.PAN",
+    "category": "form",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

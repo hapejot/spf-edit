@@ -1,0 +1,163 @@
+{
+  "id": "S2P01820",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "CURSOR POSITIONING",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "There are 4 cursor positioning keys on the keyboard:  UP, DOWN, LEFT, and"
+      },
+      {
+        "type": "text",
+        "content": "RIGHT.  On all keyboards the cursor positioning keys are also the numeric"
+      },
+      {
+        "type": "text",
+        "content": "keypad keys.  They are designated with arrows.  Enhanced keyboards"
+      },
+      {
+        "type": "text",
+        "content": "also have a separate set of cursor positioning keys which may"
+      },
+      {
+        "type": "text",
+        "content": "be used in addition to the numberic keypad."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To jump between input fields:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "TAB FORWARD      ("
+          },
+          {
+            "type": "text",
+            "content": "Tab | +)    Move to next input field to the right"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "TAB BACKWARD     ("
+          },
+          {
+            "type": "text",
+            "content": "Tab |\u0011 +)    Move to previous input field"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "NEW LINE         ("
+          },
+          {
+            "type": "text",
+            "content": "\u0011┘ Enter+)   Move to next input field down"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To move the cursor quickly between words:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "WORD JUMP RIGHT  ("
+          },
+          {
+            "type": "text",
+            "content": "Ctrl +)     Jump cursor to start of next word"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "WORD JUMP LEFT   ("
+          },
+          {
+            "type": "text",
+            "content": "Ctrl \u0011+)     Jump cusor to start of previous word"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To jump the cursor 2 spaces left or right, use Alt left and right arrow."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2P01820.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

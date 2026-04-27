@@ -1,0 +1,121 @@
+{
+  "id": "S2P05M50",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "HOW TO ASSIGN A MACRO TO A KEY",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "A previously recorded macro may be assigned to a new key from the"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "0.M Panel, by selecting the desired macro with the"
+          },
+          {
+            "type": "text",
+            "content": "K+line command."
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Once selected with a K, the following panel is displayed:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "MACRO KEY ASSIGNMENT"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PRESS THE KEY YOU WANT TO ASSIGN TO THIS MACRO."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "KEY ASSIGNMENT: << none >>"
+      },
+      {
+        "type": "text",
+        "content": "MACRO NAME:     test"
+      },
+      {
+        "type": "text",
+        "content": "DESCRIPTION:    Test macro"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Press Enter to accept the assignment."
+      },
+      {
+        "type": "text",
+        "content": "Press CANCEL to abort without assigning the key."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To assign the macro to a key, press the desired key.  Macros"
+      },
+      {
+        "type": "text",
+        "content": "may not be assign to a key that has been previously defined as"
+      },
+      {
+        "type": "text",
+        "content": "[ENTER-3270], [ENTER-SPFPC], END, or CANCEL."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05M50.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

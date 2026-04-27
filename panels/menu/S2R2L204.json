@@ -1,0 +1,122 @@
+{
+  "id": "S2R2L204",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - BNDS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "=COLS> ----|----1----|----2----|----3----|----4----|--"
+      },
+      {
+        "type": "text",
+        "content": "BNDS 1    Price   Number    Cost"
+      },
+      {
+        "type": "text",
+        "content": "000002"
+      },
+      {
+        "type": "text",
+        "content": "000003     $25      3      $ 75"
+      },
+      {
+        "type": "text",
+        "content": "000004      35      2        70"
+      },
+      {
+        "type": "text",
+        "content": "000005      50      4       100"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Results"
+      },
+      {
+        "type": "text",
+        "content": "=COLS> ----|----1----|----2----|----3----|----4----|--"
+      },
+      {
+        "type": "text",
+        "content": "=BNDS>          <         >"
+      },
+      {
+        "type": "text",
+        "content": "000001    Price     Number  Cost"
+      },
+      {
+        "type": "text",
+        "content": "000002"
+      },
+      {
+        "type": "text",
+        "content": "000003     $25        3    $ 75"
+      },
+      {
+        "type": "text",
+        "content": "000004      35        2      70"
+      },
+      {
+        "type": "text",
+        "content": "000005      50        4     100"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "In the above example a bounds line is displayed before line 1.  The"
+      },
+      {
+        "type": "text",
+        "content": "less than () characters may be moved to redefine the bounds."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2L204.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

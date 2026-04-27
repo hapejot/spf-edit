@@ -1,0 +1,119 @@
+{
+  "id": "S2PTF030",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "TERMINAL FUNCTION - [BACKSPACE]",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Clears the data to the left of the cursor by shifting all the"
+      },
+      {
+        "type": "text",
+        "content": "data on the right over one column.  Moves the cursor one"
+      },
+      {
+        "type": "text",
+        "content": "character left."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "[BACKSPACE]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "Performs a \"destructive\" backspace, meaning that it will"
+      },
+      {
+        "type": "text",
+        "content": "backspace over and blank the character to the left of the"
+      },
+      {
+        "type": "text",
+        "content": "cursor.  All data to the right of the cursor is shift to the"
+      },
+      {
+        "type": "text",
+        "content": "left to fill in new blank."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "See also:"
+      },
+      {
+        "type": "text",
+        "content": "[BACKSPACE-BLANK]"
+      },
+      {
+        "type": "text",
+        "content": "[CURSOR-LEFT]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2PTF030.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

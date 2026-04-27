@@ -1,0 +1,120 @@
+{
+  "id": "S2R2M612",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - CREATE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Mark text to be copied/moved with the COPY (C, Cn, CC) or MOVE (M,"
+      },
+      {
+        "type": "text",
+        "content": "Mn, MM) line commands.  Using COPY line commands will not affect the"
+      },
+      {
+        "type": "text",
+        "content": "current file.  Using MOVE line commands deletes the marked lines"
+      },
+      {
+        "type": "text",
+        "content": "from the current file after the new file is created.  Specify a"
+      },
+      {
+        "type": "text",
+        "content": "range of lines as part of the CREATE command. The range is specified"
+      },
+      {
+        "type": "text",
+        "content": "with beginning and ending line numbers or labels."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If the file already exists, CREATE will not overlay it.  See REPLACE"
+      },
+      {
+        "type": "text",
+        "content": "for details on how to overwrite an existing file."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "To create DEMO.DOC in the same drive/subdirectory as the current"
+      },
+      {
+        "type": "text",
+        "content": "file using records identified by CC line commands:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CREATE DEMO.DOC"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To create a file specified on a subsequent menu using lines"
+      },
+      {
+        "type": "text",
+        "content": "beginning at line labeled `.B` and ending at line labeled `.E`:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CREATE .B .E"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2M612.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

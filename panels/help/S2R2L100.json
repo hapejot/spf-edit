@@ -1,0 +1,112 @@
+{
+  "id": "S2R2L100",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - <",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Shifts a single line of the body of a computer program to the left"
+      },
+      {
+        "type": "text",
+        "content": "without affecting program labels or comments."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "A common format for computer program source is:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- Labels start in column 1"
+      },
+      {
+        "type": "text",
+        "content": "- Op codes, operands, or reserved words start in some column"
+      },
+      {
+        "type": "text",
+        "content": "greater than one and are separated by single blanks."
+      },
+      {
+        "type": "text",
+        "content": "- Comments follow op codes, operands, or reserved words and are"
+      },
+      {
+        "type": "text",
+        "content": "separated from them by two or more blanks."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The premise of data shift is that it shifts the op codes, operands,"
+      },
+      {
+        "type": "text",
+        "content": "or reserved words without affecting the labels or comments."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "<[number]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2L100.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

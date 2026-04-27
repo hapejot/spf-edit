@@ -1,0 +1,78 @@
+{
+  "id": "S2DRPROF",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE PROFILE RENAME",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "form",
+  "attributes": {
+    "~": {
+      "type": "OUTPUT",
+      "intensity": "low"
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "EXISTING FILE PROFILE NAME   :"
+          },
+          {
+            "type": "output",
+            "variable": "NAMEBASE",
+            "attribute": "~"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "NEW FILE PROFILE NAME"
+          },
+          {
+            "type": "input",
+            "variable": "DESTNAME",
+            "width": 8,
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      }
+    ]
+  },
+  "proc_section": {
+    "validations": [
+      {
+        "field": "DESTNAME",
+        "rules": [
+          {
+            "type": "non_blank"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DRPROF.PAN",
+    "category": "form",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

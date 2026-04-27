@@ -1,0 +1,112 @@
+{
+  "id": "S2R3I001",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SUPERC PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SUPERC"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Introduction: Superc allows the ability to compare one or more"
+      },
+      {
+        "type": "text",
+        "content": "files in one or more directories, compare files line by line or"
+      },
+      {
+        "type": "text",
+        "content": "byte by byte, create change reports in a variety of formats and"
+      },
+      {
+        "type": "text",
+        "content": "to direct the change reports to a variety of destinations."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The superc field specifications are as follows:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NEW FILE:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NAME+- This is required. Specifies the more recent version of the"
+      },
+      {
+        "type": "text",
+        "content": "files to be compared. It can contain wildcards (* or ?)."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PROFILE+- This is optional. Specifies the profile name for reading"
+      },
+      {
+        "type": "text",
+        "content": "the new file. If this is not specified, the profile is"
+      },
+      {
+        "type": "text",
+        "content": "determined by the file type. If COMPARE TYPE = BYTE, the"
+      },
+      {
+        "type": "text",
+        "content": "profile is ignored."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R3I001.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

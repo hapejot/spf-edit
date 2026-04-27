@@ -1,0 +1,167 @@
+{
+  "id": "S2P01105",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "GENERAL HEADER LINES",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The first three lines of a SPF/PC panel are usually formatted as follows:"
+      },
+      {
+        "type": "text",
+        "content": "┌�┐"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "line 1:   │"
+          },
+          {
+            "type": "text",
+            "content": "SPF/PC(1) TITLE                       │"
+          },
+          {
+            "type": "text",
+            "content": "SHORT MESSAGE+ │"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "����"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "line 2:   │"
+          },
+          {
+            "type": "text",
+            "content": "COMMAND/OPTION+                              │"
+          },
+          {
+            "type": "text",
+            "content": "SCROLL+ │"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "���"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "line 3:   │"
+          },
+          {
+            "type": "text",
+            "content": "LONG MESSAGE+                                           │"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "└┘"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "The"
+          },
+          {
+            "type": "text",
+            "content": "TITLE+area identifies the function being performed and, where"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "appropriate, library or data set information.  The number in parenthesis"
+      },
+      {
+        "type": "text",
+        "content": "represents the active split task id number."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "The"
+          },
+          {
+            "type": "text",
+            "content": "SHORT MESSAGE+area is used to indicate:"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- Current line (BROWSE) and column positions (BROWSE and EDIT)."
+      },
+      {
+        "type": "text",
+        "content": "- Successful completion of a processing function."
+      },
+      {
+        "type": "text",
+        "content": "- Error conditions."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P01105.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

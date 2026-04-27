@@ -1,0 +1,109 @@
+{
+  "id": "S2P05K64",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "CUSTOM KEY ASSIGNMENT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The KEY VALUE field is used to assign a SPF/PC function/command"
+      },
+      {
+        "type": "text",
+        "content": "to the newly defined custom key.  The rules of value definition"
+      },
+      {
+        "type": "text",
+        "content": "are the same for custom keys as for assigning any other key."
+      },
+      {
+        "type": "text",
+        "content": "In this case, we want to assign the [DEL-END-OF-DATA] terminal"
+      },
+      {
+        "type": "text",
+        "content": "function to Ctrl-5, so we change the field as follows:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "KEY NAME  ==> Ctrl Numeric-5"
+      },
+      {
+        "type": "text",
+        "content": "KEY VALUE ==> [DEL-END-OF-DATA]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "After hitting Enter to make the new assignment take effect,"
+      },
+      {
+        "type": "text",
+        "content": "any time the Ctrl-Numeric 5 key is pressed, it will erase"
+      },
+      {
+        "type": "text",
+        "content": "all the data to the right of the current input field."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05K64.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

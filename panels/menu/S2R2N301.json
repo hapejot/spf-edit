@@ -1,0 +1,117 @@
+{
+  "id": "S2R2N301",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE SELECTION LIST",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "This is a primary command. Use this command to change the current"
+      },
+      {
+        "type": "text",
+        "content": "setting for delete confirmation."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "CONFIRM [ ON | OFF ]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "When delete confirmation is ON, SPF/PC will ask you to confirm delete"
+      },
+      {
+        "type": "text",
+        "content": "requests made in select lists via the delete line command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You can also set delete confirmation on the File List Utility entry"
+      },
+      {
+        "type": "text",
+        "content": "panel. See the DELETE command for more information."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "CONFIRM OFF"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2N301.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

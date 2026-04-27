@@ -1,0 +1,114 @@
+{
+  "id": "S2P05800",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "PATHS PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "0.8 - PATHS PANEL"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "All of the paths of interest to SPF/PC may now be specified in a"
+      },
+      {
+        "type": "text",
+        "content": "single place. SPF/PC paths may be specified with multiple directories"
+      },
+      {
+        "type": "text",
+        "content": "separated by semicolons."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Distinct paths are provided to facilitate shared use on LANS so you"
+      },
+      {
+        "type": "text",
+        "content": "can subscribe to a common set of control files while at the same time"
+      },
+      {
+        "type": "text",
+        "content": "maintain your own local control files without interfering with others."
+      },
+      {
+        "type": "text",
+        "content": "The fields on the panel are listed and explained below:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 +- Display greater detail on the Paths Panel"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2P05800.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

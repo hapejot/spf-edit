@@ -1,0 +1,129 @@
+{
+  "id": "S2DOPROL",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "RECORD FORMAT DEFINITION",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "dialog",
+  "attributes": {
+    "^": {
+      "type": "PROT",
+      "intensity": "high",
+      "attn": true
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PROFILE NAME               :"
+          },
+          {
+            "type": "output",
+            "variable": "ProfName"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "RECORD FORMAT           : L    ( Length Delimited )"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "//"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Length delimited files have no exclusive record format specifications."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Page"
+          },
+          {
+            "type": "text",
+            "content": "2+of"
+          },
+          {
+            "type": "text",
+            "content": "2+  Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to Page 1, or"
+          },
+          {
+            "type": "output",
+            "variable": "END",
+            "attribute": "^"
+          },
+          {
+            "type": "text",
+            "content": "+to exit."
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DOPROL.PAN",
+    "category": "dialog",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

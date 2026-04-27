@@ -1,0 +1,115 @@
+{
+  "id": "S2R00340",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SPF/PC COMMAND - RIGHT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Initially assigned to the PF11 key.  Use this command to move toward"
+      },
+      {
+        "type": "text",
+        "content": "the right edge of the displayed text."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "RIGHT [PAGE]"
+      },
+      {
+        "type": "text",
+        "content": "[HALF]"
+      },
+      {
+        "type": "text",
+        "content": "[CSR ]"
+      },
+      {
+        "type": "text",
+        "content": "[DATA]"
+      },
+      {
+        "type": "text",
+        "content": "[MAX ]"
+      },
+      {
+        "type": "text",
+        "content": "[nnnn]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "There are three ways to specify how much SPF/PC moves when you"
+      },
+      {
+        "type": "text",
+        "content": "issue the command:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- Issue the command without a scroll amount.  In this case the"
+      },
+      {
+        "type": "text",
+        "content": "SCROLL field determines the amount scrolled.  The SCROLL field"
+      },
+      {
+        "type": "text",
+        "content": "is in the upper right corner of the screen."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R00340.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

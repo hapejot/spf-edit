@@ -1,0 +1,119 @@
+{
+  "id": "S2R00230",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SPF/PC COMMAND - OS2/TSO/DOS/CMS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Use this command to execute an operating system command or program."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "OS2 [operating-system-command | program-name]"
+      },
+      {
+        "type": "text",
+        "content": "DOS"
+      },
+      {
+        "type": "text",
+        "content": "CMS"
+      },
+      {
+        "type": "text",
+        "content": "TSO"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "When you issue the command, SPF/PC turns control over to operating"
+      },
+      {
+        "type": "text",
+        "content": "system, execution of the command or program you specified.  (DOS,"
+      },
+      {
+        "type": "text",
+        "content": "CMD, and TSO forms are provided for convenience; they all send the"
+      },
+      {
+        "type": "text",
+        "content": "command to operating system)"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "These commands clear the screen before execution and require a"
+      },
+      {
+        "type": "text",
+        "content": "key to be pressed before returning to SPF/PC."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R00230.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

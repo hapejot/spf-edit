@@ -1,0 +1,143 @@
+{
+  "id": "S2R3X00U",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE LIST LINE COMMAND - U",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Use this command to call a FOREGROUND option, and load the &"
+          },
+          {
+            "type": "output",
+            "variable": "ZDSN"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "variable with the files name."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "U"
+      },
+      {
+        "type": "text",
+        "content": "UU"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "Use the 'U' command to call a FOREGROUND option with the selected"
+      },
+      {
+        "type": "text",
+        "content": "file.  Once selected, the FOREGROUND table is displayed where you"
+      },
+      {
+        "type": "text",
+        "content": "select which FOREGROUND option to execute.  If the option uses the"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "&"
+          },
+          {
+            "type": "output",
+            "variable": "ZDSN"
+          },
+          {
+            "type": "text",
+            "content": "variable as a parameter, the original selected filename is"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "substituted."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "NAME        SIZE    DATE    TIME"
+      },
+      {
+        "type": "text",
+        "content": "FOO.BAK    12401  01-23-91 10:56a"
+      },
+      {
+        "type": "text",
+        "content": "U  FOO.DOC    12433  01-25-91 10:56a"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R3X00U.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

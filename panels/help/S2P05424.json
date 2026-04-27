@@ -1,0 +1,108 @@
+{
+  "id": "S2P05424",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "DISPLAY CHARACTERISTICS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The basic text displayed in Browse and Edit is defined by:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\"Browse Text\" and \"Edit Text\""
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Highlighted comments in the above text is defined by:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\"Edit Source Comments\""
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The special lines inserted into an edit session are defined by:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\"Note Lines\", \"Msg Lines\", and \"Prof Lines\""
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The different characteristics of the line command field are defined by:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\"Line Commands\", \"Line Labels\", \"Line Numbers\", \"Line Type Markers\""
+      },
+      {
+        "type": "text",
+        "content": "and \"Line Active Indicator\""
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05424.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

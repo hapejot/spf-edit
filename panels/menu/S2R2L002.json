@@ -1,0 +1,121 @@
+{
+  "id": "S2R2L002",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Available line commands include:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 + DD    BLOCK DELETE"
+      },
+      {
+        "type": "text",
+        "content": "2 + F     DISPLAY FIRST EXCLUDED LINE(S)"
+      },
+      {
+        "type": "text",
+        "content": "3 + I     INSERT"
+      },
+      {
+        "type": "text",
+        "content": "4 + L     DISPLAY LAST EXCLUDED LINE(S)"
+      },
+      {
+        "type": "text",
+        "content": "5 + LC    SET A LINE TO LOWERCASE"
+      },
+      {
+        "type": "text",
+        "content": "6 + LCC   SET A BLOCK OF LINES TO LOWERCASE"
+      },
+      {
+        "type": "text",
+        "content": "7 + M     MOVE"
+      },
+      {
+        "type": "text",
+        "content": "8 + MM    MOVE BLOCK"
+      },
+      {
+        "type": "text",
+        "content": "9 + MASK  DISPLAY/SET MASK"
+      },
+      {
+        "type": "text",
+        "content": "10 + MD    MAKE A NOTE OR MSG LINE INTO A DATA LINE"
+      },
+      {
+        "type": "text",
+        "content": "11 + MDD   MDD MAKE A BLOCK OF NOTE OR MSG LINES INTO DATA"
+      },
+      {
+        "type": "text",
+        "content": "12 + O     OVERLAY"
+      },
+      {
+        "type": "text",
+        "content": "13 + OO    OVERLAY BLOCK"
+      },
+      {
+        "type": "text",
+        "content": "14 + R     REPEAT"
+      },
+      {
+        "type": "text",
+        "content": "15 + RR    REPEAT BLOCK"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for more commands)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2L002.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

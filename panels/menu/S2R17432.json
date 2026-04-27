@@ -1,0 +1,119 @@
+{
+  "id": "S2R17432",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FIND PREV PARAMETER",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You use the PREV optional parameter of the FIND command to change the"
+      },
+      {
+        "type": "text",
+        "content": "search order from forwards to backwards."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND  find ctc prev              +scans for the previous \"ctc\""
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "A search for the previous occurrence of the string \"ctc\" will be made,"
+      },
+      {
+        "type": "text",
+        "content": "starting at the current cursor position and proceeding towards the top"
+      },
+      {
+        "type": "text",
+        "content": "of the file.  If the cursor is in the command area, the search starts with"
+      },
+      {
+        "type": "text",
+        "content": "the first line preceding the line currently at the top of the display."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If the string is found, the cursor is placed at the start of the string."
+      },
+      {
+        "type": "text",
+        "content": "If the RFIND PF key is then pressed, the search continues upwards in the"
+      },
+      {
+        "type": "text",
+        "content": "file until the string is found again, or the top of the file is reached."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If a second occurrence of the string is not found by the top of the"
+      },
+      {
+        "type": "text",
+        "content": "data, a TOP OF DATA message is displayed.  To continue scanning"
+      },
+      {
+        "type": "text",
+        "content": "backwards, wrapping around from the top of the data to the bottom,"
+      },
+      {
+        "type": "text",
+        "content": "use RFIND."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to the previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R17432.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

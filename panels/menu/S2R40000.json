@@ -1,0 +1,115 @@
+{
+  "id": "S2R40000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FOREGROUND PROCESSING OPTION",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "FOREGROUND OPTION"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The foreground processing option permits execution of a program from"
+      },
+      {
+        "type": "text",
+        "content": "within SPF/PC."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The foreground selection panel, which is displayed when option 4 is"
+      },
+      {
+        "type": "text",
+        "content": "entered on the primary option panel, allows you to select one of the"
+      },
+      {
+        "type": "text",
+        "content": "programs listed on the panel, or to modify the contents of the panel."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Items on the foreground selection panel may also be invoked from any"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC panel by the USER <option name> primary command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following topic will be presented only if selected by number:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 + Editing the Foreground Selection Panel"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R40000.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

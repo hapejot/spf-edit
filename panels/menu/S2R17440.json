@@ -1,0 +1,125 @@
+{
+  "id": "S2R17440",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FIND PARAMETERS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "The"
+          },
+          {
+            "type": "text",
+            "content": "FIND+command normally searches for any occurrence of the specified"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "character string.  However, you can use optional parameters so that the"
+      },
+      {
+        "type": "text",
+        "content": "search considers the context in which the search argument is found."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "These optional context-sensitive parameters are:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CHARS   PREFIX   SUFFIX   WORD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND  find ctc prefix+            scans for the prefix \"ctc\""
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following topics will be presented only if selected by number:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 + USING THE CHARS PARAMETER"
+      },
+      {
+        "type": "text",
+        "content": "2 + USING THE PREFIX PARAMETER"
+      },
+      {
+        "type": "text",
+        "content": "3 + USING THE SUFFIX PARAMETER"
+      },
+      {
+        "type": "text",
+        "content": "4 + USING THE WORD PARAMETER"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to the previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R17440.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

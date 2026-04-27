@@ -1,0 +1,116 @@
+{
+  "id": "S2R3E000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "DRIVE SEARCH PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "DRIVE SEARCH PANEL"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Drive Search presents the search function from a disk drive"
+      },
+      {
+        "type": "text",
+        "content": "viewpoint.  It displays a select list of drives attached to your"
+      },
+      {
+        "type": "text",
+        "content": "system which contains useful information about each drive."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Individual fields are explained below:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "FILE TYPES TO DISPLAY+- Specifies the types of files that are to be"
+      },
+      {
+        "type": "text",
+        "content": "displayed.  You can specify `D` for directories only, `F` for"
+      },
+      {
+        "type": "text",
+        "content": "files only, or `B` for both files and directories."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SEARCH SUBDIRECTORIES+- This field lets you specify whether the"
+      },
+      {
+        "type": "text",
+        "content": "search should be limited to the first level of the specified"
+      },
+      {
+        "type": "text",
+        "content": "path or to all levels (via recursive search)."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R3E000.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

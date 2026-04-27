@@ -1,0 +1,115 @@
+{
+  "id": "S2P05702",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "PROFILE DEFINITION PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "L (Length-delimited)+- This option is for non-standard files"
+      },
+      {
+        "type": "text",
+        "content": "that may have been transferred to your system with fixed-length"
+      },
+      {
+        "type": "text",
+        "content": "records, or for files (such as .EXE) that are not divided into"
+      },
+      {
+        "type": "text",
+        "content": "records at all."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "M (Micro Focus Header-variable)+- This option is for Micro Focus"
+      },
+      {
+        "type": "text",
+        "content": "header-variable record format."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "V (Micro Focus VRECGEN)+- This option is for Micro Focus VRECGEN"
+      },
+      {
+        "type": "text",
+        "content": "record format."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If you indicate that the input format is length delimited, SPF/PC will"
+      },
+      {
+        "type": "text",
+        "content": "use the maximum record length amount to divide the file into records,"
+      },
+      {
+        "type": "text",
+        "content": "rather than looking for record delimiter characters.  In addition,"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC will use the file length in the operating system directory to"
+      },
+      {
+        "type": "text",
+        "content": "find the end of the file, instead of looking for the EOF character."
+      },
+      {
+        "type": "text",
+        "content": "If the file length is not an even multiple of the record length, the"
+      },
+      {
+        "type": "text",
+        "content": "last record will be padded with blank characters to the maximum record"
+      },
+      {
+        "type": "text",
+        "content": "length."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05702.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

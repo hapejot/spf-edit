@@ -1,0 +1,114 @@
+{
+  "id": "S2P05704",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "PROFILE DEFINITION PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "MAXIMUM RECORD LENGTH+- The maximum record length in bytes.  The"
+      },
+      {
+        "type": "text",
+        "content": "maximum allowable value is 64000."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\u0007 For data-delimited input files, If a file contains records longer"
+      },
+      {
+        "type": "text",
+        "content": "than the profile maximum, an error message is issued and the maximum"
+      },
+      {
+        "type": "text",
+        "content": "length is automatically increased to the maximum actual length"
+      },
+      {
+        "type": "text",
+        "content": "encountered.  Under no circumstance can an individual record be"
+      },
+      {
+        "type": "text",
+        "content": "longer than 64000 bytes."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For data-delimited output files, each record is written to disk with"
+      },
+      {
+        "type": "text",
+        "content": "a CR/LF terminator.  Trailing blanks are clipped.  An EOF character"
+      },
+      {
+        "type": "text",
+        "content": "is written after the last record."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\u0007 For length-delimited input files, blocks of data are read in and"
+      },
+      {
+        "type": "text",
+        "content": "parsed into records exactly equal to the maximum record length"
+      },
+      {
+        "type": "text",
+        "content": "without regard to the data content.  So for example, a file of 800"
+      },
+      {
+        "type": "text",
+        "content": "bytes with a maximum record length of 80 would yield exactly 10"
+      },
+      {
+        "type": "text",
+        "content": "records of 80 bytes."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05704.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

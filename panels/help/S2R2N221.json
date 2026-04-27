@@ -1,0 +1,128 @@
+{
+  "id": "S2R2N221",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - SORT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Each of the sort fields has the following format:"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "[ A ] [ start-column [ end"
+          },
+          {
+            "type": "input",
+            "variable": "column",
+            "width": 7
+          },
+          {
+            "type": "text",
+            "content": "] ]"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "[ D ]"
+      },
+      {
+        "type": "text",
+        "content": "If \"A\" is specified (or defaulted), data will be ordered in ascending"
+      },
+      {
+        "type": "text",
+        "content": "sequence. If \"D\" is specified, data will be ordered in descending"
+      },
+      {
+        "type": "text",
+        "content": "sequence."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Columns can also be specified for the sort. If they are not specified,"
+      },
+      {
+        "type": "text",
+        "content": "the default is the current BOUNDS."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\"Start-column\" specifies the left-most position and \"end-column\" speci-"
+      },
+      {
+        "type": "text",
+        "content": "fies the right-most position of the sort field. \"Start-column\" must"
+      },
+      {
+        "type": "text",
+        "content": "precede \"end-column\". In addition, neither specification can be outside"
+      },
+      {
+        "type": "text",
+        "content": "the current BOUNDS."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "When the BOUNDS are set to less than the full record, only the data"
+      },
+      {
+        "type": "text",
+        "content": "within the bounds will be sorted. The effect is that the sorted data"
+      },
+      {
+        "type": "text",
+        "content": "is re-ordered while the data to the left or right of the bounds is not."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2N221.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "id": "S2R17433",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FIND FIRST PARAMETER",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You use FIRST as an optional parameter with the FIND command, to locate"
+      },
+      {
+        "type": "text",
+        "content": "the first occurrence of the search argument in the file."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND  find ctc first             +scans for the first \"ctc\""
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "A search for the first occurrence of the string \"ctc\" will be made,"
+      },
+      {
+        "type": "text",
+        "content": "starting at the top of the file and continuing until the string is found"
+      },
+      {
+        "type": "text",
+        "content": "or the bottom of the file is reached."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If the string is not found by the end of the file, a message to that"
+      },
+      {
+        "type": "text",
+        "content": "effect is displayed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If the string is found, the cursor is placed at the start of the string."
+      },
+      {
+        "type": "text",
+        "content": "If the RFIND PF key is pressed, the search continues as a FIND NEXT."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to the previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R17433.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "id": "S2P05M20",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "KEYBOARD MACROS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "0.M KEY MACRO LIST"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "All previously recorded key macros are listed on panel 0.M.  Any"
+      },
+      {
+        "type": "text",
+        "content": "time a new macro is recorded, it is added to this list as well."
+      },
+      {
+        "type": "text",
+        "content": "A sample list may appear as follows:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "MACRO NAME   SIZE    DESCRIPTION"
+      },
+      {
+        "type": "text",
+        "content": "TEST         45      This is a test macro"
+      },
+      {
+        "type": "text",
+        "content": "BOX         120      Create a \"C\" comment box."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The macro name column lists the name of each macro as it must"
+      },
+      {
+        "type": "text",
+        "content": "be referred to with the [KEY-MACRO <name>] terminal function."
+      },
+      {
+        "type": "text",
+        "content": "Size refers to the size of the macro in bytes, and is useful"
+      },
+      {
+        "type": "text",
+        "content": "in eliminating inadvertantly large macros.  Description is"
+      },
+      {
+        "type": "text",
+        "content": "a comment field used during definition."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Two different selection list line commands are available:"
+      },
+      {
+        "type": "text",
+        "content": "K+- Assign this macro to a key"
+      },
+      {
+        "type": "text",
+        "content": "D+- Delete this macro"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2P05M20.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

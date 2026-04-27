@@ -47,6 +47,7 @@ use crate::input::{EditorAction, InputHandler};
 use crate::line::{Line, LineFlags};
 use crate::line_cmd;
 use crate::line_store::LineStore;
+use crate::panel::PanelManager;
 use crate::screen::Screen;
 use crate::types::*;
 
@@ -54,6 +55,7 @@ pub struct Editor {
     pub buffer: FileBuffer,
     pub screen: Screen,
     pub input: InputHandler,
+    pub panel_manager: Option<PanelManager>,
     pub running: bool,
     pub last_find: Option<String>,
     pub command_history: VecDeque<String>,
@@ -63,15 +65,26 @@ pub struct Editor {
     pub cursor_line_index: usize, // Buffer line index cursor is on
     pub cursor_col: usize,
     needs_full_redraw: bool, // Column within the current field
+    pending_panel: Option<String>, // Panel to display after command processing
 }
 
 impl Editor {
     pub fn new(buffer: FileBuffer) -> io::Result<Self> {
         let screen = Screen::new()?;
+
+        // Try to load panel manager from panels/ directory
+        let panels_dir = std::path::Path::new("panels");
+        let panel_manager = if panels_dir.is_dir() {
+            PanelManager::new(panels_dir).ok()
+        } else {
+            None
+        };
+
         Ok(Editor {
             buffer,
             screen,
             input: InputHandler::new(),
+            panel_manager,
             running: true,
             last_find: None,
             command_history: VecDeque::with_capacity(COMMAND_HISTORY_SIZE),
@@ -79,6 +92,7 @@ impl Editor {
             needs_full_redraw: true,
             cursor_line_index: 1, // First data line (after TopOfData)
             cursor_col: 0,
+            pending_panel: None,
         })
     }
 
@@ -168,6 +182,41 @@ impl Editor {
             EditorAction::Enter => {
                 debug!("Action: Enter — processing commands");
                 self.handle_enter();
+
+                // Check if a panel display was requested
+                if let Some(panel_id) = self.pending_panel.take() {
+                    if let Some(ref mut pm) = self.panel_manager {
+                        if pm.has_panel(&panel_id) {
+                            match pm.display(stdout, &panel_id) {
+                                Ok(quit) => {
+                                    if quit {
+                                        self.running = false;
+                                        return Ok(());
+                                    }
+                                }
+                                Err(e) => {
+                                    warn!("Panel display error: {e}");
+                                    self.screen.message = Some(Message {
+                                        text: format!("Panel error: {e}"),
+                                        msg_type: MessageType::Error,
+                                    });
+                                }
+                            }
+                            // Force full redraw after returning from panel
+                            self.needs_full_redraw = true;
+                        } else {
+                            self.screen.message = Some(Message {
+                                text: format!("Panel not found: {panel_id}"),
+                                msg_type: MessageType::Error,
+                            });
+                        }
+                    } else {
+                        self.screen.message = Some(Message {
+                            text: "Panel system not available (no panels/ directory)".to_string(),
+                            msg_type: MessageType::Error,
+                        });
+                    }
+                }
             }
 
             EditorAction::ToggleInsertMode => {
@@ -608,16 +657,18 @@ impl Editor {
     fn cycle_focus_forward(&mut self) {
         match self.input.focus {
             FieldFocus::CommandLine => {
+                self.input.focus = FieldFocus::ScrollField;
+                self.cursor_col = 0;
+                // self.input.focus = FieldFocus::CommandLine;
+                // self.cursor_col = 0;
+                // self.screen.command_cursor_pos = 0;
+            }
+            FieldFocus::ScrollField => {
                 self.input.focus = FieldFocus::DataArea {
                     screen_row: HEADER_ROWS,
                 };
                 self.cursor_col = 0;
                 self.update_cursor_line_index();
-            }
-            FieldFocus::ScrollField => {
-                self.input.focus = FieldFocus::CommandLine;
-                self.cursor_col = 0;
-                self.screen.command_cursor_pos = 0;
             }
             FieldFocus::PrefixArea { screen_row } => {
                 self.input.focus = FieldFocus::DataArea { screen_row };
@@ -893,6 +944,11 @@ impl Editor {
                     }
                 }
             }
+        }
+
+        // Schedule panel display if requested
+        if result.show_panel.is_some() {
+            self.pending_panel = result.show_panel;
         }
     }
 

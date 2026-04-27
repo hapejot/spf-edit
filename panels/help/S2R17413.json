@@ -1,0 +1,185 @@
+{
+  "id": "S2R17413",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FIND STRINGS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "A picture string is a means of specifying a restricted type of wildcard"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "search.  The picture string describes the"
+          },
+          {
+            "type": "text",
+            "content": "type+of characters to be found"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "instead of an exact string."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Example"
+          },
+          {
+            "type": "text",
+            "content": "find p'#' 20   +  find any number in column 20"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "A picture string is a quoted string that is preceded or followed by the"
+      },
+      {
+        "type": "text",
+        "content": "letter \"P\".  It can contain blanks, alphabetic and numeric characters"
+      },
+      {
+        "type": "text",
+        "content": "which represent themselves, or any of the special characters listed"
+      },
+      {
+        "type": "text",
+        "content": "below, each of which represents a class of characters."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "=+ any character"
+          },
+          {
+            "type": "text",
+            "content": "-+ nonnumeric characters"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "^+ nonblank characters"
+          },
+          {
+            "type": "text",
+            "content": "@+ alphabetic characters"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": ".+ non-ASCII characters"
+          },
+          {
+            "type": "text",
+            "content": "<+ lower case alphabetics"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(x'00'-x'19' and x'7F'-x'FF')"
+          },
+          {
+            "type": "text",
+            "content": ">+ upper case alphabetics"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "#+ numeric characters"
+          },
+          {
+            "type": "text",
+            "content": "$+ special characters"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Example"
+          },
+          {
+            "type": "text",
+            "content": "find p'.' all  +  count all non-ASCII characters"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R17413.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

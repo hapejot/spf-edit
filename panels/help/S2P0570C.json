@@ -1,0 +1,112 @@
+{
+  "id": "S2P0570C",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "PROFILE DEFINITION PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "INPUT TABS TO+ Specifies whether TAB characters should be expanded to"
+      },
+      {
+        "type": "text",
+        "content": "blanks when a file is loaded. It also specifies where the TAB stops are."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If 0 (default) is specified, TAB characters are not expanded when a"
+      },
+      {
+        "type": "text",
+        "content": "file is loaded."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If a non-zero value is specified, TAB caharacters are converted to"
+      },
+      {
+        "type": "text",
+        "content": "blanks every N characters."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "OUTPUT TABS AT+ Specifies whether TAB characters should be inserted in"
+      },
+      {
+        "type": "text",
+        "content": "place of blanks when a file is written to disk. It also specifies"
+      },
+      {
+        "type": "text",
+        "content": "where the TAB stops are."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If 0 (default) is specified, TAB characters are not inserted when a"
+      },
+      {
+        "type": "text",
+        "content": "file is written."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If a non-zero value is specified, blanks are converted to TAB characters"
+      },
+      {
+        "type": "text",
+        "content": "every N characters."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P0570C.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

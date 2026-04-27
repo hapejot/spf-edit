@@ -1,0 +1,111 @@
+{
+  "id": "S2R2M228",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - CHANGE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "When a CHANGE is successfully made, a change flag is placed in the"
+      },
+      {
+        "type": "text",
+        "content": "line command area:"
+      },
+      {
+        "type": "text",
+        "content": "==CHG>"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To remove change and error flags use the RESET primary command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Examples"
+      },
+      {
+        "type": "text",
+        "content": "To change string 'this' to string 'that':"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "change this that"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To change string 'something' to a null string (''):"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CHANGE something ''"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To change string 'ABC' to string 'XYZ' in columns 1 through 20"
+      },
+      {
+        "type": "text",
+        "content": "inclusive:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CHANGE ABC XYZ 1 20"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2M228.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

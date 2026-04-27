@@ -1,0 +1,112 @@
+{
+  "id": "S2P05M51",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "HOW TO ASSIGN A MACRO TO A KEY",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Once pressed, the key assignment field will change to the key"
+      },
+      {
+        "type": "text",
+        "content": "as follows:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "KEY ASSIGNMENT: Alt-T"
+      },
+      {
+        "type": "text",
+        "content": "MACRO NAME:     TEST"
+      },
+      {
+        "type": "text",
+        "content": "DESCRIPTION:    Test macro"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You may reassign the macro to another key by pressing it now."
+      },
+      {
+        "type": "text",
+        "content": "Each time you reassign the key, the KEY ASSIGNMENT field should"
+      },
+      {
+        "type": "text",
+        "content": "fill in with the name of the key."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "When KEY ASSIGNMENT indicates the intended key, then hit ENTER."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To end recording, saving the macro to the name MACRO NAME, but"
+      },
+      {
+        "type": "text",
+        "content": "not assigning it to a key, hit END.  To use this macro, it"
+      },
+      {
+        "type": "text",
+        "content": "must be assigned to a key later via either key assignment or"
+      },
+      {
+        "type": "text",
+        "content": "from Panel 0.M."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05M51.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

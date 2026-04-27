@@ -1,0 +1,128 @@
+{
+  "id": "S2R3X00G",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE LIST LINE COMMAND - U",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Use this command to call a FOREGROUND option, and load the &"
+          },
+          {
+            "type": "output",
+            "variable": "ZDSN"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "variable with the files name."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "G"
+      },
+      {
+        "type": "text",
+        "content": "GG"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "Type a 'G' next to the program (.EXE) or batch file (.BAT, .CMD) that"
+      },
+      {
+        "type": "text",
+        "content": "you want to execute. The contents of the primary command field are"
+      },
+      {
+        "type": "text",
+        "content": "passed as parameters to the program or batch file being executed. This"
+      },
+      {
+        "type": "text",
+        "content": "command is accepted in 3.x select lists."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "NAME   EXT    SIZE      DATE     TIME    ATTRS"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "G  NEWS   BAT    5123    01-25-91  10:56a   A..."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R3X00G.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "id": "S2P05K23",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "ASSIGNING VALUES TO KEYS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Terminal functions are used in SPF to perform cursor movement"
+      },
+      {
+        "type": "text",
+        "content": "and scrolling.  In most cases, terminal functions occur without"
+      },
+      {
+        "type": "text",
+        "content": "Enter key processing, which means that they do not execute"
+      },
+      {
+        "type": "text",
+        "content": "any active primary or line commands.  Example terminal functions"
+      },
+      {
+        "type": "text",
+        "content": "include SCROLL-LEFT, CURSOR-DOWN, and ENTER-3270."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To assign terminal functions to keys, the function name must"
+      },
+      {
+        "type": "text",
+        "content": "be surrounded by square brackets characters ('[' and ']')."
+      },
+      {
+        "type": "text",
+        "content": "For example if the \"SCROLL-DOWN-MAX\" function were to be"
+      },
+      {
+        "type": "text",
+        "content": "assigned to the Ctrl-C key, you would change its value as"
+      },
+      {
+        "type": "text",
+        "content": "follows:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NAME             VALUE"
+      },
+      {
+        "type": "text",
+        "content": "Ctrl A+          :A"
+      },
+      {
+        "type": "text",
+        "content": "Ctrl B+          BROWSE"
+      },
+      {
+        "type": "text",
+        "content": "Ctrl C+          [SCROLL-DOWN-MAX]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Once assigned, the editor will jump down to the bottom of the"
+      },
+      {
+        "type": "text",
+        "content": "current edit session when encountering a Ctrl-C keystroke."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05K23.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "id": "S2R2L332",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - MASK",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Only one Mask may be defined. It is used for all file extensions."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "MASK 0 ZEROS:"
+      },
+      {
+        "type": "text",
+        "content": "000031      IF WORK = 0 THEN   /* Only if 0        */"
+      },
+      {
+        "type": "text",
+        "content": "000032      SALES = 0;         /* zero sales       */"
+      },
+      {
+        "type": "text",
+        "content": "000033      CUSTOMER = ``;     /* blank customer   */"
+      },
+      {
+        "type": "text",
+        "content": "000034      END;               /* end if           */"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Results"
+      },
+      {
+        "type": "text",
+        "content": "=MASK>                         /*                  */"
+      },
+      {
+        "type": "text",
+        "content": "000030 ZEROS:"
+      },
+      {
+        "type": "text",
+        "content": "000031  IF WORK = 0 THEN       /* only if 0        */"
+      },
+      {
+        "type": "text",
+        "content": "000032      SALES = 0;         /* zero sales       */"
+      },
+      {
+        "type": "text",
+        "content": "000033      CUSTOMER = ``;     /* blank customer   */"
+      },
+      {
+        "type": "text",
+        "content": "000034      END;               /* end if           */"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The mask setting was entered previously. Now, you can change the"
+      },
+      {
+        "type": "text",
+        "content": "mask by typing directly on the =MASK> line."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2L332.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

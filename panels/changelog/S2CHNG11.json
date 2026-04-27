@@ -1,0 +1,105 @@
+{
+  "id": "S2CHNG11",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FULL MOUSE SUPPORT",
+    "version_var": "ZSHRTVER",
+    "prefix": "CHANGES"
+  },
+  "type": "changelog",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You can use the mouse to:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "* position the cursor"
+      },
+      {
+        "type": "text",
+        "content": "* make a menu selection"
+      },
+      {
+        "type": "text",
+        "content": "* select an item in a select list"
+      },
+      {
+        "type": "text",
+        "content": "* select text in EDIT or BROWSE"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "New primary commands operate on selected text: SCUT, SCOPY, SPASTE,"
+      },
+      {
+        "type": "text",
+        "content": "SCREATE, SREPLACE, STOLOWER, STOUPPER, SXCLUDE, SDELETE.  These new"
+      },
+      {
+        "type": "text",
+        "content": "primary commands are mapped to SHIFT-F1 through SHIFT-F9"
+      },
+      {
+        "type": "text",
+        "content": "respectively. There are three different types of mouse selection:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "* by character"
+      },
+      {
+        "type": "text",
+        "content": "* by line"
+      },
+      {
+        "type": "text",
+        "content": "* by block (rectangular area)"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For further details see:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC User Guide and Reference,"
+      },
+      {
+        "type": "text",
+        "content": "Using the Mouse .......... Page 3-1"
+      }
+    ]
+  },
+  "proc_section": {
+    "assignments": {
+      "ZSEL": "UP"
+    }
+  },
+  "metadata": {
+    "source_file": "S2CHNG11.PAN",
+    "category": "changelog"
+  }
+}

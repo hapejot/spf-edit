@@ -1,0 +1,114 @@
+{
+  "id": "S2RT0000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "DIALOG TEST",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "tutorial",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Dialog Test provides a special environment for testing of:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 +  Panel Functions"
+      },
+      {
+        "type": "text",
+        "content": "2 +  Panel Definitions"
+      },
+      {
+        "type": "text",
+        "content": "3 +  Variables"
+      },
+      {
+        "type": "text",
+        "content": "4 +  Tables"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The value of testing under Dialog Test is that you do not"
+      },
+      {
+        "type": "text",
+        "content": "disrupt the normal operation of other elements of SPF/PC"
+      },
+      {
+        "type": "text",
+        "content": "during the experimental stage. Furthermore, you have greater"
+      },
+      {
+        "type": "text",
+        "content": "access to diagnostic data in the test environment."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2RT0000.PAN",
+    "category": "tutorial",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

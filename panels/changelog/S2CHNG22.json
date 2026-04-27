@@ -1,0 +1,55 @@
+{
+  "id": "S2CHNG22",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "OPTIONAL MICRO FOCUS SHELL",
+    "version_var": "ZSHRTVER",
+    "prefix": "CHANGES"
+  },
+  "type": "changelog",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This optional program offers full control of all elements of the"
+      },
+      {
+        "type": "text",
+        "content": "Micro Focus COBOL workbench through a series of SPF/PC panels. Also"
+      },
+      {
+        "type": "text",
+        "content": "works with SPF/PC's optional COBOL Source Analyst."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "box",
+        "style": "announcement",
+        "rows": [
+          {
+            "type": "text",
+            "content": "Shipping 4th Quarter, 1994. Call (800) 336-3320 for info"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "assignments": {
+      "ZSEL": "UP"
+    }
+  },
+  "metadata": {
+    "source_file": "S2CHNG22.PAN",
+    "category": "changelog"
+  }
+}

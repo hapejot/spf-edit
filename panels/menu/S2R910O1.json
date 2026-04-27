@@ -1,0 +1,118 @@
+{
+  "id": "S2R910O1",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "HELP PANEL INDEX - `O`, `P`",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Select from the following help panels by number:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 +- O Line Command in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "2 +- OO Line Command in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "3 +- OS2"
+      },
+      {
+        "type": "text",
+        "content": "4 +- PANELID"
+      },
+      {
+        "type": "text",
+        "content": "5 +- PASTE in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "6 +- PFKEY DEFINITION PANEL"
+      },
+      {
+        "type": "text",
+        "content": "7 +- PFSHOW"
+      },
+      {
+        "type": "text",
+        "content": "8 +- PRIMARY COMMANDS in BROWSE"
+      },
+      {
+        "type": "text",
+        "content": "9 +- PRINT"
+      },
+      {
+        "type": "text",
+        "content": "10 +- PRINTER SETUP PANEL"
+      },
+      {
+        "type": "text",
+        "content": "11 +- PROFILE DEFINITION PANEL"
+      },
+      {
+        "type": "text",
+        "content": "12 +- PROFILE in EDIT"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R910O1.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

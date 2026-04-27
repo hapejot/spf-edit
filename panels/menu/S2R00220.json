@@ -1,0 +1,118 @@
+{
+  "id": "S2R00220",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SPF/PC COMMAND - LPRINT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Use this command to change the assignment of the logical printer."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "LPRINT [logical-printer-name]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "This command changes the logical printer assignment.  See PRINTER"
+      },
+      {
+        "type": "text",
+        "content": "for details on setting up logical printers."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "LPRINT  page1"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "would select the previously defined \"page1\" printer definition"
+      },
+      {
+        "type": "text",
+        "content": "and make that printer active."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "LPRINT"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "displays the Logical printer selection list."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R00220.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

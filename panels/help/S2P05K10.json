@@ -1,0 +1,113 @@
+{
+  "id": "S2P05K10",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SELECTING KEYBOARD SCHEMES",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SELECTING KEYBOARD SCHEMES"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "When first displayed, panel 0.K displays a selection list of"
+      },
+      {
+        "type": "text",
+        "content": "available \"Keyboard Schemes,\" which are collections of"
+      },
+      {
+        "type": "text",
+        "content": "related key assignments.  A typical keyboard scheme selection"
+      },
+      {
+        "type": "text",
+        "content": "list may look as follows:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "ACTIVE MAPPING:+DEFAULT"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NAME     MAPPING DESCRIPTION"
+      },
+      {
+        "type": "text",
+        "content": "DEFAULT  3270 style keyboard settings"
+      },
+      {
+        "type": "text",
+        "content": "SPFPC    SPF/PC Version 2.1 style layout"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Enter an 'E' command on the primary command line edits the"
+      },
+      {
+        "type": "text",
+        "content": "\"Active Mapping\", described on the top line, while entering"
+      },
+      {
+        "type": "text",
+        "content": "an 'E' line command next to one of names edits that scheme."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Entering an 'S' next to one of the schemes \"selects\" it, making"
+      },
+      {
+        "type": "text",
+        "content": "it and all of its key assignments active."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05K10.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "id": "S2P05K30",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "KEY CATEGORIES",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "KEY CATEGORIES"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Each key mapping scheme is broken down into 7 different"
+      },
+      {
+        "type": "text",
+        "content": "groupings of keys: FUNCTIONS, ALT, CTRL, SHIFT, EXTENDED,"
+      },
+      {
+        "type": "text",
+        "content": "MOUSE, and CUSTOM."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "The"
+          },
+          {
+            "type": "text",
+            "content": "FUNCTION+category contains the Ctrl, Alt, and Shift"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "combinations of PF-Keys."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "The"
+          },
+          {
+            "type": "text",
+            "content": "ALT+and"
+          },
+          {
+            "type": "text",
+            "content": "CTRL+categories contain the ALT and CTRL"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "combinations of all the alpha, extended, and numeric keypad"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "keys."
+          },
+          {
+            "type": "text",
+            "content": "SHIFT+is similar to ALT and CTRL, but excluding"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "assignment of Shift-Alphas."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "The"
+          },
+          {
+            "type": "text",
+            "content": "EXTENDED+category contains all of the numeric keypad"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "and grey function keys, include Enter, Left and Right Ctrl,"
+      },
+      {
+        "type": "text",
+        "content": "Tab, etc."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05K30.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

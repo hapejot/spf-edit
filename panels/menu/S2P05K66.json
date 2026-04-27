@@ -1,0 +1,109 @@
+{
+  "id": "S2P05K66",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "CUSTOM KEY ASSIGNMENT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NOTE:"
+      },
+      {
+        "type": "text",
+        "content": "Custom key definition only works for keys and keyboards that"
+      },
+      {
+        "type": "text",
+        "content": "do not require any special software to make the scancodes"
+      },
+      {
+        "type": "text",
+        "content": "appear."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For this reason, if you attempt to assign a key that"
+      },
+      {
+        "type": "text",
+        "content": "does not return a scancode that SPF/PC recognizes or detects,"
+      },
+      {
+        "type": "text",
+        "content": "nothing will happen on the KEY DEFINITION PANEL - SPF/PC"
+      },
+      {
+        "type": "text",
+        "content": "will not display a CUSTOM-##### message for the key, nor will"
+      },
+      {
+        "type": "text",
+        "content": "it identify it by its key cap label."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Keys of this nature are not customizable, and must be ignored."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2P05K66.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

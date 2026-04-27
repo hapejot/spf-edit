@@ -1,0 +1,111 @@
+{
+  "id": "S2P01303",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "COMMANDS AND PF KEYS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You may enter multiple commands in a single interaction.  This is called"
+      },
+      {
+        "type": "text",
+        "content": "command stacking.+ The commands are executed as if you had entered them"
+      },
+      {
+        "type": "text",
+        "content": "one after the other."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Stacked commands must be separated with a delimiter character.  The"
+      },
+      {
+        "type": "text",
+        "content": "default delimiter is a semicolon (;).  You may change it via option 0.1."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND  change all tct ctc;find abc"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND  split;3.4"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "In the first example, two EDIT commands have been stacked.  In the second"
+      },
+      {
+        "type": "text",
+        "content": "example, a SPLIT command and an option selection have been stacked (the"
+      },
+      {
+        "type": "text",
+        "content": "option selection applies to the lower screen created via the SPLIT)."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PF key definitions may also be equated to a stack of commands."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PF12  caps off;number on;down 5;hex on"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P01303.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

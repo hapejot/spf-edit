@@ -1,0 +1,114 @@
+{
+  "id": "S2R2C200",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Edit limits the length of records in a file according to the maximum"
+      },
+      {
+        "type": "text",
+        "content": "record length value in the edit profile.  You may not extend a new or"
+      },
+      {
+        "type": "text",
+        "content": "existing record beyond this value.  You may, however, increase the"
+      },
+      {
+        "type": "text",
+        "content": "maximum record length that Edit will allow by supplying a value in the"
+      },
+      {
+        "type": "text",
+        "content": "the MAX RECL field of the edit entry panel."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "MAX RECL  255 +             sets a new maximum record length"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The MAX RECL field may also be used to reduce the length of records in"
+      },
+      {
+        "type": "text",
+        "content": "an existing file provided that there are only blanks in the columns to"
+      },
+      {
+        "type": "text",
+        "content": "be truncated."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2C200.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

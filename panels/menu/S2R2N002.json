@@ -1,0 +1,120 @@
+{
+  "id": "S2R2N002",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "GENERAL COMMAND - COLOR",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Use this command to display and change the current color settings."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "COLOR"
+      },
+      {
+        "type": "text",
+        "content": "COLORS"
+      },
+      {
+        "type": "text",
+        "content": "COLOUR"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "This command displays Color Definitions, which allow you to review"
+      },
+      {
+        "type": "text",
+        "content": "and change the colors assigned to various display elements. See Color"
+      },
+      {
+        "type": "text",
+        "content": "Definitions (Option 0.4) on page 9-15 for details."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The COLOR primary command can be used anywhere. When COLOR is invoked,"
+      },
+      {
+        "type": "text",
+        "content": "the current context is preserved. When you exit COLOR, you return to"
+      },
+      {
+        "type": "text",
+        "content": "where you were when you invoked COLOR."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Note: If you invoke COLOR via \"=0.4\" jump, the current context is not"
+      },
+      {
+        "type": "text",
+        "content": "preserved. On exit you are returned to the Primary Option Menu."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2N002.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

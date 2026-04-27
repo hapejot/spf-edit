@@ -1,0 +1,184 @@
+{
+  "id": "S2DOPROM",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "RECORD FORMAT DEFINITION",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "form",
+  "attributes": {
+    "~": {
+      "type": "OUTPUT",
+      "intensity": "low"
+    },
+    "^": {
+      "type": "PROT",
+      "intensity": "high",
+      "attn": true
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PROFILE NAME               :"
+          },
+          {
+            "type": "output",
+            "variable": "PROFNAME",
+            "attribute": "~"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "RECORD FORMAT           : M     ( MF Variable Record Sequential )"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "//"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "MAXIMUM RECORD LENGTH   :"
+          },
+          {
+            "type": "output",
+            "variable": "PPMAXREC",
+            "attribute": "~"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "MIN RECORD LENGTH"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 5,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+(0 - 32000)"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Page"
+          },
+          {
+            "type": "text",
+            "content": "2+of"
+          },
+          {
+            "type": "text",
+            "content": "2+  Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to Page 1, or"
+          },
+          {
+            "type": "output",
+            "variable": "END",
+            "attribute": "^"
+          },
+          {
+            "type": "text",
+            "content": "+to exit."
+          }
+        ]
+      }
+    ]
+  },
+  "init": {
+    "zvars": [
+      "PPMINREC"
+    ]
+  },
+  "proc_section": {
+    "validations": [
+      {
+        "field": "PPMINREC",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "numeric",
+            "range": {
+              "min": 0,
+              "max": "PPMAXREC"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DOPROM.PAN",
+    "category": "form",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

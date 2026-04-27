@@ -1,0 +1,125 @@
+{
+  "id": "S2MEFORE",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "USER APPLICATION DEFINITION",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "menu",
+  "attributes": {
+    "^": {
+      "type": "INPUT",
+      "intensity": "high",
+      "caps": false,
+      "justification": "left"
+    },
+    "#": {
+      "type": "INPUT",
+      "intensity": "high",
+      "caps": false,
+      "scroll": true,
+      "justification": "left"
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "USER APPLICATION NAME      :"
+          },
+          {
+            "type": "output",
+            "variable": "uAppName"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "APPLICATION DESCRIPTION"
+          },
+          {
+            "type": "input",
+            "variable": "uAppDesc",
+            "attribute": "#",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PROGRAM:"
+      },
+      {
+        "type": "input",
+        "variable": "uAppPgm",
+        "attribute": "#",
+        "field_connector": true
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PARMS:"
+      },
+      {
+        "type": "input",
+        "variable": "uAppParm",
+        "attribute": "#",
+        "field_connector": true
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "WORKING DIRECTORY:"
+      },
+      {
+        "type": "input",
+        "variable": "uAppWdir",
+        "attribute": "#",
+        "field_connector": true
+      },
+      {
+        "type": "blank"
+      }
+    ]
+  },
+  "proc_section": {
+    "validations": [
+      {
+        "field": "UAPPPGM",
+        "rules": [
+          {
+            "type": "non_blank"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2MEFORE.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

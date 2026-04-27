@@ -1,0 +1,109 @@
+{
+  "id": "S2P05K26",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "ASSIGNING VALUES TO KEYS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If you are in one of the panel 0.K key assignment tables,"
+      },
+      {
+        "type": "text",
+        "content": "assignment of a key to blank invalidates the function"
+      },
+      {
+        "type": "text",
+        "content": "previously assigned to the key.  If you are in the 0.3 PF-KEYS"
+      },
+      {
+        "type": "text",
+        "content": "panel, blanking out a key value returns it to its 3270 -"
+      },
+      {
+        "type": "text",
+        "content": "default value."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Current key assignments may be changed from anywhere in SPF/PC"
+      },
+      {
+        "type": "text",
+        "content": "by typing the KEYBOARD primary command.  KEYBOARD will display"
+      },
+      {
+        "type": "text",
+        "content": "the active mapping scheme key category menu.  If you are"
+      },
+      {
+        "type": "text",
+        "content": "interested in changing only the PF-Keys, the KEYS command"
+      },
+      {
+        "type": "text",
+        "content": "may be executed, which will display only the PF-Key assignments."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05K26.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

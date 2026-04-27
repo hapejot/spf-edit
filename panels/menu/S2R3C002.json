@@ -1,0 +1,115 @@
+{
+  "id": "S2R3C002",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "TEXT SEARCH PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SEARCH SUBDIRECTORIES"
+      },
+      {
+        "type": "text",
+        "content": "This field lets you specify whether the search should be limited"
+      },
+      {
+        "type": "text",
+        "content": "to the first level of the specified path or to all levels (via"
+      },
+      {
+        "type": "text",
+        "content": "recursive search)."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "TEXT"
+      },
+      {
+        "type": "text",
+        "content": "Specifies the text string to look for."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CASE SENSITIVE"
+      },
+      {
+        "type": "text",
+        "content": "Specifies whether the TEXT string search should be for an exact"
+      },
+      {
+        "type": "text",
+        "content": "match (CASE SENSITIVE = Y), or for a match on upper and lower"
+      },
+      {
+        "type": "text",
+        "content": "case characters (CASE SENSITIVE = N)."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R3C002.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

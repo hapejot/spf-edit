@@ -1,0 +1,117 @@
+{
+  "id": "S2R17445",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "REPEAT FIND",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The RFIND (repeat find) command can be used to repeat the last FIND"
+      },
+      {
+        "type": "text",
+        "content": "command that was entered.  Since this command is sensitive to the"
+      },
+      {
+        "type": "text",
+        "content": "current position of the cursor, it is normally entered via a PF key."
+      },
+      {
+        "type": "text",
+        "content": "(The default RFIND key is PF5)."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "By pressing the RFIND PF key repeatedly, you can find successive"
+      },
+      {
+        "type": "text",
+        "content": "occurrences of a specified character string.  RFIND is sensitive to the"
+      },
+      {
+        "type": "text",
+        "content": "type of FIND command that is being repeated.  For FIRST, NEXT, and ALL,"
+      },
+      {
+        "type": "text",
+        "content": "RFIND searches for the \"next\" occurrence."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For PREV and LAST, RFIND searches for a \"previous\" occurence.  RFIND"
+      },
+      {
+        "type": "text",
+        "content": "can be used to continue a search, wrapping around from the bottom of"
+      },
+      {
+        "type": "text",
+        "content": "a file to the top (or if the original direction of the FIND was toward"
+      },
+      {
+        "type": "text",
+        "content": "top of file, wrapping from the top to the bottom)."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to the previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R17445.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "id": "S2R10000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "BROWSE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "attributes": {
+    "^": {
+      "type": "PROT",
+      "intensity": "high",
+      "mouse": true
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "BROWSE allows you to see, but not change, all supported file types."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Records are displayed in full-screen mode, and, if necessary, can be"
+      },
+      {
+        "type": "text",
+        "content": "scrolled forward, backward, left, or right."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following topics may be selected by number:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "0 + General introduction"
+      },
+      {
+        "type": "text",
+        "content": "1 + Primary commands"
+      },
+      {
+        "type": "text",
+        "content": "2 + Types of files"
+      },
+      {
+        "type": "text",
+        "content": "3 + Browse entry panel"
+      },
+      {
+        "type": "text",
+        "content": "4 + File selection list"
+      },
+      {
+        "type": "text",
+        "content": "5 + Display screen format"
+      },
+      {
+        "type": "text",
+        "content": "6 + Scrolling data"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": [
+        {
+          "value": "&ZCMD",
+          "action": {
+            "type": "panel",
+            "target": "."
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "source_file": "S2R10000.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

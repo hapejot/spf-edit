@@ -1,0 +1,130 @@
+{
+  "id": "S2DKMK",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "MACRO KEY ASSIGNMENT",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PRESS THE KEY YOU WANT ASSIGNED TO MACRO:"
+          },
+          {
+            "type": "output",
+            "variable": "MACNAME"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PRESS"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+TO ACCEPT THE ASSIGNMENT."
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "KEY ASSIGNMENT    :+"
+          },
+          {
+            "type": "output",
+            "variable": "MACKEY"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "MACRO NAME        :"
+          },
+          {
+            "type": "output",
+            "variable": "MACNAME"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "MACRO DESCRIPTION :"
+          },
+          {
+            "type": "output",
+            "variable": "MACDESC"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "ENTER"
+          },
+          {
+            "type": "text",
+            "content": "CANCEL+TO EXIT WITHOUT ASSIGNING A KEY."
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NOTE:+MACROS MAY ONLY BE ASSIGNED TO NON-DATA KEYS. IF SPF/PC BEEPS"
+      },
+      {
+        "type": "text",
+        "content": "WHEN A KEY IS PRESSED, THEN THAT KEY MAY NOT BE USED FOR MACRO"
+      },
+      {
+        "type": "text",
+        "content": "ASSIGNMENT."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": ")disp"
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DKMK.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

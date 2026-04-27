@@ -1,0 +1,178 @@
+{
+  "id": "S2R2E000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT DISPLAY SCREEN FORMAT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "EDIT DISPLAY SCREEN FORMAT"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The edit display screen is comprised of the six main areas shown below:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(1)+TITLE"
+          },
+          {
+            "type": "text",
+            "content": "(2)+COLUMNS/MESSAGES"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(3)+COMMAND"
+          },
+          {
+            "type": "text",
+            "content": "(4)+SCROLL AMOUNT"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(5)+LINE COMMAND FIELDS"
+          },
+          {
+            "type": "text",
+            "content": "(6)+DATA AREA"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "╔╗"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(1)+ ║"
+          },
+          {
+            "type": "text",
+            "content": "EDIT C:\\DATA\\SAMPLE.FIL // COLUMNS 001 080+║ \u0011"
+          },
+          {
+            "type": "text",
+            "content": "(2)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(3)+ ║"
+          },
+          {
+            "type": "text",
+            "content": "COMMAND     +"
+          },
+          {
+            "type": "text",
+            "content": "SCROLL  PAGE+║ \u0011"
+          },
+          {
+            "type": "text",
+            "content": "(4)"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "║ 000400   IF FLAG = 'Y' THEN                                 ║"
+      },
+      {
+        "type": "text",
+        "content": "║ 000500     DO;                                              ║"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(5)+ ║ 000600       NAME = \"CTC\";                                  ║ \u0011"
+          },
+          {
+            "type": "text",
+            "content": "(6)"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "║ 000700       VALUE(1) = 0;                                  ║"
+      },
+      {
+        "type": "text",
+        "content": "║ 000800     END;                                             ║"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2E000.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

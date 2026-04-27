@@ -1,0 +1,112 @@
+{
+  "id": "S2P05502",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDITOR OPTIONS PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "HORIZONTAL SCROLL WITH CURSOR+ Indicate whether you want your cursor to"
+      },
+      {
+        "type": "text",
+        "content": "cause horizontal scrolling:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Y+- SPF/PC will scroll left or right by one when the cursor reaches"
+      },
+      {
+        "type": "text",
+        "content": "the left or right edge of the screen.  This is typical for PC"
+      },
+      {
+        "type": "text",
+        "content": "systems."
+      },
+      {
+        "type": "text",
+        "content": "N+- The cursor will wrap to the opposite edge when it reaches"
+      },
+      {
+        "type": "text",
+        "content": "the left or right edge the screen.  This is typical of"
+      },
+      {
+        "type": "text",
+        "content": "3270-type terminals attached to VM or MVS systems."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "MAX RECORD LENGTH+ Specifies the normal maximum record length for any"
+      },
+      {
+        "type": "text",
+        "content": "records that may be handled. Set this value to the longest record you"
+      },
+      {
+        "type": "text",
+        "content": "expect to process. The smaller the default maximum is, the more"
+      },
+      {
+        "type": "text",
+        "content": "efficiently SPF/PC will run. All internal buffers used to handle"
+      },
+      {
+        "type": "text",
+        "content": "records are allocated at the maximum record length."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05502.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

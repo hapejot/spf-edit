@@ -1,0 +1,180 @@
+{
+  "id": "S2P01106",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "GENERAL HEADER LINES",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "┌�┐"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "line 1:   │"
+          },
+          {
+            "type": "text",
+            "content": "SPF/PC(1) TITLE                       │"
+          },
+          {
+            "type": "text",
+            "content": "SHORT MESSAGE+ │"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "����"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "line 2:   │"
+          },
+          {
+            "type": "text",
+            "content": "COMMAND/OPTION+                              │"
+          },
+          {
+            "type": "text",
+            "content": "SCROLL+ │"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "���"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "line 3:   │"
+          },
+          {
+            "type": "text",
+            "content": "LONG MESSAGE+                                           │"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "└┘"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "The"
+          },
+          {
+            "type": "text",
+            "content": "COMMAND/OPTION+area is used to enter a SPF/PC primary command or an"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "option for a menu."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "The"
+          },
+          {
+            "type": "text",
+            "content": "SCROLL+area defines the current scroll amount used whenever an UP or"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "DOWN command is issued. You may change its setting by overtyping."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "The"
+          },
+          {
+            "type": "text",
+            "content": "LONG MESSAGE+area is the region where context sensitive information"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "concerning error messages is displayed when you issue the HELP command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2P01106.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

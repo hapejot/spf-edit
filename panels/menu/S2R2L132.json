@@ -1,0 +1,121 @@
+{
+  "id": "S2R2L132",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - >>",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "=COLS> ----|----1----|----2----|----3----|----4----|--"
+      },
+      {
+        "type": "text",
+        "content": "=BNDS>"
+      },
+      {
+        "type": "text",
+        "content": "000030 ZEROS:                  /* zero work fields */"
+      },
+      {
+        "type": "text",
+        "content": "000031  IF WORK = 0 THEN       /* only if 0        */"
+      },
+      {
+        "type": "text",
+        "content": ">>4 32  SALES = 0;             /* zero sales       */"
+      },
+      {
+        "type": "text",
+        "content": "000033  CUSTOMER = ``;         /* blank customer   */"
+      },
+      {
+        "type": "text",
+        "content": ">> 034  END;                   /* end if           */"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Results"
+      },
+      {
+        "type": "text",
+        "content": "=COLS> ----|----1----|----2----|----3----|----4----|--"
+      },
+      {
+        "type": "text",
+        "content": "=BNDS>"
+      },
+      {
+        "type": "text",
+        "content": "000030 ZEROS:                  /* zero work fields */"
+      },
+      {
+        "type": "text",
+        "content": "000031  IF WORK = 0 THEN       /* only if 0        */"
+      },
+      {
+        "type": "text",
+        "content": "000032      SALES = 0;         /* zero sales       */"
+      },
+      {
+        "type": "text",
+        "content": "000033      CUSTOMER = ``;     /* blank customer   */"
+      },
+      {
+        "type": "text",
+        "content": "000034      END;               /* end if           */"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2L132.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

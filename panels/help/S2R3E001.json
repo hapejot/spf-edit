@@ -1,0 +1,111 @@
+{
+  "id": "S2R3E001",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "DRIVE SEARCH PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "DRIVE SEARCH PANEL"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Drive Search presents the search function from a disk drive"
+      },
+      {
+        "type": "text",
+        "content": "viewpoint.  It displays a select list of drives attached to your"
+      },
+      {
+        "type": "text",
+        "content": "system which contains useful information about each drive."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You can then select one or more drives via the `s` line command and"
+      },
+      {
+        "type": "text",
+        "content": "perform a variety of functions:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- Search for directories, on one or more drives, at one or more"
+      },
+      {
+        "type": "text",
+        "content": "levels, from the root directory."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- Search for files, on one or more drives, at one or more levels,"
+      },
+      {
+        "type": "text",
+        "content": "from the root directory."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- Search for files and directories, on one or more drives, at one"
+      },
+      {
+        "type": "text",
+        "content": "or more levels, from the root directory."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R3E001.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

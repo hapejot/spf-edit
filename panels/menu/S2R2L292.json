@@ -1,0 +1,115 @@
+{
+  "id": "S2R2L292",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - LC",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "000001 OLD KING COLE WAS A MERRY OLD SOUL"
+      },
+      {
+        "type": "text",
+        "content": "LC 002 AND A MERRY OLD SOUL WAS HE. HE CALLED"
+      },
+      {
+        "type": "text",
+        "content": "000003 FOR HIS CAP AND HE CALLED FOR HIS BOWL"
+      },
+      {
+        "type": "text",
+        "content": "000004 AND HE CALLED FOR HIS FIDDLERS THREE."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Results"
+      },
+      {
+        "type": "text",
+        "content": "000001 OLD KING COLE WAS A MERRY OLD SOUL"
+      },
+      {
+        "type": "text",
+        "content": "000002 and a merry old soul was he. he called"
+      },
+      {
+        "type": "text",
+        "content": "000003 FOR HIS CAP AND HE CALLED FOR HIS BOWL"
+      },
+      {
+        "type": "text",
+        "content": "000004 AND HE CALLED FOR HIS FIDDLERS THREE."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2L292.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

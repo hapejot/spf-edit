@@ -1,0 +1,113 @@
+{
+  "id": "S2R00370",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - SWAP",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Initially assigned to the PF9 key.  Use this command to move"
+      },
+      {
+        "type": "text",
+        "content": "back and forth between split screen tasks."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "SWAP"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "Tasks are activated according to the rules listed below:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- If you are in FSPLIT mode, SPF/PC activates the second task"
+      },
+      {
+        "type": "text",
+        "content": "and swaps it into view."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- If you are in SPLIT mode, and the second task occupies less"
+      },
+      {
+        "type": "text",
+        "content": "than five lines of the screen, SPF/PC swaps the positions of"
+      },
+      {
+        "type": "text",
+        "content": "the two tasks on the screen."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Swaps are implicitely executed by clicking the mouse pointer on"
+      },
+      {
+        "type": "text",
+        "content": "the otherside of a split."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R00370.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

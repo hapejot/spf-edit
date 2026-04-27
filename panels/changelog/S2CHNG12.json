@@ -1,0 +1,98 @@
+{
+  "id": "S2CHNG12",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "132 COLUMN SUPPORT",
+    "version_var": "ZSHRTVER",
+    "prefix": "CHANGES"
+  },
+  "type": "changelog",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You can now work with any extended display modes that your system"
+      },
+      {
+        "type": "text",
+        "content": "supports, including the 132 column modes supplied by many of the"
+      },
+      {
+        "type": "text",
+        "content": "Super VGA cards."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To use extended video modes, setup your DOS or OS/2 session prior"
+      },
+      {
+        "type": "text",
+        "content": "to getting into SPF/PC.   Upon entering SPF/PC (as long as the"
+      },
+      {
+        "type": "text",
+        "content": "SCREEN LINES field of Panel 0.1 is set to 0), SPF/PC will detect"
+      },
+      {
+        "type": "text",
+        "content": "the alternate video mode and adjust automatically."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "In OS/2, alternate video modes must be first supported by your OS/2"
+      },
+      {
+        "type": "text",
+        "content": "video driver and are usually selected using the OS/2 Mode command."
+      },
+      {
+        "type": "text",
+        "content": "In DOS, alternate video modes are selected using software shipped"
+      },
+      {
+        "type": "text",
+        "content": "with your video adapter. See your adapter documention for details."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For further details see:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC User Guide and Reference,"
+      },
+      {
+        "type": "text",
+        "content": "Terminal Characteristics Option 0.1 ....... Page 9-3"
+      }
+    ]
+  },
+  "proc_section": {
+    "assignments": {
+      "ZSEL": "UP"
+    }
+  },
+  "metadata": {
+    "source_file": "S2CHNG12.PAN",
+    "category": "changelog"
+  }
+}

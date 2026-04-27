@@ -1,0 +1,114 @@
+{
+  "id": "S2R3Z000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "UTILITY FUNCTIONS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "UTILITY FUNCTIONS"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC allows you to perform a number of utility functions, including"
+      },
+      {
+        "type": "text",
+        "content": "moving, copying, renaming, and deleting files, without leaving the"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC environment. You can use SPF/PC utility features instead of"
+      },
+      {
+        "type": "text",
+        "content": "command or other external commands. If you are an experienced"
+      },
+      {
+        "type": "text",
+        "content": "ISPF/PDF user, this gives you the opportunity to work with"
+      },
+      {
+        "type": "text",
+        "content": "directories and files in a familiar way."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If you prefer to use operating system commands you can issue them"
+      },
+      {
+        "type": "text",
+        "content": "from the command line, or the COMMAND panel, and if you have"
+      },
+      {
+        "type": "text",
+        "content": "non-SPF/PC utilities you prefer to use, you can use the foreground"
+      },
+      {
+        "type": "text",
+        "content": "feature to execute them from inside the SPF/PC environment."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The two basic ways to access the utility functions are listed below:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "When you start SPF/PC it displays the Primary Option Panel. If you"
+      },
+      {
+        "type": "text",
+        "content": "want to work with the utility functions, select option 3, SPF/PC"
+      },
+      {
+        "type": "text",
+        "content": "Utilities.  SPF/PC will respond by displaying the Utilities."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R3Z000.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

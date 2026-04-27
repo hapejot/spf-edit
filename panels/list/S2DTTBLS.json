@@ -1,0 +1,89 @@
+{
+  "id": "S2DTTBLS",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "PERSISTANT TABLE LIST",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "list",
+  "attributes": {
+    "~": {
+      "type": "OUTPUT",
+      "intensity": "low"
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD",
+        "scroll": {
+          "variable": "SCROLL"
+        }
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following line commands are valid for the list below:"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "S+- Edit"
+          },
+          {
+            "type": "text",
+            "content": "D+- Delete"
+          },
+          {
+            "type": "text",
+            "content": "C+- Copy"
+          },
+          {
+            "type": "text",
+            "content": "R+- Rename"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "TABLE NAMES"
+      },
+      {
+        "type": "divider",
+        "style": "single"
+      }
+    ]
+  },
+  "model": {
+    "selection_field": {
+      "variable": "Z",
+      "width": 1
+    },
+    "columns": [
+      {
+        "variable": "NAMEBASE",
+        "attribute": "~"
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2RT0000",
+    "zvars": [
+      "SCROLL",
+      "SEL"
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DTTBLS.PAN",
+    "category": "list",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

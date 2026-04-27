@@ -1,0 +1,110 @@
+{
+  "id": "S2R10001",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "BROWSE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "BROWSE allows you to display, but not change, data."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You can scroll the data in any direction by a half or full page, or by"
+      },
+      {
+        "type": "text",
+        "content": "any number of lines.  Scrolling is performed by means of the scroll"
+      },
+      {
+        "type": "text",
+        "content": "commands and cursor keys."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "BROWSE and EDIT share many commands in common, the fundamental difference"
+      },
+      {
+        "type": "text",
+        "content": "being that BROWSE has no commands which alter data."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Choose BROWSE instead of EDIT:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To prevent accidentally changing data."
+      },
+      {
+        "type": "text",
+        "content": "To allow concurrent access by two or more users to a networked file."
+      },
+      {
+        "type": "text",
+        "content": "This is possible because BROWSE does not lock a file (i.e., open with"
+      },
+      {
+        "type": "text",
+        "content": "update intent), while EDIT does."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R10001.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

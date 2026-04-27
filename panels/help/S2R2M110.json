@@ -1,0 +1,115 @@
+{
+  "id": "S2R2M110",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - PROFILE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Displays the current edit profile. It can also be used to choose an"
+      },
+      {
+        "type": "text",
+        "content": "edit profile for a different extension or lock the current profile."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "PROFILE name [number]"
+      },
+      {
+        "type": "text",
+        "content": "PROF    number"
+      },
+      {
+        "type": "text",
+        "content": "PRO     LOCK"
+      },
+      {
+        "type": "text",
+        "content": "PR      UNLOCK"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "Specifies the profile name that you would like to change to.  If the"
+      },
+      {
+        "type": "text",
+        "content": "specified name does not exist, a new profile is created using the"
+      },
+      {
+        "type": "text",
+        "content": "parameters that are in effect when the ISREDIT PROFILE command is"
+      },
+      {
+        "type": "text",
+        "content": "processed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The number of profile lines to display.  You can specify any number"
+      },
+      {
+        "type": "text",
+        "content": "from 1 to 8.  The default is 4, the maximum is 8.  If you don`t want"
+      },
+      {
+        "type": "text",
+        "content": "to see the profile lines, enter RESET or PROFILE 0."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2M110.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "id": "S2R2L003",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Available line commands include:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 + S     SHOW STRUCTURE EXCLUDED LINE(S)"
+      },
+      {
+        "type": "text",
+        "content": "2 + TABS  DISPLAY/SET TABS"
+      },
+      {
+        "type": "text",
+        "content": "3 + TE    TEXT ENTRY"
+      },
+      {
+        "type": "text",
+        "content": "4 + TF    TEXT FLOW"
+      },
+      {
+        "type": "text",
+        "content": "5 + TJ    TEXT JOIN"
+      },
+      {
+        "type": "text",
+        "content": "6 + TS    TEXT SPLIT"
+      },
+      {
+        "type": "text",
+        "content": "7 + UC    SET A LINE TO UPPERCASE"
+      },
+      {
+        "type": "text",
+        "content": "8 + UCC   SET A BLOCK OF LINES TO UPPERCASE"
+      },
+      {
+        "type": "text",
+        "content": "9 + X     EXCLUDE"
+      },
+      {
+        "type": "text",
+        "content": "10 + XX    EXCLUDE BLOCK"
+      },
+      {
+        "type": "text",
+        "content": "11 + .     LABEL ASSIGNMENT"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2L003.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

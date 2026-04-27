@@ -1,0 +1,181 @@
+{
+  "id": "S2R3X000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE SELECTION LIST LINE COMMANDS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "FILE SELECTION LIST LINE COMMANDS"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Once in a file selection list, you have the following line commands"
+      },
+      {
+        "type": "text",
+        "content": "to operate upon the listed file."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "From Panels 1 or 2 File Selection Lists:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "S+ EDIT/BROWSE current file."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "From 3.X File Selection Lists:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "E+ EDIT the file"
+          },
+          {
+            "type": "text",
+            "content": "C+ Copy file to another filename/directory"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "B+ BROWSE the file"
+          },
+          {
+            "type": "text",
+            "content": "M+ Move the file to another directory"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "D+ Delete the file"
+          },
+          {
+            "type": "text",
+            "content": "T+ Tree the selected directory"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "P+ Print the file"
+          },
+          {
+            "type": "text",
+            "content": "X+ Exclude the file from the current list"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "R+ Rename the file"
+          },
+          {
+            "type": "text",
+            "content": "U+ User command execute"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "I+ Information on file"
+          },
+          {
+            "type": "text",
+            "content": "S+ EDIT current file"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "K+ Convert file"
+          },
+          {
+            "type": "text",
+            "content": "G+ Go (Execute) file"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R3X000.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

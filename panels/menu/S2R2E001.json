@@ -1,0 +1,117 @@
+{
+  "id": "S2R2E001",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT DISPLAY SCREEN FORMAT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The six display screen areas shown on the previous panel are:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1   TITLE  Shows the path and file being edited."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "2   COLUMNS/MESSAGES  Normally shows the columns being displayed."
+      },
+      {
+        "type": "text",
+        "content": "This area is also used for short error or information messages,"
+      },
+      {
+        "type": "text",
+        "content": "which overlay the COLUMNS information."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "3   COMMAND  Primary edit commands are entered here."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "4   SCROLL AMOUNT  Where the current scroll amount is displayed."
+      },
+      {
+        "type": "text",
+        "content": "You can change the amount by overtyping this field."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "5   LINE COMMAND FIELDS  normally shows the line number.  Line"
+      },
+      {
+        "type": "text",
+        "content": "commands are typed in these fields."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "6   DATA AREA  Fills up the remainder of the display screen."
+      },
+      {
+        "type": "text",
+        "content": "To change data here, simply overtype it."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2E001.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

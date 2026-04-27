@@ -1,0 +1,113 @@
+{
+  "id": "S2R2M120",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - RESET",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Resets special lines, flagged lines, and pending line commands.  The"
+      },
+      {
+        "type": "text",
+        "content": "effect is that line command fields are cleared and line numbers are"
+      },
+      {
+        "type": "text",
+        "content": "displayed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "RESET  [LABEL] [COMMAND] [ERROR] [CHANGE] [SPECIAL] [EXCLUDED] [range]"
+      },
+      {
+        "type": "text",
+        "content": "RES"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "The following parameters allow limiting the effect of this command:"
+      },
+      {
+        "type": "text",
+        "content": "- LABEL (or LAB) clear labels"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- COMMAND (or COM) clear pending line commands"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- ERROR (or ERR) clear error flags (==ERR>)"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- CHANGE (or CHG) clear change flags (==CHG>)"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- SPECIAL (or SPE) =MASK>, =TABS>, =BNDS>, ==MSG>, or =NOTE=)"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2M120.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

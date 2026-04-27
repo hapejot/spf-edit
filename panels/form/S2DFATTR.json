@@ -1,0 +1,349 @@
+{
+  "id": "S2DFATTR",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE INFORMATION",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "form",
+  "attributes": {
+    "~": {
+      "type": "OUTPUT",
+      "intensity": "low"
+    },
+    "^": {
+      "type": "PROT",
+      "intensity": "high",
+      "attn": true
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PATH :"
+          },
+          {
+            "type": "output",
+            "variable": "PATH0"
+          }
+        ]
+      },
+      {
+        "type": "output",
+        "variable": "PATH1"
+      },
+      {
+        "type": "output",
+        "variable": "PATH2"
+      },
+      {
+        "type": "output",
+        "variable": "PATH3"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "FILE SIZE :"
+          },
+          {
+            "type": "output",
+            "variable": "FSIZE"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "ALLOCATED :"
+          },
+          {
+            "type": "output",
+            "variable": "ALSIZE"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CREATED   :"
+          },
+          {
+            "type": "output",
+            "variable": "CRDATE"
+          },
+          {
+            "type": "text",
+            "content": "+"
+          },
+          {
+            "type": "output",
+            "variable": "CRTIME"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "ACCESSED  :"
+          },
+          {
+            "type": "output",
+            "variable": "ACDATE"
+          },
+          {
+            "type": "text",
+            "content": "+"
+          },
+          {
+            "type": "output",
+            "variable": "ACTIME"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "MODIFIED  :"
+          },
+          {
+            "type": "output",
+            "variable": "FMDATE"
+          },
+          {
+            "type": "text",
+            "content": "+"
+          },
+          {
+            "type": "output",
+            "variable": "FMTIME"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "DIRECTORY    :"
+          },
+          {
+            "type": "output",
+            "variable": "Z",
+            "attribute": "~"
+          },
+          {
+            "type": "text",
+            "content": "+        +Y=Directory       N=File"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "READONLY"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+        (Y- Read only file  N- Modifiable file)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "ARCHIVE"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+        (Y- File modified   N- File not modified)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "HIDDEN"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+        (Y- Hidden          N- Visible)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SYSTEM"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+        (Y- OS file         N- Non-OS file)"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Press"
+          },
+          {
+            "type": "output",
+            "variable": "ENTER",
+            "attribute": "^"
+          },
+          {
+            "type": "text",
+            "content": "+to change file information"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Press"
+          },
+          {
+            "type": "output",
+            "variable": "END",
+            "attribute": "^"
+          },
+          {
+            "type": "text",
+            "content": "+to return back to file list"
+          }
+        ]
+      }
+    ]
+  },
+  "init": {
+    "zvars": [
+      "FADIRCT",
+      "FAREADO",
+      "FAARCHV",
+      "FAHIDDN",
+      "FASYSTM"
+    ]
+  },
+  "proc_section": {
+    "validations": [
+      {
+        "field": "FAREADO",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "FAARCHV",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "FAHIDDN",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "FASYSTM",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DFATTR.PAN",
+    "category": "form",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

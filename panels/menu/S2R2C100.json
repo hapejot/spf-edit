@@ -1,0 +1,155 @@
+{
+  "id": "S2R2C100",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If you specify a filename which contains a wildcard character (* or ?),"
+      },
+      {
+        "type": "text",
+        "content": "a file selection list is displayed.  You may scroll through the list via"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "the"
+          },
+          {
+            "type": "text",
+            "content": "UP+and"
+          },
+          {
+            "type": "text",
+            "content": "DOWN+scroll commands or via the"
+          },
+          {
+            "type": "text",
+            "content": "LOCATE+command, and you may"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "select one file at a time via the"
+          },
+          {
+            "type": "text",
+            "content": "SELECT+primary command, or the"
+          },
+          {
+            "type": "text",
+            "content": "S+line"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "To return to the entry panel from the file list, enter the"
+          },
+          {
+            "type": "text",
+            "content": "END+command."
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following topics may be selected by number:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 + Scrolling"
+      },
+      {
+        "type": "text",
+        "content": "2 + LOCATE command"
+      },
+      {
+        "type": "text",
+        "content": "3 + SELECT command"
+      },
+      {
+        "type": "text",
+        "content": "4 + S line command"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2C100.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

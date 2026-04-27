@@ -1,0 +1,115 @@
+{
+  "id": "S2R2M122",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - RESET",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- EXCLUDED (or X) make excluded lines visible"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If none of the above parameters is specified, all except labeled"
+      },
+      {
+        "type": "text",
+        "content": "lines are reset."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "In addition, the RESET command can include a range specification to"
+      },
+      {
+        "type": "text",
+        "content": "restrict the action to a range of lines.  See RANGE SEARCH for"
+      },
+      {
+        "type": "text",
+        "content": "information on how ranges are specified."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To clear ==CHG> flags and redisplay excluded lines between the start"
+      },
+      {
+        "type": "text",
+        "content": "of the file and the current cursor location:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "RESET CHG X .ZFIRST .ZCSR"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2M122.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

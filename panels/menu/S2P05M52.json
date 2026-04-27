@@ -1,0 +1,113 @@
+{
+  "id": "S2P05M52",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "HOW TO ASSIGN A MACRO TO A KEY",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To assign a macro to a key via normal key assignment, enter"
+      },
+      {
+        "type": "text",
+        "content": "the terminal function [KEY-MACRO <name>] to the desired key."
+      },
+      {
+        "type": "text",
+        "content": "For example, to assign the COMMBOX macro to the PF1 key,"
+      },
+      {
+        "type": "text",
+        "content": "fill in the field as follows:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PF1  ===>  F1  ===>  [KEY-MACRO COMMBOX]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "After assignment, every time you hit the F1 key, the COMMBOX"
+      },
+      {
+        "type": "text",
+        "content": "macro will be unwound, insert a comment box into your current"
+      },
+      {
+        "type": "text",
+        "content": "document."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2P05M52.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

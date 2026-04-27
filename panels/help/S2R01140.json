@@ -1,0 +1,105 @@
+{
+  "id": "S2R01140",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILELIST SEARCH COMMAND",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "From a file list, the SEARCH command will perform a text search for text"
+      },
+      {
+        "type": "text",
+        "content": "strings in the files listed.  To search for a specific text string,"
+      },
+      {
+        "type": "text",
+        "content": "enter"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND +SEARCH test string"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This will create another filelist that displays only those files that"
+      },
+      {
+        "type": "text",
+        "content": "contain the text \"test string\" (case insensitive)."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R01140.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

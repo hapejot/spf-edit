@@ -1,0 +1,136 @@
+{
+  "id": "S2R01126",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SCROLLABLE DATA DISPLAY",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "When there is too much data to fit on the logical screen, SPF/PC uses"
+      },
+      {
+        "type": "text",
+        "content": "a scrollable format.  You can scroll up, down, left, and right as"
+      },
+      {
+        "type": "text",
+        "content": "necessary to view all of the data."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For directory lists, the information is displayed in tabular format."
+      },
+      {
+        "type": "text",
+        "content": "BROWSE and EDIT, however, display the contents of a file exactly as"
+      },
+      {
+        "type": "text",
+        "content": "as it appears in a data set."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "┌┐"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "│"
+          },
+          {
+            "type": "text",
+            "content": "SPF/PC(1) BROWSE D:\\DEMO\\SOURCE\\MYPGM.COB   LINE 00040 COLS 001 080+│"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "│"
+          },
+          {
+            "type": "text",
+            "content": "COMMAND                                         SCROLL  PAGE+│"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "│   IF OPTION = 'N' THEN DO;                                  00400000│"
+      },
+      {
+        "type": "text",
+        "content": "│       DATA = 0;                                             00500000│"
+      },
+      {
+        "type": "text",
+        "content": "│       XDATA(1) = 0;                                         00600000│"
+      },
+      {
+        "type": "text",
+        "content": "│   END;                                                      00700000│"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R01126.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

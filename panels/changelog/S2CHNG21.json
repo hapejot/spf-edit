@@ -1,0 +1,51 @@
+{
+  "id": "S2CHNG21",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "OPTIONAL MVS ACCESS",
+    "version_var": "ZSHRTVER",
+    "prefix": "CHANGES"
+  },
+  "type": "changelog",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This optional program offers full transparent access to all"
+      },
+      {
+        "type": "text",
+        "content": "mainframe files and status via LU2 or LU6.2 and HLLAPI."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "box",
+        "style": "announcement",
+        "rows": [
+          {
+            "type": "text",
+            "content": "Shipping 4th Quarter, 1994. Call (800) 336-3320 for info"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "assignments": {
+      "ZSEL": "UP"
+    }
+  },
+  "metadata": {
+    "source_file": "S2CHNG21.PAN",
+    "category": "changelog"
+  }
+}

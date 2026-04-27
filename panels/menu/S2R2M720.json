@@ -1,0 +1,121 @@
+{
+  "id": "S2R2M720",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - IMACRO",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Saves the name of an initial macro in the current edit profile."
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "IMACRO [name]"
+      },
+      {
+        "type": "text",
+        "content": "[NONE]"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "You can specify either:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- The name of the initial macro to be executed when editing the a file"
+      },
+      {
+        "type": "text",
+        "content": "that matches this file`s type.  The IMACRO is executed before any"
+      },
+      {
+        "type": "text",
+        "content": "data is displayed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- Specify NONE to reset the IMACRO value."
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "To set STARTUP as the initial macro:"
+      },
+      {
+        "type": "text",
+        "content": "IMACRO STARTUP"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To reset the edit profile to no initial macro:"
+      },
+      {
+        "type": "text",
+        "content": "IMACRO NONE"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2M720.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

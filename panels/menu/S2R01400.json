@@ -1,0 +1,114 @@
+{
+  "id": "S2R01400",
+  "title": {
+    "text": "SCROLLING",
+    "prefix": "TUTORIAL"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Scrolling may be used when the amount of data exceeds the screen size:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- In EDIT or BROWSE data displays"
+      },
+      {
+        "type": "text",
+        "content": "- In file selection lists"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You can scroll up or down.  If the width of the data exceeds the logical"
+      },
+      {
+        "type": "text",
+        "content": "screen size, you can also scroll left or right.  The amount of scrolling is"
+      },
+      {
+        "type": "text",
+        "content": "usually controlled by the scroll amount field.  You can scroll by a specified"
+      },
+      {
+        "type": "text",
+        "content": "number of lines, by half, full, or almost full page, or by using the cursor"
+      },
+      {
+        "type": "text",
+        "content": "position to specify the line (or column) to scroll to."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following topics may be selected by number:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 + Scroll commands"
+      },
+      {
+        "type": "text",
+        "content": "2 + Scroll amount"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R01400.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

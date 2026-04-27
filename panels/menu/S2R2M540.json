@@ -1,0 +1,121 @@
+{
+  "id": "S2R2M540",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - AUTOSAVE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Determines whether the file is automatically saved when the edit"
+      },
+      {
+        "type": "text",
+        "content": "session ends."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "AUTOSAVE  [ON ]"
+      },
+      {
+        "type": "text",
+        "content": "[OFF [PROMPT  ]]"
+      },
+      {
+        "type": "text",
+        "content": "[OFF [NOPROMPT]]"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "If AUTOSAVE is on, the file is saved when the edit session ends via"
+      },
+      {
+        "type": "text",
+        "content": "the END primary command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If AUTOSAVE is off, and PROMPT is in effect, and the file was"
+      },
+      {
+        "type": "text",
+        "content": "modified, a prompt is displayed at END.  You may enter either SAVE"
+      },
+      {
+        "type": "text",
+        "content": "or CANCEL at this time. SAVE saves the file, then exits. CANCEL"
+      },
+      {
+        "type": "text",
+        "content": "exits without saving the file."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If AUTOSAVE is off and NOPROMPT is in effect, the file is not saved"
+      },
+      {
+        "type": "text",
+        "content": "at END. In this case END behaves exactly the same as CANCEL."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2M540.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "id": "S2R00110",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SPF/PC COMMAND - `&&`",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "The && command enables you to issue the same command repeatedly."
+      },
+      {
+        "type": "text",
+        "content": "Each time the command is envoked, it is left on the command line"
+      },
+      {
+        "type": "text",
+        "content": "and may be issued again with another ENTER."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "&& <command>"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You will probably use the && command modifier in two ways -"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- To continually issue command that are location specific,"
+      },
+      {
+        "type": "text",
+        "content": "like PRINT, while you scroll to different portions of the"
+      },
+      {
+        "type": "text",
+        "content": "edit session."
+      },
+      {
+        "type": "text",
+        "content": "- To modify long repetative tasks, like a series of CHANGE"
+      },
+      {
+        "type": "text",
+        "content": "commands where only one argument is getting changed"
+      },
+      {
+        "type": "text",
+        "content": "each time."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R00110.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "id": "S2R2L400",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - S",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Displays excluded line(s) based on the indentation hierarchy of"
+      },
+      {
+        "type": "text",
+        "content": "those lines."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "S[number]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "This command may be specified with or without a number.  The line or"
+      },
+      {
+        "type": "text",
+        "content": "lines with the least amount of indentation will be displayed first,"
+      },
+      {
+        "type": "text",
+        "content": "followed by lines at the next level of indentation and so forth."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This command may be validly entered only on the excluded display"
+      },
+      {
+        "type": "text",
+        "content": "line. If it is entered on any other line, an error message is"
+      },
+      {
+        "type": "text",
+        "content": "generated."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2L400.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

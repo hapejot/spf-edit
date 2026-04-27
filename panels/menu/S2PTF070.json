@@ -1,0 +1,120 @@
+{
+  "id": "S2PTF070",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "TERMINAL FUNCTION - [CURSOR]",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Moves the cursor up/down/left/right on the screen."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "[CURSOR-UP [nnn]]"
+      },
+      {
+        "type": "text",
+        "content": "[CURSOR-DOWN [nnn]]"
+      },
+      {
+        "type": "text",
+        "content": "[CURSOR-LEFT [nnn]]"
+      },
+      {
+        "type": "text",
+        "content": "[CURSOR-RIGHT [nnn]]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "Moves the cursor the direction specified one row/column.  If"
+      },
+      {
+        "type": "text",
+        "content": "[nnn] is specified, then it move <nnn> spaces.  Wraps at the"
+      },
+      {
+        "type": "text",
+        "content": "extreme screen boundaries and at the split line.  If"
+      },
+      {
+        "type": "text",
+        "content": "Horizonatal/Vertical Scrolling is enabled (See Panel 0.5),"
+      },
+      {
+        "type": "text",
+        "content": "EDIT, BROWSE, and selection lists will all scroll in the"
+      },
+      {
+        "type": "text",
+        "content": "specified direction whenever the cursor reaches the extreme"
+      },
+      {
+        "type": "text",
+        "content": "limit of the screen/split."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2PTF070.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

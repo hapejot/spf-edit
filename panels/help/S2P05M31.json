@@ -1,0 +1,110 @@
+{
+  "id": "S2P05M31",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "HOW TO RECORD A KEY MACRO",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Once we have filled in the fields, we simply need to hit the"
+      },
+      {
+        "type": "text",
+        "content": "ENTER key to begin recorded the macro.  To re-emphasize that"
+      },
+      {
+        "type": "text",
+        "content": "macro recording is occuring, two indicators are set off:  first,"
+      },
+      {
+        "type": "text",
+        "content": "a dual-tone beep sound is played over the PC speaker, and"
+      },
+      {
+        "type": "text",
+        "content": "secondly the word \"RECORDING\" is displayed on the status line"
+      },
+      {
+        "type": "text",
+        "content": "at the bottom of the screen."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To abort from the macro naming panel without starting the macro"
+      },
+      {
+        "type": "text",
+        "content": "record, simply issue the CANCEL primary command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Now, every key event that occurs is being recorded into the"
+      },
+      {
+        "type": "text",
+        "content": "macro, including Backspaces, Enter-Key processing, PFKeys,"
+      },
+      {
+        "type": "text",
+        "content": "Mouse Events, Terminal functions, etc."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05M31.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

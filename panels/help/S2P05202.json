@@ -1,0 +1,112 @@
+{
+  "id": "S2P05202",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "PRINTER SETUP PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To create a new printer setup use the EDIT primary or line command."
+      },
+      {
+        "type": "text",
+        "content": "For example, `e newname` in the primary command field will present a"
+      },
+      {
+        "type": "text",
+        "content": "fill in panel of printer characteristics. Alternately, you can copy"
+      },
+      {
+        "type": "text",
+        "content": "an existing printer setup by placing an `e` on the desired setup and"
+      },
+      {
+        "type": "text",
+        "content": "when the panel comes up, key in a new LOGICAL PRINTER NAME, and any"
+      },
+      {
+        "type": "text",
+        "content": "other differences you want to apply."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "LOGICAL PRINTER NAME+- Specify the symbolic name of your choice. This"
+      },
+      {
+        "type": "text",
+        "content": "name appears in the ACTIVE PRINTER field when this logical printer"
+      },
+      {
+        "type": "text",
+        "content": "is selected."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PRINTER DESCRIPTION+- A brief description of this printer`s"
+      },
+      {
+        "type": "text",
+        "content": "characteristics for your reference.  This description is presented"
+      },
+      {
+        "type": "text",
+        "content": "to the right of the logical printer name in the printer setup select"
+      },
+      {
+        "type": "text",
+        "content": "list."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05202.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

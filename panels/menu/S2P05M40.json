@@ -1,0 +1,119 @@
+{
+  "id": "S2P05M40",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "HOW TO PLAYBACK A RECORDED KEY MACRO",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Once recorded, a key macro may only be played back by pressing"
+      },
+      {
+        "type": "text",
+        "content": "the key it was assigned to.  For example, if the key assigned was"
+      },
+      {
+        "type": "text",
+        "content": "Alt-B, then you must move the cursor to a \"similar context\" to"
+      },
+      {
+        "type": "text",
+        "content": "when the macro was initially recorded and press the Alt-B key."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Context is important with key macros, since some macros will not"
+      },
+      {
+        "type": "text",
+        "content": "make sense in certain panels.  For example, if a macro was recorded"
+      },
+      {
+        "type": "text",
+        "content": "in the editor for inserted some text into a document, then that"
+      },
+      {
+        "type": "text",
+        "content": "macro will not make any sense if executed from the Primary Option"
+      },
+      {
+        "type": "text",
+        "content": "Panel.  However, if it is executed from there, SPF/PC will try"
+      },
+      {
+        "type": "text",
+        "content": "to execute it, interpreting the random commands as Primary Command"
+      },
+      {
+        "type": "text",
+        "content": "line keystrokes."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "And, on the converse, if a key macro is recorded in one of the"
+      },
+      {
+        "type": "text",
+        "content": "Dialog Manager selection panels, invocation from within the editor"
+      },
+      {
+        "type": "text",
+        "content": "will simply insert garbage into your text."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2P05M40.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

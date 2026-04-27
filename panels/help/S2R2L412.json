@@ -1,0 +1,112 @@
+{
+  "id": "S2R2L412",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - TABS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Software tab stops are defined with the underscore or hyphen (-)"
+      },
+      {
+        "type": "text",
+        "content": "character. Each time ENTER is pressed, the cursor is advanced to"
+      },
+      {
+        "type": "text",
+        "content": "the next software tab stop. Software tabs are always ON independent"
+      },
+      {
+        "type": "text",
+        "content": "of the TABS primary command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "In the following example the TABS line command is entered on line"
+      },
+      {
+        "type": "text",
+        "content": "000031.  The clear tabs line is displayed immediately above it.  The"
+      },
+      {
+        "type": "text",
+        "content": "hardware tab character asterisk (*) is entered in columns 9, 19, and"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "=COLS> ----|----1----|----2----|----3----|----4---"
+      },
+      {
+        "type": "text",
+        "content": "=TABS>         *         *         *"
+      },
+      {
+        "type": "text",
+        "content": "000031 /* EXAMPLE SHOWS HARDWARE TAB DEFINITION */"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The primary command `TABS ON` is entered.  At this point hardware"
+      },
+      {
+        "type": "text",
+        "content": "tabs are both defined and ON."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2L412.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

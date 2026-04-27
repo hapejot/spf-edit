@@ -1,0 +1,112 @@
+{
+  "id": "S2R2L140",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - (",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Shifts the current line to the left without regard to the size or"
+      },
+      {
+        "type": "text",
+        "content": "content of the data."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "([number]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "This command may be specified with or without a number. The default"
+      },
+      {
+        "type": "text",
+        "content": "shift is 2 columns."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Shifting occurs within column boundaries. See the Bounds line"
+      },
+      {
+        "type": "text",
+        "content": "command, BNDS."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Because this command shifts information only within BOUNDS, without"
+      },
+      {
+        "type": "text",
+        "content": "regard to the size or content of the data, the shift may result in"
+      },
+      {
+        "type": "text",
+        "content": "the loss of data."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2L140.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

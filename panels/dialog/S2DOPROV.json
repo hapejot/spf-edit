@@ -1,0 +1,152 @@
+{
+  "id": "S2DOPROV",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "RECORD FORMAT DEFINITION",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "dialog",
+  "attributes": {
+    "^": {
+      "type": "PROT",
+      "intensity": "high",
+      "attn": true
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PROFILE NAME               :"
+          },
+          {
+            "type": "output",
+            "variable": "ProfName"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "RECORD FORMAT           : V    ( VRECGEN Format )"
+      },
+      {
+        "type": "text",
+        "content": "//"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PAD RIGHT W/BLANKS"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+   (Y- Fix rec length with spaces,"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "N- Leave variable length records)"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Page"
+          },
+          {
+            "type": "text",
+            "content": "2+of"
+          },
+          {
+            "type": "text",
+            "content": "2+  Hit"
+          },
+          {
+            "type": "output",
+            "variable": "ENTER",
+            "attribute": "^"
+          },
+          {
+            "type": "text",
+            "content": "+to return to Page 1, or"
+          },
+          {
+            "type": "output",
+            "variable": "END",
+            "attribute": "^"
+          },
+          {
+            "type": "text",
+            "content": "+to exit."
+          }
+        ]
+      }
+    ]
+  },
+  "init": {
+    "zvars": [
+      "PPOTPAD"
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DOPROV.PAN",
+    "category": "dialog",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

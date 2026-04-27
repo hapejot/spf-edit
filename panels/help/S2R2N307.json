@@ -1,0 +1,115 @@
+{
+  "id": "S2R2N307",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE SELECTION LIST",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "This is a primary command. Use this command to SORT a select list."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "SORT [ FNAME ]"
+      },
+      {
+        "type": "text",
+        "content": "[ NAME ]"
+      },
+      {
+        "type": "text",
+        "content": "[ EXT ]"
+      },
+      {
+        "type": "text",
+        "content": "[ SIZE ]"
+      },
+      {
+        "type": "text",
+        "content": "[ DATE ]"
+      },
+      {
+        "type": "text",
+        "content": "[ TIME ]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "Sorting can help you find a file, review the contents of a directory,"
+      },
+      {
+        "type": "text",
+        "content": "or set up the select list for a LOCATE command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SORT keywords are as follows:"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  FNAME   Sort by full name (name + extension)."
+      },
+      {
+        "type": "text",
+        "content": "\u0007  NAME    Sort by name (no extension)."
+      },
+      {
+        "type": "text",
+        "content": "\u0007  EXT     Sort by extension (no name)."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2N307.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

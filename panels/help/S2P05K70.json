@@ -1,0 +1,114 @@
+{
+  "id": "S2P05K70",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "KEYBOARD MACROS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "KEYBOARD MACROS"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Keyboard macros are strings of keyboard events.  To create one,"
+      },
+      {
+        "type": "text",
+        "content": "a macro is recorded by watching the keyboard input in one SPF"
+      },
+      {
+        "type": "text",
+        "content": "session.  At a later time, the previously recorded macro may"
+      },
+      {
+        "type": "text",
+        "content": "be played back, and each of the events that were typed during"
+      },
+      {
+        "type": "text",
+        "content": "the original recording are re-executed in the new context."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For example, if you are a COBOL programmer that frequently types"
+      },
+      {
+        "type": "text",
+        "content": "PERFORM structures, a PERFORM template could be assigned to a"
+      },
+      {
+        "type": "text",
+        "content": "key macro for later playback.  The template would contain"
+      },
+      {
+        "type": "text",
+        "content": "just the keywords that are required, and you could fill in the"
+      },
+      {
+        "type": "text",
+        "content": "variable expressions and code."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "A simple PERFORM block may look as follows:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PERFORM UNTIL"
+      },
+      {
+        "type": "text",
+        "content": "code"
+      },
+      {
+        "type": "text",
+        "content": "END-PERFORM"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05K70.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

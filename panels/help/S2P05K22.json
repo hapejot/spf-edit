@@ -1,0 +1,111 @@
+{
+  "id": "S2P05K22",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "ASSIGNING VALUES TO KEYS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To assign a edit line command to a key, it must be preceded with"
+      },
+      {
+        "type": "text",
+        "content": "a ':' character.  For example, to make the Ctrl-A key take"
+      },
+      {
+        "type": "text",
+        "content": "on the value of the A line command in the editor, make the"
+      },
+      {
+        "type": "text",
+        "content": "following change:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NAME             VALUE"
+      },
+      {
+        "type": "text",
+        "content": "Ctrl A+          :A"
+      },
+      {
+        "type": "text",
+        "content": "Ctrl B+          BROWSE"
+      },
+      {
+        "type": "text",
+        "content": "Ctrl C+          x'03'"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "After ENTER is pressed to insure that the change has taken"
+      },
+      {
+        "type": "text",
+        "content": "affect, the Ctrl-A key may be used as if the A line command"
+      },
+      {
+        "type": "text",
+        "content": "were typed in the line command field of the current edit"
+      },
+      {
+        "type": "text",
+        "content": "record."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05K22.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

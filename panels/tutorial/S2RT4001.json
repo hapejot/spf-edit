@@ -1,0 +1,107 @@
+{
+  "id": "S2RT4001",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "DIALOG TEST",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "tutorial",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "In EDIT mode, the table selected is displayed one display line"
+      },
+      {
+        "type": "text",
+        "content": "per row with each field flush left in its respective column."
+      },
+      {
+        "type": "text",
+        "content": "Field names or 'TEXT' are presented as column headers. Column"
+      },
+      {
+        "type": "text",
+        "content": "widths are determined by the widest value."
+      },
+      {
+        "type": "text",
+        "content": "In Table Edit you can:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  Insert a new row with the 'I' command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  Delete a row with the 'D' command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  Modify a row by typing over the contents of a field or fields."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2RT4001.PAN",
+    "category": "tutorial",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

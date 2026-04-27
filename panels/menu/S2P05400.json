@@ -1,0 +1,117 @@
+{
+  "id": "S2P05400",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "COLOR DEFINITION SCHEMES",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "0.4 - COLOR DEFINITION SCHEMES"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Use this panel to set background and character colors on SPF/PC"
+      },
+      {
+        "type": "text",
+        "content": "menus and panels.  The colors you select are used on all menus"
+      },
+      {
+        "type": "text",
+        "content": "and panels."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC color schemes enable users to select entire collections"
+      },
+      {
+        "type": "text",
+        "content": "of relatively appealing color types without individually"
+      },
+      {
+        "type": "text",
+        "content": "adjusting each color specific region."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Users interested in customizing their colors further may adjust"
+      },
+      {
+        "type": "text",
+        "content": "the individual color regions, foreground and background, of"
+      },
+      {
+        "type": "text",
+        "content": "over fifteen specific characteristics."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 +- Selecting a color scheme"
+      },
+      {
+        "type": "text",
+        "content": "2 +- Customizing color selections"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for previous panel)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2P05400.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

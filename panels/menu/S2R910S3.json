@@ -1,0 +1,118 @@
+{
+  "id": "S2R910S3",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "HELP PANEL INDEX - `S`",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Select from the following help panels by number:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "33 +- SPLIT"
+      },
+      {
+        "type": "text",
+        "content": "34 +- SPLIT in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "35 +- SPLIT SCREEN"
+      },
+      {
+        "type": "text",
+        "content": "36 +- SPLITV"
+      },
+      {
+        "type": "text",
+        "content": "37 +- SREPLACE in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "38 +- STATS in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "39 +- STATUS LINE"
+      },
+      {
+        "type": "text",
+        "content": "40 +- STOLOWER in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "41 +- STOUPPER in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "42 +- SWAP"
+      },
+      {
+        "type": "text",
+        "content": "43 +- SWAP in EDIT"
+      },
+      {
+        "type": "text",
+        "content": "44 +- SXCLUDE in EDIT"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R910S3.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

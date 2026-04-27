@@ -1,0 +1,121 @@
+{
+  "id": "S2R2L462",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - UC",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "000021"
+      },
+      {
+        "type": "text",
+        "content": "UC3 22 If a number is specified, the next"
+      },
+      {
+        "type": "text",
+        "content": "000023 consecutive number of lines will be converted"
+      },
+      {
+        "type": "text",
+        "content": "000024 to uppercase letters. In this way the"
+      },
+      {
+        "type": "text",
+        "content": "000025 number parameter functions in the"
+      },
+      {
+        "type": "text",
+        "content": "000026 same way as does the Block Upper Case"
+      },
+      {
+        "type": "text",
+        "content": "000027 command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Results"
+      },
+      {
+        "type": "text",
+        "content": "000021"
+      },
+      {
+        "type": "text",
+        "content": "000022 IF A NUMBER IS SPECIFIED, THE NEXT"
+      },
+      {
+        "type": "text",
+        "content": "000023 CONSECUTIVE NUMBER OF LINES WILL BE CONVERTED"
+      },
+      {
+        "type": "text",
+        "content": "000024 TO UPPERCASE LETTERS. IN THIS WAY THE"
+      },
+      {
+        "type": "text",
+        "content": "000025 number parameter functions in the"
+      },
+      {
+        "type": "text",
+        "content": "000026 same way as does the Block Upper Case"
+      },
+      {
+        "type": "text",
+        "content": "000027 command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2L462.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

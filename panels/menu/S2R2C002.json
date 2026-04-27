@@ -1,0 +1,116 @@
+{
+  "id": "S2R2C002",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "There are 3 optional input fields on the edit entry panel which may"
+      },
+      {
+        "type": "text",
+        "content": "be used to alter the way in which a file is prepared for edit."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PROFILE+- The edit profile is normally determined by the filename"
+      },
+      {
+        "type": "text",
+        "content": "extension, but you may specify an alternate edit profile to be in"
+      },
+      {
+        "type": "text",
+        "content": "effect during this edit session.  The profile controls edit modes"
+      },
+      {
+        "type": "text",
+        "content": "(NUMBER, HEX, CAPS, etc.) and special definition lines (MASK,"
+      },
+      {
+        "type": "text",
+        "content": "TABS, etc)."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "IMACRO+- If you wish to execute a macro immediately up entering"
+      },
+      {
+        "type": "text",
+        "content": "the edit session."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "XMACRO+- If you wish to execute a macro during execution of the"
+      },
+      {
+        "type": "text",
+        "content": "END command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2C002.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "id": "S2R2M000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMANDS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Available EDIT primary commands include:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 + AUTOLIST   Creates a source listing after END"
+      },
+      {
+        "type": "text",
+        "content": "2 + AUTONUM    Renumber STD, COBOL, or BOTH upon save"
+      },
+      {
+        "type": "text",
+        "content": "3 + AUTOSAVE   Turn autosave on/off"
+      },
+      {
+        "type": "text",
+        "content": "4 + BOUNDS     Set/reset current bounds"
+      },
+      {
+        "type": "text",
+        "content": "5 + CANCEL     Cancel or disregard EDIT changes"
+      },
+      {
+        "type": "text",
+        "content": "6 + CAPS       Turn upper case conversion on or off"
+      },
+      {
+        "type": "text",
+        "content": "7 + CHANGE     Change a string of data"
+      },
+      {
+        "type": "text",
+        "content": "8 + CHARSET    Set the character set to EBCDIC or ASCII"
+      },
+      {
+        "type": "text",
+        "content": "9 + COLORMAP   Bind program colorization file to file type"
+      },
+      {
+        "type": "text",
+        "content": "10 + COMPARE    SUPERC compare current file to external file"
+      },
+      {
+        "type": "text",
+        "content": "11 + COPY       Copy a file into the current file"
+      },
+      {
+        "type": "text",
+        "content": "12 + CREATE     Create a new file"
+      },
+      {
+        "type": "text",
+        "content": "13 + CUT        MOVE or COPY a block of lines to the cut buffer"
+      },
+      {
+        "type": "text",
+        "content": "14 + DATA       Insert data at the current cursor position"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for more commands)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2M000.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

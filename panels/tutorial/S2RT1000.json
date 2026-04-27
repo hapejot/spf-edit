@@ -1,0 +1,113 @@
+{
+  "id": "S2RT1000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "DIALOG TEST",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "tutorial",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "TESTING FUNCTIONS"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Panel functions are either CTC internal functions or REXX macros"
+      },
+      {
+        "type": "text",
+        "content": "and receive control via select service. Selection panels (menus)"
+      },
+      {
+        "type": "text",
+        "content": "also receive control via select service. To test an internal CTC"
+      },
+      {
+        "type": "text",
+        "content": "function, a REXX macro, or a selection panel, select Dialog Test"
+      },
+      {
+        "type": "text",
+        "content": "Option 1."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PANEL+- Specifies the name of a selection panel (menu) to be"
+      },
+      {
+        "type": "text",
+        "content": "displayed via select service."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "OPT+- Optionally specifies the menu option to be selected"
+      },
+      {
+        "type": "text",
+        "content": "as if it had been explicitly entered."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CMD+- Specifies the name of a REXX macro to be executed via select"
+      },
+      {
+        "type": "text",
+        "content": "service."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PARM+- Specifies any parameters that are to be passed to the"
+      },
+      {
+        "type": "text",
+        "content": "command procedure upon execution."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2RT1000.PAN",
+    "category": "tutorial",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

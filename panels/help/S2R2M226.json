@@ -1,0 +1,114 @@
+{
+  "id": "S2R2M226",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - CHANGE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "It will never shift any characters to the right of the current right"
+      },
+      {
+        "type": "text",
+        "content": "bound and it will try to not shift any non-blank characters between"
+      },
+      {
+        "type": "text",
+        "content": "the right of the string and the right bound."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If str1 is longer than str2,"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- SPF/PC will shift characters on the right of str2 to the left"
+      },
+      {
+        "type": "text",
+        "content": "until it finds a blank or reaches the right bound.  There, it"
+      },
+      {
+        "type": "text",
+        "content": "inserts the number of blanks equal to the shift amount."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If str1 is shorter than str2,"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- SPF/PC will shift characters on the right of str2 to the right to"
+      },
+      {
+        "type": "text",
+        "content": "make room for str2.  While doing so, it will attempt to not"
+      },
+      {
+        "type": "text",
+        "content": "shift non-blank characters.  It does this by replacing adjacent"
+      },
+      {
+        "type": "text",
+        "content": "blank characters with a single blank.  If there are insufficient"
+      },
+      {
+        "type": "text",
+        "content": "blanks between the end of the string and the right bound, an"
+      },
+      {
+        "type": "text",
+        "content": "error flag is placed in the line command area:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "==ERR>"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2M226.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

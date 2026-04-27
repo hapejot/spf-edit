@@ -1,0 +1,118 @@
+{
+  "id": "S2R2M330",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - RENUM",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Turns on NUMBER mode and re-sequences all lines starting with 100"
+      },
+      {
+        "type": "text",
+        "content": "incrementing by 100 or the number specified in the INCREMENT field"
+      },
+      {
+        "type": "text",
+        "content": "of panel 0.6 or 0.7."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "RENUM  [STD] [COBOL] [DISPLAY]"
+      },
+      {
+        "type": "text",
+        "content": "REN"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "COBOL and DISPLAY may be abbreviated COB and DIS, respectively."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "RENUM forces a resequence. It does not preserve existing sequence"
+      },
+      {
+        "type": "text",
+        "content": "numbers."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If numbers are not visible, press PF9 or PF10 scroll keys."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For more information, see NUMBER."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2M330.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

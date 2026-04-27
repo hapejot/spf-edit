@@ -1,0 +1,116 @@
+{
+  "id": "S2R2L452",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - TS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "000402 If a number parameter is specified,"
+      },
+      {
+        "type": "text",
+        "content": "TS 403 they will be inserted between the split text"
+      },
+      {
+        "type": "text",
+        "content": "000404 segments."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "where the cursor is placed under the \"w\" in will on line 403."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Results"
+      },
+      {
+        "type": "text",
+        "content": "000402 If a number parameter is specified,"
+      },
+      {
+        "type": "text",
+        "content": "000403 they"
+      },
+      {
+        "type": "text",
+        "content": "``````"
+      },
+      {
+        "type": "text",
+        "content": "000405 will be inserted between the split text"
+      },
+      {
+        "type": "text",
+        "content": "000406 segments."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2L452.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

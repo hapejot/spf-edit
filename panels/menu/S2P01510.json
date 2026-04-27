@@ -1,0 +1,185 @@
+{
+  "id": "S2P01510",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SPLIT SCREEN",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The example at the right  ╔"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "shows SPF/PC split screen ║"
+          },
+          {
+            "type": "text",
+            "content": "SPF/PC PARAMETER OPTIONS"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "mode.  The top six lines  ║"
+          },
+          {
+            "type": "text",
+            "content": "OPTION"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "are being used to specify ║"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "system parameters, and    ║"
+          },
+          {
+            "type": "text",
+            "content": "1+ TERMINAL  Specify terminal characteristics"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "the rest of the display   ║"
+          },
+          {
+            "type": "text",
+            "content": "2+ PRINTER   Specify printer characteristics"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "screen is being used to   ║"
+          },
+          {
+            "type": "text",
+            "content": "3+ PF KEYS   Specify PF keys for terminal"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "display a tutorial panel. ║  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ."
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Note the dotted line      ║"
+          },
+          {
+            "type": "text",
+            "content": "TUTORIAL  SELECTION PANELS"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "that separates the two    ║"
+          },
+          {
+            "type": "text",
+            "content": "COMMAND"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "logical screens.  Split   ║"
+      },
+      {
+        "type": "text",
+        "content": "screen operations are     ║+ Selection panels allow you to enter a code in"
+      },
+      {
+        "type": "text",
+        "content": "controlled by the SPLIT   ║  the COMMAND/OPTION field and to press the ENTER"
+      },
+      {
+        "type": "text",
+        "content": "and SWAP commands.        ║  key to select one of the listed items.  The code"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following topics will be presented only if selected by number:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "1 + SPLIT command"
+      },
+      {
+        "type": "text",
+        "content": "2 + SWAP command"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2P01510.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "id": "S2P01420",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SCROLL AMOUNT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Panels which support scrolling normally display the scroll amount value"
+      },
+      {
+        "type": "text",
+        "content": "in the header line, following the COMMAND/OPTION field."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You can change the scroll amount by overtyping the scroll amount field"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "with a new value.  If"
+          },
+          {
+            "type": "text",
+            "content": "MAX+or"
+          },
+          {
+            "type": "text",
+            "content": "M+is entered, the previous value is restored"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "following the scroll operation.  If any other scroll amount is entered, it"
+      },
+      {
+        "type": "text",
+        "content": "remains in effect until you change it or until you begin a new function."
+      },
+      {
+        "type": "text",
+        "content": "Valid scroll amounts are:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SCROLL  page+   or"
+          },
+          {
+            "type": "text",
+            "content": "SCROLL  p+    to scroll by one page."
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SCROLL  half+   or"
+          },
+          {
+            "type": "text",
+            "content": "SCROLL  h+    to scroll by half a page."
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SCROLL  1+      or"
+          },
+          {
+            "type": "text",
+            "content": "SCROLL  50+   or any number from 1 to 9999"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "to scroll by the specified"
+      },
+      {
+        "type": "text",
+        "content": "number of lines."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P01420.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

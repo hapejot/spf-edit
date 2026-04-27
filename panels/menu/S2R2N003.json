@@ -1,0 +1,117 @@
+{
+  "id": "S2R2N003",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "GENERAL COMMAND - CRETRIEV",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Use this command to position to the primary command field and then re-"
+      },
+      {
+        "type": "text",
+        "content": "display previous commands."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "CRETRIEV [ BACK ]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "On the first invokation of CRETRIEV, the cursor is positioned in the"
+      },
+      {
+        "type": "text",
+        "content": "primary command field and no further action is taken. On teh second"
+      },
+      {
+        "type": "text",
+        "content": "invokation of CRETRIEV with no intervening primary commands, the last"
+      },
+      {
+        "type": "text",
+        "content": "primary command executed is retrieved from the command history journal."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You can optionally specify BACK to alter the direction of retrieval."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Also see RETRIEVE"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2N003.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "id": "S2R2L500",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - `.`",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Assigns a label to a line. Normally labels are assigned to lines so"
+      },
+      {
+        "type": "text",
+        "content": "that later they may be used as range parameters."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": ".label"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "Labels may be assigned to any non-excluded line."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "A label is typed in the line command area.  It begins with a period"
+      },
+      {
+        "type": "text",
+        "content": "(.), and is followed by one to five alphabetic characters. You may"
+      },
+      {
+        "type": "text",
+        "content": "not begin a label with the letter `Z`. Labels beginning with the"
+      },
+      {
+        "type": "text",
+        "content": "letter `Z` are reserved by the system."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2L500.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "id": "S2R2M140",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - SAVE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Saves the current file without terminating the edit session."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "SAVE"
+      },
+      {
+        "type": "text",
+        "content": "SAV"
+      },
+      {
+        "type": "text",
+        "content": "S"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "To save the file under a different drive, directory, or name, see"
+      },
+      {
+        "type": "text",
+        "content": "the CREATE command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The SAVE command replaces the disk based file with the memory based"
+      },
+      {
+        "type": "text",
+        "content": "file.  Lines are automatically renumbered if AUTONUM and NUMBER are"
+      },
+      {
+        "type": "text",
+        "content": "on."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If SAVE cannot rewrite the data because of an I/O error, or"
+      },
+      {
+        "type": "text",
+        "content": "insufficient space, a message is displayed and an alarm is sounded."
+      },
+      {
+        "type": "text",
+        "content": "You can then attempt to save the data in another file by taking the"
+      },
+      {
+        "type": "text",
+        "content": "following steps:"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2M140.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

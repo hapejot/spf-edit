@@ -1,0 +1,85 @@
+{
+  "id": "S2CH18P2",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "NEW PRIMARY COMMANDS",
+    "version_var": "ZSHRTVER",
+    "prefix": "CHANGES"
+  },
+  "type": "changelog",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Command    Class      Function             (Page 2 of 2)"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SCOPY      Edit/Brow  Copy selection to clipboard"
+      },
+      {
+        "type": "text",
+        "content": "SCREATE    Edit/Brow  Create original file from selection"
+      },
+      {
+        "type": "text",
+        "content": "SCUT       Edit/Brow  Copy selection to clipboard then delete it"
+      },
+      {
+        "type": "text",
+        "content": "SDELETE    Edit/Brow  Delete selection"
+      },
+      {
+        "type": "text",
+        "content": "SPASTE     Edit/Brow  Paste clipboard contents at cursor pos"
+      },
+      {
+        "type": "text",
+        "content": "SPLITV     General    Split screen vertically at midpoint"
+      },
+      {
+        "type": "text",
+        "content": "SREPLACE   Edit/Brow  Replace existing file with selection"
+      },
+      {
+        "type": "text",
+        "content": "STOLOWER   Edit/Brow  Convert selection alpha chars to lowercase"
+      },
+      {
+        "type": "text",
+        "content": "STOUPPER   Edit/Brow  Convert selection alpha chars to uppercase"
+      },
+      {
+        "type": "text",
+        "content": "SXCLUDE    Edit/Brow  Exclude all lines touched by selection"
+      },
+      {
+        "type": "text",
+        "content": "UNDO       Edit/Brow  Undo last file alteration"
+      },
+      {
+        "type": "text",
+        "content": "VSPLIT     General    Split screen vertically at cursor pos"
+      }
+    ]
+  },
+  "proc_section": {
+    "assignments": {
+      "ZSEL": "UP"
+    }
+  },
+  "metadata": {
+    "source_file": "S2CH18P2.PAN",
+    "category": "changelog"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "id": "S2R2L430",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - TF",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Flows the current paragraph of text to fit within defined BOUNDS."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "TF[number]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "This command works in conjunction with the BNDS command on BND."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "It is used to restructure paragraphs after deletions, text splits,"
+      },
+      {
+        "type": "text",
+        "content": "insertions etc. The text flow begins on the line that the command is"
+      },
+      {
+        "type": "text",
+        "content": "entered and flows text until an end of paragraph condition is"
+      },
+      {
+        "type": "text",
+        "content": "reached."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The end of paragraph is determined by a blank line, a change in"
+      },
+      {
+        "type": "text",
+        "content": "indentation, or the special characters period (.), colon (:),"
+      },
+      {
+        "type": "text",
+        "content": "ampersand (&&), less than (<), greater than (>), at the beginning of"
+      },
+      {
+        "type": "text",
+        "content": "a line."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2L430.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

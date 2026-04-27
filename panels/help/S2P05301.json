@@ -1,0 +1,114 @@
+{
+  "id": "S2P05301",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "PFKEY DEFINITION PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "0.3 - PFKEY DEFINITION PANELS"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This panel displays the current settings of the PF keys and allows"
+      },
+      {
+        "type": "text",
+        "content": "you to change them.  You change a PF key definition by typing over"
+      },
+      {
+        "type": "text",
+        "content": "the current definition.  Primary commands are typed as-is; line"
+      },
+      {
+        "type": "text",
+        "content": "commands are prefixed with a colon (:)."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The sample panel above shows the initial settings for your keys,"
+      },
+      {
+        "type": "text",
+        "content": "which give you one-keystroke access to some frequently used general"
+      },
+      {
+        "type": "text",
+        "content": "commands.  The initial settings are all primary commands; you can"
+      },
+      {
+        "type": "text",
+        "content": "also use line and macro commands.The appearance of the panel will"
+      },
+      {
+        "type": "text",
+        "content": "depend on the keyboard. With Enhanced Keyboard, the panel will match"
+      },
+      {
+        "type": "text",
+        "content": "the illustration.  With AT keyboards (40 PF keys), the first panel"
+      },
+      {
+        "type": "text",
+        "content": "will display PF1 - PF10, the second PF11 - PF20, and so on."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The initial settings for keys beyond PF12 repeat PF1-PF12 settings."
+      },
+      {
+        "type": "text",
+        "content": "You can modify these definitions as desired without affecting the"
+      },
+      {
+        "type": "text",
+        "content": "definitions for PF1-PF12."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05301.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

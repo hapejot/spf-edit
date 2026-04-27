@@ -1,0 +1,146 @@
+{
+  "id": "S2P05L00",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "COBOL SOURCE ANALYST PARAMETERS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COBOL Source Analyst Parameters configure the operation of the"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC CSA option.  These parameters only affect CSA."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COLORIZE+      Perform syntax specific colorization or not."
+      },
+      {
+        "type": "text",
+        "content": "DIALECT+       The COBOL dialect used to compile the source."
+      },
+      {
+        "type": "text",
+        "content": "TABS TYPE+     Enables/disables logical tabs."
+      },
+      {
+        "type": "text",
+        "content": "TABS STOPS AT+ Numeric columns for location of tab stops.  For example:"
+      },
+      {
+        "type": "text",
+        "content": "8 16 24 32 40"
+      },
+      {
+        "type": "text",
+        "content": "would position logical tab positions every 8 columns."
+      },
+      {
+        "type": "text",
+        "content": "LOGICAL TAB CHARACTER+ The character used to insert logical tabs."
+      },
+      {
+        "type": "text",
+        "content": "QUOTE CHARACTER+ The COBOL dialect specific delimiter for a quoted"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "string.  Maybe eitherA"
+          },
+          {
+            "type": "text",
+            "content": "\"+or"
+          },
+          {
+            "type": "text",
+            "content": "'+."
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "PRINTER+       Specifies desired output device or filename."
+      },
+      {
+        "type": "text",
+        "content": "MERGE COPY-BOOKS+Specifies whether to merge copy-books in line within"
+      },
+      {
+        "type": "text",
+        "content": "the COBOL source."
+      },
+      {
+        "type": "text",
+        "content": "COPY-BOOK EXTENSION+Specifies the extension for copy-books.  Useful"
+      },
+      {
+        "type": "text",
+        "content": "specifically in cases where an extension is not implicitely"
+      },
+      {
+        "type": "text",
+        "content": "designated."
+      },
+      {
+        "type": "text",
+        "content": "COPY-BOOK PATH+Specifies the location of all the COBOL copy-books."
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Specify"
+          },
+          {
+            "type": "text",
+            "content": "NONE+for current directory."
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2P05L00.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

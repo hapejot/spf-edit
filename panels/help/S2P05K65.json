@@ -1,0 +1,108 @@
+{
+  "id": "S2P05K65",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "CUSTOM KEY ASSIGNMENT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The newly updated custom key mapping table should display:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NAME                    VALUE"
+      },
+      {
+        "type": "text",
+        "content": "Big-Enter               [ENTER-3270]"
+      },
+      {
+        "type": "text",
+        "content": "Ctrl Numeric-5          [DEL-END-OF-DATA]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To change the value of a custom key that has already been"
+      },
+      {
+        "type": "text",
+        "content": "defined, select it by using the 'E' line command in the field"
+      },
+      {
+        "type": "text",
+        "content": "to the left of the keys name."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To delete existing custom key definitions, use the 'D' line"
+      },
+      {
+        "type": "text",
+        "content": "command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05K65.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

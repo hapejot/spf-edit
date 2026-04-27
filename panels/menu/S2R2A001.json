@@ -1,0 +1,112 @@
+{
+  "id": "S2R2A001",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "In most cases there is a clear distinction between the two types of"
+      },
+      {
+        "type": "text",
+        "content": "commands.  A line command affects the one or more lines that you place"
+      },
+      {
+        "type": "text",
+        "content": "the command on.  For example, marking a line with \"d\" and pressing the"
+      },
+      {
+        "type": "text",
+        "content": "Enter key will delete the marked line."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Primary commands, on the other hand, may affect the entire file.  The"
+      },
+      {
+        "type": "text",
+        "content": "FIND command, for example, will search the entire file to locate the"
+      },
+      {
+        "type": "text",
+        "content": "specified search argument."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2A001.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

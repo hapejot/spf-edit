@@ -1,0 +1,188 @@
+{
+  "id": "S2R01135",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "HELP ─ SELECTING MORE THAN ONE FILE FROM A FILELIST"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "In the library utility, you may select multiple files from the list by"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "entering"
+          },
+          {
+            "type": "text",
+            "content": "P+to print,"
+          },
+          {
+            "type": "text",
+            "content": "R+to rename,"
+          },
+          {
+            "type": "text",
+            "content": "M+to move,"
+          },
+          {
+            "type": "text",
+            "content": "D+to delete,"
+          },
+          {
+            "type": "text",
+            "content": "E+ to edit,"
+          },
+          {
+            "type": "text",
+            "content": "C"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "to copy, or"
+          },
+          {
+            "type": "text",
+            "content": "B+to browse in front of each file name.  It is usually"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "convenient to use the NEW LINE key to position the cursor to the desired"
+      },
+      {
+        "type": "text",
+        "content": "lines."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Print outputs to the printer selected on Panel 0.2. Rename changes the name"
+      },
+      {
+        "type": "text",
+        "content": "of the file, while move relocates it to a new directory.  Copy replicates"
+      },
+      {
+        "type": "text",
+        "content": "the files contents under a new filename/directory."
+      },
+      {
+        "type": "text",
+        "content": "╔"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "The example to the right     ║"
+          },
+          {
+            "type": "text",
+            "content": "COMMAND"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "shows how multiple files     ║    FILENAME        SIZE      DATE     TIME"
+      },
+      {
+        "type": "text",
+        "content": "may be selected from a       ║    SOURCE         <DIR>     1-01-80  12:01a"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "file selection list.         ║"
+          },
+          {
+            "type": "text",
+            "content": "p+ APPTEST.FIL      5872    7-11-90   3:30p"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "\"APPTEST.FIL\" will be        ║    BETAZOID.NCC   102376   11-05-89   9:52a"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "printed, \"CTEST1.DAT\"        ║"
+          },
+          {
+            "type": "text",
+            "content": "d+ CTEST1.DAT       7200    5-30-91  10:07a"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "deleted, and \"CTEST2.DAT\"    ║"
+          },
+          {
+            "type": "text",
+            "content": "r+ CTEST2.DAT      12548    5-30-91   4:36p"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "will be renamed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R01135.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

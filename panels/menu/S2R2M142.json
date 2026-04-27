@@ -1,0 +1,114 @@
+{
+  "id": "S2R2M142",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - SAVE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Enter primary command:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CREATE .ZFIRST .ZLAST"
+      },
+      {
+        "type": "text",
+        "content": "or"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "REPLACE .ZFIRST .ZLAST"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The Move/Copy Utility menu should be presented to you. Fill in a new"
+      },
+      {
+        "type": "text",
+        "content": "data set name and press ENTER. If the original disk is out of space,"
+      },
+      {
+        "type": "text",
+        "content": "specify a different drive."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "`Special` lines ( =PROF>, =MASK>, =TABS>, =BNDS>, ==MSG>, or =NOTE=)"
+      },
+      {
+        "type": "text",
+        "content": "are not saved and do not have to be reset."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2M142.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

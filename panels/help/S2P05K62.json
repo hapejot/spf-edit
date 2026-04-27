@@ -1,0 +1,113 @@
+{
+  "id": "S2P05K62",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "CUSTOM KEY ASSIGNMENT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "At this point, hit the custom key to be defined.  For example,"
+      },
+      {
+        "type": "text",
+        "content": "if you hit the \"5\" key in the middle of the numeric keypad, the"
+      },
+      {
+        "type": "text",
+        "content": "KEY NAME display should change to something like:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "KEY NAME:   CUSTOM-1234"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "However, if you hit a key that SPF/PC recognizes, then it will"
+      },
+      {
+        "type": "text",
+        "content": "display a label describing the key.  If you were to hit the"
+      },
+      {
+        "type": "text",
+        "content": "ENTER key on the numeric keypad, then it would change as follows:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "KEY NAME:   Enter-Ext"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If you hit a key that is defined already in one of the other"
+      },
+      {
+        "type": "text",
+        "content": "key assignment tables (like F6), or you hit a key that is not"
+      },
+      {
+        "type": "text",
+        "content": "assignable (like 'A'), SFP/PC will beep."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Once the KEY NAME represents the key you want to assign a value"
+      },
+      {
+        "type": "text",
+        "content": "to, hit the Enter key.  If you want to abort, exiting without"
+      },
+      {
+        "type": "text",
+        "content": "assigning a value to any new key, then hit F3."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05K62.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

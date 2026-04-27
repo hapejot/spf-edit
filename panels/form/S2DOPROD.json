@@ -1,0 +1,323 @@
+{
+  "id": "S2DOPROD",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "RECORD FORMAT DEFINITION",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "form",
+  "attributes": {
+    "^": {
+      "type": "PROT",
+      "intensity": "high",
+      "attn": true
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PROFILE NAME               :"
+          },
+          {
+            "type": "output",
+            "variable": "ProfName"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "RECORD FORMAT           : D     ( Data Delimited )"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "//"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "LINE TERMINATOR"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 5,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+(CR, LF, CRLF, or SCRLF)"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "FILE TERMINATOR"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+    (Y- Terminate with EOF char,"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "N- Use directory size)"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "INPUT TABS TO"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 2,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+   (0- Do not expand Tab chars,"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "n- Tabs expand to tab location)"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "OUTPUT TABS AT"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 2,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+   (0- Do not insert Tab chars,"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "n- Replace blanks with Tab chars)"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PAD RIGHT W/BLANKS"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+    (Y- Fix rec length by padding spaces,"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "N- Leave rec length variable)"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "NULL PROTECTED"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+    (Y- Precede Ctrl chars with x'00',"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "N- No protection)"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Page"
+          },
+          {
+            "type": "text",
+            "content": "2+of"
+          },
+          {
+            "type": "text",
+            "content": "2+  Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to Page 1, or"
+          },
+          {
+            "type": "output",
+            "variable": "END",
+            "attribute": "^"
+          },
+          {
+            "type": "text",
+            "content": "+to exit."
+          }
+        ]
+      }
+    ]
+  },
+  "init": {
+    "zvars": [
+      "PPTRMREC",
+      "PPTRMFIL",
+      "PPINTABS",
+      "PPOTTABS",
+      "PPOTPAD",
+      "PPNULLPR"
+    ]
+  },
+  "proc_section": {
+    "validations": [
+      {
+        "field": "PPTRMREC",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "list",
+            "values": [
+              "CR",
+              "LF",
+              "CRLF",
+              "SCRLF"
+            ]
+          }
+        ]
+      },
+      {
+        "field": "PPTRMFIL",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "PPINTABS",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "numeric",
+            "range": {
+              "min": 0,
+              "max": 99
+            }
+          }
+        ]
+      },
+      {
+        "field": "PPOTTABS",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "numeric",
+            "range": {
+              "min": 0,
+              "max": 99
+            }
+          }
+        ]
+      },
+      {
+        "field": "PPOTPAD",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "PPNULLPR",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DOPROD.PAN",
+    "category": "form",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

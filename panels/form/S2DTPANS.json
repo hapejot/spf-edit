@@ -1,0 +1,150 @@
+{
+  "id": "S2DTPANS",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "DISPLAY TEST PANEL",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "form",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "DISPLAY TEST PANEL:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PANEL"
+          },
+          {
+            "type": "input",
+            "variable": "TPANEL",
+            "width": 8,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+  (Specify '*' for list)"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "MESSAGE"
+          },
+          {
+            "type": "input",
+            "variable": "TMESSAGE",
+            "width": 8,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+  (Optional)"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CURSOR"
+          },
+          {
+            "type": "input",
+            "variable": "TCURSOR",
+            "width": 8,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+  (Optional)"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CURSOR POSITION"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 2,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+        (Optional)"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2RT0000",
+    "zvars": [
+      "TCSRPOS"
+    ]
+  },
+  "proc_section": {
+    "validations": [
+      {
+        "field": "TPANEL",
+        "rules": [
+          {
+            "type": "non_blank"
+          }
+        ]
+      },
+      {
+        "field": "TCSRPOS",
+        "rules": [
+          {
+            "type": "numeric",
+            "range": {
+              "min": 0,
+              "max": 99
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DTPANS.PAN",
+    "category": "form",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

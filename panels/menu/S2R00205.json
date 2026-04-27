@@ -1,0 +1,119 @@
+{
+  "id": "S2R00205",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SPF/PC COMMAND - KEYBOARD",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Enables configuration of the current keyboard."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "KEYBOARD"
+      },
+      {
+        "type": "text",
+        "content": "KEYB"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "This command displays the active keyboard configuration panel,"
+      },
+      {
+        "type": "text",
+        "content": "enabling modification of any key setting.  Similar to KEYS,"
+      },
+      {
+        "type": "text",
+        "content": "the keys current settings are displayed and are modifiable."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Primary commands, data characters, strings, terminal functions,"
+      },
+      {
+        "type": "text",
+        "content": "and keyboard macro functions maybe assigned to any key from this"
+      },
+      {
+        "type": "text",
+        "content": "panel."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To select from the existing keyboard schemes (not just the active"
+      },
+      {
+        "type": "text",
+        "content": "one), go to Panel 0.K."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R00205.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

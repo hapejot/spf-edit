@@ -1,0 +1,117 @@
+{
+  "id": "S2R60010",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "COMMAND OPTION",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND OPTION"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The OS COMMAND Processor option allows operating system commands to be"
+      },
+      {
+        "type": "text",
+        "content": "executed from SPF/PC. The Command Processor panel is displayed when"
+      },
+      {
+        "type": "text",
+        "content": "option 6 is entered on the primary option panel."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Option 6 allows you to enter long commands that continue to the"
+      },
+      {
+        "type": "text",
+        "content": "next two lines.  A secondary command processor may be invoked by"
+      },
+      {
+        "type": "text",
+        "content": "specifying its name (usually CMD or COMMAND.COM).  In this event,"
+      },
+      {
+        "type": "text",
+        "content": "return to SPF/PC by typing EXIT from the secondary command processor"
+      },
+      {
+        "type": "text",
+        "content": "prompt."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Also, SPF/PC allows operating system commands to be entered in the"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND/OPTION field of any panel."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND +DOS DIR *.COB"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R60010.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

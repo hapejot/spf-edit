@@ -1,0 +1,111 @@
+{
+  "id": "S2P05302",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "PRINTER SETUP PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Some of the ways in which changing key functions or adding new"
+      },
+      {
+        "type": "text",
+        "content": "functions can make your editing faster and more efficient are listed"
+      },
+      {
+        "type": "text",
+        "content": "below:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- Set up PF keys to execute frequently used commands in one"
+      },
+      {
+        "type": "text",
+        "content": "keystroke."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- Rearrange keys (move functions from one key to another) to help"
+      },
+      {
+        "type": "text",
+        "content": "you remember the functions or reach the keys more easily."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- Set a series of keys to perform related complex operations in"
+      },
+      {
+        "type": "text",
+        "content": "different ways depending on results of a previous operation. An"
+      },
+      {
+        "type": "text",
+        "content": "example of this is RFIND (PF5), RCHANGE (PF6)."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Create macro commands to perform arbitrarily complex operations and"
+      },
+      {
+        "type": "text",
+        "content": "assign them to PF keys."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05302.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

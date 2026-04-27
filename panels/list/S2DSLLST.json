@@ -1,0 +1,100 @@
+{
+  "id": "S2DSLLST",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SUPER LIST: SAVED LISTS",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "list",
+  "attributes": {
+    "~": {
+      "type": "OUTPUT",
+      "intensity": "low"
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD",
+        "scroll": {
+          "variable": "SCROLL"
+        }
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following line commands are valid for the list below:"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "S+- Select"
+          },
+          {
+            "type": "text",
+            "content": "D+- Delete"
+          },
+          {
+            "type": "text",
+            "content": "C+- Copy"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NAME        DATE     TIME   DESCRIPTION"
+      },
+      {
+        "type": "divider",
+        "style": "single"
+      }
+    ]
+  },
+  "model": {
+    "selection_field": {
+      "variable": "Z",
+      "width": 1
+    },
+    "columns": [
+      {
+        "variable": "LNAME",
+        "attribute": "~",
+        "width": 11
+      },
+      {
+        "variable": "LDATE",
+        "attribute": "~",
+        "width": 9
+      },
+      {
+        "variable": "LTIME",
+        "attribute": "~",
+        "width": 7
+      },
+      {
+        "variable": "LDESC",
+        "attribute": "~"
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2R3F000",
+    "zvars": [
+      "SCROLL",
+      "LSEL"
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DSLLST.PAN",
+    "category": "list",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

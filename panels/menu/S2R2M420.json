@@ -1,0 +1,117 @@
+{
+  "id": "S2R2M420",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - HEX",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Enables or disables hexadecimal display mode."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "HEX [ON ]"
+      },
+      {
+        "type": "text",
+        "content": "[OFF]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "In HEX mode, three lines of data are displayed for each line in the"
+      },
+      {
+        "type": "text",
+        "content": "file.  The first shows data in standard ASCII form.  The next two"
+      },
+      {
+        "type": "text",
+        "content": "lines show the same data in vertical hexadecimal representation."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Either the data lines or the hex lines may be altered. Simply"
+      },
+      {
+        "type": "text",
+        "content": "overtype the change you wish on either ASCII character line or the"
+      },
+      {
+        "type": "text",
+        "content": "hexadecimal lines. If a conflict exists, the hex lines are used."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2M420.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

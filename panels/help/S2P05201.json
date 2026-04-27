@@ -1,0 +1,108 @@
+{
+  "id": "S2P05201",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "PRINTER SETUP PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "0.2 - PRINTER SETUP PANEL"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The printer setup panel allows you to create multiple printer"
+      },
+      {
+        "type": "text",
+        "content": "configurations which can be used to perform different printing"
+      },
+      {
+        "type": "text",
+        "content": "roles. Printer setups are symbolically named. DEFPRN, the default,"
+      },
+      {
+        "type": "text",
+        "content": "typically performs no formatting functions and is routed to logical"
+      },
+      {
+        "type": "text",
+        "content": "device PRN."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The ACTIVE PRINTER field is changed with the SELECT primary or line"
+      },
+      {
+        "type": "text",
+        "content": "command.  For example, to activate PAGE1, put an `s` on that line or"
+      },
+      {
+        "type": "text",
+        "content": "`s page1` in the primary command field."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05201.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

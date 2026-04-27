@@ -1,0 +1,455 @@
+{
+  "id": "S2DOCSA",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "COBOL SOURCE ANALYST PARAMETERS",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "form",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "COLORIZE"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+    (Y- Colorize, N- Don't colorize)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "MONOCHROME"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+    (Y- B/W Only, N- Colored Screens)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "DIALECT"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+    (O- OS-VS,    C- COBOL-II,"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "7- ANSI-74,  8- ANSI-85,"
+      },
+      {
+        "type": "text",
+        "content": "M- MF-COBOL, R- REALIA)"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "TABS TYPE"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+    (N- None, L- Logical)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "TAB STOPS AT"
+          },
+          {
+            "type": "input",
+            "variable": "CTABSAT",
+            "width": 46,
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "LOGICAL TAB CHARACTER"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "QUOTE CHARACTER"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+    (' or \")"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PRINTER"
+          },
+          {
+            "type": "input",
+            "variable": "CPRINTER",
+            "width": 46,
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CHECK MODE"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+    (A- Animate, I- Instant)"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "MERGE COPY-BOOKS"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+    (Y- Merge copy-books, N- don't merge)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "COPY-BOOK EXTENSION"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 3,
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "COPY-BOOK PATH"
+          },
+          {
+            "type": "input",
+            "variable": "CCOPYPAT",
+            "width": 46,
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CAPS MODE"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+    (Y- All Caps, N- Mixed Case)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "IMBEDDED LANGUAGE(S)"
+          },
+          {
+            "type": "input",
+            "variable": "CIMBEDDD",
+            "width": 46,
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "(Any of: CICS and SQL)"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "ENTER KEY STYLE"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+    (3- 3270 Style, 2- SPF/PC 2.1 Style,"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "S- Right-Ctrl/Enter Swapped)"
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2P05L00",
+    "zvars": [
+      "CCOLOR",
+      "CMONO",
+      "CDIALECT",
+      "CTABTYPE",
+      "CTABCHAR",
+      "CQUOCHAR",
+      "CCHECK",
+      "CCOPYBOO",
+      "CCOPYEXT",
+      "CCAPS",
+      "CENTERKE"
+    ]
+  },
+  "proc_section": {
+    "validations": [
+      {
+        "field": "CCOLOR",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "CMONO",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "CDIALECT",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "list",
+            "values": [
+              "O",
+              "C",
+              "7",
+              "8",
+              "M",
+              "R"
+            ]
+          }
+        ]
+      },
+      {
+        "field": "CTABTYPE",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "list",
+            "values": [
+              "N",
+              "L"
+            ]
+          }
+        ]
+      },
+      {
+        "field": "CQUOCHAR",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "list",
+            "values": [
+              "\"",
+              ""
+            ]
+          }
+        ]
+      },
+      {
+        "field": "CCHECK",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "list",
+            "values": [
+              "A",
+              "I"
+            ]
+          }
+        ]
+      },
+      {
+        "field": "CCOPYBOO",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "CCOPYBOO",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "CCAPS",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "CENTERKE",
+        "rules": [
+          {
+            "type": "non_blank"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DOCSA.PAN",
+    "category": "form",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

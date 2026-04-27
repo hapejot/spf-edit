@@ -1,0 +1,71 @@
+{
+  "id": "S2CHNG09",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "PFSHOW SUPPORT",
+    "version_var": "ZSHRTVER",
+    "prefix": "CHANGES"
+  },
+  "type": "changelog",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You can now display the program function keys and their respective"
+      },
+      {
+        "type": "text",
+        "content": "labels at the bottom of the screen. You can also specify the number"
+      },
+      {
+        "type": "text",
+        "content": "of lines to reserve for the PF key display. Use the following"
+      },
+      {
+        "type": "text",
+        "content": "primary command:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PFSHOW  [ ON | OFF | number ]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For further details see:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC User Guide and Reference,"
+      },
+      {
+        "type": "text",
+        "content": "PFSHOW .......................... Pages 5-5, 5-46"
+      }
+    ]
+  },
+  "proc_section": {
+    "assignments": {
+      "ZSEL": "UP"
+    }
+  },
+  "metadata": {
+    "source_file": "S2CHNG09.PAN",
+    "category": "changelog"
+  }
+}

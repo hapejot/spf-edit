@@ -1,0 +1,121 @@
+{
+  "id": "S2R01230",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE CHARACTERISTICS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Files are characterized by the type of records they contain.  The records"
+      },
+      {
+        "type": "text",
+        "content": "fall into one of the following categories:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- DATA DELIMITED+records contain a record terminator at the end of each"
+      },
+      {
+        "type": "text",
+        "content": "record.  Typically, the record terminator is the CRLF pair, but"
+      },
+      {
+        "type": "text",
+        "content": "other terminators like CR and LF are common."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- LENGTH DELIMITED+records do not contain any record terminators."
+      },
+      {
+        "type": "text",
+        "content": "Each record is determined by reading in LRECL characters before"
+      },
+      {
+        "type": "text",
+        "content": "preceding to the next record."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- MF HEADER+style files segment records using the Micro Focus record"
+      },
+      {
+        "type": "text",
+        "content": "sequential header file format.  For more information, see your Micro"
+      },
+      {
+        "type": "text",
+        "content": "Focus documentation."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- VRECGEN+style files are variable length records typically downloaded"
+      },
+      {
+        "type": "text",
+        "content": "from mainframes."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2P00004"
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R01230.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

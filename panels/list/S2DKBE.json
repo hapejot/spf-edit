@@ -1,0 +1,85 @@
+{
+  "id": "S2DKBE",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "&KBETITLE",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "list",
+  "attributes": {
+    "~": {
+      "type": "OUTPUT",
+      "intensity": "low"
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD",
+        "scroll": {
+          "variable": "SCROLL"
+        }
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "NAME:"
+          },
+          {
+            "type": "output",
+            "variable": "ZKBNAME",
+            "attribute": "~"
+          },
+          {
+            "type": "text",
+            "content": "+ DESCRIPTION:"
+          },
+          {
+            "type": "output",
+            "variable": "ZKBDESC",
+            "attribute": "~"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NAME                   VALUE"
+      },
+      {
+        "type": "divider",
+        "style": "single"
+      }
+    ]
+  },
+  "model": {
+    "columns": [
+      {
+        "variable": "EVTNAME",
+        "attribute": "~",
+        "width": 22
+      },
+      {
+        "variable": "EVTVALUE"
+      }
+    ]
+  },
+  "init": {
+    "zvars": [
+      "SCROLL"
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DKBE.PAN",
+    "category": "list",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

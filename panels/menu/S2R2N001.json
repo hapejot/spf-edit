@@ -1,0 +1,120 @@
+{
+  "id": "S2R2N001",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "GENERAL COMMAND - CMDNOCLR",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "This is a primary command. Use this command to execute a system command"
+      },
+      {
+        "type": "text",
+        "content": "or batch file in the background."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "CMDNOCLR system-command [ parms... ]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "When a system command or batch file is executed in the background,"
+      },
+      {
+        "type": "text",
+        "content": "the screen is cleared, the TTY output of the command is presented"
+      },
+      {
+        "type": "text",
+        "content": "as it occurs, and the user is required to press a key to return to"
+      },
+      {
+        "type": "text",
+        "content": "the context of the SPF session."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Executing in the background dispenses with the screen context switch."
+      },
+      {
+        "type": "text",
+        "content": "The function is run without disturbing the current SPF context or"
+      },
+      {
+        "type": "text",
+        "content": "requiring a keystroke to return to normal operation."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "CMDNOCLR SNAP SCREEN.TXT"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2N001.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

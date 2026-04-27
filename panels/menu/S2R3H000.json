@@ -1,0 +1,130 @@
+{
+  "id": "S2R3H000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "MOST RECENTLY EDITED FILES",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "MOST RECENTLY EDITED FILES"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Any time a file is edited, its name is added to the Most"
+      },
+      {
+        "type": "text",
+        "content": "Recently Edited files list.  Files are added whether they are"
+      },
+      {
+        "type": "text",
+        "content": "modified in EDIT or not.  The Recent Edit list is sorted by date"
+      },
+      {
+        "type": "text",
+        "content": "of last modification, and may be manipulated by all of the Super"
+      },
+      {
+        "type": "text",
+        "content": "List line commands."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Browsed files are not added to the list.  Files edited on your"
+      },
+      {
+        "type": "text",
+        "content": "floppy drives are also not added to the list.  Though the REDIT"
+      },
+      {
+        "type": "text",
+        "content": "list is continually updated, if it is displayed on 1 side of a"
+      },
+      {
+        "type": "text",
+        "content": "split screen, and a file is edited on the other side, the newly"
+      },
+      {
+        "type": "text",
+        "content": "edited filename will not show up on the list until it is exited"
+      },
+      {
+        "type": "text",
+        "content": "from an redisplayed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "The"
+          },
+          {
+            "type": "text",
+            "content": "REDIT+primary command may be used anywhere from within SPF/PC"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "to access the list.  When used in this way, control is returned"
+      },
+      {
+        "type": "text",
+        "content": "to the place where the REDIT command was executed, even after"
+      },
+      {
+        "type": "text",
+        "content": "editing another file."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R3H000.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

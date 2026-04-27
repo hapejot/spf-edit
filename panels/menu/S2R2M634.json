@@ -1,0 +1,115 @@
+{
+  "id": "S2R2M634",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - COPY",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Examples"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To copy DEMO.DOC from the same drive/subdirectory as the current"
+      },
+      {
+        "type": "text",
+        "content": "file to a point in the file indicated by the A or B line command:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COPY DEMO.DOC"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To display a select list of all DEMO document candidates that could"
+      },
+      {
+        "type": "text",
+        "content": "be copied:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COPY DEMO*.DOC"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To copy a file specified on a subsequent menu to a point after the"
+      },
+      {
+        "type": "text",
+        "content": "line labeled `.A`:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COPY AFTER .A"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2M634.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

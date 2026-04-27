@@ -1,0 +1,119 @@
+{
+  "id": "S2R00120",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SPF/PC COMMAND - `=`",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Use this command to move directly to any SPF/PC panel. Issue this"
+      },
+      {
+        "type": "text",
+        "content": "command from any SPF/PC panel."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "=x[.x]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "After you become familiar with SPF/PC features and panels, you will"
+      },
+      {
+        "type": "text",
+        "content": "find it faster to bypass the menu system and use this short-hand way"
+      },
+      {
+        "type": "text",
+        "content": "of identifying the panel you want to work with.  The parameters for"
+      },
+      {
+        "type": "text",
+        "content": "this command are simply the primary and secondary (if it applies)"
+      },
+      {
+        "type": "text",
+        "content": "option numbers for the panel you want to move to."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "=0.2"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This command would move you to panel 0.2, the PRINTER SETUP panel."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R00120.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

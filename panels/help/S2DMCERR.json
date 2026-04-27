@@ -1,0 +1,114 @@
+{
+  "id": "S2DMCERR",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT MACRO ERROR",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "box",
+        "style": "asterisk",
+        "rows": [
+          {
+            "type": "blank"
+          },
+          {
+            "type": "text",
+            "content": "Command in error :"
+          },
+          {
+            "type": "blank"
+          },
+          {
+            "type": "output",
+            "variable": "ZPDFPAN1"
+          },
+          {
+            "type": "blank"
+          },
+          {
+            "type": "blank"
+          },
+          {
+            "type": "blank"
+          },
+          {
+            "type": "blank"
+          },
+          {
+            "type": "field_row",
+            "fields": [
+              {
+                "type": "text",
+                "content": "Last return code :"
+              },
+              {
+                "type": "output",
+                "variable": "ZPDFPAN2"
+              }
+            ]
+          },
+          {
+            "type": "blank"
+          },
+          {
+            "type": "field_row",
+            "fields": [
+              {
+                "type": "text",
+                "content": "Macro executing  :"
+              },
+              {
+                "type": "output",
+                "variable": "ZPDFPAN3"
+              }
+            ]
+          },
+          {
+            "type": "blank"
+          },
+          {
+            "type": "field_row",
+            "fields": [
+              {
+                "type": "text",
+                "content": "Hit"
+              },
+              {
+                "type": "text",
+                "content": "ENTER+command to terminate the macro."
+              }
+            ]
+          },
+          {
+            "type": "blank"
+          },
+          {
+            "type": "blank"
+          },
+          {
+            "type": "blank"
+          },
+          {
+            "type": "blank"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DMCERR.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

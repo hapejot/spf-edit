@@ -1,0 +1,122 @@
+{
+  "id": "S2PTF040",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "TERMINAL FUNCTION - [CURSOR-SELECT]",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Perform a \"Select\" function on the object the cursor is currently"
+      },
+      {
+        "type": "text",
+        "content": "pointing at.  Performs Enter key processing."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "[CURSOR-SELECT]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "A \"Select\" is an overloaded function which performs differently"
+      },
+      {
+        "type": "text",
+        "content": "in different parts of SPF/PC.  When a [CURSOR-SELECT] key is"
+      },
+      {
+        "type": "text",
+        "content": "pressed from a Dialog Manager menu, the menu option that the"
+      },
+      {
+        "type": "text",
+        "content": "cursor is on top of is selected, if pressed in a selection"
+      },
+      {
+        "type": "text",
+        "content": "list, then an 'S' verb is applied to the table row, and if"
+      },
+      {
+        "type": "text",
+        "content": "pressed within the editor, then Enter key processing occurs."
+      },
+      {
+        "type": "text",
+        "content": "This function is patterned after the [CURSOR-MOUSE-SELECT]"
+      },
+      {
+        "type": "text",
+        "content": "function, which enables you to Select different functions by"
+      },
+      {
+        "type": "text",
+        "content": "double-clicking on them.  When assigned to a key, it is useful"
+      },
+      {
+        "type": "text",
+        "content": "for creating point-and-shoot keys that can select options all"
+      },
+      {
+        "type": "text",
+        "content": "over SPF/PC."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2PTF040.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

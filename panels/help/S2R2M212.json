@@ -1,0 +1,115 @@
+{
+  "id": "S2R2M212",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - FIND",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Usually, the FIND command is issued with only the str1 parameter. In"
+      },
+      {
+        "type": "text",
+        "content": "that case, SPF/PC searches for the next instance of str1 starting at"
+      },
+      {
+        "type": "text",
+        "content": "the current cursor location.  SPF/PC will only search for str1 within"
+      },
+      {
+        "type": "text",
+        "content": "the current BOUNDS specification. (See BOUNDS for more on this.) If"
+      },
+      {
+        "type": "text",
+        "content": "the line is not currently displayed on the screen, SPF/PC scrolls the"
+      },
+      {
+        "type": "text",
+        "content": "file so that it is displayed. If the line is currently excluded, it"
+      },
+      {
+        "type": "text",
+        "content": "is made visible."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Although the rest of the optional parameters are not used as"
+      },
+      {
+        "type": "text",
+        "content": "frequently, together they provide a very powerful search capability."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "FIND has common parameters with CHANGE and EXCLUDE; these parameters"
+      },
+      {
+        "type": "text",
+        "content": "are fully documented once at the beginning of this chapter. So, if"
+      },
+      {
+        "type": "text",
+        "content": "you want to:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- specify character strings containing blanks or quotes, see"
+      },
+      {
+        "type": "text",
+        "content": "DELIMITED STRINGS."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- do case sensitive/insensitive searches, see SIMPLE STRINGS,"
+      },
+      {
+        "type": "text",
+        "content": "DELIMITED STRINGS, and CHARACTER STRINGS."
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2M212.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

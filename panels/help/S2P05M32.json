@@ -1,0 +1,113 @@
+{
+  "id": "S2P05M32",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "HOW TO RECORD A KEY MACRO",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "So, if we wanted to create a \"C\" Comment-Box, we would want to"
+      },
+      {
+        "type": "text",
+        "content": "insert the text:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "/*-----------------------*/"
+      },
+      {
+        "type": "text",
+        "content": "/*                       */"
+      },
+      {
+        "type": "text",
+        "content": "/*-----------------------*/"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To insert this text into the current document at the current"
+      },
+      {
+        "type": "text",
+        "content": "cursor position, we would first hit the Newline key to move"
+      },
+      {
+        "type": "text",
+        "content": "the cursor to the editor line command field, then hit"
+      },
+      {
+        "type": "text",
+        "content": "[CURSOR-UP] to move to the line we were just on, type the letter"
+      },
+      {
+        "type": "text",
+        "content": "\"i\" on the line command field, and finally hit Enter."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "We have just recorded the sequence for insert a blank line."
+      },
+      {
+        "type": "text",
+        "content": "Now, if we type \"/*-----------------------*/\" and follow that"
+      },
+      {
+        "type": "text",
+        "content": "with another Enter, a new blank line will open up for further"
+      },
+      {
+        "type": "text",
+        "content": "input.  Continue the process until the Comment Box is completed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05M32.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

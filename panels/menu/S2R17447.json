@@ -1,0 +1,121 @@
+{
+  "id": "S2R17447",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FIND PARAMETERS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "text",
+        "content": "The FIND command keyword parameters or search boundaries may be specified"
+      },
+      {
+        "type": "text",
+        "content": "in any order and can be separated by commas, blanks, or both."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Double or single quotes must always enclose a search argument that contains"
+      },
+      {
+        "type": "text",
+        "content": "one or more blanks, commas, or quotes of its own.  Quotes must also be used"
+      },
+      {
+        "type": "text",
+        "content": "to enclose a search argument which is a FIND command keyword, or could be"
+      },
+      {
+        "type": "text",
+        "content": "mistaken for a boundary specification."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following examples illustrate that the find string, keyword parameters,"
+      },
+      {
+        "type": "text",
+        "content": "and boundaries can be entered in any order.  The previous occurrence of the"
+      },
+      {
+        "type": "text",
+        "content": "suffix \"ing\", within columns 36 to 68 is desired."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND  f ing prev suffix 36 68"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND  find prev suf \"ing\" 36 68"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND  f 'ing' 36,68 suffix prev"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND  find,36,68,prev,suffix,ing"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND  f prev 36 68 'ing' suffix"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If the FIND command cannot be interpreted, a prompting message will be"
+      },
+      {
+        "type": "text",
+        "content": "displayed requesting you to correct it or complete it."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to the previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R17447.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

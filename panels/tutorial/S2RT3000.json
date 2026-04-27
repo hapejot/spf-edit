@@ -1,0 +1,111 @@
+{
+  "id": "S2RT3000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "DIALOG TEST",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "tutorial",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "TESTING VARIABLES"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "In the normal course of dialog development, variables are set and"
+      },
+      {
+        "type": "text",
+        "content": "displayed in panels. To display or alter a variable's content,"
+      },
+      {
+        "type": "text",
+        "content": "select Dialog Test Option 3."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The table presented contains all variables visible to the dialog"
+      },
+      {
+        "type": "text",
+        "content": "test session from function, shared, global, and profile pools."
+      },
+      {
+        "type": "text",
+        "content": "Each row in the table contains a line command area, the variable"
+      },
+      {
+        "type": "text",
+        "content": "name, the pool indicator (F,S,G, or P), and the variable value."
+      },
+      {
+        "type": "text",
+        "content": "With Variable Test you can:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  Insert new variables using the 'I' line command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  Delete variables using the 'D' line command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  Copy variables using the 'C' line command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2RT3000.PAN",
+    "category": "tutorial",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

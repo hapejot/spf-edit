@@ -1,0 +1,115 @@
+{
+  "id": "S2R2M710",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - DEFINE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Use this command to enable, disable, or alias specific macros or"
+      },
+      {
+        "type": "text",
+        "content": "primary commands."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "DEFINE name [MACRO CMD   ] | [CMD MACRO   ]"
+      },
+      {
+        "type": "text",
+        "content": "DEF         [ALIAS name2 ]"
+      },
+      {
+        "type": "text",
+        "content": "[NOP         ]"
+      },
+      {
+        "type": "text",
+        "content": "[RESET       ]"
+      },
+      {
+        "type": "text",
+        "content": "[DISABLED    ]"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "The command is primarily used to manage the selective invocation of"
+      },
+      {
+        "type": "text",
+        "content": "macros and primary commands."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- NAME Specifies the name that is used to invoke the macro or"
+      },
+      {
+        "type": "text",
+        "content": "primary command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- MACRO CMD Specifies that the name parameter identifies a macro."
+      },
+      {
+        "type": "text",
+        "content": "This is the default and thus need not be specified."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2M710.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

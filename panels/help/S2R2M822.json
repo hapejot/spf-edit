@@ -1,0 +1,115 @@
+{
+  "id": "S2R2M822",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - SORT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If 'A' is specified (or defaulted), data will be ordered in"
+      },
+      {
+        "type": "text",
+        "content": "ascending sequence.  If 'D' is specified, data will be ordered in"
+      },
+      {
+        "type": "text",
+        "content": "descending sequence.  In addition to 'A' or 'D', the columns to be"
+      },
+      {
+        "type": "text",
+        "content": "sorted can be specified. If they are not specified, the default is"
+      },
+      {
+        "type": "text",
+        "content": "the current BOUNDS."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Start-column specifies the left-most position and end-column"
+      },
+      {
+        "type": "text",
+        "content": "specifies the right-most position of the sort field.  Start-column"
+      },
+      {
+        "type": "text",
+        "content": "must precede end-column. In addition, neither specification can be"
+      },
+      {
+        "type": "text",
+        "content": "outside the current BOUNDS."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The above parameters indicate which columns SPF/PC should compare"
+      },
+      {
+        "type": "text",
+        "content": "when ordering data. These parameters are common to computer based"
+      },
+      {
+        "type": "text",
+        "content": "sorting programs.  There is an aspect of SORT which is unique to"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC. When the BOUNDS are set to less than the full record, only"
+      },
+      {
+        "type": "text",
+        "content": "the data within the bounds is sorted. The effect is that the sorted"
+      },
+      {
+        "type": "text",
+        "content": "data is re-ordered while the data to the left or right of the bounds"
+      },
+      {
+        "type": "text",
+        "content": "is not. Thus the record content is changed from its original form."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2M822.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

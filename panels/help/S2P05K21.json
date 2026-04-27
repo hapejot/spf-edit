@@ -1,0 +1,111 @@
+{
+  "id": "S2P05K21",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "ASSIGNING VALUES TO KEYS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Key assignments values may be assigned different types of"
+      },
+      {
+        "type": "text",
+        "content": "functions:  SPF primary commands, line commands, data"
+      },
+      {
+        "type": "text",
+        "content": "characters and strings, REXX edit macros, and keyboard macros."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For example, if we wanted to assign the Ctrl-B key to be"
+      },
+      {
+        "type": "text",
+        "content": "the \"BROWSE\" primary command, we would make the following change."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NAME             VALUE"
+      },
+      {
+        "type": "text",
+        "content": "Ctrl A+          x'01'"
+      },
+      {
+        "type": "text",
+        "content": "Ctrl B+          BROWSE"
+      },
+      {
+        "type": "text",
+        "content": "Ctrl C+          x'03'"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Hitting ENTER to make the change take effect, any subsequent"
+      },
+      {
+        "type": "text",
+        "content": "use of the Ctrl-B key would be as if the BROWSE command had"
+      },
+      {
+        "type": "text",
+        "content": "been entered on the primary command line."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05K21.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

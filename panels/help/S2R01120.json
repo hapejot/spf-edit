@@ -1,0 +1,159 @@
+{
+  "id": "S2R01120",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "DATA ENTRY PANELS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Data entry panels allow you to specify information such as data set"
+      },
+      {
+        "type": "text",
+        "content": "names, or operating system commands.  The fields in which you may enter"
+      },
+      {
+        "type": "text",
+        "content": "information are labeled and preceded with an arrow.  If you do not enter"
+      },
+      {
+        "type": "text",
+        "content": "a required value or if you enter inconsistent values, you will be"
+      },
+      {
+        "type": "text",
+        "content": "prompted with a message."
+      },
+      {
+        "type": "text",
+        "content": "┌"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "The example at the right    │"
+          },
+          {
+            "type": "text",
+            "content": "SPF/PC(1)  BROWSE  ENTRY PANEL"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "shows part of the browse    │"
+          },
+          {
+            "type": "text",
+            "content": "COMMAND"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "filename data entry panel.  │"
+      },
+      {
+        "type": "text",
+        "content": "│ PROJECT FILE:"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "│   DRIVE"
+          },
+          {
+            "type": "text",
+            "content": "+F"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "│   PATH"
+          },
+          {
+            "type": "text",
+            "content": "+\\COBOL"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "│   PATH"
+      },
+      {
+        "type": "text",
+        "content": "│   PATH"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "│   NAME"
+          },
+          {
+            "type": "text",
+            "content": "+AP50CTC.COB"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R01120.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

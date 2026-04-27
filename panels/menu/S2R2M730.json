@@ -1,0 +1,121 @@
+{
+  "id": "S2R2M730",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - XMACRO",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Saves the name of an exit macro in the current edit profile."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "XMACRO [name]"
+      },
+      {
+        "type": "text",
+        "content": "[NONE]"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "You can specify either:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- The name of the exit macro to be executed before exiting a file that"
+      },
+      {
+        "type": "text",
+        "content": "matches this file`s type.  The XMACRO is executed just before the"
+      },
+      {
+        "type": "text",
+        "content": "file is written to disk after a SAVE or END command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- Specify NONE to reset the XMACRO value."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "To set ENDUP as the exit macro:"
+      },
+      {
+        "type": "text",
+        "content": "XMACRO ENDUP"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "To reset the edit profile to no exit macro:"
+      },
+      {
+        "type": "text",
+        "content": "XMACRO NONE"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2M730.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

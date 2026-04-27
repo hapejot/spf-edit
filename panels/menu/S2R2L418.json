@@ -1,0 +1,117 @@
+{
+  "id": "S2R2L418",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - TABS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The next example shows how to define software tabs and use the ENTER"
+      },
+      {
+        "type": "text",
+        "content": "key for positioning."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The software tab character hyphen (-) is entered in columns 10, 20,"
+      },
+      {
+        "type": "text",
+        "content": "and 3"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "With this software tab definition and starting with the cursor in"
+      },
+      {
+        "type": "text",
+        "content": "the line command field, the cursor will be positioned to columns 10,"
+      },
+      {
+        "type": "text",
+        "content": "20, and 30 as the ENTER key is repeatedly depressed.  You can enter"
+      },
+      {
+        "type": "text",
+        "content": "data at any point after positioning the cursor with the ENTER key."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "=COLS> ----|----1----|----2----|----3----|----4---"
+      },
+      {
+        "type": "text",
+        "content": "=TABS>          -         -         -"
+      },
+      {
+        "type": "text",
+        "content": "000031 /* EXAMPLE SHOWS SOFTWARE TAB DEFINITION */"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2L418.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

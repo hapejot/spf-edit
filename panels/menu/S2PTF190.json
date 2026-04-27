@@ -1,0 +1,118 @@
+{
+  "id": "S2PTF190",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "TERMINAL FUNCTION - [SCROLL-MAX]",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Scroll the screen to its furthest extreme up, down, left, or"
+      },
+      {
+        "type": "text",
+        "content": "right."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "[SCROLL-LEFT-MAX]"
+      },
+      {
+        "type": "text",
+        "content": "[SCROLL-RIGHT-MAX]"
+      },
+      {
+        "type": "text",
+        "content": "[SCROLL-UP-MAX]"
+      },
+      {
+        "type": "text",
+        "content": "[SCROLL-DOWN-MAX]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "In the editor and in filelists, scrolls the screen to the"
+      },
+      {
+        "type": "text",
+        "content": "extreme in the direction specified.  By default, Ctrl-PgUp"
+      },
+      {
+        "type": "text",
+        "content": "and Ctrl-PgDn are assigned with [SCROLL-UP-MAX] and"
+      },
+      {
+        "type": "text",
+        "content": "[SCROLL-DOWN-MAX]."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2PTF190.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "id": "S2R01200",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SPF/PC FILE NAMES",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "All SPF/PC panels which refer to file names have the same format:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "DRIVE+- The one-letter disk-drive id.  Required ╔"
+      },
+      {
+        "type": "text",
+        "content": "when file is not on CUR DIR drive.      ║ COMMAND"
+      },
+      {
+        "type": "text",
+        "content": "║"
+      },
+      {
+        "type": "text",
+        "content": "PATH +- The complete path to the desired file,  ║ PROJECT FILE:"
+      },
+      {
+        "type": "text",
+        "content": "always starting at the root of DRIVE.   ║    DRIVE"
+      },
+      {
+        "type": "text",
+        "content": "║    PATH"
+      },
+      {
+        "type": "text",
+        "content": "NAME +- Wild cards may be used in the filename  ║    PATH"
+      },
+      {
+        "type": "text",
+        "content": "(*.*) to display a directory list.      ║    PATH"
+      },
+      {
+        "type": "text",
+        "content": "║    NAME"
+      },
+      {
+        "type": "text",
+        "content": "CUR DIR+- Initially, the directory from which   ║            (Blank or pat"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC was executed, but may be changed ║"
+      },
+      {
+        "type": "text",
+        "content": "from within SPF/PC by the CD (chdir)    ║ CURRENT DIRECTORY:"
+      },
+      {
+        "type": "text",
+        "content": "command.  If no other fields are used   ║"
+      },
+      {
+        "type": "text",
+        "content": "on this panel, a list of this directory ║ FILE SPECIFICATION:"
+      },
+      {
+        "type": "text",
+        "content": "will be display when Enter is pressed.  ║"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2P00004"
+  },
+  "metadata": {
+    "source_file": "S2R01200.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "id": "S2R3I008",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SUPERC PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "FILENAME+- The report is placed in the specified file."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PROCESS OPTIONS"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This field specifies a variety of special processing operations that"
+      },
+      {
+        "type": "text",
+        "content": "may be applied to the compare."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "ANYC+- This option causes all characters to to be treated as if they"
+      },
+      {
+        "type": "text",
+        "content": "are uppercase for the purpose of the comparison. The actual"
+      },
+      {
+        "type": "text",
+        "content": "file is not changed. For example, with ANYC specified, \"ABC\""
+      },
+      {
+        "type": "text",
+        "content": "and \"abc\" would compare equal. This option is only valid for"
+      },
+      {
+        "type": "text",
+        "content": "COMPARE TYPE = LINE."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COBOL+- This option causes characters in column 1 through 6 to be"
+      },
+      {
+        "type": "text",
+        "content": "ignored. In COBOL source files these columns are reserved for"
+      },
+      {
+        "type": "text",
+        "content": "sequence numbers. This option is only valid for COMPARE TYPE ="
+      },
+      {
+        "type": "text",
+        "content": "LINE."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R3I008.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

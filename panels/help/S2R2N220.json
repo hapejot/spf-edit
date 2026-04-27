@@ -1,0 +1,113 @@
+{
+  "id": "S2R2N220",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - UNDO",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Use this command to UNDO alterations made to a file during EDIT."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "UNDO [ ON | OFF ]"
+      },
+      {
+        "type": "text",
+        "content": "[ nnn | ALL ]"
+      },
+      {
+        "type": "text",
+        "content": "[ CLEAR ]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "In the normal use of EDIT you will make numerous changes to a file."
+      },
+      {
+        "type": "text",
+        "content": "When UNDO processing is on, each change is recorded in a journal which"
+      },
+      {
+        "type": "text",
+        "content": "may subsequently be used to UNDO a change."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If no parameters are specified, the last recorded alteration is undone."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If a number is specified, the last \"nnn\" recorded alterations are un-"
+      },
+      {
+        "type": "text",
+        "content": "done."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If ALL is specified, all recorded alterations are undone."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2N220.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

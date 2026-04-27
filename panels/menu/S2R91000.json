@@ -1,0 +1,137 @@
+{
+  "id": "S2R91000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "INDEX",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC HELP PANEL INDEX"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This is an automated index to the tutorial panels.  To locate a"
+      },
+      {
+        "type": "text",
+        "content": "topic, enter the first letter of the subject on this panel.  The"
+      },
+      {
+        "type": "text",
+        "content": "index panel containing the topics starting with that letter will be"
+      },
+      {
+        "type": "text",
+        "content": "displayed.  You may then select an individual item from that panel."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "From anywhere in the tutorial except this panel, you can get to this"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "panel by entering"
+          },
+          {
+            "type": "text",
+            "content": "INDEX+or"
+          },
+          {
+            "type": "text",
+            "content": "I+in the command field."
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Please choose any index listing page by entering either the first"
+      },
+      {
+        "type": "text",
+        "content": "letter of the topic, or by typing `PCT` for `Punctuation` commands."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "[A ... Z]+ - Topics catagorized alphabetically"
+      },
+      {
+        "type": "text",
+        "content": "PCT+       - All `Punctuation` commands"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Enter INDEX option followed by"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": [
+        {
+          "value": "&ZCMD",
+          "action": {
+            "type": "panel",
+            "target": "."
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "source_file": "S2R91000.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

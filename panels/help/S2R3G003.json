@@ -1,0 +1,125 @@
+{
+  "id": "S2R3G003",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE CONVERSION PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "DESTINATION PROFILE"
+      },
+      {
+        "type": "text",
+        "content": "Used to specify a profile other than the default.  If none is"
+      },
+      {
+        "type": "text",
+        "content": "specified, than the file is written as based upon the file's"
+      },
+      {
+        "type": "text",
+        "content": "extension."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "MAX LRECL"
+      },
+      {
+        "type": "text",
+        "content": "Used to specify an alternate logical record length of the"
+      },
+      {
+        "type": "text",
+        "content": "converted file, allowing truncation of records to a specific"
+      },
+      {
+        "type": "text",
+        "content": "length.  If none is specified, the DESINATION PROFILE LRECL"
+      },
+      {
+        "type": "text",
+        "content": "is used, and may also truncate the converted records accordingly."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If a file list is display, individual files may be selected with"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "either"
+          },
+          {
+            "type": "text",
+            "content": "S+or"
+          },
+          {
+            "type": "text",
+            "content": "V+line command verbs.  Each file selection from a"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "list displays its own DESTINATION FILE information panel, which"
+      },
+      {
+        "type": "text",
+        "content": "contains space for the destination file and profile name."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R3G003.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

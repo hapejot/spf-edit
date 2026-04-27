@@ -1,0 +1,117 @@
+{
+  "id": "S2R01125",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "DATA ENTRY PANELS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Several fields on data entry panels are pre-entered with the values that"
+      },
+      {
+        "type": "text",
+        "content": "you entered the last time on that panel or on a similar panel.  If the"
+      },
+      {
+        "type": "text",
+        "content": "values are correct, simply press ENTER.  If the values are not correct,"
+      },
+      {
+        "type": "text",
+        "content": "overtype the fields that need to be changed before pressing ENTER."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The pre-entered information comes from your user profile, which"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC automatically builds.  Information that is pre-entered from"
+      },
+      {
+        "type": "text",
+        "content": "your profile includes:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- File specification/information parameters (kept by filename"
+      },
+      {
+        "type": "text",
+        "content": "extension, e.g., .ASM, .DAT, etc.)"
+      },
+      {
+        "type": "text",
+        "content": "- Parameters entered via SPF/PC PARMS (primary option 0)"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Edit modes and defaults are also maintained in the edit portion of"
+      },
+      {
+        "type": "text",
+        "content": "your user profile."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R01125.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

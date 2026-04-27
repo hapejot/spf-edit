@@ -1,0 +1,137 @@
+{
+  "id": "S2DCMD",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "COMMAND PROCESSING",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "form",
+  "attributes": {
+    "^": {
+      "type": "INPUT",
+      "intensity": "high",
+      "caps": false,
+      "scroll": true,
+      "justification": "left"
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CURRENT DIR:"
+          },
+          {
+            "type": "output",
+            "variable": "ZcurDir"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "ENTER SYSTEM COMMAND BELOW:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "input",
+        "variable": "PenvCmd",
+        "attribute": "^",
+        "field_connector": true
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "FORCE KEY PRESS AFTER COMMAND EXECUTION?"
+          },
+          {
+            "type": "input",
+            "variable": "Z",
+            "width": 1,
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Enter any command acceptable at the"
+          },
+          {
+            "type": "output",
+            "variable": "ZOS"
+          },
+          {
+            "type": "text",
+            "content": "command prompt."
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2R60010",
+    "cursor": "PENVCMD",
+    "zvars": [
+      "ZDOSKEY"
+    ]
+  },
+  "reinit": {
+    "cursor": "PENVCMD"
+  },
+  "proc_section": {
+    "validations": [
+      {
+        "field": "ZDOSKEY",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "PENVCMD",
+        "rules": [
+          {
+            "type": "non_blank"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DCMD.PAN",
+    "category": "form",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

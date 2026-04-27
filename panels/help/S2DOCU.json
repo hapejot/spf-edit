@@ -1,0 +1,123 @@
+{
+  "id": "S2DOCU",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "CONCURRENT USER CONFIGURATION",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CONCURRENT USER STATUS   :"
+          },
+          {
+            "type": "output",
+            "variable": "ZCUSTAT"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "COMPANY NAME         :"
+          },
+          {
+            "type": "output",
+            "variable": "ZCUCOMP"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CONTACT NAME         :"
+          },
+          {
+            "type": "output",
+            "variable": "ZCUCONT"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "MAXIMUM USERS        :"
+          },
+          {
+            "type": "output",
+            "variable": "ZCUMAX"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "INSTALLATION KEY     :"
+          },
+          {
+            "type": "output",
+            "variable": "ZCUKEY"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For information about Concurrent SPF/PC, call the CTC Sales Department"
+      },
+      {
+        "type": "text",
+        "content": "at (800) 336-3320 or (510) 521-5900."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Hit"
+          },
+          {
+            "type": "text",
+            "content": "END+to return to previous menu."
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DOCU.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

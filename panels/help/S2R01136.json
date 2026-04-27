@@ -1,0 +1,173 @@
+{
+  "id": "S2R01136",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "HELP ─ SELECTING MORE THAN ONE FILE FROM A FILELIST"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "When a file is marked for deletion, the"
+          },
+          {
+            "type": "text",
+            "content": "CONFIRM DELETE PANEL+will be"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "displayed if the"
+          },
+          {
+            "type": "text",
+            "content": "CONFIRM DELETE REQUEST+option is set to"
+          },
+          {
+            "type": "text",
+            "content": "YES.+ When"
+          },
+          {
+            "type": "text",
+            "content": "NO+is"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "specified, the panel is not displayed and the file is deleted without any"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "additional user interaction."
+          },
+          {
+            "type": "text",
+            "content": "Use caution when specifying \"NO\"+since"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "deleting a file is an irrevocable process.  To allow the erasure to"
+      },
+      {
+        "type": "text",
+        "content": "proceed, press ENTER.  To cancel the erasure operation, press END."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "╔"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "The example to the right     ║"
+          },
+          {
+            "type": "text",
+            "content": "COMMAND"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "shows how multiple files     ║    FILENAME        SIZE      DATE     TIME"
+      },
+      {
+        "type": "text",
+        "content": "may be deleted from a        ║    SOURCE         <DIR>     1-01-80  12:01a"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "file selection list.         ║"
+          },
+          {
+            "type": "text",
+            "content": "d+ APPTEST.FIL      5872    7-11-90   3:30p"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "║"
+          },
+          {
+            "type": "text",
+            "content": "d+ BETAZOID.NCC   102376   11-05-89   9:52a"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "║    CTEST1.DAT       7200    5-30-91  10:07a"
+      },
+      {
+        "type": "text",
+        "content": "║    CTEST2.DAT      12548    5-30-91   4:36p"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R01136.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

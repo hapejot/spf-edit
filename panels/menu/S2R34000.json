@@ -1,0 +1,120 @@
+{
+  "id": "S2R34000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE LIST UTILITY PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "3.4 - FILE LIST UTILITY PANEL"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PROJECT FILE+- Use this group of fields to identify the file(s) you"
+      },
+      {
+        "type": "text",
+        "content": "want to work with.  The SYSTEM FILE SPECIFICATION overrides this"
+      },
+      {
+        "type": "text",
+        "content": "field."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SYSTEM CURRENT DIRECTORY+- This field displays the current"
+      },
+      {
+        "type": "text",
+        "content": "directory."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SYSTEM FILE SPECIFICATION+- If you prefer operating system command"
+      },
+      {
+        "type": "text",
+        "content": "line syntax, use this field instead of the PROJECT FILE fields."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CONFIRM DELETE REQUEST+- Use this field to specify whether you want"
+      },
+      {
+        "type": "text",
+        "content": "confirmation before a file is deleted."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "YES+- When you issue a delete command in the select list, SPF/PC"
+      },
+      {
+        "type": "text",
+        "content": "will display a panel requesting confirmation before the delete"
+      },
+      {
+        "type": "text",
+        "content": "is actually done."
+      },
+      {
+        "type": "text",
+        "content": "NO+- Delete commands in the select list are processed without"
+      },
+      {
+        "type": "text",
+        "content": "confirmation."
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R34000.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

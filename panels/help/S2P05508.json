@@ -1,0 +1,113 @@
+{
+  "id": "S2P05508",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDITOR OPTIONS PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Legal values for this field are:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "A+- Always Virtual Load large files"
+      },
+      {
+        "type": "text",
+        "content": "E+- Only use Virtual Load in the editor"
+      },
+      {
+        "type": "text",
+        "content": "B+- Only use Virtual Load when Browsing files"
+      },
+      {
+        "type": "text",
+        "content": "N+- Force the entire file to be read before input"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "FIND/CHANGE SEARCH TYPE+ Indicate whether you want case-sensitive or"
+      },
+      {
+        "type": "text",
+        "content": "case-insensitive searches when you issue a FIND, CHANGE, or EXCLUDE"
+      },
+      {
+        "type": "text",
+        "content": "primary command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Whichever you select, you can request the other type explicitly when"
+      },
+      {
+        "type": "text",
+        "content": "you issue the command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "C+- Case-sensitive.  Character search mode will match your"
+      },
+      {
+        "type": "text",
+        "content": "string exactly as entered, including upper/lower case."
+      },
+      {
+        "type": "text",
+        "content": "T+- Case-insensitive.  Text search mode will match your string"
+      },
+      {
+        "type": "text",
+        "content": "with either case characters in any position."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05508.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

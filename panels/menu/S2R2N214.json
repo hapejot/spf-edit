@@ -1,0 +1,119 @@
+{
+  "id": "S2R2N214",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - SPASTE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Use this command to paste the contents of the clipboard into the file"
+      },
+      {
+        "type": "text",
+        "content": "at the current cursor position."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "SPASTE [ INSERT | OVERLAY ]"
+      },
+      {
+        "type": "text",
+        "content": "[ LINE | STREAM | BLOCK ]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "If no parameters are specified, the contents of the clipboard are"
+      },
+      {
+        "type": "text",
+        "content": "pasted into the file in the same mode as they were SCUT or SCOPYed."
+      },
+      {
+        "type": "text",
+        "content": "If the clipboard contents were not created by SPF/PC they are pasted"
+      },
+      {
+        "type": "text",
+        "content": "with the \"insert\" and \"stream\" modes."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The optional parameters are supplied to allow you to force the paste"
+      },
+      {
+        "type": "text",
+        "content": "mode regardless of the SCUT or SCOPY mode that produced the clipboard"
+      },
+      {
+        "type": "text",
+        "content": "contents."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2N214.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

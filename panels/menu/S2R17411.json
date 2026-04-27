@@ -1,0 +1,116 @@
+{
+  "id": "S2R17411",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FIND STRINGS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Any character string may be enclosed in quotes: FIND always treats quotes"
+      },
+      {
+        "type": "text",
+        "content": "as delimiters.  There are, however, special cases where the use of quoted"
+      },
+      {
+        "type": "text",
+        "content": "strings is required:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "if the string contains blanks, commas, apostrophes (or quotes),"
+      },
+      {
+        "type": "text",
+        "content": "if the string could be interpreted as a FIND keyword parameter,"
+      },
+      {
+        "type": "text",
+        "content": "a column indicator, or is an asterisk."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Examples:"
+      },
+      {
+        "type": "text",
+        "content": "find \"then do\"    +   find \"then do\""
+      },
+      {
+        "type": "text",
+        "content": "find  '*'         +   find \"*\" (the single character asterisk)"
+      },
+      {
+        "type": "text",
+        "content": "find 'all' last   +   find the last occurrence of string \"all\""
+      },
+      {
+        "type": "text",
+        "content": "find all 'last'   +   find all occurrences of the string \"last\""
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R17411.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

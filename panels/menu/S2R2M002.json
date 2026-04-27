@@ -1,0 +1,120 @@
+{
+  "id": "S2R2M002",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMANDS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Available EDIT primary commands include:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "29 + PASTE      Retrieve a block of lines from the cut buffer"
+      },
+      {
+        "type": "text",
+        "content": "30 + PROFILE    Display current profile information"
+      },
+      {
+        "type": "text",
+        "content": "31 + RCHANGE    Repeat CHANGE command"
+      },
+      {
+        "type": "text",
+        "content": "32 + RECOVERY   Specifies UNDO support"
+      },
+      {
+        "type": "text",
+        "content": "33 + REDO       Reverse last UNDO"
+      },
+      {
+        "type": "text",
+        "content": "34 + RENUM      Renumber the current file"
+      },
+      {
+        "type": "text",
+        "content": "35 + REPLACE    Replace a file on disk"
+      },
+      {
+        "type": "text",
+        "content": "36 + RESET      Reset all pending line commands"
+      },
+      {
+        "type": "text",
+        "content": "37 + RFIND      Repeat FIND command"
+      },
+      {
+        "type": "text",
+        "content": "38 + SAVE       Save a file on disk"
+      },
+      {
+        "type": "text",
+        "content": "39 + SAVECOUNT  Number of enters before automatic save"
+      },
+      {
+        "type": "text",
+        "content": "40 + SCOPY      Copy current selection"
+      },
+      {
+        "type": "text",
+        "content": "41 + SCREATE    Create new with current selection"
+      },
+      {
+        "type": "text",
+        "content": "42 + SCUT       Cut current selection to clipboard"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for more commands)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2M002.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "id": "S2R2N008",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "GENERAL COMMAND - PFSHOW",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Use this command to set or toggle the display of the PF keys."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "PFSHOW [ ON | OFF | nn ]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "Specifies whether the PF keys are to be displayed or not and how many"
+      },
+      {
+        "type": "text",
+        "content": "display lines are available for PF key display. If no parameter is"
+      },
+      {
+        "type": "text",
+        "content": "specified, the display state of the PF key is toggled."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If a number is specified, it is remembered so that subsequent toggling"
+      },
+      {
+        "type": "text",
+        "content": "of the PFSHOW state keeps the same number of key display lines."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "When the PF keys are visible, you can activate them by placing the"
+      },
+      {
+        "type": "text",
+        "content": "mouse cursor on a particular key and double-clicking the left mouse"
+      },
+      {
+        "type": "text",
+        "content": "button."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2N008.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

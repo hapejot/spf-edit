@@ -1,0 +1,112 @@
+{
+  "id": "S2P05M30",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "HOW TO RECORD A KEY MACRO",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "A key macro is recorded by hitting a key assigned to the"
+      },
+      {
+        "type": "text",
+        "content": "[KEY-MACRO-RECORD] terminal function, which is assigned to Alt-M"
+      },
+      {
+        "type": "text",
+        "content": "by default.  Hitting Alt-M brings up a panel which enables to"
+      },
+      {
+        "type": "text",
+        "content": "name and describe the macro to be recorded.  It is similar to:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "MACRO NAME ===>"
+      },
+      {
+        "type": "text",
+        "content": "DESCRIPTION ==>"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Macro name is used to identify which macros are assigned to"
+      },
+      {
+        "type": "text",
+        "content": "which keys, and description is a comment field.  For example,"
+      },
+      {
+        "type": "text",
+        "content": "if we were to assign a COMMBOX macro that inserts a C"
+      },
+      {
+        "type": "text",
+        "content": "comment-box into source code, we could fill in the fields as"
+      },
+      {
+        "type": "text",
+        "content": "follows:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "MACRO NAME ===> COMMBOX"
+      },
+      {
+        "type": "text",
+        "content": "DESCRIPTION ==> Inserts Comment Box in \"C\" Source"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P05M30.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "id": "S2R34004",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE LIST UTILITY PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PROJECT FILE"
+      },
+      {
+        "type": "text",
+        "content": "Use this group of fields to identify the file(s) you want to"
+      },
+      {
+        "type": "text",
+        "content": "work with.  The SYSTEM FILE SPECIFICATION overrides this field."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SYSTEM CURRENT DIRECTORY"
+      },
+      {
+        "type": "text",
+        "content": "This field displays the current directory.  field only."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SYSTEM FILE SPECIFICATION"
+      },
+      {
+        "type": "text",
+        "content": "If you prefer operating system command line syntax, use this"
+      },
+      {
+        "type": "text",
+        "content": "field instead of the PROJECT FILE fields."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COMFIRM DELETE REQUEST"
+      },
+      {
+        "type": "text",
+        "content": "Use this field to specify whether you want confirmation before a"
+      },
+      {
+        "type": "text",
+        "content": "file is deleted."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "YES"
+      },
+      {
+        "type": "text",
+        "content": "When you issue a delete command in the select list, SPF/PC will"
+      },
+      {
+        "type": "text",
+        "content": "display a panel requesting confirmation before the delete is"
+      },
+      {
+        "type": "text",
+        "content": "actually done."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R34004.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

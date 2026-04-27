@@ -1,0 +1,116 @@
+{
+  "id": "S2R2M824",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - SORT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "text",
+        "content": "In the normal case, where the BOUNDS are at their default settings,"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC will sort the entire record. In this case, it works much like"
+      },
+      {
+        "type": "text",
+        "content": "the SORT command in operating system."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SORT is a very powerful command; its use requires care. It is easy"
+      },
+      {
+        "type": "text",
+        "content": "to destroy a file by issuing SORT with the BOUNDS set incorrectly."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Examples"
+      },
+      {
+        "type": "text",
+        "content": "Sort full records, columns 5 - 15 inclusive, in ascending order:"
+      },
+      {
+        "type": "text",
+        "content": "BOUNDS"
+      },
+      {
+        "type": "text",
+        "content": "SORT 5 15"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Sort full records, columns 1 to right bound, from lines .A to .B"
+      },
+      {
+        "type": "text",
+        "content": "inclusive in descending order:"
+      },
+      {
+        "type": "text",
+        "content": "BOUNDS"
+      },
+      {
+        "type": "text",
+        "content": "SORT D .A .B"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Sort full records, major field column 5 to right bound, in"
+      },
+      {
+        "type": "text",
+        "content": "descending order, minor field columns 1 and 2 in ascending order:"
+      },
+      {
+        "type": "text",
+        "content": "BOUNDS"
+      },
+      {
+        "type": "text",
+        "content": "SORT D 5 A 1 2"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2M824.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

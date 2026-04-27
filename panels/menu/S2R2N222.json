@@ -1,0 +1,120 @@
+{
+  "id": "S2R2N222",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - SORT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "In the normal case, where the BOUNDS are at their default settings,"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC will sort the entire record. In this case, it works much like"
+      },
+      {
+        "type": "text",
+        "content": "the SORT command in the operating system."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Warning:+Make sure your BOUNDS are set correctly before using SORT."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "Sort full records, columns 5 - 15 inclusive, in ascending order."
+      },
+      {
+        "type": "text",
+        "content": "bounds"
+      },
+      {
+        "type": "text",
+        "content": "sort 5 15"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Sort full records, major field column 5 to right bound, in descending"
+      },
+      {
+        "type": "text",
+        "content": "order, minor field columns 1 and 2 in ascending order."
+      },
+      {
+        "type": "text",
+        "content": "bounds"
+      },
+      {
+        "type": "text",
+        "content": "sort D 5 A 1 2"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Sort partial record, columns 30 to 45 in descrending order."
+      },
+      {
+        "type": "text",
+        "content": "bounds 30 45"
+      },
+      {
+        "type": "text",
+        "content": "sort D"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2N222.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

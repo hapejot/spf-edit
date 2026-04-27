@@ -1,0 +1,114 @@
+{
+  "id": "S2R2M310",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - NUMBER",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Sets NUMBER mode on or off and specifies the numbering method."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "NUMBER [ON ] [STD] [COBOL] [DISPLAY]"
+      },
+      {
+        "type": "text",
+        "content": "NUM    [OFF]"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "COBOL and DISPLAY may be abbreviated COB and DIS, respectively."
+      },
+      {
+        "type": "text",
+        "content": "If no number type is specified, STD is assumed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "When number mode is turned on, the NUMBER command verifies that all"
+      },
+      {
+        "type": "text",
+        "content": "lines have valid numbers in ascending sequence. If any lines are"
+      },
+      {
+        "type": "text",
+        "content": "either unnumbered or out of sequence, it renumbers all lines."
+      },
+      {
+        "type": "text",
+        "content": "Otherwise, it does not alter existing sequence numbers."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If STD is specified (or defaulted), sequence numbers are generated"
+      },
+      {
+        "type": "text",
+        "content": "in columns 73 to 80. This option is invalid for files with records"
+      },
+      {
+        "type": "text",
+        "content": "longer than 80 characters."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2M310.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

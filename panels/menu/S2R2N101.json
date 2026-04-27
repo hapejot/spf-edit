@@ -1,0 +1,121 @@
+{
+  "id": "S2R2N101",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "BROWSE PRIMARY COMMAND - DISPLAY",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Sets the character to display in place of non-displayable EBCIDIC"
+      },
+      {
+        "type": "text",
+        "content": "characters. This command is only available in the BROWSE mode."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "DISPLAY char"
+      },
+      {
+        "type": "text",
+        "content": "DISPL   NONE"
+      },
+      {
+        "type": "text",
+        "content": "DISP"
+      },
+      {
+        "type": "text",
+        "content": "DIS"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "By default, non-displayable EBCDIC characters are displayed. The"
+      },
+      {
+        "type": "text",
+        "content": "DISPLAY command allows you to select the character to display for"
+      },
+      {
+        "type": "text",
+        "content": "each non-displayable character. Also HEX ON displays the hex value"
+      },
+      {
+        "type": "text",
+        "content": "of each character."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "DISPLAY '.' - Specifies that the period (.) character should be"
+      },
+      {
+        "type": "text",
+        "content": "displayed in place of any non-displayable character."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2N101.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "id": "S2RT3001",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "DIALOG TEST",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "tutorial",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  Change the variable name by typing over the variable name"
+      },
+      {
+        "type": "text",
+        "content": "field."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "\u0007  Change the variable value by typing over the variable value"
+      },
+      {
+        "type": "text",
+        "content": "field."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You can not type over the variable pool field. Use the 'C' line"
+      },
+      {
+        "type": "text",
+        "content": "command to copy a variable to a different pool. You can"
+      },
+      {
+        "type": "text",
+        "content": "subsequently delete the old variable or leave it in place."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "WARNING:+Alteration or deletion of SPF/PC profile variables can"
+      },
+      {
+        "type": "text",
+        "content": "cause unpredictable results. Know what you are doing BEFORE you"
+      },
+      {
+        "type": "text",
+        "content": "do it."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2RT3001.PAN",
+    "category": "tutorial",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

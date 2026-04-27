@@ -1,0 +1,122 @@
+{
+  "id": "S2R34006",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILELIST UTILITY PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NO"
+      },
+      {
+        "type": "text",
+        "content": "Delete commands in the select list are processed without"
+      },
+      {
+        "type": "text",
+        "content": "confirmation."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Once in the file selection list, the following line commands are"
+      },
+      {
+        "type": "text",
+        "content": "available:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "B+     BROWSE the file."
+      },
+      {
+        "type": "text",
+        "content": "E+     EDIT the file."
+      },
+      {
+        "type": "text",
+        "content": "P+     Print the file."
+      },
+      {
+        "type": "text",
+        "content": "R+     Rename the file."
+      },
+      {
+        "type": "text",
+        "content": "D+     Delete the file."
+      },
+      {
+        "type": "text",
+        "content": "C+     Copy file to another filename/directory."
+      },
+      {
+        "type": "text",
+        "content": "M+     Move the file to another directory."
+      },
+      {
+        "type": "text",
+        "content": "T+     Tree the selected directory."
+      },
+      {
+        "type": "text",
+        "content": "X+     Exclude the file from the current list."
+      },
+      {
+        "type": "text",
+        "content": "I+     Information on file."
+      },
+      {
+        "type": "text",
+        "content": "G+     Execute the EXE, COM, CMD, or BAT file"
+      },
+      {
+        "type": "text",
+        "content": "U+     Execute the USER Foreground panel with this file as ZDSN"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R34006.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

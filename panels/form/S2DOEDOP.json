@@ -1,0 +1,352 @@
+{
+  "id": "S2DOEDOP",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDITOR OPTIONS",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "form",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SOUND ALARM"
+          },
+          {
+            "type": "text",
+            "content": "~Z+    (Y- Alarm on error, N- Silent)"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "VERTICAL   SCROLL W/CURSOR"
+          },
+          {
+            "type": "text",
+            "content": "~Z+    (Y- Scroll up-down, N- Wrap cursor)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "HORIZONTAL SCROLL W/CURSOR"
+          },
+          {
+            "type": "text",
+            "content": "~Z+    (Y- Scroll left-rt, N- Wrap cursor)"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "MAXIMUM RECORD LENGTH"
+          },
+          {
+            "type": "text",
+            "content": "~Z    +(n- 1024 - 64000 Bytes per record max)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "RECENT EDIT DEPTH"
+          },
+          {
+            "type": "text",
+            "content": "~Z +   (n- # of files kept on Recent Edit List)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SYNTAX COLORIZATION"
+          },
+          {
+            "type": "text",
+            "content": "~Z+    (Y- Colorization with COLORMAP command,"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "N- Always disabled)"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "AUTOMATIC PROFILE CREATE"
+          },
+          {
+            "type": "text",
+            "content": "~Z+    (Y- Always create .PRF,"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "N- Create non-default profiles only)"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "VIRTUAL LOAD"
+          },
+          {
+            "type": "text",
+            "content": "~Z+    (A- Always, E- Edit Only, B- Browse Only"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "N- Never)"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "FIND/CHANGE SEARCH TYPE"
+          },
+          {
+            "type": "text",
+            "content": "~Z+    (C- Case sensitive, T- Text/insensitive)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "EDIT READ-ONLY FILES"
+          },
+          {
+            "type": "text",
+            "content": "~Z+    (Y- Edit R/O Files, N- Deny Access)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "UNDO ENABLED"
+          },
+          {
+            "type": "text",
+            "content": "~Z+    (Y- UNDO available with UNDO ON command,"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "N- Always disabled)"
+      },
+      {
+        "type": "blank"
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2P05500",
+    "zvars": [
+      "ZOALARM",
+      "ZSCROLLV",
+      "ZSCROLLH",
+      "ZMAXLREC",
+      "ZMRUQTY",
+      "ZCOLORIZ",
+      "ZPCRPROF",
+      "ZPVRTLD",
+      "ZOCASE",
+      "ZEDITRO",
+      "ZRECOVER"
+    ]
+  },
+  "proc_section": {
+    "validations": [
+      {
+        "field": "ZOALARM",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "ZSCROLLV",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "ZSCROLLH",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "ZMAXLREC",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "numeric",
+            "range": {
+              "min": 1024,
+              "max": 64000
+            }
+          }
+        ]
+      },
+      {
+        "field": "ZMRUQTY",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "numeric",
+            "range": {
+              "min": 1,
+              "max": 99
+            }
+          }
+        ]
+      },
+      {
+        "field": "ZCOLORIZ",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "ZCRPROF",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "ZPVRTLD",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "list",
+            "values": [
+              "A",
+              "E",
+              "B",
+              "N"
+            ]
+          }
+        ]
+      },
+      {
+        "field": "ZOCASE",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "list",
+            "values": [
+              "C",
+              "T"
+            ]
+          }
+        ]
+      },
+      {
+        "field": "ZEDITRO",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "field": "ZRECOVER",
+        "rules": [
+          {
+            "type": "non_blank"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DOEDOP.PAN",
+    "category": "form",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

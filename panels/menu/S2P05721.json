@@ -1,0 +1,118 @@
+{
+  "id": "S2P05721",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "CREATING NEW FILE PROFILES",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CREATING NEW FILE PROFILES"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "File profiles may be created two different ways:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- From Panel 0.7, you may create a new profile by issuing the"
+      },
+      {
+        "type": "text",
+        "content": "'S' command from the primary command line followed by the"
+      },
+      {
+        "type": "text",
+        "content": "name of the profile to create.  For example, to create a new"
+      },
+      {
+        "type": "text",
+        "content": "profile named TST, issue the primary command:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "S TST"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The profile panels for the TST profile get displayed, and"
+      },
+      {
+        "type": "text",
+        "content": "the changes made will be saved in the TST profile."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- Edit a file that has the extension of the profile you wish"
+      },
+      {
+        "type": "text",
+        "content": "to create.  As in the above example, edit a file named A.TST."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Anytime a new profile is created, it initial values are set"
+      },
+      {
+        "type": "text",
+        "content": "as based upon the DEFAULT profile."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2P05721.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

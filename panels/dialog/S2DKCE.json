@@ -1,0 +1,66 @@
+{
+  "id": "S2DKCE",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT KEY DEFINITION",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "dialog",
+  "attributes": {
+    "~": {
+      "type": "INPUT",
+      "intensity": "high",
+      "caps": false,
+      "justification": "left"
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "KEY NAME"
+          },
+          {
+            "type": "input",
+            "variable": "EDITNAME",
+            "attribute": "~",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "KEY VALUE"
+          },
+          {
+            "type": "input",
+            "variable": "KEYVALUE",
+            "attribute": "~",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DKCE.PAN",
+    "category": "dialog",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

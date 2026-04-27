@@ -1,0 +1,121 @@
+{
+  "id": "S2P05411",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "COLOR DEFINITION SCHEME",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Color schemes maybe selected by marking the desired scheme with a"
+      },
+      {
+        "type": "text",
+        "content": "'S' character, making the color selected active, and changing the"
+      },
+      {
+        "type": "text",
+        "content": "overall color display.  The active color is save is the SPF/PC"
+      },
+      {
+        "type": "text",
+        "content": "permanent profile and is used the next time the system is started."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For example, selecting \"SOARING\" which change the look of the"
+      },
+      {
+        "type": "text",
+        "content": "display to be a dark blue background with white and cyan"
+      },
+      {
+        "type": "text",
+        "content": "characters.  If another selection is desired, select the new scheme"
+      },
+      {
+        "type": "text",
+        "content": "and the color is redisplayed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Color schemes maybe edited by marking them with an 'E' character."
+      },
+      {
+        "type": "text",
+        "content": "The scheme is made active, and the specific color regions are"
+      },
+      {
+        "type": "text",
+        "content": "displayed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "New color schemes maybe created by entering 'E <newname>' on the"
+      },
+      {
+        "type": "text",
+        "content": "primary command line.  The new scheme initially takes the"
+      },
+      {
+        "type": "text",
+        "content": "characteristics of the active color scheme.  However, any"
+      },
+      {
+        "type": "text",
+        "content": "modification to the newly created scheme does not affect the"
+      },
+      {
+        "type": "text",
+        "content": "original."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2P05411.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

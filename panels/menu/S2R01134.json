@@ -1,0 +1,145 @@
+{
+  "id": "S2R01134",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE SELECTION",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "In BROWSE and EDIT, you may select a single file from the list by"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "entering an"
+          },
+          {
+            "type": "text",
+            "content": "\"S\"+in front of the file name.  It is usually convenient"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "to use the NEW LINE key to position the cursor on the desired line."
+      },
+      {
+        "type": "text",
+        "content": "If more than one \"S\" is entered, all of the files will be brought up"
+      },
+      {
+        "type": "text",
+        "content": "one after another."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "╔"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "The example to the right     ║"
+          },
+          {
+            "type": "text",
+            "content": "COMMAND"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "shows how file \"CTEST1.DAT\"  ║   FILENAME         SIZE      DATE     TIME"
+      },
+      {
+        "type": "text",
+        "content": "could be selected.           ║   SOURCE           <DIR>    1-01-80  12:01a"
+      },
+      {
+        "type": "text",
+        "content": "║   APPTEST.FIL       5872    7-11-90   3:30p"
+      },
+      {
+        "type": "text",
+        "content": "║   BETAZOID.NCC    102376   11-05-89   9:52a"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "║"
+          },
+          {
+            "type": "text",
+            "content": "s+CTEST1.DAT        7200    5-30-91  10:07a"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "║   CTEST2.DAT       12548    5-30-91   4:36p"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R01134.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

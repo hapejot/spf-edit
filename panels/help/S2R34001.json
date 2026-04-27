@@ -1,0 +1,113 @@
+{
+  "id": "S2R34001",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FILE LIST UTILITY PANEL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "FILE LIST UTILITY PANEL"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This panel allows you to browse, edit, print, rename, or delete a"
+      },
+      {
+        "type": "text",
+        "content": "file or group of files."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Simply specify the file (or files) on the FILE LIST UTILITY panel"
+      },
+      {
+        "type": "text",
+        "content": "and press ENTER. SPF/PC presents a select list where you can specify"
+      },
+      {
+        "type": "text",
+        "content": "line commands to perform various functions.  This panel is"
+      },
+      {
+        "type": "text",
+        "content": "particularly useful when you want to reorganize a directory; you can"
+      },
+      {
+        "type": "text",
+        "content": "scroll up and down the select list, using different line commands to"
+      },
+      {
+        "type": "text",
+        "content": "work with different files."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You can:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- Browse or edit to review individual files."
+      },
+      {
+        "type": "text",
+        "content": "- Use the delete command to remove outdated files."
+      },
+      {
+        "type": "text",
+        "content": "- Use the rename command to reorganize the directory."
+      },
+      {
+        "type": "text",
+        "content": "- Use the SORT command to reorder the directory."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R34001.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

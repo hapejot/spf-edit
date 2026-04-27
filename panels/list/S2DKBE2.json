@@ -1,0 +1,102 @@
+{
+  "id": "S2DKBE2",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "&KBETITLE",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "list",
+  "attributes": {
+    "~": {
+      "type": "OUTPUT",
+      "intensity": "low"
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD",
+        "scroll": {
+          "variable": "SCROLL"
+        }
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NEW+- Create new custom key definition"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "NAME:"
+          },
+          {
+            "type": "output",
+            "variable": "ZKBNAME",
+            "attribute": "~"
+          },
+          {
+            "type": "text",
+            "content": "+"
+          },
+          {
+            "type": "text",
+            "content": "DESCRIPTION:"
+          },
+          {
+            "type": "output",
+            "variable": "ZKBDESC",
+            "attribute": "~"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "NAME                            VALUE"
+      },
+      {
+        "type": "divider",
+        "style": "single"
+      }
+    ]
+  },
+  "model": {
+    "selection_field": {
+      "variable": "Z",
+      "width": 1
+    },
+    "columns": [
+      {
+        "variable": "EVTNAME",
+        "attribute": "~",
+        "width": 31
+      },
+      {
+        "variable": "EVTVALUE",
+        "attribute": "~"
+      }
+    ]
+  },
+  "init": {
+    "zvars": [
+      "SCROLL",
+      "SEL"
+    ]
+  },
+  "metadata": {
+    "source_file": "S2DKBE2.PAN",
+    "category": "list",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

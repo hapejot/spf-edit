@@ -1,0 +1,101 @@
+{
+  "id": "S2CHNG02",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "UNDO/REDO COMMANDS",
+    "version_var": "ZSHRTVER",
+    "prefix": "CHANGES"
+  },
+  "type": "changelog",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "UNDO and REDO commands are now supported in the editor, allowing"
+      },
+      {
+        "type": "text",
+        "content": "changes to text to be undone.  Actions performed by line commands,"
+      },
+      {
+        "type": "text",
+        "content": "primary commands, and traditional text editing all can be rolled"
+      },
+      {
+        "type": "text",
+        "content": "back one transaction at a time."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If multiple changes have been, each change can be rolled back"
+      },
+      {
+        "type": "text",
+        "content": "individually until the document is back to its original state."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "REDO reperforms transactions that were rolled back with UNDO."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "UNDO tracks changes through SAVE commands as well.  However, once"
+      },
+      {
+        "type": "text",
+        "content": "the END, CANCEL, or RETURN command is issued and the editor"
+      },
+      {
+        "type": "text",
+        "content": "terminates, all transactions are lost."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For further details see:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC Command Reference,"
+      },
+      {
+        "type": "text",
+        "content": "REDO .................... Page 1-56"
+      },
+      {
+        "type": "text",
+        "content": "UNDO .................... Page 1-78"
+      }
+    ]
+  },
+  "proc_section": {
+    "assignments": {
+      "ZSEL": "UP"
+    }
+  },
+  "metadata": {
+    "source_file": "S2CHNG02.PAN",
+    "category": "changelog"
+  }
+}

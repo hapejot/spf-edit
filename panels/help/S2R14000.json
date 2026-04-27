@@ -1,0 +1,177 @@
+{
+  "id": "S2R14000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "BROWSE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "attributes": {
+    "^": {
+      "type": "PROT",
+      "intensity": "high",
+      "mouse": true
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The BROWSE display screen is comprised of the five main areas shown"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "below:"
+          },
+          {
+            "type": "text",
+            "content": "(1)+TITLE,"
+          },
+          {
+            "type": "text",
+            "content": "(2)+LINE/COLS/MESSAGES,"
+          },
+          {
+            "type": "text",
+            "content": "(3)+COMMAND,"
+          },
+          {
+            "type": "text",
+            "content": "(4)+SCROLL"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "AMOUNT, and"
+          },
+          {
+            "type": "text",
+            "content": "(5)+DATA AREA."
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "╔╗"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(1)+ ║"
+          },
+          {
+            "type": "text",
+            "content": "SPF/PC(1) BROWSE C:\\DATA\\SMPL.FIL  LINE 00040 COLS 001 080+║ \u0011"
+          },
+          {
+            "type": "text",
+            "content": "(2)"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(3)+ ║"
+          },
+          {
+            "type": "text",
+            "content": "COMMAND     +"
+          },
+          {
+            "type": "text",
+            "content": "SCROLL  PAGE+║ \u0011"
+          },
+          {
+            "type": "text",
+            "content": "(4)"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "║    IF FLAG = 'Y' THEN                               00400000║"
+      },
+      {
+        "type": "text",
+        "content": "║      DO;                                            00500000║"
+      },
+      {
+        "type": "text",
+        "content": "(5)+ ║        NAME = \"CTC\";                                00600000║"
+      },
+      {
+        "type": "text",
+        "content": "║        VALUE(1) = 0;                                00700000║"
+      },
+      {
+        "type": "text",
+        "content": "║      END;                                           00800000║"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R14000.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

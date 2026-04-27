@@ -1,0 +1,162 @@
+{
+  "id": "S2R17414",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FIND STRINGS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The special characters that can be used in a picture strings are:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "=+ any character"
+          },
+          {
+            "type": "text",
+            "content": "-+ nonnumeric characters"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "^+ nonblank characters"
+          },
+          {
+            "type": "text",
+            "content": "@+ alphabetic characters"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": ".+ non-ASCII characters"
+          },
+          {
+            "type": "text",
+            "content": "<+ lower case alphabetics"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(x'00'-x'19' and x'7F'-x'FF')"
+          },
+          {
+            "type": "text",
+            "content": ">+ upper case alphabetics"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "#+ numeric characters"
+          },
+          {
+            "type": "text",
+            "content": "$+ special characters"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Examples of picture strings used with the FIND command are:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "find p'.'  1 72        +find non-ASCII character in columns 1 to 72"
+      },
+      {
+        "type": "text",
+        "content": "find '####'p           +find 4 digit number (i.e. 1010 but not 999)"
+      },
+      {
+        "type": "text",
+        "content": "find p'@1' 1           +find label a1,b1,c1, etc. in column 1"
+      },
+      {
+        "type": "text",
+        "content": "find p'>'              +find the next upper case alphabetic character"
+      },
+      {
+        "type": "text",
+        "content": "find '^'p 72           +find the next nonblank in column 72"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R17414.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "id": "S2CHNG16",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "32-BIT EXECUTABLES",
+    "version_var": "ZSHRTVER",
+    "prefix": "CHANGES"
+  },
+  "type": "changelog",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC now includes a 32-Bit 80386 Native mode executable"
+      },
+      {
+        "type": "text",
+        "content": "compatible with OS/2 Version 2.0+.  Capable of executing from both"
+      },
+      {
+        "type": "text",
+        "content": "a Window and an OS/2 fullscreen, the 32-Bit OS/2 version runs"
+      },
+      {
+        "type": "text",
+        "content": "faster than its predecessor, and can load larger files."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "As in previous versions, SPF/PC for DOS is a 32-Bit native"
+      },
+      {
+        "type": "text",
+        "content": "executable as well."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "For further details see:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC User Guide and Reference,"
+      },
+      {
+        "type": "text",
+        "content": "SPF/PC Files ..................... Page 2-12"
+      }
+    ]
+  },
+  "proc_section": {
+    "assignments": {
+      "ZSEL": "UP"
+    }
+  },
+  "metadata": {
+    "source_file": "S2CHNG16.PAN",
+    "category": "changelog"
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "id": "S2R17446",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FIND MESSAGES",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "All FIND and RFIND commands display a short message indicating their"
+      },
+      {
+        "type": "text",
+        "content": "result:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The command syntax is invalid or unclear."
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Examples"
+          },
+          {
+            "type": "text",
+            "content": "PUT STRING IN QUOTES+  or"
+          },
+          {
+            "type": "text",
+            "content": "ENTER CHARACTER STRING"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The requested search argument was found."
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Examples"
+          },
+          {
+            "type": "text",
+            "content": "CHARS 'XXX' FOUND+  or"
+          },
+          {
+            "type": "text",
+            "content": "4 CHARS 'XXX'"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The entire file was searched unsuccessfully."
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Examples"
+          },
+          {
+            "type": "text",
+            "content": "NO CHARS 'XXX' FOUND+  or"
+          },
+          {
+            "type": "text",
+            "content": "NO SUFFIX 'ING' FOUND"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Part of the file was searched without finding the character string."
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Examples"
+          },
+          {
+            "type": "text",
+            "content": "*BOTTOM OF DATA REACHED*+ or"
+          },
+          {
+            "type": "text",
+            "content": "*TOP OF DATA REACHED*"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to the previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R17446.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

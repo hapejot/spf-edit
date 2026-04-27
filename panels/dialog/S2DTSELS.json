@@ -1,0 +1,139 @@
+{
+  "id": "S2DTSELS",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "INVOKE DIALOG FUNCTION/SELECTION PANEL",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "dialog",
+  "attributes": {
+    "^": {
+      "type": "INPUT",
+      "intensity": "high",
+      "caps": false,
+      "scroll": true,
+      "justification": "left"
+    }
+  },
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "INVOKE SELECTION PANEL:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "PANEL"
+          },
+          {
+            "type": "input",
+            "variable": "TPANEL",
+            "width": 8,
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "INVOKE REXX COMMAND PROCEDURE:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CMD"
+          },
+          {
+            "type": "input",
+            "variable": "TCMD",
+            "width": 8,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+   PARM"
+          },
+          {
+            "type": "input",
+            "variable": "TPARMCMD",
+            "attribute": "^",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "INVOKE INTERNAL FUNCTION:"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "CTC"
+          },
+          {
+            "type": "input",
+            "variable": "TCTC",
+            "width": 8,
+            "field_connector": true
+          },
+          {
+            "type": "text",
+            "content": "+   PARM"
+          },
+          {
+            "type": "input",
+            "variable": "TPARMCTC",
+            "attribute": "^",
+            "field_connector": true
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Specify '*' for list of panels or command procedures."
+      },
+      {
+        "type": "blank"
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2RT0000"
+  },
+  "metadata": {
+    "source_file": "S2DTSELS.PAN",
+    "category": "dialog",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

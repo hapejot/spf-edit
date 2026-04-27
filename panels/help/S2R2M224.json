@@ -1,0 +1,114 @@
+{
+  "id": "S2R2M224",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - CHANGE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "text",
+        "content": "- match strings dependent on its location within a word, see"
+      },
+      {
+        "type": "text",
+        "content": "STRING MATCHING PARMS."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- change the direction of searching, see DIR SEARCH."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- restrict searching to a range of lines, see RANGE SEARCH."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- affect searching by whether lines are currently `excluded` or"
+      },
+      {
+        "type": "text",
+        "content": "not, see SEARCH EXCLUDED."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "- cause searching in columns other than that currently specified"
+      },
+      {
+        "type": "text",
+        "content": "in the BOUNDS command, see COLUMN SEARCH."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CHANGE parameters are free form and may be entered in any order. The"
+      },
+      {
+        "type": "text",
+        "content": "only exceptions are: If entered, col2 must follow col1.  Str2 must"
+      },
+      {
+        "type": "text",
+        "content": "follow str1.  Str1 and str2 are required; all other parameters are"
+      },
+      {
+        "type": "text",
+        "content": "optional."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If CHANGE strings are not the same length, SPF/PC will automatically"
+      },
+      {
+        "type": "text",
+        "content": "shift characters on the right of the string.  In doing this, it will"
+      },
+      {
+        "type": "text",
+        "content": "try to meet the following objectives:"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2M224.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

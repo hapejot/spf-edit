@@ -1,0 +1,113 @@
+{
+  "id": "S2R2M136",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT PRIMARY COMMAND - LOCATE",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "In addition, the second form of this command can include a range"
+      },
+      {
+        "type": "text",
+        "content": "specification to restrict the locate to a range of lines.  See RANGE"
+      },
+      {
+        "type": "text",
+        "content": "SEARCH for information on how ranges are specified."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Examples"
+      },
+      {
+        "type": "text",
+        "content": "Put line 472 at top of screen:"
+      },
+      {
+        "type": "text",
+        "content": "LOC 472"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Locate the first line of the file:"
+      },
+      {
+        "type": "text",
+        "content": "L .ZFIRST"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Locate the next special line:"
+      },
+      {
+        "type": "text",
+        "content": "LOCATE SPE"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Locate the first error line (==ERR>):"
+      },
+      {
+        "type": "text",
+        "content": "L ERR FIRST"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Locate the next excluded line between labels .START and .END:"
+      },
+      {
+        "type": "text",
+        "content": "L X .START .END"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2M136.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

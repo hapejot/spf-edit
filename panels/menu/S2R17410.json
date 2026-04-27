@@ -1,0 +1,182 @@
+{
+  "id": "S2R17410",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FIND STRINGS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "A"
+          },
+          {
+            "type": "text",
+            "content": "FIND+command requires a search argument, which consists of one or more"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "characters to be located.  The command is normally entered as FIND"
+      },
+      {
+        "type": "text",
+        "content": "followed by the character string."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Example"
+          },
+          {
+            "type": "text",
+            "content": "find ctc+         find next occurence of \"ctc\""
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If you want to use the same string that was used in the previous FIND"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "command, use an"
+          },
+          {
+            "type": "text",
+            "content": "*+."
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Example"
+          },
+          {
+            "type": "text",
+            "content": "find *+           find next occurence of same string"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Many other forms of search arguments are supported.  For example, when"
+      },
+      {
+        "type": "text",
+        "content": "the character string contains blanks, it must be enclosed in quotes."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "Example"
+          },
+          {
+            "type": "text",
+            "content": "find 'then do'+   find next occurence of \"then do\""
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "The following topics may be selected by number:"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "1 + QUOTED STRINGS"
+          },
+          {
+            "type": "text",
+            "content": "4 + TEXT STRINGS"
+          }
+        ]
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "2 + HEX STRINGS"
+          },
+          {
+            "type": "text",
+            "content": "5 + CHARACTER STRINGS"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "3 + PICTURE STRINGS"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R17410.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

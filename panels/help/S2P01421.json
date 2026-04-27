@@ -1,0 +1,141 @@
+{
+  "id": "S2P01421",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SCROLL AMOUNT",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SCROLL  csr+    or"
+          },
+          {
+            "type": "text",
+            "content": "SCROLL  c+     to scroll to the position"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "of the cursor within the"
+      },
+      {
+        "type": "text",
+        "content": "data (or by a page if the"
+      },
+      {
+        "type": "text",
+        "content": "cursor is outside the data"
+      },
+      {
+        "type": "text",
+        "content": "or is already positioned"
+      },
+      {
+        "type": "text",
+        "content": "in the top, bottom, left,"
+      },
+      {
+        "type": "text",
+        "content": "or right margin)."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SCROLL  max+    or"
+          },
+          {
+            "type": "text",
+            "content": "SCROLL  m +    to scroll to the top,"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "bottom, left, or right"
+      },
+      {
+        "type": "text",
+        "content": "margin."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SCROLL  data+   or"
+          },
+          {
+            "type": "text",
+            "content": "SCROLL  d +    to scroll by a page minus"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "one line when scrolling up"
+      },
+      {
+        "type": "text",
+        "content": "or down or by a page minus"
+      },
+      {
+        "type": "text",
+        "content": "one column when scrolling"
+      },
+      {
+        "type": "text",
+        "content": "left or right."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2P01421.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "id": "S2R00001",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "SPF/PC TUTORIAL",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "SPF/PC VERSION"
+          },
+          {
+            "type": "output",
+            "variable": "ZSHRTVER"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "GENERAL HELP AND TUTORIAL SYSTEM"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "This tutorial provides on-line information about the features and"
+      },
+      {
+        "type": "text",
+        "content": "operation of SPF/PC."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "General tutorial topics may be selected from the Table of Contents."
+      },
+      {
+        "type": "text",
+        "content": "Many help panels offer a menu of details or additional topics which"
+      },
+      {
+        "type": "text",
+        "content": "may be selected by number.  To choose a topic, enter its number in the"
+      },
+      {
+        "type": "text",
+        "content": "OPTION field, located near the top of the screen."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "If you are interested in accessing a specific topic by name, the Tutorial"
+      },
+      {
+        "type": "text",
+        "content": "Index provides alphabetic control over the help text."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+key to continue)"
+          }
+        ]
+      }
+    ]
+  },
+  "init": {
+    "help_panel": "S2P00004"
+  },
+  "metadata": {
+    "source_file": "S2R00001.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

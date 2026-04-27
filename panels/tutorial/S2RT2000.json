@@ -1,0 +1,113 @@
+{
+  "id": "S2RT2000",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "DIALOG TEST",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "tutorial",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "TESTING PANELS"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "During the developmental stage, the appearance and content of a"
+      },
+      {
+        "type": "text",
+        "content": "panel frequently change. After changing a panel definition, it is"
+      },
+      {
+        "type": "text",
+        "content": "desirable to quickly display it to verify that the change has had"
+      },
+      {
+        "type": "text",
+        "content": "the desired effect. To display a panel directly, select Dialog"
+      },
+      {
+        "type": "text",
+        "content": "Test Option 2."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "PANEL+- Specifies the ID of the panel to be displayed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "MESSAGE+- Specifies the message ID of a message to be displayed with"
+      },
+      {
+        "type": "text",
+        "content": "the panel."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CURSOR+- Specifies the name of the field in which the cursor is to be"
+      },
+      {
+        "type": "text",
+        "content": "placed when the panel is displayed. If not specified, the                                       el"
+      },
+      {
+        "type": "text",
+        "content": "cursor is placed in the first input field."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "CURSOR POSITION+- Specifies the cursor position within the current"
+      },
+      {
+        "type": "text",
+        "content": "field. If not specified, one is assumed."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2RT2000.PAN",
+    "category": "tutorial",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

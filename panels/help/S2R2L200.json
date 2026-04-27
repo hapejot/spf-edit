@@ -1,0 +1,115 @@
+{
+  "id": "S2R2L200",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - BNDS",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "help",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Purpose"
+      },
+      {
+        "type": "text",
+        "content": "Displays current column bounds. You can change the bounds by typing"
+      },
+      {
+        "type": "text",
+        "content": "over the `<` or `>` characters on the `=BNDS>` line."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Format"
+      },
+      {
+        "type": "text",
+        "content": "BNDS"
+      },
+      {
+        "type": "text",
+        "content": "BND"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Remarks"
+      },
+      {
+        "type": "text",
+        "content": "The left column bound is set at the `<` character.  The right column"
+      },
+      {
+        "type": "text",
+        "content": "bound is set at the `>` character.  Moving either of these two"
+      },
+      {
+        "type": "text",
+        "content": "characters changes the bounds."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Bounds are used to limit the scope of:"
+      },
+      {
+        "type": "text",
+        "content": "- Left-shift and right-shift line commands."
+      },
+      {
+        "type": "text",
+        "content": "- FIND, CHANGE, and EXCLUDE commands when explicit columns are"
+      },
+      {
+        "type": "text",
+        "content": "not specified."
+      },
+      {
+        "type": "text",
+        "content": "- TS (text split), and TF (text flow) line commands."
+      },
+      {
+        "type": "text",
+        "content": "- The Overlay line command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+for next page)"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "source_file": "S2R2L200.PAN",
+    "category": "help",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

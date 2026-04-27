@@ -1,0 +1,137 @@
+{
+  "id": "S2R2L492",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "EDIT LINE COMMAND - XX",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Example"
+      },
+      {
+        "type": "text",
+        "content": "000010 /*  This is a C program    */"
+      },
+      {
+        "type": "text",
+        "content": "000011 main() {"
+      },
+      {
+        "type": "text",
+        "content": "XX 012   int  diff,x,x;"
+      },
+      {
+        "type": "text",
+        "content": "000013   x = 20;"
+      },
+      {
+        "type": "text",
+        "content": "000014   y = 30;"
+      },
+      {
+        "type": "text",
+        "content": "000015   diff = x - y;"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "000016   printf(`The difference of"
+          },
+          {
+            "type": "text",
+            "content": "d and"
+          },
+          {
+            "type": "text",
+            "content": "d ="
+          },
+          {
+            "type": "text",
+            "content": "d`,"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "XX 017        x, y, diff);"
+      },
+      {
+        "type": "text",
+        "content": "000018 }"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Results"
+      },
+      {
+        "type": "text",
+        "content": "000010 /*  This is a C program    */"
+      },
+      {
+        "type": "text",
+        "content": "000011 main() {"
+      },
+      {
+        "type": "text",
+        "content": "- - -  - - - - - - - 00006 LINE(S) NOT DISPLAYED"
+      },
+      {
+        "type": "text",
+        "content": "000018 }"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Hit"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R2L492.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}

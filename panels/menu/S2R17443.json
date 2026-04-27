@@ -1,0 +1,132 @@
+{
+  "id": "S2R17443",
+  "title": {
+    "product_var": "ZPRODTSK",
+    "text": "FIND SUFFIX PARAMETER",
+    "version_var": "ZSHRTVER",
+    "prefix": "HELP"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      {
+        "type": "command",
+        "variable": "ZCMD"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "You use the SUFFIX optional parameter of the FIND command to specify"
+      },
+      {
+        "type": "text",
+        "content": "that the search argument must be the last characters of a string.  A"
+      },
+      {
+        "type": "text",
+        "content": "suffix is defined as being preceded by an alphameric character and"
+      },
+      {
+        "type": "text",
+        "content": "followed by a nonalphameric character."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "COMMAND  find ctc suffix            +scans for the suffix \"ctc\""
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "Only those occurrences of the character string \"ctc\" that are found at"
+      },
+      {
+        "type": "text",
+        "content": "the end of a word and that are within the specified columns will be"
+      },
+      {
+        "type": "text",
+        "content": "considered a match.  The suffix parameter could be used, for example, to"
+      },
+      {
+        "type": "text",
+        "content": "find all words ending with \"th\", without finding all occurrences of the"
+      },
+      {
+        "type": "text",
+        "content": "characters \"th\"."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "text",
+        "content": "In the list below, the intensified strings would be found and the non"
+      },
+      {
+        "type": "text",
+        "content": "intensified strings would be ignored if the suffix \"at\" were requested"
+      },
+      {
+        "type": "text",
+        "content": "in a FIND command."
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "\"SUFFIX AT\"   AT  ATLANTIC"
+          },
+          {
+            "type": "text",
+            "content": "BAT+ BATS  'AT'  =AT!  (ATM)"
+          },
+          {
+            "type": "text",
+            "content": "(MAT)+"
+          }
+        ]
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "blank"
+      },
+      {
+        "type": "field_row",
+        "fields": [
+          {
+            "type": "text",
+            "content": "(Press"
+          },
+          {
+            "type": "text",
+            "content": "ENTER+to return to the previous menu)"
+          }
+        ]
+      }
+    ]
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": []
+    }
+  },
+  "metadata": {
+    "source_file": "S2R17443.PAN",
+    "category": "menu",
+    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+  }
+}
