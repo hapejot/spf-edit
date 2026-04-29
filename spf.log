@@ -1,0 +1,287 @@
+2026-04-29T21:54:59.498790Z  INFO spf: spf launcher starting
+2026-04-29T21:54:59.498916Z  INFO panel_runtime::loader: scanning panels directory dir=panels
+2026-04-29T21:54:59.500076Z  INFO panel_runtime::loader: indexed panels count=703
+2026-04-29T21:54:59.500209Z  INFO panel_runtime::vars: loaded profiles path=C:\Users\inwid3vl\AppData\Roaming\spf-edit\profiles.json panels=2
+2026-04-29T21:54:59.500406Z DEBUG spf: displaying SPFMAIN
+2026-04-29T21:54:59.500414Z  INFO panel_runtime::manager: display requested panel_id=SPFMAIN
+2026-04-29T21:54:59.500417Z DEBUG panel_runtime::loader: loading panel from disk panel_id=SPFMAIN
+2026-04-29T21:54:59.500419Z DEBUG panel_runtime::loader: reading panel JSON path=panels\spf\SPFMAIN.json panel_id="SPFMAIN"
+2026-04-29T21:54:59.500769Z  INFO panel_runtime::engine: running panel engine panel_id=SPFMAIN
+2026-04-29T21:54:59.500775Z DEBUG panel_runtime::vars: loading profile vars panel=SPFMAIN count=2
+2026-04-29T21:54:59.500780Z DEBUG panel_runtime::vars: Variable pool dump:
+2026-04-29T21:54:59.500781Z DEBUG panel_runtime::vars: local: ZFILE=
+2026-04-29T21:54:59.500781Z DEBUG panel_runtime::vars: local: ZCTC=
+2026-04-29T21:54:59.500782Z DEBUG panel_runtime::vars: local: ZIMAC=
+2026-04-29T21:54:59.500782Z DEBUG panel_runtime::vars: shared: ZSHRTVER=0.1.0
+2026-04-29T21:54:59.500783Z DEBUG panel_runtime::vars: shared: ZTIME=
+2026-04-29T21:54:59.500783Z DEBUG panel_runtime::vars: shared: ZOS=windows
+2026-04-29T21:54:59.500784Z DEBUG panel_runtime::vars: shared: ZPRODTSK=SPF-Edit
+2026-04-29T21:54:59.500784Z DEBUG panel_runtime::vars: shared: ZENVIR=Rust/0.1.0
+2026-04-29T21:54:59.500785Z DEBUG panel_runtime::vars: shared: ZUSER=INWID3VL
+2026-04-29T21:54:59.500785Z DEBUG panel_runtime::vars: shared: ZDATE=2026/01/01
+2026-04-29T21:55:02.155303Z DEBUG panel_runtime::engine: user pressed Enter command=0 panel_id=SPFMAIN
+2026-04-29T21:55:02.155327Z DEBUG panel_runtime::engine: evaluating TRANS routes source_var=ZCMD value=0
+2026-04-29T21:55:02.155330Z  INFO panel_runtime::engine: TRANS -> panel target=SPFSETS
+2026-04-29T21:55:02.155339Z DEBUG panel_runtime::vars: saving profile var panel=SPFMAIN var=ZFILE val=
+2026-04-29T21:55:02.155341Z DEBUG panel_runtime::vars: saving profile var panel=SPFMAIN var=ZIMAC val=
+2026-04-29T21:55:02.155345Z DEBUG panel_runtime::manager: panel engine returned result=Navigate("SPFSETS") panel=SPFMAIN
+2026-04-29T21:55:02.155347Z DEBUG panel_runtime::vars: Variable pool dump:
+2026-04-29T21:55:02.155348Z DEBUG panel_runtime::vars: local: ZIMAC=
+2026-04-29T21:55:02.155350Z DEBUG panel_runtime::vars: local: ZCMD=0
+2026-04-29T21:55:02.155350Z DEBUG panel_runtime::vars: local: ZFILE=
+2026-04-29T21:55:02.155351Z DEBUG panel_runtime::vars: local: ZCTC=
+2026-04-29T21:55:02.155352Z DEBUG panel_runtime::vars: shared: ZSHRTVER=0.1.0
+2026-04-29T21:55:02.155353Z DEBUG panel_runtime::vars: shared: ZTIME=
+2026-04-29T21:55:02.155356Z DEBUG panel_runtime::vars: shared: ZOS=windows
+2026-04-29T21:55:02.155356Z DEBUG panel_runtime::vars: shared: ZPRODTSK=SPF-Edit
+2026-04-29T21:55:02.155357Z DEBUG panel_runtime::vars: shared: ZENVIR=Rust/0.1.0
+2026-04-29T21:55:02.155358Z DEBUG panel_runtime::vars: shared: ZUSER=INWID3VL
+2026-04-29T21:55:02.155359Z DEBUG panel_runtime::vars: shared: ZDATE=2026/01/01
+2026-04-29T21:55:02.155361Z DEBUG panel_runtime::manager: pushing panel onto stack target=SPFSETS
+2026-04-29T21:55:02.155383Z DEBUG panel_runtime::loader: loading panel from disk panel_id=SPFSETS
+2026-04-29T21:55:02.155387Z DEBUG panel_runtime::loader: reading panel JSON path=panels\spf\SPFSETS.json panel_id="SPFSETS"
+2026-04-29T21:55:02.155885Z  INFO panel_runtime::engine: running panel engine panel_id=SPFSETS
+2026-04-29T21:55:02.155920Z DEBUG panel_runtime::vars: loading profile vars panel=SPFSETS count=5
+2026-04-29T21:55:02.155929Z DEBUG panel_runtime::vars: Variable pool dump:
+2026-04-29T21:55:02.155931Z DEBUG panel_runtime::vars: local: ZIMAC=
+2026-04-29T21:55:02.155933Z DEBUG panel_runtime::vars: local: ZCMD=0
+2026-04-29T21:55:02.155935Z DEBUG panel_runtime::vars: local: ZNULLS=N
+2026-04-29T21:55:02.155936Z DEBUG panel_runtime::vars: local: ZCAPS=N
+2026-04-29T21:55:02.155937Z DEBUG panel_runtime::vars: local: ZCTC=
+2026-04-29T21:55:02.155939Z DEBUG panel_runtime::vars: local: ZSCROLL=PAGE
+2026-04-29T21:55:02.155940Z DEBUG panel_runtime::vars: local: ZNUMS=Y
+2026-04-29T21:55:02.155943Z DEBUG panel_runtime::vars: local: ZFILE=
+2026-04-29T21:55:02.155945Z DEBUG panel_runtime::vars: local: ZTABS=8
+2026-04-29T21:55:02.155947Z DEBUG panel_runtime::vars: shared: ZSHRTVER=0.1.0
+2026-04-29T21:55:02.155949Z DEBUG panel_runtime::vars: shared: ZTIME=
+2026-04-29T21:55:02.155951Z DEBUG panel_runtime::vars: shared: ZOS=windows
+2026-04-29T21:55:02.155953Z DEBUG panel_runtime::vars: shared: ZPRODTSK=SPF-Edit
+2026-04-29T21:55:02.155956Z DEBUG panel_runtime::vars: shared: ZENVIR=Rust/0.1.0
+2026-04-29T21:55:02.155958Z DEBUG panel_runtime::vars: shared: ZUSER=INWID3VL
+2026-04-29T21:55:02.155960Z DEBUG panel_runtime::vars: shared: ZDATE=2026/01/01
+2026-04-29T21:55:12.836979Z DEBUG panel_runtime::engine: user pressed Enter command= panel_id=SPFSETS
+2026-04-29T21:55:12.837020Z DEBUG panel_runtime::engine: applying assignment: ZSEL = UP
+2026-04-29T21:55:12.837039Z DEBUG panel_runtime::vars: saving profile var panel=SPFSETS var=ZTABS val=4
+2026-04-29T21:55:12.837043Z DEBUG panel_runtime::vars: saving profile var panel=SPFSETS var=ZNULLS val=N
+2026-04-29T21:55:12.837046Z DEBUG panel_runtime::vars: saving profile var panel=SPFSETS var=ZCAPS val=N
+2026-04-29T21:55:12.837048Z DEBUG panel_runtime::vars: saving profile var panel=SPFSETS var=ZNUMS val=Y
+2026-04-29T21:55:12.837049Z DEBUG panel_runtime::vars: saving profile var panel=SPFSETS var=ZSCROLL val=HALF
+2026-04-29T21:55:12.837056Z DEBUG panel_runtime::manager: panel engine returned result=Up panel=SPFSETS
+2026-04-29T21:55:12.837058Z DEBUG panel_runtime::vars: Variable pool dump:
+2026-04-29T21:55:12.837060Z DEBUG panel_runtime::vars: local: ZIMAC=
+2026-04-29T21:55:12.837062Z DEBUG panel_runtime::vars: local: ZCMD=
+2026-04-29T21:55:12.837062Z DEBUG panel_runtime::vars: local: ZNULLS=N
+2026-04-29T21:55:12.837063Z DEBUG panel_runtime::vars: local: ZCAPS=N
+2026-04-29T21:55:12.837064Z DEBUG panel_runtime::vars: local: ZCTC=
+2026-04-29T21:55:12.837065Z DEBUG panel_runtime::vars: local: ZSCROLL=HALF
+2026-04-29T21:55:12.837066Z DEBUG panel_runtime::vars: local: ZNUMS=Y
+2026-04-29T21:55:12.837068Z DEBUG panel_runtime::vars: local: ZSEL=UP
+2026-04-29T21:55:12.837069Z DEBUG panel_runtime::vars: local: ZFILE=
+2026-04-29T21:55:12.837070Z DEBUG panel_runtime::vars: local: ZTABS=4
+2026-04-29T21:55:12.837070Z DEBUG panel_runtime::vars: shared: ZSHRTVER=0.1.0
+2026-04-29T21:55:12.837071Z DEBUG panel_runtime::vars: shared: ZTIME=
+2026-04-29T21:55:12.837072Z DEBUG panel_runtime::vars: shared: ZOS=windows
+2026-04-29T21:55:12.837073Z DEBUG panel_runtime::vars: shared: ZPRODTSK=SPF-Edit
+2026-04-29T21:55:12.837074Z DEBUG panel_runtime::vars: shared: ZENVIR=Rust/0.1.0
+2026-04-29T21:55:12.837075Z DEBUG panel_runtime::vars: shared: ZUSER=INWID3VL
+2026-04-29T21:55:12.837076Z DEBUG panel_runtime::vars: shared: ZDATE=2026/01/01
+2026-04-29T21:55:12.837096Z DEBUG panel_runtime::loader: panel found in cache panel_id=SPFMAIN
+2026-04-29T21:55:12.837110Z  INFO panel_runtime::engine: running panel engine panel_id=SPFMAIN
+2026-04-29T21:55:12.837112Z DEBUG panel_runtime::vars: loading profile vars panel=SPFMAIN count=2
+2026-04-29T21:55:12.837115Z DEBUG panel_runtime::vars: Variable pool dump:
+2026-04-29T21:55:12.837116Z DEBUG panel_runtime::vars: local: ZIMAC=
+2026-04-29T21:55:12.837116Z DEBUG panel_runtime::vars: local: ZCMD=
+2026-04-29T21:55:12.837117Z DEBUG panel_runtime::vars: local: ZNULLS=N
+2026-04-29T21:55:12.837117Z DEBUG panel_runtime::vars: local: ZCAPS=N
+2026-04-29T21:55:12.837118Z DEBUG panel_runtime::vars: local: ZCTC=
+2026-04-29T21:55:12.837118Z DEBUG panel_runtime::vars: local: ZSCROLL=HALF
+2026-04-29T21:55:12.837118Z DEBUG panel_runtime::vars: local: ZNUMS=Y
+2026-04-29T21:55:12.837119Z DEBUG panel_runtime::vars: local: ZSEL=UP
+2026-04-29T21:55:12.837119Z DEBUG panel_runtime::vars: local: ZFILE=
+2026-04-29T21:55:12.837120Z DEBUG panel_runtime::vars: local: ZTABS=4
+2026-04-29T21:55:12.837120Z DEBUG panel_runtime::vars: shared: ZSHRTVER=0.1.0
+2026-04-29T21:55:12.837121Z DEBUG panel_runtime::vars: shared: ZTIME=
+2026-04-29T21:55:12.837121Z DEBUG panel_runtime::vars: shared: ZOS=windows
+2026-04-29T21:55:12.837122Z DEBUG panel_runtime::vars: shared: ZPRODTSK=SPF-Edit
+2026-04-29T21:55:12.837123Z DEBUG panel_runtime::vars: shared: ZENVIR=Rust/0.1.0
+2026-04-29T21:55:12.837124Z DEBUG panel_runtime::vars: shared: ZUSER=INWID3VL
+2026-04-29T21:55:12.837124Z DEBUG panel_runtime::vars: shared: ZDATE=2026/01/01
+2026-04-29T21:55:14.667719Z DEBUG panel_runtime::engine: user pressed Enter command= panel_id=SPFMAIN
+2026-04-29T21:55:14.667752Z DEBUG panel_runtime::engine: evaluating TRANS routes source_var=ZCMD value=
+2026-04-29T21:55:14.667762Z DEBUG panel_runtime::vars: saving profile var panel=SPFMAIN var=ZFILE val=
+2026-04-29T21:55:14.667766Z DEBUG panel_runtime::vars: saving profile var panel=SPFMAIN var=ZIMAC val=
+2026-04-29T21:55:14.667771Z DEBUG panel_runtime::manager: panel engine returned result=Up panel=SPFMAIN
+2026-04-29T21:55:14.667773Z DEBUG panel_runtime::vars: Variable pool dump:
+2026-04-29T21:55:14.667776Z DEBUG panel_runtime::vars: local: ZIMAC=
+2026-04-29T21:55:14.667777Z DEBUG panel_runtime::vars: local: ZCMD=
+2026-04-29T21:55:14.667778Z DEBUG panel_runtime::vars: local: ZNULLS=N
+2026-04-29T21:55:14.667780Z DEBUG panel_runtime::vars: local: ZCAPS=N
+2026-04-29T21:55:14.667781Z DEBUG panel_runtime::vars: local: ZCTC=
+2026-04-29T21:55:14.667782Z DEBUG panel_runtime::vars: local: ZSCROLL=HALF
+2026-04-29T21:55:14.667783Z DEBUG panel_runtime::vars: local: ZNUMS=Y
+2026-04-29T21:55:14.667784Z DEBUG panel_runtime::vars: local: ZSEL=UP
+2026-04-29T21:55:14.667785Z DEBUG panel_runtime::vars: local: ZFILE=
+2026-04-29T21:55:14.667785Z DEBUG panel_runtime::vars: local: ZTABS=4
+2026-04-29T21:55:14.667786Z DEBUG panel_runtime::vars: shared: ZSHRTVER=0.1.0
+2026-04-29T21:55:14.667787Z DEBUG panel_runtime::vars: shared: ZTIME=
+2026-04-29T21:55:14.667788Z DEBUG panel_runtime::vars: shared: ZOS=windows
+2026-04-29T21:55:14.667789Z DEBUG panel_runtime::vars: shared: ZPRODTSK=SPF-Edit
+2026-04-29T21:55:14.667790Z DEBUG panel_runtime::vars: shared: ZENVIR=Rust/0.1.0
+2026-04-29T21:55:14.667791Z DEBUG panel_runtime::vars: shared: ZUSER=INWID3VL
+2026-04-29T21:55:14.667792Z DEBUG panel_runtime::vars: shared: ZDATE=2026/01/01
+2026-04-29T21:55:14.668904Z  INFO panel_runtime::vars: saved profiles path=C:\Users\inwid3vl\AppData\Roaming\spf-edit\profiles.json panels=2
+2026-04-29T21:55:14.668985Z  INFO spf: user exited (UP/X)
+2026-04-29T21:55:21.476898Z  INFO spf: spf launcher starting
+2026-04-29T21:55:21.477001Z  INFO panel_runtime::loader: scanning panels directory dir=panels
+2026-04-29T21:55:21.478271Z  INFO panel_runtime::loader: indexed panels count=703
+2026-04-29T21:55:21.478356Z  INFO panel_runtime::vars: loaded profiles path=C:\Users\inwid3vl\AppData\Roaming\spf-edit\profiles.json panels=2
+2026-04-29T21:55:21.478553Z DEBUG spf: displaying SPFMAIN
+2026-04-29T21:55:21.478563Z  INFO panel_runtime::manager: display requested panel_id=SPFMAIN
+2026-04-29T21:55:21.478566Z DEBUG panel_runtime::loader: loading panel from disk panel_id=SPFMAIN
+2026-04-29T21:55:21.478569Z DEBUG panel_runtime::loader: reading panel JSON path=panels\spf\SPFMAIN.json panel_id="SPFMAIN"
+2026-04-29T21:55:21.478810Z  INFO panel_runtime::engine: running panel engine panel_id=SPFMAIN
+2026-04-29T21:55:21.478817Z DEBUG panel_runtime::vars: loading profile vars panel=SPFMAIN count=2
+2026-04-29T21:55:21.478820Z DEBUG panel_runtime::vars: Variable pool dump:
+2026-04-29T21:55:21.478821Z DEBUG panel_runtime::vars: local: ZFILE=
+2026-04-29T21:55:21.478822Z DEBUG panel_runtime::vars: local: ZIMAC=
+2026-04-29T21:55:21.478823Z DEBUG panel_runtime::vars: local: ZCTC=
+2026-04-29T21:55:21.478824Z DEBUG panel_runtime::vars: shared: ZSHRTVER=0.1.0
+2026-04-29T21:55:21.478824Z DEBUG panel_runtime::vars: shared: ZTIME=
+2026-04-29T21:55:21.478825Z DEBUG panel_runtime::vars: shared: ZPRODTSK=SPF-Edit
+2026-04-29T21:55:21.478825Z DEBUG panel_runtime::vars: shared: ZOS=windows
+2026-04-29T21:55:21.478826Z DEBUG panel_runtime::vars: shared: ZUSER=INWID3VL
+2026-04-29T21:55:21.478826Z DEBUG panel_runtime::vars: shared: ZENVIR=Rust/0.1.0
+2026-04-29T21:55:21.478827Z DEBUG panel_runtime::vars: shared: ZDATE=2026/01/01
+2026-04-29T21:55:23.831893Z DEBUG panel_runtime::engine: user pressed Enter command=0 panel_id=SPFMAIN
+2026-04-29T21:55:23.831912Z DEBUG panel_runtime::engine: evaluating TRANS routes source_var=ZCMD value=0
+2026-04-29T21:55:23.831915Z  INFO panel_runtime::engine: TRANS -> panel target=SPFSETS
+2026-04-29T21:55:23.831921Z DEBUG panel_runtime::vars: saving profile var panel=SPFMAIN var=ZFILE val=
+2026-04-29T21:55:23.831923Z DEBUG panel_runtime::vars: saving profile var panel=SPFMAIN var=ZIMAC val=
+2026-04-29T21:55:23.831926Z DEBUG panel_runtime::manager: panel engine returned result=Navigate("SPFSETS") panel=SPFMAIN
+2026-04-29T21:55:23.831929Z DEBUG panel_runtime::vars: Variable pool dump:
+2026-04-29T21:55:23.831930Z DEBUG panel_runtime::vars: local: ZIMAC=
+2026-04-29T21:55:23.831931Z DEBUG panel_runtime::vars: local: ZFILE=
+2026-04-29T21:55:23.831932Z DEBUG panel_runtime::vars: local: ZCMD=0
+2026-04-29T21:55:23.831932Z DEBUG panel_runtime::vars: local: ZCTC=
+2026-04-29T21:55:23.831933Z DEBUG panel_runtime::vars: shared: ZSHRTVER=0.1.0
+2026-04-29T21:55:23.831934Z DEBUG panel_runtime::vars: shared: ZTIME=
+2026-04-29T21:55:23.831936Z DEBUG panel_runtime::vars: shared: ZPRODTSK=SPF-Edit
+2026-04-29T21:55:23.831937Z DEBUG panel_runtime::vars: shared: ZOS=windows
+2026-04-29T21:55:23.831938Z DEBUG panel_runtime::vars: shared: ZUSER=INWID3VL
+2026-04-29T21:55:23.831938Z DEBUG panel_runtime::vars: shared: ZENVIR=Rust/0.1.0
+2026-04-29T21:55:23.831939Z DEBUG panel_runtime::vars: shared: ZDATE=2026/01/01
+2026-04-29T21:55:23.831941Z DEBUG panel_runtime::manager: pushing panel onto stack target=SPFSETS
+2026-04-29T21:55:23.831953Z DEBUG panel_runtime::loader: loading panel from disk panel_id=SPFSETS
+2026-04-29T21:55:23.831957Z DEBUG panel_runtime::loader: reading panel JSON path=panels\spf\SPFSETS.json panel_id="SPFSETS"
+2026-04-29T21:55:23.832203Z  INFO panel_runtime::engine: running panel engine panel_id=SPFSETS
+2026-04-29T21:55:23.832209Z DEBUG panel_runtime::vars: loading profile vars panel=SPFSETS count=5
+2026-04-29T21:55:23.832213Z DEBUG panel_runtime::vars: Variable pool dump:
+2026-04-29T21:55:23.832214Z DEBUG panel_runtime::vars: local: ZCAPS=N
+2026-04-29T21:55:23.832215Z DEBUG panel_runtime::vars: local: ZFILE=
+2026-04-29T21:55:23.832215Z DEBUG panel_runtime::vars: local: ZCMD=0
+2026-04-29T21:55:23.832216Z DEBUG panel_runtime::vars: local: ZNULLS=N
+2026-04-29T21:55:23.832216Z DEBUG panel_runtime::vars: local: ZNUMS=Y
+2026-04-29T21:55:23.832217Z DEBUG panel_runtime::vars: local: ZCTC=
+2026-04-29T21:55:23.832218Z DEBUG panel_runtime::vars: local: ZTABS=4
+2026-04-29T21:55:23.832219Z DEBUG panel_runtime::vars: local: ZIMAC=
+2026-04-29T21:55:23.832219Z DEBUG panel_runtime::vars: local: ZSCROLL=HALF
+2026-04-29T21:55:23.832220Z DEBUG panel_runtime::vars: shared: ZSHRTVER=0.1.0
+2026-04-29T21:55:23.832220Z DEBUG panel_runtime::vars: shared: ZTIME=
+2026-04-29T21:55:23.832221Z DEBUG panel_runtime::vars: shared: ZPRODTSK=SPF-Edit
+2026-04-29T21:55:23.832221Z DEBUG panel_runtime::vars: shared: ZOS=windows
+2026-04-29T21:55:23.832222Z DEBUG panel_runtime::vars: shared: ZUSER=INWID3VL
+2026-04-29T21:55:23.832222Z DEBUG panel_runtime::vars: shared: ZENVIR=Rust/0.1.0
+2026-04-29T21:55:23.832223Z DEBUG panel_runtime::vars: shared: ZDATE=2026/01/01
+2026-04-29T21:57:25.618138Z DEBUG panel_runtime::engine: user pressed Enter command= panel_id=SPFSETS
+2026-04-29T21:57:25.618171Z DEBUG panel_runtime::engine: applying assignment: ZSEL = UP
+2026-04-29T21:57:25.618181Z DEBUG panel_runtime::vars: saving profile var panel=SPFSETS var=ZTABS val=4
+2026-04-29T21:57:25.618184Z DEBUG panel_runtime::vars: saving profile var panel=SPFSETS var=ZNULLS val=N
+2026-04-29T21:57:25.618186Z DEBUG panel_runtime::vars: saving profile var panel=SPFSETS var=ZCAPS val=N
+2026-04-29T21:57:25.618187Z DEBUG panel_runtime::vars: saving profile var panel=SPFSETS var=ZNUMS val=Y
+2026-04-29T21:57:25.618189Z DEBUG panel_runtime::vars: saving profile var panel=SPFSETS var=ZSCROLL val=HALF
+2026-04-29T21:57:25.618193Z DEBUG panel_runtime::manager: panel engine returned result=Up panel=SPFSETS
+2026-04-29T21:57:25.618194Z DEBUG panel_runtime::vars: Variable pool dump:
+2026-04-29T21:57:25.618196Z DEBUG panel_runtime::vars: local: ZCAPS=N
+2026-04-29T21:57:25.618197Z DEBUG panel_runtime::vars: local: ZFILE=
+2026-04-29T21:57:25.618197Z DEBUG panel_runtime::vars: local: ZCMD=
+2026-04-29T21:57:25.618198Z DEBUG panel_runtime::vars: local: ZNULLS=N
+2026-04-29T21:57:25.618198Z DEBUG panel_runtime::vars: local: ZNUMS=Y
+2026-04-29T21:57:25.618199Z DEBUG panel_runtime::vars: local: ZCTC=
+2026-04-29T21:57:25.618201Z DEBUG panel_runtime::vars: local: ZTABS=4
+2026-04-29T21:57:25.618201Z DEBUG panel_runtime::vars: local: ZSEL=UP
+2026-04-29T21:57:25.618202Z DEBUG panel_runtime::vars: local: ZIMAC=
+2026-04-29T21:57:25.618202Z DEBUG panel_runtime::vars: local: ZSCROLL=HALF
+2026-04-29T21:57:25.618203Z DEBUG panel_runtime::vars: shared: ZSHRTVER=0.1.0
+2026-04-29T21:57:25.618204Z DEBUG panel_runtime::vars: shared: ZTIME=
+2026-04-29T21:57:25.618204Z DEBUG panel_runtime::vars: shared: ZPRODTSK=SPF-Edit
+2026-04-29T21:57:25.618205Z DEBUG panel_runtime::vars: shared: ZOS=windows
+2026-04-29T21:57:25.618206Z DEBUG panel_runtime::vars: shared: ZUSER=INWID3VL
+2026-04-29T21:57:25.618207Z DEBUG panel_runtime::vars: shared: ZENVIR=Rust/0.1.0
+2026-04-29T21:57:25.618208Z DEBUG panel_runtime::vars: shared: ZDATE=2026/01/01
+2026-04-29T21:57:25.618218Z DEBUG panel_runtime::loader: panel found in cache panel_id=SPFMAIN
+2026-04-29T21:57:25.618227Z  INFO panel_runtime::engine: running panel engine panel_id=SPFMAIN
+2026-04-29T21:57:25.618228Z DEBUG panel_runtime::vars: loading profile vars panel=SPFMAIN count=2
+2026-04-29T21:57:25.618230Z DEBUG panel_runtime::vars: Variable pool dump:
+2026-04-29T21:57:25.618231Z DEBUG panel_runtime::vars: local: ZCAPS=N
+2026-04-29T21:57:25.618231Z DEBUG panel_runtime::vars: local: ZFILE=
+2026-04-29T21:57:25.618232Z DEBUG panel_runtime::vars: local: ZCMD=
+2026-04-29T21:57:25.618232Z DEBUG panel_runtime::vars: local: ZNULLS=N
+2026-04-29T21:57:25.618233Z DEBUG panel_runtime::vars: local: ZNUMS=Y
+2026-04-29T21:57:25.618233Z DEBUG panel_runtime::vars: local: ZCTC=
+2026-04-29T21:57:25.618234Z DEBUG panel_runtime::vars: local: ZTABS=4
+2026-04-29T21:57:25.618234Z DEBUG panel_runtime::vars: local: ZSEL=UP
+2026-04-29T21:57:25.618235Z DEBUG panel_runtime::vars: local: ZIMAC=
+2026-04-29T21:57:25.618235Z DEBUG panel_runtime::vars: local: ZSCROLL=HALF
+2026-04-29T21:57:25.618236Z DEBUG panel_runtime::vars: shared: ZSHRTVER=0.1.0
+2026-04-29T21:57:25.618236Z DEBUG panel_runtime::vars: shared: ZTIME=
+2026-04-29T21:57:25.618237Z DEBUG panel_runtime::vars: shared: ZPRODTSK=SPF-Edit
+2026-04-29T21:57:25.618237Z DEBUG panel_runtime::vars: shared: ZOS=windows
+2026-04-29T21:57:25.618238Z DEBUG panel_runtime::vars: shared: ZUSER=INWID3VL
+2026-04-29T21:57:25.618238Z DEBUG panel_runtime::vars: shared: ZENVIR=Rust/0.1.0
+2026-04-29T21:57:25.618241Z DEBUG panel_runtime::vars: shared: ZDATE=2026/01/01
+2026-04-29T21:57:31.028725Z DEBUG panel_runtime::engine: user pressed Enter command=T panel_id=SPFMAIN
+2026-04-29T21:57:31.028761Z DEBUG panel_runtime::engine: evaluating TRANS routes source_var=ZCMD value=T
+2026-04-29T21:57:31.028765Z  INFO panel_runtime::engine: TRANS -> panel target=SPFTUT
+2026-04-29T21:57:31.028772Z DEBUG panel_runtime::vars: saving profile var panel=SPFMAIN var=ZFILE val=
+2026-04-29T21:57:31.028776Z DEBUG panel_runtime::vars: saving profile var panel=SPFMAIN var=ZIMAC val=
+2026-04-29T21:57:31.028779Z DEBUG panel_runtime::manager: panel engine returned result=Navigate("SPFTUT") panel=SPFMAIN
+2026-04-29T21:57:31.028782Z DEBUG panel_runtime::vars: Variable pool dump:
+2026-04-29T21:57:31.028783Z DEBUG panel_runtime::vars: local: ZCAPS=N
+2026-04-29T21:57:31.028785Z DEBUG panel_runtime::vars: local: ZFILE=
+2026-04-29T21:57:31.028785Z DEBUG panel_runtime::vars: local: ZCMD=t
+2026-04-29T21:57:31.028785Z DEBUG panel_runtime::vars: local: ZNULLS=N
+2026-04-29T21:57:31.028786Z DEBUG panel_runtime::vars: local: ZNUMS=Y
+2026-04-29T21:57:31.028787Z DEBUG panel_runtime::vars: local: ZCTC=
+2026-04-29T21:57:31.028787Z DEBUG panel_runtime::vars: local: ZTABS=4
+2026-04-29T21:57:31.028788Z DEBUG panel_runtime::vars: local: ZSEL=UP
+2026-04-29T21:57:31.028789Z DEBUG panel_runtime::vars: local: ZIMAC=
+2026-04-29T21:57:31.028789Z DEBUG panel_runtime::vars: local: ZSCROLL=HALF
+2026-04-29T21:57:31.028790Z DEBUG panel_runtime::vars: shared: ZSHRTVER=0.1.0
+2026-04-29T21:57:31.028791Z DEBUG panel_runtime::vars: shared: ZTIME=
+2026-04-29T21:57:31.028793Z DEBUG panel_runtime::vars: shared: ZPRODTSK=SPF-Edit
+2026-04-29T21:57:31.028794Z DEBUG panel_runtime::vars: shared: ZOS=windows
+2026-04-29T21:57:31.028794Z DEBUG panel_runtime::vars: shared: ZUSER=INWID3VL
+2026-04-29T21:57:31.028795Z DEBUG panel_runtime::vars: shared: ZENVIR=Rust/0.1.0
+2026-04-29T21:57:31.028796Z DEBUG panel_runtime::vars: shared: ZDATE=2026/01/01
+2026-04-29T21:57:31.028799Z DEBUG panel_runtime::manager: pushing panel onto stack target=SPFTUT
+2026-04-29T21:57:31.028811Z DEBUG panel_runtime::loader: loading panel from disk panel_id=SPFTUT
+2026-04-29T21:57:31.028818Z DEBUG panel_runtime::loader: reading panel JSON path=panels\spf\SPFTUT.json panel_id="SPFTUT"
+2026-04-29T21:57:31.029292Z  INFO panel_runtime::engine: running panel engine panel_id=SPFTUT
+2026-04-29T21:57:31.029296Z DEBUG panel_runtime::vars: Variable pool dump:
+2026-04-29T21:57:31.029296Z DEBUG panel_runtime::vars: local: ZCAPS=N
+2026-04-29T21:57:31.029297Z DEBUG panel_runtime::vars: local: ZFILE=
+2026-04-29T21:57:31.029297Z DEBUG panel_runtime::vars: local: ZCMD=t
+2026-04-29T21:57:31.029297Z DEBUG panel_runtime::vars: local: ZNULLS=N
+2026-04-29T21:57:31.029298Z DEBUG panel_runtime::vars: local: ZNUMS=Y
+2026-04-29T21:57:31.029298Z DEBUG panel_runtime::vars: local: ZCTC=
+2026-04-29T21:57:31.029298Z DEBUG panel_runtime::vars: local: ZTABS=4
+2026-04-29T21:57:31.029299Z DEBUG panel_runtime::vars: local: ZSEL=UP
+2026-04-29T21:57:31.029299Z DEBUG panel_runtime::vars: local: ZIMAC=
+2026-04-29T21:57:31.029299Z DEBUG panel_runtime::vars: local: ZSCROLL=HALF
+2026-04-29T21:57:31.029299Z DEBUG panel_runtime::vars: shared: ZSHRTVER=0.1.0
+2026-04-29T21:57:31.029300Z DEBUG panel_runtime::vars: shared: ZTIME=
+2026-04-29T21:57:31.029300Z DEBUG panel_runtime::vars: shared: ZPRODTSK=SPF-Edit
+2026-04-29T21:57:31.029300Z DEBUG panel_runtime::vars: shared: ZOS=windows
+2026-04-29T21:57:31.029301Z DEBUG panel_runtime::vars: shared: ZUSER=INWID3VL
+2026-04-29T21:57:31.029301Z DEBUG panel_runtime::vars: shared: ZENVIR=Rust/0.1.0
+2026-04-29T21:57:31.029301Z DEBUG panel_runtime::vars: shared: ZDATE=2026/01/01

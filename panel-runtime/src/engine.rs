@@ -8,13 +8,13 @@ use std::io::{self, Write};
 use crossterm::{
     cursor::MoveTo,
     event::{self, Event, KeyCode, KeyEvent, KeyEventKind, KeyModifiers},
-    queue,
-    terminal,
+    queue, terminal,
 };
 
-use panel_model::*;
 use crate::renderer::{FieldInfo, PanelRenderer};
 use crate::vars::VarPool;
+use panel_model::*;
+use tracing::{debug, info, warn};
 
 /// Result of running a panel's engine loop.
 #[derive(Debug, Clone)]
@@ -43,9 +43,16 @@ impl PanelEngine {
         panel: &Panel,
         vars: &mut VarPool,
     ) -> io::Result<PanelResult> {
-        // Apply )INIT section
+        info!(panel_id = %panel.id, "running panel engine");
+
+        // Load saved profile variables first so )INIT defaults
+        // only apply to variables that have no saved value.
+        vars.load_profile(&panel.id);
+
+        // Apply )INIT section (skips vars already set by profile)
         Self::apply_init(panel, vars);
 
+        vars.dump();
         let mut command_text = String::new();
         let mut scroll_text = String::from("PAGE");
         let mut error_msg: Option<String> = None;
@@ -54,7 +61,6 @@ impl PanelEngine {
         loop {
             // Get terminal size
             let (width, height) = terminal::size()?;
-
             // Render the panel
             let fields = PanelRenderer::draw(
                 stdout,
@@ -78,7 +84,13 @@ impl PanelEngine {
                 }
                 let field = &fields[current_field_idx];
                 let cursor_col = field.col + field.value.len().min(field.width) as u16;
-                queue!(stdout, MoveTo(cursor_col.min(field.col + field.width as u16 - 1), field.row))?;
+                queue!(
+                    stdout,
+                    MoveTo(
+                        cursor_col.min(field.col + field.width as u16 - 1),
+                        field.row
+                    )
+                )?;
                 stdout.flush()?;
             }
 
@@ -110,7 +122,9 @@ impl PanelEngine {
 
                             // Check for UP command
                             let cmd = command_text.trim().to_uppercase();
+                            debug!(command = %cmd, panel_id = %panel.id, "user pressed Enter");
                             if cmd == "UP" || cmd == "RETURN" || cmd == "END" {
+                                Self::save_field_profile(vars, &panel.id, &fields);
                                 return Ok(PanelResult::Up);
                             }
 
@@ -127,28 +141,37 @@ impl PanelEngine {
 
                                 // Check navigation (TRANS)
                                 if let Some(ref nav) = proc_section.navigation {
-                                    let val = vars
-                                        .get(&nav.source_variable)
-                                        .unwrap_or("")
-                                        .to_string();
+                                    let val =
+                                        vars.get(&nav.source_variable).unwrap_or("").to_string();
                                     let trimmed = val.trim().to_uppercase();
+                                    debug!(source_var = %nav.source_variable, value = %trimmed, "evaluating TRANS routes");
 
                                     for route in &nav.routes {
                                         if route.value.to_uppercase() == trimmed {
                                             match &route.action {
                                                 NavAction::Panel { target } => {
+                                                    info!(target = %target, "TRANS -> panel");
+                                                    Self::save_field_profile(
+                                                        vars, &panel.id, &fields,
+                                                    );
                                                     command_text.clear();
                                                     return Ok(PanelResult::Navigate(
                                                         target.clone(),
                                                     ));
                                                 }
                                                 NavAction::List { targets } => {
+                                                    Self::save_field_profile(
+                                                        vars, &panel.id, &fields,
+                                                    );
                                                     command_text.clear();
                                                     return Ok(PanelResult::NavigateList(
                                                         targets.clone(),
                                                     ));
                                                 }
                                                 NavAction::Up => {
+                                                    Self::save_field_profile(
+                                                        vars, &panel.id, &fields,
+                                                    );
                                                     return Ok(PanelResult::Up);
                                                 }
                                                 NavAction::Blank => {
@@ -157,9 +180,11 @@ impl PanelEngine {
                                                     continue;
                                                 }
                                                 NavAction::Ctc { command } => {
-                                                    return Ok(PanelResult::Ctc(
-                                                        command.clone(),
-                                                    ));
+                                                    info!(command = %command, "TRANS -> CTC");
+                                                    Self::save_field_profile(
+                                                        vars, &panel.id, &fields,
+                                                    );
+                                                    return Ok(PanelResult::Ctc(command.clone()));
                                                 }
                                             }
                                         }
@@ -167,12 +192,12 @@ impl PanelEngine {
 
                                     // No route matched — show error if configured
                                     if !trimmed.is_empty() {
+                                        warn!(value = %trimmed, "no TRANS route matched");
                                         if let Some(ref err_panel) = nav.default_error {
                                             error_msg =
                                                 Some(format!("Invalid selection: {err_panel}"));
                                         } else {
-                                            error_msg =
-                                                Some("Invalid selection".to_string());
+                                            error_msg = Some("Invalid selection".to_string());
                                         }
                                         command_text.clear();
                                         continue;
@@ -181,6 +206,7 @@ impl PanelEngine {
 
                                 // Apply assignments
                                 for (var, val) in &proc_section.assignments {
+                                    debug!("applying assignment: {} = {}", var, val);
                                     let resolved = vars.resolve(val);
                                     vars.set(var, &resolved);
                                 }
@@ -188,6 +214,7 @@ impl PanelEngine {
                                 // Check ZSEL = UP assignment
                                 if let Some(zsel) = vars.get("ZSEL") {
                                     if zsel.to_uppercase() == "UP" {
+                                        Self::save_field_profile(vars, &panel.id, &fields);
                                         return Ok(PanelResult::Up);
                                     }
                                 }
@@ -197,6 +224,8 @@ impl PanelEngine {
                             command_text.clear();
                         }
                         KeyAction::F3 => {
+                            debug!(panel_id = %panel.id, "F3/ESC pressed — returning UP");
+                            Self::save_field_profile(vars, &panel.id, &fields);
                             return Ok(PanelResult::Up);
                         }
                         KeyAction::Quit => {
@@ -209,6 +238,23 @@ impl PanelEngine {
                 }
                 _ => {}
             }
+        }
+    }
+
+    /// Save non-command field values into the per-panel profile.
+    fn save_field_profile(vars: &mut VarPool, panel_id: &str, fields: &[FieldInfo]) {
+        let field_vars: Vec<(String, String)> = fields
+            .iter()
+            .filter(|f| !f.is_command)
+            .map(|f| {
+                (
+                    f.variable.clone(),
+                    vars.get(&f.variable).unwrap_or("").to_string(),
+                )
+            })
+            .collect();
+        if !field_vars.is_empty() {
+            vars.save_profile(panel_id, &field_vars);
         }
     }
 
@@ -255,10 +301,7 @@ impl PanelEngine {
                         command_text.push(ch);
                     } else {
                         // Update the field value in the var pool
-                        let mut val = vars
-                            .get(&field.variable)
-                            .unwrap_or("")
-                            .to_string();
+                        let mut val = vars.get(&field.variable).unwrap_or("").to_string();
                         if val.len() < field.width {
                             val.push(ch);
                             vars.set(&field.variable, &val);
@@ -274,10 +317,7 @@ impl PanelEngine {
                     if field.is_command {
                         command_text.pop();
                     } else {
-                        let mut val = vars
-                            .get(&field.variable)
-                            .unwrap_or("")
-                            .to_string();
+                        let mut val = vars.get(&field.variable).unwrap_or("").to_string();
                         val.pop();
                         vars.set(&field.variable, &val);
                     }
@@ -292,10 +332,7 @@ impl PanelEngine {
                     if field.is_command {
                         command_text.pop();
                     } else {
-                        let mut val = vars
-                            .get(&field.variable)
-                            .unwrap_or("")
-                            .to_string();
+                        let mut val = vars.get(&field.variable).unwrap_or("").to_string();
                         val.pop();
                         vars.set(&field.variable, &val);
                     }
@@ -359,7 +396,9 @@ impl PanelEngine {
 
             // Assignments
             for (var, val) in &init.assignments {
-                vars.set(var, val);
+                if vars.get(var).is_none() {
+                    vars.set(var, val);
+                }
             }
 
             // Conditionals
@@ -391,19 +430,13 @@ impl PanelEngine {
                 match rule {
                     ValidationRule::NonBlank => {
                         if val.is_empty() {
-                            return Some(format!(
-                                "Field {} must not be blank",
-                                validation.field
-                            ));
+                            return Some(format!("Field {} must not be blank", validation.field));
                         }
                     }
                     ValidationRule::Boolean => {
                         let upper = val.to_uppercase();
                         if !matches!(upper.as_str(), "Y" | "N" | "YES" | "NO" | "") {
-                            return Some(format!(
-                                "Field {} must be Y or N",
-                                validation.field
-                            ));
+                            return Some(format!("Field {} must be Y or N", validation.field));
                         }
                     }
                     ValidationRule::Numeric { range } => {
@@ -434,25 +467,17 @@ impl PanelEngine {
                     }
                     ValidationRule::Alpha => {
                         if !val.chars().all(|c| c.is_alphabetic() || c == ' ') && !val.is_empty() {
-                            return Some(format!(
-                                "Field {} must be alphabetic",
-                                validation.field
-                            ));
+                            return Some(format!("Field {} must be alphabetic", validation.field));
                         }
                     }
                     ValidationRule::Hex => {
                         if !val.chars().all(|c| c.is_ascii_hexdigit()) && !val.is_empty() {
-                            return Some(format!(
-                                "Field {} must be hexadecimal",
-                                validation.field
-                            ));
+                            return Some(format!("Field {} must be hexadecimal", validation.field));
                         }
                     }
                     ValidationRule::List { values } => {
                         let upper = val.to_uppercase();
-                        if !val.is_empty()
-                            && !values.iter().any(|v| v.to_uppercase() == upper)
-                        {
+                        if !val.is_empty() && !values.iter().any(|v| v.to_uppercase() == upper) {
                             return Some(format!(
                                 "Field {} must be one of: {}",
                                 validation.field,

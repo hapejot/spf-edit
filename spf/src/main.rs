@@ -16,8 +16,24 @@ use crossterm::{
 };
 
 use panel_runtime::PanelManager;
+use tracing::{debug, info, warn};
 
 fn main() {
+    // Initialise tracing — writes to spf.log in the current directory.
+    // Control verbosity via RUST_LOG env var (default: debug).
+    let file_appender = tracing_appender::rolling::never(".", "spf.log");
+    let (non_blocking, _guard) = tracing_appender::non_blocking(file_appender);
+    tracing_subscriber::fmt()
+        .with_env_filter(
+            tracing_subscriber::EnvFilter::try_from_default_env()
+                .unwrap_or_else(|_| tracing_subscriber::EnvFilter::new("debug")),
+        )
+        .with_writer(non_blocking)
+        .with_ansi(false)
+        .init();
+
+    info!("spf launcher starting");
+
     let panels_dir = find_panels_dir();
 
     if !panels_dir.is_dir() {
@@ -33,6 +49,7 @@ fn main() {
         // Make sure terminal is cleaned up before printing error
         let _ = terminal::disable_raw_mode();
         let _ = execute!(io::stdout(), LeaveAlternateScreen);
+        warn!(error = %e, "spf exiting with error");
         eprintln!("Error: {e}");
         std::process::exit(1);
     }
@@ -77,6 +94,7 @@ fn main_loop<W: Write>(stdout: &mut W, manager: &mut PanelManager) -> io::Result
         manager.vars_mut().set("ZCTC", "");
 
         // Display the main menu
+        debug!("displaying SPFMAIN");
         let quit = manager.display(stdout, "SPFMAIN")?;
         if quit {
             break; // Ctrl+Q
@@ -93,23 +111,26 @@ fn main_loop<W: Write>(stdout: &mut W, manager: &mut PanelManager) -> io::Result
         match ctc.as_deref() {
             Some("EDIT") => {
                 if filename.is_empty() {
-                    // No filename — re-display
+                    debug!("EDIT requested but no filename");
                     continue;
                 }
+                info!(filename = %filename, "launching spf-edit (edit)");
                 launch_spf_edit(stdout, &filename, false)?;
             }
             Some("BROWSE") => {
                 if filename.is_empty() {
+                    debug!("BROWSE requested but no filename");
                     continue;
                 }
+                info!(filename = %filename, "launching spf-edit (browse)");
                 launch_spf_edit(stdout, &filename, true)?;
             }
             Some("") | None => {
-                // UP or X — exit
+                info!("user exited (UP/X)");
                 break;
             }
-            Some(_other) => {
-                // Unknown CTC — ignore, re-display
+            Some(other) => {
+                warn!(ctc = %other, "unknown CTC command, ignoring");
             }
         }
     }
@@ -134,6 +155,7 @@ fn launch_spf_edit<W: Write>(stdout: &mut W, filename: &str, browse: bool) -> io
         cmd.arg("--browse");
     }
 
+    debug!(exe = %exe.display(), filename, browse, "spawning spf-edit");
     let status = cmd.status();
 
     // Re-enter raw mode + alternate screen (even if spf-edit failed)
@@ -143,8 +165,7 @@ fn launch_spf_edit<W: Write>(stdout: &mut W, filename: &str, browse: bool) -> io
     // Report launch errors (not spf-edit's own exit code)
     if let Err(e) = status {
         if e.kind() == io::ErrorKind::NotFound {
-            // spf-edit not found — show message but don't crash
-            // The panel will re-display and user can see the issue
+            warn!(exe = %exe.display(), error = %e, "spf-edit executable not found");
             eprintln!("Could not find spf-edit executable: {e}");
         }
     }

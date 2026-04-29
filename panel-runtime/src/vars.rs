@@ -3,8 +3,18 @@
 //! In ISPF, variables live in a shared pool accessible to all panels.
 //! System variables (Z-prefix) are pre-populated; panel variables are
 //! set by )INIT assignments and user input, and read back in )PROC.
+//!
+//! Per-panel **profiles** persist field values across sessions. When a
+//! panel is displayed, its profile variables are loaded into the local
+//! pool before )INIT runs (so )INIT defaults only apply to variables
+//! that have no saved value). When the panel exits, all non-command
+//! field values are saved back to the profile.
 
 use std::collections::HashMap;
+use std::io;
+use std::path::{Path, PathBuf};
+
+use tracing::{debug, info, warn};
 
 /// The variable pool for panel display.
 pub struct VarPool {
@@ -12,6 +22,9 @@ pub struct VarPool {
     shared: HashMap<String, String>,
     /// Panel-local variables (cleared on each DISPLAY).
     local: HashMap<String, String>,
+    /// Per-panel profile variables (persist to disk across sessions).
+    /// Outer key = panel ID (uppercase), inner map = variable name → value.
+    profiles: HashMap<String, HashMap<String, String>>,
 }
 
 impl VarPool {
@@ -25,11 +38,15 @@ impl VarPool {
         shared.insert("ZUSER".into(), whoami().into());
         shared.insert("ZDATE".into(), today_date());
         shared.insert("ZTIME".into(), "".into()); // updated at display time
-        shared.insert("ZENVIR".into(), format!("Rust/{}", env!("CARGO_PKG_VERSION")));
+        shared.insert(
+            "ZENVIR".into(),
+            format!("Rust/{}", env!("CARGO_PKG_VERSION")),
+        );
 
         VarPool {
             shared,
             local: HashMap::new(),
+            profiles: HashMap::new(),
         }
     }
 
@@ -86,6 +103,106 @@ impl VarPool {
         }
 
         result
+    }
+
+    pub fn dump(&self) {
+        debug!("Variable pool dump:");
+        self.local
+            .iter()
+            .for_each(|(k, v)| debug!("local: {k}={v}"));
+        self.shared
+            .iter()
+            .for_each(|(k, v)| debug!("shared: {k}={v}"));
+    }
+
+    // ─── Per-panel profile persistence ──────────────────────────────────
+
+    /// Load saved profile variables for a panel into the local pool.
+    /// Called before )INIT so that saved values act as defaults.
+    pub fn load_profile(&mut self, panel_id: &str) {
+        let key = panel_id.to_uppercase();
+        if let Some(profile) = self.profiles.get(&key) {
+            debug!(panel = %key, count = profile.len(), "loading profile vars");
+            for (var, val) in profile {
+                // Only set if not already present in local (preserves any
+                // values that were pre-set before the panel display).
+                if !self.local.contains_key(var) {
+                    self.local.insert(var.clone(), val.clone());
+                }
+            }
+        }
+    }
+
+    /// Save field variable values into the profile for a panel.
+    /// `fields` is a list of (variable_name, value) pairs from the panel's
+    /// non-command input fields.
+    pub fn save_profile(&mut self, panel_id: &str, fields: &[(String, String)]) {
+        let key = panel_id.to_uppercase();
+        let profile = self.profiles.entry(key.clone()).or_default();
+        for (var, val) in fields {
+            let var_key = var.to_uppercase();
+            debug!(panel = %key, var = %var_key, val = %val, "saving profile var");
+            profile.insert(var_key, val.clone());
+        }
+    }
+
+    /// Load all profiles from a JSON file on disk.
+    pub fn load_profiles_from_file(&mut self, path: &Path) {
+        match std::fs::read_to_string(path) {
+            Ok(contents) => {
+                match serde_json::from_str::<HashMap<String, HashMap<String, String>>>(&contents) {
+                    Ok(loaded) => {
+                        info!(path = %path.display(), panels = loaded.len(), "loaded profiles");
+                        self.profiles = loaded;
+                    }
+                    Err(e) => {
+                        warn!(path = %path.display(), error = %e, "failed to parse profiles file");
+                    }
+                }
+            }
+            Err(e) if e.kind() == io::ErrorKind::NotFound => {
+                debug!(path = %path.display(), "no profiles file yet");
+            }
+            Err(e) => {
+                warn!(path = %path.display(), error = %e, "failed to read profiles file");
+            }
+        }
+    }
+
+    /// Save all profiles to a JSON file on disk.
+    pub fn save_profiles_to_file(&self, path: &Path) -> io::Result<()> {
+        if self.profiles.is_empty() {
+            return Ok(());
+        }
+        // Ensure parent directory exists
+        if let Some(parent) = path.parent() {
+            std::fs::create_dir_all(parent)?;
+        }
+        let json = serde_json::to_string_pretty(&self.profiles)
+            .map_err(|e| io::Error::new(io::ErrorKind::Other, e))?;
+        std::fs::write(path, json)?;
+        info!(path = %path.display(), panels = self.profiles.len(), "saved profiles");
+        Ok(())
+    }
+
+    /// Return the default profiles file path for this platform.
+    pub fn default_profiles_path() -> PathBuf {
+        if cfg!(windows) {
+            if let Ok(appdata) = std::env::var("APPDATA") {
+                return PathBuf::from(appdata)
+                    .join("spf-edit")
+                    .join("profiles.json");
+            }
+        }
+        // Unix / fallback
+        if let Ok(home) = std::env::var("HOME") {
+            return PathBuf::from(home)
+                .join(".config")
+                .join("spf-edit")
+                .join("profiles.json");
+        }
+        // Last resort
+        PathBuf::from("profiles.json")
     }
 }
 

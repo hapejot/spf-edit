@@ -197,6 +197,10 @@ impl Colors {
     // Error messages
     pub const ERROR_FG: Color = Color::Red;
     pub const ERROR_BG: Color = Color::Black;
+
+    // Status bar
+    pub const STATUS_FG: Color = Color::Black;
+    pub const STATUS_BG: Color = Color::Green;
 }
 
 // --- Layout constants ---
@@ -204,6 +208,7 @@ impl Colors {
 pub const PREFIX_WIDTH: usize = 6;
 pub const SEPARATOR_WIDTH: usize = 1;
 pub const HEADER_ROWS: u16 = 2; // title + command line
+pub const FOOTER_ROWS: u16 = 1; // status bar
 pub const TAB_STOP: usize = 8;
 pub const LINE_NUMBER_INCREMENT: usize = 1;
 pub const COMMAND_HISTORY_SIZE: usize = 50;

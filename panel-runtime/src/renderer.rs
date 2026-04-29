@@ -6,6 +6,7 @@
 
 use std::io::{self, Write};
 
+use chrono::Local;
 use crossterm::{
     cursor::MoveTo,
     queue,
@@ -52,6 +53,9 @@ impl PanelColors {
 
     pub const ERROR_FG: Color = Color::Red;
     pub const ERROR_BG: Color = Color::Black;
+
+    pub const STATUS_FG: Color = Color::Black;
+    pub const STATUS_BG: Color = Color::Green;
 
     pub const SCROLL_FG: Color = Color::Green;
 }
@@ -136,7 +140,7 @@ impl PanelRenderer {
 
         // ── Body rows ──────────────────────────────────────────────────
         let mut row: u16 = 1;
-        let max_row = height.saturating_sub(1);
+        let max_row = height.saturating_sub(2); // reserve last row for status bar
 
         for body_row in &panel.body.rows {
             if row > max_row {
@@ -162,10 +166,49 @@ impl PanelRenderer {
             row += 1;
         }
 
+        // ── Status bar (last row) ─────────────────────────────────────
+        Self::draw_status_bar(stdout, &panel.id, w, height)?;
+
         queue!(stdout, ResetColor)?;
         stdout.flush()?;
 
         Ok(fields)
+    }
+
+    /// Draw the status bar on the last terminal row.
+    fn draw_status_bar<W: Write>(
+        stdout: &mut W,
+        panel_id: &str,
+        width: usize,
+        height: u16,
+    ) -> io::Result<()> {
+        let status_row = height.saturating_sub(1);
+
+        let now = Local::now();
+        let time_str = now.format("%H:%M:%S").to_string();
+
+        let left = format!(" {} | Panel: {}", time_str, panel_id);
+        let right = format!("SPF-Edit ");
+        let padding = width.saturating_sub(left.len() + right.len());
+        let bar = format!("{}{}{}", left, " ".repeat(padding), right);
+
+        let display: String = bar.chars().take(width).collect();
+
+        queue!(
+            stdout,
+            MoveTo(0, status_row),
+            SetForegroundColor(PanelColors::STATUS_FG),
+            SetBackgroundColor(PanelColors::STATUS_BG),
+            Print(&display),
+        )?;
+
+        let remaining = width.saturating_sub(display.len());
+        if remaining > 0 {
+            queue!(stdout, Print(" ".repeat(remaining)))?;
+        }
+
+        queue!(stdout, ResetColor)?;
+        Ok(())
     }
 
     /// Draw a single body row. Returns the number of terminal rows consumed (usually 1).

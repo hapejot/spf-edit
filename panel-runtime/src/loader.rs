@@ -7,6 +7,7 @@ use panel_model::Panel;
 use std::collections::HashMap;
 use std::io;
 use std::path::{Path, PathBuf};
+use tracing::{debug, info, warn};
 
 /// Loads and caches panel definitions from the panels/ directory.
 pub struct PanelLoader {
@@ -20,6 +21,7 @@ impl PanelLoader {
     /// Create a new loader pointing at the given panels directory.
     /// Scans the directory to build an index of available panels.
     pub fn new(panels_dir: &Path) -> io::Result<Self> {
+        info!(dir = %panels_dir.display(), "scanning panels directory");
         let mut index = HashMap::new();
 
         // Scan all subdirectories for .json files (skip manifest.json)
@@ -48,6 +50,8 @@ impl PanelLoader {
             }
         }
 
+        info!(count = index.len(), "indexed panels");
+
         Ok(PanelLoader {
             panels_dir: panels_dir.to_path_buf(),
             cache: HashMap::new(),
@@ -60,8 +64,11 @@ impl PanelLoader {
         let key = panel_id.to_uppercase();
 
         if !self.cache.contains_key(&key) {
+            debug!(panel_id = %key, "loading panel from disk");
             let panel = self.load(&key)?;
             self.cache.insert(key.clone(), panel);
+        } else {
+            debug!(panel_id = %key, "panel found in cache");
         }
 
         Ok(self.cache.get(&key).unwrap())
@@ -77,8 +84,10 @@ impl PanelLoader {
         })?;
 
         let full_path = self.panels_dir.join(rel_path);
+        debug!(path = %full_path.display(), panel_id, "reading panel JSON");
         let json_str = std::fs::read_to_string(&full_path)?;
         let panel: Panel = serde_json::from_str(&json_str).map_err(|e| {
+            warn!(path = %full_path.display(), error = %e, "failed to parse panel JSON");
             io::Error::new(
                 io::ErrorKind::InvalidData,
                 format!("Failed to parse {}: {e}", full_path.display()),

@@ -1015,6 +1015,7 @@ impl Editor {
 
     fn redraw<W: Write>(&mut self, stdout: &mut W) -> io::Result<()> {
         debug!("redrawing screen (full redraw: {})", self.needs_full_redraw);
+        self.screen.input_mode = self.input.mode;
         // self.screen.draw_full(stdout, &self.buffer)?;
         let (col, row) = self.calculate_cursor_position();
         trace!("Positioning cursor for focus: {col} {row}");

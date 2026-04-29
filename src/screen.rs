@@ -30,6 +30,7 @@
 use std::io::{self, Write};
 use tracing::{error, trace};
 
+use chrono::Local;
 use crossterm::{
     cursor::MoveTo,
     queue,
@@ -57,6 +58,7 @@ pub struct Screen {
     pub prefix_width: usize,
     pub cols_visible: bool,
     pub needs_full_redraw: bool,
+    pub input_mode: InputMode,
 }
 
 impl Screen {
@@ -75,6 +77,7 @@ impl Screen {
             prefix_width: PREFIX_WIDTH,
             cols_visible: false,
             needs_full_redraw: true,
+            input_mode: InputMode::Overtype,
         })
     }
 
@@ -84,9 +87,9 @@ impl Screen {
         self.needs_full_redraw = true;
     }
 
-    /// Number of data lines that fit on screen (total height minus header rows).
+    /// Number of data lines that fit on screen (total height minus header and footer rows).
     pub fn data_rows(&self) -> usize {
-        self.height.saturating_sub(HEADER_ROWS) as usize
+        self.height.saturating_sub(HEADER_ROWS + FOOTER_ROWS) as usize
     }
 
     /// Width available for the data area.
@@ -121,6 +124,7 @@ impl Screen {
         self.draw_title_line(stdout, buffer)?;
         self.draw_command_line(stdout)?;
         self.draw_data_lines(stdout, buffer)?;
+        self.draw_status_bar(stdout, buffer)?;
         stdout.flush()?;
         self.needs_full_redraw = false;
         Ok(())
@@ -232,6 +236,50 @@ impl Screen {
             Print(scroll_value),
             Print(" "),
         )?;
+
+        queue!(stdout, ResetColor)?;
+        Ok(())
+    }
+
+    /// Draw the status bar (last row).
+    fn draw_status_bar<W: Write>(&self, stdout: &mut W, buffer: &FileBuffer) -> io::Result<()> {
+        let status_row = self.height.saturating_sub(1);
+        let w = self.width as usize;
+
+        let now = Local::now();
+        let time_str = now.format("%H:%M:%S").to_string();
+
+        let mode_str = match self.input_mode {
+            InputMode::Insert => "INS",
+            InputMode::Overtype => "OVR",
+        };
+
+        let line_count = buffer.data_line_count();
+        let col_pos = self.horizontal_offset + 1;
+
+        let caps = if buffer.caps_mode { "CAPS" } else { "    " };
+
+        let left = format!(" {} | {} | Lines: {} | Col: {} | {}", time_str, mode_str, line_count, col_pos, caps);
+        let right = format!("EDIT ");
+        let padding = w.saturating_sub(left.len() + right.len());
+        let bar = format!("{}{}{}", left, " ".repeat(padding), right);
+
+        // Truncate to screen width
+        let display: String = bar.chars().take(w).collect();
+
+        queue!(
+            stdout,
+            MoveTo(0, status_row),
+            SetForegroundColor(Colors::STATUS_FG),
+            SetBackgroundColor(Colors::STATUS_BG),
+            Print(&display),
+        )?;
+
+        // Fill remaining width
+        let remaining = w.saturating_sub(display.len());
+        if remaining > 0 {
+            queue!(stdout, Print(" ".repeat(remaining)))?;
+        }
 
         queue!(stdout, ResetColor)?;
         Ok(())
