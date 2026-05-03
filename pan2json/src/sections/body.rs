@@ -30,60 +30,26 @@ pub fn parse_body(
 
         // Detect full-width asterisk box border: %*****...* or  *-----...-*
         if is_asterisk_border(line) {
-            if !in_asterisk_box {
-                in_asterisk_box = true;
-                box_rows.clear();
-            } else {
-                // Closing border
-                in_asterisk_box = false;
-                rows.push(BodyRow::Box {
-                    style: BoxStyle::Asterisk,
-                    rows: std::mem::take(&mut box_rows),
-                });
-            }
+            toggle_asterisk_box(&mut in_asterisk_box, &mut box_rows, &mut rows);
             i += 1;
             continue;
         }
 
         // Detect announcement box: +  *---...---*
-        if is_announcement_border(line) {
-            if !in_asterisk_box {
-                // Start collecting announcement box
-                let mut ann_rows = Vec::new();
-                i += 1;
-                while i < lines.len() && !is_announcement_border(lines[i]) {
-                    if let Some(content) = extract_announcement_content(lines[i]) {
-                        ann_rows.push(BodyRow::Text {
-                            content,
-                            style: None,
-                        });
-                    }
-                    i += 1;
-                }
-                rows.push(BodyRow::Box {
-                    style: BoxStyle::Announcement,
-                    rows: ann_rows,
-                });
-                i += 1; // skip closing border
-                continue;
-            }
+        if is_announcement_border(line) && !in_asterisk_box {
+            i = collect_announcement_box(&lines, i, &mut rows);
+            continue;
         }
 
         // Inside asterisk box: parse content between %* + and %*
         if in_asterisk_box {
-            if let Some(content) = extract_asterisk_box_content(line) {
-                let parsed = parse_content_line(&content, attrs, &mut warnings);
-                box_rows.extend(parsed);
-            } else {
-                box_rows.push(BodyRow::Raw { content: line.to_string() });
-            }
+            collect_asterisk_box_line(line, attrs, &mut box_rows, &mut warnings);
             i += 1;
             continue;
         }
 
         // Blank line
-        let stripped = strip_line_marker(line);
-        if stripped.trim().is_empty() {
+        if strip_line_marker(line).trim().is_empty() {
             rows.push(BodyRow::Blank);
             i += 1;
             continue;
@@ -109,8 +75,7 @@ pub fn parse_body(
         }
 
         // Regular content lines
-        let parsed = parse_content_line(line, attrs, &mut warnings);
-        rows.extend(parsed);
+        rows.extend(parse_content_line(line, attrs, &mut warnings));
         i += 1;
     }
 
@@ -124,6 +89,66 @@ pub fn parse_body(
     }
 
     (title, rows, warnings)
+}
+
+/// Toggle the asterisk-box state when an asterisk border is seen. On the
+/// closing border, push the accumulated box rows onto `rows`.
+fn toggle_asterisk_box(
+    in_box: &mut bool,
+    box_rows: &mut Vec<BodyRow>,
+    rows: &mut Vec<BodyRow>,
+) {
+    if !*in_box {
+        *in_box = true;
+        box_rows.clear();
+    } else {
+        *in_box = false;
+        rows.push(BodyRow::Box {
+            style: BoxStyle::Asterisk,
+            rows: std::mem::take(box_rows),
+        });
+    }
+}
+
+/// Consume an announcement box starting at `start` (the opening border).
+/// Returns the index just past the closing border.
+fn collect_announcement_box(
+    lines: &[&str],
+    start: usize,
+    rows: &mut Vec<BodyRow>,
+) -> usize {
+    let mut ann_rows = Vec::new();
+    let mut i = start + 1;
+    while i < lines.len() && !is_announcement_border(lines[i]) {
+        if let Some(content) = extract_announcement_content(lines[i]) {
+            ann_rows.push(BodyRow::Text {
+                content,
+                style: None,
+            });
+        }
+        i += 1;
+    }
+    rows.push(BodyRow::Box {
+        style: BoxStyle::Announcement,
+        rows: ann_rows,
+    });
+    i + 1 // skip closing border
+}
+
+/// Parse one line of content within an asterisk box.
+fn collect_asterisk_box_line(
+    line: &str,
+    attrs: &HashMap<char, AttributeDef>,
+    box_rows: &mut Vec<BodyRow>,
+    warnings: &mut Vec<String>,
+) {
+    if let Some(content) = extract_asterisk_box_content(line) {
+        box_rows.extend(parse_content_line(&content, attrs, warnings));
+    } else {
+        box_rows.push(BodyRow::Raw {
+            content: line.to_string(),
+        });
+    }
 }
 
 /// Parse the title line: %&ZPRODTSK /─/ TITLE TEXT /─/ V &ZSHRTVER
@@ -460,7 +485,6 @@ fn extract_fields_from_line(
         if is_box_horizontal(ch) {
             has_field_connector = true;
             i += 1;
-            // Skip consecutive box chars
             while i < len && is_box_horizontal(chars[i]) {
                 i += 1;
             }
@@ -475,98 +499,35 @@ fn extract_fields_from_line(
 
         // % attribute marker — toggle highlight context
         if ch == '%' {
-            // Flush text buffer
             flush_text_buf(&mut text_buf, &mut fields);
             i += 1;
             continue;
         }
 
-        // Variable reference: &VAR or $VAR followed by identifier
-        if (ch == '&' || ch == '$') && i + 1 < len && (chars[i + 1].is_alphabetic() || chars[i + 1] == '_') {
-            flush_text_buf(&mut text_buf, &mut fields);
-            i += 1;
-            let var_name = collect_identifier(&chars, &mut i);
-
-            // Determine if this is input or output based on context
-            // $-prefixed vars in command area are typically input fields
-            // &-prefixed vars are typically output/display
-            if ch == '&' {
-                fields.push(Field::Output {
-                    variable: var_name,
-                    attribute: None,
-                });
-            } else {
-                // $ typically used for scrollable/input fields
-                fields.push(Field::Input {
-                    variable: var_name,
-                    attribute: None,
-                    width: None,
-                    field_connector: has_field_connector,
-                });
-                has_field_connector = false;
-            }
+        // & / $-prefixed variable reference
+        if try_parse_var_ref(
+            &chars, &mut i, ch, &mut text_buf, &mut fields, &mut has_field_connector,
+        ) {
             continue;
         }
 
-        // Attr-defined marker char followed by variable name
-        if attrs.contains_key(&ch) && i + 1 < len && (chars[i + 1].is_alphabetic() || chars[i + 1] == '_') {
-            flush_text_buf(&mut text_buf, &mut fields);
-            let attr_ch = ch;
-            i += 1;
-            let var_name = collect_identifier(&chars, &mut i);
-
-            let attr_def = &attrs[&attr_ch];
-            match attr_def.field_type {
-                FieldType::Input => {
-                    fields.push(Field::Input {
-                        variable: var_name,
-                        attribute: Some(attr_ch),
-                        width: None,
-                        field_connector: has_field_connector,
-                    });
-                }
-                FieldType::Output | FieldType::Prot => {
-                    fields.push(Field::Output {
-                        variable: var_name,
-                        attribute: Some(attr_ch),
-                    });
-                }
-                FieldType::Sel => {
-                    fields.push(Field::Input {
-                        variable: var_name,
-                        attribute: Some(attr_ch),
-                        width: Some(1),
-                        field_connector: false,
-                    });
-                }
-            }
-            has_field_connector = false;
+        // Attribute-defined marker char followed by variable name
+        if try_parse_attr_field(
+            &chars, &mut i, ch, attrs,
+            &mut text_buf, &mut fields, &mut has_field_connector,
+        ) {
             continue;
         }
 
         // _ followed by identifier → input field (default INPUT attr)
-        if ch == '_' && i + 1 < len && chars[i + 1].is_alphabetic() {
-            flush_text_buf(&mut text_buf, &mut fields);
-            i += 1;
-            let var_name = collect_identifier(&chars, &mut i);
-            // Count trailing underscores/spaces for width
-            let mut width = var_name.len();
-            while i < len && (chars[i] == ' ' || chars[i] == '_') && i + 1 < len {
-                width += 1;
-                i += 1;
-            }
-            fields.push(Field::Input {
-                variable: var_name,
-                attribute: None,
-                width: Some(width),
-                field_connector: has_field_connector,
-            });
-            has_field_connector = false;
+        if try_parse_underscore_input(
+            &chars, &mut i, ch, &mut text_buf, &mut fields, &mut has_field_connector,
+        ) {
             continue;
         }
 
         // / / delimiter — skip (handled by inline group detection above)
-        if ch == '/' && i + 1 < len && chars[i + 1] == ' ' && i + 2 < len && chars[i + 2] == '/' {
+        if ch == '/' && i + 2 < len && chars[i + 1] == ' ' && chars[i + 2] == '/' {
             i += 3;
             continue;
         }
@@ -578,6 +539,122 @@ fn extract_fields_from_line(
 
     flush_text_buf(&mut text_buf, &mut fields);
     fields
+}
+
+/// Try to consume a `&VAR` or `$VAR` reference. Returns true when consumed.
+fn try_parse_var_ref(
+    chars: &[char],
+    i: &mut usize,
+    ch: char,
+    text_buf: &mut String,
+    fields: &mut Vec<Field>,
+    has_field_connector: &mut bool,
+) -> bool {
+    let len = chars.len();
+    if !(ch == '&' || ch == '$')
+        || *i + 1 >= len
+        || !(chars[*i + 1].is_alphabetic() || chars[*i + 1] == '_')
+    {
+        return false;
+    }
+    flush_text_buf(text_buf, fields);
+    *i += 1;
+    let var_name = collect_identifier(chars, i);
+
+    // & = output/display, $ = input/scrollable
+    if ch == '&' {
+        fields.push(Field::Output {
+            variable: var_name,
+            attribute: None,
+        });
+    } else {
+        fields.push(Field::Input {
+            variable: var_name,
+            attribute: None,
+            width: None,
+            field_connector: *has_field_connector,
+        });
+        *has_field_connector = false;
+    }
+    true
+}
+
+/// Try to consume an attribute-marker (e.g. `+VAR`) field. Returns true when
+/// consumed.
+fn try_parse_attr_field(
+    chars: &[char],
+    i: &mut usize,
+    ch: char,
+    attrs: &HashMap<char, AttributeDef>,
+    text_buf: &mut String,
+    fields: &mut Vec<Field>,
+    has_field_connector: &mut bool,
+) -> bool {
+    let len = chars.len();
+    if !attrs.contains_key(&ch)
+        || *i + 1 >= len
+        || !(chars[*i + 1].is_alphabetic() || chars[*i + 1] == '_')
+    {
+        return false;
+    }
+    flush_text_buf(text_buf, fields);
+    let attr_ch = ch;
+    *i += 1;
+    let var_name = collect_identifier(chars, i);
+
+    let attr_def = &attrs[&attr_ch];
+    match attr_def.field_type {
+        FieldType::Input => fields.push(Field::Input {
+            variable: var_name,
+            attribute: Some(attr_ch),
+            width: None,
+            field_connector: *has_field_connector,
+        }),
+        FieldType::Output | FieldType::Prot => fields.push(Field::Output {
+            variable: var_name,
+            attribute: Some(attr_ch),
+        }),
+        FieldType::Sel => fields.push(Field::Input {
+            variable: var_name,
+            attribute: Some(attr_ch),
+            width: Some(1),
+            field_connector: false,
+        }),
+    }
+    *has_field_connector = false;
+    true
+}
+
+/// Try to consume an `_NAME[__...]` underscore-style input field. Returns
+/// true when consumed.
+fn try_parse_underscore_input(
+    chars: &[char],
+    i: &mut usize,
+    ch: char,
+    text_buf: &mut String,
+    fields: &mut Vec<Field>,
+    has_field_connector: &mut bool,
+) -> bool {
+    let len = chars.len();
+    if ch != '_' || *i + 1 >= len || !chars[*i + 1].is_alphabetic() {
+        return false;
+    }
+    flush_text_buf(text_buf, fields);
+    *i += 1;
+    let var_name = collect_identifier(chars, i);
+    let mut width = var_name.len();
+    while *i < len && (chars[*i] == ' ' || chars[*i] == '_') && *i + 1 < len {
+        width += 1;
+        *i += 1;
+    }
+    fields.push(Field::Input {
+        variable: var_name,
+        attribute: None,
+        width: Some(width),
+        field_connector: *has_field_connector,
+    });
+    *has_field_connector = false;
+    true
 }
 
 fn collect_identifier(chars: &[char], i: &mut usize) -> String {

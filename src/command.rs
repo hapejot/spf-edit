@@ -69,6 +69,7 @@ pub enum PrimaryCommand {
 }
 
 /// Result of executing a command.
+#[derive(Default)]
 pub struct CommandResult {
     pub message: Option<Message>,
     pub should_exit: bool,
@@ -86,28 +87,17 @@ pub struct CommandResult {
 
 impl CommandResult {
     fn none() -> Self {
-        CommandResult {
-            message: None,
-            should_exit: false,
-            needs_save_prompt: false,
-            scroll_to: None,
-            cursor_to: None,
-            scroll_up: None,
-            scroll_down: None,
-            scroll_left: None,
-            scroll_right: None,
-            toggle_cols: false,
-            show_panel: None,
-        }
+        Self::default()
     }
 
     fn with_message(text: &str, msg_type: MessageType) -> Self {
-        let mut r = Self::none();
-        r.message = Some(Message {
-            text: text.to_string(),
-            msg_type,
-        });
-        r
+        Self {
+            message: Some(Message {
+                text: text.to_string(),
+                msg_type,
+            }),
+            ..Self::default()
+        }
     }
 
     fn info(text: &str) -> Self {
@@ -116,6 +106,13 @@ impl CommandResult {
 
     fn error(text: &str) -> Self {
         Self::with_message(text, MessageType::Error)
+    }
+
+    fn exit() -> Self {
+        Self {
+            should_exit: true,
+            ..Self::default()
+        }
     }
 }
 
@@ -130,7 +127,7 @@ pub fn parse_command(input: &str) -> Result<PrimaryCommand, String> {
     let verb = parts.next().unwrap_or("").to_uppercase();
     let args = parts.next().unwrap_or("").trim();
 
-    // Match with minimum abbreviations
+    // Verbs with no arguments and a fixed minimum-abbreviation length.
     if matches_cmd(&verb, "SAVE", 2) {
         return Ok(PrimaryCommand::Save);
     }
@@ -139,9 +136,6 @@ pub fn parse_command(input: &str) -> Result<PrimaryCommand, String> {
     }
     if matches_cmd(&verb, "CANCEL", 3) {
         return Ok(PrimaryCommand::Cancel);
-    }
-    if matches_cmd(&verb, "FIND", 1) {
-        return parse_find_command(args);
     }
     if matches_cmd(&verb, "RFIND", 2) {
         return Ok(PrimaryCommand::RFind);
@@ -152,6 +146,14 @@ pub fn parse_command(input: &str) -> Result<PrimaryCommand, String> {
     if matches_cmd(&verb, "BOTTOM", 3) {
         return Ok(PrimaryCommand::Bottom);
     }
+    if verb == "COLS" {
+        return Ok(PrimaryCommand::Cols);
+    }
+
+    // Verbs with arguments.
+    if matches_cmd(&verb, "FIND", 1) {
+        return parse_find_command(args);
+    }
     if verb == "UP" {
         return parse_scroll_command(args, true);
     }
@@ -159,29 +161,16 @@ pub fn parse_command(input: &str) -> Result<PrimaryCommand, String> {
         return parse_scroll_command(args, false);
     }
     if matches_cmd(&verb, "LEFT", 2) {
-        let n = if args.is_empty() {
-            1
-        } else {
-            args.parse::<usize>().map_err(|_| format!("Invalid number: {args}"))?
-        };
-        return Ok(PrimaryCommand::Left(n));
+        return parse_count_arg(args).map(PrimaryCommand::Left);
     }
     if matches_cmd(&verb, "RIGHT", 2) {
-        let n = if args.is_empty() {
-            1
-        } else {
-            args.parse::<usize>().map_err(|_| format!("Invalid number: {args}"))?
-        };
-        return Ok(PrimaryCommand::Right(n));
+        return parse_count_arg(args).map(PrimaryCommand::Right);
     }
     if matches_cmd(&verb, "LOCATE", 1) {
         return parse_locate_command(args);
     }
     if matches_cmd(&verb, "RESET", 3) {
         return parse_reset_command(args);
-    }
-    if verb == "COLS" {
-        return Ok(PrimaryCommand::Cols);
     }
     if matches_cmd(&verb, "NUMBER", 3) {
         return parse_onoff_command(args, "NUMBER").map(PrimaryCommand::Number);
@@ -200,6 +189,15 @@ pub fn parse_command(input: &str) -> Result<PrimaryCommand, String> {
     }
 
     Err(format!("Unknown command: {verb}"))
+}
+
+/// Parse an optional integer scroll-count argument (defaults to 1).
+fn parse_count_arg(args: &str) -> Result<usize, String> {
+    if args.is_empty() {
+        return Ok(1);
+    }
+    args.parse::<usize>()
+        .map_err(|_| format!("Invalid number: {args}"))
 }
 
 /// Check if `input` matches a command name with minimum abbreviation length.
@@ -354,186 +352,51 @@ pub fn execute_command(
     scroll_amount: &ScrollAmount,
 ) -> CommandResult {
     match cmd {
-        PrimaryCommand::Save => {
-            if buffer.browse_mode {
-                warn!("SAVE attempted in browse mode");
-                return CommandResult::error("Cannot SAVE in browse mode");
-            }
-            match buffer.save() {
-                Ok(()) => {
-                    info!("SAVE successful");
-                    CommandResult::info("SAVED")
-                }
-                Err(e) => {
-                    warn!("SAVE failed: {e}");
-                    CommandResult::error(&format!("Save failed: {e}"))
-                }
-            }
-        }
-
-        PrimaryCommand::End => {
-            if buffer.browse_mode || !buffer.modified {
-                info!("END — exiting (browse={} modified={})", buffer.browse_mode, buffer.modified);
-                let mut r = CommandResult::none();
-                r.should_exit = true;
-                return r;
-            }
-            // Save and exit
-            info!("END — saving and exiting");
-            match buffer.save() {
-                Ok(()) => {
-                    let mut r = CommandResult::info("SAVED");
-                    r.should_exit = true;
-                    r
-                }
-                Err(e) => CommandResult::error(&format!("Save failed: {e}")),
-            }
-        }
-
-        PrimaryCommand::Cancel => {
-            if buffer.modified {
-                let mut r = CommandResult::none();
-                r.needs_save_prompt = true;
-                r
-            } else {
-                let mut r = CommandResult::none();
-                r.should_exit = true;
-                r
-            }
-        }
-
+        PrimaryCommand::Save => exec_save(buffer),
+        PrimaryCommand::End => exec_end(buffer),
+        PrimaryCommand::Cancel => exec_cancel(buffer),
         PrimaryCommand::Find { text, direction } => {
-            debug!("FIND {:?} direction={:?}", text, direction);
-            *last_find = Some(text.clone());
-            let start_col = if matches!(direction, Direction::Next) {
-                current_col + 1
-            } else {
-                current_col
-            };
-            match buffer.find_text(text, current_line, start_col, *direction) {
-                Some((line_idx, col_idx)) => {
-                    let mut r = CommandResult::info(&format!("CHARS '{}' FOUND", text));
-                    r.cursor_to = Some((line_idx, col_idx));
-                    r.scroll_to = Some(line_idx);
-                    if matches!(direction, Direction::All) {
-                        let count = buffer.count_occurrences(text);
-                        r.message = Some(Message {
-                            text: format!("CHARS '{}' FOUND - {} occurrence(s)", text, count),
-                            msg_type: MessageType::Info,
-                        });
-                    }
-                    r
-                }
-                None => CommandResult::error(&format!("CHARS '{}' NOT FOUND", text)),
-            }
+            exec_find(buffer, last_find, text, *direction, current_line, current_col)
         }
-
-        PrimaryCommand::RFind => {
-            if let Some(text) = last_find.clone() {
-                execute_command(
-                    &PrimaryCommand::Find {
-                        text,
-                        direction: Direction::Next,
-                    },
-                    buffer,
-                    last_find,
-                    current_line,
-                    current_col,
-                    page_size,
-                    cursor_row,
-                    scroll_amount,
-                )
-            } else {
-                CommandResult::error("No previous FIND command")
-            }
-        }
-
-        PrimaryCommand::Top => {
-            let mut r = CommandResult::none();
-            r.scroll_to = Some(0);
-            r
-        }
-
-        PrimaryCommand::Bottom => {
-            let mut r = CommandResult::none();
-            let total = buffer.line_count();
-            r.scroll_to = Some(total.saturating_sub(page_size));
-            r
-        }
-
-        PrimaryCommand::Up(amount) => {
-            let lines = amount.resolve(page_size, cursor_row);
-            let mut r = CommandResult::none();
-            r.scroll_up = Some(lines);
-            r
-        }
-
-        PrimaryCommand::Down(amount) => {
-            let lines = amount.resolve(page_size, cursor_row);
-            let mut r = CommandResult::none();
-            r.scroll_down = Some(lines);
-            r
-        }
-
-        PrimaryCommand::Left(n) => {
-            let mut r = CommandResult::none();
-            r.scroll_left = Some(*n);
-            r
-        }
-
-        PrimaryCommand::Right(n) => {
-            let mut r = CommandResult::none();
-            r.scroll_right = Some(*n);
-            r
-        }
-
-        PrimaryCommand::Locate(target) => match target {
-            LocateTarget::LineNumber(n) => {
-                // Find line with this number
-                for i in 0..buffer.line_count() {
-                    if let Some(line) = buffer.lines.get(i) {
-                        if line.is_data() && line.current_number >= *n {
-                            let mut r = CommandResult::none();
-                            r.scroll_to = Some(i);
-                            return r;
-                        }
-                    }
-                }
-                CommandResult::error(&format!("Line {n} not found"))
-            }
-            LocateTarget::Label(name) => {
-                if let Some(idx) = buffer.get_label(name) {
-                    let mut r = CommandResult::none();
-                    r.scroll_to = Some(idx);
-                    r
-                } else {
-                    CommandResult::error(&format!("Label {name} not found"))
-                }
-            }
+        PrimaryCommand::RFind => exec_rfind(
+            buffer,
+            last_find,
+            current_line,
+            current_col,
+            page_size,
+            cursor_row,
+            scroll_amount,
+        ),
+        PrimaryCommand::Top => CommandResult {
+            scroll_to: Some(0),
+            ..CommandResult::default()
         },
-
-        PrimaryCommand::Reset(scope) => {
-            match scope {
-                ResetScope::All => {
-                    buffer.reset_commands();
-                    buffer.reset_labels();
-                }
-                ResetScope::Command => {
-                    buffer.reset_commands();
-                }
-                ResetScope::Label => {
-                    buffer.reset_labels();
-                }
-            }
-            CommandResult::none()
-        }
-
-        PrimaryCommand::Cols => {
-            let mut r = CommandResult::none();
-            r.toggle_cols = true;
-            r
-        }
-
+        PrimaryCommand::Bottom => CommandResult {
+            scroll_to: Some(buffer.line_count().saturating_sub(page_size)),
+            ..CommandResult::default()
+        },
+        PrimaryCommand::Up(amount) => CommandResult {
+            scroll_up: Some(amount.resolve(page_size, cursor_row)),
+            ..CommandResult::default()
+        },
+        PrimaryCommand::Down(amount) => CommandResult {
+            scroll_down: Some(amount.resolve(page_size, cursor_row)),
+            ..CommandResult::default()
+        },
+        PrimaryCommand::Left(n) => CommandResult {
+            scroll_left: Some(*n),
+            ..CommandResult::default()
+        },
+        PrimaryCommand::Right(n) => CommandResult {
+            scroll_right: Some(*n),
+            ..CommandResult::default()
+        },
+        PrimaryCommand::Locate(target) => exec_locate(buffer, target),
+        PrimaryCommand::Reset(scope) => exec_reset(buffer, scope),
+        PrimaryCommand::Cols => CommandResult {
+            toggle_cols: true,
+            ..CommandResult::default()
+        },
         PrimaryCommand::Number(onoff) => {
             buffer.number_mode = match onoff {
                 OnOff::On => NumberMode::On,
@@ -541,22 +404,169 @@ pub fn execute_command(
             };
             CommandResult::none()
         }
-
         PrimaryCommand::Nulls(onoff) => {
             buffer.nulls_mode = matches!(onoff, OnOff::On);
             CommandResult::none()
         }
-
         PrimaryCommand::Caps(onoff) => {
             buffer.caps_mode = matches!(onoff, OnOff::On);
-            let msg = if buffer.caps_mode { "CAPS ON" } else { "CAPS OFF" };
-            CommandResult::info(msg)
+            CommandResult::info(if buffer.caps_mode { "CAPS ON" } else { "CAPS OFF" })
         }
+        PrimaryCommand::Panel(panel_id) => CommandResult {
+            show_panel: Some(panel_id.clone()),
+            ..CommandResult::default()
+        },
+    }
+}
 
-        PrimaryCommand::Panel(panel_id) => {
-            let mut r = CommandResult::none();
-            r.show_panel = Some(panel_id.clone());
-            r
+// ----- Per-command handlers -----
+
+fn exec_save(buffer: &mut FileBuffer) -> CommandResult {
+    if buffer.browse_mode {
+        warn!("SAVE attempted in browse mode");
+        return CommandResult::error("Cannot SAVE in browse mode");
+    }
+    match buffer.save() {
+        Ok(()) => {
+            info!("SAVE successful");
+            CommandResult::info("SAVED")
+        }
+        Err(e) => {
+            warn!("SAVE failed: {e}");
+            CommandResult::error(&format!("Save failed: {e}"))
         }
     }
+}
+
+fn exec_end(buffer: &mut FileBuffer) -> CommandResult {
+    if buffer.browse_mode || !buffer.modified {
+        info!(
+            "END — exiting (browse={} modified={})",
+            buffer.browse_mode, buffer.modified
+        );
+        return CommandResult::exit();
+    }
+    info!("END — saving and exiting");
+    match buffer.save() {
+        Ok(()) => CommandResult {
+            message: Some(Message {
+                text: "SAVED".to_string(),
+                msg_type: MessageType::Info,
+            }),
+            should_exit: true,
+            ..CommandResult::default()
+        },
+        Err(e) => CommandResult::error(&format!("Save failed: {e}")),
+    }
+}
+
+fn exec_cancel(buffer: &FileBuffer) -> CommandResult {
+    if buffer.modified {
+        CommandResult {
+            needs_save_prompt: true,
+            ..CommandResult::default()
+        }
+    } else {
+        CommandResult::exit()
+    }
+}
+
+fn exec_find(
+    buffer: &FileBuffer,
+    last_find: &mut Option<String>,
+    text: &str,
+    direction: Direction,
+    current_line: usize,
+    current_col: usize,
+) -> CommandResult {
+    debug!("FIND {:?} direction={:?}", text, direction);
+    *last_find = Some(text.to_string());
+    let start_col = if matches!(direction, Direction::Next) {
+        current_col + 1
+    } else {
+        current_col
+    };
+    match buffer.find_text(text, current_line, start_col, direction) {
+        Some((line_idx, col_idx)) => {
+            let mut msg_text = format!("CHARS '{text}' FOUND");
+            if matches!(direction, Direction::All) {
+                let count = buffer.count_occurrences(text);
+                msg_text = format!("CHARS '{text}' FOUND - {count} occurrence(s)");
+            }
+            CommandResult {
+                message: Some(Message {
+                    text: msg_text,
+                    msg_type: MessageType::Info,
+                }),
+                cursor_to: Some((line_idx, col_idx)),
+                scroll_to: Some(line_idx),
+                ..CommandResult::default()
+            }
+        }
+        None => CommandResult::error(&format!("CHARS '{text}' NOT FOUND")),
+    }
+}
+
+fn exec_rfind(
+    buffer: &mut FileBuffer,
+    last_find: &mut Option<String>,
+    current_line: usize,
+    current_col: usize,
+    page_size: usize,
+    cursor_row: usize,
+    scroll_amount: &ScrollAmount,
+) -> CommandResult {
+    let Some(text) = last_find.clone() else {
+        return CommandResult::error("No previous FIND command");
+    };
+    execute_command(
+        &PrimaryCommand::Find {
+            text,
+            direction: Direction::Next,
+        },
+        buffer,
+        last_find,
+        current_line,
+        current_col,
+        page_size,
+        cursor_row,
+        scroll_amount,
+    )
+}
+
+fn exec_locate(buffer: &FileBuffer, target: &LocateTarget) -> CommandResult {
+    match target {
+        LocateTarget::LineNumber(n) => {
+            for i in 0..buffer.line_count() {
+                if let Some(line) = buffer.lines.get(i) {
+                    if line.is_data() && line.current_number >= *n {
+                        return CommandResult {
+                            scroll_to: Some(i),
+                            ..CommandResult::default()
+                        };
+                    }
+                }
+            }
+            CommandResult::error(&format!("Line {n} not found"))
+        }
+        LocateTarget::Label(name) => match buffer.get_label(name) {
+            Some(idx) => CommandResult {
+                scroll_to: Some(idx),
+                ..CommandResult::default()
+            },
+            None => CommandResult::error(&format!("Label {name} not found")),
+        },
+    }
+}
+
+fn exec_reset(buffer: &mut FileBuffer, scope: &ResetScope) -> CommandResult {
+    match scope {
+        ResetScope::All => {
+            buffer.reset_commands();
+            buffer.reset_labels();
+        }
+        ResetScope::Command => buffer.reset_commands(),
+        ResetScope::Label => buffer.reset_labels(),
+    }
+    CommandResult::none()
 }

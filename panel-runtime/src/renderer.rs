@@ -331,110 +331,42 @@ impl PanelRenderer {
             }
 
             BodyRow::Blank => {
-                queue!(
-                    stdout,
-                    MoveTo(0, row),
-                    SetForegroundColor(PanelColors::TEXT_FG),
-                    SetBackgroundColor(PanelColors::TEXT_BG),
-                    Print(format!("{:w$}", "", w = width)),
-                )?;
+                Self::fill_row(stdout, row, width, PanelColors::TEXT_FG, PanelColors::TEXT_BG)?;
                 Ok(1)
             }
 
             BodyRow::Text { content, style } => {
-                let resolved = vars.resolve(content);
                 let (fg, bg) = match style.as_deref() {
                     Some("high") => (PanelColors::TEXT_HIGH_FG, PanelColors::TEXT_HIGH_BG),
                     _ => (PanelColors::TEXT_FG, PanelColors::TEXT_BG),
                 };
-                queue!(
-                    stdout,
-                    MoveTo(1, row),
-                    SetForegroundColor(fg),
-                    SetBackgroundColor(bg),
-                    Print(format!("{:w$}", "", w = width)),
-                )?;
-                queue!(
-                    stdout,
-                    MoveTo(1, row),
-                    Print(&resolved[..resolved.len().min(width - 1)]),
-                )?;
+                Self::draw_text_line(stdout, &vars.resolve(content), row, width, fg, bg)?;
                 Ok(1)
             }
 
             BodyRow::FieldRow { fields: row_fields } => {
-                // Clear the row first
-                queue!(
-                    stdout,
-                    MoveTo(0, row),
-                    SetForegroundColor(PanelColors::TEXT_FG),
-                    SetBackgroundColor(PanelColors::TEXT_BG),
-                    Print(format!("{:w$}", "", w = width)),
+                Self::fill_row(stdout, row, width, PanelColors::TEXT_FG, PanelColors::TEXT_BG)?;
+                Self::draw_field_sequence(
+                    stdout, row_fields, vars, fields, row, width, attrs,
                 )?;
-
-                let mut col: u16 = 1;
-                for field in row_fields {
-                    col = Self::draw_field(
-                        stdout, field, vars, fields, row, col, width, attrs,
-                    )?;
-                    col += 1; // spacing between fields
-                }
                 Ok(1)
             }
 
             BodyRow::Input {
                 variable,
-                attribute,
+                attribute: _,
                 width: field_width,
-                field_connector,
+                field_connector: _,
             } => {
-                let fw = field_width.unwrap_or(width.saturating_sub(2));
-                let val = vars.get(variable).unwrap_or("").to_string();
-                let display = format!("{:<fw$}", val, fw = fw);
-
-                // Draw connector if present
-                let start_col: u16 = if *field_connector { 1 } else { 1 };
-
-                queue!(
-                    stdout,
-                    MoveTo(0, row),
-                    SetForegroundColor(PanelColors::TEXT_FG),
-                    SetBackgroundColor(PanelColors::TEXT_BG),
-                    Print(format!("{:w$}", "", w = width)),
-                )?;
-                queue!(
-                    stdout,
-                    MoveTo(start_col, row),
-                    SetForegroundColor(PanelColors::INPUT_FG),
-                    SetBackgroundColor(PanelColors::INPUT_BG),
-                    Print(&display[..display.len().min(width - start_col as usize)]),
-                )?;
-
-                fields.push(FieldInfo {
-                    variable: variable.clone(),
-                    row,
-                    col: start_col,
-                    width: fw,
-                    value: val,
-                    is_command: false,
-                });
-
+                Self::draw_input_row(stdout, variable, *field_width, vars, fields, row, width)?;
                 Ok(1)
             }
 
             BodyRow::Output { variable, .. } => {
-                let val = vars.get(variable).unwrap_or("");
-                queue!(
-                    stdout,
-                    MoveTo(1, row),
-                    SetForegroundColor(PanelColors::OUTPUT_FG),
-                    SetBackgroundColor(PanelColors::TEXT_BG),
-                    Print(format!("{:w$}", "", w = width)),
-                )?;
-                queue!(
-                    stdout,
-                    MoveTo(1, row),
-                    Print(&val[..val.len().min(width - 1)]),
+                let val = vars.get(variable).unwrap_or("").to_string();
+                Self::draw_text_line(
+                    stdout, &val, row, width,
+                    PanelColors::OUTPUT_FG, PanelColors::TEXT_BG,
                 )?;
                 Ok(1)
             }
@@ -455,162 +387,22 @@ impl PanelRenderer {
                 Ok(1)
             }
 
-            BodyRow::Box {
-                style,
-                rows: box_rows,
-            } => {
-                let (top, bottom, left, right) = match style {
-                    BoxStyle::Asterisk => ('*', '*', '*', '*'),
-                    BoxStyle::Announcement => ('*', '*', '*', '*'),
-                    BoxStyle::Single => ('─', '─', '│', '│'),
-                    BoxStyle::Double => ('═', '═', '║', '║'),
-                };
-                let (corner_tl, corner_tr, corner_bl, corner_br) = match style {
-                    BoxStyle::Asterisk | BoxStyle::Announcement => ('*', '*', '*', '*'),
-                    BoxStyle::Single => ('┌', '┐', '└', '┘'),
-                    BoxStyle::Double => ('╔', '╗', '╚', '╝'),
-                };
-
-                // Top border
-                let top_line = format!(
-                    "{}{}{}",
-                    corner_tl,
-                    std::iter::repeat(top).take(width.saturating_sub(2)).collect::<String>(),
-                    corner_tr,
-                ).chars().take(width).collect::<String>();
-                queue!(
-                    stdout,
-                    MoveTo(0, row),
-                    SetForegroundColor(PanelColors::BOX_FG),
-                    SetBackgroundColor(PanelColors::BOX_BG),
-                    Print(&top_line),
-                )?;
-                let mut current_row = row + 1;
-
-                // Box content rows
-                for inner_row in box_rows {
-                    if current_row > row + box_rows.len() as u16 {
-                        break;
-                    }
-                    // Draw left border
-                    queue!(
-                        stdout,
-                        MoveTo(0, current_row),
-                        SetForegroundColor(PanelColors::BOX_FG),
-                        SetBackgroundColor(PanelColors::BOX_BG),
-                        Print(left),
-                    )?;
-
-                    // Draw inner content (shifted by 2 for borders)
-                    let inner_width = width.saturating_sub(2);
-                    match inner_row {
-                        BodyRow::Blank => {
-                            queue!(
-                                stdout,
-                                SetForegroundColor(PanelColors::TEXT_FG),
-                                SetBackgroundColor(PanelColors::TEXT_BG),
-                                Print(format!("{:w$}", "", w = inner_width)),
-                            )?;
-                        }
-                        BodyRow::Text { content, .. } => {
-                            let resolved = vars.resolve(content);
-                            queue!(
-                                stdout,
-                                SetForegroundColor(PanelColors::TEXT_FG),
-                                SetBackgroundColor(PanelColors::TEXT_BG),
-                                Print(format!("{:<w$}", resolved, w = inner_width)),
-                            )?;
-                        }
-                        BodyRow::FieldRow { fields: row_fields } => {
-                            queue!(
-                                stdout,
-                                SetForegroundColor(PanelColors::TEXT_FG),
-                                SetBackgroundColor(PanelColors::TEXT_BG),
-                                Print(format!("{:w$}", "", w = inner_width)),
-                            )?;
-                            let mut col: u16 = 1;
-                            for field in row_fields {
-                                col = Self::draw_field(
-                                    stdout, field, vars, fields,
-                                    current_row, col, inner_width, attrs,
-                                )?;
-                                col += 1;
-                            }
-                        }
-                        BodyRow::Output { variable, .. } => {
-                            let val = vars.get(variable).unwrap_or("");
-                            queue!(
-                                stdout,
-                                SetForegroundColor(PanelColors::OUTPUT_FG),
-                                SetBackgroundColor(PanelColors::TEXT_BG),
-                                Print(format!("{:<w$}", val, w = inner_width)),
-                            )?;
-                        }
-                        _ => {
-                            queue!(
-                                stdout,
-                                SetForegroundColor(PanelColors::TEXT_FG),
-                                SetBackgroundColor(PanelColors::TEXT_BG),
-                                Print(format!("{:w$}", "", w = inner_width)),
-                            )?;
-                        }
-                    }
-
-                    // Draw right border
-                    queue!(
-                        stdout,
-                        SetForegroundColor(PanelColors::BOX_FG),
-                        SetBackgroundColor(PanelColors::BOX_BG),
-                        Print(right),
-                    )?;
-
-                    current_row += 1;
-                }
-
-                // Bottom border
-                let bottom_line = format!(
-                    "{}{}{}",
-                    corner_bl,
-                    std::iter::repeat(bottom).take(width.saturating_sub(2)).collect::<String>(),
-                    corner_br,
-                ).chars().take(width).collect::<String>();
-                queue!(
-                    stdout,
-                    MoveTo(0, current_row),
-                    SetForegroundColor(PanelColors::BOX_FG),
-                    SetBackgroundColor(PanelColors::BOX_BG),
-                    Print(&bottom_line),
-                )?;
-
-                Ok(current_row - row + 1)
+            BodyRow::Box { style, rows: box_rows } => {
+                Self::draw_box(stdout, *style, box_rows, vars, fields, row, width, attrs)
             }
 
             BodyRow::InlineGroup { fields: group_fields } => {
-                queue!(
-                    stdout,
-                    MoveTo(0, row),
-                    SetForegroundColor(PanelColors::TEXT_FG),
-                    SetBackgroundColor(PanelColors::TEXT_BG),
-                    Print(format!("{:w$}", "", w = width)),
+                Self::fill_row(stdout, row, width, PanelColors::TEXT_FG, PanelColors::TEXT_BG)?;
+                Self::draw_field_sequence(
+                    stdout, group_fields, vars, fields, row, width, attrs,
                 )?;
-
-                let mut col: u16 = 1;
-                for field in group_fields {
-                    col = Self::draw_field(
-                        stdout, field, vars, fields, row, col, width, attrs,
-                    )?;
-                    col += 1;
-                }
                 Ok(1)
             }
 
             BodyRow::ColumnHeader { columns } => {
-                queue!(
-                    stdout,
-                    MoveTo(0, row),
-                    SetForegroundColor(PanelColors::TEXT_HIGH_FG),
-                    SetBackgroundColor(PanelColors::TEXT_BG),
-                    Print(format!("{:w$}", "", w = width)),
+                Self::fill_row(
+                    stdout, row, width,
+                    PanelColors::TEXT_HIGH_FG, PanelColors::TEXT_BG,
                 )?;
                 let header = columns.join("  ");
                 queue!(
@@ -622,17 +414,7 @@ impl PanelRenderer {
             }
 
             BodyRow::ColumnRuler => {
-                // Generate ruler: ----+----1----+----2...
-                let mut ruler = String::with_capacity(width);
-                for i in 1..=width {
-                    if i % 10 == 0 {
-                        ruler.push(char::from_digit((i / 10) as u32 % 10, 10).unwrap_or('-'));
-                    } else if i % 5 == 0 {
-                        ruler.push('+');
-                    } else {
-                        ruler.push('-');
-                    }
-                }
+                let ruler = Self::build_column_ruler(width);
                 queue!(
                     stdout,
                     MoveTo(0, row),
@@ -644,22 +426,279 @@ impl PanelRenderer {
             }
 
             BodyRow::Raw { content } => {
-                let resolved = vars.resolve(content);
-                queue!(
-                    stdout,
-                    MoveTo(0, row),
-                    SetForegroundColor(PanelColors::TEXT_FG),
-                    SetBackgroundColor(PanelColors::TEXT_BG),
-                    Print(format!("{:w$}", "", w = width)),
-                )?;
-                queue!(
-                    stdout,
-                    MoveTo(1, row),
-                    Print(&resolved[..resolved.len().min(width - 1)]),
+                Self::draw_text_line(
+                    stdout, &vars.resolve(content), row, width,
+                    PanelColors::TEXT_FG, PanelColors::TEXT_BG,
                 )?;
                 Ok(1)
             }
         }
+    }
+
+    /// Clear `row` with the given bg colour, full width.
+    fn fill_row<W: Write>(
+        stdout: &mut W,
+        row: u16,
+        width: usize,
+        fg: crossterm::style::Color,
+        bg: crossterm::style::Color,
+    ) -> io::Result<()> {
+        queue!(
+            stdout,
+            MoveTo(0, row),
+            SetForegroundColor(fg),
+            SetBackgroundColor(bg),
+            Print(format!("{:w$}", "", w = width)),
+        )?;
+        Ok(())
+    }
+
+    /// Fill a row with `bg` and print `text` starting at column 1, truncated to fit.
+    fn draw_text_line<W: Write>(
+        stdout: &mut W,
+        text: &str,
+        row: u16,
+        width: usize,
+        fg: crossterm::style::Color,
+        bg: crossterm::style::Color,
+    ) -> io::Result<()> {
+        Self::fill_row(stdout, row, width, fg, bg)?;
+        if width >= 2 {
+            queue!(
+                stdout,
+                MoveTo(1, row),
+                Print(&text[..text.len().min(width - 1)]),
+            )?;
+        }
+        Ok(())
+    }
+
+    /// Draw a sequence of fields side-by-side, starting at column 1, with one
+    /// column of spacing between them.
+    fn draw_field_sequence<W: Write>(
+        stdout: &mut W,
+        row_fields: &[Field],
+        vars: &VarPool,
+        fields: &mut Vec<FieldInfo>,
+        row: u16,
+        width: usize,
+        attrs: &std::collections::HashMap<char, AttributeDef>,
+    ) -> io::Result<()> {
+        let mut col: u16 = 1;
+        for field in row_fields {
+            col = Self::draw_field(stdout, field, vars, fields, row, col, width, attrs)?;
+            col += 1; // spacing between fields
+        }
+        Ok(())
+    }
+
+    /// Draw a top-level Input row (`%Z`-style line with a single input variable).
+    fn draw_input_row<W: Write>(
+        stdout: &mut W,
+        variable: &str,
+        field_width: Option<usize>,
+        vars: &VarPool,
+        fields: &mut Vec<FieldInfo>,
+        row: u16,
+        width: usize,
+    ) -> io::Result<()> {
+        let fw = field_width.unwrap_or(width.saturating_sub(2));
+        let val = vars.get(variable).unwrap_or("").to_string();
+        let display = format!("{:<fw$}", val, fw = fw);
+        let start_col: u16 = 1;
+
+        Self::fill_row(stdout, row, width, PanelColors::TEXT_FG, PanelColors::TEXT_BG)?;
+        queue!(
+            stdout,
+            MoveTo(start_col, row),
+            SetForegroundColor(PanelColors::INPUT_FG),
+            SetBackgroundColor(PanelColors::INPUT_BG),
+            Print(&display[..display.len().min(width - start_col as usize)]),
+        )?;
+
+        fields.push(FieldInfo {
+            variable: variable.to_string(),
+            row,
+            col: start_col,
+            width: fw,
+            value: val,
+            is_command: false,
+        });
+        Ok(())
+    }
+
+    /// Generate a column ruler like `----+----1----+----2...` of `width` chars.
+    fn build_column_ruler(width: usize) -> String {
+        let mut ruler = String::with_capacity(width);
+        for i in 1..=width {
+            if i % 10 == 0 {
+                ruler.push(char::from_digit((i / 10) as u32 % 10, 10).unwrap_or('-'));
+            } else if i % 5 == 0 {
+                ruler.push('+');
+            } else {
+                ruler.push('-');
+            }
+        }
+        ruler
+    }
+
+    /// Draw a Box body row with its top border, inner rows, and bottom border.
+    /// Returns the number of terminal rows consumed.
+    #[allow(clippy::too_many_arguments)]
+    fn draw_box<W: Write>(
+        stdout: &mut W,
+        style: BoxStyle,
+        box_rows: &[BodyRow],
+        vars: &VarPool,
+        fields: &mut Vec<FieldInfo>,
+        row: u16,
+        width: usize,
+        attrs: &std::collections::HashMap<char, AttributeDef>,
+    ) -> io::Result<u16> {
+        let (top, bottom, left, right) = match style {
+            BoxStyle::Asterisk | BoxStyle::Announcement => ('*', '*', '*', '*'),
+            BoxStyle::Single => ('─', '─', '│', '│'),
+            BoxStyle::Double => ('═', '═', '║', '║'),
+        };
+        let (corner_tl, corner_tr, corner_bl, corner_br) = match style {
+            BoxStyle::Asterisk | BoxStyle::Announcement => ('*', '*', '*', '*'),
+            BoxStyle::Single => ('┌', '┐', '└', '┘'),
+            BoxStyle::Double => ('╔', '╗', '╚', '╝'),
+        };
+
+        // Top border
+        let top_line = Self::box_border_line(corner_tl, top, corner_tr, width);
+        queue!(
+            stdout,
+            MoveTo(0, row),
+            SetForegroundColor(PanelColors::BOX_FG),
+            SetBackgroundColor(PanelColors::BOX_BG),
+            Print(&top_line),
+        )?;
+
+        let mut current_row = row + 1;
+        let max_inner_row = row + box_rows.len() as u16;
+        let inner_width = width.saturating_sub(2);
+
+        // Box content rows
+        for inner_row in box_rows {
+            if current_row > max_inner_row {
+                break;
+            }
+            // Left border
+            queue!(
+                stdout,
+                MoveTo(0, current_row),
+                SetForegroundColor(PanelColors::BOX_FG),
+                SetBackgroundColor(PanelColors::BOX_BG),
+                Print(left),
+            )?;
+
+            Self::draw_box_inner(
+                stdout, inner_row, vars, fields,
+                current_row, inner_width, attrs,
+            )?;
+
+            // Right border
+            queue!(
+                stdout,
+                SetForegroundColor(PanelColors::BOX_FG),
+                SetBackgroundColor(PanelColors::BOX_BG),
+                Print(right),
+            )?;
+            current_row += 1;
+        }
+
+        // Bottom border
+        let bottom_line = Self::box_border_line(corner_bl, bottom, corner_br, width);
+        queue!(
+            stdout,
+            MoveTo(0, current_row),
+            SetForegroundColor(PanelColors::BOX_FG),
+            SetBackgroundColor(PanelColors::BOX_BG),
+            Print(&bottom_line),
+        )?;
+
+        Ok(current_row - row + 1)
+    }
+
+    /// Build a `corner + edge*(n-2) + corner` string of total `width` chars.
+    fn box_border_line(left: char, mid: char, right: char, width: usize) -> String {
+        format!(
+            "{}{}{}",
+            left,
+            std::iter::repeat(mid).take(width.saturating_sub(2)).collect::<String>(),
+            right,
+        )
+        .chars()
+        .take(width)
+        .collect()
+    }
+
+    /// Render a single row that lives inside a Box (already positioned at
+    /// column 1, with `inner_width` characters of horizontal space).
+    fn draw_box_inner<W: Write>(
+        stdout: &mut W,
+        inner_row: &BodyRow,
+        vars: &VarPool,
+        fields: &mut Vec<FieldInfo>,
+        current_row: u16,
+        inner_width: usize,
+        attrs: &std::collections::HashMap<char, AttributeDef>,
+    ) -> io::Result<()> {
+        match inner_row {
+            BodyRow::Blank => {
+                queue!(
+                    stdout,
+                    SetForegroundColor(PanelColors::TEXT_FG),
+                    SetBackgroundColor(PanelColors::TEXT_BG),
+                    Print(format!("{:w$}", "", w = inner_width)),
+                )?;
+            }
+            BodyRow::Text { content, .. } => {
+                let resolved = vars.resolve(content);
+                queue!(
+                    stdout,
+                    SetForegroundColor(PanelColors::TEXT_FG),
+                    SetBackgroundColor(PanelColors::TEXT_BG),
+                    Print(format!("{:<w$}", resolved, w = inner_width)),
+                )?;
+            }
+            BodyRow::FieldRow { fields: row_fields } => {
+                queue!(
+                    stdout,
+                    SetForegroundColor(PanelColors::TEXT_FG),
+                    SetBackgroundColor(PanelColors::TEXT_BG),
+                    Print(format!("{:w$}", "", w = inner_width)),
+                )?;
+                let mut col: u16 = 1;
+                for field in row_fields {
+                    col = Self::draw_field(
+                        stdout, field, vars, fields,
+                        current_row, col, inner_width, attrs,
+                    )?;
+                    col += 1;
+                }
+            }
+            BodyRow::Output { variable, .. } => {
+                let val = vars.get(variable).unwrap_or("");
+                queue!(
+                    stdout,
+                    SetForegroundColor(PanelColors::OUTPUT_FG),
+                    SetBackgroundColor(PanelColors::TEXT_BG),
+                    Print(format!("{:<w$}", val, w = inner_width)),
+                )?;
+            }
+            _ => {
+                queue!(
+                    stdout,
+                    SetForegroundColor(PanelColors::TEXT_FG),
+                    SetBackgroundColor(PanelColors::TEXT_BG),
+                    Print(format!("{:w$}", "", w = inner_width)),
+                )?;
+            }
+        }
+        Ok(())
     }
 
     /// Draw the command row: "Command ===> ___   Scroll ===> PAGE"

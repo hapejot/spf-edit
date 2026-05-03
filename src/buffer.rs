@@ -316,78 +316,63 @@ impl FileBuffer {
         start_col: usize,
         direction: Direction,
     ) -> Option<(usize, usize)> {
-        debug!("find_text: {:?} from ({start_line},{start_col}) dir={:?}", query, direction);
-        let query_lower = query.to_lowercase();
-
+        debug!(
+            "find_text: {:?} from ({start_line},{start_col}) dir={:?}",
+            query, direction
+        );
+        let needle = query.to_lowercase();
         match direction {
-            Direction::Next => {
-                // Search from start_line/start_col forward
-                for i in start_line..self.lines.len() {
-                    if let Some(line) = self.lines.get(i) {
-                        if !line.is_data() {
-                            continue;
-                        }
-                        let data_lower = line.data.to_lowercase();
-                        let search_from = if i == start_line { start_col } else { 0 };
-                        if let Some(pos) = data_lower[search_from..].find(&query_lower) {
-                            return Some((i, search_from + pos));
-                        }
-                    }
-                }
-                None
+            Direction::Next => self.search_forward(&needle, start_line, start_col),
+            Direction::Prev => self.search_backward(&needle, start_line, Some(start_col)),
+            Direction::First => self.search_forward(&needle, 0, 0),
+            Direction::Last => self.search_backward(&needle, self.lines.len().saturating_sub(1), None),
+            Direction::All => self.search_forward(&needle, 0, 0),
+        }
+    }
+
+    /// Forward search starting at (`start_line`, `start_col`). `needle` must
+    /// already be lowercased.
+    fn search_forward(&self, needle: &str, start_line: usize, start_col: usize) -> Option<(usize, usize)> {
+        for i in start_line..self.lines.len() {
+            let Some(line) = self.lines.get(i) else { continue };
+            if !line.is_data() {
+                continue;
             }
-            Direction::Prev => {
-                for i in (0..=start_line).rev() {
-                    if let Some(line) = self.lines.get(i) {
-                        if !line.is_data() {
-                            continue;
-                        }
-                        let data_lower = line.data.to_lowercase();
-                        let search_until = if i == start_line {
-                            start_col
-                        } else {
-                            data_lower.len()
-                        };
-                        if let Some(pos) = data_lower[..search_until].rfind(&query_lower) {
-                            return Some((i, pos));
-                        }
-                    }
-                }
-                None
+            let data_lower = line.data.to_lowercase();
+            let search_from = if i == start_line { start_col } else { 0 };
+            if search_from > data_lower.len() {
+                continue;
             }
-            Direction::First => {
-                for i in 0..self.lines.len() {
-                    if let Some(line) = self.lines.get(i) {
-                        if !line.is_data() {
-                            continue;
-                        }
-                        let data_lower = line.data.to_lowercase();
-                        if let Some(pos) = data_lower.find(&query_lower) {
-                            return Some((i, pos));
-                        }
-                    }
-                }
-                None
-            }
-            Direction::Last => {
-                for i in (0..self.lines.len()).rev() {
-                    if let Some(line) = self.lines.get(i) {
-                        if !line.is_data() {
-                            continue;
-                        }
-                        let data_lower = line.data.to_lowercase();
-                        if let Some(pos) = data_lower.rfind(&query_lower) {
-                            return Some((i, pos));
-                        }
-                    }
-                }
-                None
-            }
-            Direction::All => {
-                // For ALL, return the first match; caller counts all
-                self.find_text(query, 0, 0, Direction::First)
+            if let Some(pos) = data_lower[search_from..].find(needle) {
+                return Some((i, search_from + pos));
             }
         }
+        None
+    }
+
+    /// Backward search ending before `end_col` on `start_line` (None = whole
+    /// line). `needle` must already be lowercased.
+    fn search_backward(
+        &self,
+        needle: &str,
+        start_line: usize,
+        end_col: Option<usize>,
+    ) -> Option<(usize, usize)> {
+        for i in (0..=start_line).rev() {
+            let Some(line) = self.lines.get(i) else { continue };
+            if !line.is_data() {
+                continue;
+            }
+            let data_lower = line.data.to_lowercase();
+            let search_until = match end_col {
+                Some(c) if i == start_line => c.min(data_lower.len()),
+                _ => data_lower.len(),
+            };
+            if let Some(pos) = data_lower[..search_until].rfind(needle) {
+                return Some((i, pos));
+            }
+        }
+        None
     }
 
     /// Count all occurrences of a string in data lines.
