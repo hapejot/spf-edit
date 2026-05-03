@@ -95,6 +95,36 @@ pub enum InputMode {
     Insert,
 }
 
+// --- Enter key behaviour ---
+//
+// SPFPC's original behaviour is "Enter submits, no newline key".
+// Modern editors expect a literal newline. Because crossterm 0.28
+// cannot distinguish Numpad Enter from Main Enter on Windows, the
+// user picks an alternative key combination here.
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum EnterMode {
+    /// Plain Enter submits; no newline key (the SPFPC default).
+    Legacy,
+    /// Plain Enter submits; Shift+Enter inserts a newline.
+    ShiftNewline,
+    /// Plain Enter submits; Alt+Enter inserts a newline.
+    AltNewline,
+}
+
+impl EnterMode {
+    /// Parse the value persisted in the SPFSETS profile.
+    /// Accepts "L"/"S"/"A" (case-insensitive) and falls back to
+    /// `Legacy` for anything unrecognised or empty.
+    pub fn from_profile(s: &str) -> Self {
+        match s.trim().to_ascii_uppercase().as_str() {
+            "S" | "SHIFT" => EnterMode::ShiftNewline,
+            "A" | "ALT" => EnterMode::AltNewline,
+            _ => EnterMode::Legacy,
+        }
+    }
+}
+
 // --- Direction for FIND ---
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]

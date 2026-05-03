@@ -80,10 +80,20 @@ impl Editor {
             None
         };
 
+        // Restore the user's Enter-key preference from the SPFSETS profile.
+        let enter_mode = panel_manager
+            .as_ref()
+            .and_then(|pm| pm.vars().profile_get("SPFSETS", "ZENTRKEY"))
+            .map(EnterMode::from_profile)
+            .unwrap_or(EnterMode::Legacy);
+
+        let mut input = InputHandler::new();
+        input.enter_mode = enter_mode;
+
         Ok(Editor {
             buffer,
             screen,
-            input: InputHandler::new(),
+            input,
             panel_manager,
             running: true,
             last_find: None,
@@ -179,6 +189,11 @@ impl Editor {
                 self.cycle_focus_backward();
             }
 
+            EditorAction::Newline => {
+                debug!("Action: Newline (regular Enter)");
+                self.handle_newline();
+            }
+
             EditorAction::Enter => {
                 debug!("Action: Enter — processing commands");
                 self.handle_enter();
@@ -204,6 +219,8 @@ impl Editor {
                             }
                             // Force full redraw after returning from panel
                             self.needs_full_redraw = true;
+                            // Pick up any updated EDITOR OPTIONS settings.
+                            self.refresh_settings();
                         } else {
                             self.screen.message = Some(Message {
                                 text: format!("Panel not found: {panel_id}"),
@@ -763,6 +780,39 @@ impl Editor {
                 self.update_cursor_line_index();
             }
             _ => {}
+        }
+    }
+
+    // --- Newline processing (regular Enter key) ---
+
+    /// Re-read editor settings (e.g. Enter-key mode) from the SPFSETS
+    /// profile after a panel display might have changed them.
+    fn refresh_settings(&mut self) {
+        if let Some(ref pm) = self.panel_manager {
+            if let Some(val) = pm.vars().profile_get("SPFSETS", "ZENTRKEY") {
+                self.input.enter_mode = EnterMode::from_profile(val);
+            }
+        }
+    }
+
+    /// Handle the regular Enter key: insert a blank line below the
+    /// cursor (when in the data area) and move the cursor to it.
+    /// Outside the data area this is a no-op.
+    fn handle_newline(&mut self) {
+        match self.input.focus {
+            FieldFocus::DataArea { .. } | FieldFocus::PrefixArea { .. } => {
+                let idx = self.cursor_line_index;
+                self.buffer.insert_lines_after(idx, 1);
+                self.cursor_line_index = idx + 1;
+                self.cursor_col = 0;
+                if let Some(row) = self.screen.line_to_screen_row(self.cursor_line_index) {
+                    self.input.focus = FieldFocus::DataArea { screen_row: row };
+                }
+                self.needs_full_redraw = true;
+            }
+            _ => {
+                // Command line / scroll field: no-op (use Numpad Enter to submit).
+            }
         }
     }
 

@@ -51,7 +51,8 @@ use tracing_subscriber::EnvFilter;
 
 use crossterm::{
     cursor, execute,
-    terminal::{self, EnterAlternateScreen, LeaveAlternateScreen},
+    event::{KeyboardEnhancementFlags, PopKeyboardEnhancementFlags, PushKeyboardEnhancementFlags},
+    terminal::{self, EnterAlternateScreen, LeaveAlternateScreen, supports_keyboard_enhancement},
 };
 
 use crate::buffer::FileBuffer;
@@ -187,12 +188,26 @@ fn run_editor(filename: &str, record_format: RecordFormat, browse_mode: bool) ->
     terminal::enable_raw_mode()?;
     let mut stdout = io::stdout();
     execute!(stdout, EnterAlternateScreen, cursor::Show)?;
+    // Best-effort: enable keyboard enhancement so we can distinguish
+    // Numpad Enter (submit) from regular Enter (newline).
+    let kbd_enhanced = supports_keyboard_enhancement().unwrap_or(false);
+    if kbd_enhanced {
+        let _ = execute!(
+            stdout,
+            PushKeyboardEnhancementFlags(
+                KeyboardEnhancementFlags::DISAMBIGUATE_ESCAPE_CODES
+            )
+        );
+    }
 
     // Create and run editor
     let mut editor = Editor::new(buffer)?;
     let result = editor.run(&mut stdout);
 
     // Restore terminal — must happen even on error
+    if kbd_enhanced {
+        let _ = execute!(stdout, PopKeyboardEnhancementFlags);
+    }
     execute!(stdout, LeaveAlternateScreen, cursor::Show)?;
     terminal::disable_raw_mode()?;
 

@@ -8,146 +8,68 @@
   "type": "browse",
   "body": {
     "rows": [
-      {
-        "type": "command",
-        "variable": "ZCMD"
-      },
-      {
-        "type": "blank"
-      },
-      {
-        "type": "text",
-        "content": "PROJECT FILE:"
-      },
-      {
-        "type": "field_row",
+      { "type": "command",   "variable": "ZCMD" },
+      { "type": "blank" },
+      { "type": "text",      "content": "PROJECT FILE:" },
+      { "type": "field_row",
         "fields": [
-          {
-            "type": "text",
-            "content": "DRIVE"
-          },
-          {
-            "type": "input",
-            "variable": "Z",
-            "width": 2,
-            "field_connector": true
-          }
+          { "type": "text",  "content": "DRIVE" },
+          { "type": "input", "variable": "Z", "width": 2, "field_connector": true }
+        ]
+      },
+      { "type": "field_row",
+        "fields": [
+          { "type": "text",  "content": "PATH" },
+          { "type": "input", "variable": "ZFPATH1", "field_connector": true }
+        ]
+      },
+      { "type": "field_row",
+        "fields": [
+          { "type": "text",  "content": "+PATH" },
+          { "type": "input", "variable": "ZFPATH2", "field_connector": true }
+        ]
+      },
+      { "type": "field_row",
+        "fields": [
+          { "type": "text",  "content": "+PATH" },
+          { "type": "input", "variable": "ZFPATH3", "field_connector": true }
         ]
       },
       {
         "type": "field_row",
         "fields": [
-          {
-            "type": "text",
-            "content": "PATH"
-          },
-          {
-            "type": "input",
-            "variable": "ZFPATH1",
-            "field_connector": true
-          },
-          {
-            "type": "text",
-            "content": "+PATH"
-          },
-          {
-            "type": "input",
-            "variable": "ZFPATH2",
-            "field_connector": true
-          },
-          {
-            "type": "text",
-            "content": "+PATH"
-          },
-          {
-            "type": "input",
-            "variable": "ZFPATH3",
-            "field_connector": true
-          }
+          { "type": "text", "content": "NAME" },
+          { "type": "input", "variable": "ZFNAME", "field_connector": true }
         ]
       },
-      {
-        "type": "field_row",
+      { "type": "text", "content": "(Blank or pattern for file selection list)" },
+      { "type": "blank" },
+      { "type": "field_row",
         "fields": [
-          {
-            "type": "text",
-            "content": "NAME"
-          },
-          {
-            "type": "input",
-            "variable": "ZFNAME",
-            "field_connector": true
-          }
+          { "type": "text", "content": "SYSTEM CUR DIR:" },
+          { "type": "output", "variable": "ZCURDIR" }
         ]
       },
-      {
-        "type": "text",
-        "content": "(Blank or pattern for file selection list)"
-      },
-      {
-        "type": "blank"
-      },
-      {
-        "type": "field_row",
+      { "type": "blank" },
+      { "type": "text", "content": "SYSTEM FILE SPECIFICATION:" },
+      { "type": "input", "variable": "ZFSPEC", "field_connector": true },
+      { "type": "blank" },
+      { "type": "field_row",
         "fields": [
-          {
-            "type": "text",
-            "content": "SYSTEM CUR DIR:"
-          },
-          {
-            "type": "output",
-            "variable": "ZCURDIR"
-          }
+          { "type": "text", "content": "PROFILE" },
+          { "type": "input", "variable": "ZPROF", "width": 8, "field_connector": true },
+          { "type": "text", "content": "+ (Blank defaults to file extension)" }
         ]
       },
-      {
-        "type": "blank"
-      },
-      {
-        "type": "text",
-        "content": "SYSTEM FILE SPECIFICATION:"
-      },
-      {
-        "type": "input",
-        "variable": "ZFSPEC",
-        "field_connector": true
-      },
-      {
-        "type": "blank"
-      },
-      {
-        "type": "field_row",
-        "fields": [
-          {
-            "type": "text",
-            "content": "PROFILE"
-          },
-          {
-            "type": "input",
-            "variable": "ZPROF",
-            "width": 8,
-            "field_connector": true
-          },
-          {
-            "type": "text",
-            "content": "+ (Blank defaults to file extension)"
-          }
-        ]
-      },
-      {
-        "type": "blank"
-      }
+      { "type": "blank" }
     ]
   },
   "init": {
     "help_panel": "S2R10000",
-    "zvars": [
-      "ZFDRIVE"
-    ]
+    "zvars": [ "ZFDRIVE" ]
   },
   "metadata": {
     "source_file": "S2DBROW.PAN",
-    "category": "browse",
-    "copyright": "(C) Copyright 1984-1994, Command Technology Corporation.  All Rights Reserved."
+    "category": "browse"
   }
 }

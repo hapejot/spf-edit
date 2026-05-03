@@ -12,7 +12,8 @@ use std::process::Command;
 
 use crossterm::{
     execute,
-    terminal::{self, EnterAlternateScreen, LeaveAlternateScreen},
+    event::{KeyboardEnhancementFlags, PopKeyboardEnhancementFlags, PushKeyboardEnhancementFlags},
+    terminal::{self, EnterAlternateScreen, LeaveAlternateScreen, supports_keyboard_enhancement},
 };
 
 use panel_runtime::PanelManager;
@@ -69,6 +70,15 @@ fn run(panels_dir: &Path) -> io::Result<()> {
     terminal::enable_raw_mode()?;
     let mut stdout = io::stdout();
     execute!(stdout, EnterAlternateScreen)?;
+    let kbd_enhanced = supports_keyboard_enhancement().unwrap_or(false);
+    if kbd_enhanced {
+        let _ = execute!(
+            stdout,
+            PushKeyboardEnhancementFlags(
+                KeyboardEnhancementFlags::DISAMBIGUATE_ESCAPE_CODES
+            )
+        );
+    }
 
     // Install panic hook for terminal cleanup
     let original_hook = std::panic::take_hook();
@@ -82,6 +92,9 @@ fn run(panels_dir: &Path) -> io::Result<()> {
     let result = main_loop(&mut stdout, &mut manager);
 
     // Cleanup terminal
+    if kbd_enhanced {
+        let _ = execute!(stdout, PopKeyboardEnhancementFlags);
+    }
     execute!(stdout, LeaveAlternateScreen)?;
     terminal::disable_raw_mode()?;
 
@@ -142,6 +155,10 @@ fn main_loop<W: Write>(stdout: &mut W, manager: &mut PanelManager) -> io::Result
 /// Temporarily leaves raw mode / alternate screen so spf-edit can take over.
 fn launch_spf_edit<W: Write>(stdout: &mut W, filename: &str, browse: bool) -> io::Result<()> {
     // Leave raw mode + alternate screen
+    let kbd_enhanced = supports_keyboard_enhancement().unwrap_or(false);
+    if kbd_enhanced {
+        let _ = execute!(stdout, PopKeyboardEnhancementFlags);
+    }
     execute!(stdout, LeaveAlternateScreen)?;
     terminal::disable_raw_mode()?;
 
@@ -161,6 +178,14 @@ fn launch_spf_edit<W: Write>(stdout: &mut W, filename: &str, browse: bool) -> io
     // Re-enter raw mode + alternate screen (even if spf-edit failed)
     terminal::enable_raw_mode()?;
     execute!(stdout, EnterAlternateScreen)?;
+    if kbd_enhanced {
+        let _ = execute!(
+            stdout,
+            PushKeyboardEnhancementFlags(
+                KeyboardEnhancementFlags::DISAMBIGUATE_ESCAPE_CODES
+            )
+        );
+    }
 
     // Report launch errors (not spf-edit's own exit code)
     if let Err(e) = status {

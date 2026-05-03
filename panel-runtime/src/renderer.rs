@@ -96,51 +96,77 @@ impl PanelRenderer {
         queue!(stdout, Clear(ClearType::All))?;
 
         // ── Row 0: Title line ──────────────────────────────────────────
+        // Layout:  product (left)   main (centered)   version (right)
         queue!(
             stdout,
             MoveTo(0, 0),
             SetForegroundColor(PanelColors::TITLE_FG),
             SetBackgroundColor(PanelColors::TITLE_BG),
+            Print(format!("{:w$}", "", w = w)),
         )?;
 
-        let title_text = if let Some(ref title) = panel.title {
+        let (product, main, version) = if let Some(ref title) = panel.title {
             let product = title
                 .product_var
                 .as_ref()
                 .and_then(|v| vars.get(v))
-                .unwrap_or("SPF-Edit");
+                .map(|s| s.to_string())
+                .unwrap_or_default();
             let main = vars.resolve(&title.text);
-            if let Some(ref prefix) = title.prefix {
-                format!("{product}  {prefix} - {main}")
-            } else {
-                format!("{product}  {main}")
-            }
+            let version = title
+                .version_var
+                .as_ref()
+                .and_then(|v| vars.get(v))
+                .map(|s| s.to_string())
+                .unwrap_or_default();
+            (product, main, version)
         } else {
-            format!("SPF-Edit  {}", panel.id)
+            (String::new(), panel.id.clone(), String::new())
         };
 
-        let padded = format!("{title_text:<w$}", w = w);
-        queue!(stdout, Print(&padded[..w.min(padded.len())]))?;
+        // Truncate to safe widths
+        let product_t: String = product.chars().take(w).collect();
+        let version_t: String = version.chars().take(w).collect();
+        let main_t: String = main
+            .chars()
+            .take(w.saturating_sub(product_t.len() + version_t.len() + 2))
+            .collect();
+
+        // Print product on the left
+        if !product_t.is_empty() {
+            queue!(stdout, MoveTo(0, 0), Print(&product_t))?;
+        }
+
+        // Print main, centered
+        if !main_t.is_empty() {
+            let center_col = (w.saturating_sub(main_t.len())) / 2;
+            queue!(stdout, MoveTo(center_col as u16, 0), Print(&main_t))?;
+        }
+
+        // Print version on the right (will be overwritten by error msg if present)
+        if !version_t.is_empty() {
+            let right_col = w.saturating_sub(version_t.len());
+            queue!(stdout, MoveTo(right_col as u16, 0), Print(&version_t))?;
+        }
 
         // If there's an error message, show it right-aligned on title line
         if let Some(msg) = error_msg {
             let msg_start = w.saturating_sub(msg.len() + 1);
-            if msg_start > title_text.len() + 2 {
-                queue!(
-                    stdout,
-                    MoveTo(msg_start as u16, 0),
-                    SetForegroundColor(PanelColors::ERROR_FG),
-                    SetBackgroundColor(PanelColors::TITLE_BG),
-                    Print(msg),
-                )?;
-            }
+            queue!(
+                stdout,
+                MoveTo(msg_start as u16, 0),
+                SetForegroundColor(PanelColors::ERROR_FG),
+                SetBackgroundColor(PanelColors::TITLE_BG),
+                Print(msg),
+            )?;
         }
 
         queue!(stdout, ResetColor)?;
 
         // ── Body rows ──────────────────────────────────────────────────
+        // Reserve the last 3 rows: 2 PF-key rows + 1 status bar.
         let mut row: u16 = 1;
-        let max_row = height.saturating_sub(2); // reserve last row for status bar
+        let max_row = height.saturating_sub(4);
 
         for body_row in &panel.body.rows {
             if row > max_row {
@@ -166,6 +192,9 @@ impl PanelRenderer {
             row += 1;
         }
 
+        // ── PF key bar (rows H-3 and H-2) ─────────────────────────────
+        Self::draw_pf_key_bar(stdout, panel, vars, w, height)?;
+
         // ── Status bar (last row) ─────────────────────────────────────
         Self::draw_status_bar(stdout, &panel.id, w, height)?;
 
@@ -173,6 +202,74 @@ impl PanelRenderer {
         stdout.flush()?;
 
         Ok(fields)
+    }
+
+    /// Draw the two-row PF key bar (F1-F6 on the upper row, F7-F12 on
+    /// the lower row). Per-panel `pfkeys` overrides take precedence over
+    /// the runtime defaults stored in the variable pool.
+    fn draw_pf_key_bar<W: Write>(
+        stdout: &mut W,
+        panel: &Panel,
+        vars: &VarPool,
+        width: usize,
+        height: u16,
+    ) -> io::Result<()> {
+        if height < 4 {
+            return Ok(());
+        }
+        let top_row = height.saturating_sub(3);
+        let bot_row = height.saturating_sub(2);
+
+        // Resolve the label for PF key n: per-panel override → default.
+        let resolve = |n: u8| -> Option<String> {
+            let key = format!("F{n}");
+            if let Some(def) = panel
+                .pfkeys
+                .iter()
+                .find(|(k, _)| k.eq_ignore_ascii_case(&key))
+                .map(|(_, v)| v)
+            {
+                let label = def
+                    .label
+                    .clone()
+                    .unwrap_or_else(|| def.command.to_uppercase());
+                Some(label)
+            } else {
+                vars.pf_key(n).map(|d| d.label.clone())
+            }
+        };
+
+        // Build six-cell rows
+        let cell_w = width / 6;
+        for (row_y, range) in [(top_row, 1u8..=6), (bot_row, 7u8..=12)] {
+            // Clear row background
+            queue!(
+                stdout,
+                MoveTo(0, row_y),
+                SetForegroundColor(PanelColors::TEXT_FG),
+                SetBackgroundColor(PanelColors::TEXT_BG),
+                Print(format!("{:w$}", "", w = width)),
+            )?;
+            for (i, n) in range.enumerate() {
+                let label = resolve(n).unwrap_or_default();
+                if label.is_empty() {
+                    continue;
+                }
+                let text = format!("F{n}={label}");
+                let col = (i * cell_w) as u16;
+                let avail = cell_w.min(width.saturating_sub(col as usize));
+                let truncated: String = text.chars().take(avail).collect();
+                queue!(
+                    stdout,
+                    MoveTo(col, row_y),
+                    SetForegroundColor(PanelColors::BOX_FG),
+                    SetBackgroundColor(PanelColors::TEXT_BG),
+                    Print(&truncated),
+                )?;
+            }
+        }
+        queue!(stdout, ResetColor)?;
+        Ok(())
     }
 
     /// Draw the status bar on the last terminal row.
@@ -380,13 +477,13 @@ impl PanelRenderer {
                     corner_tl,
                     std::iter::repeat(top).take(width.saturating_sub(2)).collect::<String>(),
                     corner_tr,
-                );
+                ).chars().take(width).collect::<String>();
                 queue!(
                     stdout,
                     MoveTo(0, row),
                     SetForegroundColor(PanelColors::BOX_FG),
                     SetBackgroundColor(PanelColors::BOX_BG),
-                    Print(&top_line[..top_line.len().min(width)]),
+                    Print(&top_line),
                 )?;
                 let mut current_row = row + 1;
 
@@ -476,13 +573,13 @@ impl PanelRenderer {
                     corner_bl,
                     std::iter::repeat(bottom).take(width.saturating_sub(2)).collect::<String>(),
                     corner_br,
-                );
+                ).chars().take(width).collect::<String>();
                 queue!(
                     stdout,
                     MoveTo(0, current_row),
                     SetForegroundColor(PanelColors::BOX_FG),
                     SetBackgroundColor(PanelColors::BOX_BG),
-                    Print(&bottom_line[..bottom_line.len().min(width)]),
+                    Print(&bottom_line),
                 )?;
 
                 Ok(current_row - row + 1)

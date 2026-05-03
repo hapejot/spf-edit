@@ -1,0 +1,128 @@
+{
+  "id": "SPFKEYS",
+  "title": {
+    "product_var": "ZPRODID",
+    "text": "PFKEY DEFINITIONS - NORMAL KEYS",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "form",
+  "body": {
+    "rows": [
+      { "type": "command", "variable": "ZCMD" },
+      { "type": "blank" },
+      { "type": "field_row", "fields": [
+        { "type": "text",   "content": " NUMBER OF PF KEYS:  " },
+        { "type": "output", "variable": "ZNPFKEY" }
+      ] },
+      { "type": "blank" },
+
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " PF01    ==   F1   ==> " },
+        { "type": "input", "variable": "ZPF01CMD", "width": 40 }
+      ] },
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " PF02    ==   F2   ==> " },
+        { "type": "input", "variable": "ZPF02CMD", "width": 40 }
+      ] },
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " PF03    ==   F3   ==> " },
+        { "type": "input", "variable": "ZPF03CMD", "width": 40 }
+      ] },
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " PF04    ==   F4   ==> " },
+        { "type": "input", "variable": "ZPF04CMD", "width": 40 }
+      ] },
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " PF05    ==   F5   ==> " },
+        { "type": "input", "variable": "ZPF05CMD", "width": 40 }
+      ] },
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " PF06    ==   F6   ==> " },
+        { "type": "input", "variable": "ZPF06CMD", "width": 40 }
+      ] },
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " PF07    ==   F7   ==> " },
+        { "type": "input", "variable": "ZPF07CMD", "width": 40 }
+      ] },
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " PF08    ==   F8   ==> " },
+        { "type": "input", "variable": "ZPF08CMD", "width": 40 }
+      ] },
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " PF09    ==   F9   ==> " },
+        { "type": "input", "variable": "ZPF09CMD", "width": 40 }
+      ] },
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " PF10    ==   F10  ==> " },
+        { "type": "input", "variable": "ZPF10CMD", "width": 40 }
+      ] },
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " PF11    ==   F11  ==> " },
+        { "type": "input", "variable": "ZPF11CMD", "width": 40 }
+      ] },
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " PF12    ==   F12  ==> " },
+        { "type": "input", "variable": "ZPF12CMD", "width": 40 }
+      ] },
+      { "type": "blank" },
+
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " PF01 LABEL ==> " },
+        { "type": "input", "variable": "ZPF01LBL", "width": 8 },
+        { "type": "text",  "content": "    PF02 LABEL ==> " },
+        { "type": "input", "variable": "ZPF02LBL", "width": 8 },
+        { "type": "text",  "content": "    PF03 LABEL ==> " },
+        { "type": "input", "variable": "ZPF03LBL", "width": 8 }
+      ] },
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " PF04 LABEL ==> " },
+        { "type": "input", "variable": "ZPF04LBL", "width": 8 },
+        { "type": "text",  "content": "    PF05 LABEL ==> " },
+        { "type": "input", "variable": "ZPF05LBL", "width": 8 },
+        { "type": "text",  "content": "    PF06 LABEL ==> " },
+        { "type": "input", "variable": "ZPF06LBL", "width": 8 }
+      ] },
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " PF07 LABEL ==> " },
+        { "type": "input", "variable": "ZPF07LBL", "width": 8 },
+        { "type": "text",  "content": "    PF08 LABEL ==> " },
+        { "type": "input", "variable": "ZPF08LBL", "width": 8 },
+        { "type": "text",  "content": "    PF09 LABEL ==> " },
+        { "type": "input", "variable": "ZPF09LBL", "width": 8 }
+      ] },
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " PF10 LABEL ==> " },
+        { "type": "input", "variable": "ZPF10LBL", "width": 8 },
+        { "type": "text",  "content": "    PF11 LABEL ==> " },
+        { "type": "input", "variable": "ZPF11LBL", "width": 8 },
+        { "type": "text",  "content": "    PF12 LABEL ==> " },
+        { "type": "input", "variable": "ZPF12LBL", "width": 8 }
+      ] }
+    ]
+  },
+  "init": {
+    "help_panel": "S2P05300",
+    "assignments": {
+      "ZPRODID": "SPF/PC(1)",
+      "ZNPFKEY": "12"
+    }
+  },
+  "pfkeys": {
+    "F1":  { "command": "HELP",     "label": "HELP" },
+    "F2":  { "command": "",         "label": "" },
+    "F3":  { "command": "END",      "label": "END" },
+    "F4":  { "command": "RETURN",   "label": "RETURN" },
+    "F5":  { "command": "",         "label": "" },
+    "F6":  { "command": "",         "label": "" },
+    "F7":  { "command": "UP",       "label": "UP" },
+    "F8":  { "command": "DOWN",     "label": "DOWN" },
+    "F9":  { "command": "",         "label": "" },
+    "F10": { "command": "",         "label": "" },
+    "F11": { "command": "",         "label": "" },
+    "F12": { "command": "RETRIEVE", "label": "RETRIEVE" }
+  },
+  "metadata": {
+    "source_file": "SPFKEYS.json",
+    "category": "spf"
+  }
+}

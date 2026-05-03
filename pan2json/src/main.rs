@@ -214,6 +214,7 @@ fn convert_pan_file(path: &Path, output_dir: &Path, verbose: bool) -> Result<Pan
         init,
         reinit,
         proc_section,
+        pfkeys: std::collections::HashMap::new(),
         metadata: Metadata {
             source_file: filename.clone(),
             category: category.to_string(),

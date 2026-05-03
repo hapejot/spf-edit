@@ -7,7 +7,7 @@ use std::io::{self, Write};
 
 use crossterm::{
     cursor::MoveTo,
-    event::{self, Event, KeyCode, KeyEvent, KeyEventKind, KeyModifiers},
+    event::{self, Event, KeyCode, KeyEvent, KeyEventKind, KeyEventState, KeyModifiers},
     queue, terminal,
 };
 
@@ -57,6 +57,8 @@ impl PanelEngine {
         let mut scroll_text = String::from("PAGE");
         let mut error_msg: Option<String> = None;
         let mut current_field_idx: usize = 0;
+        // Last command submitted via Enter — used to implement RETRIEVE.
+        let mut last_submitted = String::new();
 
         loop {
             // Get terminal size
@@ -100,16 +102,55 @@ impl PanelEngine {
 
             match evt {
                 Event::Key(key_event) if key_event.kind == KeyEventKind::Press => {
-                    match Self::handle_key(
+                    let mut action = Self::handle_key(
                         key_event,
                         &mut command_text,
                         &mut scroll_text,
                         &fields,
                         &mut current_field_idx,
                         vars,
-                    ) {
+                    );
+
+                    // Remap PF keys to standard actions, applying per-panel
+                    // overrides on top of the runtime defaults.
+                    if let KeyAction::PfKey(n) = action {
+                        let cmd = Self::resolve_pf_key(panel, vars, n);
+                        debug!(pf = n, command = %cmd, "PF key pressed");
+                        if cmd.is_empty() {
+                            action = KeyAction::Continue;
+                        } else if cmd.eq_ignore_ascii_case("RETRIEVE") {
+                            command_text = last_submitted.clone();
+                            action = KeyAction::Continue;
+                        } else if cmd.eq_ignore_ascii_case("HELP") {
+                            if let Some(target) = panel
+                                .init
+                                .as_ref()
+                                .and_then(|i| i.help_panel.clone())
+                            {
+                                Self::save_field_profile(vars, &panel.id, &fields);
+                                return Ok(PanelResult::Navigate(target));
+                            }
+                            action = KeyAction::Continue;
+                        } else if cmd.eq_ignore_ascii_case("END")
+                            || cmd.eq_ignore_ascii_case("RETURN")
+                            || cmd.eq_ignore_ascii_case("UP")
+                        {
+                            action = KeyAction::F3;
+                        } else {
+                            command_text = cmd;
+                            action = KeyAction::Enter;
+                        }
+                    }
+
+                    match action {
                         KeyAction::Continue => {}
+                        KeyAction::PfKey(_) => {}
                         KeyAction::Enter => {
+                            // Remember the submitted command for RETRIEVE.
+                            let trimmed = command_text.trim().to_string();
+                            if !trimmed.is_empty() {
+                                last_submitted = trimmed;
+                            }
                             // Store command text in var pool for TRANS navigation.
                             // Non-command field values are already up-to-date in
                             // vars (typed in real-time via handle_key), so we only
@@ -258,6 +299,21 @@ impl PanelEngine {
         }
     }
 
+    /// Resolve a PF key (1..24) to its command string.
+    /// Per-panel `pfkeys` overrides take precedence over the runtime
+    /// defaults stored in the variable pool.
+    fn resolve_pf_key(panel: &Panel, vars: &VarPool, n: u8) -> String {
+        let key = format!("F{n}");
+        if let Some((_, def)) = panel
+            .pfkeys
+            .iter()
+            .find(|(k, _)| k.eq_ignore_ascii_case(&key))
+        {
+            return def.command.clone();
+        }
+        vars.pf_key(n).map(|d| d.command.clone()).unwrap_or_default()
+    }
+
     /// Handle a key event within the panel engine.
     fn handle_key(
         key: KeyEvent,
@@ -272,8 +328,26 @@ impl PanelEngine {
         }
 
         match key.code {
-            KeyCode::Enter => KeyAction::Enter,
+            // Numpad Enter has the ENTER (submit) semantic; the regular
+            // Enter key is a no-op here so it can be used as a literal
+            // newline in editor contexts. Disambiguation requires
+            // `KeyboardEnhancementFlags::DISAMBIGUATE_ESCAPE_CODES`
+            // (kitty protocol).
+            //
+            // Windows note: crossterm 0.28 on Windows reads console
+            // events directly through the WinAPI and does NOT surface
+            // the ENHANCED_KEY bit, so both Enter keys arrive as
+            // `KeyCode::Enter` with no `KEYPAD` state. To keep panels
+            // usable there, we treat plain Enter as submit on Windows.
+            KeyCode::Enter => {
+                if key.state.contains(KeyEventState::KEYPAD) || cfg!(windows) {
+                    KeyAction::Enter
+                } else {
+                    KeyAction::Continue
+                }
+            }
             KeyCode::Esc | KeyCode::F(3) => KeyAction::F3,
+            KeyCode::F(n) if (1..=24).contains(&n) => KeyAction::PfKey(n),
 
             KeyCode::Tab => {
                 // Move to next input field
@@ -525,4 +599,6 @@ enum KeyAction {
     Enter,
     F3,
     Quit,
+    /// PF key 1..24 was pressed.
+    PfKey(u8),
 }

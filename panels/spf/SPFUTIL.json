@@ -6,43 +6,16 @@
   "type": "menu",
   "body": {
     "rows": [
-      {
-        "type": "command",
-        "variable": "ZCMD"
-      },
-      {
-        "type": "blank"
-      },
-      {
-        "type": "text",
-        "content": "Utility functions:"
-      },
-      {
-        "type": "blank"
-      },
-      {
-        "type": "text",
-        "content": "   1  COMPARE   - Compare two files"
-      },
-      {
-        "type": "text",
-        "content": "   2  SEARCH    - Search across files"
-      },
-      {
-        "type": "text",
-        "content": "   3  CONVERT   - Convert PAN files to JSON"
-      },
-      {
-        "type": "blank"
-      },
-      {
-        "type": "divider",
-        "style": "single"
-      },
-      {
-        "type": "text",
-        "content": " Utilities are not yet implemented. Press F3 to return."
-      }
+      {        "type": "command",     "variable": "ZCMD"      },
+      {        "type": "blank"      },
+      {        "type": "text",        "content": "Utility functions:"      },
+      {        "type": "blank"      },
+      {        "type": "text",        "content": "   1  COMPARE   - Compare two files"      },
+      {        "type": "text",        "content": "   2  SEARCH    - Search across files"      },
+      {        "type": "text",        "content": "   3  CONVERT   - Convert PAN files to JSON"      },
+      {        "type": "blank"      },
+      {        "type": "divider",     "style": "single"      },
+      {        "type": "text",        "content": " Utilities are not yet implemented. Press F3 to return."      }
     ]
   },
   "metadata": {

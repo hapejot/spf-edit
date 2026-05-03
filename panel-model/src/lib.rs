@@ -20,7 +20,21 @@ pub struct Panel {
     pub reinit: Option<ReinitSection>,
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub proc_section: Option<ProcSection>,
+    /// Per-panel PF key overrides. Keys are "F1".."F24" (case-insensitive
+    /// when read by the runtime). When a PF key is pressed, this map is
+    /// checked first; falls back to the runtime's global defaults.
+    #[serde(default, skip_serializing_if = "HashMap::is_empty")]
+    pub pfkeys: HashMap<String, PfKeyDef>,
     pub metadata: Metadata,
+}
+
+/// Definition of a single PF key: the command to submit and an optional
+/// short label to display in the status bar.
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct PfKeyDef {
+    pub command: String,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub label: Option<String>,
 }
 
 // ─── Title ──────────────────────────────────────────────────────────────────
