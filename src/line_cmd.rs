@@ -42,33 +42,6 @@ pub struct LineCmdResult {
     pub error: Option<String>,
 }
 
-/// Collect all pending line commands from modified prefix areas.
-pub fn collect_line_commands(buffer: &FileBuffer) -> Vec<PendingLineCmd> {
-    let mut commands = Vec::new();
-
-    for i in 0..buffer.lines.len() {
-        if let Some(line) = buffer.lines.get(i) {
-            if let Some(ref prefix_text) = line.prefix_cmd {
-                match parse_prefix_command(prefix_text) {
-                    PrefixParseResult::Command(cmd) => {
-                        commands.push(PendingLineCmd { cmd, line_index: i });
-                    }
-                    PrefixParseResult::Error(msg) => {
-                        commands.push(PendingLineCmd {
-                            cmd: ParsedLineCmd::Label(String::new()), // placeholder
-                            line_index: i,
-                        });
-                        // We'll handle the error in validation
-                    }
-                    PrefixParseResult::None => {}
-                }
-            }
-        }
-    }
-
-    commands
-}
-
 /// Validate and execute all pending line commands.
 /// Returns an error message if validation fails, None on success.
 pub fn execute_line_commands(buffer: &mut FileBuffer) -> LineCmdResult {
