@@ -14,7 +14,17 @@ use std::collections::HashMap;
 use std::io;
 use std::path::{Path, PathBuf};
 
+use chrono::Local;
 use tracing::{debug, info, warn};
+
+/// A PF key binding: a label shown in the function-key bar plus the
+/// command that gets submitted (as if typed on the command line and
+/// followed by Enter) when the key is pressed.
+#[derive(Debug, Clone)]
+pub struct PfKeyDef {
+    pub label: String,
+    pub command: String,
+}
 
 /// The variable pool for panel display.
 pub struct VarPool {
@@ -25,6 +35,9 @@ pub struct VarPool {
     /// Per-panel profile variables (persist to disk across sessions).
     /// Outer key = panel ID (uppercase), inner map = variable name → value.
     profiles: HashMap<String, HashMap<String, String>>,
+    /// Default PF key bindings (F1..F24). Per-panel overrides live in the
+    /// panel JSON itself.
+    pf_keys: std::collections::BTreeMap<u8, PfKeyDef>,
 }
 
 impl VarPool {
@@ -33,21 +46,175 @@ impl VarPool {
 
         // System variables
         shared.insert("ZPRODTSK".into(), "SPF-Edit".into());
-        shared.insert("ZSHRTVER".into(), env!("CARGO_PKG_VERSION").into());
-        shared.insert("ZOS".into(), std::env::consts::OS.into());
-        shared.insert("ZUSER".into(), whoami().into());
-        shared.insert("ZDATE".into(), today_date());
-        shared.insert("ZTIME".into(), "".into()); // updated at display time
+        shared.insert(
+            "ZSHRTVER".into(),
+            format!("V {}", env!("CARGO_PKG_VERSION")),
+        );
+        shared.insert("ZVERSION".into(), env!("CARGO_PKG_VERSION").into());
+        shared.insert("ZOS".into(), os_name().into());
+        shared.insert("ZUSER".into(), whoami().to_uppercase());
         shared.insert(
             "ZENVIR".into(),
             format!("Rust/{}", env!("CARGO_PKG_VERSION")),
         );
 
-        VarPool {
+        let mut pool = VarPool {
             shared,
             local: HashMap::new(),
             profiles: HashMap::new(),
+            pf_keys: std::collections::BTreeMap::new(),
+        };
+        pool.init_default_pf_keys();
+        pool.refresh_clock();
+        pool
+    }
+
+    /// Install the SPF/PC default PF key set (F1..F12).
+    fn init_default_pf_keys(&mut self) {
+        let defaults: &[(u8, &str, &str)] = &[
+            (1, "HELP", "HELP"),
+            (2, "SPLIT", "SPLIT"),
+            (3, "END", "END"),
+            (4, "RETURN", "RETURN"),
+            (5, "RFIND", "RFIND"),
+            (6, "RCHANGE", "RCHANGE"),
+            (7, "UP", "UP"),
+            (8, "DOWN", "DOWN"),
+            (9, "SWAP", "SWAP"),
+            (10, "LEFT", "LEFT"),
+            (11, "RIGHT", "RIGHT"),
+            (12, "RETRIEVE", "RETRIEVE"),
+        ];
+        for (n, label, cmd) in defaults {
+            self.pf_keys.insert(
+                *n,
+                PfKeyDef {
+                    label: (*label).to_string(),
+                    command: (*cmd).to_string(),
+                },
+            );
         }
+    }
+
+    /// Look up the default binding for PF key `n` (1..=24).
+    pub fn pf_key(&self, n: u8) -> Option<&PfKeyDef> {
+        self.pf_keys.get(&n)
+    }
+
+    /// Iterate the default PF key bindings in ascending key order.
+    pub fn pf_keys(&self) -> impl Iterator<Item = (u8, &PfKeyDef)> {
+        self.pf_keys.iter().map(|(k, v)| (*k, v))
+    }
+
+    /// Set or replace a default PF key binding.
+    pub fn set_pf_key(&mut self, n: u8, label: &str, command: &str) {
+        self.pf_keys.insert(
+            n,
+            PfKeyDef {
+                label: label.to_string(),
+                command: command.to_string(),
+            },
+        );
+    }
+
+    /// Look up a value in the saved profile for `panel_id`, without
+    /// loading the profile into the local pool.
+    #[allow(dead_code)]
+    pub fn profile_get(&self, panel_id: &str, var: &str) -> Option<&str> {
+        self.profiles
+            .get(&panel_id.to_uppercase())
+            .and_then(|p| p.get(&var.to_uppercase()))
+            .map(|s| s.as_str())
+    }
+
+    /// Update PF key bindings from `ZPFnnCMD` / `ZPFnnLBL` variables in
+    /// the current local pool. Used after the SPFKEYS configuration panel
+    /// returns so the user's edits take effect immediately.
+    pub fn apply_pf_keys_from_local(&mut self) {
+        for n in 1u8..=24 {
+            let cmd_key = format!("ZPF{:02}CMD", n);
+            let lbl_key = format!("ZPF{:02}LBL", n);
+            let cmd = self
+                .local
+                .get(&cmd_key)
+                .or_else(|| self.shared.get(&cmd_key))
+                .cloned();
+            let label = self
+                .local
+                .get(&lbl_key)
+                .or_else(|| self.shared.get(&lbl_key))
+                .cloned();
+            if let Some(cmd) = cmd {
+                let cmd = cmd.trim().to_string();
+                if cmd.is_empty() {
+                    self.pf_keys.remove(&n);
+                } else {
+                    let label = label
+                        .map(|s| s.trim().to_string())
+                        .filter(|s| !s.is_empty())
+                        .unwrap_or_else(|| cmd.to_uppercase());
+                    self.pf_keys.insert(n, PfKeyDef { label, command: cmd });
+                }
+            }
+        }
+    }
+
+    /// Update PF key bindings from a saved profile (typically the
+    /// SPFKEYS panel's profile). Called once at startup so user edits
+    /// persist across sessions.
+    pub fn apply_pf_keys_from_profile(&mut self, panel_id: &str) {
+        let key = panel_id.to_uppercase();
+        let entries: Vec<(u8, Option<String>, Option<String>)> = (1u8..=24)
+            .filter_map(|n| {
+                let profile = self.profiles.get(&key)?;
+                let cmd = profile.get(&format!("ZPF{:02}CMD", n)).cloned();
+                let lbl = profile.get(&format!("ZPF{:02}LBL", n)).cloned();
+                if cmd.is_some() || lbl.is_some() {
+                    Some((n, cmd, lbl))
+                } else {
+                    None
+                }
+            })
+            .collect();
+        for (n, cmd, lbl) in entries {
+            if let Some(cmd) = cmd {
+                let cmd = cmd.trim().to_string();
+                if cmd.is_empty() {
+                    self.pf_keys.remove(&n);
+                    continue;
+                }
+                let label = lbl
+                    .map(|s| s.trim().to_string())
+                    .filter(|s| !s.is_empty())
+                    .unwrap_or_else(|| cmd.to_uppercase());
+                self.pf_keys.insert(n, PfKeyDef { label, command: cmd });
+            }
+        }
+    }
+
+    /// Populate local variables `ZPFnnCMD`/`ZPFnnLBL` from current PF
+    /// key bindings. Used by the SPFKEYS panel's )INIT-style setup so
+    /// the user sees the present values when editing.
+    pub fn populate_pf_key_locals(&mut self) {
+        for n in 1u8..=24 {
+            let (cmd, lbl) = self
+                .pf_keys
+                .get(&n)
+                .map(|d| (d.command.clone(), d.label.clone()))
+                .unwrap_or_default();
+            self.local.insert(format!("ZPF{:02}CMD", n), cmd);
+            self.local.insert(format!("ZPF{:02}LBL", n), lbl);
+        }
+    }
+
+    /// Refresh time-of-day system variables (ZDATE, ZTIME).
+    /// Should be called immediately before each panel display.
+    pub fn refresh_clock(&mut self) {
+        let now = Local::now();
+        self.shared
+            .insert("ZDATE".into(), now.format("%y/%m/%d").to_string());
+        self.shared
+            .insert("ZTIME".into(), now.format("%H:%M").to_string());
     }
 
     /// Get a variable value (local takes precedence over shared).
@@ -212,16 +379,16 @@ fn whoami() -> String {
         .unwrap_or_else(|_| "user".into())
 }
 
-fn today_date() -> String {
-    // Simple date without external crate — use system time
-    let now = std::time::SystemTime::now();
-    let since_epoch = now
-        .duration_since(std::time::UNIX_EPOCH)
-        .unwrap_or_default();
-    let days = since_epoch.as_secs() / 86400;
-    // Rough year/month/day calculation — sufficient for display
-    let year = 1970 + (days / 365);
-    format!("{year}/01/01") // Placeholder — real date formatting needs a crate
+fn os_name() -> &'static str {
+    if cfg!(target_os = "windows") {
+        "WINDOWS"
+    } else if cfg!(target_os = "macos") {
+        "MACOS"
+    } else if cfg!(target_os = "linux") {
+        "LINUX"
+    } else {
+        "UNKNOWN"
+    }
 }
 
 #[cfg(test)]

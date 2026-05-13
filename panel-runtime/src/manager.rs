@@ -25,6 +25,8 @@ impl PanelManager {
         let mut vars = VarPool::new();
         let profiles_path = VarPool::default_profiles_path();
         vars.load_profiles_from_file(&profiles_path);
+        // Restore PF key overrides the user previously saved via SPFKEYS.
+        vars.apply_pf_keys_from_profile("SPFKEYS");
         Ok(PanelManager { loader, vars, profiles_path })
     }
 
@@ -56,9 +58,25 @@ impl PanelManager {
             // Load the panel
             let panel = self.loader.get(&current_id)?.clone();
 
+            // Refresh time-of-day system vars before each display
+            self.vars.refresh_clock();
+
+            // Pre-populate ZPFnnCMD/ZPFnnLBL when entering the SPFKEYS panel
+            // so the user's edit fields show the current bindings.
+            if current_id == "SPFKEYS" {
+                self.vars.populate_pf_key_locals();
+            }
+
             // Run the engine
             let result = PanelEngine::run(stdout, &panel, &mut self.vars)?;
             debug!(?result, panel = %current_id, "panel engine returned");
+
+            // After SPFKEYS exits, push edited values back into the
+            // active PF key bindings.
+            if current_id == "SPFKEYS" {
+                self.vars.apply_pf_keys_from_local();
+            }
+
             self.vars.dump();
             match result {
                 PanelResult::Up => {

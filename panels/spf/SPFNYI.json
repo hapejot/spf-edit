@@ -1,0 +1,28 @@
+{
+  "id": "SPFNYI",
+  "title": {
+    "product_var": "ZPRODID",
+    "text": "NOT YET IMPLEMENTED",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "dialog",
+  "body": {
+    "rows": [
+      { "type": "command", "variable": "ZCMD" },
+      { "type": "blank" },
+      { "type": "blank" },
+      { "type": "text", "content": "   This option has not yet been implemented in SPF-Edit." },
+      { "type": "blank" },
+      { "type": "text", "content": "   Press F3 (or type END) to return to the Primary Option Panel." }
+    ]
+  },
+  "init": {
+    "assignments": {
+      "ZPRODID": "SPF/PC(1)"
+    }
+  },
+  "metadata": {
+    "source_file": "SPFNYI.json",
+    "category": "spf"
+  }
+}

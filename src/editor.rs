@@ -80,10 +80,20 @@ impl Editor {
             None
         };
 
+        // Restore the user's Enter-key preference from the SPFSETS profile.
+        let enter_mode = panel_manager
+            .as_ref()
+            .and_then(|pm| pm.vars().profile_get("SPFSETS", "ZENTRKEY"))
+            .map(EnterMode::from_profile)
+            .unwrap_or(EnterMode::Legacy);
+
+        let mut input = InputHandler::new();
+        input.enter_mode = enter_mode;
+
         Ok(Editor {
             buffer,
             screen,
-            input: InputHandler::new(),
+            input,
             panel_manager,
             running: true,
             last_find: None,
@@ -128,95 +138,47 @@ impl Editor {
                     "Action: InsertChar({:?}) focus={:?} col={}",
                     c, self.input.focus, self.cursor_col
                 );
-
-                // self.screen.draw_char(stdout, self.cursor_col as u16, self.cursor_line_index as u16, c).unwrap();
                 self.handle_char(c);
             }
-
             EditorAction::DeleteChar => {
                 trace!("Action: DeleteChar focus={:?}", self.input.focus);
                 self.handle_delete();
             }
-
             EditorAction::Backspace => {
                 trace!("Action: Backspace focus={:?}", self.input.focus);
                 self.handle_backspace();
             }
 
-            EditorAction::CursorUp => {
-                self.move_cursor_up();
-            }
-
-            EditorAction::CursorDown => {
-                self.move_cursor_down();
-            }
-
+            EditorAction::CursorUp => self.move_cursor_up(),
+            EditorAction::CursorDown => self.move_cursor_down(),
             EditorAction::CursorLeft => {
                 self.move_cursor_left();
                 self.position_cursor(stdout)?;
             }
-
             EditorAction::CursorRight => {
                 self.move_cursor_right();
                 self.position_cursor(stdout)?;
             }
-
             EditorAction::CursorHome => {
                 self.handle_home();
                 self.position_cursor(stdout)?;
             }
-
             EditorAction::CursorEnd => {
                 self.handle_end();
                 self.position_cursor(stdout)?;
             }
 
-            EditorAction::Tab => {
-                self.cycle_focus_forward();
-            }
+            EditorAction::Tab => self.cycle_focus_forward(),
+            EditorAction::BackTab => self.cycle_focus_backward(),
 
-            EditorAction::BackTab => {
-                self.cycle_focus_backward();
+            EditorAction::Newline => {
+                debug!("Action: Newline (regular Enter)");
+                self.handle_newline();
             }
-
             EditorAction::Enter => {
                 debug!("Action: Enter — processing commands");
                 self.handle_enter();
-
-                // Check if a panel display was requested
-                if let Some(panel_id) = self.pending_panel.take() {
-                    if let Some(ref mut pm) = self.panel_manager {
-                        if pm.has_panel(&panel_id) {
-                            match pm.display(stdout, &panel_id) {
-                                Ok(quit) => {
-                                    if quit {
-                                        self.running = false;
-                                        return Ok(());
-                                    }
-                                }
-                                Err(e) => {
-                                    warn!("Panel display error: {e}");
-                                    self.screen.message = Some(Message {
-                                        text: format!("Panel error: {e}"),
-                                        msg_type: MessageType::Error,
-                                    });
-                                }
-                            }
-                            // Force full redraw after returning from panel
-                            self.needs_full_redraw = true;
-                        } else {
-                            self.screen.message = Some(Message {
-                                text: format!("Panel not found: {panel_id}"),
-                                msg_type: MessageType::Error,
-                            });
-                        }
-                    } else {
-                        self.screen.message = Some(Message {
-                            text: "Panel system not available (no panels/ directory)".to_string(),
-                            msg_type: MessageType::Error,
-                        });
-                    }
-                }
+                self.maybe_display_pending_panel(stdout)?;
             }
 
             EditorAction::ToggleInsertMode => {
@@ -231,44 +193,23 @@ impl Editor {
                 debug!("Action: FnEnd (F3/Esc)");
                 self.handle_primary_command_direct(PrimaryCommand::End, stdout)?;
             }
-
             EditorAction::FnRFind => {
                 debug!("Action: FnRFind (F5)");
                 self.handle_primary_command_direct(PrimaryCommand::RFind, stdout)?;
             }
 
-            EditorAction::FnScrollUp => {
-                let amount = self.screen.scroll_amount.clone();
-                let lines = amount.resolve(self.screen.data_rows(), self.cursor_screen_row());
-                debug!("Action: ScrollUp by {lines}");
-                self.screen.scroll_up(lines);
-                self.clamp_cursor();
-                self.needs_full_redraw = true;
-            }
-
-            EditorAction::FnScrollDown => {
-                let amount = self.screen.scroll_amount.clone();
-                let lines = amount.resolve(self.screen.data_rows(), self.cursor_screen_row());
-                let max = self.buffer.line_count().saturating_sub(1);
-                debug!("Action: ScrollDown by {lines}");
-                self.needs_full_redraw = true;
-                self.screen.scroll_down(lines, max);
-                self.clamp_cursor();
-            }
-
+            EditorAction::FnScrollUp => self.scroll_page_up(),
+            EditorAction::FnScrollDown => self.scroll_page_down(),
             EditorAction::FnScrollLeft => {
                 self.screen.scroll_left(self.screen.data_width());
                 self.needs_full_redraw = true;
             }
-
             EditorAction::FnScrollRight => {
                 self.screen.scroll_right(self.screen.data_width());
                 self.needs_full_redraw = true;
             }
 
-            EditorAction::FnRetrieve => {
-                self.retrieve_command();
-            }
+            EditorAction::FnRetrieve => self.retrieve_command(),
 
             EditorAction::Resize(w, h) => {
                 info!("Terminal resized to {w}x{h}");
@@ -288,6 +229,67 @@ impl Editor {
         self.redraw(stdout)
     }
 
+    /// Scroll the data area up by the configured scroll amount.
+    fn scroll_page_up(&mut self) {
+        let amount = self.screen.scroll_amount.clone();
+        let lines = amount.resolve(self.screen.data_rows(), self.cursor_screen_row());
+        debug!("Action: ScrollUp by {lines}");
+        self.screen.scroll_up(lines);
+        self.clamp_cursor();
+        self.needs_full_redraw = true;
+    }
+
+    /// Scroll the data area down by the configured scroll amount.
+    fn scroll_page_down(&mut self) {
+        let amount = self.screen.scroll_amount.clone();
+        let lines = amount.resolve(self.screen.data_rows(), self.cursor_screen_row());
+        let max = self.buffer.line_count().saturating_sub(1);
+        debug!("Action: ScrollDown by {lines}");
+        self.needs_full_redraw = true;
+        self.screen.scroll_down(lines, max);
+        self.clamp_cursor();
+    }
+
+    /// If a panel display was queued by command processing, show it now.
+    fn maybe_display_pending_panel<W: Write>(&mut self, stdout: &mut W) -> io::Result<()> {
+        let Some(panel_id) = self.pending_panel.take() else {
+            return Ok(());
+        };
+        let Some(ref mut pm) = self.panel_manager else {
+            self.screen.message = Some(Message {
+                text: "Panel system not available (no panels/ directory)".to_string(),
+                msg_type: MessageType::Error,
+            });
+            return Ok(());
+        };
+        if !pm.has_panel(&panel_id) {
+            self.screen.message = Some(Message {
+                text: format!("Panel not found: {panel_id}"),
+                msg_type: MessageType::Error,
+            });
+            return Ok(());
+        }
+        match pm.display(stdout, &panel_id) {
+            Ok(true) => {
+                self.running = false;
+                return Ok(());
+            }
+            Ok(false) => {}
+            Err(e) => {
+                warn!("Panel display error: {e}");
+                self.screen.message = Some(Message {
+                    text: format!("Panel error: {e}"),
+                    msg_type: MessageType::Error,
+                });
+            }
+        }
+        // Force full redraw after returning from panel
+        self.needs_full_redraw = true;
+        // Pick up any updated EDITOR OPTIONS settings.
+        self.refresh_settings();
+        Ok(())
+    }
+
     // --- Character handling ---
 
     fn handle_char(&mut self, c: char) {
@@ -296,119 +298,116 @@ impl Editor {
         } else {
             c
         };
-
+        let insert_mode = self.input.mode == InputMode::Insert;
         match self.input.focus {
-            FieldFocus::CommandLine => {
-                if self.input.mode == InputMode::Insert
-                    || self.screen.command_cursor_pos >= self.screen.command_line.len()
-                {
-                    self.screen
-                        .command_line
-                        .insert(self.screen.command_cursor_pos, c);
-                } else {
-                    // Overtype
-                    let mut chars: Vec<char> = self.screen.command_line.chars().collect();
-                    if self.screen.command_cursor_pos < chars.len() {
-                        chars[self.screen.command_cursor_pos] = c;
-                    } else {
-                        chars.push(c);
-                    }
-                    self.screen.command_line = chars.into_iter().collect();
-                }
-                self.screen.command_cursor_pos += 1;
-            }
-
-            FieldFocus::ScrollField => {
-                // Edit scroll field
-                if self.input.mode == InputMode::Insert
-                    || self.cursor_col >= self.screen.scroll_field_text.len()
-                {
-                    self.screen.scroll_field_text.insert(self.cursor_col, c);
-                } else {
-                    let mut chars: Vec<char> = self.screen.scroll_field_text.chars().collect();
-                    if self.cursor_col < chars.len() {
-                        chars[self.cursor_col] = c;
-                    } else {
-                        chars.push(c);
-                    }
-                    self.screen.scroll_field_text = chars.into_iter().collect();
-                }
-                self.cursor_col += 1;
-            }
-
+            FieldFocus::CommandLine => self.insert_in_command_line(c, insert_mode),
+            FieldFocus::ScrollField => self.insert_in_scroll_field(c, insert_mode),
             FieldFocus::PrefixArea { screen_row } => {
-                let line_index = self.screen.screen_row_to_line(screen_row);
-
-                if self.cursor_col < PREFIX_WIDTH {
-                    if let Some(line) = self.buffer.lines.get_mut(line_index) {
-                        let mut cmd = line.prefix_cmd.clone().unwrap_or_default();
-                        if self.cursor_col < cmd.len() {
-                            let mut chars: Vec<char> = cmd.chars().collect();
-                            if self.input.mode == InputMode::Insert {
-                                chars.insert(self.cursor_col, c);
-                            } else {
-                                chars[self.cursor_col] = c;
-                            }
-                            cmd = chars.into_iter().collect();
-                        } else {
-                            cmd.push(c);
-                        }
-                        line.prefix_cmd = Some(cmd);
-                        line.flags.set(LineFlags::PENDING_CMD);
-                    }
-                    self.cursor_col = (self.cursor_col + 1).min(PREFIX_WIDTH - 1);
-                }
+                self.insert_in_prefix(c, screen_row, insert_mode)
             }
-
             FieldFocus::DataArea { screen_row } => {
-                let line_index = self.screen.screen_row_to_line(screen_row);
-
-                // Check if line is editable
-                if self.buffer.browse_mode {
-                    return;
-                }
-                if let Some(line) = self.buffer.lines.get(line_index) {
-                    if !line.is_writable() {
-                        return;
-                    }
-                } else {
-                    return;
-                }
-
-                let actual_col = self.screen.horizontal_offset + self.cursor_col;
-
-                let mut data = self
-                    .buffer
-                    .lines
-                    .get(line_index)
-                    .map(|l| l.data.clone())
-                    .unwrap_or_default();
-
-                // Extend with spaces if needed
-                while data.len() <= actual_col {
-                    data.push(' ');
-                }
-
-                let mut chars: Vec<char> = data.chars().collect();
-                if self.input.mode == InputMode::Insert {
-                    chars.insert(actual_col, c);
-                } else {
-                    chars[actual_col] = c;
-                }
-                let new_data: String = chars.into_iter().collect();
-                self.buffer.update_line_data(line_index, new_data);
-                self.cursor_col += 1;
+                self.insert_in_data(c, screen_row, insert_mode)
             }
         }
+    }
+
+    /// Insert/overtype `c` into a `String` at `pos`. When `insert` is true or
+    /// `pos` is at/past the end, the character is inserted; otherwise the
+    /// existing character at `pos` is replaced.
+    fn insert_or_overtype(s: &mut String, pos: usize, c: char, insert: bool) {
+        if insert || pos >= s.len() {
+            s.insert(pos.min(s.len()), c);
+            return;
+        }
+        let mut chars: Vec<char> = s.chars().collect();
+        if pos < chars.len() {
+            chars[pos] = c;
+        } else {
+            chars.push(c);
+        }
+        *s = chars.into_iter().collect();
+    }
+
+    fn insert_in_command_line(&mut self, c: char, insert_mode: bool) {
+        Self::insert_or_overtype(
+            &mut self.screen.command_line,
+            self.screen.command_cursor_pos,
+            c,
+            insert_mode,
+        );
+        self.screen.command_cursor_pos += 1;
+    }
+
+    fn insert_in_scroll_field(&mut self, c: char, insert_mode: bool) {
+        Self::insert_or_overtype(
+            &mut self.screen.scroll_field_text,
+            self.cursor_col,
+            c,
+            insert_mode,
+        );
+        self.cursor_col += 1;
+    }
+
+    fn insert_in_prefix(&mut self, c: char, screen_row: u16, insert_mode: bool) {
+        if self.cursor_col >= PREFIX_WIDTH {
+            return;
+        }
+        let line_index = self.screen.screen_row_to_line(screen_row);
+        if let Some(line) = self.buffer.lines.get_mut(line_index) {
+            let mut cmd = line.prefix_cmd.clone().unwrap_or_default();
+            if self.cursor_col < cmd.len() {
+                let mut chars: Vec<char> = cmd.chars().collect();
+                if insert_mode {
+                    chars.insert(self.cursor_col, c);
+                } else {
+                    chars[self.cursor_col] = c;
+                }
+                cmd = chars.into_iter().collect();
+            } else {
+                cmd.push(c);
+            }
+            line.prefix_cmd = Some(cmd);
+            line.flags.set(LineFlags::PENDING_CMD);
+        }
+        self.cursor_col = (self.cursor_col + 1).min(PREFIX_WIDTH - 1);
+    }
+
+    fn insert_in_data(&mut self, c: char, screen_row: u16, insert_mode: bool) {
+        let line_index = self.screen.screen_row_to_line(screen_row);
+        if self.buffer.browse_mode {
+            return;
+        }
+        match self.buffer.lines.get(line_index) {
+            Some(line) if line.is_writable() => {}
+            _ => return,
+        }
+        let actual_col = self.screen.horizontal_offset + self.cursor_col;
+        let mut data = self
+            .buffer
+            .lines
+            .get(line_index)
+            .map(|l| l.data.clone())
+            .unwrap_or_default();
+        while data.len() <= actual_col {
+            data.push(' ');
+        }
+        let mut chars: Vec<char> = data.chars().collect();
+        if insert_mode {
+            chars.insert(actual_col, c);
+        } else {
+            chars[actual_col] = c;
+        }
+        self.buffer
+            .update_line_data(line_index, chars.into_iter().collect());
+        self.cursor_col += 1;
     }
 
     fn handle_delete(&mut self) {
         match self.input.focus {
             FieldFocus::CommandLine => {
-                if self.screen.command_cursor_pos < self.screen.command_line.len() {
-                    self.screen
-                        .command_line
-                        .remove(self.screen.command_cursor_pos);
+                let pos = self.screen.command_cursor_pos;
+                if pos < self.screen.command_line.len() {
+                    self.screen.command_line.remove(pos);
                 }
             }
             FieldFocus::ScrollField => {
@@ -417,89 +416,81 @@ impl Editor {
                 }
             }
             FieldFocus::PrefixArea { screen_row } => {
-                let line_index = self.screen.screen_row_to_line(screen_row);
-                if let Some(line) = self.buffer.lines.get_mut(line_index) {
-                    if let Some(ref mut cmd) = line.prefix_cmd {
-                        if self.cursor_col < cmd.len() {
-                            cmd.remove(self.cursor_col);
-                        }
-                        if cmd.is_empty() {
-                            line.prefix_cmd = None;
-                            line.flags.clear(LineFlags::PENDING_CMD);
-                        }
-                    }
-                }
+                self.delete_in_prefix(screen_row, self.cursor_col);
             }
             FieldFocus::DataArea { screen_row } => {
                 let line_index = self.screen.screen_row_to_line(screen_row);
                 let actual_col = self.screen.horizontal_offset + self.cursor_col;
-                let mut data = self
-                    .buffer
-                    .lines
-                    .get(line_index)
-                    .map(|l| l.data.clone())
-                    .unwrap_or_default();
-                if actual_col < data.len() {
-                    let mut chars = data.chars().collect::<Vec<char>>();
-                    chars.remove(actual_col);
-                    self.buffer
-                        .update_line_data(line_index, chars.into_iter().collect());
-                }
+                self.delete_in_data(line_index, actual_col);
             }
         }
+    }
+
+    fn delete_in_prefix(&mut self, screen_row: u16, pos: usize) {
+        let line_index = self.screen.screen_row_to_line(screen_row);
+        let Some(line) = self.buffer.lines.get_mut(line_index) else {
+            return;
+        };
+        let Some(ref mut cmd) = line.prefix_cmd else {
+            return;
+        };
+        if pos < cmd.len() {
+            cmd.remove(pos);
+        }
+        if cmd.is_empty() {
+            line.prefix_cmd = None;
+            line.flags.clear(LineFlags::PENDING_CMD);
+        }
+    }
+
+    fn delete_in_data(&mut self, line_index: usize, actual_col: usize) {
+        let data = self
+            .buffer
+            .lines
+            .get(line_index)
+            .map(|l| l.data.clone())
+            .unwrap_or_default();
+        if actual_col >= data.len() {
+            return;
+        }
+        let mut chars: Vec<char> = data.chars().collect();
+        chars.remove(actual_col);
+        self.buffer
+            .update_line_data(line_index, chars.into_iter().collect());
     }
 
     fn handle_backspace(&mut self) {
         match self.input.focus {
             FieldFocus::CommandLine => {
-                if self.screen.command_cursor_pos > 0 {
-                    self.screen.command_cursor_pos -= 1;
-                    self.screen
-                        .command_line
-                        .remove(self.screen.command_cursor_pos);
+                if self.screen.command_cursor_pos == 0 {
+                    return;
                 }
+                self.screen.command_cursor_pos -= 1;
+                let pos = self.screen.command_cursor_pos;
+                self.screen.command_line.remove(pos);
             }
             FieldFocus::ScrollField => {
-                if self.cursor_col > 0 {
-                    self.cursor_col -= 1;
-                    self.screen.scroll_field_text.remove(self.cursor_col);
+                if self.cursor_col == 0 {
+                    return;
                 }
+                self.cursor_col -= 1;
+                self.screen.scroll_field_text.remove(self.cursor_col);
             }
             FieldFocus::PrefixArea { screen_row } => {
-                let line_index = self.screen.screen_row_to_line(screen_row);
-                if let Some(line) = self.buffer.lines.get_mut(line_index) {
-                    if self.cursor_col > 0 {
-                        self.cursor_col -= 1;
-                        if let Some(ref mut cmd) = line.prefix_cmd {
-                            if self.cursor_col < cmd.len() {
-                                cmd.remove(self.cursor_col);
-                            }
-                            if cmd.is_empty() {
-                                line.prefix_cmd = None;
-                                line.flags.clear(LineFlags::PENDING_CMD);
-                            }
-                        }
-                    }
+                if self.cursor_col == 0 {
+                    return;
                 }
+                self.cursor_col -= 1;
+                self.delete_in_prefix(screen_row, self.cursor_col);
             }
             FieldFocus::DataArea { screen_row } => {
-                if self.cursor_col > 0 {
-                    self.cursor_col -= 1;
-                    let line_index = self.screen.screen_row_to_line(screen_row);
-                    let actual_col = self.screen.horizontal_offset + self.cursor_col;
-                    let mut data = self
-                        .buffer
-                        .lines
-                        .get(line_index)
-                        .map(|l| l.data.clone())
-                        .unwrap_or_default();
-                    if actual_col < data.len() {
-                        let mut chars = data.chars().collect::<Vec<char>>();
-                        chars.remove(actual_col);
-                        self.buffer
-                            .update_line_data(line_index, chars.into_iter().collect());
-                    }
+                if self.cursor_col == 0 {
+                    return;
                 }
+                self.cursor_col -= 1;
+                let line_index = self.screen.screen_row_to_line(screen_row);
+                let actual_col = self.screen.horizontal_offset + self.cursor_col;
+                self.delete_in_data(line_index, actual_col);
             }
         }
     }
@@ -580,20 +571,17 @@ impl Editor {
     fn move_cursor_left(&mut self) {
         if self.cursor_col > 0 {
             self.cursor_col -= 1;
-        } else {
-            match self.input.focus {
-                FieldFocus::CommandLine => {
-                    if self.screen.command_cursor_pos > 0 {
-                        self.screen.command_cursor_pos -= 1;
-                    }
-                }
-                _ => {}
-            }
+        } else if matches!(self.input.focus, FieldFocus::CommandLine)
+            && self.screen.command_cursor_pos > 0
+        {
+            self.screen.command_cursor_pos -= 1;
         }
-        if matches!(self.input.focus, FieldFocus::CommandLine) {
-            if self.screen.command_cursor_pos > 0 {
-                self.screen.command_cursor_pos -= 1;
-            }
+        // NOTE: documented FIXME above — for CommandLine focus, this second
+        // decrement intentionally remains to preserve the original behaviour.
+        if matches!(self.input.focus, FieldFocus::CommandLine)
+            && self.screen.command_cursor_pos > 0
+        {
+            self.screen.command_cursor_pos -= 1;
         }
     }
 
@@ -766,25 +754,44 @@ impl Editor {
         }
     }
 
+    // --- Newline processing (regular Enter key) ---
+
+    /// Re-read editor settings (e.g. Enter-key mode) from the SPFSETS
+    /// profile after a panel display might have changed them.
+    fn refresh_settings(&mut self) {
+        if let Some(ref pm) = self.panel_manager {
+            if let Some(val) = pm.vars().profile_get("SPFSETS", "ZENTRKEY") {
+                self.input.enter_mode = EnterMode::from_profile(val);
+            }
+        }
+    }
+
+    /// Handle the regular Enter key: insert a blank line below the
+    /// cursor (when in the data area) and move the cursor to it.
+    /// Outside the data area this is a no-op.
+    fn handle_newline(&mut self) {
+        match self.input.focus {
+            FieldFocus::DataArea { .. } | FieldFocus::PrefixArea { .. } => {
+                let idx = self.cursor_line_index;
+                self.buffer.insert_lines_after(idx, 1);
+                self.cursor_line_index = idx + 1;
+                self.cursor_col = 0;
+                if let Some(row) = self.screen.line_to_screen_row(self.cursor_line_index) {
+                    self.input.focus = FieldFocus::DataArea { screen_row: row };
+                }
+                self.needs_full_redraw = true;
+            }
+            _ => {
+                // Command line / scroll field: no-op (use Numpad Enter to submit).
+            }
+        }
+    }
+
     // --- Enter processing ---
 
     fn handle_enter(&mut self) {
-        // 1. Prefix commands are already set on buffer lines directly.
-        //    Uppercase them, and clear empty ones (restore line number display).
-        for i in 0..self.buffer.lines.len() {
-            if let Some(line) = self.buffer.lines.get_mut(i) {
-                if let Some(ref cmd) = line.prefix_cmd {
-                    let trimmed = cmd.trim().to_uppercase();
-                    if trimmed.is_empty() {
-                        line.prefix_cmd = None;
-                        line.flags.clear(LineFlags::PENDING_CMD);
-                        line.flags.clear(LineFlags::CMD_ERROR);
-                    } else {
-                        line.prefix_cmd = Some(trimmed);
-                    }
-                }
-            }
-        }
+        // 1. Normalise prefix commands (uppercase / clear empties).
+        self.normalize_prefix_commands();
 
         // 2. Execute line commands
         debug!("Enter: executing line commands");
@@ -796,44 +803,13 @@ impl Editor {
                 msg_type: MessageType::Error,
             });
         }
-        self.needs_full_redraw = true; // Line cmd results may change line types and prefixes, so do a full redraw
+        // Line cmd results may change line types and prefixes, so do a full redraw.
+        self.needs_full_redraw = true;
 
         // 3. Parse and execute primary command
         let cmd_text = self.screen.command_line.trim().to_string();
         if !cmd_text.is_empty() {
-            info!("Primary command: {:?}", cmd_text);
-            // Add to history
-            self.push_command_history(cmd_text.clone());
-
-            match command::parse_command(&cmd_text) {
-                Ok(cmd) => {
-                    debug!("  parsed as: {:?}", cmd);
-                    let page_size = self.screen.data_rows();
-                    let cursor_row = self.cursor_screen_row();
-                    let scroll_amount = self.screen.scroll_amount.clone();
-                    let result = command::execute_command(
-                        &cmd,
-                        &mut self.buffer,
-                        &mut self.last_find,
-                        self.cursor_line_index,
-                        self.cursor_col,
-                        page_size,
-                        cursor_row,
-                        &scroll_amount,
-                    );
-
-                    self.apply_command_result(result);
-                }
-                Err(msg) => {
-                    if !msg.is_empty() {
-                        warn!("Command parse error: {msg}");
-                        self.screen.message = Some(Message {
-                            text: msg,
-                            msg_type: MessageType::Error,
-                        });
-                    }
-                }
-            }
+            self.process_primary_command(cmd_text);
         }
 
         // 4. Clear command line
@@ -845,6 +821,65 @@ impl Editor {
         self.screen.parse_scroll_field();
 
         // 6. If on data area, advance cursor to next line
+        self.advance_cursor_after_enter();
+    }
+
+    /// Uppercase pending prefix commands; clear empty ones to restore the
+    /// line-number display.
+    fn normalize_prefix_commands(&mut self) {
+        for line in self.buffer.lines.iter_mut() {
+            let Some(ref cmd) = line.prefix_cmd else {
+                continue;
+            };
+            let trimmed = cmd.trim().to_uppercase();
+            if trimmed.is_empty() {
+                line.prefix_cmd = None;
+                line.flags.clear(LineFlags::PENDING_CMD);
+                line.flags.clear(LineFlags::CMD_ERROR);
+            } else {
+                line.prefix_cmd = Some(trimmed);
+            }
+        }
+    }
+
+    /// Parse and execute a primary command, recording it in history and
+    /// applying its result.
+    fn process_primary_command(&mut self, cmd_text: String) {
+        info!("Primary command: {:?}", cmd_text);
+        self.push_command_history(cmd_text.clone());
+
+        match command::parse_command(&cmd_text) {
+            Ok(cmd) => {
+                debug!("  parsed as: {:?}", cmd);
+                let page_size = self.screen.data_rows();
+                let cursor_row = self.cursor_screen_row();
+                let scroll_amount = self.screen.scroll_amount.clone();
+                let result = command::execute_command(
+                    &cmd,
+                    &mut self.buffer,
+                    &mut self.last_find,
+                    self.cursor_line_index,
+                    self.cursor_col,
+                    page_size,
+                    cursor_row,
+                    &scroll_amount,
+                );
+                self.apply_command_result(result);
+            }
+            Err(msg) if !msg.is_empty() => {
+                warn!("Command parse error: {msg}");
+                self.screen.message = Some(Message {
+                    text: msg,
+                    msg_type: MessageType::Error,
+                });
+            }
+            Err(_) => {}
+        }
+    }
+
+    /// After an Enter on a data/prefix row, move the cursor down one line
+    /// (or transition prefix→data) where appropriate.
+    fn advance_cursor_after_enter(&mut self) {
         match self.input.focus {
             FieldFocus::DataArea { screen_row } => {
                 let max_row = (HEADER_ROWS as usize + self.screen.data_rows() - 1) as u16;
@@ -864,10 +899,8 @@ impl Editor {
                 self.input.focus = FieldFocus::DataArea { screen_row };
                 self.cursor_col = 0;
             }
-            FieldFocus::CommandLine => {
-                // Stay on command line after executing command
-            }
-            _ => {}
+            // CommandLine: stay on command line after executing command.
+            FieldFocus::CommandLine | FieldFocus::ScrollField => {}
         }
     }
 

@@ -1,120 +1,129 @@
 {
   "id": "SPFSETS",
   "title": {
-    "text": "SETTINGS"
+    "product_var": "ZPRODID",
+    "text": "EDITOR OPTIONS",
+    "version_var": "ZSHRTVER"
   },
   "type": "form",
   "body": {
     "rows": [
-      {
-        "type": "command",
-        "variable": "ZCMD"
-      },
-      {
-        "type": "blank"
-      },
-      {
-        "type": "text",
-        "content": "Processing options:"
-      },
-      {
-        "type": "blank"
-      },
-      {
-        "type": "field_row",
-        "fields": [
-          { "type": "text", "content": "  Tab size  . . . . . ." },
-          { "type": "input", "variable": "ZTABS", "width": 4 }
-        ]
-      },
-      {
-        "type": "field_row",
-        "fields": [
-          { "type": "text", "content": "  Nulls mode  . . . . ." },
-          { "type": "input", "variable": "ZNULLS", "width": 1 },
-          { "type": "text", "content": "(Y or N)" }
-        ]
-      },
-      {
-        "type": "field_row",
-        "fields": [
-          { "type": "text", "content": "  Caps mode . . . . . ." },
-          { "type": "input", "variable": "ZCAPS", "width": 1 },
-          { "type": "text", "content": "(Y or N)" }
-        ]
-      },
-      {
-        "type": "field_row",
-        "fields": [
-          { "type": "text", "content": "  Number mode . . . . ." },
-          { "type": "input", "variable": "ZNUMS", "width": 1 },
-          { "type": "text", "content": "(Y or N)" }
-        ]
-      },
-      {
-        "type": "blank"
-      },
-      {
-        "type": "text",
-        "content": "Display options:"
-      },
-      {
-        "type": "blank"
-      },
-      {
-        "type": "field_row",
-        "fields": [
-          { "type": "text", "content": "  Default scroll  . . ." },
-          { "type": "input", "variable": "ZSCROLL", "width": 8 },
-          { "type": "text", "content": "(PAGE, HALF, CSR, DATA)" }
-        ]
-      },
-      {
-        "type": "blank"
-      },
-      {
-        "type": "divider",
-        "style": "single"
-      },
-      {
-        "type": "text",
-        "content": " Press Enter to save settings, F3 to cancel."
-      }
+      { "type": "command", "variable": "ZCMD" },
+      { "type": "blank" },
+
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " SOUND ALARM                  ==> " },
+        { "type": "input", "variable": "ZALARM", "width": 1 },
+        { "type": "text",  "content": "    (Y- Alarm on error,  N- Silent)" }
+      ] },
+      { "type": "blank" },
+
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " VERTICAL   SCROLL W/CURSOR   ==> " },
+        { "type": "input", "variable": "ZVSCRL", "width": 1 },
+        { "type": "text",  "content": "    (Y- Scroll up-down,  N- Wrap cursor)" }
+      ] },
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " HORIZONTAL SCROLL W/CURSOR   ==> " },
+        { "type": "input", "variable": "ZHSCRL", "width": 1 },
+        { "type": "text",  "content": "    (Y- Scroll left-rt,  N- Wrap cursor)" }
+      ] },
+      { "type": "blank" },
+
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " MAXIMUM RECORD LENGTH        ==> " },
+        { "type": "input", "variable": "ZMAXREC", "width": 5 },
+        { "type": "text",  "content": "(n- 1024 - 64000 Bytes per record max)" }
+      ] },
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " RECENT EDIT DEPTH            ==> " },
+        { "type": "input", "variable": "ZRECDPTH", "width": 3 },
+        { "type": "text",  "content": "  (n- # of files kept on Recent Edit List)" }
+      ] },
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " SYNTAX COLORIZATION          ==> " },
+        { "type": "input", "variable": "ZCOLORZ", "width": 1 },
+        { "type": "text",  "content": "    (Y- Colorization with COLORMAP command," }
+      ] },
+      { "type": "text",    "content": "                                                N- Always disabled)" },
+      { "type": "blank" },
+
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " AUTOMATIC PROFILE CREATE     ==> " },
+        { "type": "input", "variable": "ZAUTOPRF", "width": 1 },
+        { "type": "text",  "content": "    (Y- Always create .PRF," }
+      ] },
+      { "type": "text",    "content": "                                                N- Create non-default profiles only)" },
+      { "type": "blank" },
+
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " VIRTUAL LOAD                 ==> " },
+        { "type": "input", "variable": "ZVLOAD", "width": 1 },
+        { "type": "text",  "content": "    (A- Always,  E- Edit Only,  B- Browse Only" }
+      ] },
+      { "type": "text",    "content": "                                                N- Never)" },
+      { "type": "blank" },
+
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " FIND/CHANGE SEARCH TYPE      ==> " },
+        { "type": "input", "variable": "ZSRCHTYP", "width": 1 },
+        { "type": "text",  "content": "    (C- Case sensitive,  T- Text/insensitive)" }
+      ] },
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " EDIT READ-ONLY FILES         ==> " },
+        { "type": "input", "variable": "ZEDITRO", "width": 1 },
+        { "type": "text",  "content": "    (Y- Edit R/O Files,  D- Deny Access)" }
+      ] },
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " UNDO ENABLED                 ==> " },
+        { "type": "input", "variable": "ZUNDO", "width": 1 },
+        { "type": "text",  "content": "    (Y- UNDO available with UNDO ON command," }
+      ] },
+      { "type": "text",    "content": "                                                N- Always disabled)" },
+      { "type": "blank" },
+
+      { "type": "field_row", "fields": [
+        { "type": "text",  "content": " ENTER KEY ACTION             ==> " },
+        { "type": "input", "variable": "ZENTRKEY", "width": 1 },
+        { "type": "text",  "content": "    (L- Legacy: Enter submits, no newline" }
+      ] },
+      { "type": "text",    "content": "                                                S- Shift+Enter inserts a newline" },
+      { "type": "text",    "content": "                                                A- Alt+Enter   inserts a newline)" }
     ]
   },
   "init": {
+    "help_panel": "S2P05201",
     "assignments": {
-      "ZTABS": "8",
-      "ZNULLS": "N",
-      "ZCAPS": "N",
-      "ZNUMS": "Y",
-      "ZSCROLL": "PAGE"
+      "ZPRODID":  "SPF/PC(1)",
+      "ZALARM":   "Y",
+      "ZVSCRL":   "Y",
+      "ZHSCRL":   "Y",
+      "ZMAXREC":  "4096",
+      "ZRECDPTH": "16",
+      "ZCOLORZ":  "Y",
+      "ZAUTOPRF": "Y",
+      "ZVLOAD":   "A",
+      "ZSRCHTYP": "T",
+      "ZEDITRO":  "Y",
+      "ZUNDO":    "Y",
+      "ZENTRKEY": "L"
     }
   },
   "proc_section": {
     "validations": [
-      {
-        "field": "ZTABS",
-        "rules": [
-          { "type": "numeric", "range": { "min": 1, "max": 16 } }
-        ]
-      },
-      {
-        "field": "ZNULLS",
-        "rules": [ { "type": "boolean" } ]
-      },
-      {
-        "field": "ZCAPS",
-        "rules": [ { "type": "boolean" } ]
-      },
-      {
-        "field": "ZNUMS",
-        "rules": [ { "type": "boolean" } ]
-      }
-    ],
-    "assignments": {
-      "ZSEL": "UP"
-    }
+      { "field": "ZALARM",   "rules": [ { "type": "boolean" } ] },
+      { "field": "ZVSCRL",   "rules": [ { "type": "boolean" } ] },
+      { "field": "ZHSCRL",   "rules": [ { "type": "boolean" } ] },
+      { "field": "ZMAXREC",  "rules": [ { "type": "numeric", "range": { "min": 1024, "max": 64000 } } ] },
+      { "field": "ZRECDPTH", "rules": [ { "type": "numeric", "range": { "min": 0, "max": 999 } } ] },
+      { "field": "ZCOLORZ",  "rules": [ { "type": "boolean" } ] },
+      { "field": "ZAUTOPRF", "rules": [ { "type": "boolean" } ] },
+      { "field": "ZVLOAD",   "rules": [ { "type": "list", "values": ["A", "E", "B", "N"] } ] },
+      { "field": "ZSRCHTYP", "rules": [ { "type": "list", "values": ["C", "T"] } ] },
+      { "field": "ZEDITRO",  "rules": [ { "type": "list", "values": ["Y", "D"] } ] },
+      { "field": "ZUNDO",    "rules": [ { "type": "boolean" } ] },
+      { "field": "ZENTRKEY", "rules": [ { "type": "list", "values": ["L", "S", "A"] } ] }
+    ]
   },
   "metadata": {
     "source_file": "SPFSETS.json",

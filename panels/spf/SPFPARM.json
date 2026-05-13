@@ -1,0 +1,58 @@
+{
+  "id": "SPFPARM",
+  "title": {
+    "product_var": "ZPRODID",
+    "text": "PARAMETER OPTIONS",
+    "version_var": "ZSHRTVER"
+  },
+  "type": "menu",
+  "body": {
+    "rows": [
+      { "type": "command", "variable": "ZCMD" },
+      { "type": "blank" },
+      { "type": "text", "content": "    1  TERMINAL        - Specify terminal characteristics" },
+      { "type": "text", "content": "    2  PRINTER         - Specify printer characteristics" },
+      { "type": "text", "content": "    3  PF KEYS         - Specify Program Function Key values" },
+      { "type": "text", "content": "    4  DISPLAY         - Specify screen color scheme" },
+      { "type": "text", "content": "    5  EDITOR OPTIONS  - Specify SPF-Edit Editor Environment Options" },
+      { "type": "text", "content": "    6  FILE LIST OPTS  - Specify SPF-Edit File List Options" },
+      { "type": "text", "content": "    7  PROFILES        - Display, change, or delete profiles" },
+      { "type": "text", "content": "    8  PATHS           - Specify SPF-Edit file search paths" },
+      { "type": "text", "content": "    K  KEYBOARD        - Keyboard remapping" },
+      { "type": "text", "content": "    M  KEY MACROS      - Keyboard macro definitions" },
+      { "type": "text", "content": "    L  LANGUAGES       - COBOL Source Analyst parameters" },
+      { "type": "text", "content": "    C  CONCURRENT      - Concurrent User configuration information" }
+    ]
+  },
+  "init": {
+    "help_panel": "S2P05000",
+    "assignments": {
+      "ZPRODID": "SPF/PC(1)"
+    }
+  },
+  "proc_section": {
+    "navigation": {
+      "source_variable": "ZCMD",
+      "routes": [
+        { "value": "1", "action": { "type": "panel", "target": "SPFNYI" } },
+        { "value": "2", "action": { "type": "panel", "target": "SPFNYI" } },
+        { "value": "3", "action": { "type": "panel", "target": "SPFKEYS" } },
+        { "value": "4", "action": { "type": "panel", "target": "SPFNYI" } },
+        { "value": "5", "action": { "type": "panel", "target": "SPFSETS" } },
+        { "value": "6", "action": { "type": "panel", "target": "SPFNYI" } },
+        { "value": "7", "action": { "type": "panel", "target": "SPFNYI" } },
+        { "value": "8", "action": { "type": "panel", "target": "SPFNYI" } },
+        { "value": "K", "action": { "type": "panel", "target": "SPFNYI" } },
+        { "value": "M", "action": { "type": "panel", "target": "SPFNYI" } },
+        { "value": "L", "action": { "type": "panel", "target": "SPFNYI" } },
+        { "value": "C", "action": { "type": "panel", "target": "SPFNYI" } },
+        { "value": "",  "action": { "type": "blank" } }
+      ],
+      "default_error": "Invalid option"
+    }
+  },
+  "metadata": {
+    "source_file": "SPFPARM.json",
+    "category": "spf"
+  }
+}
