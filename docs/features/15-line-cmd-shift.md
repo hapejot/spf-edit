@@ -8,16 +8,16 @@ Shift line commands move text left or right within lines. SPF-Edit provides thre
 
 ### Syntax
 
-| Form | Effect |
-|------|--------|
-| `(` | Shift text left by 1 column (or default shift amount) |
-| `(`*n* | Shift text left by *n* columns |
-| `((` ... `((` | Block shift left |
-| `((`*n* ... `((` | Block shift left by *n* columns |
-| `)` | Shift text right by 1 column |
-| `)`*n* | Shift text right by *n* columns |
-| `))` ... `))` | Block shift right |
-| `))`*n* ... `))` | Block shift right by *n* columns |
+| Form             | Effect                                                |
+| ---------------- | ----------------------------------------------------- |
+| `(`              | Shift text left by 1 column (or default shift amount) |
+| `(`*n*           | Shift text left by *n* columns                        |
+| `((` ... `((`    | Block shift left                                      |
+| `((`*n* ... `((` | Block shift left by *n* columns                       |
+| `)`              | Shift text right by 1 column                          |
+| `)`*n*           | Shift text right by *n* columns                       |
+| `))` ... `))`    | Block shift right                                     |
+| `))`*n* ... `))` | Block shift right by *n* columns                      |
 
 ### Behavior
 
@@ -39,24 +39,24 @@ Without BOUNDS, shift operates on the entire line.
 
 ### Post-Processing Exclude — +/- (future)
 
-| Suffix | Effect |
-|--------|--------|
-| `+` | After shift, exclude the shifted lines |
-| `-` | After shift, exclude other lines (inverse) |
+| Suffix | Effect                                     |
+| ------ | ------------------------------------------ |
+| `+`    | After shift, exclude the shifted lines     |
+| `-`    | After shift, exclude other lines (inverse) |
 
 ## Indent Shift — [ and ]
 
 ### Syntax
 
-| Form | Effect |
-|------|--------|
-| `[` | Shift left by 1 × tab width |
-| `[`*n* | Shift left by *n* × tab width |
-| `[[` ... `[[` | Block indent left |
-| `[`*n* ... `[[` | Block indent left by *n* × tab width |
-| `]` | Shift right by 1 × tab width |
-| `]`*n* | Shift right by *n* × tab width |
-| `]]` ... `]]` | Block indent right |
+| Form             | Effect                                |
+| ---------------- | ------------------------------------- |
+| `[`              | Shift left by 1 × tab width           |
+| `[`*n*           | Shift left by *n* × tab width         |
+| `[[` ... `[[`    | Block indent left                     |
+| `[`*n* ... `[[`  | Block indent left by *n* × tab width  |
+| `]`              | Shift right by 1 × tab width          |
+| `]`*n*           | Shift right by *n* × tab width        |
+| `]]` ... `]]`    | Block indent right                    |
 | `]]`*n* ... `]]` | Block indent right by *n* × tab width |
 
 ### Behavior
@@ -73,15 +73,15 @@ This is the standard way to change indentation level of code blocks.
 
 ### Syntax
 
-| Form | Effect |
-|------|--------|
-| `<` | Safe shift left by 1 column |
-| `<`*n* | Safe shift left by *n* columns |
-| `<<` ... `<<` | Block safe shift left |
-| `<<`*n* ... `<<` | Block safe shift left by *n* columns |
-| `>` | Safe shift right by 1 column |
-| `>`*n* | Safe shift right by *n* columns |
-| `>>` ... `>>` | Block safe shift right |
+| Form             | Effect                                |
+| ---------------- | ------------------------------------- |
+| `<`              | Safe shift left by 1 column           |
+| `<`*n*           | Safe shift left by *n* columns        |
+| `<<` ... `<<`    | Block safe shift left                 |
+| `<<`*n* ... `<<` | Block safe shift left by *n* columns  |
+| `>`              | Safe shift right by 1 column          |
+| `>`*n*           | Safe shift right by *n* columns       |
+| `>>` ... `>>`    | Block safe shift right                |
 | `>>`*n* ... `>>` | Block safe shift right by *n* columns |
 
 ### Behavior
@@ -96,11 +96,11 @@ Data shift does **not** honor BOUNDS — it operates on the entire line.
 
 ### Difference Summary
 
-| Command | BOUNDS | Data Loss Check | Amount |
-|---------|--------|-----------------|--------|
-| `(` / `)` | Yes | No (data may be lost silently) | Raw columns |
-| `[` / `]` | Yes | No | Tab-width multiples |
-| `<` / `>` | No | Yes (reports errors) | Raw columns |
+| Command   | BOUNDS | Data Loss Check                | Amount              |
+| --------- | ------ | ------------------------------ | ------------------- |
+| `(` / `)` | Yes    | No (data may be lost silently) | Raw columns         |
+| `[` / `]` | Yes    | No                             | Tab-width multiples |
+| `<` / `>` | No     | Yes (reports errors)           | Raw columns         |
 
 ## Interactions
 
@@ -112,11 +112,11 @@ Data shift does **not** honor BOUNDS — it operates on the entire line.
 
 ## Error Conditions
 
-| Condition | Message |
-|-----------|---------|
-| `<<`/`>>` unpaired | Remains pending (yellow) |
+| Condition               | Message                                   |
+| ----------------------- | ----------------------------------------- |
+| `<<`/`>>` unpaired      | Remains pending (yellow)                  |
 | Data loss on safe shift | `"Data shifting incomplete on N line(s)"` |
-| Shift on sentinel line | Silently ignored |
+| Shift on sentinel line  | Silently ignored                          |
 
 ## Examples
 
@@ -128,13 +128,13 @@ Data shift does **not** honor BOUNDS — it operates on the entire line.
 
 ## Status
 
-| Aspect | State |
-|--------|-------|
-| ( / ) column shift | **Not started** |
+| Aspect                     | State           |
+| -------------------------- | --------------- |
+| ( / ) column shift         | **Not started** |
 | (( / )) block column shift | **Not started** |
-| [ / ] indent shift | **Not started** |
+| [ / ] indent shift         | **Not started** |
 | [[ / ]] block indent shift | **Not started** |
-| < / > data shift (safe) | **Not started** |
-| << / >> block data shift | **Not started** |
-| BOUNDS interaction | **Not started** |
-| Data loss error reporting | **Not started** |
+| < / > data shift (safe)    | **Not started** |
+| << / >> block data shift   | **Not started** |
+| BOUNDS interaction         | **Not started** |
+| Data loss error reporting  | **Not started** |

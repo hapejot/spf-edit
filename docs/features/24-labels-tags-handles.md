@@ -48,16 +48,16 @@ Labels are saved with the file state in the SQLite database, so they persist acr
 
 Reserved labels set automatically by the editor:
 
-| Label | Points to |
-|-------|-----------|
-| `.ZFIRST` | First data line (after Top-of-Data) |
-| `.ZLAST` | Last data line (before Bottom-of-Data) |
-| `.ZCSR` | Current cursor line |
-| `.ZFIND` | Line of last FIND match |
-| `.ZCHANGE` | Line of last CHANGE |
-| `.ZLOC` | Line of last LOCATE target |
-| `.ZTOP` | Top of visible screen |
-| `.ZBOT` | Bottom of visible screen |
+| Label      | Points to                              |
+| ---------- | -------------------------------------- |
+| `.ZFIRST`  | First data line (after Top-of-Data)    |
+| `.ZLAST`   | Last data line (before Bottom-of-Data) |
+| `.ZCSR`    | Current cursor line                    |
+| `.ZFIND`   | Line of last FIND match                |
+| `.ZCHANGE` | Line of last CHANGE                    |
+| `.ZLOC`    | Line of last LOCATE target             |
+| `.ZTOP`    | Top of visible screen                  |
+| `.ZBOT`    | Bottom of visible screen               |
 
 System labels cannot be manually set or removed.
 
@@ -101,12 +101,12 @@ Removes the tag from all lines.
 
 ### Difference from Labels
 
-| Aspect | Labels | Tags |
-|--------|--------|------|
-| Per-line | One label per line | Multiple tags per line |
-| Uniqueness | Unique name → one line | Name → many lines |
-| Command use | Position / range endpoints | Filter set |
-| Prefix | `.` (dot) | `:` (colon) |
+| Aspect      | Labels                     | Tags                   |
+| ----------- | -------------------------- | ---------------------- |
+| Per-line    | One label per line         | Multiple tags per line |
+| Uniqueness  | Unique name → one line     | Name → many lines      |
+| Command use | Position / range endpoints | Filter set             |
+| Prefix      | `.` (dot)                  | `:` (colon)            |
 
 ## HANDLES (future)
 
@@ -133,12 +133,12 @@ linenum = HANDLE_LINE(handle)  -- resolve handle to current line number
 
 Track points are lightweight handles maintained by the editor for specific purposes:
 
-| Track Point | Purpose |
-|-------------|---------|
-| Cursor | Tracks cursor position across structural edits |
-| Find | Tracks last FIND position |
-| Change | Tracks last CHANGE position |
-| Scroll | Tracks scroll anchor line |
+| Track Point | Purpose                                        |
+| ----------- | ---------------------------------------------- |
+| Cursor      | Tracks cursor position across structural edits |
+| Find        | Tracks last FIND position                      |
+| Change      | Tracks last CHANGE position                    |
+| Scroll      | Tracks scroll anchor line                      |
 
 When lines are inserted or deleted above the tracked position, the track point is adjusted automatically.
 
@@ -152,13 +152,13 @@ When lines are inserted or deleted above the tracked position, the track point i
 
 ## Error Conditions
 
-| Condition | Message |
-|-----------|---------|
-| Label name too long | `"Label name too long (max 5 chars)"` |
+| Condition                            | Message                                   |
+| ------------------------------------ | ----------------------------------------- |
+| Label name too long                  | `"Label name too long (max 5 chars)"`     |
 | Label already exists on another line | `"Label .xxx already exists at line NNN"` |
-| System label modification attempt | `"Cannot modify system label"` |
-| Label not found | `"Label .xxx not found"` |
-| Tag not found | `"Tag :xxx not found"` |
+| System label modification attempt    | `"Cannot modify system label"`            |
+| Label not found                      | `"Label .xxx not found"`                  |
+| Tag not found                        | `"Tag :xxx not found"`                    |
 
 ## Examples
 
@@ -171,14 +171,14 @@ When lines are inserted or deleted above the tracked position, the track point i
 
 ## Status
 
-| Aspect | State |
-|--------|-------|
-| User labels (set via prefix) | **Implemented** |
+| Aspect                         | State           |
+| ------------------------------ | --------------- |
+| User labels (set via prefix)   | **Implemented** |
 | Label navigation (LOCATE .lab) | **Implemented** |
-| Label ranges in FIND | **Not started** |
-| System labels (.ZFIRST etc.) | **Not started** |
-| Label persistence (SQLite) | **Not started** |
-| RESET LABEL | **Not started** |
-| Tags | **Not started** |
-| Handles | **Not started** |
-| Track points | **Not started** |
+| Label ranges in FIND           | **Not started** |
+| System labels (.ZFIRST etc.)   | **Not started** |
+| Label persistence (SQLite)     | **Not started** |
+| RESET LABEL                    | **Not started** |
+| Tags                           | **Not started** |
+| Handles                        | **Not started** |
+| Track points                   | **Not started** |

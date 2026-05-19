@@ -8,11 +8,11 @@ Overlay and Swap are destination commands used with Copy (C/CC) or Move (M/MM). 
 
 ### Syntax (Destination Commands)
 
-| Form | Effect |
-|------|--------|
-| `O` | Overlay the source onto this single destination line |
-| `O`*n* | Overlay onto *n* destination lines |
-| `OO` ... `OO` | Overlay onto the marked destination block |
+| Form          | Effect                                               |
+| ------------- | ---------------------------------------------------- |
+| `O`           | Overlay the source onto this single destination line |
+| `O`*n*        | Overlay onto *n* destination lines                   |
+| `OO` ... `OO` | Overlay onto the marked destination block            |
 
 ### Behavior
 
@@ -38,11 +38,11 @@ Blanks in the source leave the destination intact. Non-blanks replace.
 
 ### Syntax (Destination Commands)
 
-| Form | Effect |
-|------|--------|
-| `OR` | Overlay-replace onto a single destination line |
-| `OR`*n* | Overlay-replace onto *n* lines |
-| `ORR` ... `ORR` | Overlay-replace onto the marked block |
+| Form            | Effect                                         |
+| --------------- | ---------------------------------------------- |
+| `OR`            | Overlay-replace onto a single destination line |
+| `OR`*n*         | Overlay-replace onto *n* lines                 |
+| `ORR` ... `ORR` | Overlay-replace onto the marked block          |
 
 ### Behavior
 
@@ -62,10 +62,10 @@ Every character from the source replaces the destination, including spaces.
 
 ### Syntax (Destination Commands, used with M/MM only)
 
-| Form | Effect |
-|------|--------|
-| `W` | Swap this single line with the move source |
-| `W`*n* | Swap *n* lines with the move source |
+| Form          | Effect                                           |
+| ------------- | ------------------------------------------------ |
+| `W`           | Swap this single line with the move source       |
+| `W`*n*        | Swap *n* lines with the move source              |
 | `WW` ... `WW` | Swap the marked block with the move source block |
 
 ### Behavior
@@ -92,9 +92,9 @@ Internally, Swap is typically implemented as:
 
 All overlay and swap destinations support the `K` suffix to keep them pending:
 
-| Form | Effect |
-|------|--------|
-| `OK` | Overlay, keep pending |
+| Form  | Effect                        |
+| ----- | ----------------------------- |
+| `OK`  | Overlay, keep pending         |
 | `ORK` | Overlay-replace, keep pending |
 
 ## Move with Overlay
@@ -113,12 +113,12 @@ When the source command is `M`/`MM` (move) and the destination is `O`/`OO`:
 
 ## Error Conditions
 
-| Condition | Message |
-|-----------|---------|
-| O/OO without source (C/CC or M/MM) | `"No source for overlay destination"` |
-| W/WW with Copy (not Move) | `"Swap requires Move source, not Copy"` |
-| MM / WW with repeat value | `"MM / WW cannot use repeat value"` |
-| Move overlay incomplete | `"MOVE data not deleted — all data not overlaid"` |
+| Condition                          | Message                                           |
+| ---------------------------------- | ------------------------------------------------- |
+| O/OO without source (C/CC or M/MM) | `"No source for overlay destination"`             |
+| W/WW with Copy (not Move)          | `"Swap requires Move source, not Copy"`           |
+| MM / WW with repeat value          | `"MM / WW cannot use repeat value"`               |
+| Move overlay incomplete            | `"MOVE data not deleted — all data not overlaid"` |
 
 ## Examples
 
@@ -129,10 +129,10 @@ When the source command is `M`/`MM` (move) and the destination is `O`/`OO`:
 
 ## Status
 
-| Aspect | State |
-|--------|-------|
-| O / OO (overlay) | **Not started** |
+| Aspect                     | State           |
+| -------------------------- | --------------- |
+| O / OO (overlay)           | **Not started** |
 | OR / ORR (overlay replace) | **Not started** |
-| W / WW (swap) | **Not started** |
-| K suffix on overlay/swap | **Not started** |
-| Move-with-overlay logic | **Not started** |
+| W / WW (swap)              | **Not started** |
+| K suffix on overlay/swap   | **Not started** |
+| Move-with-overlay logic    | **Not started** |

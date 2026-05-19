@@ -8,9 +8,9 @@ Insert and Delete are the most fundamental line commands. They add or remove lin
 
 ### Syntax
 
-| Form | Effect |
-|------|--------|
-| `I` | Insert 1 blank line after the current line |
+| Form   | Effect                                                                     |
+| ------ | -------------------------------------------------------------------------- |
+| `I`    | Insert 1 blank line after the current line                                 |
 | `I`*n* | Insert *n* blank lines after the current line (e.g., `I5` inserts 5 lines) |
 
 ### Behavior
@@ -31,10 +31,10 @@ Insert and Delete are the most fundamental line commands. They add or remove lin
 
 ### Syntax
 
-| Form | Effect |
-|------|--------|
-| `N` | Insert 1 normal data line after the current line |
-| `N`*n* | Insert *n* normal data lines |
+| Form   | Effect                                           |
+| ------ | ------------------------------------------------ |
+| `N`    | Insert 1 normal data line after the current line |
+| `N`*n* | Insert *n* normal data lines                     |
 
 ### Behavior
 
@@ -49,11 +49,11 @@ Unlike `I`, lines inserted with `N`:
 
 ### Syntax
 
-| Form | Effect |
-|------|--------|
-| `D` | Delete the current line |
-| `D`*n* | Delete *n* lines starting from the current line (e.g., `D5` deletes 5 lines) |
-| `DD` ... `DD` | Delete all lines in the marked block (paired) |
+| Form          | Effect                                                                       |
+| ------------- | ---------------------------------------------------------------------------- |
+| `D`           | Delete the current line                                                      |
+| `D`*n*        | Delete *n* lines starting from the current line (e.g., `D5` deletes 5 lines) |
+| `DD` ... `DD` | Delete all lines in the marked block (paired)                                |
 
 ### Behavior
 
@@ -86,10 +86,10 @@ When `DD` range spans excluded lines (future), the excluded lines within the ran
 
 ## Error Conditions
 
-| Condition | Message |
-|-----------|---------|
-| D on sentinel line | Silently ignored |
-| DD unpaired | Remains as pending command (yellow) |
+| Condition                             | Message                                                      |
+| ------------------------------------- | ------------------------------------------------------------ |
+| D on sentinel line                    | Silently ignored                                             |
+| DD unpaired                           | Remains as pending command (yellow)                          |
 | DD range overlaps other line commands | `"Line command at line X overlaps subsequent line commands"` |
 
 ## Examples
@@ -103,13 +103,13 @@ When `DD` range spans excluded lines (future), the excluded lines within the ran
 
 ## Status
 
-| Aspect | State |
-|--------|-------|
-| I / In (insert) | **Implemented** |
-| D / Dn (single delete) | **Implemented** |
-| DD block delete | **Implemented** |
+| Aspect                       | State           |
+| ---------------------------- | --------------- |
+| I / In (insert)              | **Implemented** |
+| D / Dn (single delete)       | **Implemented** |
+| DD block delete              | **Implemented** |
 | Insert-line cleanup on Enter | **Implemented** |
-| N / Nn (newline insert) | **Not started** |
-| MASK template on insert | **Not started** |
-| Auto-indent on insert | **Not started** |
-| Pending DD display (yellow) | **Implemented** |
+| N / Nn (newline insert)      | **Not started** |
+| MASK template on insert      | **Not started** |
+| Auto-indent on insert        | **Not started** |
+| Pending DD display (yellow)  | **Implemented** |
