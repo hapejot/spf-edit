@@ -224,6 +224,7 @@ impl Editor {
                 warn!("ForceQuit (Ctrl+Q) — exiting without save");
                 self.running = false;
             }
+            a => {todo!("action not implemented: {:?}", a)},
         }
 
         self.redraw(stdout)

@@ -69,6 +69,7 @@ pub enum EditorAction {
     Resize(u16, u16),
     /// Quit (Ctrl+Q emergency exit).
     ForceQuit,
+    Command(String),
 }
 
 pub struct InputHandler {

@@ -35,14 +35,10 @@ pub enum ParsedLineCmd {
     Repeat(usize),
     CopySingle,
     MoveSingle,
-    CopyBlockStart,
-    CopyBlockEnd,
-    MoveBlockStart,
-    MoveBlockEnd,
-    DeleteBlockStart,
-    DeleteBlockEnd,
-    RepeatBlockStart(usize),
-    RepeatBlockEnd,
+    CopyBlock,
+    MoveBlock,
+    DeleteBlock,
+    RepeatBlock(Option<usize>),
     After,
     Before,
     Label(String),
@@ -83,21 +79,21 @@ pub fn parse_prefix_command(input: &str) -> PrefixParseResult {
 
     // Block commands (double letter): CC, MM, DD, RR[n]
     if trimmed.starts_with("CC") && trimmed.len() == 2 {
-        return PrefixParseResult::Command(ParsedLineCmd::CopyBlockStart);
+        return PrefixParseResult::Command(ParsedLineCmd::CopyBlock);
     }
     if trimmed.starts_with("MM") && trimmed.len() == 2 {
-        return PrefixParseResult::Command(ParsedLineCmd::MoveBlockStart);
+        return PrefixParseResult::Command(ParsedLineCmd::MoveBlock);
     }
     if trimmed.starts_with("DD") && trimmed.len() == 2 {
-        return PrefixParseResult::Command(ParsedLineCmd::DeleteBlockStart);
+        return PrefixParseResult::Command(ParsedLineCmd::DeleteBlock);
     }
     if trimmed.starts_with("RR") {
         if trimmed.len() == 2 {
-            return PrefixParseResult::Command(ParsedLineCmd::RepeatBlockStart(1));
+            return PrefixParseResult::Command(ParsedLineCmd::RepeatBlock(None));
         }
         if let Ok(n) = trimmed[2..].parse::<usize>() {
             if n > 0 {
-                return PrefixParseResult::Command(ParsedLineCmd::RepeatBlockStart(n));
+                return PrefixParseResult::Command(ParsedLineCmd::RepeatBlock(Some(n)));
             }
         }
         return PrefixParseResult::Error(format!("Invalid repeat count: {trimmed}"));

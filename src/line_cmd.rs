@@ -103,19 +103,27 @@ pub fn execute_line_commands(buffer: &mut FileBuffer) -> LineCmdResult {
     // 5. Execute commands in their canonical order.
     apply_labels(buffer, &categorised.labels);
     apply_deletes(buffer, categorised.deletes);
-    apply_moves(buffer, &categorised.move_sources, categorised.destination.as_ref());
-    apply_copies(buffer, &categorised.copy_sources, categorised.destination.as_ref());
+    apply_moves(
+        buffer,
+        &categorised.move_sources,
+        categorised.destination.as_ref(),
+    );
+    apply_copies(
+        buffer,
+        &categorised.copy_sources,
+        categorised.destination.as_ref(),
+    );
     apply_repeats(buffer, &categorised.repeats);
     apply_inserts(buffer, categorised.inserts);
 
     // 6. Clear processed prefix commands & renumber.
-    info!("Clearing prefix commands from all lines");
-    for i in processed_lines {
-        if let Some(line) = buffer.lines.get_mut(i) {
-            info!("Clearing prefix cmd from line {i}");
-            line.clear_prefix_cmd();
-        }
-    }
+    // info!("Clearing prefix commands from all lines");
+    // for i in processed_lines {
+    //     if let Some(line) = buffer.lines.get_mut(i) {
+    //         info!("Clearing prefix cmd from line {i}");
+    //         line.clear_prefix_cmd();
+    //     }
+    // }
     buffer.renumber();
 
     LineCmdResult { error: None }
@@ -158,6 +166,7 @@ fn flag_parse_errors(buffer: &mut FileBuffer, errors: &[(usize, String)]) {
 fn flag_pending(buffer: &mut FileBuffer, pending: &[PendingLineCmd]) {
     for start in pending {
         if let Some(line) = buffer.lines.get_mut(start.line_index) {
+            debug!("Flagging line {} as pending (unpaired block start)", start.line_index);
             line.flags.set(LineFlags::PENDING_CMD);
         }
     }
@@ -184,14 +193,13 @@ struct CategorisedCmds {
 /// Distribute parsed commands into category buckets, pairing block
 /// start/end markers as we go. Returns the categorised buckets and the list
 /// of all line indices we touched (for later prefix-clear).
-fn categorise_commands(
-    cmds: Vec<PendingLineCmd>,
-) -> Result<(CategorisedCmds, Vec<usize>), String> {
+fn categorise_commands(cmds: Vec<PendingLineCmd>) -> Result<(CategorisedCmds, Vec<usize>), String> {
     let mut cat = CategorisedCmds::default();
     let mut processed = Vec::with_capacity(cmds.len());
 
     for cmd in cmds {
         processed.push(cmd.line_index);
+        debug!("cmd: {:?}", cmd);
         match &cmd.cmd {
             ParsedLineCmd::Insert(_) => cat.inserts.push(cmd),
             ParsedLineCmd::Delete(_) => cat.deletes.push(cmd),
@@ -206,15 +214,10 @@ fn categorise_commands(
             }
             ParsedLineCmd::Label(_) => cat.labels.push(cmd),
 
-            // Block markers: pair with a previous start, or queue as new start.
-            ParsedLineCmd::CopyBlockStart
-            | ParsedLineCmd::MoveBlockStart
-            | ParsedLineCmd::DeleteBlockStart
-            | ParsedLineCmd::RepeatBlockStart(_) => cat.block_starts.push(cmd),
 
-            ParsedLineCmd::CopyBlockEnd => {
+            ParsedLineCmd::CopyBlock => {
                 if let Some(start) = pair_block(&mut cat.block_starts, &cmd, |s| {
-                    matches!(s.cmd, ParsedLineCmd::CopyBlockStart)
+                    matches!(s.cmd, ParsedLineCmd::CopyBlock)
                 }) {
                     cat.copy_sources.push(PendingLineCmd {
                         cmd: ParsedLineCmd::CopySingle,
@@ -226,14 +229,14 @@ fn categorise_commands(
                     });
                 } else {
                     cat.block_starts.push(PendingLineCmd {
-                        cmd: ParsedLineCmd::CopyBlockStart,
+                        cmd: ParsedLineCmd::CopyBlock,
                         line_index: cmd.line_index,
                     });
                 }
             }
-            ParsedLineCmd::MoveBlockEnd => {
+            ParsedLineCmd::MoveBlock => {
                 if let Some(start) = pair_block(&mut cat.block_starts, &cmd, |s| {
-                    matches!(s.cmd, ParsedLineCmd::MoveBlockStart)
+                    matches!(s.cmd, ParsedLineCmd::MoveBlock)
                 }) {
                     cat.move_sources.push(PendingLineCmd {
                         cmd: ParsedLineCmd::MoveSingle,
@@ -245,14 +248,14 @@ fn categorise_commands(
                     });
                 } else {
                     cat.block_starts.push(PendingLineCmd {
-                        cmd: ParsedLineCmd::MoveBlockStart,
+                        cmd: ParsedLineCmd::MoveBlock,
                         line_index: cmd.line_index,
                     });
                 }
             }
-            ParsedLineCmd::DeleteBlockEnd => {
+            ParsedLineCmd::DeleteBlock => {
                 if let Some(start) = pair_block(&mut cat.block_starts, &cmd, |s| {
-                    matches!(s.cmd, ParsedLineCmd::DeleteBlockStart)
+                    matches!(s.cmd, ParsedLineCmd::DeleteBlock)
                 }) {
                     let count = cmd.line_index - start.line_index + 1;
                     cat.deletes.push(PendingLineCmd {
@@ -261,17 +264,17 @@ fn categorise_commands(
                     });
                 } else {
                     cat.block_starts.push(PendingLineCmd {
-                        cmd: ParsedLineCmd::DeleteBlockStart,
+                        cmd: ParsedLineCmd::DeleteBlock,
                         line_index: cmd.line_index,
                     });
                 }
             }
-            ParsedLineCmd::RepeatBlockEnd => {
+            ParsedLineCmd::RepeatBlock(count) => {
                 if let Some(start) = pair_block(&mut cat.block_starts, &cmd, |s| {
-                    matches!(s.cmd, ParsedLineCmd::RepeatBlockStart(_))
+                    matches!(s.cmd, ParsedLineCmd::RepeatBlock(_))
                 }) {
                     let count = match start.cmd {
-                        ParsedLineCmd::RepeatBlockStart(n) => n,
+                        ParsedLineCmd::RepeatBlock(Some(n)) => n,
                         _ => 1,
                     };
                     cat.repeats.push(PendingLineCmd {
@@ -285,7 +288,7 @@ fn categorise_commands(
                     });
                 } else {
                     cat.block_starts.push(PendingLineCmd {
-                        cmd: ParsedLineCmd::RepeatBlockStart(1),
+                        cmd: ParsedLineCmd::RepeatBlock(Some(1)),
                         line_index: cmd.line_index,
                     });
                 }
@@ -315,14 +318,14 @@ where
 // ---------------------------------------------------------------------------
 
 fn apply_labels(buffer: &mut FileBuffer, labels: &[PendingLineCmd]) {
-    for cmd in labels {
-        if let ParsedLineCmd::Label(name) = &cmd.cmd {
-            buffer.set_label(name.clone(), cmd.line_index);
-            if let Some(line) = buffer.lines.get_mut(cmd.line_index) {
-                line.clear_prefix_cmd();
-            }
-        }
-    }
+    // for cmd in labels {
+    //     if let ParsedLineCmd::Label(name) = &cmd.cmd {
+    //         buffer.set_label(name.clone(), cmd.line_index);
+    //         if let Some(line) = buffer.lines.get_mut(cmd.line_index) {
+    //             line.clear_prefix_cmd();
+    //         }
+    //     }
+    // }
 }
 
 fn apply_deletes(buffer: &mut FileBuffer, mut deletes: Vec<PendingLineCmd>) {

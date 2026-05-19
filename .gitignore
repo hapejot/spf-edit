@@ -3,3 +3,4 @@
 /SPFPC
 /target
 pan2json/target
+*.log
