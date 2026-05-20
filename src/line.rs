@@ -67,6 +67,8 @@ pub struct Line {
     pub current_number: usize,
     pub flags: LineFlags,
     pub prefix_cmd: Option<String>,
+    pub excluded: bool,
+    pub label: Option<String>,
 }
 
 impl Line {
@@ -78,6 +80,8 @@ impl Line {
             current_number: number,
             flags: LineFlags::NONE,
             prefix_cmd: None,
+            excluded: false,
+            label: None,
         }
     }
 
@@ -89,6 +93,8 @@ impl Line {
             current_number: number,
             flags: LineFlags::INSERTED,
             prefix_cmd: None,
+            excluded: false,
+            label: None,
         }
     }
 
@@ -100,6 +106,8 @@ impl Line {
             current_number: 0,
             flags: LineFlags::NONE,
             prefix_cmd: None,
+            excluded: false,
+            label: None,
         }
     }
 
@@ -111,6 +119,8 @@ impl Line {
             current_number: 0,
             flags: LineFlags::NONE,
             prefix_cmd: None,
+            excluded: false,
+            label: None,
         }
     }
 
@@ -122,6 +132,8 @@ impl Line {
             current_number: 0,
             flags: LineFlags::NONE,
             prefix_cmd: None,
+            excluded: false,
+            label: None,
         }
     }
 
@@ -133,6 +145,8 @@ impl Line {
             current_number: 0,
             flags: LineFlags::NONE,
             prefix_cmd: None,
+            excluded: false,
+            label: None,
         }
     }
 

@@ -713,11 +713,9 @@ impl Editor {
     }
 
     fn update_cursor_line_index(&mut self) {
-        trace!("screen row: {}", self.cursor_screen_row());
         match self.input.focus {
             FieldFocus::PrefixArea { screen_row } | FieldFocus::DataArea { screen_row } => {
                 self.cursor_line_index = self.screen.screen_row_to_line(screen_row);
-                trace!("cursor line index: {}", self.cursor_line_index);
             }
             _ => {}
         }

@@ -318,14 +318,14 @@ where
 // ---------------------------------------------------------------------------
 
 fn apply_labels(buffer: &mut FileBuffer, labels: &[PendingLineCmd]) {
-    // for cmd in labels {
-    //     if let ParsedLineCmd::Label(name) = &cmd.cmd {
-    //         buffer.set_label(name.clone(), cmd.line_index);
-    //         if let Some(line) = buffer.lines.get_mut(cmd.line_index) {
-    //             line.clear_prefix_cmd();
-    //         }
-    //     }
-    // }
+    for cmd in labels {
+        if let ParsedLineCmd::Label(name) = &cmd.cmd {
+            buffer.set_label(name.clone(), cmd.line_index);
+            if let Some(line) = buffer.lines.get_mut(cmd.line_index) {
+                line.clear_prefix_cmd();
+            }
+        }
+    }
 }
 
 fn apply_deletes(buffer: &mut FileBuffer, mut deletes: Vec<PendingLineCmd>) {
