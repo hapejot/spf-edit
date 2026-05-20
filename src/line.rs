@@ -172,3 +172,84 @@ impl Line {
         self.flags.clear(LineFlags::CMD_ERROR);
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::{Line, LineType};
+
+    fn text_to_lines(text: &str) -> Vec<Line> {
+        text.split('\n')
+            .enumerate()
+            .map(|(idx, s)| Line::new_data(s.to_string(), idx + 1))
+            .collect()
+    }
+
+    fn lines_to_text(lines: &[Line]) -> String {
+        lines
+            .iter()
+            .filter(|line| line.line_type == LineType::Data)
+            .map(|line| line.data.as_str())
+            .collect::<Vec<_>>()
+            .join("\n")
+    }
+
+    #[test]
+    fn text_to_lines_creates_data_lines_with_numbers() {
+        let lines = text_to_lines("alpha\nbeta\ngamma");
+
+        assert_eq!(lines.len(), 3);
+        assert_eq!(lines[0].line_type, LineType::Data);
+        assert_eq!(lines[0].data, "alpha");
+        assert_eq!(lines[0].current_number, 1);
+        assert_eq!(lines[1].data, "beta");
+        assert_eq!(lines[1].current_number, 2);
+        assert_eq!(lines[2].data, "gamma");
+        assert_eq!(lines[2].current_number, 3);
+    }
+
+    #[test]
+    fn lines_to_text_ignores_non_data_line_types() {
+        let lines = vec![
+            Line::top_of_data(),
+            Line::new_data("row-1".to_string(), 1),
+            Line::cols_ruler(),
+            Line::message("status".to_string()),
+            Line::new_data("row-2".to_string(), 2),
+            Line::bottom_of_data(),
+        ];
+
+        assert_eq!(lines_to_text(&lines), "row-1\nrow-2");
+    }
+
+    #[test]
+    fn text_round_trip_preserves_short_sample() {
+        let original = "one\n\nthree";
+        let lines = text_to_lines(original);
+        let rebuilt = lines_to_text(&lines);
+
+        assert_eq!(rebuilt, original);
+    }
+
+    #[test]
+    fn line_type_helpers_match_expected_behavior() {
+        let data = Line::new_data("x".to_string(), 1);
+        let top = Line::top_of_data();
+        let bottom = Line::bottom_of_data();
+        let cols = Line::cols_ruler();
+        let msg = Line::message("note".to_string());
+
+        assert!(data.is_data());
+        assert!(data.is_writable());
+        assert!(!data.is_sentinel());
+
+        assert!(top.is_sentinel());
+        assert!(!top.is_writable());
+        assert!(bottom.is_sentinel());
+        assert!(!bottom.is_writable());
+
+        assert!(!cols.is_sentinel());
+        assert!(!cols.is_writable());
+        assert!(!msg.is_sentinel());
+        assert!(!msg.is_writable());
+    }
+}

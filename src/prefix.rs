@@ -215,3 +215,61 @@ pub fn sentinel_text(line_type: LineType, data_width: usize) -> String {
         "*".repeat(stars_right)
     )
 }
+
+#[cfg(test)]
+mod tests {
+    use super::{
+        ParsedLineCmd, PrefixParseResult, cols_ruler_text, format_prefix, parse_prefix_command,
+        sentinel_text,
+    };
+    use crate::line::{Line, LineType};
+    use crate::types::NumberMode;
+
+    #[test]
+    fn format_prefix_for_each_line_type() {
+        assert_eq!(format_prefix(&Line::top_of_data(), NumberMode::On), "******");
+        assert_eq!(format_prefix(&Line::bottom_of_data(), NumberMode::On), "******");
+        assert_eq!(format_prefix(&Line::cols_ruler(), NumberMode::On), "=COLS>");
+        assert_eq!(format_prefix(&Line::message("m".to_string()), NumberMode::On), "==MSG>");
+    }
+
+    #[test]
+    fn format_prefix_for_data_line_numbers_and_pending_command() {
+        let mut line = Line::new_data("abc".to_string(), 42);
+        assert_eq!(format_prefix(&line, NumberMode::On), "000042");
+        assert_eq!(format_prefix(&line, NumberMode::Off), "======");
+
+        line.prefix_cmd = Some("D3".to_string());
+        assert_eq!(format_prefix(&line, NumberMode::On), "D3    ");
+    }
+
+    #[test]
+    fn parse_prefix_commands_basic_examples() {
+        assert!(matches!(
+            parse_prefix_command("i2"),
+            PrefixParseResult::Command(ParsedLineCmd::Insert(2))
+        ));
+        assert!(matches!(
+            parse_prefix_command("RR3"),
+            PrefixParseResult::Command(ParsedLineCmd::RepeatBlock(Some(3)))
+        ));
+        assert!(matches!(
+            parse_prefix_command(".mark"),
+            PrefixParseResult::Command(ParsedLineCmd::Label(s)) if s == "MARK"
+        ));
+    }
+
+    #[test]
+    fn cols_ruler_and_sentinel_text_examples() {
+        assert_eq!(cols_ruler_text(12), "----+----1--");
+
+        let top = sentinel_text(LineType::TopOfData, 24);
+        let bottom = sentinel_text(LineType::BottomOfData, 24);
+        assert_eq!(top.len(), 24);
+        assert_eq!(bottom.len(), 24);
+        assert!(top.contains(" Top of Data "));
+        assert!(bottom.contains(" Bottom of Data "));
+
+        assert_eq!(sentinel_text(LineType::Data, 24), "");
+    }
+}
