@@ -2,7 +2,17 @@
 
 ## Overview
 
-SPF-Edit uses a SQLite database for all persistent configuration. This includes editing profiles (per-language/file-type settings), key bindings, editor state, and global settings. Profiles are matched to files using regex patterns on the file path.
+SPF-Edit uses a SQLite database for all persistent configuration. This includes editing profiles 
+(per-language/file-type settings), key bindings, editor state, and global settings. Profiles are matched
+to files using regex patterns on the file path.
+
+It is debateble if SQLite is the only possible choice. Currently we also have panel definitions as JSON files.
+These might also go into the SQLite store or the profiles just would live in a subdirectory.
+
+One option is also to allow SQLite editing in this editor. So you could choose the database as the data set
+The tables would then be the members. the schema should then provide some width spec for each column so that
+the columns can be shown as plain text with separators nicely und each other.
+This could then also understand insert, delete, or updates.
 
 ## Configuration Database
 
@@ -22,21 +32,22 @@ Using SQLite provides:
 
 ### Schema Overview
 
-| Table | Purpose |
-|-------|---------|
-| `profiles` | Editing profiles (one row per profile) |
+| Table              | Purpose                                       |
+| ------------------ | --------------------------------------------- |
+| `profiles`         | Editing profiles (one row per profile)        |
 | `profile_patterns` | Regex patterns mapping file paths to profiles |
-| `key_bindings` | Key combo → action mappings |
-| `settings` | Global editor settings (key-value) |
-| `state` | Persistent editor state (per-file) |
-| `clipboards` | Named clipboard contents |
-| `macros` | Stored macros (future) |
+| `key_bindings`     | Key combo → action mappings                   |
+| `settings`         | Global editor settings (key-value)            |
+| `state`            | Persistent editor state (per-file)            |
+| `clipboards`       | Named clipboard contents                      |
+| `macros`           | Stored macros (future)                        |
 
 ## Profiles
 
 ### What Is a Profile
 
-A profile is a named collection of editing settings applied when a file is opened. Each profile configures: colorize file, tab settings, bounds, record format, case behavior, and more.
+A profile is a named collection of editing settings applied when a file is opened. Each profile configures: 
+colorize file, tab settings, bounds, record format, case behavior, and more.
 
 ### Profile Matching
 
@@ -54,15 +65,15 @@ CREATE TABLE profile_patterns (
 
 Example patterns:
 
-| Pattern | Profile |
-|---------|---------|
-| `\.rs$` | rust |
-| `\.py$` | python |
-| `\.c$\|\.h$` | c |
-| `\.txt$` | text |
-| `Makefile$` | makefile |
-| `\.auto$` | spflite-auto |
-| `.*` | default |
+| Pattern      | Profile      |
+| ------------ | ------------ |
+| `\.rs$`      | rust         |
+| `\.py$`      | python       |
+| `\.c$\|\.h$` | c            |
+| `\.txt$`     | text         |
+| `Makefile$`  | makefile     |
+| `\.auto$`    | spflite-auto |
+| `.*`         | default      |
 
 Patterns are evaluated in priority order (highest first). The first match wins.
 
@@ -142,23 +153,23 @@ Key combos are stored as normalized strings:
 
 ### Default Key Bindings
 
-| Key | Action | Context |
-|-----|--------|---------|
-| F1 | HELP | global |
-| F2 | SPLIT | global |
-| F3 | END | global |
-| F5 | RFIND | global |
-| F6 | RCHANGE | global |
-| F7 | UP | global |
-| F8 | DOWN | global |
-| F9 | SWAP | global |
-| F10 | LEFT | global |
-| F11 | RIGHT | global |
-| F12 | RETRIEVE | global |
-| Ctrl+S | SAVE | global |
-| Ctrl+Q | FORCE_QUIT | global |
-| Insert | TOGGLE_MODE | global |
-| Escape | RESET | global |
+| Key    | Action      | Context |
+| ------ | ----------- | ------- |
+| F1     | HELP        | global  |
+| F2     | SPLIT       | global  |
+| F3     | END         | global  |
+| F5     | RFIND       | global  |
+| F6     | RCHANGE     | global  |
+| F7     | UP          | global  |
+| F8     | DOWN        | global  |
+| F9     | SWAP        | global  |
+| F10    | LEFT        | global  |
+| F11    | RIGHT       | global  |
+| F12    | RETRIEVE    | global  |
+| Ctrl+S | SAVE        | global  |
+| Ctrl+Q | FORCE_QUIT  | global  |
+| Insert | TOGGLE_MODE | global  |
+| Escape | RESET       | global  |
 
 ### KEYS Command
 
@@ -194,17 +205,17 @@ CREATE TABLE settings (
 
 ### Settings
 
-| Key | Default | Description |
-|-----|---------|-------------|
-| `confirm_cancel` | `true` | Prompt before discarding changes |
-| `confirm_delete` | `false` | Prompt before delete operations |
-| `scroll_amount` | `PAGE` | Default scroll amount (PAGE, HALF, CSR, DATA, N) |
-| `command_retrieve_depth` | `25` | Number of commands to remember |
-| `undo_depth` | `100` | Maximum undo frames |
-| `colorize_dir` | `~/.config/spf-edit/colorize/` | Path to .auto files |
-| `backup_dir` | `~/.config/spf-edit/backups/` | Default backup directory |
-| `font_size` | (terminal default) | Future: for GUI mode |
-| `theme` | `ispf` | Color theme name |
+| Key                      | Default                        | Description                                      |
+| ------------------------ | ------------------------------ | ------------------------------------------------ |
+| `confirm_cancel`         | `true`                         | Prompt before discarding changes                 |
+| `confirm_delete`         | `false`                        | Prompt before delete operations                  |
+| `scroll_amount`          | `PAGE`                         | Default scroll amount (PAGE, HALF, CSR, DATA, N) |
+| `command_retrieve_depth` | `25`                           | Number of commands to remember                   |
+| `undo_depth`             | `100`                          | Maximum undo frames                              |
+| `colorize_dir`           | `~/.config/spf-edit/colorize/` | Path to .auto files                              |
+| `backup_dir`             | `~/.config/spf-edit/backups/`  | Default backup directory                         |
+| `font_size`              | (terminal default)             | Future: for GUI mode                             |
+| `theme`                  | `ispf`                         | Color theme name                                 |
 
 ### SET Command
 
@@ -252,11 +263,11 @@ State entries older than a configurable age (default: 90 days) are automatically
 
 ## Configuration Commands Summary
 
-| Command | Purpose |
-|---------|---------|
-| `PROFILE` | Manage editing profiles |
-| `KEYS` | Manage key bindings |
-| `SET` | Manage global settings |
+| Command    | Purpose                                      |
+| ---------- | -------------------------------------------- |
+| `PROFILE`  | Manage editing profiles                      |
+| `KEYS`     | Manage key bindings                          |
+| `SET`      | Manage global settings                       |
 | `SETTINGS` | Open settings dialog (future, alias for SET) |
 
 ## First-Run Setup
@@ -277,13 +288,13 @@ On first run:
 
 ## Error Conditions
 
-| Condition | Message |
-|-----------|---------|
-| Database not writable | `"Cannot write config database: path"` |
-| Invalid regex in pattern | `"Invalid profile pattern: error"` |
-| Profile not found | `"Profile 'name' not found"` |
-| Key combo parse error | `"Invalid key combination: combo"` |
-| Unknown setting | `"Unknown setting: key"` |
+| Condition                | Message                                |
+| ------------------------ | -------------------------------------- |
+| Database not writable    | `"Cannot write config database: path"` |
+| Invalid regex in pattern | `"Invalid profile pattern: error"`     |
+| Profile not found        | `"Profile 'name' not found"`           |
+| Key combo parse error    | `"Invalid key combination: combo"`     |
+| Unknown setting          | `"Unknown setting: key"`               |
 
 ## Examples
 
@@ -295,19 +306,19 @@ On first run:
 
 ## Status
 
-| Aspect | State |
-|--------|-------|
-| SQLite config database | **Not started** |
-| Profiles table | **Not started** |
-| Profile pattern matching (regex) | **Not started** |
-| Default profile | **Not started** |
-| Key bindings table | **Not started** |
-| Default key bindings | **Partial** (hardcoded in input.rs) |
-| Global settings table | **Not started** |
-| State persistence | **Not started** |
-| PROFILE command | **Not started** |
-| KEYS command | **Not started** |
-| SET command | **Not started** |
-| First-run setup | **Not started** |
-| Schema migration | **Not started** |
-| Colorize directory management | **Not started** |
+| Aspect                           | State                               |
+| -------------------------------- | ----------------------------------- |
+| SQLite config database           | **Not started**                     |
+| Profiles table                   | **Not started**                     |
+| Profile pattern matching (regex) | **Not started**                     |
+| Default profile                  | **Not started**                     |
+| Key bindings table               | **Not started**                     |
+| Default key bindings             | **Partial** (hardcoded in input.rs) |
+| Global settings table            | **Not started**                     |
+| State persistence                | **Not started**                     |
+| PROFILE command                  | **Not started**                     |
+| KEYS command                     | **Not started**                     |
+| SET command                      | **Not started**                     |
+| First-run setup                  | **Not started**                     |
+| Schema migration                 | **Not started**                     |
+| Colorize directory management    | **Not started**                     |

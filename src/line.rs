@@ -62,7 +62,7 @@ impl std::ops::BitOr for LineFlags {
 #[derive(Debug, Clone)]
 pub struct Line {
     pub line_type: LineType,
-    pub data: String,
+    pub data: Vec<char>,
     pub original_number: Option<usize>,
     pub current_number: usize,
     pub flags: LineFlags,
@@ -75,7 +75,7 @@ impl Line {
     pub fn new_data(data: String, number: usize) -> Self {
         Line {
             line_type: LineType::Data,
-            data,
+            data: data.chars().collect(),
             original_number: Some(number),
             current_number: number,
             flags: LineFlags::NONE,
@@ -88,7 +88,7 @@ impl Line {
     pub fn new_blank(number: usize) -> Self {
         Line {
             line_type: LineType::Data,
-            data: String::new(),
+            data: Vec::new(),
             original_number: None,
             current_number: number,
             flags: LineFlags::INSERTED,
@@ -101,7 +101,7 @@ impl Line {
     pub fn top_of_data() -> Self {
         Line {
             line_type: LineType::TopOfData,
-            data: String::new(),
+            data: Vec::new(),
             original_number: None,
             current_number: 0,
             flags: LineFlags::NONE,
@@ -114,7 +114,7 @@ impl Line {
     pub fn bottom_of_data() -> Self {
         Line {
             line_type: LineType::BottomOfData,
-            data: String::new(),
+            data: Vec::new(),
             original_number: None,
             current_number: 0,
             flags: LineFlags::NONE,
@@ -127,7 +127,7 @@ impl Line {
     pub fn cols_ruler() -> Self {
         Line {
             line_type: LineType::ColsRuler,
-            data: String::new(),
+            data: Vec::new(),
             original_number: None,
             current_number: 0,
             flags: LineFlags::NONE,
@@ -140,7 +140,7 @@ impl Line {
     pub fn message(text: String) -> Self {
         Line {
             line_type: LineType::Message,
-            data: text,
+            data: text.chars().collect(),
             original_number: None,
             current_number: 0,
             flags: LineFlags::NONE,
@@ -188,7 +188,7 @@ mod tests {
         lines
             .iter()
             .filter(|line| line.line_type == LineType::Data)
-            .map(|line| line.data.as_str())
+            .map(|line| line.data.iter().collect::<String>())
             .collect::<Vec<_>>()
             .join("\n")
     }
@@ -199,11 +199,11 @@ mod tests {
 
         assert_eq!(lines.len(), 3);
         assert_eq!(lines[0].line_type, LineType::Data);
-        assert_eq!(lines[0].data, "alpha");
+        assert_eq!(lines[0].data, "alpha".chars().collect::<Vec<char>>());
         assert_eq!(lines[0].current_number, 1);
-        assert_eq!(lines[1].data, "beta");
+        assert_eq!(lines[1].data, "beta".chars().collect::<Vec<char>>());
         assert_eq!(lines[1].current_number, 2);
-        assert_eq!(lines[2].data, "gamma");
+        assert_eq!(lines[2].data, "gamma".chars().collect::<Vec<char>>());
         assert_eq!(lines[2].current_number, 3);
     }
 
@@ -251,5 +251,24 @@ mod tests {
         assert!(!cols.is_writable());
         assert!(!msg.is_sentinel());
         assert!(!msg.is_writable());
+    }
+
+    #[test]
+    fn text_file_read_1() {
+        let content = b"Line 1\r\nLine 2\r\nLine 3\r\n".to_vec();
+        let (store, ending) = crate::file_io::read_text_file(&content).unwrap();
+        assert_eq!(ending, crate::types::LineEnding::CrLf);
+        assert_eq!(store.iter().len(), 5); // includes sentinels
+        assert_eq!(
+            store.iter().nth(0).unwrap().line_type,
+            crate::line::LineType::TopOfData
+        );
+        assert_eq!(store.iter().nth(1).unwrap().data, "Line 1".chars().collect::<Vec<char>>());
+        assert_eq!(store.iter().nth(2).unwrap().data, "Line 2".chars().collect::<Vec<char>>());
+        assert_eq!(store.iter().nth(3).unwrap().data, "Line 3".chars().collect::<Vec<char>>());
+        assert_eq!(
+            store.iter().nth(4).unwrap().line_type,
+            crate::line::LineType::BottomOfData
+        );
     }
 }

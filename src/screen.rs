@@ -259,7 +259,10 @@ impl Screen {
 
         let caps = if buffer.caps_mode { "CAPS" } else { "    " };
 
-        let left = format!(" {} | {} | Lines: {} | Col: {} | {}", time_str, mode_str, line_count, col_pos, caps);
+        let left = format!(
+            " {} | {} | Lines: {} | Col: {} | {}",
+            time_str, mode_str, line_count, col_pos, caps
+        );
         let right = format!("EDIT ");
         let padding = w.saturating_sub(left.len() + right.len());
         let bar = format!("{}{}{}", left, " ".repeat(padding), right);
@@ -380,7 +383,7 @@ impl Screen {
             LineType::Data => {
                 let data = &line.data;
                 let skipped = skip_chars(data, self.horizontal_offset);
-                truncate_to_width(skipped, data_width)
+                truncate_to_width(&skipped, data_width)
             }
         }
     }
@@ -503,22 +506,19 @@ impl Screen {
 }
 
 /// Skip `n` characters from the start of a string, returning the remainder.
-fn skip_chars(s: &str, n: usize) -> &str {
-    let mut chars = s.chars();
-    for _ in 0..n {
-        if chars.next().is_none() {
-            return "";
-        }
+fn skip_chars(s: &[char], n: usize) -> Vec<char> {
+    if s.len() > n {
+        s[n..].to_vec()
+    } else {
+        Vec::new()
     }
-    chars.as_str()
 }
-
 /// Truncate a string to fit within `max_width` display columns.
-fn truncate_to_width(s: &str, max_width: usize) -> String {
+fn truncate_to_width(s: &[char], max_width: usize) -> String {
     use unicode_width::UnicodeWidthChar;
     let mut result = String::new();
     let mut width = 0;
-    for ch in s.chars() {
+    for &ch in s {
         let ch_width = UnicodeWidthChar::width(ch).unwrap_or(0);
         if width + ch_width > max_width {
             break;

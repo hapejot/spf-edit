@@ -37,7 +37,7 @@ pub fn read_file(
     }
 }
 
-fn read_text_file(content: &[u8]) -> io::Result<(VecLineStore, LineEnding)> {
+pub fn read_text_file(content: &[u8]) -> io::Result<(VecLineStore, LineEnding)> {
     let line_ending = detect_line_ending(content);
 
     let text = String::from_utf8_lossy(content);
@@ -71,7 +71,7 @@ fn read_text_file(content: &[u8]) -> io::Result<(VecLineStore, LineEnding)> {
     Ok((VecLineStore::from_lines(lines), line_ending))
 }
 
-fn read_fixed_file(content: &[u8], lrecl: usize) -> io::Result<(VecLineStore, LineEnding)> {
+pub fn read_fixed_file(content: &[u8], lrecl: usize) -> io::Result<(VecLineStore, LineEnding)> {
     let mut lines = Vec::new();
 
     // TopOfData sentinel
@@ -193,9 +193,9 @@ fn write_text_file(
         }
 
         let data = if nulls_mode {
-            line.data.trim_end().to_string()
+            line.data.iter().collect::<String>().trim_end().to_string()
         } else {
-            line.data.clone()
+            line.data.iter().collect::<String>()  
         };
 
         file.write_all(data.as_bytes())?;
@@ -223,10 +223,10 @@ fn write_fixed_file(
         let data = &line.data;
         if data.len() >= lrecl {
             // Truncate to record length
-            file.write_all(data[..lrecl].as_bytes())?;
+            file.write_all(data[..lrecl].iter().collect::<String>().as_bytes())?;
         } else {
             // Pad with spaces
-            file.write_all(data.as_bytes())?;
+            file.write_all(data.iter().collect::<String>().as_bytes())?;
             let padding = lrecl - data.len();
             for _ in 0..padding {
                 file.write_all(b" ")?;
@@ -244,4 +244,19 @@ pub fn create_empty_buffer() -> VecLineStore {
         Line::new_blank(LINE_NUMBER_INCREMENT),
         Line::bottom_of_data(),
     ])
+}
+
+
+#[cfg(test)]
+mod test {
+    use super::*;
+
+    #[test]
+    fn test_expand_tabs() {
+        assert_eq!(expand_tabs("abc\tdef"), "abc def");
+        assert_eq!(expand_tabs("\tstart"), "    start");
+        assert_eq!(expand_tabs("end\t"), "end    ");
+        assert_eq!(expand_tabs("mid\tline\t"), "mid line    ");
+    }
+
 }

@@ -21,14 +21,12 @@ use std::collections::HashMap;
 use std::io;
 use std::path::{Path, PathBuf};
 
-use tracing::{info, debug, trace};
+use tracing::{debug, info, trace};
 
+use crate::file_io;
 use crate::line::{Line, LineFlags};
 use crate::line_store::{LineStore, VecLineStore};
-use crate::types::{
-    Direction, LineEnding, NumberMode, RecordFormat, LINE_NUMBER_INCREMENT,
-};
-use crate::file_io;
+use crate::types::{Direction, LINE_NUMBER_INCREMENT, LineEnding, NumberMode, RecordFormat};
 
 pub struct FileBuffer {
     pub lines: VecLineStore,
@@ -47,9 +45,16 @@ pub struct FileBuffer {
 impl FileBuffer {
     /// Open a file and create a buffer.
     pub fn open(path: &Path, record_format: RecordFormat, browse: bool) -> io::Result<Self> {
-        info!("FileBuffer::open {:?} format={:?} browse={}", path, record_format, browse);
+        info!(
+            "FileBuffer::open {:?} format={:?} browse={}",
+            path, record_format, browse
+        );
         let (lines, line_ending) = file_io::read_file(path, record_format)?;
-        info!("  loaded {} lines, line_ending={:?}", lines.iter().count(), line_ending);
+        info!(
+            "  loaded {} lines, line_ending={:?}",
+            lines.iter().count(),
+            line_ending
+        );
 
         Ok(FileBuffer {
             lines,
@@ -113,12 +118,7 @@ impl FileBuffer {
     /// Count of data lines only.
     pub fn data_line_count(&self) -> usize {
         (0..self.lines.len())
-            .filter(|&i| {
-                self.lines
-                    .get(i)
-                    .map(|l| l.is_data())
-                    .unwrap_or(false)
-            })
+            .filter(|&i| self.lines.get(i).map(|l| l.is_data()).unwrap_or(false))
             .count()
     }
 
@@ -127,11 +127,7 @@ impl FileBuffer {
     /// Insert `count` blank lines after `index`.
     pub fn insert_lines_after(&mut self, index: usize, count: usize) {
         debug!("insert_lines_after: index={index} count={count}");
-        let number = self
-            .lines
-            .get(index)
-            .map(|l| l.current_number)
-            .unwrap_or(0);
+        let number = self.lines.get(index).map(|l| l.current_number).unwrap_or(0);
 
         for i in 0..count {
             let line = Line::new_blank(number + i + 1);
@@ -325,25 +321,43 @@ impl FileBuffer {
             Direction::Next => self.search_forward(&needle, start_line, start_col),
             Direction::Prev => self.search_backward(&needle, start_line, Some(start_col)),
             Direction::First => self.search_forward(&needle, 0, 0),
-            Direction::Last => self.search_backward(&needle, self.lines.len().saturating_sub(1), None),
+            Direction::Last => {
+                self.search_backward(&needle, self.lines.len().saturating_sub(1), None)
+            }
             Direction::All => self.search_forward(&needle, 0, 0),
         }
     }
 
     /// Forward search starting at (`start_line`, `start_col`). `needle` must
     /// already be lowercased.
-    fn search_forward(&self, needle: &str, start_line: usize, start_col: usize) -> Option<(usize, usize)> {
+    fn search_forward(
+        &self,
+        needle: &str,
+        start_line: usize,
+        start_col: usize,
+    ) -> Option<(usize, usize)> {
+        let needle = needle.chars().collect::<Vec<char>>();
         for i in start_line..self.lines.len() {
-            let Some(line) = self.lines.get(i) else { continue };
+            let Some(line) = self.lines.get(i) else {
+                continue;
+            };
             if !line.is_data() {
                 continue;
             }
-            let data_lower = line.data.to_lowercase();
+            let data_lower = line
+                .data
+                .iter()
+                .map(|c| c.to_ascii_lowercase())
+                .collect::<Vec<char>>();
             let search_from = if i == start_line { start_col } else { 0 };
             if search_from > data_lower.len() {
                 continue;
             }
-            if let Some(pos) = data_lower[search_from..].find(needle) {
+
+            if let Some(pos) = data_lower[search_from..]
+                .windows(needle.len())
+                .position(|w| w == &needle)
+            {
                 return Some((i, search_from + pos));
             }
         }
@@ -358,17 +372,27 @@ impl FileBuffer {
         start_line: usize,
         end_col: Option<usize>,
     ) -> Option<(usize, usize)> {
+        let needle = needle.chars().collect::<Vec<char>>();
         for i in (0..=start_line).rev() {
-            let Some(line) = self.lines.get(i) else { continue };
+            let Some(line) = self.lines.get(i) else {
+                continue;
+            };
             if !line.is_data() {
                 continue;
             }
-            let data_lower = line.data.to_lowercase();
+            let data_lower = line
+                .data
+                .iter()
+                .map(|c| c.to_ascii_lowercase())
+                .collect::<Vec<char>>();
             let search_until = match end_col {
                 Some(c) if i == start_line => c.min(data_lower.len()),
                 _ => data_lower.len(),
             };
-            if let Some(pos) = data_lower[..search_until].rfind(needle) {
+            if let Some(pos) = data_lower[..search_until]
+                .windows(needle.len())
+                .rposition(|w| w == &needle)
+            {
                 return Some((i, pos));
             }
         }
@@ -377,15 +401,22 @@ impl FileBuffer {
 
     /// Count all occurrences of a string in data lines.
     pub fn count_occurrences(&self, query: &str) -> usize {
-        let query_lower = query.to_lowercase();
+        let query_lower = query.to_ascii_lowercase().chars().collect::<Vec<char>>();
         let mut count = 0;
         for i in 0..self.lines.len() {
             if let Some(line) = self.lines.get(i) {
                 if !line.is_data() {
                     continue;
                 }
-                let data_lower = line.data.to_lowercase();
-                count += data_lower.matches(&query_lower).count();
+                let data_lower = line
+                    .data
+                    .iter()
+                    .map(|c| c.to_ascii_lowercase())
+                    .collect::<Vec<char>>();
+                count += data_lower
+                    .windows(query_lower.len())
+                    .filter(|w| w == &query_lower)
+                    .count();
             }
         }
         count
@@ -408,6 +439,7 @@ impl FileBuffer {
     /// Update a line's data content (from overtype editing).
     pub fn update_line_data(&mut self, index: usize, new_data: String) {
         if let Some(line) = self.lines.get_mut(index) {
+            let new_data = new_data.chars().collect::<Vec<char>>();
             if line.is_data() && line.data != new_data {
                 trace!("update_line_data: line {index} changed");
                 line.data = new_data;

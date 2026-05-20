@@ -392,7 +392,7 @@ impl Editor {
         while data.len() <= actual_col {
             data.push(' ');
         }
-        let mut chars: Vec<char> = data.chars().collect();
+        let mut chars: Vec<char> = data.clone();
         if insert_mode {
             chars.insert(actual_col, c);
         } else {
@@ -454,7 +454,7 @@ impl Editor {
         if actual_col >= data.len() {
             return;
         }
-        let mut chars: Vec<char> = data.chars().collect();
+        let mut chars: Vec<char> = data.clone();
         chars.remove(actual_col);
         self.buffer
             .update_line_data(line_index, chars.into_iter().collect());
