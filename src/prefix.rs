@@ -143,28 +143,6 @@ fn parse_count(s: &str) -> Result<usize, PrefixParseResult> {
     }
 }
 
-/// Format a line number for display in the prefix area.
-pub fn format_prefix(line: &Line, number_mode: NumberMode) -> String {
-    match line.line_type {
-        LineType::TopOfData | LineType::BottomOfData => "******".to_string(),
-        LineType::ColsRuler => "=COLS>".to_string(),
-        LineType::Message => "==MSG>".to_string(),
-        LineType::Insert => "''''''".to_string(),
-        LineType::Data => {
-            // If there's a pending command, show it instead
-            if let Some(ref cmd) = line.prefix_cmd {
-                return format!("{:<width$}", cmd, width = PREFIX_WIDTH);
-            }
-
-            match number_mode {
-                NumberMode::On => {
-                    format!("{:06}", line.current_number)
-                }
-                NumberMode::Off => "======".to_string(),
-            }
-        }
-    }
-}
 
 /// Generate the column ruler text for the data area.
 pub fn cols_ruler_text(width: usize) -> String {
@@ -268,5 +246,30 @@ mod tests {
         assert!(bottom.contains(" Bottom of Data "));
 
         assert_eq!(sentinel_text(LineType::Data, 24), "");
+    }
+}
+
+
+/// Format a line number for display in the prefix area.
+pub fn format_prefix(line: &Line, number_mode: NumberMode) -> String {
+    match line.line_type {
+        LineType::TopOfData | LineType::BottomOfData => "******".to_string(),
+        LineType::ColsRuler => "=COLS>".to_string(),
+        LineType::Message => "==MSG>".to_string(),
+        LineType::Insert => "''''''".to_string(),
+        LineType::Data => {
+            if let Some(ref cmd) = line.prefix_cmd {
+                return format!("{:<width$}", cmd, width = PREFIX_WIDTH);
+            }
+            if let Some(ref label) = line.label {
+                return format!("{:<width$}", format!(".{label}"), width = PREFIX_WIDTH);
+            }
+            match number_mode {
+                NumberMode::On => {
+                    format!("{:06}", line.current_number)
+                }
+                NumberMode::Off => "======".to_string(),
+            }
+        }
     }
 }

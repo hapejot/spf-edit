@@ -1,0 +1,82 @@
+digraph {
+
+    graph [
+        label="spf_edit",
+        labelloc=t,
+
+        pad=0.4,
+
+        // Consider rendering the graph using a different layout algorithm, such as:
+        // [dot, neato, twopi, circo, fdp, sfdp]
+        layout=neato,
+        overlap=false,
+        splines="line",
+        rankdir=LR,
+
+        fontname="Helvetica", 
+        fontsize="36",
+    ];
+
+    node [
+        fontname="monospace",
+        fontsize="10",
+        shape="record",
+        style="filled",
+    ];
+
+    edge [
+        fontname="monospace",
+        fontsize="10",
+    ];
+
+    "spf_edit" [label="crate|spf_edit", fillcolor="#5397c8"]; // "crate" node
+    "spf_edit::buffer" [label="pub(crate) mod|buffer", fillcolor="#f8c04c"]; // "mod" node
+    "spf_edit::command" [label="pub(crate) mod|command", fillcolor="#f8c04c"]; // "mod" node
+    "spf_edit::editor" [label="pub(crate) mod|editor", fillcolor="#f8c04c"]; // "mod" node
+    "spf_edit::file_io" [label="pub(crate) mod|file_io", fillcolor="#f8c04c"]; // "mod" node
+    "spf_edit::input" [label="pub(crate) mod|input", fillcolor="#f8c04c"]; // "mod" node
+    "spf_edit::line" [label="pub(crate) mod|line", fillcolor="#f8c04c"]; // "mod" node
+    "spf_edit::line_cmd" [label="pub(crate) mod|line_cmd", fillcolor="#f8c04c"]; // "mod" node
+    "spf_edit::line_store" [label="pub(crate) mod|line_store", fillcolor="#f8c04c"]; // "mod" node
+    "spf_edit::line_store::LineStore" [label="pub trait|line_store::LineStore", fillcolor="#81c169"]; // "trait" node
+    "spf_edit::prefix" [label="pub(crate) mod|prefix", fillcolor="#f8c04c"]; // "mod" node
+    "spf_edit::screen" [label="pub(crate) mod|screen", fillcolor="#f8c04c"]; // "mod" node
+    "spf_edit::types" [label="pub(crate) mod|types", fillcolor="#f8c04c"]; // "mod" node
+
+    "spf_edit" -> "spf_edit::buffer" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit" -> "spf_edit::editor" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit" -> "spf_edit::types" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::buffer" -> "spf_edit::file_io" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::buffer" -> "spf_edit::line" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::buffer" -> "spf_edit::line_store" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::buffer" -> "spf_edit::line_store::LineStore" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::buffer" -> "spf_edit::types" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::command" -> "spf_edit::buffer" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::command" -> "spf_edit::line_store::LineStore" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::command" -> "spf_edit::types" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::editor" -> "spf_edit::buffer" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::editor" -> "spf_edit::command" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::editor" -> "spf_edit::input" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::editor" -> "spf_edit::line" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::editor" -> "spf_edit::line_cmd" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::editor" -> "spf_edit::line_store::LineStore" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::editor" -> "spf_edit::screen" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::editor" -> "spf_edit::types" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::file_io" -> "spf_edit::line" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::file_io" -> "spf_edit::line_store" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::file_io" -> "spf_edit::types" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::input" -> "spf_edit::types" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::line_cmd" -> "spf_edit::buffer" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::line_cmd" -> "spf_edit::line" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::line_cmd" -> "spf_edit::line_store::LineStore" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::line_cmd" -> "spf_edit::prefix" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::line_store" -> "spf_edit::line" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::prefix" -> "spf_edit::line" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::prefix" -> "spf_edit::types" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::screen" -> "spf_edit::buffer" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::screen" -> "spf_edit::line" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::screen" -> "spf_edit::line_store::LineStore" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::screen" -> "spf_edit::prefix" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+    "spf_edit::screen" -> "spf_edit::types" [label="uses", color="#7f7f7f", style="dashed"] [constraint=false]; // "uses" edge
+
+}

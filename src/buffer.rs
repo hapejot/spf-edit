@@ -21,11 +21,13 @@ use std::collections::HashMap;
 use std::io;
 use std::path::{Path, PathBuf};
 
+use chrono::offset;
 use tracing::{debug, info, trace};
 
 use crate::file_io;
-use crate::line::{Line, LineFlags};
+use crate::line::{Line, LineFlags, LineType};
 use crate::line_store::{LineStore, VecLineStore};
+use crate::prefix::{cols_ruler_text, sentinel_text};
 use crate::types::{Direction, LINE_NUMBER_INCREMENT, LineEnding, NumberMode, RecordFormat};
 
 pub struct FileBuffer {
@@ -460,5 +462,72 @@ impl FileBuffer {
             .file_name()
             .map(|n| n.to_string_lossy().to_string())
             .unwrap_or_else(|| self.file_path.to_string_lossy().to_string())
+    }
+    /// Truncate a string to fit within `max_width` display columns.
+    fn truncate_to_width(s: &[char], max_width: usize) -> String {
+        use unicode_width::UnicodeWidthChar;
+        let mut result = String::new();
+        let mut width = 0;
+        for &ch in s {
+            let ch_width = UnicodeWidthChar::width(ch).unwrap_or(0);
+            if width + ch_width > max_width {
+                break;
+            }
+            result.push(ch);
+            width += ch_width;
+        }
+        result
+    }
+
+    /// Skip `n` characters from the start of a string, returning the remainder.
+    fn skip_chars(s: &[char], n: usize) -> Vec<char> {
+        if s.len() > n {
+            s[n..].to_vec()
+        } else {
+            Vec::new()
+        }
+    }
+
+    fn get_display_text(&self, line: &Line, horizontal_offset: usize, data_width: usize) -> String {
+        match line.line_type {
+            LineType::TopOfData | LineType::BottomOfData => {
+                sentinel_text(line.line_type, data_width)
+            }
+            LineType::ColsRuler => {
+                let ruler = cols_ruler_text(data_width + horizontal_offset);
+                if horizontal_offset < ruler.len() {
+                    let end = (horizontal_offset + data_width).min(ruler.len());
+                    ruler[horizontal_offset..end].to_string()
+                } else {
+                    String::new()
+                }
+            }
+            LineType::Message => Self::truncate_to_width(&line.data, data_width),
+            LineType::Insert => {
+                let data = &line.data;
+                let skipped = Self::skip_chars(data, horizontal_offset);
+                Self::truncate_to_width(&skipped, data_width)
+            }
+            LineType::Data => {
+                let data = &line.data;
+                let skipped = Self::skip_chars(data, horizontal_offset);
+                Self::truncate_to_width(&skipped, data_width)
+            }
+        }
+    }
+
+    pub(crate) fn get_line(
+        &self,
+        line_index: usize,
+        offset: usize,
+        data_width: usize,
+    ) -> Option<(String, String)> {
+        if let Some(l) = self.lines.get(line_index) {
+            let prefix = crate::prefix::format_prefix(l, self.number_mode);
+            let display = self.get_display_text(l, offset, data_width );
+            Some((prefix, display))
+        } else {
+            None
+        }
     }
 }

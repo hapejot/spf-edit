@@ -41,7 +41,6 @@ use unicode_width::UnicodeWidthStr;
 
 use crate::buffer::FileBuffer;
 use crate::line::{Line, LineFlags, LineType};
-use crate::line_store::LineStore;
 use crate::prefix::{cols_ruler_text, format_prefix, sentinel_text};
 use crate::types::*;
 
@@ -311,11 +310,16 @@ impl Screen {
         line_index: usize,
         buffer: &FileBuffer,
     ) -> io::Result<()> {
-        if line_index < buffer.lines.len() {
-            if let Some(line) = buffer.lines.get(line_index) {
+        if line_index < buffer.line_count() {
+            if let Some((prefix_text, display_text)) =
+                buffer.get_line(line_index, self.horizontal_offset, self.data_width())
+            {
                 // --- Prefix area ---
-                let prefix_text = format_prefix(line, buffer.number_mode);
-                let (prefix_fg, prefix_bg) = self.prefix_colors(line);
+                // let prefix_text = format_prefix(line, buffer.number_mode);
+                // let (prefix_fg, prefix_bg) = self.prefix_colors(line);
+
+                let prefix_fg = Colors::PREFIX_FG;
+                let prefix_bg = Colors::PREFIX_BG;
 
                 queue!(
                     stdout,
@@ -334,15 +338,16 @@ impl Screen {
 
                 // --- Data area ---
                 let data_width = self.data_width();
-                let (data_fg, data_bg) = self.data_colors(line);
-
+                // let (data_fg, data_bg) = self.data_colors(line);
+                let data_fg = Colors::DATA_FG;
+                let data_bg = Colors::DATA_BG;
                 queue!(
                     stdout,
                     SetForegroundColor(data_fg),
                     SetBackgroundColor(data_bg),
                 )?;
 
-                let display_text = self.get_display_text(line, data_width);
+                // let display_text = self.get_display_text(line, data_width);
                 queue!(stdout, Print(&display_text))?;
 
                 // Pad to fill data area
@@ -352,7 +357,7 @@ impl Screen {
                     queue!(stdout, Print(" ".repeat(padding)))?;
                 }
 
-                return (queue!(stdout, ResetColor));
+                return queue!(stdout, ResetColor);
             }
         }
         // Empty row (past end of buffer)
@@ -365,33 +370,6 @@ impl Screen {
         )
     }
     /// Get the text to display in the data area for a line.
-    fn get_display_text(&self, line: &Line, data_width: usize) -> String {
-        match line.line_type {
-            LineType::TopOfData | LineType::BottomOfData => {
-                sentinel_text(line.line_type, data_width)
-            }
-            LineType::ColsRuler => {
-                let ruler = cols_ruler_text(data_width + self.horizontal_offset);
-                if self.horizontal_offset < ruler.len() {
-                    let end = (self.horizontal_offset + data_width).min(ruler.len());
-                    ruler[self.horizontal_offset..end].to_string()
-                } else {
-                    String::new()
-                }
-            }
-            LineType::Message => truncate_to_width(&line.data, data_width),
-            LineType::Insert => {
-                let data = &line.data;
-                let skipped = skip_chars(data, self.horizontal_offset);
-                truncate_to_width(&skipped, data_width)
-            }
-            LineType::Data => {
-                let data = &line.data;
-                let skipped = skip_chars(data, self.horizontal_offset);
-                truncate_to_width(&skipped, data_width)
-            }
-        }
-    }
 
     /// Get colors for the prefix area based on line state.
     fn prefix_colors(&self, line: &Line) -> (Color, Color) {
@@ -509,28 +487,4 @@ impl Screen {
         };
         self.scroll_field_text = format!("{}", self.scroll_amount);
     }
-}
-
-/// Skip `n` characters from the start of a string, returning the remainder.
-fn skip_chars(s: &[char], n: usize) -> Vec<char> {
-    if s.len() > n {
-        s[n..].to_vec()
-    } else {
-        Vec::new()
-    }
-}
-/// Truncate a string to fit within `max_width` display columns.
-fn truncate_to_width(s: &[char], max_width: usize) -> String {
-    use unicode_width::UnicodeWidthChar;
-    let mut result = String::new();
-    let mut width = 0;
-    for &ch in s {
-        let ch_width = UnicodeWidthChar::width(ch).unwrap_or(0);
-        if width + ch_width > max_width {
-            break;
-        }
-        result.push(ch);
-        width += ch_width;
-    }
-    result
 }
