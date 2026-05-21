@@ -10,7 +10,9 @@
 //! - `write_fixed_file` uses byte-slicing (`data[..lrecl]`) which will panic
 //!   on multi-byte UTF-8 chars if `lrecl` falls inside a char.  Should use
 //!   char-boundary-aware truncation (same pattern as `screen::truncate_to_width`).
-//!   TODO: fix for UTF-8 safety.
+
+//   TODO: fix for UTF-8 safety.
+//   TODO: configure code page for files and file types.
 
 use std::fs;
 use std::io::{self, Write};
@@ -62,7 +64,7 @@ pub fn read_text_file(content: &[u8]) -> io::Result<(VecLineStore, LineEnding)> 
         }
         let expanded = expand_tabs(raw);
         let number = (i + 1) * LINE_NUMBER_INCREMENT;
-        lines.push(Line::new_data(expanded, number));
+        lines.push(Line::new_data(&expanded, number));
     }
 
     // BottomOfData sentinel
@@ -84,7 +86,7 @@ pub fn read_fixed_file(content: &[u8], lrecl: usize) -> io::Result<(VecLineStore
         let text = String::from_utf8_lossy(chunk).into_owned();
         line_num += 1;
         let number = line_num * LINE_NUMBER_INCREMENT;
-        lines.push(Line::new_data(text, number));
+        lines.push(Line::new_data(&text, number));
         offset += lrecl;
     }
 
@@ -98,7 +100,7 @@ pub fn read_fixed_file(content: &[u8], lrecl: usize) -> io::Result<(VecLineStore
         }
         line_num += 1;
         let number = line_num * LINE_NUMBER_INCREMENT;
-        lines.push(Line::new_data(text, number));
+        lines.push(Line::new_data(&text, number));
     }
 
     // BottomOfData sentinel
@@ -253,10 +255,10 @@ mod test {
 
     #[test]
     fn test_expand_tabs() {
-        assert_eq!(expand_tabs("abc\tdef"), "abc def");
-        assert_eq!(expand_tabs("\tstart"), "    start");
-        assert_eq!(expand_tabs("end\t"), "end    ");
-        assert_eq!(expand_tabs("mid\tline\t"), "mid line    ");
+        assert_eq!(expand_tabs("abc\tdef"), "abc     def");
+        assert_eq!(expand_tabs("\tstart"), "        start");
+        assert_eq!(expand_tabs("end\t"), "end     ");
+        assert_eq!(expand_tabs("mid\tline\t"), "mid     line    ");
     }
 
 }

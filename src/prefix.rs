@@ -139,24 +139,17 @@ fn parse_count(s: &str) -> Result<usize, PrefixParseResult> {
         Ok(_) => Err(PrefixParseResult::Error(
             "Count must be greater than 0".to_string(),
         )),
-        Err(_) => Err(PrefixParseResult::Error(format!(
-            "Invalid count: {s}"
-        ))),
+        Err(_) => Err(PrefixParseResult::Error(format!("Invalid count: {s}"))),
     }
 }
 
 /// Format a line number for display in the prefix area.
 pub fn format_prefix(line: &Line, number_mode: NumberMode) -> String {
     match line.line_type {
-        LineType::TopOfData | LineType::BottomOfData => {
-            "******".to_string()
-        }
-        LineType::ColsRuler => {
-            "=COLS>".to_string()
-        }
-        LineType::Message => {
-            "==MSG>".to_string()
-        }
+        LineType::TopOfData | LineType::BottomOfData => "******".to_string(),
+        LineType::ColsRuler => "=COLS>".to_string(),
+        LineType::Message => "==MSG>".to_string(),
+        LineType::Insert => "''''''".to_string(),
         LineType::Data => {
             // If there's a pending command, show it instead
             if let Some(ref cmd) = line.prefix_cmd {
@@ -167,9 +160,7 @@ pub fn format_prefix(line: &Line, number_mode: NumberMode) -> String {
                 NumberMode::On => {
                     format!("{:06}", line.current_number)
                 }
-                NumberMode::Off => {
-                    "======".to_string()
-                }
+                NumberMode::Off => "======".to_string(),
             }
         }
     }
@@ -227,15 +218,21 @@ mod tests {
 
     #[test]
     fn format_prefix_for_each_line_type() {
-        assert_eq!(format_prefix(&Line::top_of_data(), NumberMode::On), "******");
-        assert_eq!(format_prefix(&Line::bottom_of_data(), NumberMode::On), "******");
+        assert_eq!(
+            format_prefix(&Line::top_of_data(), NumberMode::On),
+            "******"
+        );
+        assert_eq!(
+            format_prefix(&Line::bottom_of_data(), NumberMode::On),
+            "******"
+        );
         assert_eq!(format_prefix(&Line::cols_ruler(), NumberMode::On), "=COLS>");
-        assert_eq!(format_prefix(&Line::message("m".to_string()), NumberMode::On), "==MSG>");
+        assert_eq!(format_prefix(&Line::message("m"), NumberMode::On), "==MSG>");
     }
 
     #[test]
     fn format_prefix_for_data_line_numbers_and_pending_command() {
-        let mut line = Line::new_data("abc".to_string(), 42);
+        let mut line = Line::new_data("abc", 42);
         assert_eq!(format_prefix(&line, NumberMode::On), "000042");
         assert_eq!(format_prefix(&line, NumberMode::Off), "======");
 

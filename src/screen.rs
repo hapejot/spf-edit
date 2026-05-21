@@ -380,6 +380,11 @@ impl Screen {
                 }
             }
             LineType::Message => truncate_to_width(&line.data, data_width),
+            LineType::Insert => {
+                let data = &line.data;
+                let skipped = skip_chars(data, self.horizontal_offset);
+                truncate_to_width(&skipped, data_width)
+            }
             LineType::Data => {
                 let data = &line.data;
                 let skipped = skip_chars(data, self.horizontal_offset);
@@ -410,6 +415,7 @@ impl Screen {
             LineType::ColsRuler => (Colors::RULER_FG, Colors::RULER_BG),
             LineType::Message => (Colors::ERROR_FG, Colors::ERROR_BG),
             LineType::Data => (Colors::DATA_FG, Colors::DATA_BG),
+            LineType::Insert => (Colors::DATA_FG, Colors::DATA_BG),
         }
     }
 

@@ -18,6 +18,7 @@ pub enum LineType {
     BottomOfData,
     ColsRuler,
     Message,
+    Insert, 
 }
 
 // --- Line flags ---
@@ -61,6 +62,7 @@ impl std::ops::BitOr for LineFlags {
 
 #[derive(Debug, Clone)]
 pub struct Line {
+    pub id: uuid::Uuid,
     pub line_type: LineType,
     pub data: Vec<char>,
     pub original_number: Option<usize>,
@@ -72,8 +74,9 @@ pub struct Line {
 }
 
 impl Line {
-    pub fn new_data(data: String, number: usize) -> Self {
+    pub fn new_data(data: &str, number: usize) -> Self {
         Line {
+            id: uuid::Uuid::new_v4(),
             line_type: LineType::Data,
             data: data.chars().collect(),
             original_number: Some(number),
@@ -87,6 +90,7 @@ impl Line {
 
     pub fn new_blank(number: usize) -> Self {
         Line {
+            id: uuid::Uuid::new_v4(),
             line_type: LineType::Data,
             data: Vec::new(),
             original_number: None,
@@ -100,6 +104,7 @@ impl Line {
 
     pub fn top_of_data() -> Self {
         Line {
+            id: uuid::Uuid::new_v4(),
             line_type: LineType::TopOfData,
             data: Vec::new(),
             original_number: None,
@@ -113,6 +118,7 @@ impl Line {
 
     pub fn bottom_of_data() -> Self {
         Line {
+            id: uuid::Uuid::new_v4(),
             line_type: LineType::BottomOfData,
             data: Vec::new(),
             original_number: None,
@@ -126,6 +132,7 @@ impl Line {
 
     pub fn cols_ruler() -> Self {
         Line {
+            id: uuid::Uuid::new_v4(),
             line_type: LineType::ColsRuler,
             data: Vec::new(),
             original_number: None,
@@ -137,8 +144,9 @@ impl Line {
         }
     }
 
-    pub fn message(text: String) -> Self {
+    pub fn message(text: &str) -> Self {
         Line {
+            id: uuid::Uuid::new_v4(),
             line_type: LineType::Message,
             data: text.chars().collect(),
             original_number: None,
@@ -159,7 +167,7 @@ impl Line {
     }
 
     pub fn is_writable(&self) -> bool {
-        self.line_type == LineType::Data
+        self.line_type == LineType::Data || self.line_type == LineType::Insert
     }
 
     pub fn data_len(&self) -> usize {
@@ -171,6 +179,20 @@ impl Line {
         self.flags.clear(LineFlags::PENDING_CMD);
         self.flags.clear(LineFlags::CMD_ERROR);
     }
+    
+    pub(crate) fn new_insert_marker() -> Line {
+        Line {
+            id: uuid::Uuid::new_v4(),
+            line_type: LineType::Insert,
+            data: Vec::new(),
+            original_number: None,
+            current_number: 0,
+            flags: LineFlags::NONE,
+            prefix_cmd: None,
+            excluded: false,
+            label: None,
+        }
+    }
 }
 
 #[cfg(test)]
@@ -180,7 +202,7 @@ mod tests {
     fn text_to_lines(text: &str) -> Vec<Line> {
         text.split('\n')
             .enumerate()
-            .map(|(idx, s)| Line::new_data(s.to_string(), idx + 1))
+            .map(|(idx, s)| Line::new_data(s, idx + 1))
             .collect()
     }
 
@@ -211,10 +233,10 @@ mod tests {
     fn lines_to_text_ignores_non_data_line_types() {
         let lines = vec![
             Line::top_of_data(),
-            Line::new_data("row-1".to_string(), 1),
+            Line::new_data("row-1", 1),
             Line::cols_ruler(),
-            Line::message("status".to_string()),
-            Line::new_data("row-2".to_string(), 2),
+            Line::message("status"),
+            Line::new_data("row-2", 2),
             Line::bottom_of_data(),
         ];
 
@@ -232,11 +254,11 @@ mod tests {
 
     #[test]
     fn line_type_helpers_match_expected_behavior() {
-        let data = Line::new_data("x".to_string(), 1);
+        let data = Line::new_data("x", 1);
         let top = Line::top_of_data();
         let bottom = Line::bottom_of_data();
         let cols = Line::cols_ruler();
-        let msg = Line::message("note".to_string());
+        let msg = Line::message("note");
 
         assert!(data.is_data());
         assert!(data.is_writable());

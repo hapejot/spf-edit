@@ -128,13 +128,18 @@ impl FileBuffer {
     pub fn insert_lines_after(&mut self, index: usize, count: usize) {
         debug!("insert_lines_after: index={index} count={count}");
         let number = self.lines.get(index).map(|l| l.current_number).unwrap_or(0);
-
-        for i in 0..count {
-            let line = Line::new_blank(number + i + 1);
-            self.lines.insert(index + 1 + i, line);
+        if count == 1 {
+            let line = Line::new_insert_marker();
+            self.lines.insert(index + 1, line);
+            self.modified = true;
+        } else {
+            for i in 0..count {
+                let line = Line::new_blank(number + i + 1);
+                self.lines.insert(index + 1 + i, line);
+            }
+            self.modified = true;
+            self.renumber();
         }
-        self.modified = true;
-        self.renumber();
     }
 
     /// Delete `count` lines starting at `index`. Skips sentinels.
