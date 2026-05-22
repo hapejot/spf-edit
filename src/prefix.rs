@@ -66,7 +66,7 @@ pub fn parse_prefix_command(input: &str) -> PrefixParseResult {
         if label.is_empty() {
             return PrefixParseResult::Error("Empty label".to_string());
         }
-        return PrefixParseResult::Command(ParsedLineCmd::Label(label.to_string()));
+        return PrefixParseResult::Command(ParsedLineCmd::Label(format!(".{label}")));
     }
 
     // Single letter commands: A, B
@@ -143,7 +143,6 @@ fn parse_count(s: &str) -> Result<usize, PrefixParseResult> {
     }
 }
 
-
 /// Generate the column ruler text for the data area.
 pub fn cols_ruler_text(width: usize) -> String {
     let mut ruler = String::with_capacity(width);
@@ -197,25 +196,25 @@ mod tests {
     #[test]
     fn format_prefix_for_each_line_type() {
         assert_eq!(
-            format_prefix(&Line::top_of_data(), NumberMode::On),
+            format_prefix(&Line::top_of_data(), NumberMode::On, None),
             "******"
         );
         assert_eq!(
-            format_prefix(&Line::bottom_of_data(), NumberMode::On),
+            format_prefix(&Line::bottom_of_data(), NumberMode::On, None),
             "******"
         );
-        assert_eq!(format_prefix(&Line::cols_ruler(), NumberMode::On), "=COLS>");
-        assert_eq!(format_prefix(&Line::message("m"), NumberMode::On), "==MSG>");
+        assert_eq!(format_prefix(&Line::cols_ruler(), NumberMode::On, None), "=COLS>");
+        assert_eq!(format_prefix(&Line::message("m"), NumberMode::On, None), "==MSG>");
     }
 
     #[test]
     fn format_prefix_for_data_line_numbers_and_pending_command() {
         let mut line = Line::new_data("abc", 42);
-        assert_eq!(format_prefix(&line, NumberMode::On), "000042");
-        assert_eq!(format_prefix(&line, NumberMode::Off), "======");
+        assert_eq!(format_prefix(&line, NumberMode::On, None), "000042");
+        assert_eq!(format_prefix(&line, NumberMode::Off, None), "======");
 
         line.prefix_cmd = Some("D3".to_string());
-        assert_eq!(format_prefix(&line, NumberMode::On), "D3    ");
+        assert_eq!(format_prefix(&line, NumberMode::On, None), "D3    ");
     }
 
     #[test]
@@ -249,9 +248,8 @@ mod tests {
     }
 }
 
-
 /// Format a line number for display in the prefix area.
-pub fn format_prefix(line: &Line, number_mode: NumberMode) -> String {
+pub fn format_prefix(line: &Line, number_mode: NumberMode, label: Option<&String>) -> String {
     match line.line_type {
         LineType::TopOfData | LineType::BottomOfData => "******".to_string(),
         LineType::ColsRuler => "=COLS>".to_string(),
@@ -261,8 +259,8 @@ pub fn format_prefix(line: &Line, number_mode: NumberMode) -> String {
             if let Some(ref cmd) = line.prefix_cmd {
                 return format!("{:<width$}", cmd, width = PREFIX_WIDTH);
             }
-            if let Some(ref label) = line.label {
-                return format!("{:<width$}", format!(".{label}"), width = PREFIX_WIDTH);
+            if let Some(ref label) = label {
+                return format!("{:<width$}", format!("{label}"), width = PREFIX_WIDTH);
             }
             match number_mode {
                 NumberMode::On => {

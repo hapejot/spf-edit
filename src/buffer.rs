@@ -523,8 +523,12 @@ impl FileBuffer {
         data_width: usize,
     ) -> Option<(String, String)> {
         if let Some(l) = self.lines.get(line_index) {
-            let prefix = crate::prefix::format_prefix(l, self.number_mode);
-            let display = self.get_display_text(l, offset, data_width );
+            let label = self
+                .labels
+                .iter()
+                .find_map(|(name, &idx)| if idx == line_index { Some(name) } else { None });
+            let prefix = crate::prefix::format_prefix(l, self.number_mode, label);
+            let display = self.get_display_text(l, offset, data_width);
             Some((prefix, display))
         } else {
             None

@@ -26,7 +26,10 @@
 use crossterm::event::{Event, KeyCode, KeyEvent, KeyEventKind, KeyEventState, KeyModifiers};
 use tracing::trace;
 
-use crate::types::{EnterMode, FieldFocus, InputMode};
+use crate::{
+    editor::Editor,
+    types::{EnterMode, FieldFocus, InputMode},
+};
 
 /// Actions the editor should take in response to input.
 #[derive(Debug, Clone)]
@@ -69,7 +72,6 @@ pub enum EditorAction {
     Resize(u16, u16),
     /// Quit (Ctrl+Q emergency exit).
     ForceQuit,
-    Command(String),
 }
 
 pub struct InputHandler {
@@ -111,50 +113,14 @@ impl InputHandler {
 
         match key.code {
             KeyCode::Char(c) => EditorAction::InsertChar(c),
-            // Enter handling depends on the user's `EnterMode` choice
-            // (configured in the EDITOR OPTIONS panel) plus, on Unix
-            // terminals with kitty disambiguation enabled, the
-            // `KeyEventState::KEYPAD` flag.
-            //
-            //   Legacy        : Enter = submit, no newline key.
-            //   ShiftNewline  : Enter = submit, Shift+Enter = newline.
-            //   AltNewline    : Enter = submit, Alt+Enter   = newline.
-            //
-            // On non-Windows terminals that disambiguate keypad keys,
-            // Numpad Enter always submits and the main Enter inserts a
-            // newline regardless of the configured mode.
             KeyCode::Enter => {
                 let shift = key.modifiers.contains(KeyModifiers::SHIFT);
-                let alt = key.modifiers.contains(KeyModifiers::ALT);
-                let keypad = key.state.contains(KeyEventState::KEYPAD);
+                let ctrl = key.modifiers.contains(KeyModifiers::CONTROL);
 
-                if !cfg!(windows) && keypad {
-                    // Disambiguating Unix terminal: numpad submits.
+                if shift || ctrl {
                     EditorAction::Enter
-                } else if !cfg!(windows) && !keypad
-                    && matches!(self.enter_mode, EnterMode::Legacy)
-                {
-                    // Disambiguating Unix terminal in legacy mode:
-                    // main Enter inserts a newline (numpad submits).
-                    EditorAction::Newline
                 } else {
-                    match self.enter_mode {
-                        EnterMode::Legacy => EditorAction::Enter,
-                        EnterMode::ShiftNewline => {
-                            if shift {
-                                EditorAction::Newline
-                            } else {
-                                EditorAction::Enter
-                            }
-                        }
-                        EnterMode::AltNewline => {
-                            if alt {
-                                EditorAction::Newline
-                            } else {
-                                EditorAction::Enter
-                            }
-                        }
-                    }
+                    EditorAction::Newline
                 }
             }
             KeyCode::Backspace => EditorAction::Backspace,

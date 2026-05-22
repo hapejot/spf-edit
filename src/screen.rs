@@ -58,6 +58,7 @@ pub struct Screen {
     pub cols_visible: bool,
     pub needs_full_redraw: bool,
     pub input_mode: InputMode,
+    pub status_info: String,
 }
 
 impl Screen {
@@ -77,6 +78,7 @@ impl Screen {
             cols_visible: false,
             needs_full_redraw: true,
             input_mode: InputMode::Overtype,
+            status_info: String::new(),
         })
     }
 
@@ -119,7 +121,7 @@ impl Screen {
             "draw_full: top_line={} h_offset={} size={}x{}",
             self.top_line_index, self.horizontal_offset, self.width, self.height
         );
-        queue!(stdout, Clear(ClearType::All))?;
+//        queue!(stdout, Clear(ClearType::All))?;
         self.draw_title_line(stdout, buffer)?;
         self.draw_command_line(stdout)?;
         self.draw_data_lines(stdout, buffer)?;
@@ -143,7 +145,8 @@ impl Screen {
                 let line_index = self.top_line_index + screen_row;
 
                 queue!(stdout, MoveTo(0, terminal_row as u16))?;
-                self.draw_data_line(stdout, line_index, buffer)
+                self.draw_data_line(stdout, line_index, buffer)?;
+                self.draw_status_bar(stdout, buffer)
             }
             n => {
                 error!("drawing line {n}");
@@ -259,8 +262,8 @@ impl Screen {
         let caps = if buffer.caps_mode { "CAPS" } else { "    " };
 
         let left = format!(
-            " {} | {} | Lines: {} | Col: {} | {}",
-            time_str, mode_str, line_count, col_pos, caps
+            " {} | {} | Lines: {} | Col: {} | {} |{}",
+            time_str, mode_str, line_count, col_pos, caps, self.status_info
         );
         let right = format!("EDIT ");
         let padding = w.saturating_sub(left.len() + right.len());
@@ -277,11 +280,11 @@ impl Screen {
             Print(&display),
         )?;
 
-        // Fill remaining width
-        let remaining = w.saturating_sub(display.len());
-        if remaining > 0 {
-            queue!(stdout, Print(" ".repeat(remaining)))?;
-        }
+        // // Fill remaining width
+        // let remaining = w.saturating_sub(display.len());
+        // if remaining > 0 {
+        //     queue!(stdout, Print(" ".repeat(remaining)))?;
+        // }
 
         queue!(stdout, ResetColor)?;
         Ok(())

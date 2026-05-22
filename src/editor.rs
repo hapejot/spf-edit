@@ -64,7 +64,7 @@ pub struct Editor {
     // Cursor tracking
     pub cursor_line_index: usize, // Buffer line index cursor is on
     pub cursor_col: usize,
-    needs_full_redraw: bool, // Column within the current field
+    needs_full_redraw: bool,       // Column within the current field
     pending_panel: Option<String>, // Panel to display after command processing
 }
 
@@ -118,6 +118,8 @@ impl Editor {
 
         while self.running {
             let event = event::read()?;
+            let evt_str = format!("{event:?}");
+            self.screen.status_info = evt_str.clone();
             let action = self.input.handle_event(event);
             self.handle_action(action, stdout)?;
         }
@@ -224,7 +226,9 @@ impl Editor {
                 warn!("ForceQuit (Ctrl+Q) — exiting without save");
                 self.running = false;
             }
-            a => {todo!("action not implemented: {:?}", a)},
+            a => {
+                todo!("action not implemented: {:?}", a)
+            }
         }
 
         self.redraw(stdout)
@@ -306,9 +310,7 @@ impl Editor {
             FieldFocus::PrefixArea { screen_row } => {
                 self.insert_in_prefix(c, screen_row, insert_mode)
             }
-            FieldFocus::DataArea { screen_row } => {
-                self.insert_in_data(c, screen_row, insert_mode)
-            }
+            FieldFocus::DataArea { screen_row } => self.insert_in_data(c, screen_row, insert_mode),
         }
     }
 
@@ -572,15 +574,14 @@ impl Editor {
     fn move_cursor_left(&mut self) {
         if self.cursor_col > 0 {
             self.cursor_col -= 1;
-        } else if matches!(self.input.focus, FieldFocus::CommandLine)
-            && self.screen.command_cursor_pos > 0
-        {
-            self.screen.command_cursor_pos -= 1;
+        } else {
+            if self.screen.horizontal_offset > 0 {
+                self.screen.scroll_left(1);
+                self.needs_full_redraw = true;
+            }
         }
-        // NOTE: documented FIXME above — for CommandLine focus, this second
-        // decrement intentionally remains to preserve the original behaviour.
-        if matches!(self.input.focus, FieldFocus::CommandLine)
-            && self.screen.command_cursor_pos > 0
+
+        if matches!(self.input.focus, FieldFocus::CommandLine) && self.screen.command_cursor_pos > 0
         {
             self.screen.command_cursor_pos -= 1;
         }
@@ -606,20 +607,17 @@ impl Editor {
             FieldFocus::DataArea { .. } => {
                 if self.cursor_col < self.screen.data_width() - 1 {
                     self.cursor_col += 1;
+                } else {
+                    self.screen.scroll_right(1);
+                    self.needs_full_redraw = true;
                 }
             }
         }
     }
 
     fn handle_home(&mut self) {
-        match self.input.focus {
-            FieldFocus::CommandLine => {
-                self.screen.command_cursor_pos = 0;
-            }
-            _ => {
-                self.cursor_col = 0;
-            }
-        }
+        self.input.focus = FieldFocus::CommandLine;
+        self.screen.command_cursor_pos = 0;
     }
 
     fn handle_end(&mut self) {
@@ -769,21 +767,7 @@ impl Editor {
     /// cursor (when in the data area) and move the cursor to it.
     /// Outside the data area this is a no-op.
     fn handle_newline(&mut self) {
-        match self.input.focus {
-            FieldFocus::DataArea { .. } | FieldFocus::PrefixArea { .. } => {
-                let idx = self.cursor_line_index;
-                self.buffer.insert_lines_after(idx, 1);
-                self.cursor_line_index = idx + 1;
-                self.cursor_col = 0;
-                if let Some(row) = self.screen.line_to_screen_row(self.cursor_line_index) {
-                    self.input.focus = FieldFocus::DataArea { screen_row: row };
-                }
-                self.needs_full_redraw = true;
-            }
-            _ => {
-                // Command line / scroll field: no-op (use Numpad Enter to submit).
-            }
-        }
+        self.advance_cursor_after_enter();
     }
 
     // --- Enter processing ---
