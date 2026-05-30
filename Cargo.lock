@@ -894,6 +894,7 @@ name = "spf-edit"
 version = "0.1.0"
 dependencies = [
  "chrono",
+ "clap",
  "crossterm 0.29.0",
  "log",
  "panel-model",

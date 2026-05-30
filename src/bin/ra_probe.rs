@@ -7,6 +7,13 @@ use std::path::Path;
 use std::time::Duration;
 
 use rust_analyzer::{CompletionItem, LspEvent, RustAnalyzerClient};
+use clap::Parser;
+
+
+#[derive(Debug,Parser)]
+struct Args  {
+    trace: bool,
+}
 
 fn main() -> io::Result<()> {
     let args: Vec<String> = std::env::args().collect();
