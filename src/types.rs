@@ -224,6 +224,16 @@ impl Colors {
     pub const FOUND_FG: Color = Color::Black;
     pub const FOUND_BG: Color = Color::Yellow;
 
+    // Drag selection highlight
+    pub const SELECT_FG: Color = Color::Black;
+    pub const SELECT_BG: Color = Color::DarkCyan;
+
+    // Completion popup
+    pub const COMPLETION_FG: Color = Color::White;
+    pub const COMPLETION_BG: Color = Color::DarkGrey;
+    pub const COMPLETION_SELECTED_FG: Color = Color::Black;
+    pub const COMPLETION_SELECTED_BG: Color = Color::Grey;
+
     // Error messages
     pub const ERROR_FG: Color = Color::Red;
     pub const ERROR_BG: Color = Color::Black;

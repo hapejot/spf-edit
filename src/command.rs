@@ -42,7 +42,7 @@ use crate::types::{
 };
 
 /// Parsed primary command.
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, PartialEq, Eq)]
 pub enum PrimaryCommand {
     Save,
     End,

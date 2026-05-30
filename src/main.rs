@@ -38,6 +38,7 @@ mod line_cmd;
 mod line_store;
 mod panel;
 mod prefix;
+mod rust_analyzer;
 mod screen;
 mod types;
 
@@ -51,7 +52,11 @@ use tracing_subscriber::EnvFilter;
 
 use crossterm::{
     cursor, execute,
-    event::{KeyboardEnhancementFlags, PopKeyboardEnhancementFlags, PushKeyboardEnhancementFlags},
+    event::{
+        DisableBracketedPaste, DisableFocusChange, DisableMouseCapture, EnableBracketedPaste,
+        EnableFocusChange, EnableMouseCapture, KeyboardEnhancementFlags,
+        PopKeyboardEnhancementFlags, PushKeyboardEnhancementFlags,
+    },
     terminal::{self, EnterAlternateScreen, LeaveAlternateScreen, supports_keyboard_enhancement},
 };
 
@@ -187,7 +192,14 @@ fn run_editor(filename: &str, record_format: RecordFormat, browse_mode: bool) ->
     // Set up terminal
     terminal::enable_raw_mode()?;
     let mut stdout = io::stdout();
-    execute!(stdout, EnterAlternateScreen, cursor::Show)?;
+    execute!(
+        stdout,
+        EnterAlternateScreen,
+        cursor::Show,
+        EnableMouseCapture,
+        EnableFocusChange,
+        EnableBracketedPaste
+    )?;
     // Best-effort: enable keyboard enhancement so we can distinguish
     // Numpad Enter (submit) from regular Enter (newline).
     let kbd_enhanced = supports_keyboard_enhancement().unwrap_or(false);
@@ -208,7 +220,14 @@ fn run_editor(filename: &str, record_format: RecordFormat, browse_mode: bool) ->
     if kbd_enhanced {
         let _ = execute!(stdout, PopKeyboardEnhancementFlags);
     }
-    execute!(stdout, LeaveAlternateScreen, cursor::Show)?;
+    execute!(
+        stdout,
+        DisableBracketedPaste,
+        DisableFocusChange,
+        DisableMouseCapture,
+        LeaveAlternateScreen,
+        cursor::Show
+    )?;
     terminal::disable_raw_mode()?;
 
     result

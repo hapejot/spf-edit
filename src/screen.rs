@@ -44,6 +44,120 @@ use crate::line::{Line, LineFlags, LineType};
 use crate::prefix::{cols_ruler_text, format_prefix, sentinel_text};
 use crate::types::*;
 
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum SelectionArea {
+    CommandLine,
+    ScrollField,
+    Data,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub enum Selection {
+    Text {
+        area: SelectionArea,
+        start_line: usize,
+        start_col: usize,
+        end_line: usize,
+        end_col: usize,
+    },
+    Lines {
+        start_line: usize,
+        end_line: usize,
+    },
+}
+
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct CompletionPopup {
+    pub row: u16,
+    pub col: u16,
+    pub selected: usize,
+    pub items: Vec<String>,
+}
+
+impl Selection {
+    fn command_range(&self) -> Option<(usize, usize)> {
+        match self {
+            Selection::Text {
+                area: SelectionArea::CommandLine,
+                start_col,
+                end_col,
+                ..
+            } => Some(normalize_columns(*start_col, *end_col)),
+            _ => None,
+        }
+    }
+
+    fn scroll_range(&self) -> Option<(usize, usize)> {
+        match self {
+            Selection::Text {
+                area: SelectionArea::ScrollField,
+                start_col,
+                end_col,
+                ..
+            } => Some(normalize_columns(*start_col, *end_col)),
+            _ => None,
+        }
+    }
+
+    fn line_range(&self) -> Option<(usize, usize)> {
+        match self {
+            Selection::Lines {
+                start_line,
+                end_line,
+            } => Some(normalize_columns(*start_line, *end_line)),
+            _ => None,
+        }
+    }
+
+    fn data_range_for_line(&self, line_index: usize) -> Option<(usize, usize)> {
+        match self {
+            Selection::Text {
+                area: SelectionArea::Data,
+                start_line,
+                start_col,
+                end_line,
+                end_col,
+            } => {
+                let ((start_line, start_col), (end_line, end_col)) =
+                    normalize_points((*start_line, *start_col), (*end_line, *end_col));
+                if line_index < start_line || line_index > end_line {
+                    return None;
+                }
+                if start_line == end_line {
+                    return Some((start_col, end_col.saturating_add(1)));
+                }
+                if line_index == start_line {
+                    return Some((start_col, usize::MAX));
+                }
+                if line_index == end_line {
+                    return Some((0, end_col.saturating_add(1)));
+                }
+                Some((0, usize::MAX))
+            }
+            _ => None,
+        }
+    }
+}
+
+fn normalize_columns(start: usize, end: usize) -> (usize, usize) {
+    if start <= end {
+        (start, end.saturating_add(1))
+    } else {
+        (end, start.saturating_add(1))
+    }
+}
+
+fn normalize_points(
+    start: (usize, usize),
+    end: (usize, usize),
+) -> ((usize, usize), (usize, usize)) {
+    if start <= end {
+        (start, end)
+    } else {
+        (end, start)
+    }
+}
+
 pub struct Screen {
     pub width: u16,
     pub height: u16,
@@ -59,6 +173,8 @@ pub struct Screen {
     pub needs_full_redraw: bool,
     pub input_mode: InputMode,
     pub status_info: String,
+    pub selection: Option<Selection>,
+    pub completion_popup: Option<CompletionPopup>,
 }
 
 impl Screen {
@@ -79,7 +195,25 @@ impl Screen {
             needs_full_redraw: true,
             input_mode: InputMode::Overtype,
             status_info: String::new(),
+            selection: None,
+            completion_popup: None,
         })
+    }
+
+    pub fn set_selection(&mut self, selection: Option<Selection>) {
+        self.selection = selection;
+        self.needs_full_redraw = true;
+    }
+
+    pub fn clear_selection(&mut self) {
+        self.set_selection(None);
+    }
+
+    pub fn set_completion_popup(&mut self, popup: Option<CompletionPopup>) {
+        if self.completion_popup != popup {
+            self.completion_popup = popup;
+            self.needs_full_redraw = true;
+        }
     }
 
     pub fn resize(&mut self, width: u16, height: u16) {
@@ -125,9 +259,69 @@ impl Screen {
         self.draw_title_line(stdout, buffer)?;
         self.draw_command_line(stdout)?;
         self.draw_data_lines(stdout, buffer)?;
+        self.draw_completion_popup(stdout)?;
         self.draw_status_bar(stdout, buffer)?;
         stdout.flush()?;
         self.needs_full_redraw = false;
+        Ok(())
+    }
+
+    fn draw_completion_popup<W: Write>(&self, stdout: &mut W) -> io::Result<()> {
+        let Some(popup) = &self.completion_popup else {
+            return Ok(());
+        };
+        if popup.items.is_empty() {
+            return Ok(());
+        }
+
+        let visible_rows = popup.items.len().min(8);
+        let width = popup
+            .items
+            .iter()
+            .take(visible_rows)
+            .map(|s| s.chars().count())
+            .max()
+            .unwrap_or(0)
+            .saturating_add(2)
+            .min(self.width as usize);
+
+        let max_row = self.height.saturating_sub(2);
+        let start_row = popup.row.min(max_row);
+        let max_col = self.width.saturating_sub(width as u16);
+        let start_col = popup.col.min(max_col);
+
+        for idx in 0..visible_rows {
+            let row = start_row + idx as u16;
+            if row >= self.height.saturating_sub(1) {
+                break;
+            }
+            let item = popup.items.get(idx).cloned().unwrap_or_default();
+            let selected = idx == popup.selected;
+            let fg = if selected {
+                Colors::COMPLETION_SELECTED_FG
+            } else {
+                Colors::COMPLETION_FG
+            };
+            let bg = if selected {
+                Colors::COMPLETION_SELECTED_BG
+            } else {
+                Colors::COMPLETION_BG
+            };
+            let mut text = item.chars().take(width.saturating_sub(1)).collect::<String>();
+            let fill = width.saturating_sub(text.chars().count());
+            if fill > 0 {
+                text.push_str(&" ".repeat(fill));
+            }
+            queue!(
+                stdout,
+                MoveTo(start_col, row),
+                SetForegroundColor(fg),
+                SetBackgroundColor(bg),
+                Print(text),
+                ResetColor,
+            )?;
+        }
+
         Ok(())
     }
 
@@ -219,24 +413,35 @@ impl Screen {
             (self.width as usize).saturating_sub(prompt.len() + scroll_section_width);
 
         let cmd_display: String = self.command_line.chars().take(cmd_input_width).collect();
-        let cmd_padding = cmd_input_width.saturating_sub(cmd_display.len());
-
-        queue!(
+        self.draw_text_with_selection(
             stdout,
-            SetForegroundColor(Colors::CMD_INPUT_FG),
-            SetBackgroundColor(Colors::CMD_INPUT_BG),
-            Print(&cmd_display),
-            Print(" ".repeat(cmd_padding)),
+            &cmd_display,
+            cmd_input_width,
+            Colors::CMD_INPUT_FG,
+            Colors::CMD_INPUT_BG,
+            self.selection
+                .as_ref()
+                .and_then(|selection| selection.command_range()),
         )?;
 
         // Scroll indicator
+        let scroll_selection = self
+            .selection
+            .as_ref()
+            .and_then(|selection| selection.scroll_range());
         queue!(
             stdout,
             SetForegroundColor(Colors::SCROLL_FG),
             SetBackgroundColor(Colors::SCROLL_BG),
             Print(scroll_label),
-            Print(scroll_value),
-            Print(" "),
+        )?;
+        self.draw_text_with_selection(
+            stdout,
+            scroll_value,
+            scroll_value.chars().count() + 1,
+            Colors::SCROLL_FG,
+            Colors::SCROLL_BG,
+            scroll_selection,
         )?;
 
         queue!(stdout, ResetColor)?;
@@ -317,48 +522,53 @@ impl Screen {
             if let Some((prefix_text, display_text)) =
                 buffer.get_line(line_index, self.horizontal_offset, self.data_width())
             {
+                let line_selected = self.line_is_selected(line_index);
+                let data_selection = if line_selected {
+                    Some((0, self.data_width()))
+                } else {
+                    self.visible_data_selection_range(line_index, display_text.chars().count())
+                };
                 // --- Prefix area ---
-                // let prefix_text = format_prefix(line, buffer.number_mode);
-                // let (prefix_fg, prefix_bg) = self.prefix_colors(line);
-
-                let prefix_fg = Colors::PREFIX_FG;
-                let prefix_bg = Colors::PREFIX_BG;
-
-                queue!(
+                self.draw_text_with_selection(
                     stdout,
-                    SetForegroundColor(prefix_fg),
-                    SetBackgroundColor(prefix_bg),
-                    Print(&prefix_text),
+                    &prefix_text,
+                    self.prefix_width,
+                    Colors::PREFIX_FG,
+                    Colors::PREFIX_BG,
+                    if line_selected {
+                        Some((0, self.prefix_width))
+                    } else {
+                        None
+                    },
                 )?;
 
                 // --- Separator ---
-                queue!(
-                    stdout,
-                    SetForegroundColor(Colors::DATA_FG),
-                    SetBackgroundColor(Colors::DATA_BG),
-                    Print(" "),
-                )?;
+                if line_selected {
+                    queue!(
+                        stdout,
+                        SetForegroundColor(Colors::SELECT_FG),
+                        SetBackgroundColor(Colors::SELECT_BG),
+                        Print(" "),
+                    )?;
+                } else {
+                    queue!(
+                        stdout,
+                        SetForegroundColor(Colors::DATA_FG),
+                        SetBackgroundColor(Colors::DATA_BG),
+                        Print(" "),
+                    )?;
+                }
 
                 // --- Data area ---
                 let data_width = self.data_width();
-                // let (data_fg, data_bg) = self.data_colors(line);
-                let data_fg = Colors::DATA_FG;
-                let data_bg = Colors::DATA_BG;
-                queue!(
+                self.draw_text_with_selection(
                     stdout,
-                    SetForegroundColor(data_fg),
-                    SetBackgroundColor(data_bg),
+                    &display_text,
+                    data_width,
+                    Colors::DATA_FG,
+                    Colors::DATA_BG,
+                    data_selection,
                 )?;
-
-                // let display_text = self.get_display_text(line, data_width);
-                queue!(stdout, Print(&display_text))?;
-
-                // Pad to fill data area
-                let padding =
-                    data_width.saturating_sub(UnicodeWidthStr::width(display_text.as_str()));
-                if padding > 0 {
-                    queue!(stdout, Print(" ".repeat(padding)))?;
-                }
 
                 return queue!(stdout, ResetColor);
             }
@@ -471,6 +681,63 @@ impl Screen {
         13 // "Command ===> " is 13 chars
     }
 
+    fn line_is_selected(&self, line_index: usize) -> bool {
+        self.selection
+            .as_ref()
+            .and_then(|selection| selection.line_range())
+            .map(|(start, end)| line_index >= start && line_index < end)
+            .unwrap_or(false)
+    }
+
+    fn visible_data_selection_range(
+        &self,
+        line_index: usize,
+        visible_len: usize,
+    ) -> Option<(usize, usize)> {
+        let (start, end) = self
+            .selection
+            .as_ref()
+            .and_then(|selection| selection.data_range_for_line(line_index))?;
+        let visible_start = start.saturating_sub(self.horizontal_offset);
+        let visible_end = if end == usize::MAX {
+            self.data_width()
+        } else {
+            end.saturating_sub(self.horizontal_offset)
+        };
+        let clamped_start = visible_start.min(self.data_width()).min(visible_len.max(visible_start));
+        let clamped_end = visible_end.min(self.data_width()).max(clamped_start);
+        Some((clamped_start, clamped_end))
+    }
+
+    fn draw_text_with_selection<W: Write>(
+        &self,
+        stdout: &mut W,
+        text: &str,
+        total_width: usize,
+        fg: Color,
+        bg: Color,
+        selected_range: Option<(usize, usize)>,
+    ) -> io::Result<()> {
+        let chars: Vec<char> = text.chars().collect();
+        for index in 0..total_width {
+            let selected = selected_range
+                .map(|(start, end)| index >= start && index < end)
+                .unwrap_or(false);
+            let (cell_fg, cell_bg) = if selected {
+                (Colors::SELECT_FG, Colors::SELECT_BG)
+            } else {
+                (fg, bg)
+            };
+            let ch = chars.get(index).copied().unwrap_or(' ');
+            queue!(
+                stdout,
+                SetForegroundColor(cell_fg),
+                SetBackgroundColor(cell_bg),
+                Print(ch),
+            )?;
+        }
+        Ok(())
+    }
     /// Parse scroll field text into ScrollAmount.
     pub fn parse_scroll_field(&mut self) {
         let upper = self.scroll_field_text.trim().to_uppercase();
@@ -489,5 +756,55 @@ impl Screen {
             }
         };
         self.scroll_field_text = format!("{}", self.scroll_amount);
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::{Screen, Selection, SelectionArea};
+
+    #[test]
+    fn line_selection_is_normalized() {
+        let mut screen = Screen::new().expect("screen");
+        screen.set_selection(Some(Selection::Lines {
+            start_line: 8,
+            end_line: 3,
+        }));
+
+        assert!(screen.line_is_selected(3));
+        assert!(screen.line_is_selected(8));
+        assert!(!screen.line_is_selected(2));
+        assert!(!screen.line_is_selected(9));
+    }
+
+    #[test]
+    fn data_selection_spans_multiple_lines() {
+        let mut screen = Screen::new().expect("screen");
+        screen.horizontal_offset = 0;
+        screen.set_selection(Some(Selection::Text {
+            area: SelectionArea::Data,
+            start_line: 4,
+            start_col: 5,
+            end_line: 6,
+            end_col: 2,
+        }));
+
+        assert_eq!(screen.visible_data_selection_range(4, 12), Some((5, screen.data_width())));
+        assert_eq!(screen.visible_data_selection_range(5, 12), Some((0, screen.data_width())));
+        assert_eq!(screen.visible_data_selection_range(6, 12), Some((0, 3)));
+        assert_eq!(screen.visible_data_selection_range(3, 12), None);
+    }
+
+    #[test]
+    fn command_selection_uses_character_range() {
+        let selection = Selection::Text {
+            area: SelectionArea::CommandLine,
+            start_line: 0,
+            start_col: 7,
+            end_line: 0,
+            end_col: 2,
+        };
+
+        assert_eq!(selection.command_range(), Some((2, 8)));
     }
 }

@@ -66,7 +66,7 @@ pub fn execute_line_commands(buffer: &mut FileBuffer) -> LineCmdResult {
     debug!("  found {} line commands", cmds.len());
 
     // 2. Categorise commands by kind, pairing block start/end markers.
-    let (categorised, processed_lines) = match categorise_commands(cmds) {
+    let categorised = match categorise_commands(cmds) {
         Ok(v) => v,
         Err(msg) => return LineCmdResult { error: Some(msg) },
     };
@@ -100,9 +100,11 @@ pub fn execute_line_commands(buffer: &mut FileBuffer) -> LineCmdResult {
         categorised.inserts.len(),
     );
 
+    let consumed_lines = consumed_line_indices(&categorised);
+
     // 5. Execute commands in their canonical order.
     apply_labels(buffer, &categorised.labels);
-    apply_deletes(buffer, categorised.deletes);
+    apply_deletes(buffer, categorised.deletes.clone());
     apply_moves(
         buffer,
         &categorised.move_sources,
@@ -114,16 +116,14 @@ pub fn execute_line_commands(buffer: &mut FileBuffer) -> LineCmdResult {
         categorised.destination.as_ref(),
     );
     apply_repeats(buffer, &categorised.repeats);
-    apply_inserts(buffer, categorised.inserts);
+    apply_inserts(buffer, categorised.inserts.clone());
 
     // 6. Clear processed prefix commands & renumber.
-    // info!("Clearing prefix commands from all lines");
-    // for i in processed_lines {
-    //     if let Some(line) = buffer.lines.get_mut(i) {
-    //         info!("Clearing prefix cmd from line {i}");
-    //         line.clear_prefix_cmd();
-    //     }
-    // }
+    for i in consumed_lines {
+        if let Some(line) = buffer.lines.get_mut(i) {
+            line.clear_prefix_cmd();
+        }
+    }
     buffer.renumber();
 
     LineCmdResult { error: None }
@@ -193,12 +193,10 @@ struct CategorisedCmds {
 /// Distribute parsed commands into category buckets, pairing block
 /// start/end markers as we go. Returns the categorised buckets and the list
 /// of all line indices we touched (for later prefix-clear).
-fn categorise_commands(cmds: Vec<PendingLineCmd>) -> Result<(CategorisedCmds, Vec<usize>), String> {
+fn categorise_commands(cmds: Vec<PendingLineCmd>) -> Result<CategorisedCmds, String> {
     let mut cat = CategorisedCmds::default();
-    let mut processed = Vec::with_capacity(cmds.len());
 
     for cmd in cmds {
-        processed.push(cmd.line_index);
         debug!("cmd: {:?}", cmd);
         match &cmd.cmd {
             ParsedLineCmd::Insert(_) => cat.inserts.push(cmd),
@@ -296,7 +294,26 @@ fn categorise_commands(cmds: Vec<PendingLineCmd>) -> Result<(CategorisedCmds, Ve
         }
     }
 
-    Ok((cat, processed))
+    Ok(cat)
+}
+
+fn consumed_line_indices(categorised: &CategorisedCmds) -> Vec<usize> {
+    let mut indices = Vec::new();
+
+    indices.extend(categorised.inserts.iter().map(|cmd| cmd.line_index));
+    indices.extend(categorised.deletes.iter().map(|cmd| cmd.line_index));
+    indices.extend(categorised.repeats.iter().map(|cmd| cmd.line_index));
+    indices.extend(categorised.labels.iter().map(|cmd| cmd.line_index));
+
+    if categorised.destination.is_some() {
+        indices.extend(categorised.copy_sources.iter().map(|cmd| cmd.line_index));
+        indices.extend(categorised.move_sources.iter().map(|cmd| cmd.line_index));
+        indices.extend(categorised.destination.iter().map(|cmd| cmd.line_index));
+    }
+
+    indices.sort_unstable();
+    indices.dedup();
+    indices
 }
 
 /// Remove and return the most recent pending block start that satisfies

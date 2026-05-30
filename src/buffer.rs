@@ -447,13 +447,33 @@ impl FileBuffer {
     pub fn update_line_data(&mut self, index: usize, new_data: String) {
         if let Some(line) = self.lines.get_mut(index) {
             let new_data = new_data.chars().collect::<Vec<char>>();
-            if line.is_data() && line.data != new_data {
+            if line.is_writable() && line.data != new_data {
                 trace!("update_line_data: line {index} changed");
                 line.data = new_data;
                 line.flags.set(LineFlags::MODIFIED);
                 self.modified = true;
             }
         }
+    }
+
+    /// Convert an Insert marker line into a regular data line.
+    pub fn promote_insert_line(&mut self, index: usize) -> bool {
+        let Some(line) = self.lines.get_mut(index) else {
+            return false;
+        };
+        if line.line_type != LineType::Insert {
+            return false;
+        }
+        line.line_type = LineType::Data;
+        line.flags.set(LineFlags::MODIFIED);
+        self.modified = true;
+        true
+    }
+
+    /// Insert a new Insert marker after the specified line.
+    pub fn insert_insert_marker_after(&mut self, index: usize) {
+        self.lines.insert(index + 1, Line::new_insert_marker());
+        self.modified = true;
     }
 
     /// Get the filename as a display string.
