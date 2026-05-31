@@ -225,8 +225,7 @@ impl RustAnalyzerClient {
                             "completionItem": {
                                 "snippetSupport": false
                             }
-                        },
-                        "hover": {}
+                        }
                     }
                 },
                 "clientInfo": {
@@ -508,6 +507,7 @@ fn handle_inbound_message(
         .and_then(Value::as_str)
         .map(ToOwned::to_owned)
     {
+        // info!("inbound message {}", method);
         handle_server_message(message, &method, tx_out, analyzer_state);
         return;
     }
@@ -573,7 +573,7 @@ fn handle_server_message(
             if let Some(params) = message.get("params") {
                 match serde_json::from_value::<PublishDiagnosticsParams>(params.clone()) {
                     Ok(diag) => {
-                        info!("{}", diag.uri);
+                        info!("diagnostic: {}", diag.uri);
                         for x in diag.diagnostics.iter() {
                             info!("  {}: {:?}", x.range.start.line,  x.code);
                         }
