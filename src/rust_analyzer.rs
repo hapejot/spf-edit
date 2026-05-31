@@ -1,13 +1,14 @@
 use std::io::{self, BufRead, BufReader, Read, Write};
 use std::path::{Path, PathBuf};
 use std::process::{Child, ChildStdin, ChildStdout, Command, Stdio};
-use std::sync::{Arc, Condvar, Mutex};
 use std::sync::mpsc::{self, Receiver, Sender, TryRecvError};
+use std::sync::{Arc, Condvar, Mutex};
 use std::thread;
 use std::time::{Duration, Instant};
 
+use serde::Deserialize;
 use serde_json::{Value, json};
-use tracing::{info, debug, warn, trace};
+use tracing::{debug, info, trace, warn};
 
 #[derive(Debug, Clone)]
 pub struct CompletionItem {
@@ -66,6 +67,62 @@ struct AnalyzerState {
     trace: bool,
 }
 
+#[derive(Debug, Deserialize)]
+struct PublishDiagnosticsParams {
+    uri: String,
+    version: Option<i32>,
+    diagnostics: Vec<Diagnostic>,
+}
+
+#[derive(Debug, Deserialize)]
+struct Diagnostic {
+    range: Range,
+    severity: Option<u32>,
+    code: Option<DiagnosticCode>,
+    source: Option<String>,
+    message: String,
+    #[serde(rename = "relatedInformation")]
+    related_information: Option<Vec<DiagnosticRelatedInformation>>,
+    data: Option<DiagnosticData>,
+    tags: Option<Vec<u32>>,
+}
+
+#[derive(Debug, Deserialize)]
+#[serde(untagged)]
+enum DiagnosticCode {
+    Number(i64),
+    String(String),
+}
+
+#[derive(Debug, Deserialize)]
+struct DiagnosticData {
+    rendered: Option<String>,
+}
+
+#[derive(Debug, Deserialize)]
+struct DiagnosticRelatedInformation {
+    location: Location,
+    message: String,
+}
+
+#[derive(Debug, Deserialize)]
+struct Location {
+    uri: String,
+    range: Range,
+}
+
+#[derive(Debug, Deserialize)]
+struct Range {
+    start: Position,
+    end: Position,
+}
+
+#[derive(Debug, Deserialize)]
+struct Position {
+    line: u32,
+    character: u32,
+}
+
 impl RustAnalyzerClient {
     pub fn start(file_path: &Path) -> io::Result<Self> {
         Self::start_with_trace(file_path, false)
@@ -83,7 +140,12 @@ impl RustAnalyzerClient {
             .stdout(Stdio::piped())
             .stderr(Stdio::null())
             .spawn()
-            .map_err(|err| io::Error::new(err.kind(), format!("failed to launch {launch_command}: {err}")))?;
+            .map_err(|err| {
+                io::Error::new(
+                    err.kind(),
+                    format!("failed to launch {launch_command}: {err}"),
+                )
+            })?;
 
         let Some(stdin) = child.stdin.take() else {
             return Err(io::Error::other("failed to capture rust-analyzer stdin"));
@@ -104,7 +166,16 @@ impl RustAnalyzerClient {
             let pending_requests = Arc::clone(&pending_requests);
             let analyzer_state = Arc::clone(&analyzer_state);
             let tx_out = tx_out.clone();
-            move || reader_thread(stdout, tx_evt, tx_out, pending_requests, analyzer_state, trace_io)
+            move || {
+                reader_thread(
+                    stdout,
+                    tx_evt,
+                    tx_out,
+                    pending_requests,
+                    analyzer_state,
+                    trace_io,
+                )
+            }
         });
 
         let uri = path_to_file_uri(file_path)?;
@@ -187,13 +258,11 @@ impl RustAnalyzerClient {
             "params": {}
         }))?;
 
-
         client.send_json(json!({
             "jsonrpc": "2.0",
             "method": "capabilties",
             "params": {}
         }))?;
-
 
         Ok(client)
     }
@@ -356,7 +425,6 @@ impl RustAnalyzerClient {
     }
 
     fn send_json(&self, value: Value) -> io::Result<()> {
-        info!("sending json: {value:?}");
         self.tx
             .send(OutboundMessage::Json(value))
             .map_err(|_| io::Error::new(io::ErrorKind::BrokenPipe, "LSP channel disconnected"))
@@ -435,7 +503,6 @@ fn handle_inbound_message(
     pending_requests: &Arc<Mutex<std::collections::HashMap<u64, PendingRequestKind>>>,
     analyzer_state: &Arc<(Mutex<AnalyzerState>, Condvar)>,
 ) {
-    info!("handle inbound {:?}", message);
     if let Some(method) = message
         .get("method")
         .and_then(Value::as_str)
@@ -500,10 +567,26 @@ fn handle_server_message(
             }
         }
         "$/progress" => update_progress_state(message.get("params"), analyzer_state),
-        "experimental/serverStatus" => {
-            update_server_status(message.get("params"), analyzer_state)
+        "experimental/serverStatus" => update_server_status(message.get("params"), analyzer_state),
+
+        "textDocument/publishDiagnostics" => {
+            if let Some(params) = message.get("params") {
+                match serde_json::from_value::<PublishDiagnosticsParams>(params.clone()) {
+                    Ok(diag) => {
+                        info!("{}", diag.uri);
+                        for x in diag.diagnostics.iter() {
+                            info!("  {}: {:?}", x.range.start.line,  x.code);
+                        }
+                    }
+                    Err(err) => {
+                        warn!("failed to parse publishDiagnostics payload: {err}");
+                    }
+                }
+            }
         }
-        x => {info!("unhandled method {x}");}
+        x => {
+            info!("unhandled method {x}");
+        }
     }
 }
 
@@ -511,6 +594,16 @@ fn update_progress_state(
     params: Option<&Value>,
     analyzer_state: &Arc<(Mutex<AnalyzerState>, Condvar)>,
 ) {
+    let Some(token) = params
+        .and_then(|params| params.get("token"))
+        .and_then(Value::as_str)
+    else {
+        return;
+    };
+    match token {
+        "rustAnalyzer/cachePriming" => {}
+        _ => return,
+    }
     let Some(kind) = params
         .and_then(|params| params.get("value"))
         .and_then(|value| value.get("kind"))
@@ -519,14 +612,10 @@ fn update_progress_state(
         return;
     };
 
-    let Some(percentage) =  params
+    let percentage = params
         .and_then(|params| params.get("value"))
         .and_then(|value| value.get("percentage"))
-        .and_then(Value::as_number)
-    else {
-        return;
-    };
-        
+        .and_then(Value::as_number);
 
     let (lock, cvar) = &**analyzer_state;
     let Ok(mut state) = lock.lock() else {
@@ -547,9 +636,8 @@ fn update_progress_state(
         }
         "end" => {
             state.pending_work = state.pending_work.saturating_sub(1);
-            if state.pending_work == 0 {
-                state.ready = true;
-            }
+            state.ready = true;
+            info!("state ready");
         }
         _ => {}
     }
@@ -561,7 +649,9 @@ fn update_server_status(
     params: Option<&Value>,
     analyzer_state: &Arc<(Mutex<AnalyzerState>, Condvar)>,
 ) {
-    let Some(quiescent) = params.and_then(|params| params.get("quiescent")).and_then(Value::as_bool)
+    let Some(quiescent) = params
+        .and_then(|params| params.get("quiescent"))
+        .and_then(Value::as_bool)
     else {
         return;
     };
@@ -642,7 +732,11 @@ fn choose_launch_spec() -> io::Result<LaunchSpec> {
         },
         LaunchSpec {
             program: "rustup".to_string(),
-            args: vec!["run".to_string(), "stable".to_string(), "rust-analyzer".to_string()],
+            args: vec![
+                "run".to_string(),
+                "stable".to_string(),
+                "rust-analyzer".to_string(),
+            ],
         },
     ];
 
