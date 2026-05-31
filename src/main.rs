@@ -46,7 +46,6 @@ use std::io;
 use std::path::Path;
 use std::process;
 
-use simplelog::{ConfigBuilder, LevelFilter, WriteLogger};
 use tracing::{error, info};
 use tracing_subscriber::EnvFilter;
 

@@ -7,7 +7,7 @@ use std::thread;
 use std::time::{Duration, Instant};
 
 use serde_json::{Value, json};
-use tracing::{debug, warn};
+use tracing::{info, debug, warn, trace};
 
 #[derive(Debug, Clone)]
 pub struct CompletionItem {
@@ -63,6 +63,7 @@ struct AnalyzerState {
     ready: bool,
     progress_seen: bool,
     server_status_seen: bool,
+    trace: bool,
 }
 
 impl RustAnalyzerClient {
@@ -94,7 +95,9 @@ impl RustAnalyzerClient {
         let (tx_out, rx_out) = mpsc::channel::<OutboundMessage>();
         let (tx_evt, rx_evt) = mpsc::channel::<LspEvent>();
         let pending_requests = Arc::new(Mutex::new(std::collections::HashMap::new()));
-        let analyzer_state = Arc::new((Mutex::new(AnalyzerState::default()), Condvar::new()));
+        let mut analyzer_state = AnalyzerState::default();
+        analyzer_state.trace = trace_io;
+        let analyzer_state = Arc::new((Mutex::new(analyzer_state), Condvar::new()));
 
         thread::spawn(move || writer_thread(stdin, rx_out, trace_io));
         thread::spawn({
@@ -151,7 +154,8 @@ impl RustAnalyzerClient {
                             "completionItem": {
                                 "snippetSupport": false
                             }
-                        }
+                        },
+                        "hover": {}
                     }
                 },
                 "clientInfo": {
@@ -161,7 +165,7 @@ impl RustAnalyzerClient {
             }
         }))?;
 
-        match client.rx.recv_timeout(Duration::from_secs(5)) {
+        match client.rx.recv_timeout(Duration::from_secs(30)) {
             Ok(LspEvent::InitializeComplete) => {}
             Ok(other) => {
                 warn!("unexpected LSP event during initialize: {:?}", other);
@@ -175,12 +179,21 @@ impl RustAnalyzerClient {
                 ));
             }
         }
+        info!("server initialized");
 
         client.send_json(json!({
             "jsonrpc": "2.0",
             "method": "initialized",
             "params": {}
         }))?;
+
+
+        client.send_json(json!({
+            "jsonrpc": "2.0",
+            "method": "capabilties",
+            "params": {}
+        }))?;
+
 
         Ok(client)
     }
@@ -343,6 +356,7 @@ impl RustAnalyzerClient {
     }
 
     fn send_json(&self, value: Value) -> io::Result<()> {
+        info!("sending json: {value:?}");
         self.tx
             .send(OutboundMessage::Json(value))
             .map_err(|_| io::Error::new(io::ErrorKind::BrokenPipe, "LSP channel disconnected"))
@@ -352,9 +366,6 @@ impl RustAnalyzerClient {
 fn writer_thread(mut stdin: ChildStdin, rx: Receiver<OutboundMessage>, trace_io: bool) {
     while let Ok(msg) = rx.recv() {
         let OutboundMessage::Json(value) = msg;
-        if trace_io {
-            eprintln!("LSP -> {}", value);
-        }
         let Ok(payload) = serde_json::to_vec(&value) else {
             continue;
         };
@@ -378,6 +389,7 @@ fn reader_thread(
     analyzer_state: Arc<(Mutex<AnalyzerState>, Condvar)>,
     trace_io: bool,
 ) {
+    info!("reader thread started");
     let mut reader = BufReader::new(stdout);
     loop {
         let Ok(Some(content_length)) = read_headers(&mut reader) else {
@@ -392,9 +404,6 @@ fn reader_thread(
         let Ok(msg): Result<Value, _> = serde_json::from_slice(&payload) else {
             continue;
         };
-        if trace_io {
-            eprintln!("LSP <- {}", msg);
-        }
         handle_inbound_message(msg, &tx, &tx_out, &pending_requests, &analyzer_state);
     }
 }
@@ -426,6 +435,7 @@ fn handle_inbound_message(
     pending_requests: &Arc<Mutex<std::collections::HashMap<u64, PendingRequestKind>>>,
     analyzer_state: &Arc<(Mutex<AnalyzerState>, Condvar)>,
 ) {
+    info!("handle inbound {:?}", message);
     if let Some(method) = message
         .get("method")
         .and_then(Value::as_str)
@@ -493,7 +503,7 @@ fn handle_server_message(
         "experimental/serverStatus" => {
             update_server_status(message.get("params"), analyzer_state)
         }
-        _ => {}
+        x => {info!("unhandled method {x}");}
     }
 }
 
@@ -509,12 +519,22 @@ fn update_progress_state(
         return;
     };
 
+    let Some(percentage) =  params
+        .and_then(|params| params.get("value"))
+        .and_then(|value| value.get("percentage"))
+        .and_then(Value::as_number)
+    else {
+        return;
+    };
+        
+
     let (lock, cvar) = &**analyzer_state;
     let Ok(mut state) = lock.lock() else {
         return;
     };
     state.progress_seen = true;
 
+    // info!("progress {} {}", kind, percentage);
     match kind {
         "begin" => {
             state.pending_work = state.pending_work.saturating_add(1);

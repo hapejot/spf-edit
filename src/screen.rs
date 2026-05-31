@@ -35,13 +35,12 @@ use crossterm::{
     cursor::MoveTo,
     queue,
     style::{Color, Print, ResetColor, SetBackgroundColor, SetForegroundColor},
-    terminal::{self, Clear, ClearType},
+    terminal::{self},
 };
 use unicode_width::UnicodeWidthStr;
 
 use crate::buffer::FileBuffer;
 use crate::line::{Line, LineFlags, LineType};
-use crate::prefix::{cols_ruler_text, format_prefix, sentinel_text};
 use crate::types::*;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]

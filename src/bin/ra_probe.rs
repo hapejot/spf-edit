@@ -8,183 +8,40 @@ use std::time::Duration;
 
 use rust_analyzer::{CompletionItem, LspEvent, RustAnalyzerClient};
 use clap::Parser;
+use tracing::info;
 
 
 #[derive(Debug,Parser)]
 struct Args  {
+    file: String,
+    line: u32,
+    pos: u32,
+
+    #[arg(long)]
     trace: bool,
 }
 
 fn main() -> io::Result<()> {
-    let args: Vec<String> = std::env::args().collect();
-    if args.len() < 3 {
-        eprintln!(
-            "Usage:\n\
-             ra_probe <source-file> [--trace] <location-prefix> [occurrence]\n\
-             ra_probe <source-file> [--trace] --line-col <line:column>\n\n\
-             ra_probe <source-file> [--trace] --hover --line-col <line:column>\n\n\
-             Examples:\n\
-             ra_probe src/bin/key_probe.rs \"_raw_mode(); disable\"\n\
-             ra_probe src/bin/key_probe.rs \"println!(\" 2\n\
-             ra_probe src/bin/key_probe.rs --trace \"println!(\" 2\n\
-             ra_probe src/bin/key_probe.rs --line-col 9:43\n\
-             ra_probe src/bin/key_probe.rs --hover --line-col 9:43"
-        );
-        std::process::exit(1);
-    }
+    let args = Args::parse();
+    tracing_subscriber::fmt().init();
+    info!("starting rust analyzer");
+    let text = fs::read_to_string(&args.file)?;
 
-    let file_path = Path::new(&args[1]);
-    let text = fs::read_to_string(file_path)?;
-    let mut tail = args[2..].to_vec();
-    let trace_io = remove_flag(&mut tail, "--trace");
-    let request_kind = if remove_flag(&mut tail, "--hover") {
-        RequestKind::Hover
-    } else {
-        RequestKind::Completion
-    };
-
-    let location_arg = tail.first().ok_or_else(|| {
-        io::Error::new(io::ErrorKind::InvalidInput, "missing location argument")
-    })?;
-
-    let location_kind = if location_arg == "--line-col" {
-        let spec = tail.get(1).ok_or_else(|| {
-            io::Error::new(
-                io::ErrorKind::InvalidInput,
-                "--line-col requires a <line:column> argument",
-            )
-        })?;
-        let (line, character_utf16) = parse_line_col(spec)?;
-        let byte_index = byte_index_from_line_col(&text, line, character_utf16)?;
-        let prefix = prefix_before_byte(&text, byte_index, 32);
-        LocationKind::LineCol {
-            line,
-            character_utf16,
-            byte_index,
-            prefix,
-        }
-    } else {
-        let location_prefix = location_arg;
-        let occurrence = if let Some(arg) = tail.get(1) {
-            arg.parse::<usize>().map_err(|_| {
-                io::Error::new(
-                    io::ErrorKind::InvalidInput,
-                    "occurrence must be a positive integer",
-                )
-            })?
-        } else {
-            1
-        };
-        if occurrence == 0 {
-            return Err(io::Error::new(
-                io::ErrorKind::InvalidInput,
-                "occurrence must be >= 1",
-            ));
-        }
-
-        let (byte_index, line, character_utf16) =
-            find_location(&text, location_prefix, occurrence).ok_or_else(|| {
-                io::Error::new(
-                    io::ErrorKind::NotFound,
-                    format!(
-                        "prefix occurrence not found: prefix={location_prefix:?} occurrence={occurrence}"
-                    ),
-                )
-            })?;
-
-        LocationKind::Prefix {
-            occurrence,
-            prefix: location_prefix.clone(),
-            byte_index,
-            line,
-            character_utf16,
-        }
-    };
-
-    let (occurrence_label, byte_index, line, character_utf16, context_tail) = match &location_kind {
-        LocationKind::Prefix {
-            occurrence,
-            prefix,
-            byte_index,
-            line,
-            character_utf16,
-        } => (
-            occurrence.to_string(),
-            *byte_index,
-            *line,
-            *character_utf16,
-            trailing_context(prefix, 32),
-        ),
-        LocationKind::LineCol {
-            line,
-            character_utf16,
-            byte_index,
-            prefix,
-        } => (
-            "n/a".to_string(),
-            *byte_index,
-            *line,
-            *character_utf16,
-            prefix.clone(),
-        ),
-    };
-
-    let token = completion_token_from_prefix(&context_tail);
-    let trigger_character = completion_trigger_from_prefix(&context_tail);
-
-    let mut client = RustAnalyzerClient::start_with_trace(file_path, trace_io)?;
+    let path = Path::new(&args.file);
+    let mut client = RustAnalyzerClient::start_with_trace(&path, args.trace)?;
     client.did_open(&text)?;
-    let project_ready = client.wait_for_project_ready(Duration::from_secs(10))?;
-
-    println!("file: {}", file_path.display());
-    println!("launch_command: {}", client.launch_command());
-    println!("document_uri: {}", client.document_uri());
-    println!("workspace_root_uri: {}", client.workspace_root_uri());
-    println!("project_ready: {}", project_ready);
-    println!("request_kind: {}", request_kind.name());
-    println!("location_mode: {}", location_kind.mode_name());
-    println!("prefix_occurrence: {}", occurrence_label);
-    println!("match_byte_offset: {}", byte_index);
-    println!("line: {}", line);
-    println!("character_utf16: {}", character_utf16);
-    println!("trigger_character: {:?}", trigger_character);
-    println!("typed_token: {:?}", token);
-    println!("context_tail: {:?}", context_tail);
-
-    match request_kind {
-        RequestKind::Completion => {
-            let request_id = client.request_completion(
-                line as u32,
-                character_utf16 as u32,
-                trigger_character,
-            )?;
-            let items = wait_for_completion(&client, request_id, Duration::from_secs(5))?;
-            let ranked = rank_items(items, &token);
-            println!("result_count: {}", ranked.len());
-            println!();
-            println!("Top results:");
-
-            for (idx, item) in ranked.iter().take(20).enumerate() {
-                println!(
-                    "{:>2}. label={:?} insert_text={:?}",
-                    idx + 1,
-                    item.label,
-                    item.insert_text
-                );
-            }
-        }
-        RequestKind::Hover => {
-            let request_id = client.request_hover(line as u32, character_utf16 as u32)?;
-            let hover = wait_for_hover(&client, request_id, Duration::from_secs(5))?;
-            println!();
-            println!("Hover:");
-            match hover {
-                Some(text) => println!("{}", text),
-                None => println!("<no hover information>"),
-            }
-        }
+    let project_ready = client.wait_for_project_ready(Duration::from_secs(60))?;
+    info!("project ready");
+    let line = args.line;
+    let character_utf16 = args.pos;
+    let request_id = client.request_hover(line as u32, character_utf16 as u32)?;
+    let hover = wait_for_hover(&client, request_id, Duration::from_secs(60))?;
+    info!("hover returned");
+    match hover {
+        Some(text) => println!("{}", text),
+            None => println!("<no hover information>"),
     }
-
+    info!("exit");
     Ok(())
 }
 
