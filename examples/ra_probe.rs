@@ -1,4 +1,4 @@
-#[path = "../rust_analyzer.rs"]
+#[path = "../src/rust_analyzer.rs"]
 mod rust_analyzer;
 
 use std::fs;
