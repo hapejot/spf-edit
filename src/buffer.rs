@@ -19,6 +19,7 @@
 
 use std::collections::HashMap;
 use std::io;
+use std::ops::Range;
 use std::path::{Path, PathBuf};
 
 use tracing::{debug, info, trace};
@@ -28,6 +29,7 @@ use crate::line::{Line, LineFlags, LineType};
 use crate::line_store::{LineStore, VecLineStore};
 use crate::prefix::{cols_ruler_text, sentinel_text};
 use crate::types::{Direction, LINE_NUMBER_INCREMENT, LineEnding, NumberMode, RecordFormat};
+
 
 pub struct FileBuffer {
     pub lines: VecLineStore,

@@ -229,7 +229,7 @@ mod tests {
         ));
         assert!(matches!(
             parse_prefix_command(".mark"),
-            PrefixParseResult::Command(ParsedLineCmd::Label(s)) if s == "MARK"
+            PrefixParseResult::Command(ParsedLineCmd::Label(s)) if s == ".MARK"
         ));
     }
 
