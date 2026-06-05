@@ -269,5 +269,6 @@ pub fn format_prefix(line: &Line, number_mode: NumberMode, label: Option<&String
                 NumberMode::Off => "======".to_string(),
             }
         }
+        _ => todo!(),
     }
 }

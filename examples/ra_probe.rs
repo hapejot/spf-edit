@@ -6,7 +6,7 @@ use std::io;
 use std::path::Path;
 use std::time::Duration;
 
-use rust_analyzer::{CompletionItem, LspEvent, RustAnalyzerClient};
+use rust_analyzer::{LspEvent, RustAnalyzerClient};
 use clap::Parser;
 use tracing::info;
 
@@ -30,7 +30,7 @@ fn main() -> io::Result<()> {
     let path = Path::new(&args.file);
     let mut client = RustAnalyzerClient::start_with_trace(&path, args.trace)?;
     client.did_open(&text)?;
-    let project_ready = client.wait_for_project_ready(Duration::from_secs(60))?;
+    let _project_ready = client.wait_for_project_ready(Duration::from_secs(60))?;
     info!("project ready");
     let line = args.line;
     let character_utf16 = args.pos;
@@ -43,33 +43,6 @@ fn main() -> io::Result<()> {
     }
     info!("exit");
     Ok(())
-}
-
-
-
-
-fn wait_for_completion(
-    client: &RustAnalyzerClient,
-    request_id: u64,
-    timeout: Duration,
-) -> io::Result<Vec<CompletionItem>> {
-    loop {
-        match client.recv_timeout(timeout) {
-            Ok(LspEvent::CompletionResponse {
-                request_id: response_id,
-                items,
-            }) if response_id == request_id => return Ok(items),
-            Ok(LspEvent::CompletionResponse { .. })
-            | Ok(LspEvent::HoverResponse { .. })
-            | Ok(LspEvent::InitializeComplete) => continue,
-            Err(_) => {
-                return Err(io::Error::new(
-                    io::ErrorKind::TimedOut,
-                    "timed out waiting for completion response",
-                ))
-            }
-        }
-    }
 }
 
 fn wait_for_hover(
@@ -95,4 +68,3 @@ fn wait_for_hover(
         }
     }
 }
-

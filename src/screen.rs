@@ -28,6 +28,7 @@
 //!   TODO: unify column model to display-column widths.
 
 use std::io::{self, Write};
+use spf_edit::buffer::DisplayLine;
 use tracing::{error, trace};
 
 use chrono::Local;
@@ -160,7 +161,7 @@ fn normalize_points(
 pub struct Screen {
     pub width: u16,
     pub height: u16,
-    pub top_line_index: usize,
+    top_line_index: usize,
     pub horizontal_offset: usize,
     pub scroll_amount: ScrollAmount,
     pub command_line: String,
@@ -174,6 +175,7 @@ pub struct Screen {
     pub status_info: String,
     pub selection: Option<Selection>,
     pub completion_popup: Option<CompletionPopup>,
+    pub data_lines: Vec<DisplayLine>,
 }
 
 impl Screen {
@@ -196,6 +198,7 @@ impl Screen {
             status_info: String::new(),
             selection: None,
             completion_popup: None,
+            data_lines: Vec::new(),
         })
     }
 
@@ -518,19 +521,19 @@ impl Screen {
         buffer: &FileBuffer,
     ) -> io::Result<()> {
         if line_index < buffer.line_count() {
-            if let Some((prefix_text, display_text)) =
-                buffer.get_line(line_index, self.horizontal_offset, self.data_width())
+            if let Some(display_line) =
+                buffer.get_lines(line_index..line_index+1).get(0)
             {
                 let line_selected = self.line_is_selected(line_index);
                 let data_selection = if line_selected {
                     Some((0, self.data_width()))
                 } else {
-                    self.visible_data_selection_range(line_index, display_text.chars().count())
+                    self.visible_data_selection_range(line_index, display_line.display.len())
                 };
                 // --- Prefix area ---
                 self.draw_text_with_selection(
                     stdout,
-                    &prefix_text,
+                    &display_line.prefix.iter().cloned().collect::<String>(),
                     self.prefix_width,
                     Colors::PREFIX_FG,
                     Colors::PREFIX_BG,
@@ -562,7 +565,7 @@ impl Screen {
                 let data_width = self.data_width();
                 self.draw_text_with_selection(
                     stdout,
-                    &display_text,
+                    &display_line.display[1..80].iter().cloned().collect::<String>(),
                     data_width,
                     Colors::DATA_FG,
                     Colors::DATA_BG,
@@ -606,6 +609,7 @@ impl Screen {
             LineType::Message => (Colors::ERROR_FG, Colors::ERROR_BG),
             LineType::Data => (Colors::DATA_FG, Colors::DATA_BG),
             LineType::Insert => (Colors::DATA_FG, Colors::DATA_BG),
+            _ => todo!()
         }
     }
 
@@ -755,6 +759,10 @@ impl Screen {
             }
         };
         self.scroll_field_text = format!("{}", self.scroll_amount);
+    }
+    
+    pub fn top_line_index(&self) -> usize {
+        self.top_line_index
     }
 }
 

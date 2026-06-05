@@ -868,7 +868,7 @@ impl Editor {
                     self.update_cursor_line_index();
                 } else {
                     // At top of visible area — scroll up
-                    if self.screen.top_line_index > 0 {
+                    if self.screen.top_line_index() > 0 {
                         self.screen.scroll_up(1);
                     } else {
                         // Move to command line

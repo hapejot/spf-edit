@@ -11,6 +11,8 @@
 
 // --- Line type ---
 
+use std::default;
+
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum LineType {
     Data,
@@ -19,6 +21,7 @@ pub enum LineType {
     ColsRuler,
     Message,
     Insert, 
+    Exclusion,
 }
 
 // --- Line flags ---
@@ -186,6 +189,20 @@ impl Line {
             line_type: LineType::Insert,
             data: Vec::new(),
             original_number: None,
+            current_number: 0,
+            flags: LineFlags::NONE,
+            prefix_cmd: None,
+            excluded: false,
+            label: None,
+        }
+    }
+    
+    pub(crate) fn excluded_line(arg: usize) -> Line {
+        Self {
+            id: uuid::Uuid::new_v4(),
+            line_type: LineType::Exclusion,
+            data: Vec::new(),
+            original_number: Some(arg),
             current_number: 0,
             flags: LineFlags::NONE,
             prefix_cmd: None,

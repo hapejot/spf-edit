@@ -30,6 +30,10 @@ use crate::line_store::{LineStore, VecLineStore};
 use crate::prefix::{cols_ruler_text, sentinel_text};
 use crate::types::{Direction, LINE_NUMBER_INCREMENT, LineEnding, NumberMode, RecordFormat};
 
+pub struct DisplayLine {
+    pub prefix: Vec<char>,
+    pub display: Vec<char>,
+}
 
 pub struct FileBuffer {
     pub lines: VecLineStore,
@@ -116,6 +120,76 @@ impl FileBuffer {
     /// Total number of lines (including sentinels).
     pub fn line_count(&self) -> usize {
         self.lines.len()
+    }
+
+    pub fn get_lines(&self, r: Range<usize>) -> Vec<DisplayLine> {
+        let mut result: Vec<DisplayLine> = vec![];
+        let i0 = r.start;
+        let l0 = r.len();
+        let mut exclude_cnt = None;
+        for l in self.lines.iter().skip(i0) {
+            if l.excluded {
+                match exclude_cnt {
+                    None => exclude_cnt = Some(1),
+                    Some(cnt) => exclude_cnt = Some(cnt + 1),
+                }
+                continue;
+            } else {
+                if let Some(cnt) = exclude_cnt {
+                    result.push(DisplayLine {
+                        prefix: "------ ".chars().collect(),
+                        display: format!("--- {} lines excluded ---", cnt).chars().collect(),
+                    });
+                    exclude_cnt = None;
+                }
+            }
+            let prefix = if let Some(ll) = self.labels.iter().find_map(|(name, &idx)| {
+                if idx == l.current_number {
+                    Some(name)
+                } else {
+                    None
+                }
+            }) {
+                ll.chars().collect()
+            } else {
+                format!("{:06} ", l.current_number).chars().collect()
+            };
+            match l.line_type {
+                LineType::Data => result.push(DisplayLine {
+                    prefix,
+                    display: l.data.iter().cloned().collect(),
+                }),
+                LineType::TopOfData => result.push(DisplayLine {
+                    prefix,
+                    display: "--- Top of Data ---".chars().collect(),
+                }),
+                LineType::BottomOfData => result.push(DisplayLine {
+                    prefix,
+                    display: "--- Bottom of Data ---".chars().collect(),
+                }),
+                LineType::ColsRuler => result.push(DisplayLine {
+                    prefix,
+                    display: "--- Columns Ruler ---".chars().collect(),
+                }),
+                LineType::Message => result.push(DisplayLine {
+                    prefix,
+                    display: "--- Message ---".chars().collect(),
+                }),
+                LineType::Insert => result.push(DisplayLine {
+                    prefix,
+                    display: "--- Insert ---".chars().collect(),
+                }),
+                _ => todo!(),
+            }
+        }
+        result
+    }
+
+    pub fn exclude(&mut self, r: Range<usize>) {
+        for i in r {
+            let l = self.lines.get_mut(i).unwrap();
+            l.excluded = true;
+        }
     }
 
     /// Count of data lines only.
@@ -534,6 +608,7 @@ impl FileBuffer {
                 let skipped = Self::skip_chars(data, horizontal_offset);
                 Self::truncate_to_width(&skipped, data_width)
             }
+            _ => todo!(),
         }
     }
 
